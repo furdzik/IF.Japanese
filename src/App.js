@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { IntlProvider, addLocaleData } from 'react-intl';
-import { defaultLocale } from './lang/config';
-import { polish } from './lang';
-
 import { BrowserRouter as Router, Route, Link  } from 'react-router-dom';
+import { IntlProvider } from 'react-intl';
+import { defaultLocale } from './lang/config';
 
+import { english } from './lang';
+
+import Home from './components/Home';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Router>
         <IntlProvider
           locale={defaultLocale}
-          messages={polish}
+          messages={english}
         >
           <nav>
             <ul>
@@ -25,16 +26,12 @@ function App() {
               </li>
             </ul>
           </nav>
-          <Route path="/" exact component={Index} />
+          <Route path="/" exact component={Home} />
           <Route path="/kanji/" component={Kanji} />
         </IntlProvider>
       </Router>
     </div>
   );
-}
-
-function Index() {
-  return <h2>Home</h2>;
 }
 
 function Kanji() {

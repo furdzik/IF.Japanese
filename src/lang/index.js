@@ -1,4 +1,4 @@
-import componentsPl from './components/pl.json';
-import defaultsPl from './defaults/pl.json';
+import componentsEn from './components/en.json';
+import defaultsEn from './defaults/en.json';
 
-export const polish = { ...componentsPl, ...defaultsPl };
+export const english = { ...componentsEn, ...defaultsEn };
