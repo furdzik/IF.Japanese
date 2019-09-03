@@ -1,25 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { useIntl } from 'react-intl';
 
 import styles from './Home.styles.scss';
 
 import messages from './Home.messages';
 
-import injectProvider from '../utils/HoC/injectProvider';
+const Home = () => {
+  const intl = useIntl();
 
-const Home = ({
-  intl
-}) => (
-  <div className={styles.applicationHeader}>
-    <div className={styles.container}>
+  return (
+    <div className={styles.home}>
       <h1 className={styles.title}>{intl.formatMessage(messages.title)}</h1>
     </div>
-  </div>
-);
-
-Home.propTypes = {
-  intl: PropTypes.object.isRequired
+  )
 };
 
-export default injectProvider(withRouter(Home));
+export default Home;

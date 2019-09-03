@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { BrowserRouter as Router, Route, Link  } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
-import { defaultLocale } from './lang/config';
+import '@formatjs/intl-relativetimeformat/dist/locale-data/en';
 
+import { defaultLocale } from './lang/config';
 import { english } from './lang';
 
 import Home from './components/Home';
