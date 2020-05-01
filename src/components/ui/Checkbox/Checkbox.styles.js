@@ -21,6 +21,7 @@ const CheckboxBox = styled.span`
   width: 1.7rem;
   border-radius: 2px;
   border: 2px solid ${(props) => props.theme.colors.primaryColor};
+  background: ${(props) => props.theme.colors.white};
   transition: all 0.2s;
   margin-right: 1rem;
   cursor: pointer;

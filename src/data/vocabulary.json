@@ -774,12 +774,6 @@
     "pitch": ""
   },
   {
-    "vocab": "二台",
-    "known": true,
-    "inProgress": false,
-    "pitch": ""
-  },
-  {
     "vocab": "引く",
     "known": true,
     "inProgress": false,
@@ -787,18 +781,6 @@
   },
   {
     "vocab": "分かる",
-    "known": true,
-    "inProgress": false,
-    "pitch": ""
-  },
-  {
-    "vocab": "一台",
-    "known": true,
-    "inProgress": false,
-    "pitch": ""
-  },
-  {
-    "vocab": "五台",
     "known": true,
     "inProgress": false,
     "pitch": ""
@@ -835,12 +817,6 @@
   },
   {
     "vocab": "一万",
-    "known": true,
-    "inProgress": false,
-    "pitch": ""
-  },
-  {
-    "vocab": "十台",
     "known": true,
     "inProgress": false,
     "pitch": ""
@@ -1142,7 +1118,7 @@
   {
     "vocab": "僕",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -1177,7 +1153,7 @@
   },
   {
     "vocab": "細かい",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1195,7 +1171,7 @@
   },
   {
     "vocab": "矢",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1207,13 +1183,13 @@
   },
   {
     "vocab": "空港",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "一億",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1267,7 +1243,7 @@
   },
   {
     "vocab": "半分",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1303,7 +1279,7 @@
   },
   {
     "vocab": "春休み",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1388,7 +1364,7 @@
   {
     "vocab": "無理",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -1400,7 +1376,7 @@
   {
     "vocab": "草",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -1430,7 +1406,7 @@
   {
     "vocab": "土地",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -1472,30 +1448,30 @@
   {
     "vocab": "首",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
     "vocab": "姉妹",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
     "vocab": "死ぬ",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "羊毛",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
     "vocab": "午後",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1549,25 +1525,25 @@
   },
   {
     "vocab": "寺",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "座る",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "雪",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
     "vocab": "今週",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1609,7 +1585,7 @@
   },
   {
     "vocab": "電気",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1633,7 +1609,7 @@
   },
   {
     "vocab": "住人",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1652,7 +1628,7 @@
   {
     "vocab": "全然",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -1717,7 +1693,7 @@
   },
   {
     "vocab": "泳ぐ",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1777,7 +1753,7 @@
   },
   {
     "vocab": "動く",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1795,7 +1771,7 @@
   },
   {
     "vocab": "頭",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1999,13 +1975,13 @@
   },
   {
     "vocab": "歯",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "奥様",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2036,7 +2012,7 @@
   {
     "vocab": "箱",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -2077,7 +2053,7 @@
   },
   {
     "vocab": "並ぶ",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2335,7 +2311,7 @@
   },
   {
     "vocab": "この",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2450,7 +2426,7 @@
   {
     "vocab": "黒人",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -2521,7 +2497,7 @@
   },
   {
     "vocab": "涙",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2659,19 +2635,19 @@
   },
   {
     "vocab": "血",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "魚",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "月見",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2695,7 +2671,7 @@
   },
   {
     "vocab": "年",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2707,7 +2683,7 @@
   },
   {
     "vocab": "殺人",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2766,12 +2742,6 @@
     "pitch": ""
   },
   {
-    "vocab": "三冊",
-    "known": false,
-    "inProgress": false,
-    "pitch": ""
-  },
-  {
     "vocab": "博打",
     "known": false,
     "inProgress": false,
@@ -2791,7 +2761,7 @@
   },
   {
     "vocab": "春",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2857,7 +2827,7 @@
   },
   {
     "vocab": "遠い",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2881,7 +2851,7 @@
   },
   {
     "vocab": "学校",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -3103,7 +3073,7 @@
   },
   {
     "vocab": "売る",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -3229,7 +3199,7 @@
   },
   {
     "vocab": "会社員",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -3541,14 +3511,14 @@
   },
   {
     "vocab": "何時",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "楽",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -3817,7 +3787,7 @@
   },
   {
     "vocab": "お祝い",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -4026,12 +3996,6 @@
     "pitch": ""
   },
   {
-    "vocab": "一冊",
-    "known": false,
-    "inProgress": false,
-    "pitch": ""
-  },
-  {
     "vocab": "見当たる",
     "known": false,
     "inProgress": false,
@@ -4170,7 +4134,7 @@
     "pitch": ""
   },
   {
-    "vocab": "つまらない",
+    "vocab": "詰らない",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -4314,12 +4278,6 @@
     "pitch": ""
   },
   {
-    "vocab": "二番",
-    "known": true,
-    "inProgress": false,
-    "pitch": ""
-  },
-  {
     "vocab": "曲線",
     "known": false,
     "inProgress": false,
@@ -4435,7 +4393,7 @@
   },
   {
     "vocab": "一億円",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -4567,7 +4525,7 @@
   },
   {
     "vocab": "言い方",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -4633,13 +4591,13 @@
   },
   {
     "vocab": "弱い",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "歯医者",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -4843,7 +4801,7 @@
   },
   {
     "vocab": "〜間",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -5059,7 +5017,7 @@
   },
   {
     "vocab": "彼",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -5665,7 +5623,7 @@
   },
   {
     "vocab": "飲み物",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -5708,6 +5666,12 @@
   {
     "vocab": "面",
     "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "間",
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
