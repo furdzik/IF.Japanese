@@ -1,0 +1,34 @@
+{
+  "setupFiles": ["<rootDir>/.jest/register-context.js"],
+  "setupFilesAfterEnv": ["<rootDir>/.jest/setupTests.js"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "moduleDirectories": ["node_modules", "src"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ico|ttf|woff|woff2)$": "<rootDir>/__mocks__/fileMock.js",
+    "^.+\\.(css|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": ["jsx", "js", "json"],
+  "testMatch": ["**/*spec.(jsx|js)"],
+  "reporters": [
+    "default",
+    [
+      "jest-junit",
+      {
+        "suiteName": "jest report",
+        "outputDirectory": "./reports",
+        "outputName": "./jest-report.xml"
+      }
+    ]
+  ],
+  "coverageReporters": ["text", "text-summary", "cobertura", "lcov"],
+  "collectCoverageFrom": ["src/**/*.{jsx,js}", "!<rootDir>/node_modules/", "!src/components/**/*.stories.jsx"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 30,
+      "functions": 30,
+      "lines": 30,
+      "statements": 30
+    }
+  },
+  "verbose": true
+}

@@ -1,0 +1,161 @@
+{
+  "processors": [
+    "stylelint-processor-styled-components"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-prettier",
+    "stylelint-config-styled-components"
+  ],
+  "plugins": [
+    "stylelint-declaration-use-variable",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-order"
+  ],
+  "rules": {
+    "at-rule-empty-line-before": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "at-root",
+          "content",
+          "extend",
+          "for",
+          "function",
+          "include",
+          "mixin",
+          "return"
+        ]
+      }
+    ],
+    "block-closing-brace-empty-line-before": "never",
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "declaration-empty-line-before": null,
+    "function-url-quotes": "always",
+    "indentation": 2,
+    "max-nesting-depth": [
+      3,
+      {
+        "ignoreAtRules": [
+          "at-root",
+          "content",
+          "extend",
+          "function",
+          "include",
+          "mixin",
+          "return"
+        ]
+      }
+    ],
+    "media-feature-range-operator-space-before": "always",
+    "media-feature-range-operator-space-after": "always",
+    "media-feature-parentheses-space-inside": "never",
+    "media-feature-name-no-vendor-prefix": true,
+    "media-feature-colon-space-before": "never",
+    "media-feature-colon-space-after": "always",
+    "order/properties-order": [
+      {
+        "properties": [
+          "display",
+          "position",
+          "top",
+          "right",
+          "left",
+          "bottom"
+        ]
+      },
+      {
+        "properties": [
+          "justify-content",
+          "justify-items",
+          "align-content",
+          "align-items",
+          "align-self",
+          "flex-flow",
+          "flex-direction",
+          "flex-wrap",
+          "flex",
+          "flex-basis",
+          "flex-grow",
+          "flex-shrink"
+        ]
+      },
+      {
+        "properties": [
+          "transform",
+          "transform-origin",
+          "transform-style",
+          "perspective",
+          "perspective-origin"
+        ]
+      },
+      {
+        "properties": [
+          "margin",
+          "margin-top",
+          "margin-right",
+          "margin-bottom",
+          "margin-left"
+        ]
+      },
+      {
+        "properties": [
+          "padding",
+          "padding-top",
+          "padding-right",
+          "padding-bottom",
+          "padding-left"
+        ]
+      },
+      {
+        "properties": [
+          "background",
+          "background-color",
+          "background-image",
+          "background-size",
+          "background-position",
+          "background-repeat"
+        ]
+      },
+      {
+        "properties": [
+          "font-family",
+          "font-style",
+          "font-variant",
+          "font-stretch",
+          "font-weight",
+          "line-height",
+          "font-size",
+          "color"
+        ]
+      },
+      {
+        "properties": [
+          "animation",
+          "animation-name",
+          "animation-duration",
+          "animation-timing-function",
+          "animation-delay",
+          "animation-direction",
+          "animation-iteration-count",
+          "animation-fill-mode",
+          "animation-play-state"
+        ]
+      }
+    ],
+    "plugin/declaration-block-no-ignored-properties": true,
+    "selector-list-comma-newline-after": "always-multi-line",
+    "selector-no-qualifying-type": true,
+    "selector-no-vendor-prefix": true,
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-type-no-unknown": [ true, { "ignore": ["custom-elements", "default-namespace"] }],
+    "string-quotes": "single",
+    "no-descending-specificity": null,
+    "value-keyword-case": null,
+    "selector-type-case": null
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/preset-env", {
+      "shippedProposals": true
+    }]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-transform-runtime",
+    ["module-resolver", {
+      "alias": {
+        "@mocks": "./__mocks__",
+        "@root": "./src",
+        "@api": "./src/utils/api",
+        "@data": "./src/data",
+        "@components": "./src/components",
+        "@containers": "./src/containers",
+        "@config": "./src/config",
+        "@styles": "./src/styles",
+        "@utils": "./src/utils",
+        "@lang": "./lang",
+        "@assets": "./src/assets"
+      }
+    }],
+    ["react-intl-auto", {
+      "removePrefix": "src.components",
+      "filebase": false
+    }]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["require-context-hook"]
+    }
+  }
+}

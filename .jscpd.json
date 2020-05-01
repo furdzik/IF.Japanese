@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "**/node_modules/**",
+    "**/coverage/**",
+    "**/*.spec.js"
+  ],
+  "absolute": true,
+  "gitignore": true,
+  "reporters": ["html", "console"],
+  "output": "./reports/"
+}

@@ -1,68 +1,144 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# IF.Japanese
 
-## Available Scripts
+This repository presents frontend application for my Japanese APP
 
-In the project directory, you can run:
+- [Development](#development)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Running](#running)
+  - [Build](#build)
+  - [Updating packages](#updating-packages)
+  - [Test & linters](#test--linters)
+  - [Versioning](#versioning)
+- [Environments](#environments)
+- [Browsers](#browsers-support)
+- [Tests](#tests)
+- [Links](#links)
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3006](http://localhost:3006) to view it in the browser.
+## Development
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Requirements
 
-### `npm test`
+- NodeJS >= v10.14.1
+- npm >= 6.4.1
+- Git Bash (for [versioning](#Versioning))
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone project from GitHub repository `git clone git@github.com:furdzik/if.japanese.git` or `git clone https://github.com/furdzik/if.japanese.git`
+2. Add alias to your `hosts` file: `127.0.0.1         if.japanese.local`
+3. `cd if.japanese`
+5. Install dependencies `npm install`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Run
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+npm start
+```
 
-### `npm run eject`
+for starting dev server. Navigate to `http://if.japanese.local:2017/`. The app will automatically reload if you change any of the source files.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+to build project.
 
-## Learn More
+\* The build artifacts will be stored in the `dist/` directory.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run project locally run
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+cd dist
+```
 
-### Code Splitting
+then
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```
+npm run serve
+```
 
-### Analyzing the Bundle Size
+### Updating packages
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Package.json is strictly connected with package-lock.json. Updating package should have reflection in package-lock. Also take care of installing exactly specified package version (see package.json [suffix](https://docs.npmjs.com/files/package.json#dependencies))
 
-### Making a Progressive Web App
+### Test & linters
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+This project used tools such as:
 
-### Advanced Configuration
+- [Jest](https://jestjs.io/)
+- [Enzyme](https://airbnb.io/enzyme/)
+- [Sinon](https://sinonjs.org/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+for unit testing.
 
-### Deployment
+Run
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```sh
+npm run lint
+```
 
-### `npm run build` fails to minify
+to execute code style analysis (Eslint, SASS Lint etc.).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Run
+
+```sh
+npm test
+```
+
+to execute the unit tests via Jest
+
+\* unit tests and linters are run on every `git push` (add `--no-validate` flag to omit it)
+
+Run
+
+```sh
+npm run test:update
+```
+
+to update [snapshots](https://jestjs.io/docs/en/snapshot-testing)
+
+## Versioning
+
+This project uses auto-generated changelog. It should be generated per release. If you want to create new release make it via runnig:
+
+`npm version [major|minor|patch]`
+
+Don't forget to upload git tag via runnig:  
+
+`git push origin <tagname>` (push specified tag)  
+
+or  
+
+`git push origin --tags` (to push all new tags)  
+
+## Environments
+
+| Environment | Url                                                                      |
+|-------------|--------------------------------------------------------------------------|
+| Local       | [http://if.japanese.local:2017](http://if.japanese.local:2017) |
+
+
+## Browsers support
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
+| --------- | --------- | --------- | --------- | --------- |
+| IE11, Edge| last version| last version| last version| last version
+
+## Tests
+
+We use snapshots to test components (it's automated, not need to create .spec.js file), also when component need more test because it more complicated, create a .spec.js file and write additional tests.
+
+All redux logic need to be covered by tests.
+
+## Links
+
+- [Style guide](docs/STYLEGUIDE.md)
+- [Project structure](docs/PROJECT_STRUCTURE.md)

@@ -1,0 +1,3 @@
+module.exports = {
+  defaultLocale: 'en'
+};

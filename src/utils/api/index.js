@@ -1,0 +1,1 @@
+export { fetchWaniKani } from './fetchWaniKani';
