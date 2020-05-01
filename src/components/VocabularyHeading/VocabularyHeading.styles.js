@@ -7,7 +7,7 @@ const Header = styled.div`
 `;
 
 const Heading = styled.h2`
-  margin: 0;
+  margin: 3rem 0;
   color: ${(props) => props.theme.colors.primaryColor};
 `;
 
@@ -25,11 +25,12 @@ const Spaced = styled.span`
 `;
 
 const Filters = styled.div`
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-right: auto;
-  padding: .5rem 1rem .3rem;
   border-radius: .4rem;
-  min-width: 30rem;
+  min-width: 40rem;
+  min-height: 6.2rem;
   background: ${(props) => props.theme.colors.secondaryColor};
 `;
 

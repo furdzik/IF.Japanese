@@ -15,10 +15,14 @@ const VocabularyHeading = (props) => {
   const filterList = [
     {
       id: '1',
-      label: intl.formatMessage(messages.known)
+      label: intl.formatMessage(messages.notKnown)
     },
     {
       id: '2',
+      label: intl.formatMessage(messages.known)
+    },
+    {
+      id: '3',
       label: intl.formatMessage(messages.inProgress)
     }
   ];

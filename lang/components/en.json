@@ -1,3 +1,7 @@
 {
-  "Home.hello": "Hello"
+  "VocabularyHeading.all": "全部: ",
+  "VocabularyHeading.heading": "単語",
+  "VocabularyHeading.inProgress": "勉強中",
+  "VocabularyHeading.known": "知っている",
+  "VocabularyHeading.notKnown": "知らない"
 }
