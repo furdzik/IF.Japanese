@@ -1,34 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { vocabType } from '@components/VocabularyList/VocabularyList.types';
+import { vocabType, vocabLengthType } from '@components/VocabularyList/VocabularyList.types';
 
 import Container from '@components/Container';
 
-import Heading from '@components/VocabularyHeading';
+import VocabularyHeading from '@components/VocabularyHeading';
 import VocabularyList from '@components/VocabularyList';
 
-import { loadVocabularyData } from './Vocabulary.reducer';
+import { getVocabulary, changeFilters } from './Vocabulary.reducer';
 import selector from './Vocabulary.selector';
 
 const Vocabulary = (props) => {
-  props.loadVocabularyData();
-
-  const knownLength = props.vocab && props.vocab.filter((el) => el.known).length;
-  const inProgressLength = props.vocab && props.vocab.filter((el) => el.inProgress).length;
-
-  const changeFilters = (filter) => {
-    console.log(filter);
-  };
+  useEffect(() => {
+    props.getVocabulary();
+  }, [props.selectedFilters]);
 
   return props.vocab ? (
     <Container>
-      <Heading
-        vocabLength={props.vocab.length}
-        knownLength={knownLength}
-        inProgressLength={inProgressLength}
-        changeFilters={changeFilters}
+      <VocabularyHeading
+        length={props.vocabLength}
+        changeFilters={props.changeFilters}
+        selectedFilters={props.selectedFilters}
       />
       <VocabularyList
         vocab={props.vocab}
@@ -38,7 +32,10 @@ const Vocabulary = (props) => {
 };
 
 Vocabulary.propTypes = {
-  loadVocabularyData: PropTypes.func.isRequired,
+  changeFilters: PropTypes.func.isRequired,
+  getVocabulary: PropTypes.func.isRequired,
+  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired,
+  vocabLength: vocabLengthType.isRequired,
   vocab: vocabType
 };
 
@@ -47,7 +44,8 @@ Vocabulary.defaultProps = {
 };
 
 const mapDispatchToProps = {
-  loadVocabularyData
+  changeFilters,
+  getVocabulary
 };
 
 export default connect(selector, mapDispatchToProps)(Vocabulary);

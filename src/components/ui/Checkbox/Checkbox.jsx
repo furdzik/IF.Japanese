@@ -11,7 +11,7 @@ import {
 const Checkbox = (props) => (
   <React.Fragment>
     <CheckboxLabel
-      htmlFor={`checkbox_${props.name}`}
+      htmlFor={`checkbox_${props.name}_${props.value}`}
       isActive={props.checked}
       isDisabled={props.disabled}
     >
@@ -22,7 +22,8 @@ const Checkbox = (props) => (
         disabled={props.disabled}
         checked={props.checked}
         name={props.name}
-        id={`checkbox_${props.name}`}
+        id={`checkbox_${props.name}_${props.value}`}
+        value={props.value}
       />
       <CheckboxBox
         isActive={props.checked}
@@ -40,6 +41,7 @@ const Checkbox = (props) => (
 Checkbox.propTypes = {
   children: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   onChange: PropTypes.func.isRequired,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,

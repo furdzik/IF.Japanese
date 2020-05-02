@@ -1368,7 +1368,7 @@
     "pitch": ""
   },
   {
-    "vocab": "非難する",
+    "vocab": "非難",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -1380,7 +1380,7 @@
     "pitch": ""
   },
   {
-    "vocab": "削除する",
+    "vocab": "削除",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -1512,7 +1512,7 @@
     "pitch": ""
   },
   {
-    "vocab": "練習する",
+    "vocab": "練習",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -1578,7 +1578,7 @@
     "pitch": ""
   },
   {
-    "vocab": "暗記する",
+    "vocab": "暗記",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -1597,7 +1597,7 @@
   },
   {
     "vocab": "名所",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -1639,12 +1639,12 @@
   },
   {
     "vocab": "絵",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
-    "vocab": "退院する",
+    "vocab": "退院",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -1668,7 +1668,7 @@
     "pitch": ""
   },
   {
-    "vocab": "期待する",
+    "vocab": "期待",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -1676,7 +1676,7 @@
   {
     "vocab": "牛乳",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -2587,12 +2587,24 @@
   },
   {
     "vocab": "両手",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "月末",
+    "known": true,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "真ん中",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "古代",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -2610,7 +2622,7 @@
     "pitch": ""
   },
   {
-    "vocab": "注文する",
+    "vocab": "注文",
     "known": true,
     "inProgress": false,
     "pitch": ""
@@ -2706,6 +2718,18 @@
     "pitch": ""
   },
   {
+    "vocab": "希望",
+    "known": false,
+    "inProgress": true,
+    "pitch": ""
+  },
+  {
+    "vocab": "向き",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
     "vocab": "迷惑メール",
     "known": false,
     "inProgress": false,
@@ -2778,7 +2802,7 @@
     "pitch": ""
   },
   {
-    "vocab": "無視する",
+    "vocab": "無視",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -2797,7 +2821,7 @@
   },
   {
     "vocab": "変える",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2808,7 +2832,7 @@
     "pitch": ""
   },
   {
-    "vocab": "緊張する",
+    "vocab": "緊張",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -2869,13 +2893,13 @@
   },
   {
     "vocab": "亡くなる",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "今まで",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2900,7 +2924,7 @@
   {
     "vocab": "風",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -3066,7 +3090,7 @@
     "pitch": ""
   },
   {
-    "vocab": "混乱する",
+    "vocab": "混乱",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -3182,7 +3206,7 @@
   {
     "vocab": "船",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -3192,7 +3216,7 @@
     "pitch": ""
   },
   {
-    "vocab": "回復する",
+    "vocab": "回復",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -3349,7 +3373,7 @@
   },
   {
     "vocab": "晩",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -3414,7 +3438,7 @@
     "pitch": ""
   },
   {
-    "vocab": "掲載する",
+    "vocab": "掲載",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -3642,7 +3666,7 @@
     "pitch": ""
   },
   {
-    "vocab": "面接する",
+    "vocab": "面接",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -3684,7 +3708,7 @@
     "pitch": ""
   },
   {
-    "vocab": "攻撃する",
+    "vocab": "攻撃",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -3708,7 +3732,7 @@
     "pitch": ""
   },
   {
-    "vocab": "刊行する",
+    "vocab": "刊行",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -3799,18 +3823,42 @@
   },
   {
     "vocab": "あそこ",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "強い",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
   {
     "vocab": "喜寿",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "さて",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "動作",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "進行中",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "~的",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -4368,9 +4416,9 @@
     "pitch": ""
   },
   {
-    "vocab": "準備する",
+    "vocab": "準備",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -4386,7 +4434,7 @@
     "pitch": ""
   },
   {
-    "vocab": "想像する",
+    "vocab": "想像",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -4422,7 +4470,7 @@
     "pitch": ""
   },
   {
-    "vocab": "共有する",
+    "vocab": "共有",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -4500,7 +4548,7 @@
     "pitch": ""
   },
   {
-    "vocab": "保持する",
+    "vocab": "保持",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -4950,12 +4998,6 @@
     "pitch": ""
   },
   {
-    "vocab": "共有",
-    "known": false,
-    "inProgress": false,
-    "pitch": ""
-  },
-  {
     "vocab": "意見",
     "known": false,
     "inProgress": false,
@@ -5202,7 +5244,7 @@
     "pitch": ""
   },
   {
-    "vocab": "誘惑する",
+    "vocab": "誘惑",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -5250,6 +5292,12 @@
     "pitch": ""
   },
   {
+    "vocab": "規制",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
     "vocab": "左側",
     "known": false,
     "inProgress": false,
@@ -5286,7 +5334,7 @@
     "pitch": ""
   },
   {
-    "vocab": "勉強する",
+    "vocab": "勉強",
     "known": true,
     "inProgress": false,
     "pitch": ""
@@ -5424,8 +5472,8 @@
     "pitch": ""
   },
   {
-    "vocab": "三番目",
-    "known": false,
+    "vocab": "二番目",
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -5532,7 +5580,7 @@
     "pitch": ""
   },
   {
-    "vocab": "集中する",
+    "vocab": "集中",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -5634,7 +5682,7 @@
     "pitch": ""
   },
   {
-    "vocab": "降参する",
+    "vocab": "降参",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -5713,7 +5761,7 @@
   },
   {
     "vocab": "ご飯",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -5814,7 +5862,7 @@
     "pitch": ""
   },
   {
-    "vocab": "損害する",
+    "vocab": "損害",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -6123,6 +6171,342 @@
     "vocab": "初心者",
     "known": false,
     "inProgress": true,
+    "pitch": ""
+  },
+  {
+    "vocab": "着陸",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "入浴",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "財政",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "人民",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "予言",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "決断",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "祈り",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "動機",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "改革",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "暴動",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "昼間",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "災害",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "実業家",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "悪",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "反乱",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "認識",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "植民地",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "宮殿",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "火星",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "戦闘",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "文書",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "探検",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "真理",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "優",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "同年代",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "挑む",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "録音",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "照らす",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "急に",
+    "known": true,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "手伝う",
+    "known": true,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "豆腐",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "使い方",
+    "known": true,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "指",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "効率",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "剰余金",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "姓名",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "縄",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "私邸",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "骨折",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "最低",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "電波",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "残す",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "証言",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "達する",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "塊魂",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "不詳",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "富士山",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "醤油",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "新宿",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "思想",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "詩歌",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "車輪",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "受諾",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "担架",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "謝る",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "旅行",
+    "known": false,
+    "inProgress": false,
     "pitch": ""
   }
 ]

@@ -17,6 +17,7 @@ const CheckboxListWrapper = styled.ul`
 const ListItem = styled.li`
   padding: .5rem;
   max-width: 100%;
+  cursor: pointer;
 `;
 
 export {

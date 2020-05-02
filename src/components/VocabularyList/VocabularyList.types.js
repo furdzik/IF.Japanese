@@ -6,3 +6,9 @@ export const vocabType = PropTypes.arrayOf(PropTypes.shape({
   inProgress: PropTypes.bool,
   pitch: PropTypes.string
 }));
+
+export const vocabLengthType = PropTypes.shape({
+  all: PropTypes.number,
+  inProgress: PropTypes.number,
+  notKnown: PropTypes.number
+});

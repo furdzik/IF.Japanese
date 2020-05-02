@@ -11,13 +11,14 @@ const CheckboxList = (props) => (
   <CheckboxListWrapper isVertical={props.vertical}>
     {
       props.items.map((item) => (
-        <ListItem key={`${item.name}_${item.label}`}>
+        <ListItem key={`${item.name}_${item.label}_${item.value}`}>
           <Checkbox
             name={props.name}
             checked={props.selected.indexOf(item.value) !== -1}
             required={props.required}
             disabled={props.disabled}
             onChange={() => { props.onCheckboxClick(item.value); }}
+            value={item.value}
           >
             {item.label}
           </Checkbox>
