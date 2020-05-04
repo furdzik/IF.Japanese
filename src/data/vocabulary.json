@@ -2065,7 +2065,7 @@
   },
   {
     "vocab": "辺",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2287,7 +2287,7 @@
   },
   {
     "vocab": "会議",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -2582,7 +2582,7 @@
   {
     "vocab": "降る",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -2611,7 +2611,7 @@
   },
   {
     "vocab": "閉じる",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": ""
   },
@@ -4068,6 +4068,12 @@
     "pitch": ""
   },
   {
+    "vocab": "瓶",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
     "vocab": "買う",
     "known": true,
     "inProgress": false,
@@ -4981,6 +4987,12 @@
   },
   {
     "vocab": "点数",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "蓋",
     "known": false,
     "inProgress": false,
     "pitch": ""
@@ -6728,6 +6740,72 @@
   {
     "vocab": "助かる",
     "known": true,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "薬缶",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "物差し",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "缶切り",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "便",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "市場",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "調査",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "市場調査",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "大成",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "発達",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "手法",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "馬車",
+    "known": false,
     "inProgress": false,
     "pitch": ""
   }
