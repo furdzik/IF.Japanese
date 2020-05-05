@@ -1616,7 +1616,7 @@
   {
     "vocab": "測る",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": ""
   },
   {
@@ -6807,6 +6807,30 @@
     "vocab": "馬車",
     "known": false,
     "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "経過",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "難題",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "挑戦",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
+  },
+  {
+    "vocab": "犯罪",
+    "known": false,
+    "inProgress": true,
     "pitch": ""
   }
 ]
