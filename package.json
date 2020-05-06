@@ -36,7 +36,7 @@
     "stylelint:ci": "npm run stylelint -- --formatter json --output-file reports/stylelint-report.json",
     "stylelint": "npx stylelint \"**/*.styles.js\"",
     "test": "cross-env NODE_ICU_DATA=node_modules/full-icu npx jest --config jest.config.json --coverage --bail --updateSnapshot",
-    "validate": "npm run lint && npm run test && npm run find-duplicates",
+    "validate": "npm run lint && npm run find-duplicates",
     "version": "npx standard-changelog -p eslint -i CHANGELOG.md -s && git add CHANGELOG.md",
     "generate": "sh ./scripts/generateComponent.sh"
   },
