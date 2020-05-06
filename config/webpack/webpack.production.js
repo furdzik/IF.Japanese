@@ -92,7 +92,6 @@ const webpackProduction = () => ({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new EnvironmentPlugin({
-      GATEWAY: '#{GATEWAY}#',
       APP_URL: '#{APP_URL}#'
     }),
     new WebpackCleanupPlugin(),

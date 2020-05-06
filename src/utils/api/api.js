@@ -1,12 +1,10 @@
 import axios from 'axios';
 
-import { gateway } from '@config/environment';
-
 const instance = axios.create({
-  baseURL: gateway,
   headers: {
     'Content-Type': 'application/json; charset=UTF-8',
     'Cache-Control': 'no-cache',
+    'Access-Control-Allow-Origin': '*',
     Pragma: 'no-cache'
   }
 });

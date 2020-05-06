@@ -40,7 +40,6 @@ const webpackDevelopment = () => ({
   },
   plugins: [
     new EnvironmentPlugin({
-      GATEWAY: 'https://www.wanikani.com/api/user/33832aa35afcc29b6011f3b6a0f1354a/',
       APP_URL: 'http://if.japanese.local:2017'
     }),
     new HotModuleReplacementPlugin()

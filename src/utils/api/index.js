@@ -1,1 +1,1 @@
-export { fetchWaniKani } from './fetchWaniKani';
+export { fetchJisho } from './fetchJisho';
