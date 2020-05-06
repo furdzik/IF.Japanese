@@ -6832,5 +6832,17 @@
     "known": false,
     "inProgress": true,
     "pitch": ""
+  },
+  {
+    "vocab": "宝",
+    "known": false,
+    "inProgress": true,
+    "pitch": ""
+  },
+  {
+    "vocab": "車内",
+    "known": false,
+    "inProgress": false,
+    "pitch": ""
   }
 ]
