@@ -2,7 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { KNOWN_VOCAB, IN_PROGRESS_VOCAB, NOT_KNOWN_VOCAB } from '@config/constants';
+import {
+  KNOWN_VOCAB,
+  IN_PROGRESS_VOCAB,
+  NOT_KNOWN_VOCAB,
+  LEVEL_5_VOCAB,
+  LEVEL_4_VOCAB,
+  LEVEL_3_VOCAB,
+  LEVEL_2_VOCAB,
+  LEVEL_1_VOCAB,
+  OTHER_VOCAB
+} from '@config/constants';
 
 import { vocabLengthType } from '@components/VocabularyList/VocabularyList.types';
 
@@ -31,6 +41,33 @@ const VocabularyHeading = (props) => {
     }
   ];
 
+  const secondaryFilterList = [
+    {
+      value: LEVEL_5_VOCAB,
+      label: intl.formatMessage(messages.n5)
+    },
+    {
+      value: LEVEL_4_VOCAB,
+      label: intl.formatMessage(messages.n4)
+    },
+    {
+      value: LEVEL_3_VOCAB,
+      label: intl.formatMessage(messages.n3)
+    },
+    {
+      value: LEVEL_2_VOCAB,
+      label: intl.formatMessage(messages.n2)
+    },
+    {
+      value: LEVEL_1_VOCAB,
+      label: intl.formatMessage(messages.n1)
+    },
+    {
+      value: OTHER_VOCAB,
+      label: intl.formatMessage(messages.other)
+    }
+  ];
+
   return (
     <React.Fragment>
       <Heading>{intl.formatMessage(messages.heading)}</Heading>
@@ -40,6 +77,14 @@ const VocabularyHeading = (props) => {
             name="filters"
             onCheckboxClick={props.changeFilters}
             items={filterList}
+            selected={props.selectedFilters}
+          />
+        </Filters>
+        <Filters secondary={true}>
+          <CheckboxList
+            name="filters"
+            onCheckboxClick={props.changeFilters}
+            items={secondaryFilterList}
             selected={props.selectedFilters}
           />
         </Filters>

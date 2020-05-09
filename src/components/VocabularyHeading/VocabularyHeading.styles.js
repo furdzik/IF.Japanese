@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Header = styled.div`
   display: flex;
@@ -27,11 +27,14 @@ const Spaced = styled.span`
 const Filters = styled.div`
   display: flex;
   align-items: center;
-  margin-right: auto;
   border-radius: .4rem;
-  min-width: 40rem;
+  min-width: 41rem;
   min-height: 6.2rem;
-  background: ${(props) => props.theme.colors.secondaryColor};
+
+  ${(props) => !props.secondary && css`
+    background: ${(props) => props.theme.colors.secondaryColor};
+    margin-right: auto;
+  `}
 `;
 
 export {

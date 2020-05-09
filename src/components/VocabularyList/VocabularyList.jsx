@@ -12,6 +12,7 @@ const VocabularyList = (props) => (
           key={item.vocab}
           known={item.known}
           inProgress={item.inProgress}
+          level={item.level}
         >
           {item.vocab}
         </ListItem>
