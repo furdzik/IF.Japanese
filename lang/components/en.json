@@ -3,5 +3,11 @@
   "VocabularyHeading.heading": "単語",
   "VocabularyHeading.inProgress": "勉強中",
   "VocabularyHeading.known": "知っている",
-  "VocabularyHeading.notKnown": "知らない"
+  "VocabularyHeading.n1": "N1",
+  "VocabularyHeading.n2": "N2",
+  "VocabularyHeading.n3": "N3",
+  "VocabularyHeading.n4": "N4",
+  "VocabularyHeading.n5": "N5",
+  "VocabularyHeading.notKnown": "知らない",
+  "VocabularyHeading.other": "OTHER"
 }
