@@ -14329,5 +14329,334 @@
     "inProgress": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "二度と",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "人形",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "文化",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "動物園",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "飛行場",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "水道",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "葡萄",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "事故",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "息子",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "生活",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "危険",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "世界",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "研究所",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "戦争",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "関係",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "音",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "普通",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "湖",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "夢",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "赤ちゃん",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "法律",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "気分",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "壁",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "田舎",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "故障",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "残念",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "島",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "教会",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "社会",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "工場",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "趣味",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "経済",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "台風",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "光",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "贈り物",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "水泳",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "講義",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "生産",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "会話",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "翻訳",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "文学",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "葉",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "交通",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "遊び",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "道具",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "入学",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
+  },
+  {
+    "vocab": "背中",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 4
   }
 ]
