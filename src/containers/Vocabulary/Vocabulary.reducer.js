@@ -1,7 +1,5 @@
 import vocab from '@data/vocabulary.json';
 
-import { getSelectedFiltersInitialValue, oneOfN5toN1Filters, getKnownUnknownFilters } from './Vocabulary.utils';
-
 import {
   LEVEL_5_VOCAB,
   LEVEL_4_VOCAB,
@@ -10,6 +8,8 @@ import {
   LEVEL_1_VOCAB,
   OTHER_VOCAB
 } from '@config/constants';
+
+import { getSelectedFiltersInitialValue, oneOfN5toN1Filters, getKnownUnknownFilters } from './Vocabulary.utils';
 
 const actionTypes = {
   GET_VOCAB: 'VOCABULARY/GET_VOCAB',
@@ -43,7 +43,7 @@ export default function(state = initialState, action) {
         n1: [],
         other: [],
         all: []
-      }
+      };
 
       // N5..N1 filters
       if (oneOfN5toN1Filters(selectedFilters)) {
@@ -69,7 +69,6 @@ export default function(state = initialState, action) {
         list.all = list.n5.concat(list.n4, list.n3, list.n2, list.n1, list.other);
 
         list = getKnownUnknownFilters(selectedFilters, list.all);
-
       } else {
         // known / not known filters
         list = getKnownUnknownFilters(selectedFilters, vocabList);
@@ -119,7 +118,7 @@ export const changeFilters = (filter) => (dispatch, getStore) => {
     selectedFilters.push(filter);
   }
 
-  localStorage.setItem('selectedFilters', JSON.stringify(selectedFilters))
+  localStorage.setItem('selectedFilters', JSON.stringify(selectedFilters));
   dispatch(setFilters(selectedFilters));
   dispatch(getVocabulary());
 };

@@ -12,13 +12,13 @@ const ListWrapper = styled.ul`
 `;
 
 const ListItem = styled.li`
+  position: relative;
   margin: 1rem;
   padding: .6rem 1.2rem .4rem;
   background: ${(props) => props.theme.colors.secondaryColor};
   border-radius: .4rem;
   font-size: 2rem;
   order: 2;
-  position: relative;
 
   ${(props) => props.known && css`
     background: ${props.theme.colors.primaryColor};

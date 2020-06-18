@@ -13,7 +13,7 @@ const VocabularyDetails = (props) => {
   useEffect(() => {
     props.getVocabularyDetailsData(props.name);
   }, [props.name]);
-  console.log('aaa');
+
   return props.name ? (
     <Container>
       <VocabularyDetailsComponent

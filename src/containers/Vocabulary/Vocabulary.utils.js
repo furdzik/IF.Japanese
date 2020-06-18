@@ -14,14 +14,12 @@ export const getSelectedFiltersInitialValue = () => !localStorage.getItem('selec
   ? [KNOWN_VOCAB, IN_PROGRESS_VOCAB, NOT_KNOWN_VOCAB]
   : JSON.parse(localStorage.getItem('selectedFilters'));
 
-export const oneOfN5toN1Filters = (selectedFilters) => {
-  return selectedFilters.indexOf(LEVEL_5_VOCAB) > -1
-    || selectedFilters.indexOf(LEVEL_4_VOCAB) > -1
-    || selectedFilters.indexOf(LEVEL_3_VOCAB) > -1
-    || selectedFilters.indexOf(LEVEL_2_VOCAB) > -1
-    || selectedFilters.indexOf(LEVEL_1_VOCAB) > -1
-    || selectedFilters.indexOf(OTHER_VOCAB) > -1
-};
+export const oneOfN5toN1Filters = (selectedFilters) => selectedFilters.indexOf(LEVEL_5_VOCAB) > -1
+  || selectedFilters.indexOf(LEVEL_4_VOCAB) > -1
+  || selectedFilters.indexOf(LEVEL_3_VOCAB) > -1
+  || selectedFilters.indexOf(LEVEL_2_VOCAB) > -1
+  || selectedFilters.indexOf(LEVEL_1_VOCAB) > -1
+  || selectedFilters.indexOf(OTHER_VOCAB) > -1;
 
 export const getKnownUnknownFilters = (selectedFilters, list) => {
   let knownList = [];
@@ -41,5 +39,5 @@ export const getKnownUnknownFilters = (selectedFilters, list) => {
     knownList,
     notKnownList,
     inProgressList
-  }
+  };
 };

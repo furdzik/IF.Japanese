@@ -80,7 +80,7 @@ const VocabularyHeading = (props) => {
             selected={props.selectedFilters}
           />
         </Filters>
-        <Filters secondary={true}>
+        <Filters secondary>
           <CheckboxList
             name="filters"
             onCheckboxClick={props.changeFilters}

@@ -32,7 +32,7 @@ const Filters = styled.div`
   min-height: 6.2rem;
 
   ${(props) => !props.secondary && css`
-    background: ${(props) => props.theme.colors.secondaryColor};
+    background: ${props.theme.colors.secondaryColor};
     margin-right: auto;
   `}
 `;
