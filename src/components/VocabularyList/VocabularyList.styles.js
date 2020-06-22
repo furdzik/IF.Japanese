@@ -9,6 +9,11 @@ const ListWrapper = styled.ul`
   margin: 0 -1rem 3rem;
   padding: 0;
   list-style: none;
+
+  @media print {
+    display: block;
+    text-align: justify;
+  }
 `;
 
 const ListItem = styled.li`
@@ -19,6 +24,19 @@ const ListItem = styled.li`
   border-radius: .4rem;
   font-size: 2rem;
   order: 2;
+
+  @media print {
+      & {
+        display: inline-block;
+        margin: .5rem .5rem;
+        padding: .5rem .5rem;
+        height: 3.5rem;
+        page-break-inside: avoid;
+        &::before {
+            display: none;
+        }
+      }
+    }
 
   ${(props) => props.known && css`
     background: ${props.theme.colors.primaryColor};

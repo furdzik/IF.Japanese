@@ -12,6 +12,10 @@ const CheckboxListWrapper = styled.ul`
   ${(props) => props.isVertical && css`
     display: block;
   `}
+
+  @media print {
+    justify-content: left;
+  }
 `;
 
 const ListItem = styled.li`
