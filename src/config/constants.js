@@ -10,3 +10,16 @@ export const LEVEL_1_VOCAB = 8;
 export const OTHER_VOCAB = 9;
 
 export const VIEWPORT_SIZE_CHECKING_DELAY = 500;
+
+export const menu = [
+  {
+    id: 1,
+    name: '単語',
+    link: '/'
+  },
+  {
+    id: 2,
+    name: '漢字',
+    link: '/kanji'
+  }
+]

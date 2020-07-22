@@ -56,6 +56,11 @@ const ListItem = styled.li`
       color: ${props.theme.colors.white};
       text-shadow: -1px 1px 8px #750101;
     }
+    @media print {
+      background: #fba5a5;
+      color: ${props.theme.colors.black};
+      text-shadow: none;
+    }
   `}
   ${(props) => props.inProgress && props.known && css`
     background: ${props.theme.colors.black};

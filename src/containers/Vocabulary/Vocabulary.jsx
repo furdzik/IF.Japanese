@@ -18,7 +18,7 @@ const Vocabulary = (props) => {
   }, [props.selectedFilters]);
 
   return props.vocab ? (
-    <Container>
+    <React.Fragment>
       <VocabularyHeading
         length={props.vocabLength}
         changeFilters={props.changeFilters}
@@ -27,7 +27,7 @@ const Vocabulary = (props) => {
       <VocabularyList
         vocab={props.vocab}
       />
-    </Container>
+    </React.Fragment>
   ) : null;
 };
 

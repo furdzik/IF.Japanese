@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const Header = styled.div`
   display: flex;
   align-items: center;
-  margin: 3rem 0 2rem;
+  margin: 0 0 2rem;
 
   @media print {
     display: block;

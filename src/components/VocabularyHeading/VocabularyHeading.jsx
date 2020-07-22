@@ -70,7 +70,6 @@ const VocabularyHeading = (props) => {
 
   return (
     <React.Fragment>
-      <Heading>{intl.formatMessage(messages.heading)}</Heading>
       <Header>
         <Filters>
           <CheckboxList
