@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { vocabType } from './VocabularyList.types';
+import { kanjiType } from './KanjiList.types';
 
-import { ListWrapper, ListItem } from './VocabularyList.styles.js';
+import { ListWrapper, ListItem } from './KanjiList.styles.js';
 
 const KanjiList = (props) => (
   <ListWrapper>
     {
-      props.vocab.map((item) => (
+      props.kanji.map((item) => (
         <ListItem
-          key={item.vocab}
+          key={item.kanji}
           known={item.known}
           inProgress={item.inProgress}
           level={item.level}
         >
-          {item.vocab}
+          {item.kanji}
         </ListItem>
       ))
     }
@@ -22,7 +22,7 @@ const KanjiList = (props) => (
 );
 
 KanjiList.propTypes = {
-  vocab: vocabType.isRequired
+  kanji: kanjiType.isRequired
 };
 
 export default KanjiList;

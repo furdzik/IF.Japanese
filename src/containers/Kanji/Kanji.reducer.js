@@ -12,7 +12,8 @@ import {
 import { getSelectedFiltersInitialValue, oneOfN5toN1Filters, getKnownUnknownFilters } from './Kanji.utils';
 
 const actionTypes = {
-  GET_KANJI: 'KANJI/GET_KANJI'
+  GET_KANJI: 'KANJI/GET_KANJI',
+  KANJI_SET_FILTERS: 'KANJI/SET_FILTERS'
 };
 
 const initialState = {
@@ -86,12 +87,38 @@ export default function(state = initialState, action) {
       };
     }
 
+    case actionTypes.SET_FILTERS: {
+      return {
+        ...state,
+        selectedFilters: action.payload
+      };
+    }
+
     default:
       return state;
   }
 }
 
-export const getKanji = (payload) => ({
+export const getKanji = () => ({
   type: actionTypes.GET_KANJI,
   payload: kanji
 });
+
+export const setFilters = (payload) => ({
+  type: actionTypes.KANJI_SET_FILTERS,
+  payload
+});
+
+export const changeFilters = (filter) => (dispatch, getStore) => {
+  const { selectedFilters } = getStore().Kanji;
+
+  if (selectedFilters.indexOf(filter) > -1) {
+    selectedFilters.splice(selectedFilters.indexOf(filter), 1);
+  } else {
+    selectedFilters.push(filter);
+  }
+
+  localStorage.setItem('kanjiSelectedFilters', JSON.stringify(selectedFilters));
+  dispatch(setFilters(selectedFilters));
+  dispatch(getKanji());
+};

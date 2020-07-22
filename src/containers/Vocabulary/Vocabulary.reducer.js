@@ -13,7 +13,7 @@ import { getSelectedFiltersInitialValue, oneOfN5toN1Filters, getKnownUnknownFilt
 
 const actionTypes = {
   GET_VOCAB: 'VOCABULARY/GET_VOCAB',
-  SET_FILTERS: 'VOCABULARY/SET_FILTERS'
+  VOCAB_SET_FILTERS: 'VOCABULARY/SET_FILTERS'
 };
 
 const initialState = {
@@ -76,6 +76,8 @@ export default function(state = initialState, action) {
 
       list.all = list.knownList.concat(list.inProgressList, list.notKnownList);
 
+      console.log(list.all);
+
       return {
         ...state,
         vocab: list.all,
@@ -87,7 +89,7 @@ export default function(state = initialState, action) {
       };
     }
 
-    case actionTypes.SET_FILTERS: {
+    case actionTypes.VOCAB_SET_FILTERS: {
       return {
         ...state,
         selectedFilters: action.payload

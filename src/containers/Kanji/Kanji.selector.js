@@ -1,10 +1,10 @@
 import { createSelector } from 'reselect';
 
-const kanjiSelector = (store) => store.Vocabulary;
+const kanjiSelector = (store) => store.Kanji;
 
 export default createSelector(
   kanjiSelector,
-  (vocab) => ({
-    ...vocab
+  (kanji) => ({
+    ...kanji
   })
 );
