@@ -1,13 +1,14 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import { getKanji } from './Kanji.reducer';
 import selector from './Kanji.selector';
 
 const Kanji = (props) => {
-  // useEffect(() => {
-  //   props.getVocabulary();
-  // }, [props.selectedFilters]);
+  useEffect(() => {
+    props.getKanji();
+  }, [props.selectedFilters]);
 
   return (
     <React.Fragment>
@@ -17,12 +18,14 @@ const Kanji = (props) => {
 };
 
 Kanji.propTypes = {
+  getKanji: PropTypes.func.isRequired
 };
 
 Kanji.defaultProps = {
 };
 
 const mapDispatchToProps = {
+  getKanji
 };
 
 export default connect(selector, mapDispatchToProps)(Kanji);

@@ -23,7 +23,7 @@
     "eslint:ci": "npm run eslint -- --quiet -f json -o reports/eslint-report.json",
     "eslint:fix": "npm run eslint -- --fix",
     "find-duplicates": "jscpd ./src/",
-    "lang:components": "extract-messages -l=en -d=en -o lang/components --flat \"src/components/**/*.messages.js\"",
+    "lang:components": "extract-messages -l=en -d=en -o lang/components --flat \"src/**/**/*.messages.js\"",
     "lang:defaults": "extract-messages -l=en -d=en -o lang/defaults --flat \"src/utils/default.messages.js\"",
     "lang": "npm run lang:defaults && npm run lang:components",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",

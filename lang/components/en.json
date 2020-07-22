@@ -1,13 +1,17 @@
 {
-  "VocabularyHeading.all": "全部: ",
-  "VocabularyHeading.heading": "単語",
-  "VocabularyHeading.inProgress": "勉強中",
-  "VocabularyHeading.known": "知っている",
-  "VocabularyHeading.n1": "N1",
-  "VocabularyHeading.n2": "N2",
-  "VocabularyHeading.n3": "N3",
-  "VocabularyHeading.n4": "N4",
-  "VocabularyHeading.n5": "N5",
-  "VocabularyHeading.notKnown": "知らない",
-  "VocabularyHeading.other": "OTHER"
+  "Filters.all": "全部: ",
+  "Filters.inProgress": "勉強中",
+  "Filters.known": "知っている",
+  "Filters.notKnown": "知らない",
+  "src.containers.Vocabulary.all": "全部: ",
+  "src.containers.Vocabulary.inProgress": "勉強中",
+  "src.containers.Vocabulary.known": "知っている",
+  "src.containers.Vocabulary.n1": "N1",
+  "src.containers.Vocabulary.n2": "N2",
+  "src.containers.Vocabulary.n3": "N3",
+  "src.containers.Vocabulary.n4": "N4",
+  "src.containers.Vocabulary.n5": "N5",
+  "src.containers.Vocabulary.notKnown": "知らない",
+  "src.containers.Vocabulary.other": "OTHER",
+  "src.utils.ok": "Ok"
 }

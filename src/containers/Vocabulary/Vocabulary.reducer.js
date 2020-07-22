@@ -118,7 +118,7 @@ export const changeFilters = (filter) => (dispatch, getStore) => {
     selectedFilters.push(filter);
   }
 
-  localStorage.setItem('selectedFilters', JSON.stringify(selectedFilters));
+  localStorage.setItem('vocabSelectedFilters', JSON.stringify(selectedFilters));
   dispatch(setFilters(selectedFilters));
   dispatch(getVocabulary());
 };

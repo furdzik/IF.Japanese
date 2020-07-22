@@ -10,9 +10,9 @@ import {
   OTHER_VOCAB
 } from '@config/constants';
 
-export const getSelectedFiltersInitialValue = () => !localStorage.getItem('selectedFilters')
+export const getSelectedFiltersInitialValue = () => !localStorage.getItem('vocabSelectedFilters')
   ? [KNOWN_VOCAB, IN_PROGRESS_VOCAB, NOT_KNOWN_VOCAB]
-  : JSON.parse(localStorage.getItem('selectedFilters'));
+  : JSON.parse(localStorage.getItem('vocabSelectedFilters'));
 
 export const oneOfN5toN1Filters = (selectedFilters) => selectedFilters.indexOf(LEVEL_5_VOCAB) > -1
   || selectedFilters.indexOf(LEVEL_4_VOCAB) > -1

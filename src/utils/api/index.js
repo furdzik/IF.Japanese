@@ -1,2 +1,2 @@
 export { fetchJisho } from './fetchJisho';
-export { fetchKaniKaniKanji } from './fetchJisho';
+export { fetchKanji } from './fetchKanji';

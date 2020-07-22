@@ -13,7 +13,6 @@ const Menu = (props) => (
           active={props.active === el.id ? 1 : 0}
         >
           <Link to={`${el.link}`}>
-            {console.log(props.active, props.active === el.id)}
             {el.name}
           </Link>
         </MenuItem>

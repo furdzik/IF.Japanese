@@ -10637,7 +10637,7 @@
   {
     "vocab": "地区",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -18317,7 +18317,7 @@
   {
     "vocab": "胃",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -18428,7 +18428,7 @@
   },
   {
     "vocab": "教科書",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -19094,7 +19094,7 @@
   {
     "vocab": "礼",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -19670,7 +19670,7 @@
   {
     "vocab": "修理",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -19783,7 +19783,7 @@
   {
     "vocab": "欠点",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -19818,7 +19818,7 @@
   {
     "vocab": "給料",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -19936,7 +19936,7 @@
   },
   {
     "vocab": "話し合う",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -19965,7 +19965,7 @@
   {
     "vocab": "不足",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -19985,7 +19985,7 @@
   },
   {
     "vocab": "変化",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -20070,7 +20070,7 @@
   {
     "vocab": "以来",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -20091,7 +20091,7 @@
   {
     "vocab": "隠す",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -20167,7 +20167,7 @@
   },
   {
     "vocab": "勝ち",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -20231,7 +20231,7 @@
   {
     "vocab": "命",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -20251,7 +20251,7 @@
   },
   {
     "vocab": "燃える",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -20287,7 +20287,7 @@
   {
     "vocab": "不幸",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -20588,7 +20588,7 @@
   {
     "vocab": "貯金",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -20650,7 +20650,7 @@
   },
   {
     "vocab": "桜",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -20763,7 +20763,7 @@
   {
     "vocab": "可能",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -20790,7 +20790,7 @@
   },
   {
     "vocab": "禁止",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -20853,7 +20853,7 @@
   },
   {
     "vocab": "暮らし",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -21071,7 +21071,7 @@
   {
     "vocab": "区別",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -21189,7 +21189,7 @@
   },
   {
     "vocab": "今後",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
@@ -23857,7 +23857,7 @@
   {
     "vocab": "匂い",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },

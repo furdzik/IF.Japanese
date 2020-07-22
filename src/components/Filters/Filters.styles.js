@@ -11,15 +11,6 @@ const Header = styled.div`
   }
 `;
 
-const Heading = styled.h2`
-  margin: 3rem 0;
-  color: ${(props) => props.theme.colors.primaryColor};
-
-  @media print {
-    margin-top: 0;
-  }
-`;
-
 const Legend = styled.div`
   display: inline-block;
   margin-left: auto;
@@ -43,7 +34,7 @@ const Spaced = styled.span`
   }
 `;
 
-const Filters = styled.div`
+const FiltersWrapper = styled.div`
   display: flex;
   align-items: center;
   border-radius: .4rem;
@@ -68,8 +59,7 @@ const Filters = styled.div`
 
 export {
   Header,
-  Heading,
   Legend,
   Spaced,
-  Filters
+  FiltersWrapper
 };

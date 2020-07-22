@@ -5,8 +5,7 @@ const instance = axios.create({
     'Content-Type': 'application/json; charset=UTF-8',
     'Cache-Control': 'no-cache',
     'Access-Control-Allow-Origin': '*',
-    Pragma: 'no-cache',
-    'Authorization': 'Bearer 020305ee-ed61-4685-b063-a9ea6006b8f5'
+    Pragma: 'no-cache'
   }
 });
 
