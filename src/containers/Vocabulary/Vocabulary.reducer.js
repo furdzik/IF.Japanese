@@ -76,8 +76,6 @@ export default function(state = initialState, action) {
 
       list.all = list.knownList.concat(list.inProgressList, list.notKnownList);
 
-      console.log(list.all);
-
       return {
         ...state,
         vocab: list.all,
@@ -107,7 +105,7 @@ export const getVocabulary = () => ({
 });
 
 export const setFilters = (payload) => ({
-  type: actionTypes.SET_FILTERS,
+  type: actionTypes.VOCAB_SET_FILTERS,
   payload
 });
 
