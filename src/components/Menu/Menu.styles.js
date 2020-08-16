@@ -10,6 +10,12 @@ const MenuItem = styled.li`
   font-weight: bold;
   margin: 3rem 3rem 3rem 0;
   color: ${(props) => props.theme.colors.black};
+
+  @media print {
+    display: none;
+    margin-top: 0;
+  }
+
   a {
     color: ${(props) => props.theme.colors.black};
     text-decoration: none;
@@ -24,11 +30,11 @@ const MenuItem = styled.li`
     a {
       color: ${(props) => props.theme.colors.primaryColor};
     }
-  `}
 
-  @media print {
-    margin-top: 0;
-  }
+    @media print {
+      display: block;
+    }
+  `}
 `;
 
 export {
