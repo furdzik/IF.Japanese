@@ -1063,69 +1063,69 @@
   },
   {
     "kanji": "多",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "太",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 3
   },
   {
     "kanji": "体",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "台",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "谷",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 2
   },
   {
     "kanji": "知",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "地",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "池",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 2
   },
   {
     "kanji": "茶",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "昼",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "朝",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "長",
@@ -1136,14 +1136,14 @@
   {
     "kanji": "鳥",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "直",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 3
   },
   {
     "kanji": "通",
