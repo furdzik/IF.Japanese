@@ -26768,5 +26768,12 @@
     "pitch": "",
     "level": 1,
     "additionalExplanation": "≈その場所"
+  },
+  {
+    "vocab": "勘違い",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 2
   }
 ]
