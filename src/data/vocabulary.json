@@ -7403,7 +7403,7 @@
   {
     "vocab": "優",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 1
   },
@@ -17393,7 +17393,7 @@
   {
     "vocab": "履歴書",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 0
   },
@@ -19424,7 +19424,7 @@
   {
     "vocab": "努力",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -20329,7 +20329,7 @@
   {
     "vocab": "感動",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -24571,7 +24571,7 @@
   {
     "vocab": "凡そ",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -26775,5 +26775,68 @@
     "inProgress": true,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "全長",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "お八つ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "衝撃",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "衝撃的",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "余りに",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "年々",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "特大",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "漁師",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "老いる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
   }
 ]

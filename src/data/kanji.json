@@ -237,7 +237,7 @@
     "kanji": "森",
     "known": false,
     "inProgress": true,
-    "level": 4
+    "level": 2
   },
   {
     "kanji": "人",
@@ -662,7 +662,7 @@
   {
     "kanji": "京",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "level": 4
   },
   {
@@ -698,7 +698,7 @@
   {
     "kanji": "計",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "level": 4
   },
   {
@@ -932,7 +932,7 @@
   {
     "kanji": "春",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "level": 4
   },
   {
@@ -980,7 +980,7 @@
   {
     "kanji": "親",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "level": 4
   },
   {
@@ -1021,7 +1021,7 @@
   },
   {
     "kanji": "切",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "level": 4
   },
@@ -1149,19 +1149,19 @@
     "kanji": "通",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "弟",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "店",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "点",
@@ -1178,8 +1178,8 @@
   {
     "kanji": "冬",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "刀",
@@ -1202,8 +1202,8 @@
   {
     "kanji": "答",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "頭",
@@ -1214,14 +1214,14 @@
   {
     "kanji": "同",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "道",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "読",
@@ -1244,8 +1244,8 @@
   {
     "kanji": "肉",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "馬",
@@ -1256,14 +1256,14 @@
   {
     "kanji": "買",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "売",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "麦",
@@ -1292,8 +1292,8 @@
   {
     "kanji": "風",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "分",
@@ -1316,8 +1316,8 @@
   {
     "kanji": "歩",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "母",
@@ -1328,8 +1328,8 @@
   {
     "kanji": "方",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "北",
@@ -1340,8 +1340,8 @@
   {
     "kanji": "妹",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "毎",
@@ -1358,8 +1358,8 @@
   {
     "kanji": "明",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "鳴",
@@ -1382,14 +1382,14 @@
   {
     "kanji": "夜",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "野",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "矢",
@@ -1405,15 +1405,15 @@
   },
   {
     "kanji": "曜",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "用",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "来",
@@ -1424,8 +1424,8 @@
   {
     "kanji": "理",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "里",
@@ -1442,14 +1442,14 @@
   {
     "kanji": "悪",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "安",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "暗",
@@ -1466,14 +1466,14 @@
   {
     "kanji": "意",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "医",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "育",
@@ -1483,27 +1483,27 @@
   },
   {
     "kanji": "員",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "飲",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "院",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "運",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "泳",
@@ -1514,8 +1514,8 @@
   {
     "kanji": "駅",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "央",
@@ -1532,8 +1532,8 @@
   {
     "kanji": "屋",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "温",
@@ -1556,14 +1556,14 @@
   {
     "kanji": "界",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "開",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "階",
@@ -1586,14 +1586,14 @@
   {
     "kanji": "漢",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "館",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "岸",
@@ -1610,8 +1610,8 @@
   {
     "kanji": "起",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "客",
@@ -1628,8 +1628,8 @@
   {
     "kanji": "急",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "球",
@@ -1640,8 +1640,8 @@
   {
     "kanji": "究",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "級",
@@ -1652,8 +1652,8 @@
   {
     "kanji": "去",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "橋",
@@ -1665,7 +1665,7 @@
     "kanji": "業",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "局",
@@ -1682,8 +1682,8 @@
   {
     "kanji": "銀",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "区",
@@ -1736,8 +1736,8 @@
   {
     "kanji": "研",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "県",
@@ -1808,20 +1808,20 @@
   {
     "kanji": "仕",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "使",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "始",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "指",
@@ -1831,9 +1831,9 @@
   },
   {
     "kanji": "死",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "詩",
@@ -1849,15 +1849,15 @@
   },
   {
     "kanji": "事",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "持",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "次",
@@ -1880,20 +1880,20 @@
   {
     "kanji": "写",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "者",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "主",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "取",
@@ -1934,32 +1934,32 @@
   {
     "kanji": "終",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "習",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "集",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "住",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "重",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "宿",
@@ -2042,8 +2042,8 @@
   {
     "kanji": "真",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "神",
@@ -2066,8 +2066,8 @@
   {
     "kanji": "世",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "整",
@@ -2102,8 +2102,8 @@
   {
     "kanji": "送",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "息",
@@ -2120,8 +2120,8 @@
   {
     "kanji": "族",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "他",
@@ -2144,14 +2144,14 @@
   {
     "kanji": "待",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "代",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "第",
@@ -2161,9 +2161,9 @@
   },
   {
     "kanji": "題",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "炭",
@@ -2186,8 +2186,8 @@
   {
     "kanji": "着",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "柱",
@@ -2199,7 +2199,7 @@
     "kanji": "注",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "丁",
@@ -2252,8 +2252,8 @@
   {
     "kanji": "転",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "登",
@@ -2270,8 +2270,8 @@
   {
     "kanji": "度",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "島",
@@ -2307,7 +2307,7 @@
     "kanji": "動",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "童",
@@ -2354,8 +2354,8 @@
   {
     "kanji": "発",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "反",
@@ -2414,8 +2414,8 @@
   {
     "kanji": "病",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "秒",
@@ -2426,8 +2426,8 @@
   {
     "kanji": "品",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "負",
@@ -2444,8 +2444,8 @@
   {
     "kanji": "服",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "福",
@@ -2455,9 +2455,9 @@
   },
   {
     "kanji": "物",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "平",
@@ -2474,8 +2474,8 @@
   {
     "kanji": "勉",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "放",
@@ -2487,7 +2487,7 @@
     "kanji": "味",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "命",
@@ -2504,8 +2504,8 @@
   {
     "kanji": "問",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "役",
@@ -2528,8 +2528,8 @@
   {
     "kanji": "有",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "由",
@@ -2559,7 +2559,7 @@
     "kanji": "洋",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "羊",
@@ -2594,8 +2594,8 @@
   {
     "kanji": "旅",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "両",
@@ -2654,8 +2654,8 @@
   {
     "kanji": "以",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "位",
@@ -2696,8 +2696,8 @@
   {
     "kanji": "英",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "塩",
@@ -2990,14 +2990,14 @@
   {
     "kanji": "建",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "験",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "固",
@@ -3140,8 +3140,8 @@
   {
     "kanji": "試",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "児",
@@ -3170,8 +3170,8 @@
   {
     "kanji": "借",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "種",
@@ -3501,7 +3501,7 @@
     "kanji": "堂",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "得",
@@ -3512,8 +3512,8 @@
   {
     "kanji": "特",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "毒",
@@ -3554,8 +3554,8 @@
   {
     "kanji": "飯",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "費",
@@ -3590,8 +3590,8 @@
   {
     "kanji": "不",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "付",
@@ -3632,8 +3632,8 @@
   {
     "kanji": "別",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "変",
@@ -3758,8 +3758,8 @@
   {
     "kanji": "料",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "良",
@@ -4346,8 +4346,8 @@
   {
     "kanji": "質",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "舎",
@@ -4598,8 +4598,8 @@
   {
     "kanji": "貸",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 4
   },
   {
     "kanji": "退",
@@ -4965,7 +4965,7 @@
     "kanji": "映",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "延",
@@ -5305,9 +5305,9 @@
   },
   {
     "kanji": "私",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "level": 0
+    "level": 4
   },
   {
     "kanji": "至",
@@ -7387,12 +7387,6 @@
   },
   {
     "kanji": "駒",
-    "known": false,
-    "inProgress": false,
-    "level": 0
-  },
-  {
-    "kanji": "愚",
     "known": false,
     "inProgress": false,
     "level": 0
