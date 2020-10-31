@@ -8339,7 +8339,7 @@
     "level": 2
   },
   {
-    "vocab": "青年",
+    "vocab": "床年",
     "known": false,
     "inProgress": true,
     "pitch": "",
@@ -20077,7 +20077,7 @@
   {
     "vocab": "種類",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -23878,7 +23878,7 @@
   {
     "vocab": "床",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -26838,5 +26838,19 @@
     "inProgress": false,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "体重",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "性別",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 2
   }
 ]
