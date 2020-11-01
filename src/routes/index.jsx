@@ -10,7 +10,9 @@ import { menu } from '@config/constants';
 import Menu from '@components/Menu';
 import Container from '@components/Container';
 import Vocabulary from '@containers/Vocabulary/Vocabulary';
+import VocabularyDetails from '@containers/VocabularyDetails/VocabularyDetails';
 import Kanji from '@containers/Kanji/Kanji';
+import Verbs from '@containers/Verbs/Verbs';
 
 const Routes = () => (
   <Router>
@@ -41,15 +43,26 @@ const Routes = () => (
           const { vocab } = props.match.params;
 
           if (vocab) {
-            return (<Container>
-              <Menu list={menu} active={1} />
-              <Vocabulary />
-            </Container>);
+            return (
+              <Container>
+                <Menu list={menu} active={1} />
+                <VocabularyDetails name={vocab} />
+              </Container>
+            );
           }
 
           return null;
         }}
       />
+      <Route
+        path="/verbs"
+        exact
+      >
+        <Container>
+          <Menu list={menu} active={3} />
+          <Verbs />
+        </Container>
+      </Route>
       <Route
         render={() => <h1>Page not found</h1>}
       />

@@ -32,7 +32,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "立て",
+      "verbGroup": "2",
+      "verbType": "transitive",
+      "particles": ["を", "に"]
+    }
   },
   {
     "vocab": "女王",
@@ -529,7 +535,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "出",
+      "verbGroup": "2",
+      "verbType": "intransitive",
+      "particles": ["が", "を"]
+    }
   },
   {
     "vocab": "入り口",
@@ -656,7 +668,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "入れ",
+      "verbGroup": "2",
+      "verbType": "transitive",
+      "particles": ["が"]
+    }
   },
   {
     "vocab": "力",
@@ -691,7 +709,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "上が",
+      "verbGroup": "ru",
+      "verbType": "intransitive",
+      "particles": ["が"]
+    }
   },
   {
     "vocab": "上る",
@@ -1090,7 +1114,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "出",
+      "verbGroup": "su",
+      "verbType": "transitive",
+      "particles": ["を"]
+    }
   },
   {
     "vocab": "火",
@@ -2007,7 +2037,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "泳",
+      "verbGroup": "gu",
+      "verbType": "intransitive",
+      "particles": ["を", "が", "で"]
+    }
   },
   {
     "vocab": "悲劇",
@@ -5487,7 +5523,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "読",
+      "verbGroup": "mu",
+      "verbType": "transitive",
+      "particles": ["を"]
+    }
   },
   {
     "vocab": "初回",
@@ -12578,7 +12620,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "持",
+      "verbGroup": "tsu",
+      "verbType": "other",
+      "particles": ["を", "が"]
+    }
   },
   {
     "vocab": "車",
@@ -13180,7 +13228,13 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "伸び",
+      "verbGroup": "2",
+      "verbType": "intransitive",
+      "particles": ["を"]
+    }
   },
   {
     "vocab": "半",
@@ -13292,7 +13346,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "会",
+      "verbGroup": "u",
+      "verbType": "intransitive",
+      "particles": ["に", "と"]
+    }
   },
   {
     "vocab": "好き",
@@ -13362,7 +13422,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "歩",
+      "verbGroup": "ku",
+      "verbType": "intransitive",
+      "particles": ["を"]
+    }
   },
   {
     "vocab": "働く",
@@ -13523,7 +13589,13 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "遊",
+      "verbGroup": "bu",
+      "verbType": "intransitive",
+      "particles": ["が", "と"]
+    }
   },
   {
     "vocab": "無くす",
@@ -24167,7 +24239,13 @@
     "known": false,
     "inProgress": false,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "責め",
+      "verbGroup": "2",
+      "verbType": "transitive",
+      "particles": ["を", "に", "で"]
+    }
   },
   {
     "vocab": "済ませる",

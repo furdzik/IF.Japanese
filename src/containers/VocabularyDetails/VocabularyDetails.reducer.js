@@ -1,4 +1,4 @@
-import { fetchJisho } from '@utils/api';
+// import { fetchJisho } from '@utils/api';
 
 const actionTypes = {
   GET_VOCAB_DETAILS: 'VOCABULARY/GET_VOCAB_DETAILS'
@@ -29,18 +29,9 @@ const getVocabularyDetails = (vocabDetails) => ({
 });
 
 export const getVocabularyDetailsData = (name) => (dispatch) => {
-  const vocabDetails = {
-    name: '女王',
-    reading: 'じょおう',
-    myData: {
-      known: true,
-      inProgress: false,
-      pitch: '0' // ?
-    }
-  };
 
-  fetchJisho(name).then(() => {
-  });
+  // fetchJisho(name).then(() => {
+  // });
 
-  dispatch(getVocabularyDetails(vocabDetails));
+  dispatch(getVocabularyDetails(name));
 };
