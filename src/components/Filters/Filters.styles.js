@@ -16,7 +16,7 @@ const Legend = styled.div`
   margin-left: auto;
   padding: .5rem 1rem .3rem;
   background: ${(props) => props.theme.colors.secondaryColor};
-  border-radius: .4rem;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
 
   @media print {
     display: flex;
@@ -37,7 +37,7 @@ const Spaced = styled.span`
 const FiltersWrapper = styled.div`
   display: flex;
   align-items: center;
-  border-radius: .4rem;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
   min-width: 41rem;
   min-height: 6.2rem;
 

@@ -22,7 +22,7 @@ const VerbBox = styled.div`
   margin: 2.1rem 2rem 0;
   padding: .6rem 1.2rem .4rem;
   background: ${(props) => props.theme.colors.secondaryColor};
-  border-radius: .4rem;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
   font-size: 2rem;
 
   ${(props) => props.known && css`
@@ -120,7 +120,7 @@ const TriggerWrapper = styled.div`
 
 const ShowMeaning = styled.button`
   background: ${(props) => props.theme.colors.secondaryColor};
-  border-radius: .4rem;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
   display: inline-block;
   cursor: pointer;
   &:focus {

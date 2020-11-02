@@ -34,7 +34,7 @@ const Label = styled.span`
   display: inline-block;
   color: ${(props) => props.theme.colors.primaryColor};
   background: ${(props) => props.theme.colors.lightGray};
-  border-radius: .4rem;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
   padding: .3rem;
   font-size: 1.3rem;
   margin-bottom: .5rem;

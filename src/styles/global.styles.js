@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
       url(${IconsFontTtf}) format('truetype'), /* Safari, Android, iOS */
       url(${IconsFontSvg}) format('svg'); /* legacy iOS */
   }
-  
+
   html {
     font-size: 62.5%;
   }
@@ -76,6 +76,10 @@ const GlobalStyles = createGlobalStyle`
     &:required {
       box-shadow: none;
     }
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 `;
 

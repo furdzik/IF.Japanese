@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { vocabType } from './VocabularyList.types';
-
 import { ListWrapper, ListItem } from './VocabularyList.styles.js';
 
 const VocabularyList = (props) => (
@@ -14,7 +14,7 @@ const VocabularyList = (props) => (
           inProgress={item.inProgress}
           level={item.level}
         >
-          {item.vocab}
+          <Link to={`/vocab/${item.vocab}`}>{item.vocab}</Link>
         </ListItem>
       ))
     }

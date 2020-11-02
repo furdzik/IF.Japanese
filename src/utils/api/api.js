@@ -2,10 +2,7 @@ import axios from 'axios';
 
 const instance = axios.create({
   headers: {
-    'Content-Type': 'application/json; charset=UTF-8',
-    'Cache-Control': 'no-cache',
-    'Access-Control-Allow-Origin': '*',
-    Pragma: 'no-cache'
+    'Content-Type': 'application/json; charset=UTF-8'
   }
 });
 

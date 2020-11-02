@@ -157,6 +157,19 @@ const VerbConjugation = (props) => {
         return inflectionPart + ending;
       }
 
+      case bunpouTypes.IKOU_KEI: {
+        return intl.formatMessage(messages[`ikouKei_${verbGroup}`]) + intl.formatMessage(messages.ikouKeiEnding);
+      }
+
+      case bunpouTypes.MEIREI_KEI: {
+        if (inflection === inflectionTypes.NEGATIVE) {
+          const end = getBaseEnd(bunpou, verbGroup, inflectionTypes.NORMAL, false)
+          return end + intl.formatMessage(messages.meireiNaiKei);
+        }
+
+        return intl.formatMessage(messages[`meireiKei_${verbGroup}`]);
+      }
+
       default:
         return '';
     }

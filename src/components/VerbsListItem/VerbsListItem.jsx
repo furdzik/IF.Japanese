@@ -159,6 +159,23 @@ const VerbsListItem = (props) => {
               noPast
             />
             <VerbConjugationGroup
+              showLine={collapsed}
+              showLabel={collapsed}
+              label={intl.formatMessage(messages[`${bunpouTypes.IKOU_KEI}Label`])}
+              verb={props.item.verb}
+              bunpou={[bunpouTypes.IKOU_KEI]}
+              noPast
+              noNegative
+            />
+            <VerbConjugationGroup
+              showLine={collapsed}
+              showLabel={collapsed}
+              label={intl.formatMessage(messages[`${bunpouTypes.IKOU_KEI}Label`])}
+              verb={props.item.verb}
+              bunpou={[bunpouTypes.MEIREI_KEI]}
+              noPast
+            />
+            <VerbConjugationGroup
               showLabel={collapsed}
               label={intl.formatMessage(messages[`${bunpouTypes.UKEMI_KEI}Label`])}
               verb={props.item.verb}

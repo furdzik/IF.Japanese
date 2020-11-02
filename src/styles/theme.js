@@ -7,5 +7,8 @@ export default {
     secondaryColorHover: '#b8b8b8',
     tartaryColor: '#FFAFAF',
     lightGray: '#EEEEEE'
+  },
+  layout: {
+    borderRadius: '.4rem'
   }
 };
