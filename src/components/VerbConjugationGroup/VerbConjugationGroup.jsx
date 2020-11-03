@@ -19,45 +19,54 @@ const VerbConjugationGroup = (props) => props.verb ? (
       ) : null
     }
     {
-      props.bunpou.map((item, index) => item !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI || props.verb?.verbGroup !== verbGroupTypes.group2 ? (
-        <Box key={index}>
-          <VerbConjugationWrapper
-            verb={props.verb}
-            bunpou={item}
-            inflection={inflectionTypes.NORMAL}
-          />
-          {
-            !props.noNegative ? (
-              <VerbConjugationWrapper
-                verb={props.verb}
-                bunpou={item}
-                inflection={inflectionTypes.NEGATIVE}
-              />
-            ) : null
-          }
-          {
-            !props.noPast ? (
-              <React.Fragment>
+      props.bunpou
+        .map((item, index) => (
+          item !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI
+          || props.verb?.verbGroup !== verbGroupTypes.group2
+        ) ? (
+          // eslint-disable-next-line react/no-array-index-key
+          <Box key={index}>
+            <VerbConjugationWrapper
+              verb={props.verb}
+              bunpou={item}
+              inflection={inflectionTypes.NORMAL}
+            />
+            {
+              !props.noNegative ? (
                 <VerbConjugationWrapper
                   verb={props.verb}
                   bunpou={item}
-                  inflection={inflectionTypes.PAST}
+                  inflection={inflectionTypes.NEGATIVE}
                 />
-                <VerbConjugationWrapper
-                  verb={props.verb}
-                  bunpou={item}
-                  inflection={inflectionTypes.PAST_NEGATIVE}
-                />
-              </React.Fragment>
-            ) : null
-          }
-
-        </Box>
-      ) : null)
+              ) : null
+            }
+            {
+              !props.noPast ? (
+                <React.Fragment>
+                  <VerbConjugationWrapper
+                    verb={props.verb}
+                    bunpou={item}
+                    inflection={inflectionTypes.PAST}
+                  />
+                  <VerbConjugationWrapper
+                    verb={props.verb}
+                    bunpou={item}
+                    inflection={inflectionTypes.PAST_NEGATIVE}
+                  />
+                </React.Fragment>
+              ) : null
+            }
+          </Box>
+          ) : null)
     }
     {
-      props.bunpou.map((item, index) => props.teineiKei
-        && (item !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI || props.verb?.verbGroup !== verbGroupTypes.group2) ? (
+      props.bunpou.map((item, index) => (
+        props.teineiKei && (
+          item !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI
+          || props.verb?.verbGroup !== verbGroupTypes.group2
+        )
+      ) ? (
+        // eslint-disable-next-line react/no-array-index-key
         <Box key={index}>
           <VerbConjugationWrapper
             verb={props.verb}
@@ -94,8 +103,7 @@ const VerbConjugationGroup = (props) => props.verb ? (
             ) : null
           }
         </Box>
-        ) : null
-      )
+        ) : null)
     }
   </BoxGroup>
 ) : null;
@@ -104,24 +112,20 @@ VerbConjugationGroup.propTypes = {
   bunpou: PropTypes.arrayOf(PropTypes.string).isRequired,
   verb: vocabShape.isRequired,
   label: PropTypes.string,
-  className: PropTypes.string,
-  hideGroup: PropTypes.bool,
-  teineiKei: PropTypes.bool,
+  noNegative: PropTypes.bool,
+  noPast: PropTypes.bool,
   showLabel: PropTypes.bool,
   showLine: PropTypes.bool,
-  noPast: PropTypes.bool,
-  noNegative: PropTypes.bool
+  teineiKei: PropTypes.bool
 };
 
 VerbConjugationGroup.defaultProps = {
-  className: '',
   label: '',
-  hideGroup: false,
-  teineiKei: false,
+  noNegative: false,
+  noPast: false,
   showLabel: false,
   showLine: false,
-  noPast: false,
-  noNegative: false
-}
+  teineiKei: false
+};
 
 export default VerbConjugationGroup;

@@ -15,14 +15,14 @@ const CheckboxBox = styled.span`
   display: flex;
   position: relative;
   top: .25rem;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  margin-right: 1rem;
-  height: 1.7rem;
   width: 1.7rem;
-  border-radius: 2px;
+  height: 1.7rem;
+  margin-right: 1rem;
   border: 2px solid ${(props) => props.theme.colors.primaryColor};
+  border-radius: 2px;
   background: ${(props) => props.theme.colors.white};
   transition: all 0.2s;
   cursor: pointer;
@@ -33,13 +33,13 @@ const CheckboxBox = styled.span`
     transform: rotate(-53deg);
     width: 9px;
     height: 6px;
-    border-left: 2px solid;
     border-bottom: 2px solid;
+    border-left: 2px solid;
     color: ${(props) => props.theme.colors.primaryColor};
-    content: '';
     opacity: 0;
+    content: '';
   }
-  
+
   ${(props) => props.isActive && css`
     background-color: ${props.theme.colors.white};
     border-color: ${props.theme.colors.primaryColor};

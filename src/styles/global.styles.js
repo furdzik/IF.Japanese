@@ -8,8 +8,8 @@ const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
   @font-face {
     font-family: 'Icons';
-    font-style: normal;
     font-weight: normal;
+    font-style: normal;
     font-display: fallback;
     src: url(${IconsFontWoff}) format('woff'), /* standards */
       url(${IconsFontTtf}) format('truetype'), /* Safari, Android, iOS */
@@ -23,14 +23,14 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     background: #ffffff;
     font-family: 'Noto Sans JP', sans-serif;
-    line-height: 1.5;
     font-size: 1.8rem;
+    line-height: 1.5;
     overflow-x: hidden;
   }
   button {
-    font: inherit;
-    background: none;
     border: 0;
+    background: none;
+    font: inherit;
   }
   *,
   *::before,

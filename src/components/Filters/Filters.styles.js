@@ -15,13 +15,13 @@ const Legend = styled.div`
   display: inline-block;
   margin-left: auto;
   padding: .5rem 1rem .3rem;
-  background: ${(props) => props.theme.colors.secondaryColor};
   border-radius: ${(props) => props.theme.layout.borderRadius};
+  background: ${(props) => props.theme.colors.secondaryColor};
 
   @media print {
     display: flex;
-    background: none;
     padding: 0;
+    background: none;
   }
 `;
 
@@ -37,9 +37,9 @@ const Spaced = styled.span`
 const FiltersWrapper = styled.div`
   display: flex;
   align-items: center;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
   min-width: 41rem;
   min-height: 6.2rem;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
 
   ${(props) => !props.secondary && css`
     background: ${props.theme.colors.secondaryColor};

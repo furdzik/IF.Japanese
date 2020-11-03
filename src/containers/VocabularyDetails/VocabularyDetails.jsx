@@ -23,28 +23,24 @@ const VocabularyDetails = (props) => {
       tags={props.tags}
       known={props.known}
       inProgress={props.inProgress}
-      pitch={props.pitch}
-      level={props.level}
-      verb={props.verb}
       japanese={props.japanese}
     />
   ) : <Loader covered />;
 };
 
 VocabularyDetails.propTypes = {
-  loading: PropTypes.bool.isRequired,
   getVocabularyDetailsData: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   senses: PropTypes.arrayOf(PropTypes.object).isRequired,
-  reading: PropTypes.string,
-  jlpt: PropTypes.arrayOf(PropTypes.string),
-  isCommon: PropTypes.bool,
-  tags: PropTypes.arrayOf(PropTypes.string),
-  known: PropTypes.bool,
   inProgress: PropTypes.bool,
-  pitch: PropTypes.string,
-  verb: PropTypes.object,
-  japanese: PropTypes.arrayOf(PropTypes.object)
+  isCommon: PropTypes.bool,
+  // eslint-disable-next-line react/no-unused-prop-types
+  japanese: PropTypes.arrayOf(PropTypes.object),
+  jlpt: PropTypes.arrayOf(PropTypes.string),
+  known: PropTypes.bool,
+  reading: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string)
 };
 
 VocabularyDetails.defaultProps = {
@@ -52,10 +48,8 @@ VocabularyDetails.defaultProps = {
   isCommon: null,
   tags: [],
   reading: '',
-  know: false,
+  known: false,
   inProgress: false,
-  pitch: '',
-  verb: {},
   japanese: []
 };
 

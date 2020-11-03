@@ -6,9 +6,9 @@ const MenuWrapper = styled.ul`
 
 const MenuItem = styled.li`
   display: block;
+  margin: 3rem 3rem 3rem 0;
   font-size: 2.7rem;
   font-weight: bold;
-  margin: 3rem 3rem 3rem 0;
   color: ${(props) => props.theme.colors.black};
 
   @media print {
@@ -26,9 +26,9 @@ const MenuItem = styled.li`
   }
 
   ${(props) => props.active && css`
-    color: ${(props) => props.theme.colors.primaryColor};
+    color: ${props.theme.colors.primaryColor};
     a {
-      color: ${(props) => props.theme.colors.primaryColor};
+      color: ${props.theme.colors.primaryColor};
     }
 
     @media print {

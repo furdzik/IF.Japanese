@@ -89,7 +89,11 @@ const Kanji = (props) => {
 };
 
 Kanji.propTypes = {
-  getKanji: PropTypes.func.isRequired
+  changeFilters: PropTypes.func.isRequired,
+  getKanji: PropTypes.func.isRequired,
+  kanji: PropTypes.arrayOf(PropTypes.object).isRequired,
+  kanjiLength: PropTypes.arrayOf(PropTypes.number).isRequired,
+  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired
 };
 
 Kanji.defaultProps = {

@@ -2,18 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import {
-  KNOWN_VOCAB,
-  IN_PROGRESS_VOCAB,
-  NOT_KNOWN_VOCAB,
-  LEVEL_5_VOCAB,
-  LEVEL_4_VOCAB,
-  LEVEL_3_VOCAB,
-  LEVEL_2_VOCAB,
-  LEVEL_1_VOCAB,
-  OTHER_VOCAB
-} from '@config/constants';
-
 import { vocabLengthType } from '@components/VocabularyList/VocabularyList.types';
 
 import CheckboxList from '@components/ui/CheckboxList';
@@ -59,16 +47,16 @@ const Filters = (props) => {
 
 Filters.propTypes = {
   changeFilters: PropTypes.func.isRequired,
-  length: vocabLengthType.isRequired,
-  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired,
   filterList: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.number,
     label: PropTypes.string
   })).isRequired,
+  length: vocabLengthType.isRequired,
   secondaryFilterList: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.number,
     label: PropTypes.string
-  })).isRequired
+  })).isRequired,
+  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired
 };
 
 export default Filters;

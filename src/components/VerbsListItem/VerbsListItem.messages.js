@@ -22,9 +22,3 @@ export default defineMessages({
   verbTypeOtherText: '他',
   particleLabel: '助詞:'
 });
-
-
-
-
-
-

@@ -109,6 +109,7 @@ const VerbsListItem = (props) => {
               <ParticleList>
                 {
                   props.item.verb.particles.map((el, index) => (
+                    // eslint-disable-next-line react/no-array-index-key
                     <ParticleListItem key={index}>{el}</ParticleListItem>
                   ))
                 }
@@ -208,15 +209,17 @@ const VerbsListItem = (props) => {
                   {intl.formatMessage(messages.hideMeaning)}
                 </ShowMeaning>
               </React.Fragment>
-            ) : <ShowMeaning onClick={() => setShowMeaning(!showMeaning)}>
-              {intl.formatMessage(messages.showMeaning)}
-            </ShowMeaning>
+            ) : (
+              <ShowMeaning onClick={() => setShowMeaning(!showMeaning)}>
+                {intl.formatMessage(messages.showMeaning)}
+              </ShowMeaning>
+            )
           }
         </MeaningBox>
       </BoxContent>
     </Item>
   );
-}
+};
 
 VerbsListItem.propTypes = {
   item: vocabShape.isRequired

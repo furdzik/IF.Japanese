@@ -60,28 +60,39 @@
     "order/properties-order": [
       {
         "properties": [
+          "box-sizing",
           "display",
           "position",
           "top",
           "right",
           "left",
-          "bottom"
+          "bottom",
+          "overflow",
+          "visibility",
+          "z-index"
         ]
       },
       {
         "properties": [
+          "flex",
+          "flex-grow",
+          "flex-shrink",
+          "flex-basis",
+          "flex-flow",
+          "flex-direction",
+          "flex-wrap",
           "justify-content",
           "justify-items",
           "align-content",
           "align-items",
           "align-self",
-          "flex-flow",
-          "flex-direction",
-          "flex-wrap",
-          "flex",
-          "flex-basis",
-          "flex-grow",
-          "flex-shrink"
+          "order"
+        ]
+      },
+      {
+        "properties": [
+          "float",
+          "clear"
         ]
       },
       {
@@ -91,6 +102,16 @@
           "transform-style",
           "perspective",
           "perspective-origin"
+        ]
+      },
+      {
+        "properties": [
+          "width",
+          "min-width",
+          "max-width",
+          "height",
+          "min-height",
+          "max-height"
         ]
       },
       {
@@ -113,28 +134,50 @@
       },
       {
         "properties": [
+          "border",
+          "border-top",
+          "border-right",
+          "border-bottom",
+          "border-left",
+          "border-width",
+          "border-style",
+          "border-color",
+          "border-radius",
+          "outline"
+        ]
+      },
+      {
+        "properties": [
           "background",
           "background-color",
           "background-image",
           "background-size",
           "background-position",
-          "background-repeat"
+          "background-repeat",
+          "box-shadow"
         ]
       },
       {
         "properties": [
+          "font",
           "font-family",
+          "font-size",
+          "font-weight",
           "font-style",
           "font-variant",
           "font-stretch",
-          "font-weight",
           "line-height",
-          "font-size",
-          "color"
+          "color",
+          "text-shadow",
+          "text-align",
+          "vertical-align",
+          "white-space"
         ]
       },
       {
         "properties": [
+          "opacity",
+          "transition",
           "animation",
           "animation-name",
           "animation-duration",
@@ -144,6 +187,16 @@
           "animation-iteration-count",
           "animation-fill-mode",
           "animation-play-state"
+        ]
+      },
+      {
+        "properties": [
+          "list-style",
+          "content",
+          "cursor",
+          "page-break-inside",
+          "page-break-after",
+          "page-break-before"
         ]
       }
     ],

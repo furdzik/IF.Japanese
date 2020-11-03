@@ -3,9 +3,9 @@ import styled, { css } from 'styled-components';
 const ListWrapper = styled.ul`
   display: flex;
   position: relative;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   margin: 0 -1rem 3rem;
   padding: 0;
   list-style: none;
@@ -18,25 +18,25 @@ const ListWrapper = styled.ul`
 
 const ListItem = styled.li`
   position: relative;
+  order: 2;
   margin: 1rem;
   padding: .6rem 1.2rem .4rem;
-  background: ${(props) => props.theme.colors.secondaryColor};
   border-radius: ${(props) => props.theme.layout.borderRadius};
+  background: ${(props) => props.theme.colors.secondaryColor};
   font-size: 2rem;
-  order: 2;
 
   @media print {
-      & {
-        display: inline-block;
-        margin: .5rem .5rem;
-        padding: .5rem .5rem;
-        height: 3.5rem;
-        page-break-inside: avoid;
-        &::before {
-            display: none;
-        }
+    & {
+      display: inline-block;
+      height: 3.5rem;
+      margin: .5rem .5rem;
+      padding: .5rem .5rem;
+      page-break-inside: avoid;
+      &::before {
+        display: none;
       }
     }
+  }
 
   ${(props) => props.known && css`
     background: ${props.theme.colors.primaryColor};

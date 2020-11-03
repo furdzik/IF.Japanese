@@ -2,12 +2,12 @@ import styled, { css } from 'styled-components';
 
 const CheckboxListWrapper = styled.ul`
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
   margin: -.5rem;
   padding: 0;
   list-style: none;
-  width: 100%;
 
   ${(props) => props.isVertical && css`
     display: block;
@@ -19,8 +19,8 @@ const CheckboxListWrapper = styled.ul`
 `;
 
 const ListItem = styled.li`
-  padding: .5rem;
   max-width: 100%;
+  padding: .5rem;
   cursor: pointer;
 `;
 

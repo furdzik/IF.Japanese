@@ -25,7 +25,6 @@ import selector from './Verbs.selector';
 
 import messages from './Verbs.messages.js';
 
-
 const Verbs = (props) => {
   const intl = useIntl();
 
@@ -74,7 +73,6 @@ const Verbs = (props) => {
       label: intl.formatMessage(messages.other)
     }
   ];
-
 
   return props.verbs ? (
     <React.Fragment>

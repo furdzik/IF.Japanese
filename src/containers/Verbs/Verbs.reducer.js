@@ -105,7 +105,7 @@ export const getVerbs = () => {
   return {
     type: actionTypes.GET_VERBS,
     payload: verbs
-  }
+  };
 };
 
 export const setFilters = (payload) => ({

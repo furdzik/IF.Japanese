@@ -66,7 +66,7 @@ export const getVocabularyDetailsData = (name) => (dispatch) => {
 
   fetchJisho(name)
     .then((response) => {
-      const tags = response.data[0].tags;
+      const { tags } = response.data[0];
       response.data[0].tags.forEach((el, index) => {
         const waniKaniLevel = el.replace('wanikani', '');
 
@@ -75,7 +75,7 @@ export const getVocabularyDetailsData = (name) => (dispatch) => {
       response.tags = tags;
       vocab.forEach((el) => {
         if (el.vocab === name) {
-          dispatch(getVocabularyDetails({name, el, details: response}));
+          dispatch(getVocabularyDetails({ name, el, details: response }));
           console.log(response);
         }
       });

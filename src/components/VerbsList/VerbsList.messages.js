@@ -13,9 +13,3 @@ export default defineMessages({
   shiekiKeiLabel: '使役形',
   shiekiukemiKeiLabel: '受身使役形'
 });
-
-
-
-
-
-

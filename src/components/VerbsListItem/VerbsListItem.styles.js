@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
 const Item = styled.li`
-  list-style: none;
-  border: 1px solid ${(props) => props.theme.colors.secondaryColor};
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid ${(props) => props.theme.colors.secondaryColor};
+  list-style: none;
 
   &:first-child {
     border-radius: .4rem .4rem 0 0;
@@ -21,8 +21,8 @@ const VerbBox = styled.div`
   position: relative;
   margin: 2.1rem 2rem 0;
   padding: .6rem 1.2rem .4rem;
-  background: ${(props) => props.theme.colors.secondaryColor};
   border-radius: ${(props) => props.theme.layout.borderRadius};
+  background: ${(props) => props.theme.colors.secondaryColor};
   font-size: 2rem;
 
   ${(props) => props.known && css`
@@ -34,7 +34,7 @@ const VerbBox = styled.div`
     }
   `}
   ${(props) => props.inProgress && css`
-     background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
+    background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
     color: ${props.theme.colors.white};
     text-shadow: -1px 1px 8px #750101;
     &::before {
@@ -55,21 +55,21 @@ const VerbBox = styled.div`
       position: absolute;
       top: 0;
       right: .3rem;
-      color: inherit;
       font-family: Arial, Calibri, Helvetica, sans-serif;
       font-size: 1rem;
+      color: inherit;
       content: '${props.level}';
     }
   `}
-`
+`;
 
 const MainBox = styled.div`
   display: flex;
-  width: 22rem;
-  align-items: flex-start;
-  border-right: 1px solid ${(props) => props.theme.colors.secondaryColor};
   flex-wrap: wrap;
   align-content: flex-start;
+  align-items: flex-start;
+  width: 22rem;
+  border-right: 1px solid ${(props) => props.theme.colors.secondaryColor};
 `;
 
 const BoxWrapper = styled.div`
@@ -84,13 +84,12 @@ const BoxContent = styled.div`
   ${(props) => props.smallerMargin && css`
     margin-top: 1rem;
   `}
-
 `;
 
 const MeaningBox = styled.div`
-  padding: 2rem;
-  margin-top: 2rem;
   width: 100%;
+  margin-top: 2rem;
+  padding: 2rem;
   border-top: 1px solid ${(props) => props.theme.colors.secondaryColor};
   font-size: 1.4rem;
 `;
@@ -100,17 +99,17 @@ const Meaning = styled.div`
 `;
 
 const TriggerWrapper = styled.div`
-  position: absolute;
-  right: -1.5rem;
-  top: 2.6rem;
-  background: ${(props) => props.theme.colors.secondaryColor};
-  border-radius: 50%;
-  color: ${(props) => props.theme.colors.white};
-  width: 3rem;
-  height: 3rem;
   display: flex;
+  position: absolute;
+  top: 2.6rem;
+  right: -1.5rem;
   justify-content: center;
   align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: ${(props) => props.theme.colors.secondaryColor};
+  color: ${(props) => props.theme.colors.white};
   cursor: pointer;
 
   &:hover {
@@ -119,9 +118,9 @@ const TriggerWrapper = styled.div`
 `;
 
 const ShowMeaning = styled.button`
-  background: ${(props) => props.theme.colors.secondaryColor};
-  border-radius: ${(props) => props.theme.layout.borderRadius};
   display: inline-block;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
+  background: ${(props) => props.theme.colors.secondaryColor};
   cursor: pointer;
   &:focus {
     border: none;
@@ -145,12 +144,12 @@ const VerbType = styled.span`
 `;
 
 const ParticleWrapper = styled.div`
-  width: 100%;
-  margin-top: 2rem;
-  padding: 0 1rem;
   display: flex;
   flex: 1 0 auto;
   align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0 1rem;
 `;
 
 const ParticleList = styled.ul`
@@ -158,12 +157,12 @@ const ParticleList = styled.ul`
 `;
 
 const ParticleListItem = styled.li`
-  background: ${(props) => props.theme.colors.secondaryColor};
-  border-radius: 50%;
   display: inline-block;
   margin: .4rem;
-  font-size: 1.5rem;
   padding: .2rem .7rem;
+  border-radius: 50%;
+  background: ${(props) => props.theme.colors.secondaryColor};
+  font-size: 1.5rem;
 `;
 
 const ParticleLabel = styled.span`

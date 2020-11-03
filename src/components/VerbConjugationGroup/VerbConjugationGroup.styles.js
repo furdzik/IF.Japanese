@@ -14,8 +14,8 @@ const Line = css`
 `;
 
 const BoxGroup = styled.div`
-  margin-left: 1rem;
   margin-right: 1rem;
+  margin-left: 1rem;
   & + & {
     ${Line}
   }
@@ -23,7 +23,6 @@ const BoxGroup = styled.div`
   ${(props) => props.showLine && css`
     ${Line}
   `}
-
 `;
 
 const VerbConjugationWrapper = styled(VerbConjugation)`
@@ -32,13 +31,13 @@ const VerbConjugationWrapper = styled(VerbConjugation)`
 
 const Label = styled.span`
   display: inline-block;
-  color: ${(props) => props.theme.colors.primaryColor};
-  background: ${(props) => props.theme.colors.lightGray};
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-  padding: .3rem;
-  font-size: 1.3rem;
   margin-bottom: .5rem;
   margin-left: 1rem;
+  padding: .3rem;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
+  background: ${(props) => props.theme.colors.lightGray};
+  font-size: 1.3rem;
+  color: ${(props) => props.theme.colors.primaryColor};
 `;
 
 export {

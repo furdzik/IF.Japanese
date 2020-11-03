@@ -25,7 +25,6 @@ import selector from './Vocabulary.selector';
 
 import messages from './Vocabulary.messages.js';
 
-
 const Vocabulary = (props) => {
   const intl = useIntl();
 
@@ -74,7 +73,6 @@ const Vocabulary = (props) => {
       label: intl.formatMessage(messages.other)
     }
   ];
-
 
   return props.vocab ? (
     <React.Fragment>

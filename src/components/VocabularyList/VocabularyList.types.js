@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { verbShape } from '@components/VerbsList/VerbsList.types';
 
-export  const vocabShape = PropTypes.shape({
+export const vocabShape = PropTypes.shape({
   vocab: PropTypes.string,
   known: PropTypes.bool,
   inProgress: PropTypes.bool,

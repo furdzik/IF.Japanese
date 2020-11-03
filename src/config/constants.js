@@ -35,17 +35,17 @@ export const LEVEL_1_VERBS = 8;
 export const OTHER_VERBS = 9;
 
 export const verbGroupTypes = {
-  'group2': '2',
-  'specialVerb1': 'special1',
-  'specialVerb2': 'special2',
-  'group1u': 'u',
-  'group1Ku': 'ku',
-  'group1Gu': 'gu',
-  'group1Su': 'su',
-  'group1Tsu': 'tsu',
-  'group1Bu': 'bu',
-  'group1Mu': 'mu',
-  'group1Ru': 'ru'
+  group2: '2',
+  specialVerb1: 'special1',
+  specialVerb2: 'special2',
+  group1u: 'u',
+  group1Ku: 'ku',
+  group1Gu: 'gu',
+  group1Su: 'su',
+  group1Tsu: 'tsu',
+  group1Bu: 'bu',
+  group1Mu: 'mu',
+  group1Ru: 'ru'
 };
 
 export const inflectionTypes = {

@@ -22,8 +22,8 @@ const Menu = (props) => (
 );
 
 Menu.propTypes = {
-  list: PropTypes.array.isRequired,
-  active: PropTypes.number.isRequired
+  active: PropTypes.number.isRequired,
+  list: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Menu;

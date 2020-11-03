@@ -73,22 +73,23 @@ const VocabularyDetails = (props) => {
                       }
                     </PartOfSpeechWrapper>
                     <div>
-                    {
-                      el.english_definitions.map((def, index) => (
-                        <React.Fragment>
-                          {def}
-                          {el.english_definitions.length !== index + 1 ? ', ' : ''}
-                        </React.Fragment>
-                      ))
-                    }
-                    {el.antonyms ? el.antonyms : ''}
-                    <AdditionalInfo>{el.info}</AdditionalInfo>
+                      {
+                        // eslint-disable-next-line no-shadow
+                        el.english_definitions.map((def, index) => (
+                          <React.Fragment>
+                            {def}
+                            {el.english_definitions.length !== index + 1 ? ', ' : ''}
+                          </React.Fragment>
+                        ))
+                      }
+                      {el.antonyms ? el.antonyms : ''}
+                      <AdditionalInfo>{el.info}</AdditionalInfo>
                     </div>
                   </div>
-                  {/*restrictions: []*/}
-                  {/*see_also: []*/}
-                  {/*source: []*/}
-                  {/*tags: []*/}
+                  {/* restrictions: [] */}
+                  {/* see_also: [] */}
+                  {/* source: [] */}
+                  {/* tags: [] */}
                   {console.log(el)}
                 </SensesListItem>
               ))
@@ -98,20 +99,19 @@ const VocabularyDetails = (props) => {
       </Content>
     </VocabularyDetailsWrapper>
   );
-}
+};
 
 VocabularyDetails.propTypes = {
   name: PropTypes.string.isRequired,
   senses: PropTypes.arrayOf(PropTypes.object).isRequired,
-  reading: PropTypes.string,
-  jlpt: PropTypes.arrayOf(PropTypes.string),
-  isCommon: PropTypes.bool,
-  tags: PropTypes.arrayOf(PropTypes.string),
-  known: PropTypes.bool,
   inProgress: PropTypes.bool,
-  pitch: PropTypes.string,
-  verb: PropTypes.object,
-  japanese: PropTypes.arrayOf(PropTypes.object)
+  isCommon: PropTypes.bool,
+  // eslint-disable-next-line react/no-unused-prop-types
+  japanese: PropTypes.arrayOf(PropTypes.object),
+  jlpt: PropTypes.arrayOf(PropTypes.string),
+  known: PropTypes.bool,
+  reading: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string)
 };
 
 VocabularyDetails.defaultProps = {
@@ -119,10 +119,8 @@ VocabularyDetails.defaultProps = {
   isCommon: null,
   tags: [],
   reading: '',
-  know: false,
+  known: false,
   inProgress: false,
-  pitch: '',
-  verb: {},
   japanese: []
 };
 

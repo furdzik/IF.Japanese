@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export  const verbShape = PropTypes.shape({
+export const verbShape = PropTypes.shape({
   main: PropTypes.string,
   verbGroup: PropTypes.string,
   verbType: PropTypes.string

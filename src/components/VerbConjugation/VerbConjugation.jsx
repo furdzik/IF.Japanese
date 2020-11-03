@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { vocabShape } from '../VocabularyList/VocabularyList.types';
 import { bunpouTypes, inflectionTypes, verbGroupTypes } from '@config/constants';
+
+import { vocabShape } from '../VocabularyList/VocabularyList.types';
 
 import messages from './VerbConjugation.messages';
 
@@ -15,18 +16,18 @@ const VerbConjugation = (props) => {
       case inflectionTypes.NORMAL: {
         if (teineiKei) {
           return intl.formatMessage(messages.baseTeineiKeiEnding);
-        } else {
-          return (
-            verbGroup === verbGroupTypes.group2
-            || bunpou === bunpouTypes.KANOU_KEI
-            || bunpou === bunpouTypes.UKEMI_KEI
-            || bunpou === bunpouTypes.SHIEKI_KEI
-            || bunpou === bunpouTypes.SHIEKIUKEMI_KEI
-            || bunpou === bunpouTypes.SHIEKIUKEMI_SHORT_KEI
-          )
-            ? intl.formatMessage(messages.baseNaiRuEnding)
-            : intl.formatMessage(messages[`jishouKeiEnding_${verbGroup}`]);
         }
+
+        return (
+          verbGroup === verbGroupTypes.group2
+          || bunpou === bunpouTypes.KANOU_KEI
+          || bunpou === bunpouTypes.UKEMI_KEI
+          || bunpou === bunpouTypes.SHIEKI_KEI
+          || bunpou === bunpouTypes.SHIEKIUKEMI_KEI
+          || bunpou === bunpouTypes.SHIEKIUKEMI_SHORT_KEI
+        )
+          ? intl.formatMessage(messages.baseNaiRuEnding)
+          : intl.formatMessage(messages[`jishouKeiEnding_${verbGroup}`]);
       }
 
       case inflectionTypes.NEGATIVE: {
@@ -69,7 +70,7 @@ const VerbConjugation = (props) => {
       default:
         return null;
     }
-  }
+  };
 
   const getBunpouTransformation = (bunpou, verbGroup, inflection, teineiKei) => {
     switch (bunpou) {
@@ -103,7 +104,7 @@ const VerbConjugation = (props) => {
       default:
         return intl.formatMessage(messages[`${bunpou}_${verbGroup}`]);
     }
-  }
+  };
 
   const specialInflectionEnding = (bunpou, verbGroup, inflection, teineiKei) => {
     switch (props.bunpou) {
@@ -116,16 +117,16 @@ const VerbConjugation = (props) => {
 
         switch (inflection) {
           case inflectionTypes.NORMAL: {
-            return  pre + intl.formatMessage(messages.taiKeiEnding) + end;
+            return pre + intl.formatMessage(messages.taiKeiEnding) + end;
           }
           case inflectionTypes.NEGATIVE: {
-            return  pre + intl.formatMessage(messages.taiNaiKeiEnding) + end;
+            return pre + intl.formatMessage(messages.taiNaiKeiEnding) + end;
           }
           case inflectionTypes.PAST: {
-            return  pre + intl.formatMessage(messages.taiPastKeiEnding) + end;
+            return pre + intl.formatMessage(messages.taiPastKeiEnding) + end;
           }
           case inflectionTypes.PAST_NEGATIVE: {
-            return  pre + intl.formatMessage(messages.taiNaiPastKeiEnding) + end;
+            return pre + intl.formatMessage(messages.taiNaiPastKeiEnding) + end;
           }
           default:
             return '';
@@ -163,7 +164,7 @@ const VerbConjugation = (props) => {
 
       case bunpouTypes.MEIREI_KEI: {
         if (inflection === inflectionTypes.NEGATIVE) {
-          const end = getBaseEnd(bunpou, verbGroup, inflectionTypes.NORMAL, false)
+          const end = getBaseEnd(bunpou, verbGroup, inflectionTypes.NORMAL, false);
           return end + intl.formatMessage(messages.meireiNaiKei);
         }
 
@@ -173,7 +174,7 @@ const VerbConjugation = (props) => {
       default:
         return '';
     }
-  }
+  };
 
   const inflectionEnding = (bunpou, verbGroup, inflection, teineiKei) => {
     let preEnd = '';
@@ -187,9 +188,7 @@ const VerbConjugation = (props) => {
     const end = getBaseEnd(bunpou, verbGroup, inflection, teineiKei);
 
     return preEnd + end;
-  }
-
-
+  };
 
   const getEnding = () => {
     switch (props.bunpou) {
@@ -217,7 +216,7 @@ const VerbConjugation = (props) => {
       {getEnding()}
     </div>
   );
-}
+};
 
 VerbConjugation.propTypes = {
   bunpou: PropTypes.string.isRequired,
@@ -230,6 +229,6 @@ VerbConjugation.propTypes = {
 VerbConjugation.defaultProps = {
   teineiKei: false,
   className: ''
-}
+};
 
 export default VerbConjugation;
