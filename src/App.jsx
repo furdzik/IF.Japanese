@@ -19,7 +19,6 @@ import { english } from '@lang';
 
 import theme from '@styles/theme';
 import { GlobalStyles } from '@styles/global.styles';
-import '@styles/scss/main.scss';
 
 const middlewareEnhancer = applyMiddleware(thunk);
 const enhancer = production ? middlewareEnhancer : composeWithDevTools(middlewareEnhancer);

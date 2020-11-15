@@ -73,7 +73,8 @@
     "redux": "4.0.5",
     "redux-thunk": "2.3.0",
     "reselect": "4.0.0",
-    "styled-components": "5.0.1"
+    "styled-components": "5.0.1",
+    "unofficial-jisho-api": "2.0.12"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",
@@ -104,7 +105,7 @@
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-plugin-styled-components": "1.10.6",
     "babel-preset-env": "1.7.0",
-    "conventional-changelog-cli": "2.0.31",
+    "conventional-changelog-cli": "2.1.0",
     "conventional-changelog-eslint": "3.0.4",
     "copy-webpack-plugin": "5.1.1",
     "cross-env": "7.0.0",
@@ -166,7 +167,7 @@
     "webpack-cdn-plugin": "3.2.2",
     "webpack-cleanup-plugin": "0.5.1",
     "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.10.3",
+    "webpack-dev-server": "3.11.0",
     "webpack-merge": "4.2.2"
   },
   "resolutions": {

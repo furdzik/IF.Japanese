@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Link } from 'react-router-dom';
+
 const VocabularyDetailsWrapper = styled.div`
   overflow: hidden;
 `;
@@ -41,6 +43,10 @@ const Tag = styled.span`
   & + & {
     margin-left: 2rem;
   }
+  ${(props) => props.verb && css`
+    background: ${props.theme.colors.primaryColor};
+    color: ${props.theme.colors.white};
+  `}
 `;
 
 const Content = styled.div`
@@ -48,7 +54,10 @@ const Content = styled.div`
 `;
 
 const MeaningHeader = styled.h2`
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+  ${(props) => !props.smallMargin && css`
+    margin-bottom: 5rem;
+  `}
 `;
 
 const SensesWrapper = styled.div`
@@ -78,6 +87,8 @@ const SensesListItem = styled.li`
 `;
 
 const AdditionalInfo = styled.div`
+  margin-top: 1rem;
+  font-size: 1.4rem;
   color: ${(props) => props.theme.colors.secondaryColor};
 `;
 
@@ -97,6 +108,16 @@ const PartOfSpeechBox = styled.div`
   }
 `;
 
+const AntonymsBox = styled.div`
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: ${(props) => props.theme.colors.secondaryColor};
+`;
+
+const AntonymsLink = styled(Link)`
+  color: ${(props) => props.theme.colors.primaryColor};
+`;
+
 export {
   VocabularyDetailsWrapper,
   WordHeader,
@@ -110,5 +131,7 @@ export {
   SensesListItem,
   AdditionalInfo,
   PartOfSpeechWrapper,
-  PartOfSpeechBox
+  PartOfSpeechBox,
+  AntonymsBox,
+  AntonymsLink
 };

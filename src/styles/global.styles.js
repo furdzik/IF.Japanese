@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     box-sizing: border-box;
-    background: #ffffff;
+    background: #ffffff; // zmienna!
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -71,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
       pointer-events: none;
     }
     &:-webkit-autofill {
-      box-shadow: 0 0 0 1000px #ffffff;
+      box-shadow: 0 0 0 1000px #ffffff; // zmienna
     }
     &:required {
       box-shadow: none;

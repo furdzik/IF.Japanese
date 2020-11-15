@@ -53,8 +53,7 @@ export const inflectionTypes = {
   NEGATIVE: 2,
   PAST: 3,
   PAST_NEGATIVE: 4,
-  OTHER: 5, // nakerebanarimasen
-  NO_INFLECTION: 6
+  NO_INFLECTION: 5
 };
 
 export const bunpouTypes = {

@@ -86,18 +86,6 @@ const BoxContent = styled.div`
   `}
 `;
 
-const MeaningBox = styled.div`
-  width: 100%;
-  margin-top: 2rem;
-  padding: 2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.secondaryColor};
-  font-size: 1.4rem;
-`;
-
-const Meaning = styled.div`
-  font-family: Open Sans, Arial, sans-serif;
-`;
-
 const TriggerWrapper = styled.div`
   display: flex;
   position: absolute;
@@ -117,24 +105,6 @@ const TriggerWrapper = styled.div`
   }
 `;
 
-const ShowMeaning = styled.button`
-  display: inline-block;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
-  cursor: pointer;
-  &:focus {
-    border: none;
-    outline: none;
-  }
-  &:hover {
-    background: ${(props) => props.theme.colors.secondaryColorHover};
-  }
-
-  ${(props) => props.withMargin && css`
-    margin-top: 1rem;
-  `}
-`;
-
 const VerbType = styled.span`
   display: inline-block;
   margin-top: 2.5rem;
@@ -148,8 +118,8 @@ const ParticleWrapper = styled.div`
   flex: 1 0 auto;
   align-items: center;
   width: 100%;
-  margin-top: 2rem;
-  padding: 0 1rem;
+  margin: 2rem 0;
+  padding: 0 0 0 2rem;
 `;
 
 const ParticleList = styled.ul`
@@ -176,10 +146,7 @@ export {
   MainBox,
   BoxContent,
   BoxWrapper,
-  MeaningBox,
-  Meaning,
   TriggerWrapper,
-  ShowMeaning,
   VerbType,
   ParticleWrapper,
   ParticleList,

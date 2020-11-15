@@ -15,6 +15,8 @@ import {
   OTHER_KANJI
 } from '@config/constants';
 
+import { objectShape } from '@utils/types/objectShape';
+
 import Filters from '@components/Filters';
 import KanjiList from '@components/KanjiList';
 
@@ -91,12 +93,15 @@ const Kanji = (props) => {
 Kanji.propTypes = {
   changeFilters: PropTypes.func.isRequired,
   getKanji: PropTypes.func.isRequired,
-  kanji: PropTypes.arrayOf(PropTypes.object).isRequired,
-  kanjiLength: PropTypes.arrayOf(PropTypes.number).isRequired,
-  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired
+  kanji: PropTypes.arrayOf(PropTypes.object),
+  kanjiLength: objectShape,
+  selectedFilters: PropTypes.arrayOf(PropTypes.number)
 };
 
 Kanji.defaultProps = {
+  kanji: [],
+  kanjiLength: 0,
+  selectedFilters: null
 };
 
 const mapDispatchToProps = {

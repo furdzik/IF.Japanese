@@ -18,10 +18,7 @@ import {
   MainBox,
   BoxContent,
   BoxWrapper,
-  MeaningBox,
-  Meaning,
   TriggerWrapper,
-  ShowMeaning,
   VerbType,
   ParticleWrapper,
   ParticleList,
@@ -34,7 +31,6 @@ const VerbsListItem = (props) => {
   const intl = useIntl();
 
   const [collapsed, setCollapse] = useState(false);
-  const [showMeaning, setShowMeaning] = useState(!props.item.known);
 
   const verbTypeLabel = (type, symbol = false) => {
     switch (type) {
@@ -87,6 +83,7 @@ const VerbsListItem = (props) => {
       known={props.item.known}
       inProgress={props.item.inProgress}
       level={props.item.level}
+      id={props.item.vocab}
     >
       <MainBox>
         <VerbBox
@@ -176,6 +173,24 @@ const VerbsListItem = (props) => {
               bunpou={[bunpouTypes.MEIREI_KEI]}
               noPast
             />
+
+            <VerbConjugationGroup
+              showLine={collapsed}
+              showLabel={collapsed}
+              label={intl.formatMessage(messages[`${bunpouTypes.JOUKEN_BA_KEI}Label`])}
+              verb={props.item.verb}
+              bunpou={[bunpouTypes.JOUKEN_BA_KEI]}
+              noPast
+            />
+            <VerbConjugationGroup
+              showLine={collapsed}
+              showLabel={collapsed}
+              label={intl.formatMessage(messages[`${bunpouTypes.JOUKEN_TARA_KEI}Label`])}
+              verb={props.item.verb}
+              bunpou={[bunpouTypes.JOUKEN_TARA_KEI]}
+              noPast
+            />
+
             <VerbConjugationGroup
               showLabel={collapsed}
               label={intl.formatMessage(messages[`${bunpouTypes.UKEMI_KEI}Label`])}
@@ -199,23 +214,6 @@ const VerbsListItem = (props) => {
             />
           </Collapsible>
         </BoxWrapper>
-
-        <MeaningBox>
-          {
-            showMeaning ? (
-              <React.Fragment>
-                <Meaning>The meaning of the word will be here</Meaning>
-                <ShowMeaning withMargin onClick={() => setShowMeaning(!showMeaning)}>
-                  {intl.formatMessage(messages.hideMeaning)}
-                </ShowMeaning>
-              </React.Fragment>
-            ) : (
-              <ShowMeaning onClick={() => setShowMeaning(!showMeaning)}>
-                {intl.formatMessage(messages.showMeaning)}
-              </ShowMeaning>
-            )
-          }
-        </MeaningBox>
       </BoxContent>
     </Item>
   );

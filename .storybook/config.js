@@ -13,7 +13,6 @@ import reducers from '@containers/reducers';
 
 import theme from '@styles/theme';
 import { GlobalStyles } from '@styles/global.styles';
-import '@styles/scss/main.scss';
 
 const req = require.context('../src/components', true, /\.stories\.jsx$/);
 

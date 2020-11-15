@@ -11,6 +11,19 @@ import messages from './VerbConjugation.messages';
 const VerbConjugation = (props) => {
   const intl = useIntl();
 
+  const isSpecialCasePastEnding = (bunpou, verbGroup) => (
+    (bunpou !== bunpouTypes.KANOU_KEI
+    && bunpou !== bunpouTypes.UKEMI_KEI
+    && bunpou !== bunpouTypes.SHIEKI_KEI
+    && bunpou !== bunpouTypes.SHIEKIUKEMI_KEI
+    && bunpou !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI)
+    && (
+      verbGroup === verbGroupTypes.group1Gu
+      || verbGroup === verbGroupTypes.group1Bu
+      || verbGroup === verbGroupTypes.group1Mu
+    )
+  );
+
   const getBaseEnd = (bunpou, verbGroup, inflection, teineiKei) => {
     switch (inflection) {
       case inflectionTypes.NORMAL: {
@@ -38,19 +51,7 @@ const VerbConjugation = (props) => {
 
       case inflectionTypes.PAST: {
         let pastEnding;
-        if (
-          (
-            bunpou !== bunpouTypes.KANOU_KEI
-            && bunpou !== bunpouTypes.UKEMI_KEI
-            && bunpou !== bunpouTypes.SHIEKI_KEI
-            && bunpou !== bunpouTypes.SHIEKIUKEMI_KEI
-            && bunpou !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI)
-          && (
-            verbGroup === verbGroupTypes.group1Gu
-            || verbGroup === verbGroupTypes.group1Bu
-            || verbGroup === verbGroupTypes.group1Mu
-          )
-        ) {
+        if (isSpecialCasePastEnding(bunpou, verbGroup)) {
           pastEnding = intl.formatMessage(messages.basePast2KeiEnding);
         } else {
           pastEnding = intl.formatMessage(messages.basePastKeiEnding);
@@ -171,6 +172,30 @@ const VerbConjugation = (props) => {
         return intl.formatMessage(messages[`meireiKei_${verbGroup}`]);
       }
 
+      case bunpouTypes.JOUKEN_BA_KEI: {
+        if (inflection === inflectionTypes.NEGATIVE) {
+          return (verbGroup !== verbGroupTypes.group2 ? intl.formatMessage(messages[`jishouNaiKei_${verbGroup}`]) : '') + intl.formatMessage(messages.joukenNaiKeiEnding);
+        }
+
+        return intl.formatMessage(messages[`joukenKei_${verbGroup}`]) + intl.formatMessage(messages.joukenKeiEnding);
+      }
+
+      case bunpouTypes.JOUKEN_TARA_KEI: {
+        const ending = intl.formatMessage(messages.joukenTaraKeiEnding);
+        if (inflection === inflectionTypes.NEGATIVE) {
+          return intl.formatMessage(messages.baseNaiPastKeiEnding) + ending;
+        }
+
+        let pastEnding;
+        if (isSpecialCasePastEnding(bunpou, verbGroup)) {
+          pastEnding = intl.formatMessage(messages.basePast2KeiEnding);
+        } else {
+          pastEnding = intl.formatMessage(messages.basePastKeiEnding);
+        }
+
+        return pastEnding + ending;
+      }
+
       default:
         return '';
     }
@@ -197,6 +222,7 @@ const VerbConjugation = (props) => {
       case bunpouTypes.IKOU_KEI:
       case bunpouTypes.MEIREI_KEI:
       case bunpouTypes.KINSHI_KEI:
+      case bunpouTypes.JOUKEN_BA_KEI:
       case bunpouTypes.JOUKEN_TARA_KEI: {
         return specialInflectionEnding(
           props.bunpou, props.verb?.verbGroup, props.inflection, props.teineiKei

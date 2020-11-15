@@ -105,7 +105,7 @@ export default defineMessages({
   ikouKei_ru: 'ろ',
   ikouKei_2: 'よ',
   meireiKei_u: 'え',
-  meireiKei_ku: 'こ',
+  meireiKei_ku: 'け',
   meireiKei_gu: 'げ',
   meireiKei_su: 'せ',
   meireiKei_tsu: 'て',
@@ -113,5 +113,17 @@ export default defineMessages({
   meireiKei_mu: 'め',
   meireiKei_ru: 'れ',
   meireiKei_2: 'ろ',
-  meireiNaiKei: 'な'
+  meireiNaiKei: 'な',
+  joukenKei_u: 'え',
+  joukenKei_ku: 'け',
+  joukenKei_gu: 'げ',
+  joukenKei_su: 'せ',
+  joukenKei_tsu: 'て',
+  joukenKei_bu: 'べ',
+  joukenKei_mu: 'め',
+  joukenKei_ru: 'れ',
+  joukenKei_2: 'れ',
+  joukenKeiEnding: 'ば',
+  joukenNaiKeiEnding: 'なければ',
+  joukenTaraKeiEnding: 'ら'
 });

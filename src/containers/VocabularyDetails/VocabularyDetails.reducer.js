@@ -76,7 +76,6 @@ export const getVocabularyDetailsData = (name) => (dispatch) => {
       vocab.forEach((el) => {
         if (el.vocab === name) {
           dispatch(getVocabularyDetails({ name, el, details: response }));
-          console.log(response);
         }
       });
     })

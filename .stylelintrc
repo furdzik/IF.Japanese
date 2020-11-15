@@ -170,6 +170,7 @@
           "color",
           "text-shadow",
           "text-align",
+          "text-decoration",
           "vertical-align",
           "white-space"
         ]

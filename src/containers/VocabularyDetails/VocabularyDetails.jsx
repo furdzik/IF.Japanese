@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import VocabularyDetailsComponent from '@components/VocabularyDetails';
-import Loader from '@components/ui/Loader';
+import { objectShape } from '@utils/types/objectShape';
 
+import VocabularyDetailsComponent from '@components/VocabularyDetails';
+
+import Loader from '@components/ui/Loader';
 import { getVocabularyDetailsData } from './VocabularyDetails.reducer';
 import selector from './VocabularyDetails.selector';
 
@@ -22,6 +24,9 @@ const VocabularyDetails = (props) => {
       isCommon={props.isCommon}
       tags={props.tags}
       known={props.known}
+      pitch={props.pitch}
+      isVerb={props.verb && props.verb.main}
+      additionalExplanation={props.additionalExplanation}
       inProgress={props.inProgress}
       japanese={props.japanese}
     />
@@ -33,24 +38,30 @@ VocabularyDetails.propTypes = {
   loading: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   senses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  additionalExplanation: PropTypes.string,
   inProgress: PropTypes.bool,
   isCommon: PropTypes.bool,
   // eslint-disable-next-line react/no-unused-prop-types
   japanese: PropTypes.arrayOf(PropTypes.object),
   jlpt: PropTypes.arrayOf(PropTypes.string),
   known: PropTypes.bool,
+  pitch: PropTypes.string,
   reading: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string)
+  tags: PropTypes.arrayOf(PropTypes.string),
+  verb: objectShape
 };
 
 VocabularyDetails.defaultProps = {
+  additionalExplanation: '',
   jlpt: [],
   isCommon: null,
   tags: [],
   reading: '',
+  pitch: '',
   known: false,
   inProgress: false,
-  japanese: []
+  japanese: [],
+  verb: ''
 };
 
 const mapDispatchToProps = {

@@ -17682,7 +17682,7 @@
   {
     "vocab": "大統領",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -19815,7 +19815,7 @@
     "inProgress": true,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "誘っている人がホストです"
+    "additionalExplanation": "誘っている人がホストです。"
   },
   {
     "vocab": "出会う",
@@ -26809,7 +26809,7 @@
     "inProgress": false,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "一緒に何かをすること"
+    "additionalExplanation": "一緒に何かをすること。"
   },
   {
     "vocab": "書き直す",
@@ -26930,5 +26930,34 @@
     "inProgress": true,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "大して",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "締め切り",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "足場",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "世界中",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0,
+    "other": "世界中旅行"
   }
 ]
