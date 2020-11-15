@@ -79,10 +79,10 @@ const BoxWrapper = styled.div`
 const BoxContent = styled.div`
   position: relative;
   width: calc(100% - 22rem);
-  margin-top: 2rem;
+  margin: 2rem 0;
 
   ${(props) => props.smallerMargin && css`
-    margin-top: 1rem;
+    margin: 1rem 0;
   `}
 `;
 
