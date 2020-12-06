@@ -16,6 +16,7 @@ import {
   Item,
   VerbBox,
   MainBox,
+  VocabLink,
   BoxContent,
   BoxWrapper,
   TriggerWrapper,
@@ -92,7 +93,7 @@ const VerbsListItem = (props) => {
           inProgress={props.item.inProgress}
           level={props.item.level}
         >
-          {props.item.vocab}
+          <VocabLink to={`vocab/${props.item.vocab}`}>{props.item.vocab}</VocabLink>
         </VerbBox>
         <VerbType title={verbTypeLabel(props.item.verb?.verbType)}>
           {verbTypeLabel(props.item.verb?.verbType, true)}
@@ -114,7 +115,6 @@ const VerbsListItem = (props) => {
             </ParticleWrapper>
           ) : null
         }
-
       </MainBox>
       <BoxContent smallerMargin={!collapsed}>
         <BoxWrapper>

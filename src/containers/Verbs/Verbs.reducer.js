@@ -1,4 +1,5 @@
 import vocab from '@data/vocabulary.json';
+import _cloneDeep from 'lodash/cloneDeep';
 
 import {
   LEVEL_5_VERBS,
@@ -100,7 +101,9 @@ export default function(state = initialState, action) {
 }
 
 export const getVerbs = () => {
-  const verbs = vocab.filter((el) => el.verb);
+  const array = _cloneDeep(vocab);
+  const verbs = array.filter((el) => el.verb);
+  console.log(verbs);
 
   return {
     type: actionTypes.GET_VERBS,

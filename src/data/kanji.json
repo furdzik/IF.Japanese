@@ -2012,8 +2012,8 @@
   {
     "kanji": "章",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 2
   },
   {
     "kanji": "乗",
@@ -5546,8 +5546,8 @@
   {
     "kanji": "洗",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 3
   },
   {
     "kanji": "染",

@@ -7489,7 +7489,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": "「どうも」はそうかもという意味もある。「ようだ」と一緒に使われる。その時70%ぐらいそうかもだと思うという意味になります。"
   },
   {
     "vocab": "手伝う",
@@ -12675,7 +12676,16 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "取",
+      "verbGroup": "ru",
+      "verbType": "transitive",
+      "particles": ["を"]
+    },
+    "examples": [
+      "明日休みを取ろうと思っています。"
+    ]
   },
   {
     "vocab": "誰",
@@ -13456,7 +13466,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb":  {
+      "main": "忘れ",
+      "verbGroup": "2",
+      "verbType": "transitive",
+      "particles": ["を", "?"]
+    }
   },
   {
     "vocab": "多い",
@@ -15674,7 +15690,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb":  {
+      "main": "集ま",
+      "verbGroup": "ru",
+      "verbType": "intransitive",
+      "particles": ["が", "に"]
+    }
   },
   {
     "vocab": "比べる",
@@ -16311,7 +16333,16 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "呉れ",
+      "verbGroup": "2",
+      "verbType": "transitive",
+      "particles": ["を", "に", "が"]
+    },
+    "examples": [
+      "旅行のお土産 に チョコレートをくれました。"
+    ]
   },
   {
     "vocab": "過ぎる",
@@ -16640,7 +16671,13 @@
     "known": false,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "濡れ",
+      "verbGroup": "2",
+      "verbType": "intransitive",
+      "particles": ["が", "に", "?"]
+    }
   },
   {
     "vocab": "投げる",
@@ -25856,7 +25893,13 @@
     "inProgress": true,
     "pitch": "",
     "level": 3
-  },
+  },{
+  "vocab": "お互いに",
+  "known": false,
+  "inProgress": true,
+  "pitch": "",
+  "level": 0
+},
   {
     "vocab": "世間",
     "known": false,
@@ -26959,5 +27002,39 @@
     "pitch": "",
     "level": 0,
     "other": "世界中旅行"
+  },
+  {
+    "vocab": "主観的",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "客観的",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "含める",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0,
+    "verb": {
+      "main": "含め",
+      "verbGroup": "2",
+      "verbType": "transitive",
+      "particles": ["を", "?"]
+    }
+  },
+  {
+    "vocab": "主人公",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
   }
 ]

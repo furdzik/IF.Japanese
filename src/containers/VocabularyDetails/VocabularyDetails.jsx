@@ -27,6 +27,7 @@ const VocabularyDetails = (props) => {
       pitch={props.pitch}
       isVerb={props.verb && props.verb.main}
       additionalExplanation={props.additionalExplanation}
+      examples={props.examples}
       inProgress={props.inProgress}
       japanese={props.japanese}
     />
@@ -39,6 +40,7 @@ VocabularyDetails.propTypes = {
   name: PropTypes.string.isRequired,
   senses: PropTypes.arrayOf(PropTypes.object).isRequired,
   additionalExplanation: PropTypes.string,
+  examples: PropTypes.arrayOf(PropTypes.string),
   inProgress: PropTypes.bool,
   isCommon: PropTypes.bool,
   // eslint-disable-next-line react/no-unused-prop-types
@@ -55,6 +57,7 @@ VocabularyDetails.defaultProps = {
   additionalExplanation: '',
   jlpt: [],
   isCommon: null,
+  examples: [],
   tags: [],
   reading: '',
   pitch: '',

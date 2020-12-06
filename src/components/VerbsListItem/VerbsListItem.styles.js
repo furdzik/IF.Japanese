@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Item = styled.li`
   display: flex;
@@ -70,6 +71,10 @@ const MainBox = styled.div`
   align-items: flex-start;
   width: 22rem;
   border-right: 1px solid ${(props) => props.theme.colors.secondaryColor};
+`;
+
+const VocabLink = styled(Link)`
+  color: inherit;
 `;
 
 const BoxWrapper = styled.div`
@@ -144,6 +149,7 @@ export {
   Item,
   VerbBox,
   MainBox,
+  VocabLink,
   BoxContent,
   BoxWrapper,
   TriggerWrapper,

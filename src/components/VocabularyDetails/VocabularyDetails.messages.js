@@ -5,5 +5,7 @@ export default defineMessages({
   meaningHeader: 'Meaning of the word',
   additionalExplanationHeader: 'Additional explanation id word',
   conjugationText: 'conjugation',
-  antonymText: 'antonym: '
+  antonymText: 'antonym: ',
+  jishoLinkText: 'Jisho link',
+  examplesHeader: 'Examples'
 });

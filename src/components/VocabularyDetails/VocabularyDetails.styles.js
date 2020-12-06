@@ -7,6 +7,7 @@ const VocabularyDetailsWrapper = styled.div`
 `;
 
 const WordHeader = styled.div`
+  display: flex;
   margin-bottom: 3rem;
   padding: 1.6rem 2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
@@ -22,6 +23,17 @@ const WordHeader = styled.div`
     background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
     color: ${props.theme.colors.white};
     text-shadow: -1px 1px 8px #750101;
+  `}
+`;
+
+const JishoLink = styled.a`
+  display: inline-block;
+  font-weight: 200;
+  color: ${(props) => props.theme.colors.white};
+  margin-left: auto;
+
+  ${(props) => props.notKnow && css`
+    color: ${props.theme.colors.black};
   `}
 `;
 
@@ -53,11 +65,28 @@ const Content = styled.div`
   margin: 0 3rem;
 `;
 
+const MeaningWrapper = styled.div`
+  display: flex;
+  margin-top: 4rem;
+`;
+
 const MeaningHeader = styled.h2`
   margin-bottom: 2rem;
   ${(props) => !props.smallMargin && css`
     margin-bottom: 5rem;
   `}
+`;
+
+const WordWrapper = styled.div`
+  font-size: 4rem;
+  width: 20rem;
+  margin-top: 1rem;
+  margin-right: 4rem;
+  padding: 4rem 0;
+  text-align: center;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
+  border: 1px solid ${(props) => props.theme.colors.secondaryColor};
+  height: 100%;
 `;
 
 const SensesWrapper = styled.div`
@@ -118,13 +147,20 @@ const AntonymsLink = styled(Link)`
   color: ${(props) => props.theme.colors.primaryColor};
 `;
 
+const AdditionalExplanationWrapper = styled.div`
+  margin-bottom: 6rem;
+`;
+
 export {
   VocabularyDetailsWrapper,
   WordHeader,
+  JishoLink,
   WordHeaderSeparator,
   TagsWrapper,
   Tag,
   Content,
+  MeaningWrapper,
+  WordWrapper,
   MeaningHeader,
   SensesWrapper,
   SensesList,
@@ -133,5 +169,6 @@ export {
   PartOfSpeechWrapper,
   PartOfSpeechBox,
   AntonymsBox,
-  AntonymsLink
+  AntonymsLink,
+  AdditionalExplanationWrapper
 };

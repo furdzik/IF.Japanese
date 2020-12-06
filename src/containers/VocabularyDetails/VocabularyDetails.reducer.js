@@ -19,6 +19,7 @@ const initialState = {
   pitch: null,
   level: null,
   verb: null,
+  examples: null,
   japanese: null
 };
 
