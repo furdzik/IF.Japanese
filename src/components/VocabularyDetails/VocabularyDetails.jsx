@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { Link } from 'react-router-dom';
+import { bunpouTypes } from '@config/constants';
+import { objectShape } from '@utils/types/objectShape';
+
+import Modal from '@components/ui/Modal';
+import VerbConjugationGroup from '@components/VerbConjugationGroup';
+
+import conjugationMessages from '@components/VerbsListItem/VerbsListItem.messages';
 
 import {
   VocabularyDetailsWrapper,
@@ -11,6 +17,7 @@ import {
   WordHeaderSeparator,
   TagsWrapper,
   Tag,
+  ConjugationLink,
   Content,
   MeaningWrapper,
   WordWrapper,
@@ -29,6 +36,8 @@ import messages from './VocabularyDetails.messages';
 
 const VocabularyDetails = (props) => {
   const intl = useIntl();
+
+  const [conjugationOpen, setConjugationOpen] = useState(false);
 
   return (
     <VocabularyDetailsWrapper>
@@ -57,11 +66,10 @@ const VocabularyDetails = (props) => {
         <TagsWrapper>
           {
             props.isVerb ? (
-              // eslint-disable-next-line react/no-array-index-key
               <Tag verb>
-                <Link to={`/verbs#${props.name}`}>
+                <ConjugationLink type="button" onClick={() => setConjugationOpen(true)}>
                   {intl.formatMessage(messages.conjugationText)}
-                </Link>
+                </ConjugationLink>
               </Tag>
             ) : null
           }
@@ -161,6 +169,100 @@ const VocabularyDetails = (props) => {
           ) : null
         }
       </Content>
+      {
+        conjugationOpen ? (
+          <Modal
+            header={`${props.name} ${intl.formatMessage(messages.conjugationText)}`}
+            onClose={() => setConjugationOpen(false)}
+          >
+            <VerbConjugationGroup
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JISHOU_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.JISHOU_KEI]}
+              teineiKei
+            />
+            <VerbConjugationGroup
+              showLine
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.KANOU_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.KANOU_KEI]}
+              teineiKei
+            />
+            <VerbConjugationGroup
+              showLine
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.TAI_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.TAI_KEI]}
+              teineiKei
+            />
+            <VerbConjugationGroup
+              showLine
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.TE_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.TE_KEI]}
+              noPast
+            />
+            <VerbConjugationGroup
+              showLine
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.IKOU_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.IKOU_KEI]}
+              noPast
+              noNegative
+            />
+            <VerbConjugationGroup
+              showLine
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.IKOU_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.MEIREI_KEI]}
+              noPast
+            />
+            <VerbConjugationGroup
+              showLine
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JOUKEN_BA_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.JOUKEN_BA_KEI]}
+              noPast
+            />
+            <VerbConjugationGroup
+              showLine
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JOUKEN_TARA_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.JOUKEN_TARA_KEI]}
+              noPast
+            />
+            <VerbConjugationGroup
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.UKEMI_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.UKEMI_KEI]}
+              teineiKei
+            />
+            <VerbConjugationGroup
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.SHIEKI_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.SHIEKI_KEI]}
+              teineiKei
+            />
+            <VerbConjugationGroup
+              showLabel
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.SHIEKIUKEMI_KEI}Label`])}
+              verb={props.verb}
+              bunpou={[bunpouTypes.SHIEKIUKEMI_KEI, bunpouTypes.SHIEKIUKEMI_SHORT_KEI]}
+              teineiKei
+            />
+          </Modal>
+        ) : null
+      }
     </VocabularyDetailsWrapper>
   );
 };
@@ -176,7 +278,8 @@ VocabularyDetails.propTypes = {
   jlpt: PropTypes.arrayOf(PropTypes.string),
   known: PropTypes.bool,
   reading: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string)
+  tags: PropTypes.arrayOf(PropTypes.string),
+  verb: objectShape
 };
 
 VocabularyDetails.defaultProps = {
@@ -188,7 +291,8 @@ VocabularyDetails.defaultProps = {
   jlpt: [],
   known: false,
   reading: '',
-  tags: []
+  tags: [],
+  verb: null
 };
 
 export default VocabularyDetails;

@@ -1749,13 +1749,13 @@
     "kanji": "庫",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 2
   },
   {
     "kanji": "湖",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 2
   },
   {
     "kanji": "向",
@@ -3002,8 +3002,8 @@
   {
     "kanji": "固",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 2
   },
   {
     "kanji": "候",
@@ -4136,8 +4136,8 @@
   {
     "kanji": "減",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 2
   },
   {
     "kanji": "現",
@@ -4161,7 +4161,7 @@
     "kanji": "故",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "護",
@@ -5157,19 +5157,19 @@
     "kanji": "権",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 3
   },
   {
     "kanji": "絹",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "厳",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "源",
@@ -5180,14 +5180,14 @@
   {
     "kanji": "呼",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 3
   },
   {
     "kanji": "己",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "誤",
@@ -7665,42 +7665,42 @@
     "kanji": "献",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "肩",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 2
   },
   {
     "kanji": "謙",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "賢",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 2
   },
   {
     "kanji": "軒",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 2
   },
   {
     "kanji": "遣",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "鍵",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "level": 0
   },
   {
@@ -7713,19 +7713,19 @@
     "kanji": "幻",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "弦",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "玄",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "舷",
@@ -7737,19 +7737,19 @@
     "kanji": "孤",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "弧",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "枯",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 2
   },
   {
     "kanji": "股",
@@ -7760,14 +7760,14 @@
   {
     "kanji": "虎",
     "known": false,
-    "inProgress": false,
-    "level": 0
+    "inProgress": true,
+    "level": 1
   },
   {
     "kanji": "誇",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "雇",
@@ -7779,7 +7779,7 @@
     "kanji": "顧",
     "known": false,
     "inProgress": false,
-    "level": 0
+    "level": 1
   },
   {
     "kanji": "鼓",

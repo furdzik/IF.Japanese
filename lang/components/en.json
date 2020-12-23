@@ -164,6 +164,8 @@
   "VocabularyDetails.antonymText": "antonym: ",
   "VocabularyDetails.common": "common word",
   "VocabularyDetails.conjugationText": "conjugation",
+  "VocabularyDetails.examplesHeader": "Examples",
+  "VocabularyDetails.jishoLinkText": "Jisho link",
   "VocabularyDetails.meaningHeader": "Meaning of the word",
   "src.containers.Kanji.all": "全部: ",
   "src.containers.Kanji.inProgress": "勉強中",

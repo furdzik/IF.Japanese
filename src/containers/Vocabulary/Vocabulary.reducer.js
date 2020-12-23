@@ -1,3 +1,5 @@
+import _cloneDeep from 'lodash/cloneDeep';
+
 import vocab from '@data/vocabulary.json';
 
 import {
@@ -101,7 +103,7 @@ export default function(state = initialState, action) {
 
 export const getVocabulary = () => ({
   type: actionTypes.GET_VOCAB,
-  payload: vocab
+  payload: _cloneDeep(vocab)
 });
 
 export const setFilters = (payload) => ({

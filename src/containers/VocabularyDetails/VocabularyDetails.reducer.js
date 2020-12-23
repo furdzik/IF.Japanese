@@ -30,7 +30,7 @@ export default function(state = initialState, action) {
 
       return {
         ...state,
-        ...data.el,
+        ...data.vocab,
         loading: false,
         japanese: data.details.data[0].japanese,
         reading: data.details.data[0].japanese[0].reading,
@@ -76,7 +76,7 @@ export const getVocabularyDetailsData = (name) => (dispatch) => {
       response.tags = tags;
       vocab.forEach((el) => {
         if (el.vocab === name) {
-          dispatch(getVocabularyDetails({ name, el, details: response }));
+          dispatch(getVocabularyDetails({ name, vocab: el, details: response }));
         }
       });
     })

@@ -25,11 +25,12 @@ const VocabularyDetails = (props) => {
       tags={props.tags}
       known={props.known}
       pitch={props.pitch}
-      isVerb={props.verb && props.verb.main}
+      isVerb={!!(props.verb && props.verb.main)}
       additionalExplanation={props.additionalExplanation}
       examples={props.examples}
       inProgress={props.inProgress}
       japanese={props.japanese}
+      verb={props.verb}
     />
   ) : <Loader covered />;
 };
@@ -64,7 +65,7 @@ VocabularyDetails.defaultProps = {
   known: false,
   inProgress: false,
   japanese: [],
-  verb: ''
+  verb: null
 };
 
 const mapDispatchToProps = {

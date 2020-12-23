@@ -81,6 +81,12 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
+  button {
+    &:hover, &:active, &:focus {
+      outline: none;
+      cursor: pointer;
+    }
+  }
 `;
 
 export { GlobalStyles };

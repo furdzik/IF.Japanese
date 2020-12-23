@@ -3066,7 +3066,13 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "降",
+      "verbGroup": "ru",
+      "verbType": "intransitive",
+      "particles": ["が", "に"]
+    }
   },
   {
     "vocab": "両手",

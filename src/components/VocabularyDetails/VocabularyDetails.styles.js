@@ -61,6 +61,10 @@ const Tag = styled.span`
   `}
 `;
 
+const ConjugationLink = styled.button`
+  color: ${(props) => props.theme.colors.white};
+`;
+
 const Content = styled.div`
   margin: 0 3rem;
 `;
@@ -132,6 +136,7 @@ const PartOfSpeechBox = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.lightGray};
   font-size: 1.2rem;
+  text-transform: lowercase;
   & + & {
     margin-left: 1rem;
   }
@@ -158,6 +163,7 @@ export {
   WordHeaderSeparator,
   TagsWrapper,
   Tag,
+  ConjugationLink,
   Content,
   MeaningWrapper,
   WordWrapper,
