@@ -1,36 +1,54 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import { URL_SEPARATOR } from '@config/constants';
 import { objectShape } from '@utils/types/objectShape';
 
 import VocabularyDetailsComponent from '@components/VocabularyDetails';
-
 import Loader from '@components/ui/Loader';
 import { getVocabularyDetailsData } from './VocabularyDetails.reducer';
 import selector from './VocabularyDetails.selector';
 
 const VocabularyDetails = (props) => {
+  const getProperKanji = (name) => {
+    const newName = name.split(URL_SEPARATOR);
+
+    return name.indexOf(URL_SEPARATOR) > 0 ? newName[0] : name;
+  };
+
+  const getVocab = (name) => {
+    const newName = name.split(URL_SEPARATOR);
+
+    return name.indexOf(URL_SEPARATOR) > 0 ? newName[2] : null;
+  };
+
+  const [name, setName] = useState(getProperKanji(props.name));
+
   useEffect(() => {
-    props.getVocabularyDetailsData(props.name);
+    setName(getProperKanji(props.name));
+    console.log(name, props.name);
+    props.getVocabularyDetailsData(name, props.name, getVocab(props.name));
   }, [props.name]);
 
   return !props.loading ? (
     <VocabularyDetailsComponent
-      name={props.name}
-      reading={props.reading}
+      name={name}
       senses={props.senses}
-      jlpt={props.jlpt}
-      isCommon={props.isCommon}
-      tags={props.tags}
-      known={props.known}
-      pitch={props.pitch}
-      isVerb={!!(props.verb && props.verb.main)}
       additionalExplanation={props.additionalExplanation}
+      antonyms={props.antonyms}
       examples={props.examples}
       inProgress={props.inProgress}
+      isCommon={props.isCommon}
+      isVerb={!!(props.verb && props.verb.main)}
       japanese={props.japanese}
+      jlpt={props.jlpt}
+      reading={props.reading}
+      known={props.known}
+      pitch={props.pitch}
+      tags={props.tags}
       verb={props.verb}
+      slug={props.slug}
     />
   ) : <Loader covered />;
 };
@@ -41,30 +59,33 @@ VocabularyDetails.propTypes = {
   name: PropTypes.string.isRequired,
   senses: PropTypes.arrayOf(PropTypes.object).isRequired,
   additionalExplanation: PropTypes.string,
+  antonyms: PropTypes.string,
   examples: PropTypes.arrayOf(PropTypes.string),
   inProgress: PropTypes.bool,
   isCommon: PropTypes.bool,
-  // eslint-disable-next-line react/no-unused-prop-types
   japanese: PropTypes.arrayOf(PropTypes.object),
   jlpt: PropTypes.arrayOf(PropTypes.string),
   known: PropTypes.bool,
   pitch: PropTypes.string,
   reading: PropTypes.string,
+  slug: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   verb: objectShape
 };
 
 VocabularyDetails.defaultProps = {
-  additionalExplanation: '',
-  jlpt: [],
-  isCommon: null,
+  additionalExplanation: null,
+  antonyms: null,
   examples: [],
-  tags: [],
-  reading: '',
-  pitch: '',
-  known: false,
   inProgress: false,
+  isCommon: null,
   japanese: [],
+  jlpt: [],
+  known: false,
+  pitch: '',
+  reading: '',
+  slug: null,
+  tags: [],
   verb: null
 };
 

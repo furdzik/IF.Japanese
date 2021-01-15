@@ -101,3 +101,5 @@ export const menu = [
 export const VIEWPORT_SIZE_CHECKING_DELAY = 500;
 
 export const SAFARI_BAR_VH = 0.01;
+
+export const URL_SEPARATOR = ',';

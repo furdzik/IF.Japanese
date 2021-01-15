@@ -59,6 +59,14 @@ const Tag = styled.span`
     background: ${props.theme.colors.primaryColor};
     color: ${props.theme.colors.white};
   `}
+  ${(props) => props.isCommon && css`
+    background: #64ad5b;
+    color: ${props.theme.colors.white};
+  `}
+  ${(props) => props.isJlpt && css`
+    background: #7d88a7;
+    color: ${props.theme.colors.white};
+  `}
 `;
 
 const ConjugationLink = styled.button`
@@ -81,16 +89,20 @@ const MeaningHeader = styled.h2`
   `}
 `;
 
+const NameWrapper = styled.div`
+  height: 100%;
+  margin-top: 1rem;
+  margin-right: 4rem;
+`;
+
 const WordWrapper = styled.div`
   font-size: 4rem;
   width: 20rem;
-  margin-top: 1rem;
-  margin-right: 4rem;
+  margin-bottom: 2rem;
   padding: 4rem 0;
   text-align: center;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   border: 1px solid ${(props) => props.theme.colors.secondaryColor};
-  height: 100%;
 `;
 
 const SensesWrapper = styled.div`
@@ -126,6 +138,7 @@ const AdditionalInfo = styled.div`
 `;
 
 const PartOfSpeechWrapper = styled.div`
+  min-height: 2.7rem;
   margin-top: -3rem;
   margin-bottom: 1rem;
 `;
@@ -146,6 +159,7 @@ const AntonymsBox = styled.div`
   margin-top: 1rem;
   font-size: 1.4rem;
   color: ${(props) => props.theme.colors.secondaryColor};
+  text-align: center;
 `;
 
 const AntonymsLink = styled(Link)`
@@ -166,6 +180,7 @@ export {
   ConjugationLink,
   Content,
   MeaningWrapper,
+  NameWrapper,
   WordWrapper,
   MeaningHeader,
   SensesWrapper,

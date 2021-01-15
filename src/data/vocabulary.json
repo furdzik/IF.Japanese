@@ -174,8 +174,9 @@
     "level": 5
   },
   {
-    "vocab": "一月*",
-    "known": true,
+    "vocab": "1:一月",
+    "meaning": "ひとつき",
+    "known": false,
     "inProgress": false,
     "pitch": "",
     "level": 5
@@ -335,14 +336,16 @@
     "level": 5
   },
   {
-    "vocab": "〜才",
+    "vocab": "〜歳",
+    "meaning": "さい",
     "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 0
   },
   {
-    "vocab": "上*",
+    "vocab": "1:上",
+    "meaning": "うえ",
     "known": true,
     "inProgress": false,
     "pitch": "",
@@ -396,13 +399,6 @@
     "inProgress": false,
     "pitch": "",
     "level": 4
-  },
-  {
-    "vocab": "〜人",
-    "known": true,
-    "inProgress": false,
-    "pitch": "",
-    "level": 0
   },
   {
     "vocab": "十",
@@ -461,7 +457,8 @@
     "level": 5
   },
   {
-    "vocab": "下*",
+    "vocab": "1:下",
+    "meaning": "した",
     "known": true,
     "inProgress": false,
     "pitch": "",
@@ -476,13 +473,6 @@
   },
   {
     "vocab": "人",
-    "known": true,
-    "inProgress": false,
-    "pitch": "",
-    "level": 5
-  },
-  {
-    "vocab": "〜人*",
     "known": true,
     "inProgress": false,
     "pitch": "",
@@ -535,6 +525,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "入る",
     "level": 5,
     "verb": {
       "main": "出",
@@ -862,6 +853,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "細い",
     "level": 5
   },
   {
@@ -1211,6 +1203,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "狭い",
     "level": 5
   },
   {
@@ -1631,7 +1624,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": "「無理」に気をつけたほうがいい。ちょっと失礼な言葉だ。"
   },
   {
     "vocab": "非難",
@@ -5689,7 +5683,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": "「ノートをします」ということがない。"
   },
   {
     "vocab": "五感",
@@ -6742,11 +6737,13 @@
     "level": 3
   },
   {
-    "vocab": "間*",
+    "vocab": "1:間",
+    "meaning": "あいだ",
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "additionalExplanation": "「間」は時という意味で、とても長いという感じだ。"
   },
   {
     "vocab": "内臓",
@@ -7496,7 +7493,7 @@
     "inProgress": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "「どうも」はそうかもという意味もある。「ようだ」と一緒に使われる。その時70%ぐらいそうかもだと思うという意味になります。"
+    "additionalExplanation": "「どうも」はそうかもという意味もある。「ようだ」と一緒に使われる。その時70%ぐらいそうかもだと思うという意味になる。"
   },
   {
     "vocab": "手伝う",
@@ -7592,6 +7589,14 @@
   {
     "vocab": "証言",
     "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "1:〜人",
+    "meaning": "じん",
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 1
@@ -8115,6 +8120,14 @@
     "level": 4
   },
   {
+    "vocab": "2:下",
+    "meaning": "もと",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
     "vocab": "冷える",
     "known": false,
     "inProgress": false,
@@ -8266,7 +8279,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": "「家に帰る」という意味で、「行く」は間違いだ。"
   },
   {
     "vocab": "言う",
@@ -8346,7 +8360,8 @@
     "level": 0
   },
   {
-    "vocab": "里*",
+    "vocab": "1:里",
+    "meaning": "り",
     "known": false,
     "inProgress": false,
     "pitch": "",
@@ -8924,10 +8939,12 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "戦争",
     "level": 3
   },
   {
-    "vocab": "眼*",
+    "vocab": "1:眼",
+    "meaning": "め",
     "known": false,
     "inProgress": false,
     "pitch": "",
@@ -10156,6 +10173,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "濡れる",
     "level": 4
   },
   {
@@ -10513,6 +10531,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "泣く",
     "level": 4
   },
   {
@@ -11571,6 +11590,14 @@
     "inProgress": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "3:下",
+    "meaning": "しも",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 3
   },
   {
     "vocab": "腕",
@@ -12726,7 +12753,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": "「大変に」は間違いだ。そういう副詞がない。"
   },
   {
     "vocab": "作る",
@@ -12831,6 +12859,15 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "詰まらない",
+    "level": 5
+  },
+  {
+    "vocab": "詰まらない",
+    "known": true,
+    "inProgress": false,
+    "pitch": "",
+    "antonyms": "面白い",
     "level": 5
   },
   {
@@ -13278,6 +13315,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "厚い",
     "level": 5
   },
   {
@@ -13320,6 +13358,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "太い",
     "level": 5
   },
   {
@@ -13465,7 +13504,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": "「家に帰る」という意味で、「行く」は間違いだ。"
   },
   {
     "vocab": "忘れる",
@@ -13499,7 +13539,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": "ネガティブな意味だ。"
   },
   {
     "vocab": "同じ",
@@ -13576,7 +13617,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": "本当に最初の一回だけだ。もし「久しぶりにした」と言ったかったら、「ぶり」を使う。"
   },
   {
     "vocab": "始まる",
@@ -13666,6 +13708,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "不味い",
     "level": 5
   },
   {
@@ -13758,6 +13801,7 @@
     "known": false,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "広い",
     "level": 5
   },
   {
@@ -13828,6 +13872,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "薄い",
     "level": 5
   },
   {
@@ -13870,6 +13915,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "美味しい",
     "level": 5
   },
   {
@@ -14153,6 +14199,14 @@
     "inProgress": false,
     "pitch": "",
     "level": 5
+  },
+  {
+    "vocab": "2:間",
+    "meaning": "ま",
+    "known": true,
+    "inProgress": false,
+    "pitch": "",
+    "level": 3
   },
   {
     "vocab": "〜側",
@@ -14632,6 +14686,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "平和",
     "level": 4
   },
   {
@@ -15227,6 +15282,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "成功",
     "level": 4
   },
   {
@@ -15297,7 +15353,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "additionalExplanation": "「最近から」は変。「最近」は似ている意味で、「前から今まで」という意味を表す。"
   },
   {
     "vocab": "払う",
@@ -15745,6 +15802,14 @@
     "inProgress": true,
     "pitch": "",
     "level": 4
+  },
+  {
+    "vocab": "2:一月",
+    "meaning": "いちがつ",
+    "known": true,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "連絡",
@@ -16439,6 +16504,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "笑う",
     "level": 4
   },
   {
@@ -16544,6 +16610,7 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "拾う",
     "level": 4
   },
   {
@@ -16677,6 +16744,7 @@
     "known": false,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "乾く",
     "level": 4,
     "verb": {
       "main": "濡れ",
@@ -16795,6 +16863,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "捨てる",
     "level": 4
   },
   {
@@ -17469,6 +17538,14 @@
     "inProgress": false,
     "pitch": "",
     "level": 4
+  },
+  {
+    "vocab": "2:里",
+    "meaning": "さと",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "お出でになる",
@@ -19060,6 +19137,14 @@
     "level": 3
   },
   {
+    "vocab": "2:眼",
+    "meaning": "まなこ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
     "vocab": "鬼",
     "known": false,
     "inProgress": false,
@@ -19506,6 +19591,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "失敗",
     "level": 3
   },
   {
@@ -19520,6 +19606,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "到着",
     "level": 3
   },
   {
@@ -19632,6 +19719,7 @@
     "known": false,
     "inProgress": false,
     "pitch": "",
+    "antonyms": "出発",
     "level": 3
   },
   {
@@ -19858,7 +19946,7 @@
     "inProgress": true,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "誘っている人がホストです。"
+    "additionalExplanation": "誘っている人がホストだ。"
   },
   {
     "vocab": "出会う",
@@ -20363,6 +20451,14 @@
     "inProgress": true,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "2:〜人",
+    "meaning": "にん",
+    "known": true,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "職",
@@ -21657,7 +21753,14 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "additionalExplanation": "クリスマスイブを祝う。",
+    "verb": {
+      "main": "祝",
+      "verbGroup": "u",
+      "verbType": "transitive",
+      "particles": ["を", "?"]
+    }
   },
   {
     "vocab": "観察",
@@ -22003,6 +22106,14 @@
     "level": 3
   },
   {
+    "vocab": "4:下",
+    "meaning": "げ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 3
+  },
+  {
     "vocab": "範囲",
     "known": false,
     "inProgress": false,
@@ -22176,6 +22287,14 @@
     "inProgress": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "2:上",
+    "meaning": "かみ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 3
   },
   {
     "vocab": "風景",
@@ -24431,16 +24550,10 @@
     "level": 3
   },
   {
-    "vocab": "度*",
+    "vocab": "度",
+    "meaning": "たび",
     "known": false,
     "inProgress": true,
-    "pitch": "",
-    "level": 3
-  },
-  {
-    "vocab": "〜度",
-    "known": true,
-    "inProgress": false,
     "pitch": "",
     "level": 3
   },
@@ -26055,6 +26168,7 @@
   },
   {
     "vocab": "〜上",
+    "meaning": "じょう",
     "known": false,
     "inProgress": true,
     "pitch": "",
@@ -26373,7 +26487,11 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "additionalExplanation": "「ノートをします」ということがない。",
+    "examples": [
+      "教科書にメモをする。"
+    ]
   },
   {
     "vocab": "ざっと",
@@ -26853,12 +26971,20 @@
     "level": 3
   },
   {
+    "vocab": "〜度",
+    "meaning": "ど",
+    "known": true,
+    "inProgress": false,
+    "pitch": "",
+    "level": 3
+  },
+  {
     "vocab": "誘う",
     "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "一緒に何かをすること。"
+    "additionalExplanation": "一緒に何かをすることだ。"
   },
   {
     "vocab": "書き直す",
@@ -27003,7 +27129,7 @@
   },
   {
     "vocab": "世界中",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 0,
@@ -27042,5 +27168,12 @@
     "inProgress": false,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "せめて",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
   }
 ]

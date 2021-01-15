@@ -21,6 +21,7 @@ import {
   Content,
   MeaningWrapper,
   WordWrapper,
+  NameWrapper,
   MeaningHeader,
   SensesWrapper,
   SensesList,
@@ -55,7 +56,7 @@ const VocabularyDetails = (props) => {
           ) : null
         }
         <JishoLink
-          href={`https://jisho.org/word/${props.name}`}
+          href={`https://jisho.org/word/${props.slug}`}
           target="_blank"
           notKnow={!props.known && !props.inProgress}
         >
@@ -75,13 +76,13 @@ const VocabularyDetails = (props) => {
           }
           {
             props.isCommon ? (
-              <Tag>{intl.formatMessage(messages.common)}</Tag>
+              <Tag isCommon>{intl.formatMessage(messages.common)}</Tag>
             ) : null
           }
           {
             props.jlpt && props.jlpt.map((el, index) => (
               // eslint-disable-next-line react/no-array-index-key
-              <Tag key={index}>{el}</Tag>
+              <Tag isJlpt key={index}>{el}</Tag>
             ))
           }
           {
@@ -93,9 +94,27 @@ const VocabularyDetails = (props) => {
         </TagsWrapper>
         <MeaningHeader>{intl.formatMessage(messages.meaningHeader)}</MeaningHeader>
         <MeaningWrapper>
-          <WordWrapper>
-            {props.name}
-          </WordWrapper>
+          <NameWrapper>
+            <WordWrapper>{props.name}</WordWrapper>
+            {
+              !props.antonyms && props.senses && props.senses
+                .map((el, key) => el.antonyms.map((antonyms) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <AntonymsBox key={`${antonyms}_${key}`}>
+                    {intl.formatMessage(messages.antonymText)}
+                    <AntonymsLink to={`/vocab/${antonyms}`}>{antonyms}</AntonymsLink>
+                  </AntonymsBox>
+                )))
+            }
+            {
+              props.antonyms ? (
+                <AntonymsBox key={props.antonyms}>
+                  {intl.formatMessage(messages.antonymText)}
+                  <AntonymsLink to={`/vocab/${props.antonyms}`}>{props.antonyms}</AntonymsLink>
+                </AntonymsBox>
+              ) : null
+            }
+          </NameWrapper>
           <SensesWrapper>
             <SensesList>
               {
@@ -120,15 +139,6 @@ const VocabularyDetails = (props) => {
                               {def}
                               {el.english_definitions.length !== index + 1 ? ', ' : ''}
                             </React.Fragment>
-                          ))
-                        }
-                        {
-                          el.antonyms.map((antonyms, key) => (
-                            // eslint-disable-next-line react/no-array-index-key
-                            <AntonymsBox key={key}>
-                              {intl.formatMessage(messages.antonymText)}
-                              <AntonymsLink to={`/vocab/${antonyms}`}>{antonyms}</AntonymsLink>
-                            </AntonymsBox>
                           ))
                         }
                         <AdditionalInfo>{el.info}</AdditionalInfo>
@@ -271,6 +281,7 @@ VocabularyDetails.propTypes = {
   name: PropTypes.string.isRequired,
   senses: PropTypes.arrayOf(PropTypes.object).isRequired,
   additionalExplanation: PropTypes.string,
+  antonyms: PropTypes.string,
   examples: PropTypes.arrayOf(PropTypes.string),
   inProgress: PropTypes.bool,
   isCommon: PropTypes.bool,
@@ -278,12 +289,14 @@ VocabularyDetails.propTypes = {
   jlpt: PropTypes.arrayOf(PropTypes.string),
   known: PropTypes.bool,
   reading: PropTypes.string,
+  slug: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   verb: objectShape
 };
 
 VocabularyDetails.defaultProps = {
   additionalExplanation: null,
+  antonyms: null,
   examples: [],
   inProgress: false,
   isCommon: null,
@@ -291,6 +304,7 @@ VocabularyDetails.defaultProps = {
   jlpt: [],
   known: false,
   reading: '',
+  slug: null,
   tags: [],
   verb: null
 };
