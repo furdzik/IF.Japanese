@@ -1,22 +1,23 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { useIntl } from 'react-intl';
 
 import Container from '@components/Container';
 
 import {
   FooterWrapper
 } from './Footer.styles.js';
+import messages from './Footer.messages';
 
-const Footer = () => (
-  <FooterWrapper>
-    <Container>
-      Footer
-    </Container>
-  </FooterWrapper>
-);
+const Footer = () => {
+  const intl = useIntl();
 
-Footer.propTypes = {
+  return (
+    <FooterWrapper>
+      <Container>
+        {intl.formatMessage(messages.content)}
+      </Container>
+    </FooterWrapper>
+  );
 };
 
 export default Footer;

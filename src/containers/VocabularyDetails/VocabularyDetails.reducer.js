@@ -88,13 +88,12 @@ const getMeaning = (response, name, vocabTrueName) => (dispatch) => vocab.forEac
 
 export const getVocabularyDetailsData = (name, url, vocabTrueName) => (dispatch) => {
   dispatch(getVocabularyDetailsInit());
-  console.log(name, url, vocabTrueName);
+
   const kanjiMeaning = url.split(URL_SEPARATOR)[1];
 
   fetchJisho(url || name)
     .then((response) => {
       if (vocabTrueName) {
-        console.log('if');
         response.data.forEach((kanji) => {
           const newName = name.replace('〜', '');
           if (
@@ -107,7 +106,6 @@ export const getVocabularyDetailsData = (name, url, vocabTrueName) => (dispatch)
           }
         });
       } else {
-        console.log('else', response.data[0]);
         dispatch(getMeaning(response.data[0], name, vocabTrueName));
       }
     })

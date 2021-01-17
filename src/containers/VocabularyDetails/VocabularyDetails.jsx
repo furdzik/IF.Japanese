@@ -27,7 +27,7 @@ const VocabularyDetails = (props) => {
 
   useEffect(() => {
     setName(getProperKanji(props.name));
-    console.log(name, props.name);
+
     props.getVocabularyDetailsData(name, props.name, getVocab(props.name));
   }, [props.name]);
 
