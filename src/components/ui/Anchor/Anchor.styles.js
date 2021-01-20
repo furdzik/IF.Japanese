@@ -2,9 +2,7 @@ import styled, { css } from 'styled-components';
 
 const AnchorWrapper = styled.span`
   cursor: pointer;
-  a {
 
-  }
   &:focus {
     outline: -webkit-focus-ring-color auto 5px;
   }

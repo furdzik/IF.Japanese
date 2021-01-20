@@ -19,10 +19,11 @@ import { objectShape } from '@utils/types/objectShape';
 
 import Filters from '@components/Filters';
 import KanjiList from '@components/KanjiList';
+import ProgressBar from '@components/ProgressBar';
 
 import { getKanji, changeFilters } from './Kanji.reducer';
-import selector from './Kanji.selector';
 
+import selector from './Kanji.selector';
 import messages from './Kanji.messages';
 
 const Kanji = (props) => {
@@ -82,6 +83,9 @@ const Kanji = (props) => {
         selectedFilters={props.selectedFilters}
         filterList={filterList}
         secondaryFilterList={secondaryFilterList}
+      />
+      <ProgressBar
+        length={props.kanjiLength}
       />
       <KanjiList
         kanji={props.kanji}

@@ -17,20 +17,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
+    background: ${(props) => props.theme.colors.lightGray};
     font-size: 62.5%;
   }
   body {
     box-sizing: border-box;
-    background: #ffffff; // zmienna!
+    background: ${(props) => props.theme.colors.white};
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1.8rem;
     line-height: 1.5;
     overflow-x: hidden;
-  }
-  button {
-    border: 0;
-    background: none;
-    font: inherit;
   }
   *,
   *::before,
@@ -71,7 +67,7 @@ const GlobalStyles = createGlobalStyle`
       pointer-events: none;
     }
     &:-webkit-autofill {
-      box-shadow: 0 0 0 1000px #ffffff; // zmienna
+      box-shadow: 0 0 0 1000px ${(props) => props.theme.colors.white};
     }
     &:required {
       box-shadow: none;
@@ -82,6 +78,9 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
   button {
+    border: 0;
+    background: none;
+    font: inherit;
     &:hover, &:active, &:focus {
       outline: none;
       cursor: pointer;

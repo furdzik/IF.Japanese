@@ -23,7 +23,6 @@ import {
   WordWrapper,
   NameWrapper,
   MeaningHeader,
-  SensesWrapper,
   SensesList,
   SensesListItem,
   AdditionalInfo,
@@ -115,7 +114,7 @@ const VocabularyDetails = (props) => {
               ) : null
             }
           </NameWrapper>
-          <SensesWrapper>
+          <div>
             <SensesList>
               {
                 props.senses && props.senses.map((el, index) => (
@@ -148,23 +147,23 @@ const VocabularyDetails = (props) => {
                 ))
               }
             </SensesList>
-          </SensesWrapper>
+          </div>
         </MeaningWrapper>
         {
           props.additionalExplanation ? (
-            <SensesWrapper>
+            <div>
               <MeaningHeader smallMargin>
                 {intl.formatMessage(messages.additionalExplanationHeader)}
               </MeaningHeader>
               <AdditionalExplanationWrapper>
                 {props.additionalExplanation}
               </AdditionalExplanationWrapper>
-            </SensesWrapper>
+            </div>
           ) : null
         }
         {
           props.examples ? (
-            <SensesWrapper>
+            <div>
               <MeaningHeader smallMargin>
                 {intl.formatMessage(messages.examplesHeader)}
               </MeaningHeader>
@@ -175,7 +174,7 @@ const VocabularyDetails = (props) => {
                   ))
                 }
               </AdditionalExplanationWrapper>
-            </SensesWrapper>
+            </div>
           ) : null
         }
       </Content>

@@ -23,7 +23,6 @@ const Anchor = (props) => (
 Anchor.propTypes = {
   children: PropTypes.node.isRequired,
   provider: PropTypes.node.isRequired,
-  dataTest: PropTypes.string,
   disabled: PropTypes.bool,
   linkType: PropTypes.oneOf(['button', 'buttonLink']),
   onClick: PropTypes.func
@@ -32,7 +31,6 @@ Anchor.propTypes = {
 Anchor.defaultProps = {
   linkType: null,
   onClick: () => {},
-  dataTest: '',
   disabled: false
 };
 

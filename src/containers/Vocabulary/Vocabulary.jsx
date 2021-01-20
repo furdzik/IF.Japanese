@@ -19,10 +19,11 @@ import { vocabType, vocabLengthType } from '@components/VocabularyList/Vocabular
 
 import Filters from '@components/Filters';
 import VocabularyList from '@components/VocabularyList';
+import ProgressBar from '@components/ProgressBar';
 
 import { getVocabulary, changeFilters } from './Vocabulary.reducer';
-import selector from './Vocabulary.selector';
 
+import selector from './Vocabulary.selector';
 import messages from './Vocabulary.messages.js';
 
 const Vocabulary = (props) => {
@@ -82,6 +83,9 @@ const Vocabulary = (props) => {
         selectedFilters={props.selectedFilters}
         filterList={filterList}
         secondaryFilterList={secondaryFilterList}
+      />
+      <ProgressBar
+        length={props.vocabLength}
       />
       <VocabularyList
         vocab={props.vocab}

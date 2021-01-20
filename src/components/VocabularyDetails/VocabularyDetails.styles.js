@@ -28,9 +28,9 @@ const WordHeader = styled.div`
 
 const JishoLink = styled.a`
   display: inline-block;
+  margin-left: auto;
   font-weight: 200;
   color: ${(props) => props.theme.colors.white};
-  margin-left: auto;
 
   ${(props) => props.notKnow && css`
     color: ${props.theme.colors.black};
@@ -96,17 +96,13 @@ const NameWrapper = styled.div`
 `;
 
 const WordWrapper = styled.div`
-  font-size: 4rem;
   width: 20rem;
   margin-bottom: 2rem;
   padding: 4rem 0;
-  text-align: center;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
   border: 1px solid ${(props) => props.theme.colors.secondaryColor};
-`;
-
-const SensesWrapper = styled.div`
-
+  border-radius: ${(props) => props.theme.layout.borderRadius};
+  font-size: 4rem;
+  text-align: center;
 `;
 
 const SensesList = styled.ol`
@@ -183,7 +179,6 @@ export {
   NameWrapper,
   WordWrapper,
   MeaningHeader,
-  SensesWrapper,
   SensesList,
   SensesListItem,
   AdditionalInfo,

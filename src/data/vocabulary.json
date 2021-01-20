@@ -27175,5 +27175,19 @@
     "inProgress": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "店舗",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "楽天的",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
   }
 ]

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 
 import Container from '@components/Container';
-
 import {
   Wrapper,
   Title
@@ -19,7 +19,7 @@ const Header = (props) => {
     >
       <Container>
         <Title>
-          {intl.formatMessage(messages.title)}
+          <Link to="/">{intl.formatMessage(messages.title)}</Link>
         </Title>
       </Container>
     </Wrapper>
