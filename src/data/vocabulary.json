@@ -6580,7 +6580,13 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "集中",
+      "verbGroup": "suru",
+      "verbType": "suru",
+      "particles": ["に"]
+    }
   },
   {
     "vocab": "人情",
@@ -10047,7 +10053,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "卒業",
+      "verbGroup": "suru",
+      "verbType": "suru",
+      "particles": ["を"]
+    }
   },
   {
     "vocab": "粉",
@@ -13204,7 +13216,13 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "勤め",
+      "verbGroup": "ru",
+      "verbType": "transitive",
+      "particles": ["に", "?"]
+    }
   },
   {
     "vocab": "熱い",
@@ -13517,7 +13535,7 @@
       "main": "忘れ",
       "verbGroup": "2",
       "verbType": "transitive",
-      "particles": ["を", "?"]
+      "particles": ["を"]
     }
   },
   {
