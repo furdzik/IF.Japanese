@@ -6583,8 +6583,8 @@
     "level": 3,
     "verb": {
       "main": "集中",
-      "verbGroup": "suru",
-      "verbType": "suru",
+      "verbGroup": "special1",
+      "verbType": "transitive",
       "particles": ["に"]
     }
   },
@@ -10056,8 +10056,8 @@
     "level": 4,
     "verb": {
       "main": "卒業",
-      "verbGroup": "suru",
-      "verbType": "suru",
+      "verbGroup": "special1",
+      "verbType": "transitive",
       "particles": ["を"]
     }
   },
@@ -14315,7 +14315,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "",
+      "verbGroup": "special1",
+      "verbType": "other",
+      "particles": ["を", "?"]
+    }
   },
   {
     "vocab": "あれ",
@@ -14358,7 +14364,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "",
+      "verbGroup": "special2",
+      "verbType": "intransitive",
+      "particles": ["が", "に"]
+    }
   },
   {
     "vocab": "昼御飯",

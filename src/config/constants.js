@@ -36,9 +36,9 @@ export const OTHER_VERBS = 9;
 
 export const verbGroupTypes = {
   group2: '2',
-  specialVerb1: 'special1',
-  specialVerb2: 'special2',
-  group1u: 'u',
+  specialVerb1: 'special1', // suru
+  specialVerb2: 'special2', // kuru
+  group1U: 'u',
   group1Ku: 'ku',
   group1Gu: 'gu',
   group1Su: 'su',

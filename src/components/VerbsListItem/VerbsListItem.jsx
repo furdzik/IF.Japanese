@@ -168,7 +168,7 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.IKOU_KEI}Label`])}
+              label={intl.formatMessage(messages[`${bunpouTypes.MEIREI_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.MEIREI_KEI]}
               noPast
@@ -209,7 +209,10 @@ const VerbsListItem = (props) => {
               showLabel={collapsed}
               label={intl.formatMessage(messages[`${bunpouTypes.SHIEKIUKEMI_KEI}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.SHIEKIUKEMI_KEI, bunpouTypes.SHIEKIUKEMI_SHORT_KEI]}
+              bunpou={[
+                bunpouTypes.SHIEKIUKEMI_KEI,
+                bunpouTypes.SHIEKIUKEMI_SHORT_KEI
+              ]}
               teineiKei
             />
           </Collapsible>

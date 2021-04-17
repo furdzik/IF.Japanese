@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { vocabShape } from '@components/VocabularyList/VocabularyList.types';
-import { bunpouTypes, inflectionTypes, verbGroupTypes } from '@config/constants';
+import { inflectionTypes } from '@config/constants';
+
+import shouldDisplayShortForm from './utils/shouldDisplayShortForm';
 
 import {
   Box,
@@ -19,60 +21,14 @@ const VerbConjugationGroup = (props) => props.verb ? (
       ) : null
     }
     {
-      props.bunpou
-        .map((item, index) => (
-          item !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI
-          || props.verb?.verbGroup !== verbGroupTypes.group2
-        ) ? (
-          // eslint-disable-next-line react/no-array-index-key
-          <Box key={index}>
-            <VerbConjugationWrapper
-              verb={props.verb}
-              bunpou={item}
-              inflection={inflectionTypes.NORMAL}
-            />
-            {
-              !props.noNegative ? (
-                <VerbConjugationWrapper
-                  verb={props.verb}
-                  bunpou={item}
-                  inflection={inflectionTypes.NEGATIVE}
-                />
-              ) : null
-            }
-            {
-              !props.noPast ? (
-                <React.Fragment>
-                  <VerbConjugationWrapper
-                    verb={props.verb}
-                    bunpou={item}
-                    inflection={inflectionTypes.PAST}
-                  />
-                  <VerbConjugationWrapper
-                    verb={props.verb}
-                    bunpou={item}
-                    inflection={inflectionTypes.PAST_NEGATIVE}
-                  />
-                </React.Fragment>
-              ) : null
-            }
-          </Box>
-          ) : null)
-    }
-    {
-      props.bunpou.map((item, index) => (
-        props.teineiKei && (
-          item !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI
-          || props.verb?.verbGroup !== verbGroupTypes.group2
-        )
-      ) ? (
+      props.bunpou.map((item, index) =>
+          shouldDisplayShortForm(item, props.verb.verbGroup) ? (
         // eslint-disable-next-line react/no-array-index-key
         <Box key={index}>
           <VerbConjugationWrapper
             verb={props.verb}
             bunpou={item}
             inflection={inflectionTypes.NORMAL}
-            teineiKei
           />
           {
             !props.noNegative ? (
@@ -80,7 +36,6 @@ const VerbConjugationGroup = (props) => props.verb ? (
                 verb={props.verb}
                 bunpou={item}
                 inflection={inflectionTypes.NEGATIVE}
-                teineiKei
               />
             ) : null
           }
@@ -91,19 +46,59 @@ const VerbConjugationGroup = (props) => props.verb ? (
                   verb={props.verb}
                   bunpou={item}
                   inflection={inflectionTypes.PAST}
-                  teineiKei
                 />
                 <VerbConjugationWrapper
                   verb={props.verb}
                   bunpou={item}
                   inflection={inflectionTypes.PAST_NEGATIVE}
-                  teineiKei
                 />
               </React.Fragment>
             ) : null
           }
         </Box>
         ) : null)
+    }
+    {
+      props.bunpou.map((item, index) => (
+        props.teineiKei && shouldDisplayShortForm(item, props.verb.verbGroup) ? (
+          // eslint-disable-next-line react/no-array-index-key
+          <Box key={index}>
+            <VerbConjugationWrapper
+              verb={props.verb}
+              bunpou={item}
+              inflection={inflectionTypes.NORMAL}
+              teineiKei
+            />
+            {
+              !props.noNegative ? (
+                <VerbConjugationWrapper
+                  verb={props.verb}
+                  bunpou={item}
+                  inflection={inflectionTypes.NEGATIVE}
+                  teineiKei
+                />
+              ) : null
+            }
+            {
+              !props.noPast ? (
+                <React.Fragment>
+                  <VerbConjugationWrapper
+                    verb={props.verb}
+                    bunpou={item}
+                    inflection={inflectionTypes.PAST}
+                    teineiKei
+                  />
+                  <VerbConjugationWrapper
+                    verb={props.verb}
+                    bunpou={item}
+                    inflection={inflectionTypes.PAST_NEGATIVE}
+                    teineiKei
+                  />
+                </React.Fragment>
+              ) : null
+            }
+          </Box>
+          ) : null))
     }
   </BoxGroup>
 ) : null;
