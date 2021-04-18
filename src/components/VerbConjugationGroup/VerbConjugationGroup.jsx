@@ -21,46 +21,48 @@ const VerbConjugationGroup = (props) => props.verb ? (
       ) : null
     }
     {
-      props.bunpou.map((item, index) =>
-          shouldDisplayShortForm(item, props.verb.verbGroup) ? (
+      props.bunpou
+        .map((item, index) => shouldDisplayShortForm(item, props.verb.verbGroup) ? (
         // eslint-disable-next-line react/no-array-index-key
-        <Box key={index}>
-          <VerbConjugationWrapper
-            verb={props.verb}
-            bunpou={item}
-            inflection={inflectionTypes.NORMAL}
-          />
-          {
-            !props.noNegative ? (
-              <VerbConjugationWrapper
-                verb={props.verb}
-                bunpou={item}
-                inflection={inflectionTypes.NEGATIVE}
-              />
-            ) : null
-          }
-          {
-            !props.noPast ? (
-              <React.Fragment>
+          <Box key={index}>
+            <VerbConjugationWrapper
+              verb={props.verb}
+              bunpou={item}
+              inflection={inflectionTypes.NORMAL}
+            />
+            {
+              !props.noNegative ? (
                 <VerbConjugationWrapper
                   verb={props.verb}
                   bunpou={item}
-                  inflection={inflectionTypes.PAST}
+                  inflection={inflectionTypes.NEGATIVE}
                 />
-                <VerbConjugationWrapper
-                  verb={props.verb}
-                  bunpou={item}
-                  inflection={inflectionTypes.PAST_NEGATIVE}
-                />
-              </React.Fragment>
-            ) : null
-          }
-        </Box>
+              ) : null
+            }
+            {
+              !props.noPast ? (
+                <React.Fragment>
+                  <VerbConjugationWrapper
+                    verb={props.verb}
+                    bunpou={item}
+                    inflection={inflectionTypes.PAST}
+                  />
+                  <VerbConjugationWrapper
+                    verb={props.verb}
+                    bunpou={item}
+                    inflection={inflectionTypes.PAST_NEGATIVE}
+                  />
+                </React.Fragment>
+              ) : null
+            }
+          </Box>
         ) : null)
     }
     {
-      props.bunpou.map((item, index) => (
-        props.teineiKei && shouldDisplayShortForm(item, props.verb.verbGroup) ? (
+      props.bunpou
+        .map((item, index) => props.teineiKei && shouldDisplayShortForm(
+          item, props.verb.verbGroup
+        ) ? (
           // eslint-disable-next-line react/no-array-index-key
           <Box key={index}>
             <VerbConjugationWrapper
@@ -98,7 +100,7 @@ const VerbConjugationGroup = (props) => props.verb ? (
               ) : null
             }
           </Box>
-          ) : null))
+          ) : null)
     }
   </BoxGroup>
 ) : null;

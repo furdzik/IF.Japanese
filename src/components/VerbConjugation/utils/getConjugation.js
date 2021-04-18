@@ -8,4 +8,4 @@ export default (bunpou, verbGroup, inflection, isPolite) => {
   const baseEnding = getBaseEnding(bunpou, verbGroup, inflection, isPolite);
 
   return specialMain + bunpouEnding + baseEnding;
-}
+};

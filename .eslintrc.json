@@ -31,7 +31,8 @@
     "react/jsx-fragments": [1, "element"],
     "react/jsx-props-no-spreading": 0,
     "react/static-property-placement": [1, "static public field"],
-    "import/extensions": 0
+    "import/extensions": 0,
+    "no-else-return": 0
   },
   "settings": {
     "import/resolver": {

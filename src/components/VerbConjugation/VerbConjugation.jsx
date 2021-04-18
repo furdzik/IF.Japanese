@@ -5,19 +5,16 @@ import { vocabShape } from '../VocabularyList/VocabularyList.types';
 
 import getConjugation from './utils/getConjugation';
 
-const VerbConjugation = (props) => {
-
-  return (
-    <div className={props.className}>
-      {props.verb?.main}
-      {
-        getConjugation(
-          props.bunpou, props.verb?.verbGroup, props.inflection, props.teineiKei
-        )
-      }
-    </div>
-  );
-};
+const VerbConjugation = (props) => (
+  <div className={props.className}>
+    {props.verb?.main}
+    {
+      getConjugation(
+        props.bunpou, props.verb?.verbGroup, props.inflection, props.teineiKei
+      )
+    }
+  </div>
+);
 
 VerbConjugation.propTypes = {
   bunpou: PropTypes.string.isRequired,

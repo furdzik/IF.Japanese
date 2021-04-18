@@ -75,4 +75,4 @@ export const getBaseEnding = (bunpou, verbGroup, inflection, teineiKei, notInThe
   } else {
     return '';
   }
-}
+};

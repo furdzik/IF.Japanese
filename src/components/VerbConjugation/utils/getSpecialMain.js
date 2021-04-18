@@ -4,9 +4,9 @@ import messages from '../VerbConjugation.messages';
 
 export default (bunpou, verbGroup, inflection, teineiKei) => {
   switch (verbGroup) {
-    case  verbGroupTypes.specialVerb1: {
+    case verbGroupTypes.specialVerb1: {
       switch (bunpou) {
-        case  bunpouTypes.JISHOU_KEI: {
+        case bunpouTypes.JISHOU_KEI: {
           if (
             inflection === inflectionTypes.NORMAL
             && !teineiKei
@@ -17,11 +17,11 @@ export default (bunpou, verbGroup, inflection, teineiKei) => {
           return (messages.mainSuru)?.defaultMessage;
         }
 
-        case  bunpouTypes.KANOU_KEI: {
+        case bunpouTypes.KANOU_KEI: {
           return (messages.mainSuru_de)?.defaultMessage;
         }
 
-        case  bunpouTypes.MEIREI_KEI: {
+        case bunpouTypes.MEIREI_KEI: {
           if (inflection === inflectionTypes.NEGATIVE) {
             return (messages.mainSuru_su)?.defaultMessage;
           }
@@ -29,7 +29,7 @@ export default (bunpou, verbGroup, inflection, teineiKei) => {
           return (messages.mainSuru)?.defaultMessage;
         }
 
-        case  bunpouTypes.JOUKEN_BA_KEI: {
+        case bunpouTypes.JOUKEN_BA_KEI: {
           if (inflection === inflectionTypes.NEGATIVE) {
             return (messages.mainSuru)?.defaultMessage;
           }
@@ -37,10 +37,10 @@ export default (bunpou, verbGroup, inflection, teineiKei) => {
           return (messages.mainSuru_su)?.defaultMessage;
         }
 
-        case  bunpouTypes.UKEMI_KEI:
-        case  bunpouTypes.SHIEKI_KEI:
-        case  bunpouTypes.SHIEKIUKEMI_KEI:
-        case  bunpouTypes.SHIEKIUKEMI_SHORT_KEI: {
+        case bunpouTypes.UKEMI_KEI:
+        case bunpouTypes.SHIEKI_KEI:
+        case bunpouTypes.SHIEKIUKEMI_KEI:
+        case bunpouTypes.SHIEKIUKEMI_SHORT_KEI: {
           return (messages.mainSuru_sa)?.defaultMessage;
         }
 
@@ -50,30 +50,29 @@ export default (bunpou, verbGroup, inflection, teineiKei) => {
     }
 
     case verbGroupTypes.specialVerb2: {
-
       switch (bunpou) {
-        case  bunpouTypes.JISHOU_KEI: {
+        case bunpouTypes.JISHOU_KEI: {
           if (
             inflection === inflectionTypes.NORMAL
             && !teineiKei
           ) {
             return (messages.mainKuru_ku)?.defaultMessage;
           } else if (
-            (inflection === inflectionTypes.NEGATIVE || inflection === inflectionTypes.PAST_NEGATIVE)
-            && !teineiKei
-          ) {
+            (inflection === inflectionTypes.NEGATIVE
+              || inflection === inflectionTypes.PAST_NEGATIVE
+            ) && !teineiKei) {
             return (messages.mainKuru)?.defaultMessage;
           }
 
           return (messages.mainKuru_ki)?.defaultMessage;
         }
 
-        case  bunpouTypes.TAI_KEI: {
+        case bunpouTypes.TAI_KEI: {
           return (messages.mainKuru_ki)?.defaultMessage;
         }
 
-        case  bunpouTypes.TE_KEI:
-        case  bunpouTypes.JOUKEN_TARA_KEI: {
+        case bunpouTypes.TE_KEI:
+        case bunpouTypes.JOUKEN_TARA_KEI: {
           if (
             inflection === inflectionTypes.NEGATIVE
           ) {
@@ -83,8 +82,8 @@ export default (bunpou, verbGroup, inflection, teineiKei) => {
           return (messages.mainKuru_ki)?.defaultMessage;
         }
 
-        case  bunpouTypes.MEIREI_KEI:
-        case  bunpouTypes.JOUKEN_BA_KEI: {
+        case bunpouTypes.MEIREI_KEI:
+        case bunpouTypes.JOUKEN_BA_KEI: {
           if (inflection === inflectionTypes.NEGATIVE) {
             return (messages.mainKuru_ku)?.defaultMessage;
           }
@@ -100,4 +99,4 @@ export default (bunpou, verbGroup, inflection, teineiKei) => {
     default:
       return '';
   }
-}
+};
