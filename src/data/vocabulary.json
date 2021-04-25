@@ -10712,6 +10712,7 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
+    "antonyms": "反対",
     "level": 3
   },
   {
@@ -12624,7 +12625,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "有",
+      "verbGroup": "ru",
+      "verbType": "intransitive",
+      "particles": ["が", "?"]
+    }
   },
   {
     "vocab": "其の",
@@ -12773,7 +12780,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "作",
+      "verbGroup": "ru",
+      "verbType": "transitive",
+      "particles": ["を", "?"]
+    }
   },
   {
     "vocab": "後ろ",
@@ -13812,7 +13825,13 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "verb": {
+      "main": "習",
+      "verbGroup": "u",
+      "verbType": "transitive",
+      "particles": ["を", "?"]
+    }
   },
   {
     "vocab": "狭い",
@@ -15425,6 +15444,7 @@
     "vocab": "反対",
     "known": false,
     "inProgress": false,
+    "antonyms": "賛成",
     "pitch": "",
     "level": 4
   },
@@ -27219,5 +27239,103 @@
     "inProgress": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "職人",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "南極",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "北極",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "新幹線",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "昼寝",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "大通り",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "運河",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "遊園地",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "蛇口",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "天皇",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "溶岩",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "武士",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "苗字",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "資料",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 2
   }
 ]
