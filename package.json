@@ -22,6 +22,7 @@
     "test": "cross-env NODE_ICU_DATA=node_modules/full-icu npx jest --config jest.config.json --coverage --bail --updateSnapshot",
     "lang": "npm run lang:defaults && npm run lang:components",
     "validate": "npm run lint && npm run find-duplicates",
+    "dev": "npx webpack-dev-server --history-api-fallback --env.development --open",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
     "eslint": "eslint src/ --ext .jsx,.js",
     "eslint:ci": "npm run eslint -- --quiet -f json -o reports/eslint-report.json",

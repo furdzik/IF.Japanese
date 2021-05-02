@@ -194,6 +194,7 @@
   "VocabularyDetails.meaningHeader": "Meaning of the word",
   "src.containers.Kanji.all": "全部: ",
   "src.containers.Kanji.inProgress": "勉強中",
+  "src.containers.Kanji.joyo": "常用漢字表",
   "src.containers.Kanji.known": "知っている",
   "src.containers.Kanji.n1": "N1",
   "src.containers.Kanji.n2": "N2",

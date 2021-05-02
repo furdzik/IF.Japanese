@@ -12,7 +12,8 @@ import {
   LEVEL_3_KANJI,
   LEVEL_2_KANJI,
   LEVEL_1_KANJI,
-  OTHER_KANJI
+  OTHER_KANJI,
+  JOYO_KANJI
 } from '@config/constants';
 
 import { objectShape } from '@utils/types/objectShape';
@@ -75,6 +76,13 @@ const Kanji = (props) => {
     }
   ];
 
+  const additionalFilterList = [
+    {
+      value: JOYO_KANJI,
+      label: intl.formatMessage(messages.joyo)
+    }
+  ];
+
   return props.kanji ? (
     <React.Fragment>
       <Filters
@@ -83,6 +91,7 @@ const Kanji = (props) => {
         selectedFilters={props.selectedFilters}
         filterList={filterList}
         secondaryFilterList={secondaryFilterList}
+        additionalFilterList={additionalFilterList}
       />
       <ProgressBar
         length={props.kanjiLength}

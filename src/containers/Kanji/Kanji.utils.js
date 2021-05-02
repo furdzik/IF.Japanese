@@ -7,12 +7,20 @@ import {
   LEVEL_3_KANJI,
   LEVEL_2_KANJI,
   LEVEL_1_KANJI,
-  OTHER_KANJI
+  OTHER_KANJI,
+  JOYO_KANJI
 } from '@config/constants';
 
 export const getSelectedFiltersInitialValue = () => !localStorage.getItem('kanjiSelectedFilters')
   ? [KNOWN_KANJI, IN_PROGRESS_KANJI, NOT_KNOWN_KANJI]
   : JSON.parse(localStorage.getItem('kanjiSelectedFilters'));
+
+
+export const getOnlyJoyoKanji = (selectedFilters, item) => {
+  return selectedFilters.indexOf(JOYO_KANJI) > -1
+    ? item.joyo === true
+    : (item.joyo === true || item.joyo === false);
+};
 
 export const oneOfN5toN1Filters = (selectedFilters) => selectedFilters.indexOf(LEVEL_5_KANJI) > -1
   || selectedFilters.indexOf(LEVEL_4_KANJI) > -1
@@ -27,14 +35,21 @@ export const getKnownUnknownFilters = (selectedFilters, list) => {
   let inProgressList = [];
 
   if (selectedFilters.indexOf(KNOWN_KANJI) > -1) {
-    knownList = list.filter((item) => item.known && !item.inProgress);
+    knownList = list.filter(
+      (item) => item.known && !item.inProgress && getOnlyJoyoKanji(selectedFilters, item)
+    );
   }
   if (selectedFilters.indexOf(IN_PROGRESS_KANJI) > -1) {
-    inProgressList = list.filter((item) => item.inProgress);
+    inProgressList = list.filter(
+      (item) => item.inProgress && getOnlyJoyoKanji(selectedFilters, item)
+    );
   }
   if (selectedFilters.indexOf(NOT_KNOWN_KANJI) > -1) {
-    notKnownList = list.filter((item) => !item.known && !item.inProgress);
+    notKnownList = list.filter(
+      (item) => !item.known && !item.inProgress && getOnlyJoyoKanji(selectedFilters, item)
+    );
   }
+
   return {
     knownList,
     notKnownList,

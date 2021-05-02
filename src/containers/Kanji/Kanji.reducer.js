@@ -6,7 +6,8 @@ import {
   LEVEL_3_KANJI,
   LEVEL_2_KANJI,
   LEVEL_1_KANJI,
-  OTHER_KANJI
+  OTHER_KANJI,
+  JOYO_KANJI
 } from '@config/constants';
 
 import { getSelectedFiltersInitialValue, oneOfN5toN1Filters, getKnownUnknownFilters } from './Kanji.utils';

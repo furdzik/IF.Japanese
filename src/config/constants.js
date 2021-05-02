@@ -21,6 +21,7 @@ export const LEVEL_3_KANJI = 6;
 export const LEVEL_2_KANJI = 7;
 export const LEVEL_1_KANJI = 8;
 export const OTHER_KANJI = 9;
+export const JOYO_KANJI = 10;
 
 /* VERBS */
 export const KNOWN_VERBS = 1;

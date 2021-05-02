@@ -13,6 +13,7 @@ const Header = styled.div`
 
 const Legend = styled.div`
   display: inline-block;
+  width: 30rem;
   margin-left: auto;
   padding: .5rem 1rem .3rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
@@ -41,9 +42,17 @@ const FiltersWrapper = styled.div`
   min-height: 6.2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
 
-  ${(props) => !props.secondary && css`
+  ${(props) => !props.secondary && !props.additional && css`
     background: ${props.theme.colors.secondaryColor};
     margin-right: auto;
+  `}
+
+  ${(props) => props.additional && css`
+    margin-top: 1rem;
+  `}
+
+  ${(props) => props.noHeight && css`
+    min-height: auto;
   `}
 
   @media print {

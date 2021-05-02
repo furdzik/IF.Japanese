@@ -25,7 +25,8 @@ const Filters = (props) => {
             selected={props.selectedFilters}
           />
         </FiltersWrapper>
-        <FiltersWrapper secondary>
+        <div>
+        <FiltersWrapper secondary noHeight={props.additionalFilterList}>
           <CheckboxList
             name="filters"
             onCheckboxClick={props.changeFilters}
@@ -33,6 +34,19 @@ const Filters = (props) => {
             selected={props.selectedFilters}
           />
         </FiltersWrapper>
+        {
+          props.additionalFilterList ? (
+            <FiltersWrapper additional noHeight={props.additionalFilterList}>
+              <CheckboxList
+                name="filters"
+                onCheckboxClick={props.changeFilters}
+                items={props.additionalFilterList}
+                selected={props.selectedFilters}
+              />
+            </FiltersWrapper>
+          ) : null
+        }
+        </div>
         <Legend>
           <div>{intl.formatMessage(messages.all)}{props.length.all}</div>
           <div>
@@ -56,7 +70,15 @@ Filters.propTypes = {
     value: PropTypes.number,
     label: PropTypes.string
   })).isRequired,
-  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired
+  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired,
+  additionalFilterList: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.number,
+    label: PropTypes.string
+  })).isRequired,
+};
+
+Filters.defaultProps = {
+  additionalFilterList: []
 };
 
 export default Filters;
