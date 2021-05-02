@@ -15,12 +15,9 @@ export const getSelectedFiltersInitialValue = () => !localStorage.getItem('kanji
   ? [KNOWN_KANJI, IN_PROGRESS_KANJI, NOT_KNOWN_KANJI]
   : JSON.parse(localStorage.getItem('kanjiSelectedFilters'));
 
-
-export const getOnlyJoyoKanji = (selectedFilters, item) => {
-  return selectedFilters.indexOf(JOYO_KANJI) > -1
-    ? item.joyo === true
-    : (item.joyo === true || item.joyo === false);
-};
+export const getOnlyJoyoKanji = (selectedFilters, item) => selectedFilters.indexOf(JOYO_KANJI) > -1
+  ? item.joyo === true
+  : (item.joyo === true || item.joyo === false);
 
 export const oneOfN5toN1Filters = (selectedFilters) => selectedFilters.indexOf(LEVEL_5_KANJI) > -1
   || selectedFilters.indexOf(LEVEL_4_KANJI) > -1
