@@ -15041,5 +15041,866 @@
     "inProgress": false,
     "joyo": false,
     "level": 1
+  },
+  {
+    "kanji": "磯",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "聡",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "曙",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "萩",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "栗",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "嘉",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "辰",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "霞",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "淳",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "鳩",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "桂",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "晋",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "晃",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "桐",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "鷹",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "猪",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "紘",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "庄",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "敦",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "祐",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "鵬",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "亘",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "笹",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "綾",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "毅",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "稔",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "楊",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "駿",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "亮",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "椿",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "圭",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "蓮",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "瑞",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "伍",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "蘭",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "秦",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "茅",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "輔",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "郁",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "楠",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "玲",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "翔",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "肇",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "亨",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "嶺",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "喬",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "寅",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "乃",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "洲",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "樺",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "槙",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "巌",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "胡",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "峻",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "槻",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "蝶",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "琢",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "蕉",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "琉",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "朋",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "遼",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "橘",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "漱",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "苑",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "巽",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "杜",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "欣",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "巴",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "禎",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "稜",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "倭",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "斐",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "魁",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "鴻",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "於",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "赳",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "葵",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "禄",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "孟",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "尭",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "巳",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "暢",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "芹",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "杏",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "鳳",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "馨",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "慧",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "彬",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "匡",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "欽",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "嵯",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "綜",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "翠",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "鮎",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "榛",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "惣",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "蔦",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "隼",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "渚",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "稀",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "芙",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "皐",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "雛",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "惟",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "佑",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "耀",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "黛",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "渥",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "惇",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "脩",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "甫",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "嬉",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "蒼",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "暉",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "只",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "檀",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "凱",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "彗",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "梓",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "丑",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "叶",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "汐",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
+  },
+  {
+    "kanji": "絢",
+    "known": false,
+    "inProgress": false,
+    "joyo": false,
+    "level": 1
   }
 ]

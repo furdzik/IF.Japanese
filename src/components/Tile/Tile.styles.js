@@ -22,6 +22,10 @@ const ListItem = styled.div`
     }
   }
 
+  ${(props) => !props.joyo && css`
+    border: 1px solid #a0a0a0;
+  `}
+
   ${(props) => props.known && css`
     background: ${props.theme.colors.primaryColor};
     color: ${props.theme.colors.white};
@@ -30,7 +34,12 @@ const ListItem = styled.div`
       color: ${props.theme.colors.white};
       text-shadow: -1px 1px 8px #750101;
     }
+
+    ${(props) => !props.joyo && css`
+      border: 1px solid #750101;
+    `}
   `}
+
   ${(props) => props.inProgress && css`
     background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
     color: ${props.theme.colors.white};
@@ -40,12 +49,18 @@ const ListItem = styled.div`
       color: ${props.theme.colors.white};
       text-shadow: -1px 1px 8px #750101;
     }
+
+    ${(props) => !props.joyo && css`
+      border: 1px solid #f65e5e;
+    `}
+
     @media print {
       background: #fba5a5;
       color: ${props.theme.colors.black};
       text-shadow: none;
     }
   `}
+
   ${(props) => props.inProgress && props.known && css`
     background: ${props.theme.colors.black};
     color: ${props.theme.colors.white};
