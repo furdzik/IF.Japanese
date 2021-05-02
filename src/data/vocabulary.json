@@ -28178,13 +28178,6 @@
     "level": 2
   },
   {
-    "vocab": "電波",
-    "known": false,
-    "inProgress": false,
-    "pitch": "",
-    "level": 2
-  },
-  {
     "vocab": "湿度",
     "known": false,
     "inProgress": false,
@@ -28389,13 +28382,6 @@
   },
   {
     "vocab": "真空",
-    "known": false,
-    "inProgress": false,
-    "pitch": "",
-    "level": 2
-  },
-  {
-    "vocab": "転々",
     "known": false,
     "inProgress": false,
     "pitch": "",
@@ -28970,13 +28956,6 @@
   },
   {
     "vocab": "役人",
-    "known": false,
-    "inProgress": false,
-    "pitch": "",
-    "level": 2
-  },
-  {
-    "vocab": "相互",
     "known": false,
     "inProgress": false,
     "pitch": "",
@@ -29929,13 +29908,6 @@
   },
   {
     "vocab": "箇所",
-    "known": false,
-    "inProgress": false,
-    "pitch": "",
-    "level": 2
-  },
-  {
-    "vocab": "輸送",
     "known": false,
     "inProgress": false,
     "pitch": "",
@@ -30936,13 +30908,6 @@
     "level": 2
   },
   {
-    "vocab": "児童",
-    "known": false,
-    "inProgress": false,
-    "pitch": "",
-    "level": 2
-  },
-  {
     "vocab": "欄",
     "known": false,
     "inProgress": false,
@@ -31490,13 +31455,6 @@
   },
   {
     "vocab": "中旬",
-    "known": false,
-    "inProgress": false,
-    "pitch": "",
-    "level": 2
-  },
-  {
-    "vocab": "容積",
     "known": false,
     "inProgress": false,
     "pitch": "",

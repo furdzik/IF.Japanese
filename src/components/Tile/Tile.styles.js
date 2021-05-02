@@ -1,23 +1,7 @@
 import styled, { css } from 'styled-components';
 
-const ListWrapper = styled.ul`
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 -1rem 3rem;
-  padding: 0;
-  list-style: none;
-
-  @media print {
-    display: block;
-    text-align: justify;
-  }
-`;
-
-const ListItem = styled.li`
-  position: relative;
+const ListItem = styled.div`
+    position: relative;
   order: 2;
   margin: 1rem;
   padding: .6rem 1.2rem .4rem;
@@ -85,6 +69,5 @@ const ListItem = styled.li`
 `;
 
 export {
-  ListWrapper,
   ListItem
 };

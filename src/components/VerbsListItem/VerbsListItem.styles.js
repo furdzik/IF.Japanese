@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import Tile from '@components/Tile';
+
 const Item = styled.li`
   display: flex;
   flex-wrap: wrap;
@@ -18,50 +20,10 @@ const Item = styled.li`
   }
 `;
 
-const VerbBox = styled.div`
+const TileStyled = styled(Tile)`
   position: relative;
   margin: 2.1rem 2rem 0;
-  padding: .6rem 1.2rem .4rem;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
-  font-size: 2rem;
-
-  ${(props) => props.known && css`
-    background: ${props.theme.colors.primaryColor};
-    color: ${props.theme.colors.white};
-    &::before {
-      color: ${props.theme.colors.white};
-      text-shadow: -1px 1px 8px #750101;
-    }
-  `}
-  ${(props) => props.inProgress && css`
-    background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
-    color: ${props.theme.colors.white};
-    text-shadow: -1px 1px 8px #750101;
-    &::before {
-      color: ${props.theme.colors.white};
-      text-shadow: -1px 1px 8px #750101;
-    }
-  `}
-  ${(props) => props.inProgress && props.known && css`
-    background: ${props.theme.colors.black};
-    color: ${props.theme.colors.white};
-    &::before {
-      color: ${props.theme.colors.white};
-    }
-  `}
-
-  ${(props) => props.level && props.level !== 0 && css`
-    &::before {
-      position: absolute;
-      top: 0;
-      right: .3rem;
-      font-family: Arial, Calibri, Helvetica, sans-serif;
-      font-size: 1rem;
-      color: inherit;
-      content: '${props.level}';
-    }
-  `}
+  order: initial;
 `;
 
 const MainBox = styled.div`
@@ -147,7 +109,7 @@ const ParticleLabel = styled.span`
 
 export {
   Item,
-  VerbBox,
+  TileStyled,
   MainBox,
   VocabLink,
   BoxContent,

@@ -2,23 +2,25 @@ import React from 'react';
 
 import { kanjiType } from './KanjiList.types';
 
-import { ListWrapper, ListItem } from './KanjiList.styles.js';
+import TileWrapper from '@components/TileWrapper';
+import Tile from '@components/Tile';
 
 const KanjiList = (props) => (
-  <ListWrapper>
+  <TileWrapper>
     {
       props.kanji.map((item) => (
-        <ListItem
+        <Tile
           key={item.kanji}
           known={item.known}
           inProgress={item.inProgress}
           level={item.level}
+          joyo={item.joyo}
         >
           {item.kanji}
-        </ListItem>
+        </Tile>
       ))
     }
-  </ListWrapper>
+  </TileWrapper>
 );
 
 KanjiList.propTypes = {

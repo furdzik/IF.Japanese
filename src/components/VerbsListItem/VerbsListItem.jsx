@@ -14,7 +14,7 @@ import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
 import {
   Item,
-  VerbBox,
+  TileStyled,
   MainBox,
   VocabLink,
   BoxContent,
@@ -87,14 +87,14 @@ const VerbsListItem = (props) => {
       id={props.item.vocab}
     >
       <MainBox>
-        <VerbBox
+        <TileStyled
           key={props.item.vocab}
           known={props.item.known}
           inProgress={props.item.inProgress}
           level={props.item.level}
         >
           <VocabLink to={`vocab/${props.item.vocab}`}>{props.item.vocab}</VocabLink>
-        </VerbBox>
+        </TileStyled>
         <VerbType title={verbTypeLabel(props.item.verb?.verbType)}>
           {verbTypeLabel(props.item.verb?.verbType, true)}
         </VerbType>

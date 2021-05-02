@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 
 export const kanjiType = PropTypes.arrayOf(PropTypes.shape({
-  vocab: PropTypes.string,
+  kanji: PropTypes.string,
   known: PropTypes.bool,
-  inProgress: PropTypes.bool
+  inProgress: PropTypes.bool,
+  joyo: PropTypes.bool
 }));
 
 export const kanjiTypeLengthType = PropTypes.shape({
