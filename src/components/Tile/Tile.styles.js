@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const ListItem = styled.div`
-    position: relative;
+  position: relative;
   order: 2;
   margin: 1rem;
   padding: .6rem 1.2rem .4rem;

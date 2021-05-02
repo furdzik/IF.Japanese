@@ -22,8 +22,8 @@ const Item = styled.li`
 
 const TileStyled = styled(Tile)`
   position: relative;
-  margin: 2.1rem 2rem 0;
   order: initial;
+  margin: 2.1rem 2rem 0;
 `;
 
 const MainBox = styled.div`

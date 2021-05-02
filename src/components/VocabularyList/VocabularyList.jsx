@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { vocabType } from './VocabularyList.types';
-
 import TileWrapper from '@components/TileWrapper';
 import Tile from '@components/Tile';
+
+import { vocabType } from './VocabularyList.types';
 
 const VocabularyList = (props) => {
   const getOnlyVocab = (vocab) => vocab.replace(/\d:/gmi, '');
@@ -15,8 +15,8 @@ const VocabularyList = (props) => {
         props.vocab.map((item) => (
           <Tile
             key={item.vocab}
-            known={item.known}
             inProgress={item.inProgress}
+            known={item.known}
             level={item.level}
           >
             <Link

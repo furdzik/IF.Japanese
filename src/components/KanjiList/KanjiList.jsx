@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { kanjiType } from './KanjiList.types';
-
 import TileWrapper from '@components/TileWrapper';
 import Tile from '@components/Tile';
+
+import { kanjiType } from './KanjiList.types';
 
 const KanjiList = (props) => (
   <TileWrapper>
@@ -11,8 +11,8 @@ const KanjiList = (props) => (
       props.kanji.map((item) => (
         <Tile
           key={item.kanji}
-          known={item.known}
           inProgress={item.inProgress}
+          known={item.known}
           level={item.level}
           joyo={item.joyo}
         >

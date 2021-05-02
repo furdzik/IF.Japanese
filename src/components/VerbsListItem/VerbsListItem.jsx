@@ -81,16 +81,16 @@ const VerbsListItem = (props) => {
   return (
     <Item
       key={props.item.vocab}
-      known={props.item.known}
       inProgress={props.item.inProgress}
+      known={props.item.known}
       level={props.item.level}
       id={props.item.vocab}
     >
       <MainBox>
         <TileStyled
           key={props.item.vocab}
-          known={props.item.known}
           inProgress={props.item.inProgress}
+          known={props.item.known}
           level={props.item.level}
         >
           <VocabLink to={`vocab/${props.item.vocab}`}>{props.item.vocab}</VocabLink>

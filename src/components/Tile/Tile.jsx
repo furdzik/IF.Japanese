@@ -6,8 +6,8 @@ import { ListItem } from './Tile.styles.js';
 const Tile = (props) => (
   <ListItem
     className={props.className}
-    known={props.known}
     inProgress={props.inProgress}
+    known={props.known}
     level={props.level}
     joyo={props.joyo}
   >
@@ -17,8 +17,8 @@ const Tile = (props) => (
 
 Tile.propTypes = {
   children: PropTypes.node.isRequired,
-  known: PropTypes.bool.isRequired,
   inProgress: PropTypes.bool.isRequired,
+  known: PropTypes.bool.isRequired,
   level: PropTypes.number.isRequired,
   className: PropTypes.string,
   joyo: PropTypes.bool
