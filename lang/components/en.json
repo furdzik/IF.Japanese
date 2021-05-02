@@ -1,4 +1,5 @@
 {
+  "Details.jishoLinkText": "Jisho link",
   "Filters.all": "全部: ",
   "Filters.inProgress": "勉強中",
   "Filters.known": "知っている",
@@ -10,7 +11,7 @@
   "KanjiDetails.jlptLevelText": "jlpt-n{level}",
   "KanjiDetails.joyo": "Jōyō kanji",
   "KanjiDetails.kunyomiText": "Kun",
-  "KanjiDetails.meaningHeader": "Meaning and reading of the kanji",
+  "KanjiDetails.mainHeader": "Meaning and reading of the kanji",
   "KanjiDetails.meaningText": "Meaning",
   "KanjiDetails.numberOfStrokes": "{number} strokes",
   "KanjiDetails.onyomiText": "On",
@@ -201,7 +202,7 @@
   "VocabularyDetails.conjugationText": "conjugation",
   "VocabularyDetails.examplesHeader": "Examples",
   "VocabularyDetails.jishoLinkText": "Jisho link",
-  "VocabularyDetails.meaningHeader": "Meaning of the word",
+  "VocabularyDetails.mainHeader": "Meaning of the word",
   "src.containers.Kanji.all": "全部: ",
   "src.containers.Kanji.inProgress": "勉強中",
   "src.containers.Kanji.joyo": "常用漢字表",

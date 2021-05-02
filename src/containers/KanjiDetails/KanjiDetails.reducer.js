@@ -1,7 +1,6 @@
 import kanji from '@data/kanji.json';
 
 import { fetchKanji, fetchKanjiAlternative } from '@api';
-import React from 'react';
 
 const actionTypes = {
   GET_KANJI_DETAILS_INIT: 'KANJI/GET_DETAILS_INIT',
@@ -37,14 +36,14 @@ export default function(state = initialState, action) {
         data = {
           ...data,
           grade: detailsAlternative.grade,
-          kunyomi: detailsAlternative.kun_readings.join(', '),
+          kunyomi: detailsAlternative?.kun_readings.join(', '),
           onyomi: detailsAlternative?.on_readings.join(', '),
-          meaning: {english: detailsAlternative?.meanings.join(', ') },
+          meaning: { english: detailsAlternative?.meanings.join(', ') },
           numberOfStrokes: detailsAlternative?.stroke_count,
           strokes: null,
           radical: null,
-          examples: null,
-        }
+          examples: null
+        };
       } else {
         data = {
           ...data,
@@ -55,8 +54,8 @@ export default function(state = initialState, action) {
           numberOfStrokes: details.kanji?.strokes?.count,
           strokes: details.kanji?.strokes,
           radical: details?.radical,
-          examples: details?.examples,
-        }
+          examples: details?.examples
+        };
       }
 
       return {
@@ -91,14 +90,12 @@ const getKanjiDetailsInit = () => ({
 export const getKanjiDetailsData = (name) => (dispatch) => {
   dispatch(getKanjiDetailsInit());
 
-  const originKanji = kanji.filter((kanji) => kanji.kanji === name)[0];
+  const originKanji = kanji.filter((element) => element.kanji === name)[0];
 
   fetchKanji(name)
     .then((details) => {
-      console.log(details);
       if (details.error) {
         fetchKanjiAlternative(name).then((detailsAlternative) => {
-          console.log('alt', detailsAlternative);
           dispatch(getKanjiDetails({ detailsAlternative, originKanji }));
         });
       } else {

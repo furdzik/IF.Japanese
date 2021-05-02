@@ -35,7 +35,7 @@ const ListItem = styled.div`
       text-shadow: -1px 1px 8px #750101;
     }
 
-    ${(props) => props.joyo === false && css`
+    ${props.joyo === false && css`
       border: 1px solid #750101;
     `}
   `}
@@ -50,7 +50,7 @@ const ListItem = styled.div`
       text-shadow: -1px 1px 8px #750101;
     }
 
-    ${(props) => props.joyo === false && css`
+    ${props.joyo === false && css`
       border: 1px solid #f65e5e;
     `}
 

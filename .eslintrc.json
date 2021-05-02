@@ -32,7 +32,8 @@
     "react/jsx-props-no-spreading": 0,
     "react/static-property-placement": [1, "static public field"],
     "import/extensions": 0,
-    "no-else-return": 0
+    "no-else-return": 0,
+    "camelcase": 0
   },
   "settings": {
     "import/resolver": {

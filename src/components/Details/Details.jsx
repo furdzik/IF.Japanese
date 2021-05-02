@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
@@ -48,6 +48,7 @@ const Details = (props) => {
           {
             props.tags ? props.tags.map((el, index) => (
               React.createElement(Tag, {
+                // eslint-disable-next-line react/no-array-index-key
                 key: index,
                 ...el.props
               })
@@ -73,6 +74,7 @@ const Details = (props) => {
         {
           props.sections ? props.sections.map((section, index) => (
             section.section ? (
+              // eslint-disable-next-line react/no-array-index-key
               <React.Fragment key={index}>
                 <Header>{section.title}</Header>
                 <SectionWrapper>
@@ -89,20 +91,20 @@ const Details = (props) => {
 };
 
 Details.propTypes = {
-  name: PropTypes.string.isRequired,
   jishoLink: PropTypes.string.isRequired,
   mainSection: PropTypes.node.isRequired,
   mainSectionHeader: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   additionalBox: PropTypes.node,
   children: PropTypes.node,
   inProgress: PropTypes.bool,
+  known: PropTypes.bool,
   reading: PropTypes.string,
   sections: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     section: PropTypes.node
   })),
-  known: PropTypes.bool,
-
+  tags: PropTypes.arrayOf(PropTypes.node)
 };
 
 Details.defaultProps = {
@@ -110,8 +112,9 @@ Details.defaultProps = {
   children: null,
   inProgress: null,
   known: null,
+  reading: null,
   sections: null,
-  reading: null
+  tags: null
 };
 
 export default Details;

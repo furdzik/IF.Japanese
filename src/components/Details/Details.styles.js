@@ -103,73 +103,6 @@ const CharacterWrapper = styled.div`
   text-align: center;
 `;
 
-const ReadingList = styled.ul`
-  list-style: none;
-  margin-top: 2rem;
-`;
-
-const ReadingListItem = styled.li`
-  margin-bottom: 2rem;
-`;
-
-const StrokeWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: .1rem;
-  margin-top: .1rem;
-`;
-
-const StrokeBox = styled.div`
-  position: relative;
-  border: 1px solid ${(props) => props.theme.colors.secondaryColor};
-  width: 12.444rem;
-  margin-left: -.1rem;
-  margin-top: -.1rem;
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    z-index: 1;
-  }
-  &::before {
-    border-left: 1px dashed ${(props) => props.theme.colors.secondaryColor};
-    top: 0;
-    left: 50%;
-    width: 0;
-    height: 100%;
-  }
-  &::after {
-    border-top: 1px dashed ${(props) => props.theme.colors.secondaryColor};
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 0;
-  }
-`;
-
-const StrokeImage = styled.img`
-  display: block;
-  position: relative;
-  max-width: 100%;
-  z-index: 2;
-`;
-
-const StrokeNumberWrapper = styled.span`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  background: ${(props) => props.theme.colors.secondaryColor};
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  margin-right: 1rem;
-`;
-
-const ExampleWrapper = styled.div`
-  display: block;
-`;
-
 export {
   DetailsWrapper,
   WordHeader,
@@ -181,12 +114,5 @@ export {
   SectionWrapper,
   NameWrapper,
   CharacterWrapper,
-  Header,
-  ReadingList,
-  ReadingListItem,
-  StrokeWrapper,
-  StrokeBox,
-  StrokeImage,
-  StrokeNumberWrapper,
-  ExampleWrapper
+  Header
 };

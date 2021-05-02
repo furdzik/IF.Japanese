@@ -32,27 +32,32 @@ const VocabularyDetails = (props) => {
   const getTags = () => {
     const tags = [];
 
-    props.isVerb ? tags.push(
-      <Tag verb>
-        <ConjugationLink type="button" onClick={() => setConjugationOpen(true)}>
-          {intl.formatMessage(messages.conjugationText)}
-        </ConjugationLink>
-      </Tag>
-    ) : null;
-
-    props.isCommon ? tags.push(
-      <Tag isCommon>{intl.formatMessage(messages.common)}</Tag>
-    ) : null;
-
-    const jlpt = props.jlpt && props.jlpt.forEach((el, index) => {
-      // eslint-disable-next-line react/no-array-index-key
-      tags.push(<Tag isJlpt key={index}>{el}</Tag>);
-    });
-
-    props.tags ? props.tags.forEach((el, index) => {
-      // eslint-disable-next-line react/no-array-index-key
-      tags.push(<Tag key={index}>{el}</Tag>);
-    }) : null;
+    if (props.isVerb) {
+      tags.push(
+        <Tag verb>
+          <ConjugationLink type="button" onClick={() => setConjugationOpen(true)}>
+            {intl.formatMessage(messages.conjugationText)}
+          </ConjugationLink>
+        </Tag>
+      );
+    }
+    if (props.isCommon) {
+      tags.push(
+        <Tag isCommon>{intl.formatMessage(messages.common)}</Tag>
+      );
+    }
+    if (props.jlpt) {
+      props.jlpt.forEach((el, index) => {
+        // eslint-disable-next-line react/no-array-index-key
+        tags.push(<Tag isJlpt key={index}>{el}</Tag>);
+      });
+    }
+    if (props.tags) {
+      props.tags.forEach((el, index) => {
+        // eslint-disable-next-line react/no-array-index-key
+        tags.push(<Tag key={index}>{el}</Tag>);
+      });
+    }
 
     return tags;
   };
@@ -129,7 +134,7 @@ const VocabularyDetails = (props) => {
             <AdditionalExplanationWrapper>
               {props.additionalExplanation}
             </AdditionalExplanationWrapper>
-          ): null
+          ) : null
         },
         {
           title: intl.formatMessage(messages.examplesHeader),
@@ -137,6 +142,7 @@ const VocabularyDetails = (props) => {
             <AdditionalExplanationWrapper>
               {
                 props.examples.map((el, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
                   <div key={index}>{el}</div>
                 ))
               }

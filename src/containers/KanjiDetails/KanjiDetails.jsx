@@ -37,6 +37,7 @@ const KanjiDetails = (props) => {
 KanjiDetails.propTypes = {
   getKanjiDetails: PropTypes.func.isRequired,
   kanji: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
   examples: PropTypes.arrayOf(objectShape),
   grade: PropTypes.number,
   inProgress: PropTypes.bool,

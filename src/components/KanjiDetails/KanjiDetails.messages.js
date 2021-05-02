@@ -5,6 +5,7 @@ export default defineMessages({
   mainHeader: 'Meaning and reading of the kanji',
   jishoLinkText: 'Jisho link',
   jlptLevelText: 'jlpt-n{level}',
+  gradeLevelText: 'grade: {level}',
   meaningText: 'Meaning',
   kunyomiText: 'Kun',
   onyomiText: 'On',

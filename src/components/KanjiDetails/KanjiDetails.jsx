@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
@@ -20,20 +20,27 @@ import messages from './KanjiDetails.messages';
 
 const KanjiDetails = (props) => {
   const intl = useIntl();
-  console.log(props);
 
   const getTags = () => {
     const tags = [];
 
-    props.isJoyo ? tags.push(
-      <Tag isCommon>{intl.formatMessage(messages.joyo)}</Tag>
-    ) : null;
-
-    props.level !== 0 ? tags.push(
-      <Tag isJlpt>{intl.formatMessage(messages.jlptLevelText, {
-        level: props.level
-      })}</Tag>
-    ) : null;
+    if (props.isJoyo) {
+      tags.push(
+        <Tag isCommon>{intl.formatMessage(messages.joyo)}</Tag>
+      );
+    }
+    if (props.level !== 0) {
+      tags.push(
+        <Tag isJlpt>
+          {intl.formatMessage(messages.jlptLevelText, { level: props.level })}
+        </Tag>
+      );
+    }
+    if (props.grade) {
+      tags.push(
+        <Tag>{intl.formatMessage(messages.gradeLevelText, { grade: props.grade })}</Tag>
+      );
+    }
 
     return tags;
   };
@@ -88,7 +95,7 @@ const KanjiDetails = (props) => {
                 ))
               }
             </StrokeWrapper>
-          ): null
+          ) : null
         },
         {
           title: intl.formatMessage(messages.examplesHeader),
@@ -122,7 +129,6 @@ KanjiDetails.propTypes = {
   meaning: objectShape,
   numberOfStrokes: PropTypes.number,
   onyomi: PropTypes.string,
-  radical: objectShape,
   strokes: objectShape
 };
 
@@ -137,7 +143,6 @@ KanjiDetails.defaultProps = {
   meaning: null,
   numberOfStrokes: null,
   onyomi: null,
-  radical: null,
   strokes: null
 };
 
