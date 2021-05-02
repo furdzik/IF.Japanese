@@ -14,6 +14,7 @@ import Footer from '@components/Footer';
 import Vocabulary from '@containers/Vocabulary/Vocabulary';
 import VocabularyDetails from '@containers/VocabularyDetails/VocabularyDetails';
 import Kanji from '@containers/Kanji/Kanji';
+import KanjiDetails from '@containers/KanjiDetails/KanjiDetails';
 import Verbs from '@containers/Verbs/Verbs';
 
 const Routes = () => (
@@ -41,6 +42,29 @@ const Routes = () => (
         </Container>
         <Footer />
       </Route>
+      <Route
+        exact
+        path="/kanji/:kanji"
+        render={(props) => {
+          // eslint-disable-next-line react/prop-types
+          const { kanji } = props.match.params;
+
+          if (kanji) {
+            return (
+              <React.Fragment>
+                <Header />
+                <Container>
+                  <Menu list={menu} active={2} />
+                  <KanjiDetails kanji={kanji} />
+                </Container>
+                <Footer />
+              </React.Fragment>
+            );
+          }
+
+          return null;
+        }}
+      />
       <Route
         exact
         path="/vocab/:vocab"

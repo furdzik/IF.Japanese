@@ -26,7 +26,7 @@ Tile.propTypes = {
 
 Tile.defaultProps = {
   className: '',
-  joyo: false
+  joyo: null
 };
 
 export default Tile;

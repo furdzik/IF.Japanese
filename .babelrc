@@ -12,7 +12,7 @@
       "alias": {
         "@mocks": "./__mocks__",
         "@root": "./src",
-        "@api": "./src/utils/api",
+        "@api": "./src/api",
         "@data": "./src/data",
         "@components": "./src/components",
         "@containers": "./src/containers",

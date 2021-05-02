@@ -7,6 +7,7 @@ import { objectShape } from '@utils/types/objectShape';
 
 import VocabularyDetailsComponent from '@components/VocabularyDetails';
 import Loader from '@components/ui/Loader';
+
 import { getVocabularyDetailsData } from './VocabularyDetails.reducer';
 import selector from './VocabularyDetails.selector';
 

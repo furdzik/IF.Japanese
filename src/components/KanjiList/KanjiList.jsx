@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import TileWrapper from '@components/TileWrapper';
 import Tile from '@components/Tile';
@@ -16,7 +17,9 @@ const KanjiList = (props) => (
           level={item.level}
           joyo={item.joyo}
         >
-          {item.kanji}
+          <Link to={`/kanji/${item.kanji}`}>
+            {item.kanji}
+          </Link>
         </Tile>
       ))
     }

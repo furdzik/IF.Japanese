@@ -1,6 +1,6 @@
 import vocab from '@data/vocabulary.json';
 
-import { fetchJisho } from '@utils/api';
+import { fetchJisho } from '@api';
 
 import { URL_SEPARATOR } from '@config/constants';
 
