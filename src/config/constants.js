@@ -95,6 +95,11 @@ export const menu = [
     id: 3,
     name: '動詞',
     link: '/verbs'
+  },
+  {
+    id: 4,
+    name: '文法',
+    link: '/grammar'
   }
 ];
 

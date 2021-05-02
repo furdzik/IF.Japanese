@@ -4,17 +4,10 @@ import { useIntl } from 'react-intl';
 
 import { objectShape } from '@utils/types/objectShape';
 
+import Details from '@components/Details';
+
 import {
-  DetailsWrapper,
-  WordHeader,
-  JishoLink,
-  Content,
-  Header,
-  SectionWrapper,
-  NameWrapper,
   Tag,
-  TagsWrapper,
-  CharacterWrapper,
   ReadingList,
   ReadingListItem,
   StrokeWrapper,
@@ -28,119 +21,92 @@ import messages from './KanjiDetails.messages';
 const KanjiDetails = (props) => {
   const intl = useIntl();
   console.log(props);
+
+  const getTags = () => {
+    const tags = [];
+
+    props.isJoyo ? tags.push(
+      <Tag isCommon>{intl.formatMessage(messages.joyo)}</Tag>
+    ) : null;
+
+    props.level !== 0 ? tags.push(
+      <Tag isJlpt>{intl.formatMessage(messages.jlptLevelText, {
+        level: props.level
+      })}</Tag>
+    ) : null;
+
+    return tags;
+  };
+
   return (
-    <DetailsWrapper>
-      {/* do wydzielenia z Vocab */}
-      <WordHeader
-        known={props.known}
-        inProgress={props.inProgress}
-      >
-        <span>{props.kanji}</span>
-        <JishoLink
-          href={`https://jisho.org/search/%23kanji%20${props.kanji}`}
-          target="_blank"
-          notKnow={!props.known && !props.inProgress}
-        >
-          {intl.formatMessage(messages.jishoLinkText)}
-        </JishoLink>
-      </WordHeader>
-      <Content>
-        <TagsWrapper>
+    <Details
+      name={props.kanji}
+      known={props.known}
+      inProgress={props.inProgress}
+      jishoLink={`https://jisho.org/search/%23kanji%20${props.kanji}`}
+      tags={getTags()}
+      additionalBox={props.numberOfStrokes ? (
+        <div>
+          {intl.formatMessage(messages.numberOfStrokes, {
+            number: <StrokeNumberWrapper>{props.numberOfStrokes}</StrokeNumberWrapper>
+          })}
+        </div>
+      ) : null}
+      mainSectionHeader={intl.formatMessage(messages.mainHeader)}
+      mainSection={(
+        <ReadingList>
+          <ReadingListItem>
+            <b>{intl.formatMessage(messages.meaningText)}:</b> {props.meaning?.english}
+          </ReadingListItem>
           {
-            props.isJoyo ? (
-              <Tag isCommon>{intl.formatMessage(messages.joyo)}</Tag>
-            ) : null
-          }
-          {
-            props.level !== 0 ? (
-              <Tag isJlpt>{intl.formatMessage(messages.jlptLevelText, {
-                level: props.level
-              })}</Tag>
-            ) : null
-          }
-          {
-            props.tags && props.tags.map((el, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <Tag key={index}>{el}</Tag>
-            ))
-          }
-        </TagsWrapper>
-        <Header>{intl.formatMessage(messages.meaningHeader)}</Header>
-        <SectionWrapper flex>
-          <NameWrapper>
-            <CharacterWrapper>{props.kanji}</CharacterWrapper>
-            {
-              props.numberOfStrokes ? (
-                <div>
-                  {intl.formatMessage(messages.numberOfStrokes, {
-                    number: <StrokeNumberWrapper>{props.numberOfStrokes}</StrokeNumberWrapper>
-                  })}
-                </div>
-              ) : null
-            }
-          </NameWrapper>
-          <div>
-            <ReadingList>
+            props.kunyomi && props.kunyomi !== '' ? (
               <ReadingListItem>
-                <b>{intl.formatMessage(messages.meaningText)}:</b> {props.meaning?.english}
+                <b>{intl.formatMessage(messages.kunyomiText)}:</b> {props.kunyomi}
               </ReadingListItem>
-              {
-                props.kunyomi && props.kunyomi !== '' ? (
-                  <ReadingListItem>
-                    <b>{intl.formatMessage(messages.kunyomiText)}:</b> {props.kunyomi}
-                  </ReadingListItem>
-                ) : null
-              }
-              {
-                props.onyomi && props.onyomi !== '' ? (
-                  <ReadingListItem>
-                    <b>{intl.formatMessage(messages.onyomiText)}:</b> {props.onyomi}
-                  </ReadingListItem>
-                ) : null
-              }
-            </ReadingList>
-          </div>
-        </SectionWrapper>
+            ) : null
+          }
+          {
+            props.onyomi && props.onyomi !== '' ? (
+              <ReadingListItem>
+                <b>{intl.formatMessage(messages.onyomiText)}:</b> {props.onyomi}
+              </ReadingListItem>
+            ) : null
+          }
+        </ReadingList>
+      )}
+      sections={[
         {
-          props.strokes ? (
-            <React.Fragment>
-              <Header>{intl.formatMessage(messages.strokesHeader)}</Header>
-              <SectionWrapper>
-                <StrokeWrapper>
-                  {
-                    props.strokes.images.map((image, index) => (
-                      // eslint-disable-next-line react/no-array-index-key
-                      <StrokeBox key={index}>
-                        <StrokeImage src={image} alt="" />
-                      </StrokeBox>
-                    ))
-                  }
-                </StrokeWrapper>
-              </SectionWrapper>
-            </React.Fragment>
+          title: intl.formatMessage(messages.strokesHeader),
+          section: props.strokes ? (
+            <StrokeWrapper>
+              {
+                props.strokes.images.map((image, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <StrokeBox key={index}>
+                    <StrokeImage src={image} alt="" />
+                  </StrokeBox>
+                ))
+              }
+            </StrokeWrapper>
+          ): null
+        },
+        {
+          title: intl.formatMessage(messages.examplesHeader),
+          section: props.examples ? (
+            <ExampleWrapper>
+              {
+                props.examples.map((example, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <p key={index}>
+                    {example.japanese}: {example.meaning?.english}
+                  </p>
+                ))
+              }
+            </ExampleWrapper>
           ) : null
         }
-        {
-          props.examples ? (
-            <React.Fragment>
-              <Header>{intl.formatMessage(messages.examplesHeader)}</Header>
-              <SectionWrapper>
-                <ExampleWrapper>
-                {
-                  props.examples.map((example, index) => (
-                    // eslint-disable-next-line react/no-array-index-key
-                    <p key={index}>
-                      {example.japanese}: {example.meaning?.english}
-                    </p>
-                  ))
-                }
-                </ExampleWrapper>
-              </SectionWrapper>
-            </React.Fragment>
-          ) : null
-        }
-      </Content>
-    </DetailsWrapper>
+      ]}
+    />
   );
 };
 

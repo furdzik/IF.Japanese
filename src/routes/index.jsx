@@ -100,6 +100,17 @@ const Routes = () => (
         <Footer />
       </Route>
       <Route
+        path="/grammar"
+        exact
+      >
+        <Header />
+        <Container>
+          <Menu list={menu} active={4} />
+          WIP
+        </Container>
+        <Footer />
+      </Route>
+      <Route
         render={() => <h1>Page not found</h1>}
       />
     </Switch>

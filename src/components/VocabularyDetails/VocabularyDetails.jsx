@@ -5,24 +5,15 @@ import { useIntl } from 'react-intl';
 import { bunpouTypes } from '@config/constants';
 import { objectShape } from '@utils/types/objectShape';
 
+import Details from '@components/Details';
 import Modal from '@components/ui/Modal';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
 import conjugationMessages from '@components/VerbsListItem/VerbsListItem.messages';
 
 import {
-  VocabularyDetailsWrapper,
-  WordHeader,
-  JishoLink,
-  WordHeaderSeparator,
-  TagsWrapper,
   Tag,
   ConjugationLink,
-  Content,
-  MeaningWrapper,
-  WordWrapper,
-  NameWrapper,
-  MeaningHeader,
   SensesList,
   SensesListItem,
   AdditionalInfo,
@@ -36,148 +27,124 @@ import messages from './VocabularyDetails.messages';
 
 const VocabularyDetails = (props) => {
   const intl = useIntl();
-
   const [conjugationOpen, setConjugationOpen] = useState(false);
 
+  const getTags = () => {
+    const tags = [];
+
+    props.isVerb ? tags.push(
+      <Tag verb>
+        <ConjugationLink type="button" onClick={() => setConjugationOpen(true)}>
+          {intl.formatMessage(messages.conjugationText)}
+        </ConjugationLink>
+      </Tag>
+    ) : null;
+
+    props.isCommon ? tags.push(
+      <Tag isCommon>{intl.formatMessage(messages.common)}</Tag>
+    ) : null;
+
+    const jlpt = props.jlpt && props.jlpt.forEach((el, index) => {
+      // eslint-disable-next-line react/no-array-index-key
+      tags.push(<Tag isJlpt key={index}>{el}</Tag>);
+    });
+
+    props.tags ? props.tags.forEach((el, index) => {
+      // eslint-disable-next-line react/no-array-index-key
+      tags.push(<Tag key={index}>{el}</Tag>);
+    }) : null;
+
+    return tags;
+  };
+
   return (
-    <VocabularyDetailsWrapper>
-      <WordHeader
-        known={props.known}
-        inProgress={props.inProgress}
-      >
-        <span>{props.name}</span>
-        {
-          props.name !== props.reading ? (
-            <React.Fragment>
-              <WordHeaderSeparator>/</WordHeaderSeparator>
-              {props.reading}
-            </React.Fragment>
-          ) : null
-        }
-        <JishoLink
-          href={`https://jisho.org/word/${props.slug}`}
-          target="_blank"
-          notKnow={!props.known && !props.inProgress}
-        >
-          {intl.formatMessage(messages.jishoLinkText)}
-        </JishoLink>
-      </WordHeader>
-      <Content>
-        <TagsWrapper>
+    <Details
+      name={props.name}
+      reading={props.reading}
+      known={props.known}
+      inProgress={props.inProgress}
+      jishoLink={`https://jisho.org/word/${props.slug}`}
+      tags={getTags()}
+      additionalBox={(
+        <React.Fragment>
           {
-            props.isVerb ? (
-              <Tag verb>
-                <ConjugationLink type="button" onClick={() => setConjugationOpen(true)}>
-                  {intl.formatMessage(messages.conjugationText)}
-                </ConjugationLink>
-              </Tag>
-            ) : null
-          }
-          {
-            props.isCommon ? (
-              <Tag isCommon>{intl.formatMessage(messages.common)}</Tag>
-            ) : null
-          }
-          {
-            props.jlpt && props.jlpt.map((el, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <Tag isJlpt key={index}>{el}</Tag>
-            ))
-          }
-          {
-            props.tags && props.tags.map((el, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <Tag key={index}>{el}</Tag>
-            ))
-          }
-        </TagsWrapper>
-        <MeaningHeader>{intl.formatMessage(messages.meaningHeader)}</MeaningHeader>
-        <MeaningWrapper>
-          <NameWrapper>
-            <WordWrapper>{props.name}</WordWrapper>
-            {
-              !props.antonyms && props.senses && props.senses
-                .map((el, key) => el.antonyms.map((antonyms) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <AntonymsBox key={`${antonyms}_${key}`}>
-                    {intl.formatMessage(messages.antonymText)}
-                    <AntonymsLink to={`/vocab/${antonyms}`}>{antonyms}</AntonymsLink>
-                  </AntonymsBox>
-                )))
-            }
-            {
-              props.antonyms ? (
-                <AntonymsBox key={props.antonyms}>
+            !props.antonyms && props.senses && props.senses
+              .map((el, key) => el.antonyms.map((antonyms) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <AntonymsBox key={`${antonyms}_${key}`}>
                   {intl.formatMessage(messages.antonymText)}
-                  <AntonymsLink to={`/vocab/${props.antonyms}`}>{props.antonyms}</AntonymsLink>
+                  <AntonymsLink to={`/vocab/${antonyms}`}>{antonyms}</AntonymsLink>
                 </AntonymsBox>
-              ) : null
-            }
-          </NameWrapper>
-          <div>
-            <SensesList>
+              )))
+          }
+          {
+            props.antonyms ? (
+              <AntonymsBox key={props.antonyms}>
+                {intl.formatMessage(messages.antonymText)}
+                <AntonymsLink to={`/vocab/${props.antonyms}`}>{props.antonyms}</AntonymsLink>
+              </AntonymsBox>
+            ) : null
+          }
+        </React.Fragment>
+      )}
+      mainSectionHeader={intl.formatMessage(messages.mainHeader)}
+      mainSection={(
+        <SensesList>
+          {
+            props.senses && props.senses.map((el, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <SensesListItem number={index + 1} key={index}>
+                <div>
+                  <PartOfSpeechWrapper>
+                    {
+                      el.parts_of_speech.map((s, key) => (
+                        // eslint-disable-next-line react/no-array-index-key
+                        <PartOfSpeechBox key={key}>{s}</PartOfSpeechBox>
+                      ))
+                    }
+                  </PartOfSpeechWrapper>
+                  <div>
+                    {
+                      // eslint-disable-next-line no-shadow
+                      el.english_definitions.map((def, index) => (
+                        // eslint-disable-next-line react/no-array-index-key
+                        <React.Fragment key={index}>
+                          {def}
+                          {el.english_definitions.length !== index + 1 ? ', ' : ''}
+                        </React.Fragment>
+                      ))
+                    }
+                    <AdditionalInfo>{el.info}</AdditionalInfo>
+                  </div>
+                </div>
+              </SensesListItem>
+            ))
+          }
+        </SensesList>
+      )}
+      sections={[
+        {
+          title: intl.formatMessage(messages.additionalExplanationHeader),
+          section: props.additionalExplanation ? (
+            <AdditionalExplanationWrapper>
+              {props.additionalExplanation}
+            </AdditionalExplanationWrapper>
+          ): null
+        },
+        {
+          title: intl.formatMessage(messages.examplesHeader),
+          section: props.examples ? (
+            <AdditionalExplanationWrapper>
               {
-                props.senses && props.senses.map((el, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <SensesListItem number={index + 1} key={index}>
-                    <div>
-                      <PartOfSpeechWrapper>
-                        {
-                          el.parts_of_speech.map((s, key) => (
-                            // eslint-disable-next-line react/no-array-index-key
-                            <PartOfSpeechBox key={key}>{s}</PartOfSpeechBox>
-                          ))
-                        }
-                      </PartOfSpeechWrapper>
-                      <div>
-                        {
-                          // eslint-disable-next-line no-shadow
-                          el.english_definitions.map((def, index) => (
-                            // eslint-disable-next-line react/no-array-index-key
-                            <React.Fragment key={index}>
-                              {def}
-                              {el.english_definitions.length !== index + 1 ? ', ' : ''}
-                            </React.Fragment>
-                          ))
-                        }
-                        <AdditionalInfo>{el.info}</AdditionalInfo>
-                      </div>
-                    </div>
-                  </SensesListItem>
+                props.examples.map((el, index) => (
+                  <div key={index}>{el}</div>
                 ))
               }
-            </SensesList>
-          </div>
-        </MeaningWrapper>
-        {
-          props.additionalExplanation ? (
-            <div>
-              <MeaningHeader smallMargin>
-                {intl.formatMessage(messages.additionalExplanationHeader)}
-              </MeaningHeader>
-              <AdditionalExplanationWrapper>
-                {props.additionalExplanation}
-              </AdditionalExplanationWrapper>
-            </div>
+            </AdditionalExplanationWrapper>
           ) : null
         }
-        {
-          props.examples ? (
-            <div>
-              <MeaningHeader smallMargin>
-                {intl.formatMessage(messages.examplesHeader)}
-              </MeaningHeader>
-              <AdditionalExplanationWrapper>
-                {
-                  props.examples.map((el) => (
-                    <div>{el}</div>
-                  ))
-                }
-              </AdditionalExplanationWrapper>
-            </div>
-          ) : null
-        }
-      </Content>
+      ]}
+    >
       {
         conjugationOpen ? (
           <Modal
@@ -272,7 +239,7 @@ const VocabularyDetails = (props) => {
           </Modal>
         ) : null
       }
-    </VocabularyDetailsWrapper>
+    </Details>
   );
 };
 

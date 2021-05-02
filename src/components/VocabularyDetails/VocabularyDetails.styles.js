@@ -2,51 +2,6 @@ import styled, { css } from 'styled-components';
 
 import { Link } from 'react-router-dom';
 
-const VocabularyDetailsWrapper = styled.div`
-  overflow: hidden;
-`;
-
-const WordHeader = styled.div`
-  display: flex;
-  margin-bottom: 3rem;
-  padding: 1.6rem 2rem;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
-  font-size: 2rem;
-  font-weight: bold;
-
-  ${(props) => props.known && css`
-    background: ${props.theme.colors.primaryColor};
-    color: ${props.theme.colors.white};
-  `}
-  ${(props) => props.inProgress && css`
-    background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
-    color: ${props.theme.colors.white};
-    text-shadow: -1px 1px 8px #750101;
-  `}
-`;
-
-const JishoLink = styled.a`
-  display: inline-block;
-  margin-left: auto;
-  font-weight: 200;
-  color: ${(props) => props.theme.colors.white};
-
-  ${(props) => props.notKnow && css`
-    color: ${props.theme.colors.black};
-  `}
-`;
-
-const WordHeaderSeparator = styled.span`
-  display: inline-block;
-  margin: 0 2rem;
-`;
-
-const TagsWrapper = styled.div`
-  display: flex;
-  margin-bottom: 4rem;
-`;
-
 const Tag = styled.span`
   display: inline-block;
   padding: .3rem 1rem;
@@ -71,38 +26,6 @@ const Tag = styled.span`
 
 const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
-`;
-
-const Content = styled.div`
-  margin: 0 3rem;
-`;
-
-const MeaningWrapper = styled.div`
-  display: flex;
-  margin-top: 4rem;
-`;
-
-const MeaningHeader = styled.h2`
-  margin-bottom: 2rem;
-  ${(props) => !props.smallMargin && css`
-    margin-bottom: 5rem;
-  `}
-`;
-
-const NameWrapper = styled.div`
-  height: 100%;
-  margin-top: 1rem;
-  margin-right: 4rem;
-`;
-
-const WordWrapper = styled.div`
-  width: 20rem;
-  margin-bottom: 2rem;
-  padding: 4rem 0;
-  border: 1px solid ${(props) => props.theme.colors.secondaryColor};
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-  font-size: 4rem;
-  text-align: center;
 `;
 
 const SensesList = styled.ol`
@@ -167,18 +90,8 @@ const AdditionalExplanationWrapper = styled.div`
 `;
 
 export {
-  VocabularyDetailsWrapper,
-  WordHeader,
-  JishoLink,
-  WordHeaderSeparator,
-  TagsWrapper,
   Tag,
   ConjugationLink,
-  Content,
-  MeaningWrapper,
-  NameWrapper,
-  WordWrapper,
-  MeaningHeader,
   SensesList,
   SensesListItem,
   AdditionalInfo,

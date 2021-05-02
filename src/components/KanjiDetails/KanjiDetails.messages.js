@@ -2,7 +2,7 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   joyo: 'Jōyō kanji',
-  meaningHeader: 'Meaning and reading of the kanji',
+  mainHeader: 'Meaning and reading of the kanji',
   jishoLinkText: 'Jisho link',
   jlptLevelText: 'jlpt-n{level}',
   meaningText: 'Meaning',
