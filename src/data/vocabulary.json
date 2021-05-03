@@ -4204,8 +4204,8 @@
   },
   {
     "vocab": "然し",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "pitch": "",
     "level": 5
   },
@@ -6199,8 +6199,8 @@
   },
   {
     "vocab": "プラットホーム",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -7931,8 +7931,8 @@
   },
   {
     "vocab": "助かる",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -16945,7 +16945,8 @@
     "level": 4
   },
   {
-    "vocab": "滑る",
+    "vocab": "1:滑る",
+    "meaning": "すべる",
     "known": false,
     "inProgress": false,
     "pitch": "",
@@ -26807,7 +26808,7 @@
   {
     "vocab": "奥",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -32445,7 +32446,7 @@
   {
     "vocab": "怪しい",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -35466,7 +35467,7 @@
   {
     "vocab": "揶揄う",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -36095,6 +36096,1317 @@
   },
   {
     "vocab": "中指",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "襖",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "五十音",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "緯度",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "剃刀",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "送り仮名",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "草履",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "三日月",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "符号",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "分数",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "片仮名",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "方程式",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "目次",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "どっと",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "えっと",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "せっせと",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ウェイトレス",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "そう言えば",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "捩る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "お大事に",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ずらり",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "楕円",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "スカーフ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "テニスコート",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ガム",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "オイル",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ショップ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "見慣れる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "炒る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "足袋",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "直流",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "加速度",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "同格",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "部首",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "遣っ付ける",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "咥える",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "県庁",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "目安",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "バイバイ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "発揮",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "余る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "呼びかける",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "瓦",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "間接",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "初旬",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "短編",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "歌謡",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "三角",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "水産",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "図形",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "集金",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "合理",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "下降",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "芸能",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "増減",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "応接",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "全般",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "原産",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "現に",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "貯蔵",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "盛る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "出来上がり",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "長短",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "投書",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "工員",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "田植え",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "広さ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "丼",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "差し引き",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "農村",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "高層",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "一斉",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "英和",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "山林",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "産地",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "自衛",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "問答",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "友好",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "目指す",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "潰す",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "響く",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "慰める",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "緩い",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "載る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "吊る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "凹む",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "渇く",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "算盤",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "手ぬぐい",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "打ち消す",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "応ずる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "割合に",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "判子",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "心当たり",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "円周",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "縮める",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "論ずる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "落とし物",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "涼む",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "単数",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "四つ角",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "張り切る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ご馳走様",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "放れる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "句読点",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "領収",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ぶら下げる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "薄める",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "漢和",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "割り算",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "作製",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "御中",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "蒔く",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "自習",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "概論",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "写生",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "溶く",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "割と",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "斬る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "正味",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "針路",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "養分",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "専制",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "夜行",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "速力",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "耕地",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "激増",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "何々",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "習字",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "明々後日",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "斯うして",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "潜る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "うんと",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "お気の毒に",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "初めまして",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "しゃぶる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "襤褸",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "しーん",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "お待たせしました",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "その為",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "はきはき",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "こちらこそ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "蒸す",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "形容動詞",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "火口",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "伯父さん",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "釜",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "寒帯",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "述語",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ペンチ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ローマ字",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "フリー",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ダイアグラム",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "モノレール",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "サークル",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ウーマン",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "先々月",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "無沙汰",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "攻め手",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "先々週",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "店屋",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "存ずる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "斜",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "行ってまいります",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "お待ちどおさま",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "序で",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "碗",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "酌む",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "破れる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ビニール",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "和英",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "まごまご",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "千切る",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ご免ください",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "言付ける",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "今晩は",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "臍",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ゼミ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ビルディング",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "バツ",
+    "special": "x",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "2:滑る",
+    "meaning": "ぬめる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "ローンチ",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "一昨昨日",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "佚",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "タイア",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "それなのに",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "お掛け下さい",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "オーバコート",
     "known": false,
     "inProgress": false,
     "pitch": "",
