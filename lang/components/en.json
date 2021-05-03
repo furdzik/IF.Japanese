@@ -7,6 +7,7 @@
   "Footer.content": "© 2021 All rights reserved",
   "Header.title": "IF.Japanese",
   "KanjiDetails.examplesHeader": "Examples",
+  "KanjiDetails.gradeLevelText": "grade: {level}",
   "KanjiDetails.jishoLinkText": "Jisho link",
   "KanjiDetails.jlptLevelText": "jlpt-n{level}",
   "KanjiDetails.joyo": "Jōyō kanji",
