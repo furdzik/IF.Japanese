@@ -8684,7 +8684,7 @@
   {
     "vocab": "募集",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -10450,7 +10450,7 @@
   {
     "vocab": "事情",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -28364,7 +28364,7 @@
   {
     "vocab": "確率",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -28889,7 +28889,7 @@
   {
     "vocab": "人差し指",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -37411,5 +37411,19 @@
     "inProgress": false,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "動力",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "登録",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 1
   }
 ]
