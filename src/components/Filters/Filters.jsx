@@ -78,7 +78,7 @@ Filters.propTypes = {
 };
 
 Filters.defaultProps = {
-  additionalFilterList: []
+  additionalFilterList: null
 };
 
 export default Filters;

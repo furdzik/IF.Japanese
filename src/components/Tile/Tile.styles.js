@@ -1,13 +1,21 @@
 import styled, { css } from 'styled-components';
 
+import { breakpointMixin } from '@styles/mixins';
+
 const ListItem = styled.div`
   position: relative;
   order: 2;
-  margin: 1rem;
-  padding: .6rem 1.2rem .4rem;
+  margin: 1.1rem;
+  padding: .6rem 1rem .4rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.secondaryColor};
   font-size: 2rem;
+
+  ${breakpointMixin.laptop`
+    margin: 1rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  `}
 
   @media print {
     & {

@@ -1,23 +1,32 @@
 import styled, { css } from 'styled-components';
 
+import { breakpointMixin } from '@styles/mixins';
+
 const Header = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0 0 2rem;
+  display: block;
+  margin-bottom: 2rem;
 
   @media print {
     display: block;
     justify-content: left;
   }
+
+  ${breakpointMixin.laptop`
+    display: flex;
+    align-items: center;
+  `}
 `;
 
 const Legend = styled.div`
-  display: inline-block;
-  width: 30rem;
   margin-left: auto;
   padding: .5rem 1rem .3rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.secondaryColor};
+
+  ${breakpointMixin.phablet`
+    display: inline-block;
+    width: 30rem;
+  `}
 
   @media print {
     display: flex;
@@ -36,11 +45,16 @@ const Spaced = styled.span`
 `;
 
 const FiltersWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  min-width: 41rem;
-  min-height: 6.2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
+  margin-bottom: 1.5rem;
+
+  ${breakpointMixin.laptop`
+    min-width: 41rem;
+    min-height: 6.2rem;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  `}
 
   ${(props) => !props.secondary && !props.additional && css`
     background: ${props.theme.colors.secondaryColor};
@@ -52,7 +66,9 @@ const FiltersWrapper = styled.div`
   `}
 
   ${(props) => props.noHeight && css`
-    min-height: auto;
+    ${breakpointMixin.laptop`
+      min-height: auto;
+    `}
   `}
 
   @media print {

@@ -5234,7 +5234,7 @@
   {
     "vocab": "季節",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 4
   },
@@ -13965,7 +13965,7 @@
   {
     "vocab": "曇る",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 5
   },
@@ -37421,6 +37421,13 @@
   },
   {
     "vocab": "登録",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "強制",
     "known": false,
     "inProgress": true,
     "pitch": "",
