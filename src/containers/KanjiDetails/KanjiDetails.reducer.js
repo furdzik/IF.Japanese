@@ -30,6 +30,7 @@ export default function(state = initialState, action) {
         level: originKanji.level,
         known: originKanji.known,
         inProgress: originKanji.inProgress,
+        nowLearning: originKanji.nowLearning,
         isJoyo: originKanji.joyo
       };
       if (detailsAlternative) {

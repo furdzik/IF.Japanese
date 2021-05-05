@@ -20,6 +20,7 @@ const KanjiDetails = (props) => {
       kanji={props.kanji}
       level={props.level}
       known={props.known}
+      nowLearning={props.nowLearning}
       inProgress={props.inProgress}
       grade={props.grade}
       kunyomi={props.kunyomi}
@@ -43,6 +44,7 @@ KanjiDetails.propTypes = {
   inProgress: PropTypes.bool,
   isJoyo: PropTypes.bool,
   known: PropTypes.bool,
+  nowLearning: PropTypes.bool,
   kunyomi: PropTypes.string,
   level: PropTypes.number,
   meaning: objectShape,
@@ -58,6 +60,7 @@ KanjiDetails.defaultProps = {
   inProgress: null,
   isJoyo: null,
   known: null,
+  nowLearning: null,
   kunyomi: null,
   level: null,
   meaning: null,

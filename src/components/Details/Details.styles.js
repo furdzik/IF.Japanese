@@ -24,6 +24,10 @@ const WordHeader = styled.div`
     color: ${props.theme.colors.white};
     text-shadow: -1px 1px 8px #750101;
   `}
+  ${(props) => props.nowLearning && css`
+    background: #f18181;
+    color: ${props.theme.colors.white};
+  `}
 `;
 
 const WordHeaderSeparator = styled.span`

@@ -19,6 +19,7 @@ const initialState = {
   isCommon: null,
   tags: [],
   known: null,
+  nowLearning: null,
   meaning: null,
   inProgress: null,
   pitch: null,

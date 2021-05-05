@@ -7,6 +7,7 @@ const Tile = (props) => (
   <ListItem
     className={props.className}
     inProgress={props.inProgress}
+    nowLearning={props.nowLearning}
     known={props.known}
     level={props.level}
     joyo={props.joyo}
@@ -20,12 +21,14 @@ Tile.propTypes = {
   inProgress: PropTypes.bool.isRequired,
   known: PropTypes.bool.isRequired,
   level: PropTypes.number.isRequired,
+  nowLearning: PropTypes.bool,
   className: PropTypes.string,
   joyo: PropTypes.bool
 };
 
 Tile.defaultProps = {
   className: '',
+  nowLearning: false,
   joyo: null
 };
 
