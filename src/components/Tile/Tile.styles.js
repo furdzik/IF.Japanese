@@ -80,8 +80,17 @@ const ListItem = styled.div`
 
   ${(props) => props.nowLearning && css`
     background: #f18181;
+    border: 2px solid ${props.theme.colors.primaryColor};
+    padding: .4rem .8rem .2rem;
     color: ${props.theme.colors.white};
     order: 1;
+
+    ${breakpointMixin.laptop`
+      margin: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    `}
+
     &::before {
       color: ${props.theme.colors.white};
     }

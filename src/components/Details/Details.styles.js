@@ -26,6 +26,9 @@ const WordHeader = styled.div`
   `}
   ${(props) => props.nowLearning && css`
     background: #f18181;
+    border: 2px solid ${props.theme.colors.primaryColor};
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
     color: ${props.theme.colors.white};
   `}
 `;
