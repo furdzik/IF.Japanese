@@ -37444,6 +37444,7 @@
     "vocab": "強制",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   }
