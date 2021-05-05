@@ -2310,6 +2310,7 @@
     "vocab": "可能性",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -8685,6 +8686,7 @@
     "vocab": "募集",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -17770,6 +17772,7 @@
     "vocab": "行動",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -23232,7 +23235,8 @@
   {
     "vocab": "敬意",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -27337,6 +27341,7 @@
     "vocab": "遊園地",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -32447,6 +32452,7 @@
     "vocab": "怪しい",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -32456,6 +32462,14 @@
     "inProgress": false,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "場面",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 3
   },
   {
     "vocab": "塞ぐ",

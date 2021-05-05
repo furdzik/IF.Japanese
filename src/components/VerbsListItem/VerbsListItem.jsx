@@ -57,7 +57,7 @@ const VerbsListItem = (props) => {
   };
 
   const renderTrigger = () => (
-    <TriggerWrapper>
+    <TriggerWrapper isCollaps={collapsed}>
       {
         !collapsed ? (
           <React.Fragment>

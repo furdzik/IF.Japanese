@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
-
 import { Link } from 'react-router-dom';
+
+import { breakpointMixin } from '@styles/mixins';
 
 const Tag = styled.span`
   display: inline-block;
@@ -29,8 +30,12 @@ const ConjugationLink = styled.button`
 `;
 
 const SensesList = styled.ol`
-  margin: 0;
+  margin: 8rem 0 0 0;
   list-style: none;
+
+  ${breakpointMixin.laptop`
+    margin-top: 0;
+  `}
 `;
 
 const SensesListItem = styled.li`
