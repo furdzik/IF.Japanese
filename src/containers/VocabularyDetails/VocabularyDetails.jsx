@@ -40,6 +40,7 @@ const VocabularyDetails = (props) => {
       antonyms={props.antonyms}
       examples={props.examples}
       inProgress={props.inProgress}
+      nowLearning={props.nowLearning}
       isCommon={props.isCommon}
       isVerb={!!(props.verb && props.verb.main)}
       japanese={props.japanese}
@@ -63,6 +64,7 @@ VocabularyDetails.propTypes = {
   antonyms: PropTypes.string,
   examples: PropTypes.arrayOf(PropTypes.string),
   inProgress: PropTypes.bool,
+  nowLearning: PropTypes.bool,
   isCommon: PropTypes.bool,
   japanese: PropTypes.arrayOf(PropTypes.object),
   jlpt: PropTypes.arrayOf(PropTypes.string),
@@ -79,6 +81,7 @@ VocabularyDetails.defaultProps = {
   antonyms: null,
   examples: [],
   inProgress: false,
+  nowLearning: false,
   isCommon: null,
   japanese: [],
   jlpt: [],

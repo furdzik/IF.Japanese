@@ -1,10 +1,17 @@
 import styled, { css } from 'styled-components';
 
+import { breakpointMixin } from '@styles/mixins';
+
 import VerbConjugation from '@components/VerbConjugation';
 
 const Box = styled.div`
   display: flex;
+  flex-wrap: wrap;
   padding: .7rem 1rem;
+
+  ${breakpointMixin.laptop`
+    flex-wrap: nowrap;
+  `}
 `;
 
 const Line = css`
@@ -14,7 +21,7 @@ const Line = css`
 `;
 
 const BoxGroup = styled.div`
-  margin-right: 1rem;
+  margin-right: 3rem;
   margin-left: 1rem;
   & + & {
     ${Line}
@@ -23,10 +30,18 @@ const BoxGroup = styled.div`
   ${(props) => props.showLine && css`
     ${Line}
   `}
+
+  ${breakpointMixin.laptop`
+    margin-right: 1rem;
+  `}
 `;
 
 const VerbConjugationWrapper = styled(VerbConjugation)`
-  width: 25%;
+  width: 100%;
+
+  ${breakpointMixin.laptop`
+    width: 25%;
+  `}
 `;
 
 const Label = styled.span`

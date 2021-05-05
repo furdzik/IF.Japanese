@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { breakpointMixin } from '@styles/mixins';
+
 const DetailsWrapper = styled.div`
   overflow: hidden;
 `;
@@ -22,6 +24,10 @@ const WordHeader = styled.div`
     color: ${props.theme.colors.white};
     text-shadow: -1px 1px 8px #750101;
   `}
+  ${(props) => props.nowLearning && css`
+    background: #f18181;
+    color: ${props.theme.colors.white};
+  `}
 `;
 
 const WordHeaderSeparator = styled.span`
@@ -42,17 +48,18 @@ const JishoLink = styled.a`
 
 const TagsWrapper = styled.div`
   display: flex;
-  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 `;
 
 const Tag = styled.span`
   display: inline-block;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
   padding: .3rem 1rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.lightGray};
-  & + & {
-    margin-left: 2rem;
-  }
+
   ${(props) => props.verb && css`
     background: ${props.theme.colors.primaryColor};
     color: ${props.theme.colors.white};
@@ -68,7 +75,12 @@ const Tag = styled.span`
 `;
 
 const Content = styled.div`
-  margin: 0 3rem;
+  margin: 0 1.5rem;
+
+  ${breakpointMixin.laptop`
+    margin-left: 3rem;
+    margin-right: 3rem;
+  `}
 `;
 
 const SectionWrapper = styled.div`
@@ -76,7 +88,9 @@ const SectionWrapper = styled.div`
   margin-bottom: 4rem;
 
   ${(props) => props.flex && css`
-    display: flex;
+    ${breakpointMixin.laptop`
+      display: flex;
+    `}
   `}
 `;
 

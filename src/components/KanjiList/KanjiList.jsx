@@ -14,6 +14,7 @@ const KanjiList = (props) => (
           key={item.kanji}
           inProgress={item.inProgress}
           known={item.known}
+          nowLearning={item.nowLearning}
           level={item.level}
           joyo={item.joyo}
         >

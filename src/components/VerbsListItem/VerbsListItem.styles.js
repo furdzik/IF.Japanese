@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import { breakpointMixin } from '@styles/mixins';
+
 import Tile from '@components/Tile';
 
 const Item = styled.li`
-  display: flex;
-  flex-wrap: wrap;
   border: 1px solid ${(props) => props.theme.colors.secondaryColor};
   list-style: none;
 
@@ -18,6 +18,11 @@ const Item = styled.li`
   & + & {
     margin-top: -1px;
   }
+
+  ${breakpointMixin.laptop`
+    display: flex;
+    flex-wrap: wrap;
+  `}
 `;
 
 const TileStyled = styled(Tile)`
@@ -31,8 +36,14 @@ const MainBox = styled.div`
   flex-wrap: wrap;
   align-content: flex-start;
   align-items: flex-start;
-  width: 22rem;
-  border-right: 1px solid ${(props) => props.theme.colors.secondaryColor};
+  width: 100%;
+  border-bottom: 1px solid ${(props) => props.theme.colors.secondaryColor};
+
+  ${breakpointMixin.laptop`
+    width: 22rem;
+    border-right: 1px solid ${(props) => props.theme.colors.secondaryColor};
+    border-bottom: 0;
+  `}
 `;
 
 const VocabLink = styled(Link)`
@@ -45,19 +56,23 @@ const BoxWrapper = styled.div`
 
 const BoxContent = styled.div`
   position: relative;
-  width: calc(100% - 22rem);
+  width: 100%;
   margin: 2rem 0;
 
   ${(props) => props.smallerMargin && css`
     margin: 1rem 0;
+  `}
+
+  ${breakpointMixin.laptop`
+    width: calc(100% - 22rem);
   `}
 `;
 
 const TriggerWrapper = styled.div`
   display: flex;
   position: absolute;
-  top: 2.6rem;
-  right: -1.5rem;
+  top: -.5rem;
+  right: .5rem;
   justify-content: center;
   align-items: center;
   width: 3rem;
@@ -70,6 +85,19 @@ const TriggerWrapper = styled.div`
   &:hover {
     background: ${(props) => props.theme.colors.secondaryColorHover};
   }
+
+  ${(props) => props.isCollaps && css`
+    top: -1.5rem;
+  `}
+
+  ${breakpointMixin.laptop`
+    top: 2.6rem;
+    right: -1.5rem;
+
+    ${(props) => props.isCollaps && css`
+      top: 2.6rem;
+    `}
+  `}
 `;
 
 const VerbType = styled.span`

@@ -4,7 +4,7 @@ import { breakpointMixin } from '@styles/mixins';
 
 const ListItem = styled.div`
   position: relative;
-  order: 2;
+  order: 3;
   margin: 1.1rem;
   padding: .6rem 1rem .4rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
@@ -52,7 +52,7 @@ const ListItem = styled.div`
     background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
     color: ${props.theme.colors.white};
     text-shadow: -1px 1px 8px #750101;
-    order: 1;
+    order: 2;
     &::before {
       color: ${props.theme.colors.white};
       text-shadow: -1px 1px 8px #750101;
@@ -72,7 +72,16 @@ const ListItem = styled.div`
   ${(props) => props.inProgress && props.known && css`
     background: ${props.theme.colors.black};
     color: ${props.theme.colors.white};
-    order: 3;
+    order: 4;
+    &::before {
+      color: ${props.theme.colors.white};
+    }
+  `}
+
+  ${(props) => props.nowLearning && css`
+    background: #f18181;
+    color: ${props.theme.colors.white};
+    order: 1;
     &::before {
       color: ${props.theme.colors.white};
     }

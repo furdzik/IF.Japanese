@@ -25,6 +25,7 @@ const Details = (props) => {
       <WordHeader
         known={props.known}
         inProgress={props.inProgress}
+        nowLearning={props.nowLearning}
       >
         <span>{props.name}</span>
         {
@@ -98,6 +99,7 @@ Details.propTypes = {
   additionalBox: PropTypes.node,
   children: PropTypes.node,
   inProgress: PropTypes.bool,
+  nowLearning: PropTypes.bool,
   known: PropTypes.bool,
   reading: PropTypes.string,
   sections: PropTypes.arrayOf(PropTypes.shape({
@@ -111,6 +113,7 @@ Details.defaultProps = {
   additionalBox: null,
   children: null,
   inProgress: null,
+  nowLearning: null,
   known: null,
   reading: null,
   sections: null,

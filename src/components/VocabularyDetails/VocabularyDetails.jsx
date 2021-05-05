@@ -68,6 +68,7 @@ const VocabularyDetails = (props) => {
       reading={props.reading}
       known={props.known}
       inProgress={props.inProgress}
+      nowLearning={props.nowLearning}
       jishoLink={`https://jisho.org/word/${props.slug}`}
       tags={getTags()}
       additionalBox={(
@@ -260,6 +261,7 @@ VocabularyDetails.propTypes = {
   isVerb: PropTypes.bool,
   jlpt: PropTypes.arrayOf(PropTypes.string),
   known: PropTypes.bool,
+  nowLearning: PropTypes.bool,
   reading: PropTypes.string,
   slug: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
@@ -275,6 +277,7 @@ VocabularyDetails.defaultProps = {
   isVerb: false,
   jlpt: [],
   known: false,
+  nowLearning: false,
   reading: '',
   slug: null,
   tags: [],

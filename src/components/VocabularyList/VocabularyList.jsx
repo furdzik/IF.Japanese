@@ -16,6 +16,7 @@ const VocabularyList = (props) => {
           <Tile
             key={item.vocab}
             inProgress={item.inProgress}
+            nowLearning={item.nowLearning}
             known={item.known}
             level={item.level}
           >

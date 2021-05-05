@@ -50,6 +50,7 @@ const KanjiDetails = (props) => {
       name={props.kanji}
       known={props.known}
       inProgress={props.inProgress}
+      nowLearning={props.nowLearning}
       jishoLink={`https://jisho.org/search/%23kanji%20${props.kanji}`}
       tags={getTags()}
       additionalBox={props.numberOfStrokes ? (
