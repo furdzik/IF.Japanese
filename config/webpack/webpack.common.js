@@ -58,7 +58,7 @@ module.exports = ({ production }) => ({
     new HtmlWebpackPlugin({
       title: 'IF.Japanese',
       template: './src/index.hbs',
-      favicon: '',
+      favicon: './public/favicon.ico',
       appVersion: `${version}`,
       noscript: 'Proszę włączyć obsługę JavaScript w przeglądarce.',
       appUrl: production ? '#{APP_URL}#' : 'http://if.japanese.local:2017',
