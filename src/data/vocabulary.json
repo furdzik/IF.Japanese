@@ -2308,9 +2308,8 @@
   },
   {
     "vocab": "可能性",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
     "pitch": "",
     "level": 0
   },
@@ -5803,6 +5802,7 @@
     "vocab": "伺う",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -27339,9 +27339,8 @@
   },
   {
     "vocab": "遊園地",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
     "pitch": "",
     "level": 2
   },
