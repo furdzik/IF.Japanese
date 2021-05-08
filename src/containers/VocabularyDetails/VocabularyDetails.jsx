@@ -42,7 +42,7 @@ const VocabularyDetails = (props) => {
       inProgress={props.inProgress}
       nowLearning={props.nowLearning}
       isCommon={props.isCommon}
-      isVerb={!!(props.verb && props.verb.main)}
+      isVerb={!!(props.verb && props.verb.verbGroup)}
       japanese={props.japanese}
       jlpt={props.jlpt}
       reading={props.reading}

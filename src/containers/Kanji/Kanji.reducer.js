@@ -82,6 +82,7 @@ export default function(state = initialState, action) {
         kanjiLength: {
           known: list.knownList.length,
           inProgress: list.inProgressList.length,
+          notKnown: list.all.length - list.knownList.length - list.inProgressList.length,
           all: list.all.length
         }
       };

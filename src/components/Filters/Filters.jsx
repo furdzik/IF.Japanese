@@ -7,7 +7,10 @@ import { vocabLengthType } from '@components/VocabularyList/VocabularyList.types
 import CheckboxList from '@components/ui/CheckboxList';
 
 import {
-  Header, Legend, Spaced, FiltersWrapper
+  Header,
+  Legend,
+  LegendElement,
+  FiltersWrapper
 } from './Filters.styles.js';
 import messages from './Filters.messages.js';
 
@@ -48,11 +51,14 @@ const Filters = (props) => {
           }
         </div>
         <Legend>
-          <div>{intl.formatMessage(messages.all)}{props.length.all}</div>
-          <div>
-            <Spaced>{intl.formatMessage(messages.known)}: {props.length.known}</Spaced>
-            {intl.formatMessage(messages.inProgress)}: {props.length.inProgress}
-          </div>
+          <LegendElement>
+            <span>{intl.formatMessage(messages.all)}{props.length.all}</span>
+            <span>{intl.formatMessage(messages.notKnown)}: {props.length.notKnown}</span>
+          </LegendElement>
+          <LegendElement>
+            <span>{intl.formatMessage(messages.known)}: {props.length.known}</span>
+            <span>{intl.formatMessage(messages.inProgress)}: {props.length.inProgress}</span>
+          </LegendElement>
         </Legend>
       </Header>
     </React.Fragment>

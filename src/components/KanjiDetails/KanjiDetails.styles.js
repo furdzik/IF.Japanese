@@ -90,6 +90,16 @@ const ExampleWrapper = styled.div`
   display: block;
 `;
 
+const MoreExamplesLink = styled.a`
+  display: inline-block;
+  margin-top: 1rem;
+  color: ${(props) => props.theme.colors.primaryColor};
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export {
   Tag,
   ReadingList,
@@ -98,5 +108,6 @@ export {
   StrokeBox,
   StrokeImage,
   StrokeNumberWrapper,
-  ExampleWrapper
+  ExampleWrapper,
+  MoreExamplesLink
 };

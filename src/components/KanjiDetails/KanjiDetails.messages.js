@@ -11,5 +11,6 @@ export default defineMessages({
   onyomiText: 'On',
   strokesHeader: 'Strokes order',
   examplesHeader: 'Examples',
-  numberOfStrokes: '{number} strokes'
+  numberOfStrokes: '{number} strokes',
+  examplesMoreText: 'See more examples'
 });

@@ -35,12 +35,12 @@ const Legend = styled.div`
   }
 `;
 
-const Spaced = styled.span`
-  display: inline-block;
-  margin-right: 3rem;
+const LegendElement = styled.span`
+  display: flex;
+  justify-content: space-between;
 
   @media print {
-    margin-left: 3rem;
+    margin-left: auto;
   }
 `;
 
@@ -85,6 +85,6 @@ const FiltersWrapper = styled.div`
 export {
   Header,
   Legend,
-  Spaced,
+  LegendElement,
   FiltersWrapper
 };

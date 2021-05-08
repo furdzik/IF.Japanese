@@ -90,6 +90,7 @@ const VerbsListItem = (props) => {
         <TileStyled
           key={props.item.vocab}
           inProgress={props.item.inProgress}
+          nowLearning={props.item.nowLearning}
           known={props.item.known}
           level={props.item.level}
         >

@@ -14,7 +14,8 @@ import {
   StrokeBox,
   StrokeImage,
   StrokeNumberWrapper,
-  ExampleWrapper
+  ExampleWrapper,
+  MoreExamplesLink
 } from './KanjiDetails.styles.js';
 import messages from './KanjiDetails.messages';
 
@@ -110,6 +111,8 @@ const KanjiDetails = (props) => {
                   </p>
                 ))
               }
+              <MoreExamplesLink href={`https://jisho.org/search/*${props.kanji}*`} target="_blank">
+                {intl.formatMessage(messages.examplesMoreText)}</MoreExamplesLink>
             </ExampleWrapper>
           ) : null
         }

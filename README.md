@@ -2,6 +2,11 @@
 
 This repository presents frontend application for my Japanese APP
 
+---
+
+## Table of contents
+
+- [Data](#data)
 - [Development](#development)
   - [Requirements](#requirements)
   - [Installation](#installation)
@@ -15,6 +20,48 @@ This repository presents frontend application for my Japanese APP
 - [Tests](#tests)
 - [Links](#links)
 
+---
+
+## Data
+
+### Vocab
+
+#### Verbs
+
+- general schema:
+
+```json
+  {
+    "vocab": "降る",
+    ...
+    "verb": {
+        "main": "降",
+        "verbGroup": "2|special1|special2|u|ku|gu|su|tsu|bu|mu|nu|ru",
+        "verbType": "intransitive|transitive|other"
+    }
+}
+```
+
+`special1` suru verb  
+`special1` kuru verb
+
+- suru verb schema
+
+```json
+{
+    "vocab": "集中",
+    ...
+    "verb": {
+        "main": "集中",
+        "verbGroup": "special1",
+        "verbType": "transitive"
+    }
+}
+
+```
+
+
+---
 
 ## Development
 

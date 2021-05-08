@@ -46,6 +46,7 @@ export const verbGroupTypes = {
   group1Tsu: 'tsu',
   group1Bu: 'bu',
   group1Mu: 'mu',
+  group1Nu: 'nu',
   group1Ru: 'ru'
 };
 

@@ -111,7 +111,7 @@ const NameWrapper = styled.div`
 `;
 
 const CharacterWrapper = styled.div`
-  width: 20rem;
+  width: 27rem;
   margin-bottom: 2rem;
   padding: 4rem 0;
   border: 1px solid ${(props) => props.theme.colors.secondaryColor};

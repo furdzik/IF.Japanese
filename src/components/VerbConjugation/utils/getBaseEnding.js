@@ -12,6 +12,7 @@ export const isSpecialCasePastEnding = (bunpou, verbGroup) => (
     verbGroup === verbGroupTypes.group1Gu
     || verbGroup === verbGroupTypes.group1Bu
     || verbGroup === verbGroupTypes.group1Mu
+    || verbGroup === verbGroupTypes.group1Nu
   )
 );
 
