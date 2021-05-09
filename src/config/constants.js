@@ -81,26 +81,53 @@ export const verbType = {
 };
 
 /* MENU */
+export const menuId = {
+  vocab: 0,
+  kanji: 1,
+  verbs: 2,
+  grammar: 3,
+  grammarList: 4,
+  grammarToRepeat: 5,
+  grammarPoliteness: 6
+}
 export const menu = [
   {
-    id: 1,
+    id: menuId.vocab,
     name: '単語',
     link: '/'
   },
   {
-    id: 2,
+    id: menuId.kanji,
     name: '漢字',
     link: '/kanji'
   },
   {
-    id: 3,
+    id: menuId.verbs,
     name: '動詞',
     link: '/verbs'
   },
   {
-    id: 4,
+    id: menuId.grammar,
     name: '文法',
     link: '/grammar'
+  }
+];
+
+export const grammarMenu = [
+  {
+    id: menuId.grammarList,
+    name: '文法のリスト',
+    link: '/grammar-list'
+  },
+  {
+    id: menuId.grammarToRepeat,
+    name: '復習',
+    link: '/grammar-to-repeat'
+  },
+  {
+    id: menuId.grammarPoliteness,
+    name: '丁寧さ',
+    link: '/grammar-politeness'
   }
 ];
 

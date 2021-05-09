@@ -5,12 +5,12 @@ import {
   Switch
 } from 'react-router-dom';
 
-import { menu } from '@config/constants';
+import { menuId, menu } from '@config/constants';
 
-import Menu from '@components/Menu';
-import Header from '@components/Header';
-import Container from '@components/Container';
-import Footer from '@components/Footer';
+import Layout from '@components/Layout';
+import PageNotFound from '@components/PageNotFound';
+import GrammarMainPage from '@components/GrammarMainPage';
+
 import Vocabulary from '@containers/Vocabulary/Vocabulary';
 import VocabularyDetails from '@containers/VocabularyDetails/VocabularyDetails';
 import Kanji from '@containers/Kanji/Kanji';
@@ -29,23 +29,17 @@ const Routes = () => {
           path="/"
           exact
         >
-          <Header />
-          <Container>
-            <Menu list={menu} active={1} />
+          <Layout list={menu} menuActive={menuId.vocab}>
             <Vocabulary />
-          </Container>
-          <Footer />
+          </Layout>
         </Route>
         <Route
           path="/kanji"
           exact
         >
-          <Header />
-          <Container>
-            <Menu list={menu} active={2} />
+          <Layout list={menu} menuActive={menuId.kanji}>
             <Kanji />
-          </Container>
-          <Footer />
+          </Layout>
         </Route>
         <Route
           exact
@@ -56,14 +50,9 @@ const Routes = () => {
 
             if (kanji) {
               return (
-                <React.Fragment>
-                  <Header />
-                  <Container>
-                    <Menu list={menu} active={2} />
-                    <KanjiDetails kanji={kanji} />
-                  </Container>
-                  <Footer />
-                </React.Fragment>
+                <Layout list={menu} menuActive={menuId.kanji}>
+                  <KanjiDetails kanji={kanji} />
+                </Layout>
               );
             }
 
@@ -79,14 +68,9 @@ const Routes = () => {
 
             if (vocab) {
               return (
-                <React.Fragment>
-                  <Header />
-                  <Container>
-                    <Menu list={menu} active={1} />
-                    <VocabularyDetails name={vocab} />
-                  </Container>
-                  <Footer />
-                </React.Fragment>
+                <Layout list={menu} menuActive={menuId.vocab}>
+                  <VocabularyDetails name={vocab} />
+                </Layout>
               );
             }
 
@@ -97,26 +81,48 @@ const Routes = () => {
           path="/verbs"
           exact
         >
-          <Header />
-          <Container>
-            <Menu list={menu} active={3} />
+          <Layout list={menu} menuActive={menuId.verbs}>
             <Verbs />
-          </Container>
-          <Footer />
+          </Layout>
         </Route>
         <Route
           path="/grammar"
           exact
         >
-          <Header />
-          <Container>
-            <Menu list={menu} active={4} />
-            WIP
-          </Container>
-          <Footer />
+          <Layout list={menu} menuActive={menuId.grammar}>
+            <GrammarMainPage />
+          </Layout>
         </Route>
         <Route
-          render={() => <h1>Page not found</h1>}
+          path="/grammar-list"
+          exact
+        >
+          <Layout list={menu} menuActive={menuId.grammar}>
+            grammar-list WIP
+          </Layout>
+        </Route>
+        <Route
+          path="/grammar-to-repeat"
+          exact
+        >
+          <Layout list={menu} menuActive={menuId.grammar}>
+            grammar-to-repeat WIP
+          </Layout>
+        </Route>
+        <Route
+          path="/grammar-politeness"
+          exact
+        >
+          <Layout list={menu} menuActive={menuId.grammar}>
+            grammar-politeness WIP
+          </Layout>
+        </Route>
+        <Route
+          render={() => (
+            <Layout list={menu} menuActive={-1}>
+              <PageNotFound />
+            </Layout>
+          )}
         />
       </Switch>
     </Router>
