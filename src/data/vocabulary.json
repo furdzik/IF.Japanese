@@ -5096,7 +5096,7 @@
   {
     "vocab": "制服",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 1
   },
@@ -9213,8 +9213,9 @@
   },
   {
     "vocab": "この頃",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -16885,7 +16886,7 @@
   {
     "vocab": "小鳥",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 4
   },
@@ -26599,8 +26600,9 @@
   },
   {
     "vocab": "グループ",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -38683,5 +38685,12 @@
       "verbGroup": "ru",
       "verbType": "intransitive"
     }
+  },
+  {
+    "vocab": "詐欺",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 1
   }
 ]
