@@ -7577,7 +7577,7 @@
   {
     "vocab": "決断",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 1
   },
@@ -38692,5 +38692,19 @@
     "inProgress": true,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "復讐",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "見捨てる",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
   }
 ]
