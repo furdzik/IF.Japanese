@@ -9704,6 +9704,7 @@
     "vocab": "武器",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -25713,7 +25714,8 @@
   {
     "vocab": "満ちる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -26314,7 +26316,8 @@
   {
     "vocab": "器用",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -38706,5 +38709,12 @@
     "inProgress": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "器官",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
   }
 ]

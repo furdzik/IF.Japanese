@@ -3306,7 +3306,8 @@
   {
     "kanji": "器",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "joyo": true,
     "level": 1
   },
@@ -16566,6 +16567,22 @@
     "kanji": "鞄",
     "known": false,
     "inProgress": true,
+    "joyo": false,
+    "level": 0
+  },
+  {
+    "kanji": "欲望",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
+    "joyo": false,
+    "level": 0
+  },
+  {
+    "kanji": "切望",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "joyo": false,
     "level": 0
   }
