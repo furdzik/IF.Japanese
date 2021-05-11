@@ -1767,7 +1767,7 @@
   {
     "vocab": "裏切り",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 0
   },
@@ -2957,7 +2957,7 @@
   {
     "vocab": "借り手",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 0
   },
@@ -3091,6 +3091,7 @@
     "vocab": "失望",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -3252,7 +3253,7 @@
   {
     "vocab": "心配事",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 0
   },
@@ -5370,7 +5371,8 @@
   {
     "vocab": "浅い",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -6136,6 +6138,7 @@
     "vocab": "絶望",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -23267,6 +23270,7 @@
     "vocab": "欲望",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -25292,7 +25296,7 @@
   {
     "vocab": "触れる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3,
     "verb": {
@@ -26454,7 +26458,7 @@
   {
     "vocab": "小",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -37739,7 +37743,8 @@
   {
     "vocab": "差し引き",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
