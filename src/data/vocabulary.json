@@ -23510,7 +23510,8 @@
   {
     "vocab": "支度",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
