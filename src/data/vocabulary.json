@@ -17114,7 +17114,8 @@
   {
     "vocab": "暖房",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -17761,7 +17762,8 @@
     "vocab": "1:滑る",
     "meaning": "すべる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4,
     "verb": {
@@ -23509,6 +23511,14 @@
   },
   {
     "vocab": "支度",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 3
+  },
+  {
+    "vocab": "拍手",
     "known": false,
     "inProgress": true,
     "nowLearning": true,
@@ -29475,7 +29485,8 @@
   {
     "vocab": "洗剤",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -38713,6 +38724,20 @@
   },
   {
     "vocab": "器官",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "指示",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "支持",
     "known": false,
     "inProgress": false,
     "pitch": "",
