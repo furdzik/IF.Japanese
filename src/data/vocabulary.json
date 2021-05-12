@@ -11535,7 +11535,8 @@
   {
     "vocab": "産業",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
