@@ -5179,7 +5179,8 @@
   {
     "kanji": "情",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },

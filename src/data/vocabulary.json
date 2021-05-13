@@ -6891,7 +6891,8 @@
   {
     "vocab": "情熱",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -7381,6 +7382,7 @@
     "vocab": "同情",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -11522,7 +11524,8 @@
   {
     "vocab": "感覚",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -16408,7 +16411,8 @@
   {
     "vocab": "泥棒",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -19834,7 +19838,8 @@
   {
     "vocab": "泥",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLeatning": true,
     "pitch": "",
     "level": 3
   },
@@ -20713,7 +20718,8 @@
   {
     "vocab": "許す",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -20753,10 +20759,10 @@
     "level": 3
   },
   {
-    "vocab": "ダメ",
-    "special": "駄目",
-    "known": true,
-    "inProgress": false,
+    "vocab": "駄目",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21119,7 +21125,8 @@
   {
     "vocab": "状況",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21917,6 +21924,7 @@
     "vocab": "癖",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -22272,7 +22280,8 @@
   {
     "vocab": "程度",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -25926,7 +25935,8 @@
   {
     "vocab": "譲る",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -30129,7 +30139,8 @@
   {
     "vocab": "勝負",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -31161,7 +31172,8 @@
   {
     "vocab": "応援",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -38745,6 +38757,13 @@
   },
   {
     "vocab": "支持",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "態々",
     "known": false,
     "inProgress": false,
     "pitch": "",
