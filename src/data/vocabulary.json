@@ -38768,5 +38768,13 @@
     "inProgress": false,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "週末",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   }
 ]
