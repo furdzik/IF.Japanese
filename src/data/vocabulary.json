@@ -4904,7 +4904,7 @@
   {
     "vocab": "画面",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 0
   },
