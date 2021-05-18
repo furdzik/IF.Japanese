@@ -38789,9 +38789,9 @@
   },
   {
     "vocab": "週末",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 0
   },
