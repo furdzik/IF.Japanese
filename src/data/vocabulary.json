@@ -1103,9 +1103,9 @@
   },
   {
     "vocab": "止まる",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5,
     "verb": {
@@ -1116,9 +1116,9 @@
   },
   {
     "vocab": "止める",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4,
     "verb": {
@@ -1320,8 +1320,9 @@
   },
   {
     "vocab": "中止",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -1460,9 +1461,9 @@
   },
   {
     "vocab": "文章",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
@@ -8782,9 +8783,9 @@
   },
   {
     "vocab": "夏",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
@@ -15710,6 +15711,7 @@
     "vocab": "市民",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -16966,7 +16968,8 @@
   {
     "vocab": "騒ぐ",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -18194,9 +18197,10 @@
     "level": 3
   },
   {
-    "vocab": "家内*",
+    "vocab": "家内",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -25503,6 +25507,7 @@
     "vocab": "捕まる",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -33360,9 +33365,15 @@
   {
     "vocab": "繋がる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
-    "level": 2
+    "level": 2,
+    "verb": {
+      "main": "繋が",
+      "verbGroup": "ru",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "怠る",
@@ -35149,7 +35160,8 @@
   {
     "vocab": "待ち合わせる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -36483,9 +36495,15 @@
   {
     "vocab": "繋げる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
-    "level": 2
+    "level": 2,
+    "verb": {
+      "main": "繋げ",
+      "verbGroup": "2",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "通帳",
@@ -38776,5 +38794,12 @@
     "nowLearning": true,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "冷蔵",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 1
   }
 ]
