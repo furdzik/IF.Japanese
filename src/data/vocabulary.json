@@ -1320,11 +1320,21 @@
   },
   {
     "vocab": "中止",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "additionalExplanation": "「中止」はエベントがなくなるという意味です。「キャンセル」は私が行かないという意味です。"
+  },
+  {
+    "vocab": "キャンセル",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0,
+    "additionalExplanation": "「中止」はエベントがなくなるという意味です。「キャンセル」は私が行かないという意味です。"
   },
   {
     "vocab": "用いる",
