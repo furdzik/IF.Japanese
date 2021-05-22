@@ -129,6 +129,7 @@ export default (bunpou, verbGroup, inflection, isPolite) => {
       }
     }
 
+    // @TODO: wrong, fix
     case bunpouTypes.JOUKEN_TARA_KEI: {
       const ending = (messages.joukenTaraKeiEnding)?.defaultMessage;
       if (inflection === inflectionTypes.NEGATIVE) {

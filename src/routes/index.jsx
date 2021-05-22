@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -18,9 +18,11 @@ import KanjiDetails from '@containers/KanjiDetails/KanjiDetails';
 import Verbs from '@containers/Verbs/Verbs';
 
 const Routes = () => {
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 100);
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 200);
+  }, []);
 
   return (
     <Router>

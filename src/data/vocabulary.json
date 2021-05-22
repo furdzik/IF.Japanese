@@ -2155,7 +2155,8 @@
   {
     "vocab": "悲劇",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -7764,7 +7765,8 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "additionalExplanation": "「急にメッセージを送ってすみません」とかは知てる人にあまり使いない。最初目か５年ぶりだったら、書いてもいい。"
   },
   {
     "vocab": "どうも",
@@ -16865,8 +16867,9 @@
   },
   {
     "vocab": "安心",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -17459,7 +17462,8 @@
   {
     "vocab": "治す",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -18401,7 +18405,7 @@
   {
     "vocab": "すると",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 4
   },
@@ -20825,9 +20829,14 @@
   {
     "vocab": "現れる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "現れ",
+      "verbGroup": "2",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "扱う",
@@ -22240,7 +22249,7 @@
   {
     "vocab": "従って",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -25449,8 +25458,14 @@
     "vocab": "叱る",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "叱",
+      "verbGroup": "ru",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "基づく",
@@ -25519,7 +25534,12 @@
     "inProgress": true,
     "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "捕ま",
+      "verbGroup": "ru",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "従兄弟",
@@ -38280,7 +38300,7 @@
   },
   {
     "vocab": "お待たせしました",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 2
@@ -38288,7 +38308,7 @@
   {
     "vocab": "その為",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -38562,7 +38582,7 @@
   {
     "vocab": "ビルディング",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -38610,7 +38630,7 @@
   },
   {
     "vocab": "タイア",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 2
@@ -38618,7 +38638,7 @@
   {
     "vocab": "それなのに",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -38811,5 +38831,51 @@
     "inProgress": false,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "雷雨",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "地雷",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "椅子",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 5,
+    "additionalExplanation": "椅子の上を立つ。椅子に乗る。"
+  },
+  {
+    "vocab": "車椅子",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "タイミング",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 1,
+    "examples": [
+      "同じタイミングで言ってみました。"
+    ]
+  },
+  {
+    "vocab": "宅配便",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 0
   }
 ]

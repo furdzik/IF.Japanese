@@ -33,7 +33,15 @@ This repository presents frontend application for my Japanese APP
 ```json
   {
     "vocab": "降る",
-    ...
+    "meaning": "ふる", // when 2 readings
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0,
+    "examples": [
+        "同じタイミングで言ってみました。"
+    ],
+    "additionalExplanation": "椅子の上を立つ。椅子に乗る。",
     "verb": {
         "main": "降",
         "verbGroup": "2|special1|special2|u|ku|gu|su|tsu|bu|mu|nu|ru",
