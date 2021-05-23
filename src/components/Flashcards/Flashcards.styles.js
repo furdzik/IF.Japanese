@@ -49,22 +49,27 @@ const VocabWrapper = styled.div`
 
 const TileStyled = styled(Tile)`
   ${VocabStyle};
+  margin: 1rem 0 0;
   padding: 0 2rem;
 
   ${(props) => !props.known && !props.inProgress && !props.nowLearning && css`
     border: 2px solid #a0a0a0;
   `}
+
+  ${(props) => props.inProgress && !props.nowLearning && css`
+    border: 2px solid #dc7a7a;
+  `}
 `;
 
 const ReadingWrapper = styled.div`
   margin-top: 1rem;
-  margin-bottom: 2rem;
   font-size: 4rem;
 `;
 
 const MeaningWrapper = styled.div`
   overflow: hidden;
   height: 5.4rem;
+  margin-top: 2rem;
 `;
 
 const SeeMoreLink = styled(Link)`

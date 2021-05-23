@@ -15,7 +15,7 @@ const ListItem = styled.div`
     margin: 1rem;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
-  `}
+  `};
 
   @media print {
     & {
@@ -32,7 +32,7 @@ const ListItem = styled.div`
 
   ${(props) => props.joyo === false && css`
     border: 1px solid #a0a0a0;
-  `}
+  `};
 
   ${(props) => props.known && css`
     background: ${props.theme.colors.primaryColor};
@@ -46,7 +46,7 @@ const ListItem = styled.div`
     ${props.joyo === false && css`
       border: 1px solid #750101;
     `}
-  `}
+  `};
 
   ${(props) => props.inProgress && css`
     background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
@@ -60,14 +60,14 @@ const ListItem = styled.div`
 
     ${props.joyo === false && css`
       border: 1px solid #f65e5e;
-    `}
+    `};
 
     @media print {
       background: #fba5a5;
       color: ${props.theme.colors.black};
       text-shadow: none;
     }
-  `}
+  `};
 
   ${(props) => props.inProgress && props.known && css`
     background: ${props.theme.colors.black};
@@ -76,7 +76,7 @@ const ListItem = styled.div`
     &::before {
       color: ${props.theme.colors.white};
     }
-  `}
+  `};
 
   ${(props) => props.nowLearning && css`
     background: #f18181;
@@ -94,7 +94,7 @@ const ListItem = styled.div`
     &::before {
       color: ${props.theme.colors.white};
     }
-  `}
+  `};
 
   ${(props) => props.level && props.level !== 0 && css`
     &::before {
@@ -106,7 +106,7 @@ const ListItem = styled.div`
       font-size: 1rem;
       content: '${props.level}';
     }
-  `}
+  `};
 
   ${(props) => props.noOrder && css`
     order: initial !important;

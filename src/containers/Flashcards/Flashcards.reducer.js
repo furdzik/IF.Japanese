@@ -15,13 +15,6 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case actionTypes.GET_FLASHCARD_INIT: {
-      return {
-        ...state,
-        loading: true
-      };
-    }
-
     case actionTypes.GET_FLASHCARD: {
       const data = action.payload;
 
@@ -30,6 +23,14 @@ export default function(state = initialState, action) {
         flashcard: data.flashcard,
         additionalInfo: data.additionalInfo,
         loading: false
+      };
+    }
+
+    case actionTypes.GET_FLASHCARD_INIT: {
+      return {
+        ...state,
+        ...initialState,
+        loading: true
       };
     }
 

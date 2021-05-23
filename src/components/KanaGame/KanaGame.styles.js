@@ -12,7 +12,9 @@ const Title = styled.div`
 `;
 
 const GameField = styled.div`
-  padding: 6rem 0;
+  width: 50rem;
+  margin: 0 auto;
+  padding: 0 0 4rem;
   border: 2px solid ${(props) => props.theme.colors.secondaryColor};
   border-radius: ${(props) => props.theme.layout.borderRadius};
   text-align: center;

@@ -25220,8 +25220,8 @@
   },
   {
     "vocab": "去る",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },

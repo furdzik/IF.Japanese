@@ -64,22 +64,23 @@ const Flashcards = (props) => {
               <TileStyled
                 known={props.additionalInfo?.known}
                 inProgress={props.additionalInfo?.inProgress}
-                nowLearning={props.additionalInfo?.inProgress}
+                nowLearning={props.additionalInfo?.nowLearning}
                 level={props.additionalInfo?.level}
                 noOrder
               >
                 {props.flashcard?.vocab}
               </TileStyled>
-              <ReadingWrapper>{props.flashcard?.reading}</ReadingWrapper>
               {
                 props.flashcard?.vocab !== props.flashcard?.reading ? (
-                  <MeaningWrapper>{props.flashcard?.meaning}</MeaningWrapper>
+                  <ReadingWrapper>{props.flashcard?.reading}</ReadingWrapper>
                 ) : null
               }
+              <MeaningWrapper>{props.flashcard?.meaning}</MeaningWrapper>
               <SeeMoreLink
                 to={
                   `/vocab/${props.flashcard?.vocab}`
                 }
+                target="_blank"
               >
                 {intl.formatMessage(defaultMessages.seeMoreText)}
                 <IconStyled size={1.7} path={mdiChevronRight} />

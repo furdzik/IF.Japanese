@@ -73,8 +73,8 @@ const KanaGame = () => {
           isCorrect={isCorrect}
           maxLength={3}
         />
+        <Instructions>{intl.formatMessage(messages.instructions)}</Instructions>
       </GameField>
-      <Instructions>{intl.formatMessage(messages.instructions)}</Instructions>
     </Wrapper>
   );
 };
