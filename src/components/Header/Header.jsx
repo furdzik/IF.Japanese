@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 
-import Container from '@components/Container';
+import Container from '@components/ui/Container';
 import {
   Wrapper,
   Title

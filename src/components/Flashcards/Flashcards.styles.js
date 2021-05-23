@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import Icon from '@mdi/react';
 
-import Tile from '@components/Tile';
+import Tile from '@components/ui/Tile';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -25,8 +25,8 @@ const Box = styled.div`
 const VocabCard = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 50rem;
   height: 40rem;
   padding: 3rem;
@@ -57,14 +57,14 @@ const TileStyled = styled(Tile)`
 `;
 
 const ReadingWrapper = styled.div`
-  font-size: 4rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  font-size: 4rem;
 `;
 
 const MeaningWrapper = styled.div`
-  height: 5.4rem;
   overflow: hidden;
+  height: 5.4rem;
 `;
 
 const SeeMoreLink = styled(Link)`

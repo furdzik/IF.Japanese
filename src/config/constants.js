@@ -86,12 +86,11 @@ export const menuId = {
   kanji: 1,
   verbs: 2,
   grammar: 3,
-  grammarList: 4,
-  grammarToRepeat: 5,
-  grammarPoliteness: 6,
-  others: 7,
-  othersGame: 8,
-  othersFlashcards: 9
+  grammarToRepeat: 4,
+  grammarPoliteness: 5,
+  others: 6,
+  othersGame: 7,
+  othersFlashcards: 8
 };
 
 export const menu = [
@@ -124,11 +123,6 @@ export const menu = [
 
 export const grammarMenu = [
   {
-    id: menuId.grammarList,
-    name: '文法のリスト',
-    link: '/grammar-list'
-  },
-  {
     id: menuId.grammarToRepeat,
     name: '復習',
     link: '/grammar-to-repeat'
@@ -137,6 +131,11 @@ export const grammarMenu = [
     id: menuId.grammarPoliteness,
     name: '丁寧さ',
     link: '/grammar-politeness'
+  },
+  {
+    id: menuId.grammarPoliteness,
+    name: 'よく使う表現',
+    link: '/expressions'
   }
 ];
 

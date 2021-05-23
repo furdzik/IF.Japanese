@@ -99,11 +99,11 @@ const Routes = () => {
           </Layout>
         </Route>
         <Route
-          path="/grammar-list"
+          path="/expressions"
           exact
         >
           <Layout list={menu} menuActive={menuId.grammar}>
-            grammar-list WIP
+            expressions
           </Layout>
         </Route>
         <Route

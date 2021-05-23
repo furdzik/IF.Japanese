@@ -5,7 +5,7 @@ import getOnlyVocab from '@utils/getOnlyVocab';
 import { vocabShape } from '@types/vocabShape';
 
 import TileWrapper from '@components/TileWrapper';
-import Tile from '@components/Tile';
+import Tile from '@components/ui/Tile';
 
 const VocabularyList = (props) => (
   <TileWrapper>

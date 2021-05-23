@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import TileWrapper from '@components/TileWrapper';
-import Tile from '@components/Tile';
+import Tile from '@components/ui/Tile';
 
 import { kanjiShape } from '@types/kanjiShape';
 

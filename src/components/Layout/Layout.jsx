@@ -5,7 +5,7 @@ import { objectShape } from '@utils/types/objectShape';
 
 import Menu from '@components/Menu';
 import Header from '@components/Header';
-import Container from '@components/Container';
+import Container from '@components/ui/Container';
 import Footer from '@components/Footer';
 
 const Layout = (props) => (
