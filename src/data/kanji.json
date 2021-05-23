@@ -2906,7 +2906,7 @@
   {
     "kanji": "返",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -2934,7 +2934,7 @@
   {
     "kanji": "命",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -2956,14 +2956,14 @@
   {
     "kanji": "役",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
   {
     "kanji": "薬",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3104,7 +3104,7 @@
   {
     "kanji": "和",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3132,7 +3132,7 @@
   {
     "kanji": "位",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3300,7 +3300,8 @@
   {
     "kanji": "関",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },
@@ -3365,7 +3366,7 @@
   {
     "kanji": "議",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3393,7 +3394,7 @@
   {
     "kanji": "給",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3554,7 +3555,7 @@
   {
     "kanji": "好",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3645,14 +3646,14 @@
   {
     "kanji": "散",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
   {
     "kanji": "産",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3660,6 +3661,7 @@
     "kanji": "残",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },
@@ -3708,14 +3710,14 @@
   {
     "kanji": "治",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
   {
     "kanji": "辞",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3764,7 +3766,7 @@
   {
     "kanji": "初",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3827,7 +3829,7 @@
   {
     "kanji": "信",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3841,7 +3843,8 @@
   {
     "kanji": "成",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },
@@ -3855,7 +3858,7 @@
   {
     "kanji": "静",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3876,7 +3879,7 @@
   {
     "kanji": "折",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3890,7 +3893,7 @@
   {
     "kanji": "説",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -3946,7 +3949,7 @@
   {
     "kanji": "側",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -4009,7 +4012,7 @@
   {
     "kanji": "置",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -4107,7 +4110,7 @@
   {
     "kanji": "働",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -4199,7 +4202,7 @@
   {
     "kanji": "必",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -4325,7 +4328,8 @@
   {
     "kanji": "末",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },
@@ -4339,7 +4343,8 @@
   {
     "kanji": "未",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },
@@ -4402,7 +4407,7 @@
   {
     "kanji": "利",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -5546,7 +5551,7 @@
   {
     "kanji": "犯",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -6555,7 +6560,7 @@
   {
     "kanji": "窓",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 3
   },
@@ -10100,7 +10105,7 @@
   {
     "kanji": "舟",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 2
   },
@@ -16586,22 +16591,6 @@
     "kanji": "鞄",
     "known": false,
     "inProgress": true,
-    "joyo": false,
-    "level": 0
-  },
-  {
-    "kanji": "欲望",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
-    "joyo": false,
-    "level": 0
-  },
-  {
-    "kanji": "切望",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
     "joyo": false,
     "level": 0
   }

@@ -1081,11 +1081,16 @@
   },
   {
     "vocab": "外れる",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
-    "level": 2
+    "level": 2,
+    "verb": {
+      "main": "外れ",
+      "verbGroup": "2",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "入力",
@@ -1934,9 +1939,9 @@
   },
   {
     "vocab": "雪",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
@@ -2057,9 +2062,9 @@
   },
   {
     "vocab": "雷",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -2591,9 +2596,9 @@
   },
   {
     "vocab": "並ぶ",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5,
     "verb": {
@@ -8139,9 +8144,9 @@
   },
   {
     "vocab": "雲",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -12967,8 +12972,9 @@
   },
   {
     "vocab": "成る",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 5,
     "verb": {
@@ -21037,6 +21043,7 @@
     "vocab": "給料",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -30055,7 +30062,7 @@
   {
     "vocab": "薬指",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -38875,6 +38882,21 @@
     "vocab": "宅配便",
     "known": false,
     "inProgress": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "欲求",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "切望",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   }
