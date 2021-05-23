@@ -88,7 +88,10 @@ export const menuId = {
   grammar: 3,
   grammarList: 4,
   grammarToRepeat: 5,
-  grammarPoliteness: 6
+  grammarPoliteness: 6,
+  others: 7,
+  othersGame: 8,
+  othersFlashcards: 9
 };
 
 export const menu = [
@@ -111,6 +114,11 @@ export const menu = [
     id: menuId.grammar,
     name: '文法',
     link: '/grammar'
+  },
+  {
+    id: menuId.others,
+    name: '他',
+    link: '/others'
   }
 ];
 
@@ -129,6 +137,19 @@ export const grammarMenu = [
     id: menuId.grammarPoliteness,
     name: '丁寧さ',
     link: '/grammar-politeness'
+  }
+];
+
+export const othersMenu = [
+  {
+    id: menuId.othersGame,
+    name: '仮名のゲーム',
+    link: '/kana-game'
+  },
+  {
+    id: menuId.othersFlashcards,
+    name: 'フラッシュカード',
+    link: '/flashcards'
   }
 ];
 

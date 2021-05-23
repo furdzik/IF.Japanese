@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const List = styled.ul`
-  margin: 2rem 0 0;
+  margin: 0;
   padding: 0;
   border: 2px solid ${(props) => props.theme.colors.lightGray};
   border-radius: ${(props) => props.theme.layout.borderRadius};

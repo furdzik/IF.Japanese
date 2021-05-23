@@ -10,6 +10,7 @@ import { menuId, menu } from '@config/constants';
 import Layout from '@components/Layout';
 import PageNotFound from '@components/PageNotFound';
 import GrammarMainPage from '@components/GrammarMainPage';
+import OthersMainPage from '@components/OthersMainPage';
 
 import Vocabulary from '@containers/Vocabulary/Vocabulary';
 import VocabularyDetails from '@containers/VocabularyDetails/VocabularyDetails';
@@ -117,6 +118,30 @@ const Routes = () => {
         >
           <Layout list={menu} menuActive={menuId.grammar}>
             grammar-politeness WIP
+          </Layout>
+        </Route>
+        <Route
+          path="/others"
+          exact
+        >
+          <Layout list={menu} menuActive={menuId.others}>
+            <OthersMainPage />
+          </Layout>
+        </Route>
+        <Route
+          path="/kana-game"
+          exact
+        >
+          <Layout list={menu} menuActive={menuId.others}>
+            kana-game
+          </Layout>
+        </Route>
+        <Route
+          path="/flashcards"
+          exact
+        >
+          <Layout list={menu} menuActive={menuId.others}>
+            flashcards
           </Layout>
         </Route>
         <Route
