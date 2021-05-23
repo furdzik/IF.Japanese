@@ -11,6 +11,7 @@ import Layout from '@components/Layout';
 import PageNotFound from '@components/PageNotFound';
 import GrammarMainPage from '@components/GrammarMainPage';
 import OthersMainPage from '@components/OthersMainPage';
+import KanaGame from '@components/KanaGame';
 
 import Vocabulary from '@containers/Vocabulary/Vocabulary';
 import VocabularyDetails from '@containers/VocabularyDetails/VocabularyDetails';
@@ -133,7 +134,7 @@ const Routes = () => {
           exact
         >
           <Layout list={menu} menuActive={menuId.others}>
-            kana-game
+            <KanaGame />
           </Layout>
         </Route>
         <Route

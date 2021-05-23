@@ -1,0 +1,1072 @@
+[
+  {
+    "kana": "あ",
+    "reading": "a",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "い",
+    "reading": "i",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "う",
+    "reading": "u",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "え",
+    "reading": "e",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "お",
+    "reading": "o",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "か",
+    "reading": "ka",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "き",
+    "reading": "ki",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "く",
+    "reading": "ku",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "け",
+    "reading": "ke",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "こ",
+    "reading": "ko",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "が",
+    "reading": "ga",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぎ",
+    "reading": "gi",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぐ",
+    "reading": "gu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "げ",
+    "reading": "ge",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ご",
+    "reading": "go",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "さ",
+    "reading": "sa",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "し",
+    "reading": "shi",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "す",
+    "reading": "su",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "せ",
+    "reading": "se",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "そ",
+    "reading": "so",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ざ",
+    "reading": "za",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "じ",
+    "reading": "ji",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ず",
+    "reading": "zu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぜ",
+    "reading": "ze",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぞ",
+    "reading": "zo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "た",
+    "reading": "ta",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ち",
+    "reading": "chi",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "つ",
+    "reading": "tsu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "て",
+    "reading": "te",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "と",
+    "reading": "to",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "だ",
+    "reading": "da",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぢ",
+    "reading": "ji",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "づ",
+    "reading": "zu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "で",
+    "reading": "de",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ど",
+    "reading": "do",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "な",
+    "reading": "na",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "に",
+    "reading": "ni",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぬ",
+    "reading": "nu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ね",
+    "reading": "ne",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "の",
+    "reading": "no",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "は",
+    "reading": "ha",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ひ",
+    "reading": "hi",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ふ",
+    "reading": "fu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "へ",
+    "reading": "he",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ほ",
+    "reading": "ho",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ば",
+    "reading": "ba",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "び",
+    "reading": "bi",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぶ",
+    "reading": "bu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "べ",
+    "reading": "be",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぼ",
+    "reading": "bo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぱ",
+    "reading": "pa",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぴ",
+    "reading": "pi",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぷ",
+    "reading": "pu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぺ",
+    "reading": "pe",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぽ",
+    "reading": "po",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ま",
+    "reading": "ma",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "み",
+    "reading": "mi",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "む",
+    "reading": "mu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "め",
+    "reading": "me",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "も",
+    "reading": "mo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "や",
+    "reading": "ya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ゆ",
+    "reading": "yu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "よ",
+    "reading": "yo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ら",
+    "reading": "ra",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "り",
+    "reading": "ri",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "る",
+    "reading": "ru",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "れ",
+    "reading": "re",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ろ",
+    "reading": "ro",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "わ",
+    "reading": "wa",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "を",
+    "reading": "wo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ん",
+    "reading": "n",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "きゃ",
+    "reading": "kya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "きゅ",
+    "reading": "kyu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "きょ",
+    "reading": "kyo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぎゃ",
+    "reading": "gya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぎゅ",
+    "reading": "gyu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぎょ",
+    "reading": "gyo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "しゃ",
+    "reading": "sha",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "しゅ",
+    "reading": "shu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "しょ",
+    "reading": "sho",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "じゃ",
+    "reading": "ja",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "じゅ",
+    "reading": "ju",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "じょ",
+    "reading": "jo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ちゃ",
+    "reading": "cha",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ちゅ",
+    "reading": "chu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ちょ",
+    "reading": "cho",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぢゃ",
+    "reading": "ja",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぢゅ",
+    "reading": "ju",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぢょ",
+    "reading": "jo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "にゃ",
+    "reading": "nya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "にゅ",
+    "reading": "nyu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "にょ",
+    "reading": "nyo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ひゃ",
+    "reading": "hya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ひゅ",
+    "reading": "hyu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ひょ",
+    "reading": "hyo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "びゃ",
+    "reading": "bya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "びゅ",
+    "reading": "byu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "びょ",
+    "reading": "byo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぴゃ",
+    "reading": "pya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぴゅ",
+    "reading": "pyu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ぴょ",
+    "reading": "pyo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "みゃ",
+    "reading": "mya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "みゅ",
+    "reading": "myu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "みょ",
+    "reading": "myo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "りゃ",
+    "reading": "rya",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "りゅ",
+    "reading": "ryu",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "りょ",
+    "reading": "ryo",
+    "kind": "hiragana"
+  },
+  {
+    "kana": "ア",
+    "reading": "a",
+    "kind": "katakana"
+  },
+  {
+    "kana": "イ",
+    "reading": "i",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ウ",
+    "reading": "u",
+    "kind": "katakana"
+  },
+  {
+    "kana": "エ",
+    "reading": "e",
+    "kind": "katakana"
+  },
+  {
+    "kana": "オ",
+    "reading": "o",
+    "kind": "katakana"
+  },
+  {
+    "kana": "カ",
+    "reading": "ka",
+    "kind": "katakana"
+  },
+  {
+    "kana": "キ",
+    "reading": "ki",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ク",
+    "reading": "ku",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ケ",
+    "reading": "ke",
+    "kind": "katakana"
+  },
+  {
+    "kana": "コ",
+    "reading": "ko",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ガ",
+    "reading": "ga",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ギ",
+    "reading": "gi",
+    "kind": "katakana"
+  },
+  {
+    "kana": "グ",
+    "reading": "gu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ゲ",
+    "reading": "ge",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ゴ",
+    "reading": "go",
+    "kind": "katakana"
+  },
+  {
+    "kana": "サ",
+    "reading": "sa",
+    "kind": "katakana"
+  },
+  {
+    "kana": "シ",
+    "reading": "shi",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ス",
+    "reading": "su",
+    "kind": "katakana"
+  },
+  {
+    "kana": "セ",
+    "reading": "se",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ソ",
+    "reading": "so",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ザ",
+    "reading": "za",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ジ",
+    "reading": "ji",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ズ",
+    "reading": "zu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ゼ",
+    "reading": "ze",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ゾ",
+    "reading": "zo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "タ",
+    "reading": "ta",
+    "kind": "katakana"
+  },
+  {
+    "kana": "チ",
+    "reading": "chi",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ツ",
+    "reading": "tsu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "テ",
+    "reading": "te",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ト",
+    "reading": "to",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ダ",
+    "reading": "da",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヂ",
+    "reading": "ji",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヅ",
+    "reading": "zu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "デ",
+    "reading": "de",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ド",
+    "reading": "do",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ナ",
+    "reading": "na",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ニ",
+    "reading": "ni",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヌ",
+    "reading": "nu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ネ",
+    "reading": "ne",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ノ",
+    "reading": "no",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ハ",
+    "reading": "ha",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヒ",
+    "reading": "hi",
+    "kind": "katakana"
+  },
+  {
+    "kana": "フ",
+    "reading": "fu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヘ",
+    "reading": "he",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ホ",
+    "reading": "ho",
+    "kind": "katakana"
+  },
+  {
+    "kana": "バ",
+    "reading": "ba",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ビ",
+    "reading": "bi",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ブ",
+    "reading": "bu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ベ",
+    "reading": "be",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ボ",
+    "reading": "bo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "パ",
+    "reading": "pa",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ピ",
+    "reading": "pi",
+    "kind": "katakana"
+  },
+  {
+    "kana": "プ",
+    "reading": "pu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ペ",
+    "reading": "pe",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ポ",
+    "reading": "po",
+    "kind": "katakana"
+  },
+  {
+    "kana": "マ",
+    "reading": "ma",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ミ",
+    "reading": "mi",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ム",
+    "reading": "mu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "メ",
+    "reading": "me",
+    "kind": "katakana"
+  },
+  {
+    "kana": "モ",
+    "reading": "mo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヤ",
+    "reading": "ya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ユ",
+    "reading": "yu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヨ",
+    "reading": "yo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ラ",
+    "reading": "ra",
+    "kind": "katakana"
+  },
+  {
+    "kana": "リ",
+    "reading": "ri",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ル",
+    "reading": "ru",
+    "kind": "katakana"
+  },
+  {
+    "kana": "レ",
+    "reading": "re",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ロ",
+    "reading": "ro",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ワ",
+    "reading": "wa",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヲ",
+    "reading": "wo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ン",
+    "reading": "n",
+    "kind": "katakana"
+  },
+  {
+    "kana": "キャ",
+    "reading": "kya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "キュ",
+    "reading": "kyu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "キョ",
+    "reading": "kyo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ギャ",
+    "reading": "gya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ギュ",
+    "reading": "gyu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ギョ",
+    "reading": "gyo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "シャ",
+    "reading": "sha",
+    "kind": "katakana"
+  },
+  {
+    "kana": "シュ",
+    "reading": "shu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ショ",
+    "reading": "sho",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ジャ",
+    "reading": "ja",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ジュ",
+    "reading": "ju",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ジョ",
+    "reading": "jo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "チャ",
+    "reading": "cha",
+    "kind": "katakana"
+  },
+  {
+    "kana": "チュ",
+    "reading": "chu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "チョ",
+    "reading": "cho",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヂャ",
+    "reading": "ja",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヂュ",
+    "reading": "ju",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヂョ",
+    "reading": "jo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ニャ",
+    "reading": "nya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ニュ",
+    "reading": "nyu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ニョ",
+    "reading": "nyo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヒャ",
+    "reading": "hya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヒュ",
+    "reading": "hyu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ヒョ",
+    "reading": "hyo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ビャ",
+    "reading": "bya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ビュ",
+    "reading": "byu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ビョ",
+    "reading": "byo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ピャ",
+    "reading": "pya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ピュ",
+    "reading": "pyu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ピョ",
+    "reading": "pyo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ミャ",
+    "reading": "mya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ミュ",
+    "reading": "myu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "ミョ",
+    "reading": "myo",
+    "kind": "katakana"
+  },
+  {
+    "kana": "リャ",
+    "reading": "rya",
+    "kind": "katakana"
+  },
+  {
+    "kana": "リュ",
+    "reading": "ryu",
+    "kind": "katakana"
+  },
+  {
+    "kana": "リョ",
+    "reading": "ryo",
+    "kind": "katakana"
+  }
+]
