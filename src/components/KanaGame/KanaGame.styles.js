@@ -16,8 +16,8 @@ const Input = styled.input`
   padding: 2rem;
   border: 4px solid ${(props) => props.theme.colors.secondaryColorHover};
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  font-size: 6rem;
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 6rem;
   text-align: center;
 `;
 
@@ -29,8 +29,8 @@ const RandomKana = styled.div`
 
 const Instructions = styled.div`
   margin-top: 2rem;
-  color: ${(props) => props.theme.colors.secondaryColorHover};
   font-size: 1.6rem;
+  color: ${(props) => props.theme.colors.secondaryColorHover};
   text-align: center;
 `;
 
