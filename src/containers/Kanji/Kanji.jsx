@@ -16,7 +16,8 @@ import {
   JOYO_KANJI
 } from '@config/constants';
 
-import { objectShape } from '@utils/types/objectShape';
+import { kanjiShape } from '@types/kanjiShape';
+import { filtersLengthShape } from '@types/filtersLengthShape';
 
 import Filters from '@components/Filters';
 import KanjiList from '@components/KanjiList';
@@ -106,8 +107,8 @@ const Kanji = (props) => {
 Kanji.propTypes = {
   changeFilters: PropTypes.func.isRequired,
   getKanji: PropTypes.func.isRequired,
-  kanji: PropTypes.arrayOf(PropTypes.object),
-  kanjiLength: objectShape,
+  kanji: kanjiShape,
+  kanjiLength: filtersLengthShape,
   selectedFilters: PropTypes.arrayOf(PropTypes.number)
 };
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import TileWrapper from '@components/TileWrapper';
 import Tile from '@components/Tile';
 
-import { kanjiType } from './KanjiList.types';
+import { kanjiShape } from '@types/kanjiShape';
 
 const KanjiList = (props) => (
   <TileWrapper>
@@ -28,7 +28,7 @@ const KanjiList = (props) => (
 );
 
 KanjiList.propTypes = {
-  kanji: kanjiType.isRequired
+  kanji: kanjiShape.isRequired
 };
 
 export default KanjiList;

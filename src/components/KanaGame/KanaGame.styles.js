@@ -1,19 +1,20 @@
 import styled, { css } from 'styled-components';
 
 const Wrapper = styled.div`
-  padding: 6rem 0;
-  border: 2px solid ${(props) => props.theme.colors.secondaryColor};
-  border-radius: ${(props) => props.theme.layout.borderRadius};
+  text-align: center;
 `;
 
 const Title = styled.div`
   margin-bottom: 3rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.primaryColor};
 `;
 
 const GameField = styled.div`
+  padding: 6rem 0;
+  border: 2px solid ${(props) => props.theme.colors.secondaryColor};
+  border-radius: ${(props) => props.theme.layout.borderRadius};
   text-align: center;
 `;
 

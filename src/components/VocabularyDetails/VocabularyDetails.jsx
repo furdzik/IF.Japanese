@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
 import { bunpouTypes } from '@config/constants';
-import { objectShape } from '@utils/types/objectShape';
+import { verbItemShape } from '@types/verbShape';
 
 import Details from '@components/Details';
 import Modal from '@components/ui/Modal';
@@ -265,7 +265,7 @@ VocabularyDetails.propTypes = {
   reading: PropTypes.string,
   slug: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
-  verb: objectShape
+  verb: verbItemShape
 };
 
 VocabularyDetails.defaultProps = {

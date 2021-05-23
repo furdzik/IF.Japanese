@@ -4,6 +4,7 @@
   "Filters.inProgress": "勉強中",
   "Filters.known": "知っている",
   "Filters.notKnown": "知らない",
+  "Flashcards.title": "フラッシュカード",
   "Footer.content": "© 2021 All rights reserved",
   "Header.title": "IF.Japanese",
   "KanaGame.instructions": "confirm with enter key",
@@ -251,5 +252,7 @@
   "src.containers.Vocabulary.n5": "N5",
   "src.containers.Vocabulary.notKnown": "知らない",
   "src.containers.Vocabulary.other": "OTHER",
-  "src.utils.ok": "Ok"
+  "src.utils.next": "Next",
+  "src.utils.ok": "OK",
+  "src.utils.seeMoreText": "See more"
 }

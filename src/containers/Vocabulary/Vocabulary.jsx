@@ -15,7 +15,8 @@ import {
   OTHER_VOCAB
 } from '@config/constants';
 
-import { vocabType, vocabLengthType } from '@components/VocabularyList/VocabularyList.types';
+import { vocabShape } from '@types/vocabShape';
+import { filtersLengthShape } from '@types/filtersLengthShape';
 
 import Filters from '@components/Filters';
 import VocabularyList from '@components/VocabularyList';
@@ -98,8 +99,8 @@ Vocabulary.propTypes = {
   changeFilters: PropTypes.func.isRequired,
   getVocabulary: PropTypes.func.isRequired,
   selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired,
-  vocabLength: vocabLengthType.isRequired,
-  vocab: vocabType
+  vocabLength: filtersLengthShape.isRequired,
+  vocab: vocabShape
 };
 
 Vocabulary.defaultProps = {

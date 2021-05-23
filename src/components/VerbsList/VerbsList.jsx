@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { vocabType } from '@components/VocabularyList/VocabularyList.types';
+import { verbShape } from '@types/verbShape';
 
 import VerbsListItem from '@components/VerbsListItem';
 
@@ -20,7 +20,7 @@ const VerbsList = (props) => (
 );
 
 VerbsList.propTypes = {
-  verbs: vocabType.isRequired
+  verbs: verbShape.isRequired
 };
 
 export default VerbsList;

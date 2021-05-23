@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { vocabLengthType } from '@components/VocabularyList/VocabularyList.types';
+import { filtersLengthShape } from '@types/filtersLengthShape';
 
 import {
   Wrapper,
@@ -20,7 +20,7 @@ const ProgressBar = (props) => {
 };
 
 ProgressBar.propTypes = {
-  length: vocabLengthType.isRequired
+  length: filtersLengthShape.isRequired
 };
 
 export default ProgressBar;

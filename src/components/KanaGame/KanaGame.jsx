@@ -62,8 +62,8 @@ const KanaGame = () => {
 
   return (
     <Wrapper>
+      <Title>{intl.formatMessage(messages.title)}</Title>
       <GameField>
-        <Title>{intl.formatMessage(messages.title)}</Title>
         <RandomKana>{kana}</RandomKana>
         <Input
           onChange={onChangeHandler}

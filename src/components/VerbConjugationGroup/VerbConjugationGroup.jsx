@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { vocabShape } from '@components/VocabularyList/VocabularyList.types';
 import { inflectionTypes } from '@config/constants';
+import { verbItemShape } from '@types/verbShape';
 
 import shouldDisplayShortForm from './utils/shouldDisplayShortForm';
 
@@ -107,7 +107,7 @@ const VerbConjugationGroup = (props) => props.verb ? (
 
 VerbConjugationGroup.propTypes = {
   bunpou: PropTypes.arrayOf(PropTypes.string).isRequired,
-  verb: vocabShape.isRequired,
+  verb: verbItemShape.isRequired,
   label: PropTypes.string,
   noNegative: PropTypes.bool,
   noPast: PropTypes.bool,

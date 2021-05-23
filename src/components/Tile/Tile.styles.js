@@ -107,6 +107,10 @@ const ListItem = styled.div`
       content: '${props.level}';
     }
   `}
+
+  ${(props) => props.noOrder && css`
+    order: initial !important;
+  `}
 `;
 
 export {

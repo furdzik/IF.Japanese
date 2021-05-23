@@ -18,6 +18,7 @@ import VocabularyDetails from '@containers/VocabularyDetails/VocabularyDetails';
 import Kanji from '@containers/Kanji/Kanji';
 import KanjiDetails from '@containers/KanjiDetails/KanjiDetails';
 import Verbs from '@containers/Verbs/Verbs';
+import Flashcards from '@containers/Flashcards';
 
 const Routes = () => {
   useEffect(() => {
@@ -142,7 +143,7 @@ const Routes = () => {
           exact
         >
           <Layout list={menu} menuActive={menuId.others}>
-            flashcards
+            <Flashcards />
           </Layout>
         </Route>
         <Route

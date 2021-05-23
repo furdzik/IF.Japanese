@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { vocabShape } from '../VocabularyList/VocabularyList.types';
+import { vocabItemShape } from '@types/vocabShape';
 
 import getConjugation from './utils/getConjugation';
 
@@ -19,7 +19,7 @@ const VerbConjugation = (props) => (
 VerbConjugation.propTypes = {
   bunpou: PropTypes.string.isRequired,
   inflection: PropTypes.number.isRequired,
-  verb: vocabShape.isRequired,
+  verb: vocabItemShape.isRequired,
   className: PropTypes.string,
   teineiKei: PropTypes.bool
 };

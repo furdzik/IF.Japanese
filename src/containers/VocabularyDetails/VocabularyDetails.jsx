@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { URL_SEPARATOR } from '@config/constants';
-import { objectShape } from '@utils/types/objectShape';
+import { objectShape } from '@types/objectShape';
 
-import VocabularyDetailsComponent from '@components/VocabularyDetails';
+import getVocabSpecificReading from '@utils/getVocabSpecificReading';
+
 import Loader from '@components/ui/Loader';
+import VocabularyDetailsComponent from '@components/VocabularyDetails';
 
 import { getVocabularyDetailsData } from './VocabularyDetails.reducer';
 import selector from './VocabularyDetails.selector';
@@ -18,18 +20,12 @@ const VocabularyDetails = (props) => {
     return name.indexOf(URL_SEPARATOR) > 0 ? newName[0] : name;
   };
 
-  const getVocab = (name) => {
-    const newName = name.split(URL_SEPARATOR);
-
-    return name.indexOf(URL_SEPARATOR) > 0 ? newName[2] : null;
-  };
-
   const [name, setName] = useState(getProperKanji(props.name));
 
   useEffect(() => {
     setName(getProperKanji(props.name));
 
-    props.getVocabularyDetailsData(name, props.name, getVocab(props.name));
+    props.getVocabularyDetailsData(name, props.name, getVocabSpecificReading(props.name));
   }, [props.name]);
 
   return !props.loading ? (

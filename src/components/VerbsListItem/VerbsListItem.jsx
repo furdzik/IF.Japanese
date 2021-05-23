@@ -8,7 +8,7 @@ import { mdiChevronDown, mdiChevronUp } from '@mdi/js';
 
 import { bunpouTypes, verbType } from '@config/constants';
 
-import { vocabShape } from '@components/VocabularyList/VocabularyList.types';
+import { vocabItemShape } from '@types/vocabShape';
 
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
@@ -224,7 +224,7 @@ const VerbsListItem = (props) => {
 };
 
 VerbsListItem.propTypes = {
-  item: vocabShape.isRequired
+  item: vocabItemShape.isRequired
 };
 
 export default VerbsListItem;

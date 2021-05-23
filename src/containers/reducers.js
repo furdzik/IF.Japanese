@@ -5,11 +5,13 @@ import VocabularyDetails from '@containers/VocabularyDetails/VocabularyDetails.r
 import Kanji from '@containers/Kanji/Kanji.reducer';
 import KanjiDetails from '@containers/KanjiDetails/KanjiDetails.reducer';
 import Verbs from '@containers/Verbs/Verbs.reducer';
+import Flashcards from '@containers/Flashcards/Flashcards.reducer';
 
 export default combineReducers({
   Vocabulary,
   VocabularyDetails,
   Kanji,
   KanjiDetails,
-  Verbs
+  Verbs,
+  Flashcards
 });

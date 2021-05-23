@@ -1,3 +1,5 @@
 {
-  "src.utils.ok": "Ok"
+  "src.utils.next": "Next",
+  "src.utils.ok": "OK",
+  "src.utils.seeMoreText": "See more"
 }

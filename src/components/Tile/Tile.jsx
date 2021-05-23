@@ -11,6 +11,7 @@ const Tile = (props) => (
     known={props.known}
     level={props.level}
     joyo={props.joyo}
+    noOrder={props.noOrder}
   >
     {props.children}
   </ListItem>
@@ -23,12 +24,14 @@ Tile.propTypes = {
   level: PropTypes.number.isRequired,
   className: PropTypes.string,
   joyo: PropTypes.bool,
+  noOrder: PropTypes.bool,
   nowLearning: PropTypes.bool
 };
 
 Tile.defaultProps = {
   className: '',
   joyo: null,
+  noOrder: false,
   nowLearning: false
 };
 

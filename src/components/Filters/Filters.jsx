@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { vocabLengthType } from '@components/VocabularyList/VocabularyList.types';
+import { filtersLengthShape } from '@types/filtersLengthShape';
 
 import CheckboxList from '@components/ui/CheckboxList';
 
@@ -71,7 +71,7 @@ Filters.propTypes = {
     value: PropTypes.number,
     label: PropTypes.string
   })).isRequired,
-  length: vocabLengthType.isRequired,
+  length: filtersLengthShape.isRequired,
   secondaryFilterList: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.number,
     label: PropTypes.string

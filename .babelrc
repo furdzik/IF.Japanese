@@ -20,7 +20,8 @@
         "@styles": "./src/styles",
         "@utils": "./src/utils",
         "@lang": "./lang",
-        "@assets": "./src/assets"
+        "@assets": "./src/assets",
+        "@types": "./src/utils/types"
       }
     }],
     ["react-intl-auto", {
