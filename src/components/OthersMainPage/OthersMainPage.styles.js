@@ -15,10 +15,10 @@ const ColoredBoxItem = styled.li`
   border-radius: ${(props) => props.theme.layout.borderRadius};
 
   &:nth-child(1n) {
-    background: #ffe500;
+    background: #faf0ab;
   }
   &:nth-child(2n) {
-    background: #ff30dc;
+    background: #ffd1f7;
   }
 `;
 

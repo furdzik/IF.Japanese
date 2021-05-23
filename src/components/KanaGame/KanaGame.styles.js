@@ -1,14 +1,26 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Wrapper = styled.div`
   padding: 6rem 0;
-  border: 2px solid ${(props) => props.theme.colors.secondaryColorHover};
+  border: 2px solid ${(props) => props.theme.colors.secondaryColor};
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.lightGray};
+`;
+
+const Title = styled.div`
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: ${(props) => props.theme.colors.primaryColor};
 `;
 
 const GameField = styled.div`
   text-align: center;
+`;
+
+const RandomKana = styled.div`
+  padding: 2rem;
+  font-size: 9rem;
+  font-weight: bold;
 `;
 
 const Input = styled.input`
@@ -19,12 +31,19 @@ const Input = styled.input`
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 6rem;
   text-align: center;
-`;
 
-const RandomKana = styled.div`
-  padding: 2rem;
-  font-size: 10rem;
-  font-weight: bold;
+  &:focus {
+    border-color: ${(props) => props.theme.colors.black};
+    outline: none;
+  }
+
+  ${(props) => props.isCorrect && css`
+    background: #d4ffd4;
+  `}
+
+  ${(props) => props.isIncorrect && css`
+    background: #ffd3d3;
+  `}
 `;
 
 const Instructions = styled.div`
@@ -36,8 +55,9 @@ const Instructions = styled.div`
 
 export {
   Wrapper,
+  Title,
   GameField,
-  Input,
   RandomKana,
+  Input,
   Instructions
 };
