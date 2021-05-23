@@ -9237,9 +9237,9 @@
   },
   {
     "vocab": "この頃",
-    "known": false,
-    "inProgress": true,
-    "nowLearning": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -17010,6 +17010,7 @@
     "vocab": "遠慮",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
