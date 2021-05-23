@@ -112,7 +112,8 @@ const KanjiDetails = (props) => {
                 ))
               }
               <MoreExamplesLink href={`https://jisho.org/search/*${props.kanji}*`} target="_blank">
-                {intl.formatMessage(messages.examplesMoreText)}</MoreExamplesLink>
+                {intl.formatMessage(messages.examplesMoreText)}
+              </MoreExamplesLink>
             </ExampleWrapper>
           ) : null
         }
@@ -131,6 +132,7 @@ KanjiDetails.propTypes = {
   kunyomi: PropTypes.string,
   level: PropTypes.number,
   meaning: objectShape,
+  nowLearning: PropTypes.bool,
   numberOfStrokes: PropTypes.number,
   onyomi: PropTypes.string,
   strokes: objectShape
@@ -145,6 +147,7 @@ KanjiDetails.defaultProps = {
   kunyomi: null,
   level: null,
   meaning: null,
+  nowLearning: null,
   numberOfStrokes: null,
   onyomi: null,
   strokes: null

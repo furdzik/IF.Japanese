@@ -89,7 +89,8 @@ export const menuId = {
   grammarList: 4,
   grammarToRepeat: 5,
   grammarPoliteness: 6
-}
+};
+
 export const menu = [
   {
     id: menuId.vocab,

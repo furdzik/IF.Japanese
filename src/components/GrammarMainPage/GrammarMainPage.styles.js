@@ -16,7 +16,6 @@ const ListItem = styled.li`
   }
 `;
 
-
 const LinkStyled = styled(Link)`
   display: block;
   padding: 1rem 1.5rem;
@@ -27,7 +26,6 @@ const LinkStyled = styled(Link)`
     transition: all 0.3s ease 0s;
   }
 `;
-
 
 export {
   List,

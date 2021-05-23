@@ -99,8 +99,8 @@ Details.propTypes = {
   additionalBox: PropTypes.node,
   children: PropTypes.node,
   inProgress: PropTypes.bool,
-  nowLearning: PropTypes.bool,
   known: PropTypes.bool,
+  nowLearning: PropTypes.bool,
   reading: PropTypes.string,
   sections: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
@@ -113,8 +113,8 @@ Details.defaultProps = {
   additionalBox: null,
   children: null,
   inProgress: null,
-  nowLearning: null,
   known: null,
+  nowLearning: null,
   reading: null,
   sections: null,
   tags: null

@@ -8,7 +8,6 @@ import Header from '@components/Header';
 import Container from '@components/Container';
 import Footer from '@components/Footer';
 
-
 const Layout = (props) => (
   <React.Fragment>
     <Header />
@@ -21,9 +20,9 @@ const Layout = (props) => (
 );
 
 Layout.propTypes = {
+  children: PropTypes.node.isRequired,
   list: PropTypes.arrayOf(objectShape).isRequired,
-  menuActive: PropTypes.number.isRequired,
-  children: PropTypes.node.isRequired
+  menuActive: PropTypes.number.isRequired
 };
 
 export default Layout;

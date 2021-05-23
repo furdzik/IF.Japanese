@@ -45,8 +45,8 @@ const LegendElement = styled.span`
 `;
 
 const FiltersWrapper = styled.div`
-  border-radius: ${(props) => props.theme.layout.borderRadius};
   margin-bottom: 1.5rem;
+  border-radius: ${(props) => props.theme.layout.borderRadius};
 
   ${breakpointMixin.laptop`
     min-width: 41rem;

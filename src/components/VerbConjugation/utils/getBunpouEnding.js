@@ -1,6 +1,6 @@
 import { bunpouTypes, inflectionTypes, verbGroupTypes } from '@config/constants';
 
-import { getBaseEnding, isSpecialCasePastEnding } from './getBaseEnding';
+import { getBaseEnding } from './getBaseEnding';
 
 import messages from '../VerbConjugation.messages';
 
@@ -10,33 +10,37 @@ const isGroupTwoAndSpecial = (verbGroup) => (
   || verbGroup === verbGroupTypes.specialVerb2
 );
 
+const getJishouKeiEnding = (bunpou, verbGroup, inflection, isPolite) => {
+  if (isGroupTwoAndSpecial(verbGroup)) {
+    return '';
+  }
+
+  if (isPolite) {
+    return (messages[`jishouKei_${verbGroup}_teinei`])?.defaultMessage;
+  }
+
+  switch (inflection) {
+    case inflectionTypes.NEGATIVE:
+    case inflectionTypes.PAST_NEGATIVE: {
+      return !isPolite
+        ? (messages[`jishouNaiKei_${verbGroup}`])?.defaultMessage
+        : '';
+    }
+    case inflectionTypes.PAST: {
+      return !isPolite
+        ? (messages[`jishouPastKei_${verbGroup}`])?.defaultMessage
+        : '';
+    }
+
+    default:
+      return '';
+  }
+};
+
 export default (bunpou, verbGroup, inflection, isPolite) => {
   switch (bunpou) {
     case bunpouTypes.JISHOU_KEI: {
-      if (isGroupTwoAndSpecial(verbGroup)) {
-        return '';
-      }
-
-      if (isPolite) {
-        return (messages[`jishouKei_${verbGroup}_teinei`])?.defaultMessage;
-      }
-
-      switch (inflection) {
-        case inflectionTypes.NEGATIVE:
-        case inflectionTypes.PAST_NEGATIVE: {
-          return !isPolite
-            ? (messages[`jishouNaiKei_${verbGroup}`])?.defaultMessage
-            : '';
-        }
-        case inflectionTypes.PAST: {
-          return !isPolite
-            ? (messages[`jishouPastKei_${verbGroup}`])?.defaultMessage
-            : '';
-        }
-
-        default:
-          return '';
-      }
+      return getJishouKeiEnding(bunpou, verbGroup, inflection, isPolite);
     }
 
     case bunpouTypes.TAI_KEI: {
@@ -129,21 +133,29 @@ export default (bunpou, verbGroup, inflection, isPolite) => {
       }
     }
 
-    // @TODO: wrong, fix
     case bunpouTypes.JOUKEN_TARA_KEI: {
       const ending = (messages.joukenTaraKeiEnding)?.defaultMessage;
+
+      let bunpouEnding;
+      let baseEnding;
+
       if (inflection === inflectionTypes.NEGATIVE) {
-        return (messages.baseNaiPastKeiEnding)?.defaultMessage + ending;
-      }
-
-      let pastEnding;
-      if (isSpecialCasePastEnding(bunpou, verbGroup)) {
-        pastEnding = (messages.basePast2KeiEnding)?.defaultMessage;
+        bunpouEnding = getJishouKeiEnding(
+          bunpouTypes.JISHOU_KEI, verbGroup, inflectionTypes.PAST_NEGATIVE, false
+        );
+        baseEnding = getBaseEnding(
+          bunpouTypes.JISHOU_KEI, verbGroup, inflectionTypes.PAST_NEGATIVE, false
+        );
       } else {
-        pastEnding = (messages.basePastKeiEnding)?.defaultMessage;
+        bunpouEnding = getJishouKeiEnding(
+          bunpouTypes.JISHOU_KEI, verbGroup, inflectionTypes.PAST, false
+        );
+        baseEnding = getBaseEnding(
+          bunpouTypes.JISHOU_KEI, verbGroup, inflectionTypes.PAST, false
+        );
       }
 
-      return pastEnding + ending;
+      return bunpouEnding + baseEnding + ending;
     }
 
     default:
