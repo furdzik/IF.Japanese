@@ -9457,6 +9457,7 @@
     "vocab": "評価",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
