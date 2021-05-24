@@ -36694,9 +36694,28 @@
   {
     "vocab": "気をつける",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
-    "level": 2
+    "level": 2,
+    "verb": {
+      "main": "気をつけ",
+      "verbGroup": "2",
+      "verbType": "other"
+    }
+  },
+  {
+    "vocab": "気がつく",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0,
+    "verb": {
+      "main": "気がつ",
+      "verbGroup": "ku",
+      "verbType": "other"
+    }
   },
   {
     "vocab": "揶揄う",
