@@ -12,7 +12,7 @@ const VocabularyList = (props) => (
     {
       props.vocab.map((item) => (
         <Tile
-          key={item.vocab}
+          key={item.meaning ? `${item.meaning}_` : null + item.vocab}
           inProgress={item.inProgress}
           nowLearning={item.nowLearning}
           known={item.known}
