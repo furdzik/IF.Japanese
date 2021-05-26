@@ -2151,7 +2151,8 @@
   {
     "vocab": "途中",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -2432,7 +2433,8 @@
   {
     "vocab": "登山",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -12133,7 +12135,8 @@
   {
     "vocab": "体験",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -13876,6 +13879,7 @@
     "vocab": "薄い",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "antonyms": "厚い",
     "level": 5
@@ -21641,6 +21645,7 @@
     "vocab": "表現",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -34228,7 +34233,8 @@
   {
     "vocab": "険しい",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -38897,7 +38903,8 @@
   {
     "vocab": "指示",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
