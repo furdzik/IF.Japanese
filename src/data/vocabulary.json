@@ -4296,6 +4296,7 @@
     "vocab": "計画",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -4941,6 +4942,7 @@
     "vocab": "画面",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -5462,8 +5464,14 @@
     "vocab": "伸びる",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "伸び",
+      "verbGroup": "2",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "想像",
@@ -6809,6 +6817,7 @@
     "vocab": "作品",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -7902,7 +7911,8 @@
   {
     "vocab": "電波",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -12778,6 +12788,7 @@
     "vocab": "台所",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -15612,8 +15623,9 @@
   },
   {
     "vocab": "台風",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -15648,7 +15660,8 @@
   {
     "vocab": "生産",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -17614,7 +17627,8 @@
   {
     "vocab": "塗る",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -20991,7 +21005,8 @@
   {
     "vocab": "示す",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21800,6 +21815,7 @@
     "vocab": "完成",
     "known": false,
     "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -30815,7 +30831,8 @@
   {
     "vocab": "縛る",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39000,6 +39017,30 @@
   },
   {
     "vocab": "字幕",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "親しむ",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "圏外",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "圏内",
     "known": false,
     "inProgress": true,
     "nowLearning": true,
