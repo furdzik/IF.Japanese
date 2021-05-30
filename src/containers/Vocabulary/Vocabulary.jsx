@@ -3,17 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useIntl } from 'react-intl';
 
-import {
-  KNOWN_VOCAB,
-  IN_PROGRESS_VOCAB,
-  NOT_KNOWN_VOCAB,
-  LEVEL_5_VOCAB,
-  LEVEL_4_VOCAB,
-  LEVEL_3_VOCAB,
-  LEVEL_2_VOCAB,
-  LEVEL_1_VOCAB,
-  OTHER_VOCAB
-} from '@config/constants';
+import { VOCAB_IDS } from '@config/constants';
+import defaultMessages from '@utils/default.messages';
 
 import { vocabShape } from '@types/vocabShape';
 import { filtersLengthShape } from '@types/filtersLengthShape';
@@ -25,7 +16,6 @@ import ProgressBar from '@components/ProgressBar';
 import { getVocabulary, changeFilters } from './Vocabulary.reducer';
 
 import selector from './Vocabulary.selector';
-import messages from './Vocabulary.messages.js';
 
 const Vocabulary = (props) => {
   const intl = useIntl();
@@ -36,43 +26,43 @@ const Vocabulary = (props) => {
 
   const filterList = [
     {
-      value: KNOWN_VOCAB,
-      label: intl.formatMessage(messages.known)
+      value: VOCAB_IDS.KNOWN,
+      label: intl.formatMessage(defaultMessages.known)
     },
     {
-      value: IN_PROGRESS_VOCAB,
-      label: intl.formatMessage(messages.inProgress)
+      value: VOCAB_IDS.IN_PROGRESS,
+      label: intl.formatMessage(defaultMessages.inProgress)
     },
     {
-      value: NOT_KNOWN_VOCAB,
-      label: intl.formatMessage(messages.notKnown)
+      value: VOCAB_IDS.NOT_KNOWN,
+      label: intl.formatMessage(defaultMessages.notKnown)
     }
   ];
 
   const secondaryFilterList = [
     {
-      value: LEVEL_5_VOCAB,
-      label: intl.formatMessage(messages.n5)
+      value: VOCAB_IDS.LEVEL_5,
+      label: intl.formatMessage(defaultMessages.n5)
     },
     {
-      value: LEVEL_4_VOCAB,
-      label: intl.formatMessage(messages.n4)
+      value: VOCAB_IDS.LEVEL_4,
+      label: intl.formatMessage(defaultMessages.n4)
     },
     {
-      value: LEVEL_3_VOCAB,
-      label: intl.formatMessage(messages.n3)
+      value: VOCAB_IDS.LEVEL_3,
+      label: intl.formatMessage(defaultMessages.n3)
     },
     {
-      value: LEVEL_2_VOCAB,
-      label: intl.formatMessage(messages.n2)
+      value: VOCAB_IDS.LEVEL_2,
+      label: intl.formatMessage(defaultMessages.n2)
     },
     {
-      value: LEVEL_1_VOCAB,
-      label: intl.formatMessage(messages.n1)
+      value: VOCAB_IDS.LEVEL_1,
+      label: intl.formatMessage(defaultMessages.n1)
     },
     {
-      value: OTHER_VOCAB,
-      label: intl.formatMessage(messages.other)
+      value: VOCAB_IDS.OTHER,
+      label: intl.formatMessage(defaultMessages.other)
     }
   ];
 

@@ -1,14 +1,17 @@
 /* VOCAB */
-export const KNOWN_VOCAB = 1;
-export const IN_PROGRESS_VOCAB = 2;
-export const NOT_KNOWN_VOCAB = 3;
+export const localStorageKeyVocab = 'vocabSelectedFilters';
 
-export const LEVEL_5_VOCAB = 4;
-export const LEVEL_4_VOCAB = 5;
-export const LEVEL_3_VOCAB = 6;
-export const LEVEL_2_VOCAB = 7;
-export const LEVEL_1_VOCAB = 8;
-export const OTHER_VOCAB = 9;
+export const VOCAB_IDS = {
+  KNOWN: 1,
+  IN_PROGRESS: 2,
+  NOT_KNOWN: 3,
+  LEVEL_5: 4,
+  LEVEL_4: 5,
+  LEVEL_3: 6,
+  LEVEL_2: 7,
+  LEVEL_1: 8,
+  OTHER: 9
+};
 
 /* KANJI */
 export const KNOWN_KANJI = 1;
