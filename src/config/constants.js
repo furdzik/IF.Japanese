@@ -2,6 +2,7 @@
 export const localStorageKeyVocab = 'vocabSelectedFilters';
 export const localStorageKeyVerbs = 'verbsSelectedFilters';
 export const localStorageKeyKanji = 'kanjiSelectedFilters';
+export const localStorageKeyFlashcards = 'flashcardsSelectedFilters';
 
 export const FILTERS_IDS = {
   KNOWN: 1,
