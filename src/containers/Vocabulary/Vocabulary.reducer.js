@@ -1,10 +1,11 @@
 import vocab from '@data/vocabulary.json';
 
-import { localStorageKeyVocab, VOCAB_IDS } from '@config/constants';
+import { localStorageKeyVocab, FILTERS_IDS } from '@config/constants';
 
 import {
   getSelectedFiltersInitialValues,
-  getSelectedFiltersList
+  getSelectedFiltersList,
+  setChangeFilters
 } from '@utils/filters';
 
 const actionTypes = {
@@ -20,7 +21,7 @@ const initialState = {
     inProgress: 0,
     notKnown: 0
   },
-  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyVocab, VOCAB_IDS)
+  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyVocab, FILTERS_IDS)
 };
 
 export default function(state = initialState, action) {
@@ -29,7 +30,7 @@ export default function(state = initialState, action) {
       const vocabList = action.payload;
       const { selectedFilters } = state;
 
-      const list = getSelectedFiltersList(vocabList, selectedFilters, VOCAB_IDS);
+      const list = getSelectedFiltersList(vocabList, selectedFilters, FILTERS_IDS);
 
       return {
         ...state,
@@ -68,13 +69,8 @@ export const setFilters = (payload) => ({
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Vocabulary;
 
-  if (selectedFilters.indexOf(filter) > -1) {
-    selectedFilters.splice(selectedFilters.indexOf(filter), 1);
-  } else {
-    selectedFilters.push(filter);
-  }
+  setChangeFilters(filter, selectedFilters, localStorageKeyVocab);
 
-  localStorage.setItem('vocabSelectedFilters', JSON.stringify(selectedFilters));
   dispatch(setFilters(selectedFilters));
   dispatch(getVocabulary());
 };

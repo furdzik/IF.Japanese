@@ -1,7 +1,7 @@
 import { oneOfN5toN1Filters } from './oneOfN5toN1Filters';
 import { getKnownUnknownFilters } from './getKnownUnknownFilters';
 
-export const getSelectedFiltersList = (originalList, selectedFilters, IDS) => {
+export const getSelectedFiltersList = (originalList, selectedFilters, IDS, isKanji = false) => {
   let list = {
     knownList: [],
     notKnownList: [],
@@ -38,10 +38,10 @@ export const getSelectedFiltersList = (originalList, selectedFilters, IDS) => {
 
     list.all = list.n5.concat(list.n4, list.n3, list.n2, list.n1, list.other);
 
-    list = getKnownUnknownFilters(selectedFilters, list.all, IDS);
+    list = getKnownUnknownFilters(selectedFilters, list.all, IDS, isKanji);
   } else {
     // known / not known filters
-    list = getKnownUnknownFilters(selectedFilters, originalList, IDS);
+    list = getKnownUnknownFilters(selectedFilters, originalList, IDS, isKanji);
   }
 
   list.all = list.knownList.concat(list.inProgressList, list.notKnownList);

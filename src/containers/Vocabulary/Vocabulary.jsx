@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { useIntl } from 'react-intl';
 
-import { VOCAB_IDS } from '@config/constants';
-import defaultMessages from '@utils/default.messages';
+import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import { vocabShape } from '@types/vocabShape';
 import { filtersLengthShape } from '@types/filtersLengthShape';
@@ -18,53 +16,9 @@ import { getVocabulary, changeFilters } from './Vocabulary.reducer';
 import selector from './Vocabulary.selector';
 
 const Vocabulary = (props) => {
-  const intl = useIntl();
-
   useEffect(() => {
     props.getVocabulary();
   }, [props.selectedFilters]);
-
-  const filterList = [
-    {
-      value: VOCAB_IDS.KNOWN,
-      label: intl.formatMessage(defaultMessages.known)
-    },
-    {
-      value: VOCAB_IDS.IN_PROGRESS,
-      label: intl.formatMessage(defaultMessages.inProgress)
-    },
-    {
-      value: VOCAB_IDS.NOT_KNOWN,
-      label: intl.formatMessage(defaultMessages.notKnown)
-    }
-  ];
-
-  const secondaryFilterList = [
-    {
-      value: VOCAB_IDS.LEVEL_5,
-      label: intl.formatMessage(defaultMessages.n5)
-    },
-    {
-      value: VOCAB_IDS.LEVEL_4,
-      label: intl.formatMessage(defaultMessages.n4)
-    },
-    {
-      value: VOCAB_IDS.LEVEL_3,
-      label: intl.formatMessage(defaultMessages.n3)
-    },
-    {
-      value: VOCAB_IDS.LEVEL_2,
-      label: intl.formatMessage(defaultMessages.n2)
-    },
-    {
-      value: VOCAB_IDS.LEVEL_1,
-      label: intl.formatMessage(defaultMessages.n1)
-    },
-    {
-      value: VOCAB_IDS.OTHER,
-      label: intl.formatMessage(defaultMessages.other)
-    }
-  ];
 
   return props.vocab ? (
     <React.Fragment>
@@ -72,8 +26,8 @@ const Vocabulary = (props) => {
         length={props.vocabLength}
         changeFilters={props.changeFilters}
         selectedFilters={props.selectedFilters}
-        filterList={filterList}
-        secondaryFilterList={secondaryFilterList}
+        filterList={filterLabels}
+        secondaryFilterList={secondaryFilterLabels}
       />
       <ProgressBar
         length={props.vocabLength}

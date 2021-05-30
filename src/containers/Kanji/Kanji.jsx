@@ -3,18 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useIntl } from 'react-intl';
 
-import {
-  KNOWN_KANJI,
-  IN_PROGRESS_KANJI,
-  NOT_KNOWN_KANJI,
-  LEVEL_5_KANJI,
-  LEVEL_4_KANJI,
-  LEVEL_3_KANJI,
-  LEVEL_2_KANJI,
-  LEVEL_1_KANJI,
-  OTHER_KANJI,
-  JOYO_KANJI
-} from '@config/constants';
+import { FILTERS_IDS } from '@config/constants';
+import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import { kanjiShape } from '@types/kanjiShape';
 import { filtersLengthShape } from '@types/filtersLengthShape';
@@ -35,51 +25,9 @@ const Kanji = (props) => {
     props.getKanji();
   }, [props.selectedFilters]);
 
-  const filterList = [
-    {
-      value: KNOWN_KANJI,
-      label: intl.formatMessage(messages.known)
-    },
-    {
-      value: IN_PROGRESS_KANJI,
-      label: intl.formatMessage(messages.inProgress)
-    },
-    {
-      value: NOT_KNOWN_KANJI,
-      label: intl.formatMessage(messages.notKnown)
-    }
-  ];
-
-  const secondaryFilterList = [
-    {
-      value: LEVEL_5_KANJI,
-      label: intl.formatMessage(messages.n5)
-    },
-    {
-      value: LEVEL_4_KANJI,
-      label: intl.formatMessage(messages.n4)
-    },
-    {
-      value: LEVEL_3_KANJI,
-      label: intl.formatMessage(messages.n3)
-    },
-    {
-      value: LEVEL_2_KANJI,
-      label: intl.formatMessage(messages.n2)
-    },
-    {
-      value: LEVEL_1_KANJI,
-      label: intl.formatMessage(messages.n1)
-    },
-    {
-      value: OTHER_KANJI,
-      label: intl.formatMessage(messages.other)
-    }
-  ];
-
   const additionalFilterList = [
     {
-      value: JOYO_KANJI,
+      value: FILTERS_IDS.JOYO_KANJI,
       label: intl.formatMessage(messages.joyo)
     }
   ];
@@ -90,8 +38,8 @@ const Kanji = (props) => {
         length={props.kanjiLength}
         changeFilters={props.changeFilters}
         selectedFilters={props.selectedFilters}
-        filterList={filterList}
-        secondaryFilterList={secondaryFilterList}
+        filterList={filterLabels}
+        secondaryFilterList={secondaryFilterLabels}
         additionalFilterList={additionalFilterList}
       />
       <ProgressBar

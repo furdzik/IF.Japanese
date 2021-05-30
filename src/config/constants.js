@@ -1,7 +1,9 @@
-/* VOCAB */
+/* FILTERS */
 export const localStorageKeyVocab = 'vocabSelectedFilters';
+export const localStorageKeyVerbs = 'verbsSelectedFilters';
+export const localStorageKeyKanji = 'kanjiSelectedFilters';
 
-export const VOCAB_IDS = {
+export const FILTERS_IDS = {
   KNOWN: 1,
   IN_PROGRESS: 2,
   NOT_KNOWN: 3,
@@ -10,34 +12,11 @@ export const VOCAB_IDS = {
   LEVEL_3: 6,
   LEVEL_2: 7,
   LEVEL_1: 8,
-  OTHER: 9
+  OTHER: 9,
+  JOYO_KANJI: 10
 };
 
-/* KANJI */
-export const KNOWN_KANJI = 1;
-export const IN_PROGRESS_KANJI = 2;
-export const NOT_KNOWN_KANJI = 3;
-
-export const LEVEL_5_KANJI = 4;
-export const LEVEL_4_KANJI = 5;
-export const LEVEL_3_KANJI = 6;
-export const LEVEL_2_KANJI = 7;
-export const LEVEL_1_KANJI = 8;
-export const OTHER_KANJI = 9;
-export const JOYO_KANJI = 10;
-
 /* VERBS */
-export const KNOWN_VERBS = 1;
-export const IN_PROGRESS_VERBS = 2;
-export const NOT_KNOWN_VERBS = 3;
-export const LEVEL_5_VERBS = 4;
-
-export const LEVEL_4_VERBS = 5;
-export const LEVEL_3_VERBS = 6;
-export const LEVEL_2_VERBS = 7;
-export const LEVEL_1_VERBS = 8;
-export const OTHER_VERBS = 9;
-
 export const verbGroupTypes = {
   group2: '2',
   specialVerb1: 'special1', // suru
