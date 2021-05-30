@@ -1,27 +1,50 @@
 import vocabJson from '@data/vocabulary.json';
 
 import { fetchJisho } from '@api';
+
+import { localStorageKeyFlashcards, FILTERS_IDS } from '@config/constants';
+
+import {
+  getSelectedFiltersInitialValues,
+  getSelectedFiltersList,
+  setChangeFilters
+} from '@utils/filters';
+
 import getRandomVocab from './utils/getRandomVocab';
 
 const actionTypes = {
   GET_FLASHCARD_INIT: 'FLASHCARDS/GET_FLASHCARD_INIT',
-  GET_FLASHCARD: 'FLASHCARDS/GET_FLASHCARD'
+  GET_FLASHCARD: 'FLASHCARDS/GET_FLASHCARD',
+  FLASHCARD_SET_FILTERS: 'FLASHCARDS/SET_FILTERS'
 };
 
 const initialState = {
   flashcard: null,
-  additionalInfo: null
+  flashcardLength: {
+    known: 0,
+    inProgress: 0,
+    notKnown: 0,
+    all: 0
+  },
+  additionalInfo: null,
+  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyFlashcards, FILTERS_IDS)
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_FLASHCARD: {
-      const data = action.payload;
+      const { list, flashcard, additionalInfo } = action.payload;
 
       return {
         ...state,
-        flashcard: data.flashcard,
-        additionalInfo: data.additionalInfo,
+        flashcard,
+        additionalInfo,
+        flashcardLength: {
+          known: list.knownList.length,
+          inProgress: list.inProgressList.length,
+          notKnown: list.all.length - list.knownList.length - list.inProgressList.length,
+          all: list.all.length
+        },
         loading: false
       };
     }
@@ -29,8 +52,14 @@ export default function(state = initialState, action) {
     case actionTypes.GET_FLASHCARD_INIT: {
       return {
         ...state,
-        ...initialState,
         loading: true
+      };
+    }
+
+    case actionTypes.FLASHCARD_SET_FILTERS: {
+      return {
+        ...state,
+        selectedFilters: action.payload
       };
     }
 
@@ -48,10 +77,18 @@ export const getFlashcard = (data) => ({
   payload: data
 });
 
-export const getFlashcardFn = () => (dispatch) => {
-  dispatch(getFlashcardInit());
+export const setFilters = (payload) => ({
+  type: actionTypes.FLASHCARD_SET_FILTERS,
+  payload
+});
 
-  const randomVocab = getRandomVocab(vocabJson);
+export const getFlashcardFn = () => (dispatch, getStore) => {
+  dispatch(getFlashcardInit());
+  const { selectedFilters } = getStore().Flashcards;
+
+  const list = getSelectedFiltersList(vocabJson, selectedFilters, FILTERS_IDS);
+
+  const randomVocab = getRandomVocab(list.all);
 
   fetchJisho(randomVocab.meaning || randomVocab.vocab)
     .then((response) => {
@@ -62,6 +99,7 @@ export const getFlashcardFn = () => (dispatch) => {
       };
 
       dispatch(getFlashcard({
+        list,
         flashcard,
         additionalInfo: randomVocab
       }));
@@ -69,4 +107,13 @@ export const getFlashcardFn = () => (dispatch) => {
     .catch((error) => {
       throw new Error(error);
     });
+};
+
+export const changeFilters = (filter) => (dispatch, getStore) => {
+  const { selectedFilters } = getStore().Flashcards;
+
+  setChangeFilters(filter, selectedFilters, localStorageKeyFlashcards);
+
+  dispatch(setFilters(selectedFilters));
+  dispatch(getFlashcardFn());
 };

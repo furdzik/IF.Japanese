@@ -2,11 +2,16 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { flashcardShape, additionalInfoShape } from '@types/flashcardShape';
+import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 
+import { flashcardShape, additionalInfoShape } from '@types/flashcardShape';
+import { filtersLengthShape } from '@types/filtersLengthShape';
+
+import Filters from '@components/Filters';
+import ProgressBar from '@components/ProgressBar';
 import FlashcardsComponent from '@components/Flashcards';
 
-import { getFlashcardFn } from './Flashcards.reducer';
+import { getFlashcardFn, changeFilters } from './Flashcards.reducer';
 
 import selector from './Flashcards.selector';
 
@@ -16,17 +21,32 @@ const Flashcards = (props) => {
   }, []);
 
   return (
-    <FlashcardsComponent
-      flashcard={props.flashcard}
-      getFlashcard={props.getFlashcard}
-      additionalInfo={props.additionalInfo}
-      loading={props.loading}
-    />
+    <React.Fragment>
+      <Filters
+        length={props.flashcardLength}
+        changeFilters={props.changeFilters}
+        selectedFilters={props.selectedFilters}
+        filterList={filterLabels}
+        secondaryFilterList={secondaryFilterLabels}
+      />
+      <ProgressBar
+        length={props.flashcardLength}
+      />
+      <FlashcardsComponent
+        flashcard={props.flashcard}
+        getFlashcard={props.getFlashcard}
+        additionalInfo={props.additionalInfo}
+        loading={props.loading}
+      />
+    </React.Fragment>
   );
 };
 
 Flashcards.propTypes = {
+  changeFilters: PropTypes.func.isRequired,
+  flashcardLength: filtersLengthShape.isRequired,
   getFlashcard: PropTypes.func.isRequired,
+  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired,
   additionalInfo: additionalInfoShape,
   flashcard: flashcardShape,
   loading: PropTypes.bool
@@ -39,7 +59,8 @@ Flashcards.defaultProps = {
 };
 
 const mapDispatchToProps = {
-  getFlashcard: getFlashcardFn
+  getFlashcard: getFlashcardFn,
+  changeFilters
 };
 
 export default connect(selector, mapDispatchToProps)(Flashcards);
