@@ -1,17 +1,11 @@
-import _cloneDeep from 'lodash/cloneDeep';
-
 import vocab from '@data/vocabulary.json';
 
-import {
-  LEVEL_5_VERBS,
-  LEVEL_4_VERBS,
-  LEVEL_3_VERBS,
-  LEVEL_2_VERBS,
-  LEVEL_1_VERBS,
-  OTHER_VERBS
-} from '@config/constants';
+import { localStorageKeyVerbs, FILTERS_IDS } from '@config/constants';
 
-import { getSelectedFiltersInitialValue, oneOfN5toN1Filters, getKnownUnknownFilters } from './Verbs.utils';
+import {
+  getSelectedFiltersInitialValues,
+  getSelectedFiltersList
+} from '@utils/filters';
 
 const actionTypes = {
   GET_VERBS: 'VERBS/GET_VERBS',
@@ -26,7 +20,7 @@ const initialState = {
     inProgress: 0,
     notKnown: 0
   },
-  selectedFilters: getSelectedFiltersInitialValue()
+  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyVerbs, FILTERS_IDS)
 };
 
 export default function(state = initialState, action) {
@@ -34,49 +28,8 @@ export default function(state = initialState, action) {
     case actionTypes.GET_VERBS: {
       const verbsList = action.payload;
       const { selectedFilters } = state;
-      let list = {
-        knownList: [],
-        notKnownList: [],
-        inProgressList: [],
-        n5: [],
-        n4: [],
-        n3: [],
-        n2: [],
-        n1: [],
-        other: [],
-        all: []
-      };
 
-      // N5..N1 filters
-      if (oneOfN5toN1Filters(selectedFilters)) {
-        if (selectedFilters.indexOf(LEVEL_5_VERBS) > -1) {
-          list.n5 = verbsList.filter((item) => item.level === 5);
-        }
-        if (selectedFilters.indexOf(LEVEL_4_VERBS) > -1) {
-          list.n4 = verbsList.filter((item) => item.level === 4);
-        }
-        if (selectedFilters.indexOf(LEVEL_3_VERBS) > -1) {
-          list.n3 = verbsList.filter((item) => item.level === 3);
-        }
-        if (selectedFilters.indexOf(LEVEL_2_VERBS) > -1) {
-          list.n2 = verbsList.filter((item) => item.level === 2);
-        }
-        if (selectedFilters.indexOf(LEVEL_1_VERBS) > -1) {
-          list.n1 = verbsList.filter((item) => item.level === 1);
-        }
-        if (selectedFilters.indexOf(OTHER_VERBS) > -1) {
-          list.other = verbsList.filter((item) => item.level === 0);
-        }
-
-        list.all = list.n5.concat(list.n4, list.n3, list.n2, list.n1, list.other);
-
-        list = getKnownUnknownFilters(selectedFilters, list.all);
-      } else {
-        // known / not known filters
-        list = getKnownUnknownFilters(selectedFilters, verbsList);
-      }
-
-      list.all = list.knownList.concat(list.inProgressList, list.notKnownList);
+      const list = getSelectedFiltersList(verbsList, selectedFilters, FILTERS_IDS);
 
       return {
         ...state,
@@ -103,7 +56,7 @@ export default function(state = initialState, action) {
 }
 
 export const getVerbs = () => {
-  const array = _cloneDeep(vocab);
+  const array = vocab;
   const verbs = array.filter((el) => el.verb);
 
   return {
@@ -120,13 +73,8 @@ export const setFilters = (payload) => ({
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Verbs;
 
-  if (selectedFilters.indexOf(filter) > -1) {
-    selectedFilters.splice(selectedFilters.indexOf(filter), 1);
-  } else {
-    selectedFilters.push(filter);
-  }
+  changeFilters(filter, selectedFilters, localStorageKeyVerbs);
 
-  localStorage.setItem('verbsSelectedFilters', JSON.stringify(selectedFilters));
   dispatch(setFilters(selectedFilters));
   dispatch(getVerbs());
 };
