@@ -5,7 +5,8 @@ import { filtersLengthShape } from '@types/filtersLengthShape';
 import {
   Wrapper,
   KnownProgress,
-  InProgressProgress
+  InProgressProgress,
+  NowLearningProgress
 } from './ProgressBar.styles.js';
 
 const ProgressBar = (props) => {
@@ -14,6 +15,7 @@ const ProgressBar = (props) => {
   return (
     <Wrapper>
       <KnownProgress percent={calculatePercent(props.length.known)} />
+      <NowLearningProgress percent={calculatePercent(props.length.nowLearning)} />
       <InProgressProgress percent={calculatePercent(props.length.inProgress)} />
     </Wrapper>
   );

@@ -11,6 +11,10 @@ export const filterLabels = [
     label: (defaultMessages.inProgress).defaultMessage
   },
   {
+    value: FILTERS_IDS.NOW_LEARNING,
+    label: (defaultMessages.nowLearning).defaultMessage
+  },
+  {
     value: FILTERS_IDS.NOT_KNOWN,
     label: (defaultMessages.notKnown).defaultMessage
   }

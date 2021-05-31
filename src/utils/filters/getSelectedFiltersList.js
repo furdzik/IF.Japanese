@@ -6,6 +6,7 @@ export const getSelectedFiltersList = (originalList, selectedFilters, IDS, isKan
     knownList: [],
     notKnownList: [],
     inProgressList: [],
+    nowLearningList: [],
     n5: [],
     n4: [],
     n3: [],
@@ -44,7 +45,11 @@ export const getSelectedFiltersList = (originalList, selectedFilters, IDS, isKan
     list = getKnownUnknownFilters(selectedFilters, originalList, IDS, isKanji);
   }
 
-  list.all = list.knownList.concat(list.inProgressList, list.notKnownList);
+  list.all = list.knownList.concat(
+    list.nowLearningList,
+    list.inProgressList,
+    list.notKnownList
+  );
 
   return list;
 };

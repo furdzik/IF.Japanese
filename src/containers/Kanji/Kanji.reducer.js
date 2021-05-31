@@ -5,7 +5,8 @@ import { localStorageKeyKanji, FILTERS_IDS } from '@config/constants';
 import {
   getSelectedFiltersInitialValues,
   getSelectedFiltersList,
-  setChangeFilters
+  setChangeFilters,
+  getNotKnownLength
 } from '@utils/filters';
 
 const actionTypes = {
@@ -19,7 +20,9 @@ const initialState = {
   kanjiLength: {
     known: 0,
     inProgress: 0,
-    notKnown: 0
+    nowLearning: 0,
+    notKnown: 0,
+    all: 0
   },
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyKanji, FILTERS_IDS)
 };
@@ -38,13 +41,14 @@ export default function(state = initialState, action) {
         kanjiLength: {
           known: list.knownList.length,
           inProgress: list.inProgressList.length,
-          notKnown: list.all.length - list.knownList.length - list.inProgressList.length,
+          nowLearning: list.nowLearningList.length,
+          notKnown: getNotKnownLength(list),
           all: list.all.length
         }
       };
     }
 
-    case actionTypes.SET_FILTERS: {
+    case actionTypes.KANJI_SET_FILTERS: {
       return {
         ...state,
         selectedFilters: action.payload

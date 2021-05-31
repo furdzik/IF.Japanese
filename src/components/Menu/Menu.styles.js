@@ -1,13 +1,15 @@
 import styled, { css } from 'styled-components';
 
+import { breakpointMixin } from '@styles/mixins';
+
 const MenuWrapper = styled.ul`
   display: flex;
 `;
 
 const MenuItem = styled.li`
   display: block;
-  margin: 3rem 3rem 3rem 0;
-  font-size: 2.7rem;
+  margin: 3rem 2rem 3rem 0;
+  font-size: 2rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.black};
 
@@ -34,6 +36,11 @@ const MenuItem = styled.li`
     @media print {
       display: block;
     }
+  `}
+
+  ${breakpointMixin.landscapeTablet`
+    margin-right: 3rem;
+    font-size: 2.7rem;
   `}
 `;
 

@@ -7,3 +7,4 @@ export { getSelectedFiltersList } from './getSelectedFiltersList';
 export { setChangeFilters } from './setChangeFilters';
 
 export { filterLabels, secondaryFilterLabels } from './defaultFilterLabels';
+export { getNotKnownLength } from './getNotKnownLength';

@@ -1,6 +1,6 @@
 {
   "src.utils.all": "全部: ",
-  "src.utils.inProgress": "勉強中",
+  "src.utils.inProgress": "発展中",
   "src.utils.known": "知っている",
   "src.utils.n1": "N1",
   "src.utils.n2": "N2",
@@ -9,6 +9,7 @@
   "src.utils.n5": "N5",
   "src.utils.next": "Next",
   "src.utils.notKnown": "知らない",
+  "src.utils.nowLearning": "勉強中",
   "src.utils.ok": "OK",
   "src.utils.other": "OTHER",
   "src.utils.seeMoreText": "See more"

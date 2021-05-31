@@ -7,6 +7,7 @@ export const localStorageKeyFlashcards = 'flashcardsSelectedFilters';
 export const FILTERS_IDS = {
   KNOWN: 1,
   IN_PROGRESS: 2,
+  NOW_LEARNING: 11,
   NOT_KNOWN: 3,
   LEVEL_5: 4,
   LEVEL_4: 5,

@@ -8,23 +8,30 @@ const Wrapper = styled.div`
   margin-top: 3rem;
   margin-bottom: 2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
+  background: ${(props) => props.theme.mainCategoriesStyle.notKnown};
 `;
 
 const KnownProgress = styled.div`
   width: ${(props) => props.percent}%;
   height: 100%;
-  background: ${(props) => props.theme.colors.primaryColor};
+  background: ${(props) => props.theme.mainCategoriesStyle.known};
 `;
 
 const InProgressProgress = styled.div`
   width: ${(props) => props.percent}%;
   height: 100%;
-  background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${(props) => props.theme.colors.tartaryColor} 4px, ${(props) => props.theme.colors.tartaryColor} 6px);
+  background: ${(props) => props.theme.mainCategoriesStyle.inProgress};
+`;
+
+const NowLearningProgress = styled.div`
+  width: ${(props) => props.percent}%;
+  height: 100%;
+  background: ${(props) => props.theme.mainCategoriesStyle.nowLearning.background};
 `;
 
 export {
   Wrapper,
   KnownProgress,
-  InProgressProgress
+  InProgressProgress,
+  NowLearningProgress
 };

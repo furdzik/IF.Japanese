@@ -23,9 +23,9 @@ const Legend = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.secondaryColor};
 
-  ${breakpointMixin.phablet`
+  ${breakpointMixin.laptop`
     display: inline-block;
-    width: 30rem;
+    width: 28rem;
   `}
 
   @media print {
@@ -49,7 +49,7 @@ const FiltersWrapper = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
 
   ${breakpointMixin.laptop`
-    min-width: 41rem;
+    min-width: 45rem;
     min-height: 6.2rem;
     margin-bottom: 0;
     display: flex;
