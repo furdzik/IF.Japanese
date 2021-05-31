@@ -13,6 +13,11 @@ const MenuItem = styled.li`
   font-weight: bold;
   color: ${(props) => props.theme.colors.black};
 
+  ${breakpointMixin.portraitTablet`
+    margin-right: 3rem;
+    font-size: 2.7rem;
+  `}
+
   @media print {
     display: none;
     margin-top: 0;
@@ -36,11 +41,6 @@ const MenuItem = styled.li`
     @media print {
       display: block;
     }
-  `}
-
-  ${breakpointMixin.landscapeTablet`
-    margin-right: 3rem;
-    font-size: 2.7rem;
   `}
 `;
 
