@@ -8,7 +8,7 @@ const ListItem = styled.div`
   margin: 1.1rem;
   padding: .6rem 1rem .4rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
+  background: ${(props) => props.theme.mainCategoriesStyle.notKnown};
   font-size: 2rem;
 
   ${breakpointMixin.laptop`
@@ -35,7 +35,7 @@ const ListItem = styled.div`
   `};
 
   ${(props) => props.known && css`
-    background: ${props.theme.colors.primaryColor};
+    background: ${props.theme.mainCategoriesStyle.known};
     color: ${props.theme.colors.white};
     order: 0;
     &::before {
@@ -49,7 +49,7 @@ const ListItem = styled.div`
   `};
 
   ${(props) => props.inProgress && css`
-    background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
+    background: ${props.theme.mainCategoriesStyle.inProgress};
     color: ${props.theme.colors.white};
     text-shadow: -1px 1px 8px #750101;
     order: 2;
@@ -69,18 +69,9 @@ const ListItem = styled.div`
     }
   `};
 
-  ${(props) => props.inProgress && props.known && css`
-    background: ${props.theme.colors.black};
-    color: ${props.theme.colors.white};
-    order: 4;
-    &::before {
-      color: ${props.theme.colors.white};
-    }
-  `};
-
   ${(props) => props.nowLearning && css`
-    background: #f18181;
-    border: 2px solid ${props.theme.colors.primaryColor};
+    background: ${props.theme.mainCategoriesStyle.nowLearning.background};
+    border: ${props.theme.mainCategoriesStyle.nowLearning.border};
     padding: .4rem .8rem .2rem;
     color: ${props.theme.colors.white};
     order: 1;
@@ -91,6 +82,15 @@ const ListItem = styled.div`
       padding-right: 1rem;
     `}
 
+    &::before {
+      color: ${props.theme.colors.white};
+    }
+  `};
+
+  ${(props) => props.inProgress && props.known && css`
+    background: ${props.theme.colors.black};
+    color: ${props.theme.colors.white};
+    order: 4;
     &::before {
       color: ${props.theme.colors.white};
     }

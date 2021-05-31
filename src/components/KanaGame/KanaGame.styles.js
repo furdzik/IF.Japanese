@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { breakpointMixin } from '@styles/mixins';
+
 const Wrapper = styled.div`
   text-align: center;
 `;
@@ -12,12 +14,17 @@ const Title = styled.div`
 `;
 
 const GameField = styled.div`
-  width: 50rem;
+  width: 100%;
   margin: 0 auto;
   padding: 0 0 4rem;
   border: 2px solid ${(props) => props.theme.colors.secondaryColor};
   border-radius: ${(props) => props.theme.layout.borderRadius};
   text-align: center;
+
+  ${breakpointMixin.laptop`
+    max-width: 50rem;
+    width: auto;
+  `}
 `;
 
 const RandomKana = styled.div`

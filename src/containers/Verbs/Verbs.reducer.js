@@ -4,7 +4,9 @@ import { localStorageKeyVerbs, FILTERS_IDS } from '@config/constants';
 
 import {
   getSelectedFiltersInitialValues,
-  getSelectedFiltersList
+  getSelectedFiltersList,
+  setChangeFilters,
+  getNotKnownLength
 } from '@utils/filters';
 
 const actionTypes = {
@@ -18,7 +20,9 @@ const initialState = {
   verbsLength: {
     known: 0,
     inProgress: 0,
-    notKnown: 0
+    nowLearning: 0,
+    notKnown: 0,
+    all: 0
   },
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyVerbs, FILTERS_IDS)
 };
@@ -37,7 +41,8 @@ export default function(state = initialState, action) {
         verbsLength: {
           known: list.knownList.length,
           inProgress: list.inProgressList.length,
-          notKnown: list.all.length - list.knownList.length - list.inProgressList.length,
+          nowLearning: list.nowLearningList.length,
+          notKnown: getNotKnownLength(list),
           all: list.all.length
         }
       };
@@ -73,7 +78,7 @@ export const setFilters = (payload) => ({
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Verbs;
 
-  changeFilters(filter, selectedFilters, localStorageKeyVerbs);
+  setChangeFilters(filter, selectedFilters, localStorageKeyVerbs);
 
   dispatch(setFilters(selectedFilters));
   dispatch(getVerbs());

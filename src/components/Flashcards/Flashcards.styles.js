@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { breakpointMixin } from '@styles/mixins';
+
 import { Link } from 'react-router-dom';
 import Icon from '@mdi/react';
 
@@ -27,11 +29,16 @@ const VocabCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50rem;
+  width: 100%;
   height: 40rem;
   padding: 3rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.secondaryColor};
+
+  ${breakpointMixin.laptop`
+    max-width: 50rem;
+    width: auto;
+  `}
 `;
 
 const MeaningCard = styled(VocabCard)`

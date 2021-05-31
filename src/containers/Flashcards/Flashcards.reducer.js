@@ -7,7 +7,8 @@ import { localStorageKeyFlashcards, FILTERS_IDS } from '@config/constants';
 import {
   getSelectedFiltersInitialValues,
   getSelectedFiltersList,
-  setChangeFilters
+  setChangeFilters,
+  getNotKnownLength
 } from '@utils/filters';
 
 import getRandomVocab from './utils/getRandomVocab';
@@ -23,6 +24,7 @@ const initialState = {
   flashcardLength: {
     known: 0,
     inProgress: 0,
+    nowLearning: 0,
     notKnown: 0,
     all: 0
   },
@@ -42,7 +44,8 @@ export default function(state = initialState, action) {
         flashcardLength: {
           known: list.knownList.length,
           inProgress: list.inProgressList.length,
-          notKnown: list.all.length - list.knownList.length - list.inProgressList.length,
+          nowLearning: list.nowLearningList.length,
+          notKnown: getNotKnownLength(list),
           all: list.all.length
         },
         loading: false
