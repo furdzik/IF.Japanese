@@ -36,8 +36,7 @@ const VocabCard = styled.div`
   background: ${(props) => props.theme.colors.secondaryColor};
 
   ${breakpointMixin.laptop`
-    max-width: 50rem;
-    width: auto;
+    width: 50rem;
   `}
 `;
 

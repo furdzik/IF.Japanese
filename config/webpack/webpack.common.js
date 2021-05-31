@@ -62,6 +62,7 @@ module.exports = ({ production }) => ({
       appVersion: `${version}`,
       noscript: 'Proszę włączyć obsługę JavaScript w przeglądarce.',
       appUrl: production ? '#{APP_URL}#' : 'http://if.japanese.local:2017',
+      base: '/',
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
