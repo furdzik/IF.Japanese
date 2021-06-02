@@ -39,7 +39,7 @@ const Details = (props) => {
         <JishoLink
           href={props.jishoLink}
           target="_blank"
-          notKnow={!props.known && !props.inProgress}
+          notKnow={!props.known && !props.inProgress && !props.nowLearning}
         >
           {intl.formatMessage(messages.jishoLinkText)}
         </JishoLink>
