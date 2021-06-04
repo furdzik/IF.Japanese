@@ -4511,9 +4511,9 @@
   },
   {
     "vocab": "住所",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "nowLearning": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -11920,7 +11920,8 @@
   {
     "vocab": "態度",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -12297,6 +12298,7 @@
     "vocab": "規則",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -17492,6 +17494,7 @@
     "vocab": "屹度",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -30102,6 +30105,7 @@
     "vocab": "経度",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -33688,9 +33692,9 @@
   },
   {
     "vocab": "怪しい",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "nowLearning": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },

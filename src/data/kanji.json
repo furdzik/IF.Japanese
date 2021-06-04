@@ -2670,7 +2670,8 @@
   {
     "kanji": "度",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 4
   },
