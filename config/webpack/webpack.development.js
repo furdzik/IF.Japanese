@@ -36,6 +36,8 @@ const webpackDevelopment = () => ({
   devServer: {
     port: PORT,
     host: 'if.japanese.local',
+    historyApiFallback: true,
+    contentBase: './',
     hot: true
   },
   plugins: [

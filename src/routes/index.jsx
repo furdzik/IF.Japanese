@@ -31,16 +31,16 @@ const Routes = () => {
     <Router>
       <Switch>
         <Route
-          path="/"
           exact
+          path="/"
         >
           <Layout list={menu} menuActive={menuId.vocab}>
             <Vocabulary />
           </Layout>
         </Route>
         <Route
-          path="/kanji"
           exact
+          path="/kanji"
         >
           <Layout list={menu} menuActive={menuId.kanji}>
             <Kanji />
@@ -83,64 +83,64 @@ const Routes = () => {
           }}
         />
         <Route
-          path="/verbs"
           exact
+          path="/verbs"
         >
           <Layout list={menu} menuActive={menuId.verbs}>
             <Verbs />
           </Layout>
         </Route>
         <Route
-          path="/grammar"
           exact
+          path="/grammar"
         >
           <Layout list={menu} menuActive={menuId.grammar}>
             <GrammarMainPage />
           </Layout>
         </Route>
         <Route
-          path="/expressions"
           exact
+          path="/expressions"
         >
           <Layout list={menu} menuActive={menuId.grammar}>
             expressions
           </Layout>
         </Route>
         <Route
-          path="/grammar-to-repeat"
           exact
+          path="/grammar-to-repeat"
         >
           <Layout list={menu} menuActive={menuId.grammar}>
             grammar-to-repeat WIP
           </Layout>
         </Route>
         <Route
-          path="/grammar-politeness"
           exact
+          path="/grammar-politeness"
         >
           <Layout list={menu} menuActive={menuId.grammar}>
             grammar-politeness WIP
           </Layout>
         </Route>
         <Route
-          path="/others"
           exact
+          path="/others"
         >
           <Layout list={menu} menuActive={menuId.others}>
             <OthersMainPage />
           </Layout>
         </Route>
         <Route
-          path="/kana-game"
           exact
+          path="/kana-game"
         >
           <Layout list={menu} menuActive={menuId.others}>
             <KanaGame />
           </Layout>
         </Route>
         <Route
-          path="/flashcards"
           exact
+          path="/flashcards"
         >
           <Layout list={menu} menuActive={menuId.others}>
             <Flashcards />
