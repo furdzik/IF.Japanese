@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   max-width: 100%;
   height: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.mainCategoriesStyle.notKnown};

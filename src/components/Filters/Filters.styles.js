@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { breakpointMixin } from '@styles/mixins';
 
-const Header = styled.div`
+const Wrapper = styled.div`
   display: block;
   margin-bottom: 2rem;
 
@@ -17,52 +17,30 @@ const Header = styled.div`
   `}
 `;
 
-const Legend = styled.div`
-  margin-left: auto;
-  padding: .5rem 1rem .3rem;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
-
-  ${breakpointMixin.laptop`
-    display: inline-block;
-    width: 28rem;
-  `}
-
-  @media print {
-    display: flex;
-    padding: 0;
-    background: none;
-  }
-`;
-
-const LegendElement = styled.span`
-  display: flex;
-  justify-content: space-between;
-
-  @media print {
-    margin-left: auto;
-  }
-`;
-
-const FiltersWrapper = styled.div`
+const FiltersBox = styled.div`
   margin-bottom: 1.5rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
 
+  & + & {
+    margin-top: 1rem;
+  }
+
   ${breakpointMixin.laptop`
-    min-width: 45rem;
-    min-height: 6.2rem;
-    margin-bottom: 0;
     display: flex;
     align-items: center;
+    min-height: 6.4rem;
+    margin-bottom: 0;
+    padding: 0 1rem;
   `}
 
-  ${(props) => !props.secondary && !props.additional && css`
-    background: ${props.theme.colors.secondaryColor};
-    margin-right: auto;
-  `}
+  ${(props) => props.primary && css`
+    width: 100%;
+    background: none;
 
-  ${(props) => props.additional && css`
-    margin-top: 1rem;
+    ${breakpointMixin.laptop`
+      width: 44%;
+      background: ${props.theme.colors.secondaryColor};
+    `}
   `}
 
   ${(props) => props.noHeight && css`
@@ -82,9 +60,16 @@ const FiltersWrapper = styled.div`
   }
 `;
 
+const FiltersGroup = styled.div`
+  margin-left: auto;
+
+  ${breakpointMixin.laptop`
+    width: 50%;
+  `}
+`;
+
 export {
-  Header,
-  Legend,
-  LegendElement,
-  FiltersWrapper
+  Wrapper,
+  FiltersBox,
+  FiltersGroup
 };

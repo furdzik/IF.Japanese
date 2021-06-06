@@ -6,7 +6,8 @@ import {
   getSelectedFiltersInitialValues,
   getSelectedFiltersList,
   setChangeFilters,
-  getNotKnownLength
+  getLength,
+  lengthInitialState
 } from '@utils/filters';
 
 const actionTypes = {
@@ -17,13 +18,7 @@ const actionTypes = {
 const initialState = {
   loading: false,
   kanji: null,
-  kanjiLength: {
-    known: 0,
-    inProgress: 0,
-    nowLearning: 0,
-    notKnown: 0,
-    all: 0
-  },
+  kanjiLength: lengthInitialState,
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyKanji, FILTERS_IDS)
 };
 
@@ -38,13 +33,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         kanji: list.all,
-        kanjiLength: {
-          known: list.knownList.length,
-          inProgress: list.inProgressList.length,
-          nowLearning: list.nowLearningList.length,
-          notKnown: getNotKnownLength(list),
-          all: list.all.length
-        }
+        kanjiLength: getLength(list)
       };
     }
 

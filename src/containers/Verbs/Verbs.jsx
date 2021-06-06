@@ -5,9 +5,10 @@ import { connect } from 'react-redux';
 import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import { vocabShape } from '@types/vocabShape';
-import { filtersLengthShape } from '@types/filtersLengthShape';
+import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
 
 import Filters from '@components/Filters';
+import Legend from '@components/Legend';
 import VerbsList from '@components/VerbsList';
 import ProgressBar from '@components/ProgressBar';
 
@@ -29,12 +30,9 @@ const Verbs = (props) => {
         filterList={filterLabels}
         secondaryFilterList={secondaryFilterLabels}
       />
-      <ProgressBar
-        length={props.verbsLength}
-      />
-      <VerbsList
-        verbs={props.verbs}
-      />
+      <Legend length={props.verbsLength} />
+      <ProgressBar length={props.verbsLength} />
+      <VerbsList verbs={props.verbs} />
     </React.Fragment>
   ) : null;
 };
@@ -42,7 +40,7 @@ const Verbs = (props) => {
 Verbs.propTypes = {
   changeFilters: PropTypes.func.isRequired,
   getVerbs: PropTypes.func.isRequired,
-  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired,
+  selectedFilters: selectedFiltersShape.isRequired,
   verbsLength: filtersLengthShape.isRequired,
   verbs: vocabShape
 };

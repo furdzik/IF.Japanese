@@ -5,9 +5,10 @@ import { connect } from 'react-redux';
 import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import { flashcardShape, additionalInfoShape } from '@types/flashcardShape';
-import { filtersLengthShape } from '@types/filtersLengthShape';
+import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
 
 import Filters from '@components/Filters';
+import Legend from '@components/Legend';
 import ProgressBar from '@components/ProgressBar';
 import FlashcardsComponent from '@components/Flashcards';
 
@@ -29,9 +30,8 @@ const Flashcards = (props) => {
         filterList={filterLabels}
         secondaryFilterList={secondaryFilterLabels}
       />
-      <ProgressBar
-        length={props.flashcardLength}
-      />
+      <Legend length={props.flashcardLength} />
+      <ProgressBar length={props.flashcardLength} />
       <FlashcardsComponent
         flashcard={props.flashcard}
         getFlashcard={props.getFlashcard}
@@ -46,7 +46,7 @@ Flashcards.propTypes = {
   changeFilters: PropTypes.func.isRequired,
   flashcardLength: filtersLengthShape.isRequired,
   getFlashcard: PropTypes.func.isRequired,
-  selectedFilters: PropTypes.arrayOf(PropTypes.number).isRequired,
+  selectedFilters: selectedFiltersShape.isRequired,
   additionalInfo: additionalInfoShape,
   flashcard: flashcardShape,
   loading: PropTypes.bool

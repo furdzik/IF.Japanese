@@ -40,8 +40,8 @@ const SensesList = styled.ol`
 
 const SensesListItem = styled.li`
   display: flex;
-  margin-top: 4rem;
-  margin-bottom: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   &::before {
     display: block;
     width: 4rem;
@@ -52,6 +52,10 @@ const SensesListItem = styled.li`
     line-height: 4rem;
     text-align: center;
     content: '${(props) => props.number}.';
+  }
+
+  @media print {
+    page-break-inside: avoid;
   }
 `;
 

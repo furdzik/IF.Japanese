@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  max-width: 120rem;
+  max-width: ${(props) => props.theme.layout.containerWidth};
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: ${(props) => props.theme.layout.padding};
 `;
 
 export {

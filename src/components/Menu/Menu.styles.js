@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Link } from 'react-router-dom';
+
 import { breakpointMixin } from '@styles/mixins';
 
 const MenuWrapper = styled.ul`
@@ -9,42 +11,47 @@ const MenuWrapper = styled.ul`
 const MenuItem = styled.li`
   display: block;
   margin: 3rem 2rem 3rem 0;
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: bold;
   color: ${(props) => props.theme.colors.black};
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   ${breakpointMixin.portraitTablet`
     margin-right: 3rem;
     font-size: 2.7rem;
-  `}
+  `};
 
   @media print {
-    display: none;
     margin-top: 0;
   }
+`;
 
-  a {
-    color: ${(props) => props.theme.colors.black};
-    text-decoration: none;
-    &:hover {
-      color: ${(props) => props.theme.colors.primaryColor};
-      transition: all 0.3s ease 0s;
-    }
+const LinkStyled = styled(Link)`
+  color: ${(props) => props.theme.colors.black};
+  text-decoration: none;
+  &:hover {
+    color: ${(props) => props.theme.colors.primaryColor};
+    transition: all 0.3s ease 0s;
   }
 
   ${(props) => props.active && css`
     color: ${props.theme.colors.primaryColor};
-    a {
-      color: ${props.theme.colors.primaryColor};
-    }
+  `};
 
-    @media print {
+  @media print {
+    display: none;
+
+    ${(props) => props.active && css`
       display: block;
-    }
-  `}
+    `};
+  }
 `;
 
 export {
   MenuWrapper,
-  MenuItem
+  MenuItem,
+  LinkStyled
 };

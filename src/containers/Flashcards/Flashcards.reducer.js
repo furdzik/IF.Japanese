@@ -8,7 +8,8 @@ import {
   getSelectedFiltersInitialValues,
   getSelectedFiltersList,
   setChangeFilters,
-  getNotKnownLength
+  getLength,
+  lengthInitialState
 } from '@utils/filters';
 
 import getRandomVocab from './utils/getRandomVocab';
@@ -21,13 +22,7 @@ const actionTypes = {
 
 const initialState = {
   flashcard: null,
-  flashcardLength: {
-    known: 0,
-    inProgress: 0,
-    nowLearning: 0,
-    notKnown: 0,
-    all: 0
-  },
+  flashcardLength: lengthInitialState,
   additionalInfo: null,
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyFlashcards, FILTERS_IDS)
 };
@@ -41,13 +36,7 @@ export default function(state = initialState, action) {
         ...state,
         flashcard,
         additionalInfo,
-        flashcardLength: {
-          known: list.knownList.length,
-          inProgress: list.inProgressList.length,
-          nowLearning: list.nowLearningList.length,
-          notKnown: getNotKnownLength(list),
-          all: list.all.length
-        },
+        flashcardLength: getLength(list),
         loading: false
       };
     }

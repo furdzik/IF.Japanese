@@ -27,15 +27,17 @@ const Details = (props) => {
         inProgress={props.inProgress}
         nowLearning={props.nowLearning}
       >
-        <span>{props.name}</span>
-        {
-          props.reading && props.name !== props.reading ? (
-            <React.Fragment>
-              <WordHeaderSeparator>/</WordHeaderSeparator>
-              {props.reading}
-            </React.Fragment>
-          ) : null
-        }
+        <span>
+          {props.name}
+          {
+            props.reading && props.name !== props.reading ? (
+              <React.Fragment>
+                <WordHeaderSeparator>/</WordHeaderSeparator>
+                {props.reading}
+              </React.Fragment>
+            ) : null
+          }
+        </span>
         <JishoLink
           href={props.jishoLink}
           target="_blank"
