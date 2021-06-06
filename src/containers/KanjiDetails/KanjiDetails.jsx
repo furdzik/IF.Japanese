@@ -7,7 +7,7 @@ import { objectShape } from '@utils/types/objectShape';
 import KanjiDetailsComponent from '@components/KanjiDetails';
 import Loader from '@components/ui/Loader';
 
-import { getKanjiDetailsData } from './KanjiDetails.reducer';
+import { getKanjiDetails } from './KanjiDetails.reducer';
 import selector from './KanjiDetails.selector';
 
 const KanjiDetails = (props) => {
@@ -71,7 +71,7 @@ KanjiDetails.defaultProps = {
 };
 
 const mapDispatchToProps = {
-  getKanjiDetails: getKanjiDetailsData
+  getKanjiDetails
 };
 
 export default connect(selector, mapDispatchToProps)(KanjiDetails);

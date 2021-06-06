@@ -1,4 +1,4 @@
-import vocab from '@data/vocabulary.json';
+import vocabJson from '@data/vocabulary.json';
 
 import { localStorageKeyVerbs, FILTERS_IDS } from '@config/constants';
 
@@ -49,26 +49,28 @@ export default function(state = initialState, action) {
   }
 }
 
-export const getVerbs = () => {
-  const array = vocab;
-  const verbs = array.filter((el) => el.verb);
+const getVerbsAction = (payload) => ({
+  type: actionTypes.GET_VERBS,
+  payload
+});
 
-  return {
-    type: actionTypes.GET_VERBS,
-    payload: verbs
-  };
-};
-
-export const setFilters = (payload) => ({
+const setFiltersAction = (payload) => ({
   type: actionTypes.VERBS_SET_FILTERS,
   payload
 });
+
+export const getVerbs = () => (dispatch) => {
+  const array = vocabJson;
+  const verbs = array.filter((el) => el.verb);
+
+  dispatch(getVerbsAction(verbs));
+};
 
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Verbs;
 
   setChangeFilters(filter, selectedFilters, localStorageKeyVerbs);
 
-  dispatch(setFilters(selectedFilters));
+  dispatch(setFiltersAction(selectedFilters));
   dispatch(getVerbs());
 };

@@ -10,7 +10,7 @@ import getVocabSpecificReading from '@utils/getVocabSpecificReading';
 import Loader from '@components/ui/Loader';
 import VocabularyDetailsComponent from '@components/VocabularyDetails';
 
-import { getVocabularyDetailsData } from './VocabularyDetails.reducer';
+import { getVocabularyDetails } from './VocabularyDetails.reducer';
 import selector from './VocabularyDetails.selector';
 
 const VocabularyDetails = (props) => {
@@ -25,7 +25,7 @@ const VocabularyDetails = (props) => {
   useEffect(() => {
     setName(getProperKanji(props.name));
 
-    props.getVocabularyDetailsData(name, props.name, getVocabSpecificReading(props.name));
+    props.getVocabularyDetails(name, props.name, getVocabSpecificReading(props.name));
   }, [props.name]);
 
   return !props.loading ? (
@@ -52,7 +52,7 @@ const VocabularyDetails = (props) => {
 };
 
 VocabularyDetails.propTypes = {
-  getVocabularyDetailsData: PropTypes.func.isRequired,
+  getVocabularyDetails: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   senses: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -90,7 +90,7 @@ VocabularyDetails.defaultProps = {
 };
 
 const mapDispatchToProps = {
-  getVocabularyDetailsData
+  getVocabularyDetails
 };
 
 export default connect(selector, mapDispatchToProps)(VocabularyDetails);

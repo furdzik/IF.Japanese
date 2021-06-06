@@ -1,4 +1,4 @@
-import kanji from '@data/kanji.json';
+import kanjiJson from '@data/kanji.json';
 
 import { localStorageKeyKanji, FILTERS_IDS } from '@config/constants';
 
@@ -49,21 +49,25 @@ export default function(state = initialState, action) {
   }
 }
 
-export const getKanji = () => ({
+const getKanjiAction = (payload) => ({
   type: actionTypes.GET_KANJI,
-  payload: kanji
+  payload
 });
 
-export const setFilters = (payload) => ({
+const setFiltersAction = (payload) => ({
   type: actionTypes.KANJI_SET_FILTERS,
   payload
 });
+
+export const getKanji = () => (dispatch) => {
+  dispatch(getKanjiAction(kanjiJson));
+};
 
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Kanji;
 
   setChangeFilters(filter, selectedFilters, localStorageKeyKanji);
 
-  dispatch(setFilters(selectedFilters));
+  dispatch(setFiltersAction(selectedFilters));
   dispatch(getKanji());
 };

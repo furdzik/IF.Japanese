@@ -1,4 +1,4 @@
-import kanji from '@data/kanji.json';
+import kanjiJson from '@data/kanji.json';
 
 import { fetchKanji, fetchKanjiAlternative } from '@api';
 
@@ -79,28 +79,28 @@ export default function(state = initialState, action) {
   }
 }
 
-const getKanjiDetails = (payload) => ({
+const getKanjiDetailsAction = (payload) => ({
   type: actionTypes.GET_KANJI_DETAILS,
   payload
 });
 
-const getKanjiDetailsInit = () => ({
+const getKanjiDetailsInitAction = () => ({
   type: actionTypes.GET_KANJI_DETAILS_INIT
 });
 
-export const getKanjiDetailsData = (name) => (dispatch) => {
-  dispatch(getKanjiDetailsInit());
+export const getKanjiDetails = (name) => (dispatch) => {
+  dispatch(getKanjiDetailsInitAction());
 
-  const originKanji = kanji.filter((element) => element.kanji === name)[0];
+  const originKanji = kanjiJson.filter((element) => element.kanji === name)[0];
 
   fetchKanji(name)
     .then((details) => {
       if (details.error) {
         fetchKanjiAlternative(name).then((detailsAlternative) => {
-          dispatch(getKanjiDetails({ detailsAlternative, originKanji }));
+          dispatch(getKanjiDetailsAction({ detailsAlternative, originKanji }));
         });
       } else {
-        dispatch(getKanjiDetails({ details, originKanji }));
+        dispatch(getKanjiDetailsAction({ details, originKanji }));
       }
     })
     .catch((error) => {
