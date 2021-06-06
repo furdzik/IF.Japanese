@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
+import Tag from '@components/Tag';
+
 import {
   DetailsWrapper,
   WordHeader,
@@ -11,7 +13,6 @@ import {
   Header,
   SectionWrapper,
   NameWrapper,
-  Tag,
   TagsWrapper,
   CharacterWrapper
 } from './Details.styles.js';

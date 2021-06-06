@@ -38,7 +38,7 @@ const FiltersBox = styled.div`
     background: none;
 
     ${breakpointMixin.laptop`
-      width: 44%;
+      width: 45%;
       background: ${props.theme.colors.secondaryColor};
     `}
   `}

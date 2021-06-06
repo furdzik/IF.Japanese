@@ -8,11 +8,11 @@ import { verbItemShape } from '@types/verbShape';
 import Details from '@components/Details';
 import Modal from '@components/ui/Modal';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
+import Tag from '@components/Tag';
 
 import conjugationMessages from '@components/VerbsListItem/VerbsListItem.messages';
 
 import {
-  Tag,
   ConjugationLink,
   SensesList,
   SensesListItem,
@@ -34,7 +34,7 @@ const VocabularyDetails = (props) => {
 
     if (props.isVerb) {
       tags.push(
-        <Tag verb>
+        <Tag isVerb>
           <ConjugationLink type="button" onClick={() => setConjugationOpen(true)}>
             {intl.formatMessage(messages.conjugationText)}
           </ConjugationLink>

@@ -1,29 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { breakpointMixin } from '@styles/mixins';
-
-const Tag = styled.span`
-  display: inline-block;
-  padding: .3rem 1rem;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.lightGray};
-  & + & {
-    margin-left: 2rem;
-  }
-  ${(props) => props.verb && css`
-    background: ${props.theme.colors.primaryColor};
-    color: ${props.theme.colors.white};
-  `}
-  ${(props) => props.isCommon && css`
-    background: #64ad5b;
-    color: ${props.theme.colors.white};
-  `}
-  ${(props) => props.isJlpt && css`
-    background: #7d88a7;
-    color: ${props.theme.colors.white};
-  `}
-`;
 
 const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
@@ -99,7 +77,6 @@ const AdditionalExplanationWrapper = styled.div`
 `;
 
 export {
-  Tag,
   ConjugationLink,
   SensesList,
   SensesListItem,
