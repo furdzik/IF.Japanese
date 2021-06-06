@@ -9,6 +9,7 @@ import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 import { kanjiShape } from '@types/kanjiShape';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
 
+import Loader from '@components/ui/Loader';
 import Filters from '@components/Filters';
 import Legend from '@components/Legend';
 import KanjiList from '@components/KanjiList';
@@ -33,7 +34,7 @@ const Kanji = (props) => {
     }
   ];
 
-  return props.kanji ? (
+  return !props.loading ? (
     <React.Fragment>
       <Filters
         length={props.kanjiLength}
@@ -47,12 +48,13 @@ const Kanji = (props) => {
       <ProgressBar length={props.kanjiLength} />
       <KanjiList kanji={props.kanji} />
     </React.Fragment>
-  ) : null;
+  ) : <Loader static />;
 };
 
 Kanji.propTypes = {
   changeFilters: PropTypes.func.isRequired,
   getKanji: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
   kanji: kanjiShape,
   kanjiLength: filtersLengthShape,
   selectedFilters: selectedFiltersShape

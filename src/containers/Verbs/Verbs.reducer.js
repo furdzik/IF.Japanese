@@ -11,13 +11,14 @@ import {
 } from '@utils/filters';
 
 const actionTypes = {
+  GET_VERBS_INIT: 'VERBS/GET_VERBS_INIT',
   GET_VERBS: 'VERBS/GET_VERBS',
   VERBS_SET_FILTERS: 'VERBS/SET_FILTERS'
 };
 
 const initialState = {
-  loading: false,
-  verbs: null,
+  loading: true,
+  verbs: [],
   verbsLength: lengthInitialState,
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyVerbs, FILTERS_IDS)
 };
@@ -33,14 +34,24 @@ export default function(state = initialState, action) {
       return {
         ...state,
         verbs: list.all,
-        verbsLength: getLength(list)
+        verbsLength: getLength(list),
+        loading: false
       };
     }
 
     case actionTypes.VERBS_SET_FILTERS: {
       return {
         ...state,
-        selectedFilters: action.payload
+        selectedFilters: action.payload,
+        loading: false
+      };
+    }
+
+    case actionTypes.GET_VERBS_INIT: {
+      return {
+        ...state,
+        ...initialState,
+        loading: true
       };
     }
 
@@ -48,6 +59,10 @@ export default function(state = initialState, action) {
       return state;
   }
 }
+
+const getVerbsInitAction = () => ({
+  type: actionTypes.GET_VERBS_INIT
+});
 
 const getVerbsAction = (payload) => ({
   type: actionTypes.GET_VERBS,
@@ -60,6 +75,8 @@ const setFiltersAction = (payload) => ({
 });
 
 export const getVerbs = () => (dispatch) => {
+  dispatch(getVerbsInitAction());
+
   const array = vocabJson;
   const verbs = array.filter((el) => el.verb);
 

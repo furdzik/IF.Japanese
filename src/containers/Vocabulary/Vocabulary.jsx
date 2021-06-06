@@ -7,6 +7,7 @@ import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 import { vocabShape } from '@types/vocabShape';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
 
+import Loader from '@components/ui/Loader';
 import Filters from '@components/Filters';
 import Legend from '@components/Legend';
 import VocabularyList from '@components/VocabularyList';
@@ -21,7 +22,7 @@ const Vocabulary = (props) => {
     props.getVocabulary();
   }, [props.selectedFilters]);
 
-  return props.vocab ? (
+  return !props.loading ? (
     <React.Fragment>
       <Filters
         changeFilters={props.changeFilters}
@@ -33,12 +34,13 @@ const Vocabulary = (props) => {
       <ProgressBar length={props.vocabLength} />
       <VocabularyList vocab={props.vocab} />
     </React.Fragment>
-  ) : null;
+  ) : <Loader static />;
 };
 
 Vocabulary.propTypes = {
   changeFilters: PropTypes.func.isRequired,
   getVocabulary: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
   selectedFilters: selectedFiltersShape.isRequired,
   vocabLength: filtersLengthShape.isRequired,
   vocab: vocabShape
