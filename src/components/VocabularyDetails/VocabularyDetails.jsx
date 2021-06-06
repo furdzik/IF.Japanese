@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
 import { bunpouTypes } from '@config/constants';
+
 import { verbItemShape } from '@types/verbShape';
 
-import Details from '@components/Details';
 import Modal from '@components/ui/Modal';
+
+import Details from '@components/Details';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 import Tag from '@components/Tag';
 
-import conjugationMessages from '@components/VerbsListItem/VerbsListItem.messages';
+import conjugationMessages from '@utils/defaultMessages/conjugation.messages';
 
 import {
   ConjugationLink,

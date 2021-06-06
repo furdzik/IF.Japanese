@@ -6,7 +6,7 @@ import { mdiChevronRight } from '@mdi/js';
 
 import { flashcardShape, additionalInfoShape } from '@types/flashcardShape';
 
-import defaultMessages from '@utils/default.messages';
+import defaultMessages from '@utils/defaultMessages/default.messages';
 
 import Button from '@components/ui/Button';
 

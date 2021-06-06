@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { List } from './TileWrapper.styles.js';
+import {
+  List
+} from './TileWrapper.styles.js';
 
 const TileWrapper = (props) => (
   <List className={props.className}>

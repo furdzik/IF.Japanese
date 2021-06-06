@@ -2,7 +2,7 @@ import { bunpouTypes, inflectionTypes, verbGroupTypes } from '@config/constants'
 
 import messages from '../VerbConjugation.messages';
 
-export default (bunpou, verbGroup, inflection, teineiKei) => {
+export const getSpecialMain = (bunpou, verbGroup, inflection, teineiKei) => {
   switch (verbGroup) {
     case verbGroupTypes.specialVerb1: {
       switch (bunpou) {

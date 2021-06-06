@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { AnchorWrapper } from './Anchor.styles';
+import {
+  AnchorWrapper
+} from './Anchor.styles';
 
 const Anchor = (props) => (
   <AnchorWrapper

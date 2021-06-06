@@ -2,7 +2,7 @@ import { bunpouTypes, inflectionTypes, verbGroupTypes } from '@config/constants'
 
 import messages from '../VerbConjugation.messages';
 
-export const isSpecialCasePastEnding = (bunpou, verbGroup) => (
+const isSpecialCasePastEnding = (bunpou, verbGroup) => (
   (bunpou !== bunpouTypes.KANOU_KEI
     && bunpou !== bunpouTypes.UKEMI_KEI
     && bunpou !== bunpouTypes.SHIEKI_KEI

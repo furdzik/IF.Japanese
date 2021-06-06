@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { inflectionTypes } from '@config/constants';
+
 import { verbItemShape } from '@types/verbShape';
 
-import shouldDisplayShortForm from './utils/shouldDisplayShortForm';
+import { shouldDisplayShortForm } from './utils';
 
 import {
   Box,

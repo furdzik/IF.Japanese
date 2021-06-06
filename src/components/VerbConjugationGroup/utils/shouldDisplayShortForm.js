@@ -1,6 +1,6 @@
 import { bunpouTypes, verbGroupTypes } from '@config/constants';
 
-export default (bunpou, verbGroup) => (
+export const shouldDisplayShortForm = (bunpou, verbGroup) => (
   bunpou !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI
   || (verbGroup !== verbGroupTypes.group2
     && verbGroup !== verbGroupTypes.specialVerb1

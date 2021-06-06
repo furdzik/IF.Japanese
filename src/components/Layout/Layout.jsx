@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import { objectShape } from '@utils/types/objectShape';
 
+import Container from '@components/ui/Container';
+
 import Menu from '@components/Menu';
 import Header from '@components/Header';
-import Container from '@components/ui/Container';
 import Footer from '@components/Footer';
 
 const Layout = (props) => (

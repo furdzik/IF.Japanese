@@ -1,0 +1,1 @@
+export { shouldDisplayShortForm } from './shouldDisplayShortForm';
