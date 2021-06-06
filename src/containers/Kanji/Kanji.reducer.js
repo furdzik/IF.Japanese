@@ -11,12 +11,13 @@ import {
 } from '@utils/filters';
 
 const actionTypes = {
+  GET_KANJI_INIT: 'KANJI/GET_KANJI_INIT',
   GET_KANJI: 'KANJI/GET_KANJI',
   KANJI_SET_FILTERS: 'KANJI/SET_FILTERS'
 };
 
 const initialState = {
-  loading: false,
+  loading: true,
   kanji: null,
   kanjiLength: lengthInitialState,
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyKanji, FILTERS_IDS)
@@ -33,14 +34,24 @@ export default function(state = initialState, action) {
       return {
         ...state,
         kanji: list.all,
-        kanjiLength: getLength(list)
+        kanjiLength: getLength(list),
+        loading: false
       };
     }
 
     case actionTypes.KANJI_SET_FILTERS: {
       return {
         ...state,
-        selectedFilters: action.payload
+        selectedFilters: action.payload,
+        loading: false
+      };
+    }
+
+    case actionTypes.GET_KANJI_INIT: {
+      return {
+        ...state,
+        ...initialState,
+        loading: true
       };
     }
 
@@ -48,6 +59,10 @@ export default function(state = initialState, action) {
       return state;
   }
 }
+
+const getKanjiInitAction = () => ({
+  type: actionTypes.GET_KANJI_INIT
+});
 
 const getKanjiAction = (payload) => ({
   type: actionTypes.GET_KANJI,
@@ -60,6 +75,7 @@ const setFiltersAction = (payload) => ({
 });
 
 export const getKanji = () => (dispatch) => {
+  dispatch(getKanjiInitAction());
   dispatch(getKanjiAction(kanjiJson));
 };
 

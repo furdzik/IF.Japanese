@@ -8,7 +8,7 @@ const actionTypes = {
 };
 
 const initialState = {
-  loading: false,
+  loading: true,
   level: null,
   known: null,
   inProgress: null,

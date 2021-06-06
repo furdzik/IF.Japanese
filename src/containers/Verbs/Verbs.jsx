@@ -7,6 +7,7 @@ import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 import { vocabShape } from '@types/vocabShape';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
 
+import Loader from '@components/ui/Loader';
 import Filters from '@components/Filters';
 import Legend from '@components/Legend';
 import VerbsList from '@components/VerbsList';
@@ -21,7 +22,7 @@ const Verbs = (props) => {
     props.getVerbs();
   }, [props.selectedFilters]);
 
-  return props.verbs ? (
+  return !props.loading ? (
     <React.Fragment>
       <Filters
         length={props.verbsLength}
@@ -34,19 +35,20 @@ const Verbs = (props) => {
       <ProgressBar length={props.verbsLength} />
       <VerbsList verbs={props.verbs} />
     </React.Fragment>
-  ) : null;
+  ) : <Loader static />;
 };
 
 Verbs.propTypes = {
   changeFilters: PropTypes.func.isRequired,
   getVerbs: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
   selectedFilters: selectedFiltersShape.isRequired,
   verbsLength: filtersLengthShape.isRequired,
   verbs: vocabShape
 };
 
 Verbs.defaultProps = {
-  verbs: null
+  verbs: []
 };
 
 const mapDispatchToProps = {
