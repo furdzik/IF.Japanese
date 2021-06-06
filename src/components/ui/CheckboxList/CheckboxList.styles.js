@@ -3,11 +3,14 @@ import styled, { css } from 'styled-components';
 const CheckboxListWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
   margin: -.5rem;
   padding: 0;
   list-style: none;
+
+  ${(props) => props.isCentered && css`
+    justify-content: center;
+  `}
 
   ${(props) => props.isVertical && css`
     display: block;
@@ -20,7 +23,7 @@ const CheckboxListWrapper = styled.ul`
 
 const ListItem = styled.li`
   max-width: 100%;
-  padding: .5rem;
+  padding: .5rem .5rem 0;
   cursor: pointer;
 `;
 

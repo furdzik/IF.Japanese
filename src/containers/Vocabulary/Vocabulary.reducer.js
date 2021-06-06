@@ -6,7 +6,8 @@ import {
   getSelectedFiltersInitialValues,
   getSelectedFiltersList,
   setChangeFilters,
-  getNotKnownLength
+  getLength,
+  lengthInitialState
 } from '@utils/filters';
 
 const actionTypes = {
@@ -17,11 +18,7 @@ const actionTypes = {
 const initialState = {
   loading: false,
   vocab: null,
-  vocabLength: {
-    known: 0,
-    inProgress: 0,
-    notKnown: 0
-  },
+  vocabLength: lengthInitialState,
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyVocab, FILTERS_IDS)
 };
 
@@ -36,13 +33,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         vocab: list.all,
-        vocabLength: {
-          known: list.knownList.length,
-          inProgress: list.inProgressList.length,
-          nowLearning: list.nowLearningList.length,
-          notKnown: getNotKnownLength(list),
-          all: list.all.length
-        }
+        vocabLength: getLength(list)
       };
     }
 

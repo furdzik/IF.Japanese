@@ -7,6 +7,10 @@ const FooterWrapper = styled.div`
   font-size: 1.2rem;
   color: ${(props) => props.theme.colors.secondaryColorHover};
   text-align: center;
+
+  @media print {
+    display: none;
+  }
 `;
 
 export {

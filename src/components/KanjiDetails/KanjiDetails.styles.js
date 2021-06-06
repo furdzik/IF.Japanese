@@ -1,27 +1,4 @@
-import styled, { css } from 'styled-components';
-
-// @TODO create a new component
-const Tag = styled.span`
-  display: inline-block;
-  padding: .3rem 1rem;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.lightGray};
-  & + & {
-    margin-left: 2rem;
-  }
-  ${(props) => props.verb && css`
-    background: ${props.theme.colors.primaryColor};
-    color: ${props.theme.colors.white};
-  `}
-  ${(props) => props.isCommon && css`
-    background: #64ad5b;
-    color: ${props.theme.colors.white};
-  `}
-  ${(props) => props.isJlpt && css`
-    background: #7d88a7;
-    color: ${props.theme.colors.white};
-  `}
-`;
+import styled from 'styled-components';
 
 const ReadingList = styled.ul`
   margin-top: 2rem;
@@ -101,7 +78,6 @@ const MoreExamplesLink = styled.a`
 `;
 
 export {
-  Tag,
   ReadingList,
   ReadingListItem,
   StrokeWrapper,

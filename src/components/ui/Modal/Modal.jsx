@@ -100,7 +100,6 @@ const Modal = (props) => {
           aria-labelledby="modalHeaderText"
           aria-describedby="modalContainer"
           onClick={handleModalClick}
-          isMobileFilter={props.isMobileFilter}
         >
           {
             !props.nodeHeader && props.header ? (
@@ -127,7 +126,6 @@ const Modal = (props) => {
             ) : null
           }
           <ModalContent
-            isMobileFilter={props.isMobileFilter}
             isOnlyMobile={props.isOnlyMobile}
             headerFooterHeight={headerFooterHeight}
           >
@@ -162,7 +160,6 @@ Modal.propTypes = {
     PropTypes.node
   ]),
   header: PropTypes.string,
-  isMobileFilter: PropTypes.bool,
   isOnlyMobile: PropTypes.bool,
   onClose: PropTypes.func
 };
@@ -170,7 +167,6 @@ Modal.propTypes = {
 Modal.defaultProps = {
   className: '',
   header: null,
-  isMobileFilter: false,
   isOnlyMobile: false,
   footer: null,
   onClose: () => {}

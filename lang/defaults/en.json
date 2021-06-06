@@ -1,6 +1,6 @@
 {
-  "src.utils.all": "全部: ",
-  "src.utils.inProgress": "発展中",
+  "src.utils.all": "全部",
+  "src.utils.inProgress": "始めた",
   "src.utils.known": "知っている",
   "src.utils.n1": "N1",
   "src.utils.n2": "N2",

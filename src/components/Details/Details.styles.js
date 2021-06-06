@@ -8,6 +8,7 @@ const DetailsWrapper = styled.div`
 
 const WordHeader = styled.div`
   display: flex;
+  flex-direction: column;
   margin-bottom: 3rem;
   padding: 1.6rem 2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
@@ -31,6 +32,10 @@ const WordHeader = styled.div`
     padding-bottom: 1.4rem;
     color: ${props.theme.colors.white};
   `}
+
+  ${breakpointMixin.landscapePhone`
+    flex-direction: row;
+  `}
 `;
 
 const WordHeaderSeparator = styled.span`
@@ -40,12 +45,15 @@ const WordHeaderSeparator = styled.span`
 
 const JishoLink = styled.a`
   display: inline-block;
-  margin-left: auto;
   font-weight: 200;
   color: ${(props) => props.theme.colors.white};
 
   ${(props) => props.notKnow && css`
     color: ${props.theme.colors.black};
+  `}
+
+  ${breakpointMixin.landscapePhone`
+    margin-left: auto;
   `}
 `;
 
@@ -99,9 +107,6 @@ const SectionWrapper = styled.div`
 
 const Header = styled.h2`
   margin-bottom: 2rem;
-  ${(props) => !props.smallMargin && css`
-    margin-bottom: 4rem;
-  `}
 `;
 
 const NameWrapper = styled.div`

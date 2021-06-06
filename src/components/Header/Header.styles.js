@@ -3,6 +3,10 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   padding: 2rem 0;
   background: ${(props) => props.theme.colors.lightGray};
+
+  @media print {
+    display: none;
+  }
 `;
 
 const Title = styled.h1`

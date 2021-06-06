@@ -19,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
   html {
     background: ${(props) => props.theme.colors.lightGray};
     font-size: 62.5%;
+
+    @media print {
+      background: none;
+    }
   }
   body {
     box-sizing: border-box;

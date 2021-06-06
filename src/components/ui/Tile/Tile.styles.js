@@ -18,11 +18,14 @@ const ListItem = styled.div`
   `};
 
   @media print {
-    & {
+    && {
       display: inline-block;
+      min-width: 4rem;
       height: 3.5rem;
       margin: .5rem .5rem;
       padding: .5rem .5rem;
+      line-height: 1.2;
+      text-align: center;
       page-break-inside: avoid;
       &::before {
         display: none;
@@ -110,7 +113,7 @@ const ListItem = styled.div`
 
   ${(props) => props.noOrder && css`
     order: initial !important;
-  `}
+  `};
 `;
 
 export {

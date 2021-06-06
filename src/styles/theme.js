@@ -12,6 +12,9 @@ export default {
     notKnown: colors.secondaryColor
   },
   layout: {
-    borderRadius: '.4rem'
+    borderRadius: '.4rem',
+    containerWidth: '128rem',
+    padding: '0 2rem',
+    mobilePadding: '0 1rem'
   }
 };

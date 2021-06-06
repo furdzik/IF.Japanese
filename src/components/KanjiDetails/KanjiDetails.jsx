@@ -5,9 +5,9 @@ import { useIntl } from 'react-intl';
 import { objectShape } from '@utils/types/objectShape';
 
 import Details from '@components/Details';
+import Tag from '@components/Tag';
 
 import {
-  Tag,
   ReadingList,
   ReadingListItem,
   StrokeWrapper,
