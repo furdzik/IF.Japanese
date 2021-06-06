@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -23,17 +23,13 @@ const Wrapper = styled.div`
 const LegendList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   font-size: 1.6rem;
+  list-style: none;
 
   ${breakpointMixin.portraitTablet`
     justify-content: space-between;
     font-size: 1.8rem;
   `}
-
-  @media print {
-
-  }
 `;
 
 const LegendItem = styled.li`

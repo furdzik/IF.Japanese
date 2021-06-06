@@ -6,8 +6,8 @@ import { breakpointMixin } from '@styles/mixins';
 const BoxList = styled.ul`
   margin: 0 -3rem;
   padding: 0;
-  list-style: none;
   text-align: center;
+  list-style: none;
 
   ${breakpointMixin.portraitTablet`
     display: flex;
@@ -16,8 +16,8 @@ const BoxList = styled.ul`
 
 const BoxItem = styled.li`
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: 0 3rem 3rem;
   border: 2px solid ${(props) => props.theme.colors.black};
   border-radius: ${(props) => props.theme.layout.borderRadius};

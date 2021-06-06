@@ -20,8 +20,8 @@ const ListItem = styled.div`
   @media print {
     && {
       display: inline-block;
-      height: 3.5rem;
       min-width: 4rem;
+      height: 3.5rem;
       margin: .5rem .5rem;
       padding: .5rem .5rem;
       line-height: 1.2;
