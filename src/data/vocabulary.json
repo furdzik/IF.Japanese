@@ -6534,7 +6534,12 @@
     "inProgress": false,
     "nowLearning": true,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "折",
+      "verbGroup": "ru",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "規制",

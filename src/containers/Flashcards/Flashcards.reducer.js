@@ -60,22 +60,22 @@ export default function(state = initialState, action) {
   }
 }
 
-export const getFlashcardInit = () => ({
+const getFlashcardInitAction = () => ({
   type: actionTypes.GET_FLASHCARD_INIT
 });
 
-export const getFlashcard = (data) => ({
+const getFlashcardAction = (data) => ({
   type: actionTypes.GET_FLASHCARD,
   payload: data
 });
 
-export const setFilters = (payload) => ({
+const setFiltersAction = (payload) => ({
   type: actionTypes.FLASHCARD_SET_FILTERS,
   payload
 });
 
-export const getFlashcardFn = () => (dispatch, getStore) => {
-  dispatch(getFlashcardInit());
+export const getFlashcard = () => (dispatch, getStore) => {
+  dispatch(getFlashcardInitAction());
   const { selectedFilters } = getStore().Flashcards;
 
   const list = getSelectedFiltersList(vocabJson, selectedFilters, FILTERS_IDS);
@@ -90,7 +90,7 @@ export const getFlashcardFn = () => (dispatch, getStore) => {
         vocab: randomVocab.vocab
       };
 
-      dispatch(getFlashcard({
+      dispatch(getFlashcardAction({
         list,
         flashcard,
         additionalInfo: randomVocab
@@ -106,6 +106,6 @@ export const changeFilters = (filter) => (dispatch, getStore) => {
 
   setChangeFilters(filter, selectedFilters, localStorageKeyFlashcards);
 
-  dispatch(setFilters(selectedFilters));
-  dispatch(getFlashcardFn());
+  dispatch(setFiltersAction(selectedFilters));
+  dispatch(getFlashcard());
 };

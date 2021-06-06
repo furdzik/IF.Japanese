@@ -12,7 +12,7 @@ import Legend from '@components/Legend';
 import ProgressBar from '@components/ProgressBar';
 import FlashcardsComponent from '@components/Flashcards';
 
-import { getFlashcardFn, changeFilters } from './Flashcards.reducer';
+import { getFlashcard, changeFilters } from './Flashcards.reducer';
 
 import selector from './Flashcards.selector';
 
@@ -59,7 +59,7 @@ Flashcards.defaultProps = {
 };
 
 const mapDispatchToProps = {
-  getFlashcard: getFlashcardFn,
+  getFlashcard,
   changeFilters
 };
 

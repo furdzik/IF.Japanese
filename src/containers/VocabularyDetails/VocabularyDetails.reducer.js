@@ -1,4 +1,4 @@
-import vocab from '@data/vocabulary.json';
+import vocabJson from '@data/vocabulary.json';
 
 import { fetchJisho } from '@api';
 
@@ -72,23 +72,23 @@ export default function(state = initialState, action) {
   }
 }
 
-const getVocabularyDetails = (vocabDetails) => ({
+const getVocabularyDetailsAction = (payload) => ({
   type: actionTypes.GET_VOCAB_DETAILS,
-  payload: vocabDetails
+  payload
 });
 
-const getVocabularyDetailsInit = () => ({
+const getVocabularyDetailsInitAction = () => ({
   type: actionTypes.GET_VOCAB_DETAILS_INIT
 });
 
-const getMeaning = (response, name, vocabTrueName) => (dispatch) => vocab.forEach((el) => {
+const getMeaning = (response, name, vocabTrueName) => (dispatch) => vocabJson.forEach((el) => {
   if (el.vocab === name || (vocabTrueName && el.vocab === vocabTrueName)) {
-    dispatch(getVocabularyDetails({ name, vocab: el, details: response }));
+    dispatch(getVocabularyDetailsAction({ name, vocab: el, details: response }));
   }
 });
 
-export const getVocabularyDetailsData = (name, url, vocabTrueName) => (dispatch) => {
-  dispatch(getVocabularyDetailsInit());
+export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => {
+  dispatch(getVocabularyDetailsInitAction());
 
   const kanjiMeaning = url.split(URL_SEPARATOR)[1];
 
