@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import { useIntl } from 'react-intl';
 
 import { FILTERS_IDS } from '@config/constants';
-import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import { kanjiShape } from '@types/kanjiShape';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
+
+import { filterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import Loader from '@components/ui/Loader';
 import Filters from '@components/Filters';
@@ -15,9 +16,9 @@ import Legend from '@components/Legend';
 import KanjiList from '@components/KanjiList';
 import ProgressBar from '@components/ProgressBar';
 
+import selector from './Kanji.selector';
 import { getKanji, changeFilters } from './Kanji.reducer';
 
-import selector from './Kanji.selector';
 import messages from './Kanji.messages';
 
 const Kanji = (props) => {

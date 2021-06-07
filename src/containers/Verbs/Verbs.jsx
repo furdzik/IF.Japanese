@@ -2,20 +2,20 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { filterLabels, secondaryFilterLabels } from '@utils/filters';
-
 import { vocabShape } from '@types/vocabShape';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
 
+import { filterLabels, secondaryFilterLabels } from '@utils/filters';
+
 import Loader from '@components/ui/Loader';
+
 import Filters from '@components/Filters';
 import Legend from '@components/Legend';
 import VerbsList from '@components/VerbsList';
 import ProgressBar from '@components/ProgressBar';
 
-import { getVerbs, changeFilters } from './Verbs.reducer';
-
 import selector from './Verbs.selector';
+import { getVerbs, changeFilters } from './Verbs.reducer';
 
 const Verbs = (props) => {
   useEffect(() => {

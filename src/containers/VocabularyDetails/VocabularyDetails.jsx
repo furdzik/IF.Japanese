@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { URL_SEPARATOR } from '@config/constants';
+
 import { objectShape } from '@types/objectShape';
 
-import getVocabSpecificReading from '@utils/getVocabSpecificReading';
+import { getVocabSpecificReading } from '@utils/vocabulary';
 
 import Loader from '@components/ui/Loader';
+
 import VocabularyDetailsComponent from '@components/VocabularyDetails';
 
-import { getVocabularyDetails } from './VocabularyDetails.reducer';
 import selector from './VocabularyDetails.selector';
+import { getVocabularyDetails } from './VocabularyDetails.reducer';
 
 const VocabularyDetails = (props) => {
   const getProperKanji = (name) => {

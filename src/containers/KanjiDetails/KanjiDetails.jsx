@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 
 import { objectShape } from '@utils/types/objectShape';
 
-import KanjiDetailsComponent from '@components/KanjiDetails';
 import Loader from '@components/ui/Loader';
 
-import { getKanjiDetails } from './KanjiDetails.reducer';
+import KanjiDetailsComponent from '@components/KanjiDetails';
+
 import selector from './KanjiDetails.selector';
+import { getKanjiDetails } from './KanjiDetails.reducer';
 
 const KanjiDetails = (props) => {
   useEffect(() => {
