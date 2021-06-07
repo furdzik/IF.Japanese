@@ -3252,7 +3252,8 @@
   {
     "kanji": "街",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 1
   },

@@ -18088,7 +18088,8 @@
   {
     "vocab": "復習",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -18255,9 +18256,10 @@
     "level": 3
   },
   {
-    "vocab": "お蔭",
+    "vocab": "お陰",
     "known": false,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -19275,7 +19277,8 @@
   {
     "vocab": "記憶",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21323,7 +21326,8 @@
   {
     "vocab": "単語",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -28808,7 +28812,7 @@
   {
     "vocab": "テンポ",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -29079,7 +29083,7 @@
   {
     "vocab": "直線",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -31580,6 +31584,7 @@
     "vocab": "神様",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -32972,7 +32977,7 @@
   {
     "vocab": "街角",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -36941,8 +36946,9 @@
   },
   {
     "vocab": "プラスチック",
-    "known": false,
+    "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -37287,6 +37293,7 @@
     "vocab": "お陰様で",
     "known": false,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -39104,5 +39111,13 @@
     "nowLearning": true,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "連休",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
   }
 ]
