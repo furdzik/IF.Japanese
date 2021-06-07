@@ -5682,9 +5682,9 @@
   },
   {
     "vocab": "秋",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "nowLearning": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
@@ -38156,7 +38156,7 @@
   {
     "vocab": "落とし物",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
