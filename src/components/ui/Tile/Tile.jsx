@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ListItem } from './Tile.styles.js';
+import {
+  ListItem
+} from './Tile.styles.js';
 
 const Tile = (props) => (
   <ListItem

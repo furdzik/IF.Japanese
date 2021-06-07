@@ -1,4 +1,3 @@
-import componentsEn from './components/en.json';
-import defaultsEn from './defaults/en.json';
+import generatedEn from './generated/en.json';
 
-export const english = { ...componentsEn, ...defaultsEn };
+export const english = { ...generatedEn };

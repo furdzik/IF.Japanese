@@ -7,17 +7,23 @@ import React, {
 } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+
 import { ThemeContext } from 'styled-components';
-import OutsideClickHandler from 'react-outside-click-handler';
 
 import Icon from '@mdi/react';
 import { mdiClose } from '@mdi/js';
 
-import _throttle from 'lodash/throttle';
+import OutsideClickHandler from 'react-outside-click-handler';
+
+import { ESC_CODE } from '@config/constants';
 
 import Loader from '@components/ui/Loader';
 
-import { SAFARI_BAR_VH, VIEWPORT_SIZE_CHECKING_DELAY } from '@config/constants';
+import {
+  calculateViewportHeight,
+  checkHeaderFooterHeight,
+  throttledCalculateViewportHeight
+} from './utils';
 
 import {
   LayerWrapper,
@@ -29,43 +35,17 @@ import {
   ModalFooter
 } from './Modal.styles';
 
-const ESC_CODE = 27;
-
-// @WORKAROUND: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-// function calculates css --vh variable (fix to mobile vh unit)
-const calculateViewportHeight = () => {
-  const vh = window.innerHeight * SAFARI_BAR_VH;
-  window.document.documentElement.style.setProperty('--vh', `${vh}px`);
-};
-
-const throttledCalculateViewportHeight = _throttle(
-  calculateViewportHeight,
-  VIEWPORT_SIZE_CHECKING_DELAY
-);
-
 const Modal = (props) => {
   const modalHeaderRef = useRef(null);
   const modalFooterRef = useRef(null);
   const [headerFooterHeight, setHeaderFooterHeight] = useState(0);
 
-  const checkHeaderFooterHeight = () => {
-    if (modalHeaderRef.current || modalFooterRef.current) {
-      const modalHeaderHeight = modalHeaderRef.current ? modalHeaderRef.current.clientHeight : 0;
-      const modalFooterHeight = modalFooterRef.current ? modalFooterRef.current.clientHeight : 0;
-      setHeaderFooterHeight(
-        modalHeaderHeight + modalFooterHeight
-      );
-    } else {
-      setHeaderFooterHeight(0);
-    }
-  };
-
   const useHandleResize = useCallback(() => {
-    checkHeaderFooterHeight();
-  });
+    checkHeaderFooterHeight(modalHeaderRef, modalFooterRef, setHeaderFooterHeight);
+  }, []);
 
   useEffect(() => {
-    checkHeaderFooterHeight();
+    checkHeaderFooterHeight(modalHeaderRef, modalFooterRef, setHeaderFooterHeight);
     window.addEventListener('resize', useHandleResize);
     return () => window.removeEventListener('resize', useHandleResize);
   }, []);

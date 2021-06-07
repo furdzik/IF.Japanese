@@ -1,8 +1,9 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 
-import defaultMessages from '@utils/default.messages';
 import { filtersLengthShape } from '@types/filtersShape';
+
+import defaultMessages from '@utils/defaultMessages/default.messages';
 
 import {
   Wrapper,

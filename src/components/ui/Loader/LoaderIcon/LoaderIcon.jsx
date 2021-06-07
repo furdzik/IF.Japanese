@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { Svg, Circle } from './LoaderIcon.styles';
+import {
+  Svg,
+  Circle
+} from './LoaderIcon.styles';
 
 const LoaderIcon = () => (
   <Svg

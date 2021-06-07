@@ -1,0 +1,1 @@
+export { getRandomVocab } from './getRandomVocab';

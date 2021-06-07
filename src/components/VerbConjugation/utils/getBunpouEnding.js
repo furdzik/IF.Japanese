@@ -37,7 +37,7 @@ const getJishouKeiEnding = (bunpou, verbGroup, inflection, isPolite) => {
   }
 };
 
-export default (bunpou, verbGroup, inflection, isPolite) => {
+export const getBunpouEnding = (bunpou, verbGroup, inflection, isPolite) => {
   switch (bunpou) {
     case bunpouTypes.JISHOU_KEI: {
       return getJishouKeiEnding(bunpou, verbGroup, inflection, isPolite);

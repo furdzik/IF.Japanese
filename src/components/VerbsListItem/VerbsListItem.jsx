@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
 
-import Collapsible from 'react-collapsible';
-
 import Icon from '@mdi/react';
 import { mdiChevronDown, mdiChevronUp } from '@mdi/js';
+
+import Collapsible from 'react-collapsible';
 
 import { bunpouTypes, verbType } from '@config/constants';
 
 import { vocabItemShape } from '@types/vocabShape';
+
+import conjugationMessages from '@utils/defaultMessages/conjugation.messages';
 
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
@@ -121,7 +123,7 @@ const VerbsListItem = (props) => {
         <BoxWrapper>
           <VerbConjugationGroup
             showLabel={collapsed}
-            label={intl.formatMessage(messages[`${bunpouTypes.JISHOU_KEI}Label`])}
+            label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JISHOU_KEI}Label`])}
             verb={props.item.verb}
             bunpou={[bunpouTypes.JISHOU_KEI]}
             teineiKei
@@ -136,7 +138,7 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.KANOU_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.KANOU_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.KANOU_KEI]}
               teineiKei
@@ -144,7 +146,7 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.TAI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.TAI_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.TAI_KEI]}
               teineiKei
@@ -152,7 +154,7 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.TE_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.TE_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.TE_KEI]}
               noPast
@@ -160,7 +162,7 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.IKOU_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.IKOU_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.IKOU_KEI]}
               noPast
@@ -169,7 +171,7 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.MEIREI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.MEIREI_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.MEIREI_KEI]}
               noPast
@@ -178,7 +180,7 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.JOUKEN_BA_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JOUKEN_BA_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.JOUKEN_BA_KEI]}
               noPast
@@ -186,7 +188,7 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.JOUKEN_TARA_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JOUKEN_TARA_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.JOUKEN_TARA_KEI]}
               noPast
@@ -194,21 +196,21 @@ const VerbsListItem = (props) => {
 
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.UKEMI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.UKEMI_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.UKEMI_KEI]}
               teineiKei
             />
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.SHIEKI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.SHIEKI_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[bunpouTypes.SHIEKI_KEI]}
               teineiKei
             />
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(messages[`${bunpouTypes.SHIEKIUKEMI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.SHIEKIUKEMI_KEI}Label`])}
               verb={props.item.verb}
               bunpou={[
                 bunpouTypes.SHIEKIUKEMI_KEI,

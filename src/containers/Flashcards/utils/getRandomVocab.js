@@ -1,4 +1,4 @@
-export default (vocab) => {
+export const getRandomVocab = (vocab) => {
   const MIN_INDEX = 0;
   const MAX_INDEX = vocab.length - 1;
 

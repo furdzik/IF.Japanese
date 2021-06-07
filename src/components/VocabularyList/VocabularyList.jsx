@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import getOnlyVocab from '@utils/getOnlyVocab';
 import { vocabShape } from '@types/vocabShape';
+
+import { getOnlyVocab } from '@utils/vocabulary';
 
 import TileWrapper from '@components/ui/TileWrapper';
 import Tile from '@components/ui/Tile';

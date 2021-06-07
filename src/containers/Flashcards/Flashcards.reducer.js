@@ -12,7 +12,7 @@ import {
   lengthInitialState
 } from '@utils/filters';
 
-import getRandomVocab from './utils/getRandomVocab';
+import { getRandomVocab } from './utils';
 
 const actionTypes = {
   GET_FLASHCARD_INIT: 'FLASHCARDS/GET_FLASHCARD_INIT',

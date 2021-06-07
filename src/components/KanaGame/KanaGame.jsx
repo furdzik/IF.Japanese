@@ -3,8 +3,7 @@ import { useIntl } from 'react-intl';
 
 import { ENTER_CODE } from '@config/constants';
 
-import getRandomKana from './utils/getRandomKana';
-import isAnswerCorrect from './utils/isAnswerCorrect';
+import { getRandomKana, isAnswerCorrect } from './utils';
 
 import {
   Wrapper,

@@ -1,5 +1,5 @@
 import { FILTERS_IDS } from '@config/constants';
-import defaultMessages from '@utils/default.messages';
+import defaultMessages from '@utils/defaultMessages/default.messages';
 
 export const filterLabels = [
   {

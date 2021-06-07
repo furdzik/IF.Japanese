@@ -1,6 +1,6 @@
 import kana from '@data/kana.json';
 
-export default (answer, questionedKana) => {
+export const isAnswerCorrect = (answer, questionedKana) => {
   const questionedKanaElement = kana.filter(
     (el) => el.kana === questionedKana
   )[0];

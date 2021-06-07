@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { vocabItemShape } from '@types/vocabShape';
 
-import getConjugation from './utils/getConjugation';
+import { getConjugation } from './utils';
 
 const VerbConjugation = (props) => (
   <div className={props.className}>

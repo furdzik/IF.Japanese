@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 
+import { Link } from 'react-router-dom';
+
 import Container from '@components/ui/Container';
+
 import {
   Wrapper,
   Title
