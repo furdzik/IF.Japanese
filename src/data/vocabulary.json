@@ -7834,8 +7834,9 @@
   },
   {
     "vocab": "手伝う",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4,
     "verb": {
