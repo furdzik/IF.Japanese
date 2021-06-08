@@ -22,7 +22,7 @@ This repository presents frontend application for my Japanese APP
 
 ---
 
-## Data
+## Data schema description
 
 ### Vocab
 
@@ -30,7 +30,7 @@ This repository presents frontend application for my Japanese APP
 
 - general schema:
 
-```json
+```
   {
     "vocab": "降る",
     "meaning": "ふる", // when 2 readings
@@ -55,7 +55,7 @@ This repository presents frontend application for my Japanese APP
 
 - suru verb schema
 
-```json
+```
 {
     "vocab": "集中",
     ...

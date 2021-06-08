@@ -3471,9 +3471,9 @@
   },
   {
     "vocab": "春",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "nowLearning": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -4717,7 +4717,8 @@
   {
     "vocab": "動作",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -8122,7 +8123,8 @@
   {
     "vocab": "習慣",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -11153,7 +11155,8 @@
   {
     "vocab": "賛成",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "antonyms": "反対",
     "level": 3
@@ -16230,7 +16233,8 @@
   {
     "vocab": "反対",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "antonyms": "賛成",
     "pitch": "",
     "level": 4
@@ -17507,10 +17511,16 @@
   },
   {
     "vocab": "似る",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "似",
+      "verbGroup": "2",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "戻る",
@@ -17589,14 +17599,24 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "回",
+      "verbGroup": "ru",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "間違える",
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "間違え",
+      "verbGroup": "2",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "捨てる",
@@ -17604,7 +17624,12 @@
     "inProgress": false,
     "pitch": "",
     "antonyms": "拾う",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "捨て",
+      "verbGroup": "2",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "確り",
@@ -17618,7 +17643,12 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "育て",
+      "verbGroup": "2",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "褒める",
@@ -18454,8 +18484,9 @@
   },
   {
     "vocab": "どんどん",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -20150,7 +20181,7 @@
   {
     "vocab": "伝統",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -20609,6 +20640,7 @@
     "vocab": "双子",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -20828,7 +20860,12 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "守",
+      "verbGroup": "ru",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "只",
@@ -21409,6 +21446,7 @@
     "vocab": "状態",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21605,7 +21643,7 @@
   {
     "vocab": "環境",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -21896,7 +21934,12 @@
     "known": false,
     "inProgress": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "育",
+      "verbGroup": "tsu",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "現代",
@@ -23260,7 +23303,7 @@
   {
     "vocab": "範囲",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -25381,8 +25424,14 @@
     "vocab": "叩く",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "叩",
+      "verbGroup": "ku",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "似合う",
@@ -26193,13 +26242,7 @@
     "vocab": "札",
     "known": false,
     "inProgress": false,
-    "pitch": "",
-    "level": 3
-  },
-  {
-    "vocab": "〜札",
-    "known": false,
-    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -31279,6 +31322,7 @@
     "vocab": "期限",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39140,5 +39184,29 @@
     "nowLearning": true,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "近づく",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "限定",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "申し出",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
   }
 ]
