@@ -14371,8 +14371,9 @@
   },
   {
     "vocab": "重い",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -17726,7 +17727,8 @@
   {
     "vocab": "凄い",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -19916,6 +19918,7 @@
     "vocab": "酸素",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -34892,6 +34895,7 @@
     "vocab": "末っ子",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
