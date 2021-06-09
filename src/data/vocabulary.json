@@ -8327,9 +8327,9 @@
   },
   {
     "vocab": "調査",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "nowLearning": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -16328,7 +16328,8 @@
   {
     "vocab": "訪ねる",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4,
     "verb": {
@@ -17225,7 +17226,7 @@
   {
     "vocab": "盛ん",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 4
   },
@@ -20181,7 +20182,8 @@
   {
     "vocab": "伝統",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -20894,7 +20896,12 @@
     "inProgress": false,
     "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "許",
+      "verbGroup": "su",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "帰宅",
@@ -21089,7 +21096,12 @@
     "known": true,
     "inProgress": false,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "出会",
+      "verbGroup": "u",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "完全",
@@ -21366,9 +21378,9 @@
   },
   {
     "vocab": "単語",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "nowLearning": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -22219,6 +22231,7 @@
     "vocab": "様子",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -22527,6 +22540,7 @@
     "vocab": "面倒",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -26047,6 +26061,7 @@
     "vocab": "真似",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -29662,7 +29677,7 @@
   {
     "vocab": "漁業",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 2
   },
@@ -30342,9 +30357,9 @@
   },
   {
     "vocab": "勝負",
-    "known": false,
+    "known": true,
     "inProgress": false,
-    "nowLearning": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -30903,7 +30918,12 @@
     "inProgress": false,
     "nowLearning": true,
     "pitch": "",
-    "level": 2
+    "level": 2,
+    "verb": {
+      "main": "縛",
+      "verbGroup": "ru",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "以降",
@@ -33180,6 +33200,7 @@
     "vocab": "日課",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39103,7 +39124,12 @@
     "inProgress": false,
     "nowLearning": true,
     "pitch": "",
-    "level": 1
+    "level": 1,
+    "verb": {
+      "main": "親し",
+      "verbGroup": "mu",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "圏外",
