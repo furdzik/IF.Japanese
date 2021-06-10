@@ -2560,6 +2560,7 @@
     "kanji": "短",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 2
   },

@@ -14361,7 +14361,8 @@
   {
     "vocab": "暗い",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -17070,8 +17071,9 @@
   },
   {
     "vocab": "帰り",
-    "known": false,
-    "inProgress": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -19672,6 +19674,7 @@
     "vocab": "観客",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -23514,6 +23517,7 @@
     "vocab": "保存",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -25334,7 +25338,8 @@
   {
     "vocab": "夢中",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -26020,7 +26025,7 @@
   {
     "vocab": "途端",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -38044,6 +38049,7 @@
     "vocab": "一斉",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39232,6 +39238,38 @@
     "known": false,
     "inProgress": false,
     "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "加えて",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "画像",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "短気",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "擽ったい",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 1
   }
