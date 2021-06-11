@@ -2357,7 +2357,8 @@
   {
     "vocab": "約",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -12118,7 +12119,8 @@
   {
     "vocab": "昨年",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -18786,7 +18788,8 @@
   {
     "vocab": "理解",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -20849,7 +20852,8 @@
   {
     "vocab": "満足",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21271,7 +21275,8 @@
   {
     "vocab": "旅",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21440,8 +21445,14 @@
     "vocab": "越える",
     "known": false,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "越え",
+      "verbGroup": "2",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "種類",
@@ -21694,6 +21705,7 @@
     "vocab": "手段",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -23567,6 +23579,7 @@
     "vocab": "開始",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -24184,16 +24197,10 @@
     "level": 3
   },
   {
-    "vocab": "〜課",
-    "known": true,
-    "inProgress": false,
-    "pitch": "",
-    "level": 3
-  },
-  {
     "vocab": "課",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -27281,10 +27288,19 @@
   },
   {
     "vocab": "名",
+    "meaning": "な",
     "known": true,
     "inProgress": false,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "名",
+    "meaning": "めい",
+    "known": false,
+    "inProgress": false,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "出来るだけ",
@@ -28308,10 +28324,11 @@
     "level": 3
   },
   {
-    "vocab": "〜度",
+    "vocab": "度",
     "meaning": "ど",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -28453,7 +28470,8 @@
   {
     "vocab": "締め切り",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -32659,6 +32677,7 @@
     "vocab": "定員",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -32995,6 +33014,7 @@
     "vocab": "内線",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39272,5 +39292,93 @@
     "nowLearning": false,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "利用者",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "末日",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "受け付ける",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "区画",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "応募",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "希望者",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "優勢",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "優先",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "問い合わせる",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "下記",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "上記",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   }
 ]
