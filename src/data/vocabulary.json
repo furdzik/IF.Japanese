@@ -9226,7 +9226,8 @@
   {
     "vocab": "社内",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -10976,7 +10977,16 @@
   {
     "vocab": "要求",
     "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 3
+  },
+  {
+    "vocab": "愛情",
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -11012,7 +11022,8 @@
   {
     "vocab": "親",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -15752,6 +15763,7 @@
     "vocab": "講義",
     "known": false,
     "inProgress": false,
+    "nowLerning": true,
     "pitch": "",
     "level": 4
   },
@@ -19682,6 +19694,7 @@
     "vocab": "投票",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -38232,6 +38245,7 @@
     "vocab": "目指す",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39509,5 +39523,29 @@
     "nowLearning": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "理論",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "国際化",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "開発",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
   }
 ]
