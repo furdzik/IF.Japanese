@@ -2129,7 +2129,8 @@
   {
     "kanji": "仕",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 4
   },
@@ -2269,7 +2270,8 @@
   {
     "kanji": "拾",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 2
   },
@@ -4845,6 +4847,7 @@
     "kanji": "件",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },
@@ -5006,6 +5009,7 @@
     "kanji": "在",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },
@@ -5518,6 +5522,7 @@
     "kanji": "任",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 3
   },
@@ -6290,6 +6295,7 @@
     "kanji": "捨",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 2
   },

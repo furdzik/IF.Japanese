@@ -5403,7 +5403,7 @@
   {
     "vocab": "道路",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -9369,6 +9369,7 @@
     "meaning": "め",
     "known": false,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
@@ -16567,7 +16568,8 @@
   {
     "vocab": "値段",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowlearning": true,
     "pitch": "",
     "level": 4
   },
@@ -16613,6 +16615,7 @@
     "vocab": "原因",
     "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -17721,8 +17724,9 @@
   },
   {
     "vocab": "捨てる",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "antonyms": "拾う",
     "level": 4,
@@ -18011,10 +18015,16 @@
   {
     "vocab": "拾う",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "antonyms": "捨てる",
-    "level": 4
+    "level": 4,
+    "verb": {
+      "main": "拾",
+      "verbGroup": "u",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "焼く",
@@ -20433,7 +20443,8 @@
   {
     "vocab": "渋滞",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -21971,7 +21982,7 @@
   {
     "vocab": "全体",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -25625,7 +25636,8 @@
   {
     "vocab": "任せる",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -26327,7 +26339,7 @@
   {
     "vocab": "占める",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "pitch": "",
     "level": 3
   },
@@ -28650,6 +28662,14 @@
     "level": 0
   },
   {
+    "vocab": "通信",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 3
+  },
+  {
     "vocab": "店舗",
     "known": false,
     "inProgress": false,
@@ -30862,6 +30882,7 @@
     "vocab": "売り上げ",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39244,7 +39265,8 @@
   {
     "vocab": "宅配便",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -39526,7 +39548,7 @@
   },
   {
     "vocab": "理論",
-    "known": true,
+    "known": false,
     "inProgress": false,
     "nowLearning": true,
     "pitch": "",
@@ -39545,6 +39567,22 @@
     "known": false,
     "inProgress": false,
     "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "通信販売",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "肺",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 1
   }
