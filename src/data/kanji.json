@@ -58,8 +58,9 @@
   },
   {
     "kanji": "花",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": false,
     "joyo": true,
     "level": 4
   },
@@ -1813,7 +1814,8 @@
   {
     "kanji": "温",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 2
   },
@@ -2886,7 +2888,8 @@
   {
     "kanji": "服",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 4
   },
@@ -7592,7 +7595,8 @@
   {
     "kanji": "暇",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 1
   },
@@ -13202,6 +13206,7 @@
     "kanji": "瓶",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "level": 2
   },
