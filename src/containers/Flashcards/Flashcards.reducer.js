@@ -11,6 +11,7 @@ import {
   getLength,
   lengthInitialState
 } from '@utils/filters';
+import { getOnlyVocab } from '@utils/vocabulary';
 
 import { getRandomVocab } from './utils';
 
@@ -87,7 +88,8 @@ export const getFlashcard = () => (dispatch, getStore) => {
       const flashcard = {
         reading: response.data[0].japanese[0].reading,
         meaning: response.data[0].senses[0].english_definitions.join(', '),
-        vocab: randomVocab.vocab
+        vocab: randomVocab.vocab,
+        link: `/vocab/${randomVocab.meaning ? `${getOnlyVocab(randomVocab.vocab)},${randomVocab.meaning},${randomVocab.vocab}` : randomVocab.vocab}`
       };
 
       dispatch(getFlashcardAction({

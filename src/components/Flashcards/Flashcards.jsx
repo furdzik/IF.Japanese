@@ -78,7 +78,7 @@ const Flashcards = (props) => {
               <MeaningWrapper>{props.flashcard?.meaning}</MeaningWrapper>
               <SeeMoreLink
                 to={
-                  `/vocab/${props.flashcard?.vocab}`
+                  `/vocab/${props.flashcard?.moreLink}`
                 }
                 target="_blank"
               >
