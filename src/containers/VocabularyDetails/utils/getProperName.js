@@ -17,8 +17,8 @@ export const getProperName = (name, type) => {
       return name.indexOf(URL_SEPARATOR) > 0 ? newName[0] : name;
 
     case PROPER_NAME_TYPE.MEANING:
-      return name.indexOf(URL_SEPARATOR) > 0 ? newName[1] : name
-  }
+      return name.indexOf(URL_SEPARATOR) > 0 ? newName[1] : name;
 
-  return name.indexOf(URL_SEPARATOR) > 0 ? newName[0] : name;
+    default: return name;
+  }
 };

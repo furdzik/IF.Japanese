@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { URL_SEPARATOR } from '@config/constants';
-
 import { objectShape } from '@types/objectShape';
 
 import { getVocabSpecificReading } from '@utils/vocabulary';

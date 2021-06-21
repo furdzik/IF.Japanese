@@ -4,7 +4,7 @@ import { fetchJisho } from '@api';
 
 import { URL_SEPARATOR } from '@config/constants';
 
-import { PROPER_NAME_TYPE, getProperName } from "./utils";
+import { PROPER_NAME_TYPE, getProperName } from './utils';
 
 const actionTypes = {
   GET_VOCAB_DETAILS_INIT: 'VOCABULARY/GET_VOCAB_DETAILS_INIT',
@@ -35,7 +35,6 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_VOCAB_DETAILS: {
       const data = action.payload;
-      console.log(data);
 
       const { tags } = data.details;
 
@@ -65,6 +64,7 @@ export default function(state = initialState, action) {
     case actionTypes.GET_VOCAB_DETAILS_INIT: {
       return {
         ...state,
+        ...initialState,
         loading: true
       };
     }
@@ -84,9 +84,13 @@ const getVocabularyDetailsInitAction = () => ({
 });
 
 const getMeaning = (response, name, vocabTrueName, url) => (dispatch) => {
-  const vocab = vocabJson.filter((el) => el.meaning && el.meaning === getProperName(url, PROPER_NAME_TYPE.MEANING) || !el.meaning && el.vocab === getProperName(url, PROPER_NAME_TYPE.KANJI));
+  const vocab = vocabJson.filter((el) => (
+    el.meaning && el.meaning === getProperName(url, PROPER_NAME_TYPE.MEANING)
+  ) || (
+    !el.meaning && el.vocab === getProperName(url, PROPER_NAME_TYPE.KANJI)
+  ));
 
-  dispatch(getVocabularyDetailsAction({name, vocab: vocab[0], details: response}));
+  dispatch(getVocabularyDetailsAction({ name, vocab: vocab[0], details: response }));
 };
 
 export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => {
