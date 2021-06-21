@@ -37,6 +37,7 @@ const Flashcards = (props) => {
         getFlashcard={props.getFlashcard}
         additionalInfo={props.additionalInfo}
         loading={props.loading}
+        error={props.error}
       />
     </React.Fragment>
   );
@@ -48,12 +49,14 @@ Flashcards.propTypes = {
   getFlashcard: PropTypes.func.isRequired,
   selectedFilters: selectedFiltersShape.isRequired,
   additionalInfo: additionalInfoShape,
+  eror: PropTypes.string,
   flashcard: flashcardShape,
   loading: PropTypes.bool
 };
 
 Flashcards.defaultProps = {
   additionalInfo: null,
+  error: null,
   flashcard: null,
   loading: false
 };

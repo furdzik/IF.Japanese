@@ -176,7 +176,8 @@
     "vocab": "一月",
     "meaning": "ひとつき",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -13702,7 +13703,8 @@
   {
     "vocab": "暇",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -14023,7 +14025,8 @@
   {
     "vocab": "横",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },

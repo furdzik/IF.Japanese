@@ -46,52 +46,61 @@ const Flashcards = (props) => {
   return (
     <Wrapper>
       <Title>{intl.formatMessage(messages.title)}</Title>
-      <Box>
-        {
-          isVocabCardVisible ? (
-            <VocabCard onClick={(event) => vocabCardClickHandler(event)}>
-              {
-                !props.loading ? (
-                  <VocabWrapper>{props.flashcard?.vocab}</VocabWrapper>
-                ) : null
-              }
-            </VocabCard>
-          ) : null
-        }
-        {
-          isReadingCardVisible ? (
-            <MeaningCard>
-              <TileStyled
-                known={props.additionalInfo?.known}
-                inProgress={props.additionalInfo?.inProgress}
-                nowLearning={props.additionalInfo?.nowLearning}
-                level={props.additionalInfo?.level}
-                noOrder
-              >
-                {props.flashcard?.vocab}
-              </TileStyled>
-              {
-                props.flashcard?.vocab !== props.flashcard?.reading ? (
-                  <ReadingWrapper>{props.flashcard?.reading}</ReadingWrapper>
-                ) : null
-              }
-              <MeaningWrapper>{props.flashcard?.meaning}</MeaningWrapper>
-              <SeeMoreLink
-                to={
-                  `/vocab/${props.flashcard?.moreLink}`
-                }
-                target="_blank"
-              >
-                {intl.formatMessage(defaultMessages.seeMoreText)}
-                <IconStyled size={1.7} path={mdiChevronRight} />
-              </SeeMoreLink>
-              <Button onClick={(event) => meaningCardClickHandler(event)}>
-                {intl.formatMessage(defaultMessages.next)}
-              </Button>
-            </MeaningCard>
-          ) : null
-        }
-      </Box>
+      {
+        props.error ? (
+          <div>{props.error}</div>
+        ) : null
+      }
+      {
+        !props.error ? (
+          <Box>
+            {
+              isVocabCardVisible ? (
+                <VocabCard onClick={(event) => vocabCardClickHandler(event)}>
+                  {
+                    !props.loading ? (
+                      <VocabWrapper>{props.flashcard?.vocab}</VocabWrapper>
+                    ) : null
+                  }
+                </VocabCard>
+              ) : null
+            }
+            {
+              isReadingCardVisible ? (
+                <MeaningCard>
+                  <TileStyled
+                    known={props.additionalInfo?.known}
+                    inProgress={props.additionalInfo?.inProgress}
+                    nowLearning={props.additionalInfo?.nowLearning}
+                    level={props.additionalInfo?.level}
+                    noOrder
+                  >
+                    {props.flashcard?.vocab}
+                  </TileStyled>
+                  {
+                    props.flashcard?.vocab !== props.flashcard?.reading ? (
+                      <ReadingWrapper>{props.flashcard?.reading}</ReadingWrapper>
+                    ) : null
+                  }
+                  <MeaningWrapper>{props.flashcard?.meaning}</MeaningWrapper>
+                  <SeeMoreLink
+                    to={
+                      `/vocab/${props.flashcard?.moreLink}`
+                    }
+                    target="_blank"
+                  >
+                    {intl.formatMessage(defaultMessages.seeMoreText)}
+                    <IconStyled size={1.7} path={mdiChevronRight} />
+                  </SeeMoreLink>
+                  <Button onClick={(event) => meaningCardClickHandler(event)}>
+                    {intl.formatMessage(defaultMessages.next)}
+                  </Button>
+                </MeaningCard>
+              ) : null
+            }
+          </Box>
+        ) : null
+      }
     </Wrapper>
   );
 };

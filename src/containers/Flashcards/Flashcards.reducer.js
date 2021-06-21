@@ -18,14 +18,16 @@ import { getRandomVocab } from './utils';
 const actionTypes = {
   GET_FLASHCARD_INIT: 'FLASHCARDS/GET_FLASHCARD_INIT',
   GET_FLASHCARD: 'FLASHCARDS/GET_FLASHCARD',
-  FLASHCARD_SET_FILTERS: 'FLASHCARDS/SET_FILTERS'
+  FLASHCARD_SET_FILTERS: 'FLASHCARDS/SET_FILTERS',
+  FLASHCARD_SET_ERROR: 'FLASHCARDS/SET_ERROR'
 };
 
 const initialState = {
   flashcard: null,
   flashcardLength: lengthInitialState,
   additionalInfo: null,
-  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyFlashcards, FILTERS_IDS)
+  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyFlashcards, FILTERS_IDS),
+  error: null
 };
 
 export default function(state = initialState, action) {
@@ -56,6 +58,13 @@ export default function(state = initialState, action) {
       };
     }
 
+    case actionTypes.FLASHCARD_SET_ERROR: {
+      return {
+        ...state,
+        error: action.payload
+      };
+    }
+
     default:
       return state;
   }
@@ -75,11 +84,22 @@ const setFiltersAction = (payload) => ({
   payload
 });
 
+const setErrorAction = (payload) => ({
+  type: actionTypes.FLASHCARD_SET_ERROR,
+  payload
+});
+
 export const getFlashcard = () => (dispatch, getStore) => {
   dispatch(getFlashcardInitAction());
   const { selectedFilters } = getStore().Flashcards;
 
   const list = getSelectedFiltersList(vocabJson, selectedFilters, FILTERS_IDS);
+
+  if (list.all.length === 0) {
+    // @TODO: error as intl - #49
+    dispatch(setErrorAction('nathing to show, change filters'));
+    return;
+  }
 
   const randomVocab = getRandomVocab(list.all);
 
