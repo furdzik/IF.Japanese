@@ -89,7 +89,7 @@ export const getFlashcard = () => (dispatch, getStore) => {
         reading: response.data[0].japanese[0].reading,
         meaning: response.data[0].senses[0].english_definitions.join(', '),
         vocab: randomVocab.vocab,
-        link: `/vocab/${randomVocab.meaning ? `${getOnlyVocab(randomVocab.vocab)},${randomVocab.meaning},${randomVocab.vocab}` : randomVocab.vocab}`
+        moreLink: `${randomVocab.meaning ? `${getOnlyVocab(randomVocab.vocab)},${randomVocab.meaning},${randomVocab.vocab}` : randomVocab.vocab}`
       };
 
       dispatch(getFlashcardAction({

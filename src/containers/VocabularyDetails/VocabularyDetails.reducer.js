@@ -4,6 +4,8 @@ import { fetchJisho } from '@api';
 
 import { URL_SEPARATOR } from '@config/constants';
 
+import { PROPER_NAME_TYPE, getProperName } from "./utils";
+
 const actionTypes = {
   GET_VOCAB_DETAILS_INIT: 'VOCABULARY/GET_VOCAB_DETAILS_INIT',
   GET_VOCAB_DETAILS: 'VOCABULARY/GET_VOCAB_DETAILS'
@@ -33,6 +35,7 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_VOCAB_DETAILS: {
       const data = action.payload;
+      console.log(data);
 
       const { tags } = data.details;
 
@@ -62,7 +65,6 @@ export default function(state = initialState, action) {
     case actionTypes.GET_VOCAB_DETAILS_INIT: {
       return {
         ...state,
-        ...initialState,
         loading: true
       };
     }
@@ -81,11 +83,11 @@ const getVocabularyDetailsInitAction = () => ({
   type: actionTypes.GET_VOCAB_DETAILS_INIT
 });
 
-const getMeaning = (response, name, vocabTrueName) => (dispatch) => vocabJson.forEach((el) => {
-  if (el.vocab === name || (vocabTrueName && el.vocab === vocabTrueName)) {
-    dispatch(getVocabularyDetailsAction({ name, vocab: el, details: response }));
-  }
-});
+const getMeaning = (response, name, vocabTrueName, url) => (dispatch) => {
+  const vocab = vocabJson.filter((el) => el.meaning && el.meaning === getProperName(url, PROPER_NAME_TYPE.MEANING) || !el.meaning && el.vocab === getProperName(url, PROPER_NAME_TYPE.KANJI));
+
+  dispatch(getVocabularyDetailsAction({name, vocab: vocab[0], details: response}));
+};
 
 export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => {
   dispatch(getVocabularyDetailsInitAction());
@@ -96,18 +98,18 @@ export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => 
     .then((response) => {
       if (vocabTrueName) {
         response.data.forEach((kanji) => {
-          const newName = name.replace('〜', '');
+          const newName = name.replace('〜', ''); // @TODO #10 - Change all '〜'
           if (
             (kanji.japanese[0]
               && kanji.japanese[0].word === newName && kanji.japanese[0].reading === kanjiMeaning)
             || (kanji.japanese[1]
             && kanji.japanese[1].word === newName && kanji.japanese[1].reading === kanjiMeaning)
           ) {
-            dispatch(getMeaning(kanji, name, vocabTrueName));
+            dispatch(getMeaning(kanji, name, vocabTrueName, url));
           }
         });
       } else {
-        dispatch(getMeaning(response.data[0], name, vocabTrueName));
+        dispatch(getMeaning(response.data[0], name, vocabTrueName, url));
       }
     })
     .catch((error) => {
