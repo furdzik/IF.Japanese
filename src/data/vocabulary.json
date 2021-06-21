@@ -3924,7 +3924,8 @@
   {
     "vocab": "雑誌",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -4669,7 +4670,8 @@
   {
     "vocab": "橋",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -5926,6 +5928,7 @@
     "vocab": "緑色",
     "known": false,
     "inProgress": false,
+    "noeLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -6692,7 +6695,8 @@
   {
     "vocab": "緑",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -9897,7 +9901,8 @@
   {
     "vocab": "封筒",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -9939,7 +9944,8 @@
   {
     "vocab": "玄関",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -10187,14 +10193,16 @@
   {
     "vocab": "零",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
   {
     "vocab": "立派",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -10264,7 +10272,8 @@
   {
     "vocab": "背広",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -10384,7 +10393,8 @@
   {
     "vocab": "大使館",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -12795,21 +12805,24 @@
   {
     "vocab": "鍵",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
   {
     "vocab": "切符",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
   {
     "vocab": "財布",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -12847,7 +12860,8 @@
   {
     "vocab": "教室",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -12943,7 +12957,8 @@
   {
     "vocab": "喫茶店",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -12971,7 +12986,8 @@
   {
     "vocab": "箸",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -12985,7 +13001,8 @@
   {
     "vocab": "交差点",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -13006,15 +13023,17 @@
   },
   {
     "vocab": "万年筆",
-    "known": false,
+    "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
   {
     "vocab": "豚肉",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -13042,7 +13061,8 @@
   {
     "vocab": "鞄",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -13070,7 +13090,8 @@
   {
     "vocab": "花瓶",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -13098,7 +13119,8 @@
   {
     "vocab": "飴",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -13348,7 +13370,8 @@
   {
     "vocab": "後ろ",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -13694,7 +13717,8 @@
   {
     "vocab": "去年",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -13893,7 +13917,8 @@
   {
     "vocab": "低い",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -14053,6 +14078,7 @@
     "vocab": "縦",
     "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -14141,8 +14167,9 @@
   },
   {
     "vocab": "沢山",
-    "known": false,
-    "inProgress": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
@@ -14401,7 +14428,8 @@
   {
     "vocab": "綺麗",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -14617,7 +14645,8 @@
   {
     "vocab": "狭い",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "antonyms": "広い",
     "level": 5
@@ -14645,7 +14674,8 @@
   {
     "vocab": "煩い",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -14755,7 +14785,8 @@
   {
     "vocab": "お腹",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -14837,7 +14868,8 @@
   {
     "vocab": "葉書",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -15220,7 +15252,8 @@
   {
     "vocab": "一昨日",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -15403,7 +15436,8 @@
   {
     "vocab": "明後日",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -15494,7 +15528,8 @@
   {
     "vocab": "字引",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -27522,7 +27557,7 @@
     "nowLearning": true,
     "pitch": "",
     "level": 0
-  }
+  },
   {
     "vocab": "名様",
     "known": false,
@@ -39359,7 +39394,8 @@
   {
     "vocab": "椅子",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5,
     "additionalExplanation": "椅子の上を立つ。椅子に乗る。"

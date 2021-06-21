@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { URL_SEPARATOR } from '@config/constants';
-
 import { objectShape } from '@types/objectShape';
 
 import { getVocabSpecificReading } from '@utils/vocabulary';
@@ -12,20 +10,16 @@ import Loader from '@components/ui/Loader';
 
 import VocabularyDetailsComponent from '@components/VocabularyDetails';
 
+import { PROPER_NAME_TYPE, getProperName } from './utils';
+
 import selector from './VocabularyDetails.selector';
 import { getVocabularyDetails } from './VocabularyDetails.reducer';
 
 const VocabularyDetails = (props) => {
-  const getProperKanji = (name) => {
-    const newName = name.split(URL_SEPARATOR);
-
-    return name.indexOf(URL_SEPARATOR) > 0 ? newName[0] : name;
-  };
-
-  const [name, setName] = useState(getProperKanji(props.name));
+  const [name, setName] = useState(getProperName(props.name, PROPER_NAME_TYPE.KANJI));
 
   useEffect(() => {
-    setName(getProperKanji(props.name));
+    setName(getProperName(props.name, PROPER_NAME_TYPE.KANJI));
 
     props.getVocabularyDetails(name, props.name, getVocabSpecificReading(props.name));
   }, [props.name]);

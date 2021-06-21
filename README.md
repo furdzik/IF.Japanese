@@ -36,6 +36,7 @@ This repository presents frontend application for my Japanese APP
     "meaning": "ふる", // when 2 readings
     "known": false,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 0,
     "examples": [
