@@ -47,6 +47,7 @@ export default function(state = initialState, action) {
     case actionTypes.GET_FLASHCARD_INIT: {
       return {
         ...state,
+        error: false,
         loading: true
       };
     }

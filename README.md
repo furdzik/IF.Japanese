@@ -69,6 +69,10 @@ This repository presents frontend application for my Japanese APP
 
 ```
 
+## Description
+- **`inProgress`** - probably can say or guess meaning or reading, often confused about one or both (need to say at least 10 times before moving it to `nowLearning`)
+- **`nowLearning`:** - last step of learning, when can very fast read it and say meaning 3 times before can move it to `known`. (If made mistake, move to  `inProgress`)
+- **`known`:** - Can read and know meaning, can use
 
 ---
 
