@@ -1166,8 +1166,9 @@
   },
   {
     "vocab": "牛",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -1747,7 +1748,8 @@
   {
     "vocab": "非難",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 1
   },
@@ -1928,8 +1930,9 @@
   },
   {
     "vocab": "練習",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -2418,7 +2421,8 @@
   {
     "vocab": "話題",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -2855,13 +2859,6 @@
     "nowLearning": true,
     "pitch": "",
     "level": 5
-  },
-  {
-    "vocab": "〜券",
-    "known": false,
-    "inProgress": false,
-    "pitch": "",
-    "level": 3
   },
   {
     "vocab": "官僚",
@@ -3355,7 +3352,8 @@
   {
     "vocab": "服装",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -3510,6 +3508,7 @@
     "vocab": "図書館",
     "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
@@ -3612,7 +3611,8 @@
   {
     "vocab": "通勤",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -3995,6 +3995,7 @@
     "vocab": "自由",
     "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -6266,6 +6267,7 @@
     "vocab": "仲直り",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -7274,13 +7276,6 @@
     "level": 3
   },
   {
-    "vocab": "〜県",
-    "known": true,
-    "inProgress": false,
-    "pitch": "",
-    "level": 0
-  },
-  {
     "vocab": "快速",
     "known": false,
     "inProgress": false,
@@ -7584,8 +7579,9 @@
   },
   {
     "vocab": "論文",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -8458,6 +8454,7 @@
     "vocab": "内容",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -8878,6 +8875,7 @@
     "vocab": "安全",
     "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -9581,6 +9579,7 @@
     "vocab": "確認",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -10075,6 +10074,7 @@
     "vocab": "機械",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -11108,7 +11108,8 @@
   {
     "vocab": "非常",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -12495,6 +12496,7 @@
     "vocab": "優勝",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -12672,8 +12674,9 @@
   },
   {
     "vocab": "動物",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -12702,6 +12705,7 @@
     "vocab": "自転車",
     "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5
   },
@@ -17024,6 +17028,7 @@
   },
   {
     "vocab": "形",
+    "meaning": "かたち",
     "known": true,
     "inProgress": false,
     "pitch": "",
@@ -19122,14 +19127,15 @@
     "vocab": "情報",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
   {
     "vocab": "現在",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -19194,6 +19200,7 @@
     "vocab": "都市",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -19229,6 +19236,7 @@
     "vocab": "発見",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -19311,8 +19319,9 @@
   },
   {
     "vocab": "過去",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -19419,6 +19428,7 @@
     "vocab": "否定",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -20022,8 +20032,8 @@
   {
     "vocab": "単位",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -20101,6 +20111,7 @@
     "vocab": "観光",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3,
     "verb": {
@@ -20175,7 +20186,8 @@
   {
     "vocab": "異常",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -20458,7 +20470,8 @@
   {
     "vocab": "板",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -20550,8 +20563,8 @@
   {
     "vocab": "梅雨",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -20860,16 +20873,10 @@
     "level": 3
   },
   {
-    "vocab": "〜秒",
-    "known": false,
-    "inProgress": true,
-    "pitch": "",
-    "level": 3
-  },
-  {
     "vocab": "県",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21055,8 +21062,9 @@
   },
   {
     "vocab": "心配",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -21103,7 +21111,8 @@
   {
     "vocab": "到着",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "antonyms": "出発",
     "level": 3
@@ -21243,7 +21252,8 @@
   {
     "vocab": "激しい",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -21422,8 +21432,8 @@
   {
     "vocab": "選手",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -21635,6 +21645,7 @@
     "vocab": "不足",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -21832,6 +21843,7 @@
     "vocab": "性格",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -22172,7 +22184,8 @@
   {
     "vocab": "経営",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -23272,16 +23285,16 @@
   {
     "vocab": "代表",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
   {
     "vocab": "代表的",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 0
   },
@@ -23769,7 +23782,8 @@
   {
     "vocab": "共通",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -24132,8 +24146,9 @@
   },
   {
     "vocab": "大会",
-    "known": true,
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -24147,7 +24162,8 @@
   {
     "vocab": "指導",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -24239,7 +24255,8 @@
   {
     "vocab": "成人",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -24604,7 +24621,8 @@
   {
     "vocab": "掲示",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -24618,19 +24636,13 @@
   {
     "vocab": "券",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
   {
     "vocab": "級",
-    "known": false,
-    "inProgress": true,
-    "pitch": "",
-    "level": 3
-  },
-  {
-    "vocab": "〜級",
     "known": false,
     "inProgress": true,
     "pitch": "",
@@ -25470,6 +25482,7 @@
     "vocab": "喋る",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -28587,9 +28600,10 @@
     "level": 3
   },
   {
-    "vocab": "不〜",
-    "known": true,
+    "vocab": "不",
+    "known": false,
     "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -30007,7 +30021,8 @@
   {
     "vocab": "役所",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -30423,7 +30438,8 @@
   {
     "vocab": "省略",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -30459,6 +30475,7 @@
     "vocab": "形容詞",
     "known": false,
     "inProgress": true,
+    "nowLEarning": false,
     "pitch": "",
     "level": 2
   },
@@ -31143,7 +31160,8 @@
   {
     "vocab": "方針",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -31609,6 +31627,14 @@
     "level": 2
   },
   {
+    "vocab": "強気",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
     "vocab": "娯楽",
     "known": false,
     "inProgress": false,
@@ -31745,8 +31771,8 @@
   {
     "vocab": "応援",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -32881,7 +32907,8 @@
   {
     "vocab": "感想",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -32965,7 +32992,8 @@
   {
     "vocab": "カロリー",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -33790,6 +33818,14 @@
     "vocab": "恵まれる",
     "known": false,
     "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "商店",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -38271,14 +38307,16 @@
   {
     "vocab": "下降",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
   {
     "vocab": "芸能",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -39540,8 +39578,8 @@
   {
     "vocab": "帰国",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 0
   },
@@ -39580,8 +39618,8 @@
   {
     "vocab": "近づく",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 1
   },
@@ -39636,8 +39674,8 @@
   {
     "vocab": "利用者",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 0
   },
@@ -39740,8 +39778,8 @@
   {
     "vocab": "理論",
     "known": false,
-    "inProgress": false,
-    "nowLearning": true,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 1
   },
@@ -39872,5 +39910,158 @@
     "nowLearning": true,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "世",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "大都市",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "キュウリ",
+    "special": "胡瓜",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "街",
+    "meaning": "がい",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "導入",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "大幅",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "短縮",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "新入",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "求人",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "我が",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "わが社",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "形",
+    "meaning": "かた",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "形",
+    "meaning": "けい",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "室",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "交える",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1,
+    "verb": {
+      "main": "交え",
+      "verbGroup": "2",
+      "verbType": "transitive"
+    }
+  },
+  {
+    "vocab": "最下",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "推量",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "勤務",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
   }
 ]
