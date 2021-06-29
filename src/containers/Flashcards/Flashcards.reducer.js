@@ -98,7 +98,7 @@ export const getFlashcard = () => (dispatch, getStore) => {
 
   if (list.all.length === 0) {
     // @TODO: error as intl - #49
-    dispatch(setErrorAction('nathing to show, change filters'));
+    dispatch(setErrorAction('Nothing to show, change filters'));
     return;
   }
 

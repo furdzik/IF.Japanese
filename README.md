@@ -35,7 +35,7 @@ This repository presents frontend application for my Japanese APP
     "vocab": "降る",
     "meaning": "ふる", // when 2 readings
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0,

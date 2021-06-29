@@ -1773,6 +1773,7 @@
     "kanji": "運",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "joyo": true,
     "level": 4
   },
@@ -2659,6 +2660,7 @@
     "kanji": "転",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "joyo": true,
     "level": 4
   },
@@ -4328,7 +4330,8 @@
   {
     "kanji": "望",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "joyo": true,
     "level": 3
   },
@@ -4372,7 +4375,8 @@
   {
     "kanji": "民",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "joyo": true,
     "level": 3
   },
