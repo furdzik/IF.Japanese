@@ -103,21 +103,51 @@ export const getFlashcard = () => (dispatch, getStore) => {
   }
 
   const randomVocab = getRandomVocab(list.all);
+  const { vocab, meaning } = randomVocab;
 
-  fetchJisho(randomVocab.meaning || randomVocab.vocab)
+  fetchJisho(
+    randomVocab.meaning
+      ? `${randomVocab.vocab},${randomVocab.meaning},${randomVocab.vocab}`
+      : randomVocab.vocab
+  )
     .then((response) => {
-      const flashcard = {
-        reading: response.data[0].japanese[0].reading,
-        meaning: response.data[0].senses[0].english_definitions.join(', '),
-        vocab: randomVocab.vocab,
-        moreLink: `${randomVocab.meaning ? `${getOnlyVocab(randomVocab.vocab)},${randomVocab.meaning},${randomVocab.vocab}` : randomVocab.vocab}`
-      };
+      // @TODO: refactor as function - see VocabularyDetails.reducer
+      response.data.forEach((kanji) => {
+        if (meaning) {
+          if (
+            (kanji.japanese[0]
+              && kanji.japanese[0].word === vocab && kanji.japanese[0].reading === meaning)
+            || (kanji.japanese[1]
+            && kanji.japanese[1].word === vocab && kanji.japanese[1].reading === meaning)
+          ) {
+            const flashcard = {
+              reading: kanji.japanese[0].reading,
+              meaning: kanji.senses[0].english_definitions.join(', '),
+              vocab: randomVocab.vocab,
+              moreLink: `${randomVocab.meaning ? `${getOnlyVocab(randomVocab.vocab)},${randomVocab.meaning},${randomVocab.vocab}` : randomVocab.vocab}`
+            };
 
-      dispatch(getFlashcardAction({
-        list,
-        flashcard,
-        additionalInfo: randomVocab
-      }));
+            dispatch(getFlashcardAction({
+              list,
+              flashcard,
+              additionalInfo: randomVocab
+            }));
+          }
+        } else {
+          const flashcard = {
+            reading: response.data[0].japanese[0].reading,
+            meaning: response.data[0].senses[0].english_definitions.join(', '),
+            vocab: randomVocab.vocab,
+            moreLink: `${randomVocab.meaning ? `${getOnlyVocab(randomVocab.vocab)},${randomVocab.meaning},${randomVocab.vocab}` : randomVocab.vocab}`
+          };
+
+          dispatch(getFlashcardAction({
+            list,
+            flashcard,
+            additionalInfo: randomVocab
+          }));
+        }
+      });
     })
     .catch((error) => {
       throw new Error(error);

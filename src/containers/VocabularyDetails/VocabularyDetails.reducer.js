@@ -83,7 +83,7 @@ const getVocabularyDetailsInitAction = () => ({
   type: actionTypes.GET_VOCAB_DETAILS_INIT
 });
 
-const getMeaning = (response, name, vocabTrueName, url) => (dispatch) => {
+const getMeaning = (response, name, url) => (dispatch) => {
   const vocab = vocabJson.filter((el) => (
     el.meaning && el.meaning === getProperName(url, PROPER_NAME_TYPE.MEANING)
   ) || (
@@ -101,19 +101,19 @@ export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => 
   fetchJisho(url || name)
     .then((response) => {
       if (vocabTrueName) {
+        // @TODO: refactor as function - see Flashcards.reducer
         response.data.forEach((kanji) => {
-          const newName = name.replace('〜', ''); // @TODO #10 - Change all '〜'
           if (
             (kanji.japanese[0]
-              && kanji.japanese[0].word === newName && kanji.japanese[0].reading === kanjiMeaning)
+              && kanji.japanese[0].word === name && kanji.japanese[0].reading === kanjiMeaning)
             || (kanji.japanese[1]
-            && kanji.japanese[1].word === newName && kanji.japanese[1].reading === kanjiMeaning)
+            && kanji.japanese[1].word === name && kanji.japanese[1].reading === kanjiMeaning)
           ) {
-            dispatch(getMeaning(kanji, name, vocabTrueName, url));
+            dispatch(getMeaning(kanji, name, url));
           }
         });
       } else {
-        dispatch(getMeaning(response.data[0], name, vocabTrueName, url));
+        dispatch(getMeaning(response.data[0], name, url));
       }
     })
     .catch((error) => {

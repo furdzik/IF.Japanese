@@ -63,7 +63,7 @@ const TileStyled = styled(Tile)`
   `}
 
   ${(props) => props.inProgress && !props.nowLearning && css`
-    border: 2px solid #dc7a7a;
+    border: 2px solid #f39c9c;
   `}
 `;
 

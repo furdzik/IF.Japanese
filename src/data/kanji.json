@@ -5269,7 +5269,8 @@
   {
     "kanji": "政",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "joyo": true,
     "level": 3
   },

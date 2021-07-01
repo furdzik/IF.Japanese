@@ -10,7 +10,7 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
   let notKnownList = [];
 
   if (selectedFilters.indexOf(IDS.KNOWN) > -1) {
-    knownList = list.filter((item) => item.known && !item.inProgress);
+    knownList = list.filter((item) => item.known && !item.inProgress && !item.nowLearning);
 
     if (isKanji) {
       knownList = knownList
@@ -19,7 +19,7 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
   }
 
   if (selectedFilters.indexOf(IDS.IN_PROGRESS) > -1) {
-    inProgressList = list.filter((item) => item.inProgress);
+    inProgressList = list.filter((item) => item.inProgress && !item.nowLearning);
 
     if (isKanji) {
       inProgressList = inProgressList
@@ -28,7 +28,7 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
   }
 
   if (selectedFilters.indexOf(IDS.NOW_LEARNING) > -1) {
-    nowLearningList = list.filter((item) => item.nowLearning);
+    nowLearningList = list.filter((item) => item.nowLearning && !item.inProgress);
 
     if (isKanji) {
       nowLearningList = nowLearningList
