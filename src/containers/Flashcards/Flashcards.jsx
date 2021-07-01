@@ -12,7 +12,7 @@ import Legend from '@components/Legend';
 import ProgressBar from '@components/ProgressBar';
 import FlashcardsComponent from '@components/Flashcards';
 
-import { getFlashcard, changeFilters } from './Flashcards.reducer';
+import { getFlashcard, changeFilters, setReveal } from './Flashcards.reducer';
 
 import selector from './Flashcards.selector';
 
@@ -38,6 +38,8 @@ const Flashcards = (props) => {
         additionalInfo={props.additionalInfo}
         loading={props.loading}
         error={props.error}
+        isRevealed={props.isRevealed}
+        setReveal={props.setReveal}
       />
     </React.Fragment>
   );
@@ -48,9 +50,11 @@ Flashcards.propTypes = {
   flashcardLength: filtersLengthShape.isRequired,
   getFlashcard: PropTypes.func.isRequired,
   selectedFilters: selectedFiltersShape.isRequired,
+  setReveal: PropTypes.func.isRequired,
   additionalInfo: additionalInfoShape,
-  eror: PropTypes.string,
+  error: PropTypes.string,
   flashcard: flashcardShape,
+  isRevealed: PropTypes.bool,
   loading: PropTypes.bool
 };
 
@@ -58,12 +62,14 @@ Flashcards.defaultProps = {
   additionalInfo: null,
   error: null,
   flashcard: null,
+  isRevealed: false,
   loading: false
 };
 
 const mapDispatchToProps = {
   getFlashcard,
-  changeFilters
+  changeFilters,
+  setReveal
 };
 
 export default connect(selector, mapDispatchToProps)(Flashcards);

@@ -8014,7 +8014,8 @@
   {
     "vocab": "骨折",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -8022,6 +8023,7 @@
     "vocab": "最低",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -9820,7 +9822,8 @@
   {
     "vocab": "寝不足",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 0
   },
@@ -15851,6 +15854,7 @@
     "vocab": "法律",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -18183,7 +18187,8 @@
   {
     "vocab": "揺れる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 4
   },
@@ -20474,7 +20479,7 @@
     "vocab": "泥",
     "known": false,
     "inProgress": true,
-    "nowLeatning": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -22017,7 +22022,8 @@
   {
     "vocab": "必ずしも",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -22919,7 +22925,8 @@
   {
     "vocab": "限る",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -25162,7 +25169,8 @@
   {
     "vocab": "気味",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -27052,7 +27060,8 @@
   {
     "vocab": "率",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -34015,7 +34024,8 @@
   {
     "vocab": "当てはまる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -34383,6 +34393,14 @@
     "vocab": "味わう",
     "known": false,
     "inProgress": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "相違",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -41678,5 +41696,69 @@
     "nowLearning": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "連日",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "例年",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "極端",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "航空券",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "計量",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "減量",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "黴",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "だらけ",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
   }
 ]

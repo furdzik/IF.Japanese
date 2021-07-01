@@ -19,6 +19,7 @@ const actionTypes = {
   GET_FLASHCARD_INIT: 'FLASHCARDS/GET_FLASHCARD_INIT',
   GET_FLASHCARD: 'FLASHCARDS/GET_FLASHCARD',
   FLASHCARD_SET_FILTERS: 'FLASHCARDS/SET_FILTERS',
+  FLASHCARD_SET_REVEAL: 'FLASHCARDS/SET_REVEAL',
   FLASHCARD_SET_ERROR: 'FLASHCARDS/SET_ERROR'
 };
 
@@ -26,6 +27,7 @@ const initialState = {
   flashcard: null,
   flashcardLength: lengthInitialState,
   additionalInfo: null,
+  isRevealed: false,
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyFlashcards, FILTERS_IDS),
   error: null
 };
@@ -47,7 +49,7 @@ export default function(state = initialState, action) {
     case actionTypes.GET_FLASHCARD_INIT: {
       return {
         ...state,
-        error: false,
+        error: null,
         loading: true
       };
     }
@@ -56,6 +58,13 @@ export default function(state = initialState, action) {
       return {
         ...state,
         selectedFilters: action.payload
+      };
+    }
+
+    case actionTypes.FLASHCARD_SET_REVEAL: {
+      return {
+        ...state,
+        isRevealed: action.payload
       };
     }
 
@@ -82,6 +91,11 @@ const getFlashcardAction = (data) => ({
 
 const setFiltersAction = (payload) => ({
   type: actionTypes.FLASHCARD_SET_FILTERS,
+  payload
+});
+
+const setRevealAction = (payload) => ({
+  type: actionTypes.FLASHCARD_SET_REVEAL,
   payload
 });
 
@@ -161,4 +175,8 @@ export const changeFilters = (filter) => (dispatch, getStore) => {
 
   dispatch(setFiltersAction(selectedFilters));
   dispatch(getFlashcard());
+};
+
+export const setReveal = (isRevealed) => (dispatch) => {
+  dispatch(setRevealAction(isRevealed));
 };

@@ -92,6 +92,17 @@ const IconStyled = styled(Icon)`
   fill: ${(props) => props.theme.colors.primaryColor};
 `;
 
+const SwitcherWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+`;
+
+const SwitcherLabel = styled.div`
+  margin-right: 2rem;
+`;
+
 export {
   Wrapper,
   Title,
@@ -103,5 +114,7 @@ export {
   ReadingWrapper,
   MeaningWrapper,
   SeeMoreLink,
-  IconStyled
+  IconStyled,
+  SwitcherWrapper,
+  SwitcherLabel
 };

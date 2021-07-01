@@ -9,6 +9,7 @@ import { flashcardShape, additionalInfoShape } from '@types/flashcardShape';
 import defaultMessages from '@utils/defaultMessages/default.messages';
 
 import Button from '@components/ui/Button';
+import Switcher from '@components/ui/Switcher';
 
 import {
   Wrapper,
@@ -21,7 +22,9 @@ import {
   ReadingWrapper,
   MeaningWrapper,
   SeeMoreLink,
-  IconStyled
+  IconStyled,
+  SwitcherWrapper,
+  SwitcherLabel
 } from './Flashcards.styles.js';
 import messages from './Flashcards.messages';
 
@@ -43,6 +46,15 @@ const Flashcards = (props) => {
     setIsReadingCardVisible(!isReadingCardVisible);
   };
 
+  const handleSetReveal = () => {
+    if (props.isRevealed && !isVocabCardVisible) {
+      setIsVocabCardVisible(true);
+      setIsReadingCardVisible(false);
+    }
+
+    props.setReveal(!props.isRevealed);
+  };
+
   return (
     <Wrapper>
       <Title>{intl.formatMessage(messages.title)}</Title>
@@ -53,52 +65,61 @@ const Flashcards = (props) => {
       }
       {
         !props.error ? (
-          <Box>
-            {
-              isVocabCardVisible ? (
-                <VocabCard onClick={(event) => vocabCardClickHandler(event)}>
-                  {
-                    !props.loading ? (
-                      <VocabWrapper>{props.flashcard?.vocab}</VocabWrapper>
-                    ) : null
-                  }
-                </VocabCard>
-              ) : null
-            }
-            {
-              isReadingCardVisible ? (
-                <MeaningCard>
-                  <TileStyled
-                    known={props.additionalInfo?.known}
-                    inProgress={props.additionalInfo?.inProgress}
-                    nowLearning={props.additionalInfo?.nowLearning}
-                    level={props.additionalInfo?.level}
-                    noOrder
-                  >
-                    {props.flashcard?.vocab}
-                  </TileStyled>
-                  {
-                    props.flashcard?.vocab !== props.flashcard?.reading ? (
-                      <ReadingWrapper>{props.flashcard?.reading}</ReadingWrapper>
-                    ) : null
-                  }
-                  <MeaningWrapper>{props.flashcard?.meaning}</MeaningWrapper>
-                  <SeeMoreLink
-                    to={
-                      `/vocab/${props.flashcard?.moreLink}`
+          <React.Fragment>
+            <SwitcherWrapper>
+              <SwitcherLabel>{intl.formatMessage(messages.switcherLabel)}</SwitcherLabel>
+              <Switcher
+                onClick={() => handleSetReveal()}
+                checked={props.isRevealed}
+              />
+            </SwitcherWrapper>
+            <Box>
+              {
+                isVocabCardVisible && props.isRevealed === false ? (
+                  <VocabCard onClick={(event) => vocabCardClickHandler(event)}>
+                    {
+                      !props.loading ? (
+                        <VocabWrapper>{props.flashcard?.vocab}</VocabWrapper>
+                      ) : null
                     }
-                    target="_blank"
-                  >
-                    {intl.formatMessage(defaultMessages.seeMoreText)}
-                    <IconStyled size={1.7} path={mdiChevronRight} />
-                  </SeeMoreLink>
-                  <Button onClick={(event) => meaningCardClickHandler(event)}>
-                    {intl.formatMessage(defaultMessages.next)}
-                  </Button>
-                </MeaningCard>
-              ) : null
-            }
-          </Box>
+                  </VocabCard>
+                ) : null
+              }
+              {
+                isReadingCardVisible || props.isRevealed ? (
+                  <MeaningCard>
+                    <TileStyled
+                      known={props.additionalInfo?.known}
+                      inProgress={props.additionalInfo?.inProgress}
+                      nowLearning={props.additionalInfo?.nowLearning}
+                      level={props.additionalInfo?.level}
+                      noOrder
+                    >
+                      {props.flashcard?.vocab}
+                    </TileStyled>
+                    {
+                      props.flashcard?.vocab !== props.flashcard?.reading ? (
+                        <ReadingWrapper>{props.flashcard?.reading}</ReadingWrapper>
+                      ) : null
+                    }
+                    <MeaningWrapper>{props.flashcard?.meaning}</MeaningWrapper>
+                    <SeeMoreLink
+                      to={
+                        `/vocab/${props.flashcard?.moreLink}`
+                      }
+                      target="_blank"
+                    >
+                      {intl.formatMessage(defaultMessages.seeMoreText)}
+                      <IconStyled size={1.7} path={mdiChevronRight} />
+                    </SeeMoreLink>
+                    <Button onClick={(event) => meaningCardClickHandler(event)}>
+                      {intl.formatMessage(defaultMessages.next)}
+                    </Button>
+                  </MeaningCard>
+                ) : null
+              }
+            </Box>
+          </React.Fragment>
         ) : null
       }
     </Wrapper>
@@ -107,14 +128,19 @@ const Flashcards = (props) => {
 
 Flashcards.propTypes = {
   getFlashcard: PropTypes.func.isRequired,
+  setReveal: PropTypes.func.isRequired,
   additionalInfo: additionalInfoShape,
+  error: PropTypes.string,
   flashcard: flashcardShape,
+  isRevealed: PropTypes.bool,
   loading: PropTypes.bool
 };
 
 Flashcards.defaultProps = {
   additionalInfo: null,
+  error: null,
   flashcard: null,
+  isRevealed: false,
   loading: false
 };
 
