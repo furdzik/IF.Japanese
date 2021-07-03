@@ -23,7 +23,8 @@ import {
   PartOfSpeechBox,
   AntonymsBox,
   AntonymsLink,
-  AdditionalExplanationWrapper
+  AdditionalExplanationWrapper,
+  KanjiParts
 } from './VocabularyDetails.styles.js';
 import messages from './VocabularyDetails.messages';
 
@@ -130,6 +131,15 @@ const VocabularyDetails = (props) => {
           }
         </SensesList>
       )}
+      secondarySection={props.kanjiParts ? (
+        <KanjiParts>
+          {
+            props.kanjiParts.map((el) => (
+              <div>{el}</div>
+            ))
+          }
+        </KanjiParts>
+      ) : null}
       sections={[
         {
           title: intl.formatMessage(messages.additionalExplanationHeader),
@@ -262,6 +272,7 @@ VocabularyDetails.propTypes = {
   isCommon: PropTypes.bool,
   isVerb: PropTypes.bool,
   jlpt: PropTypes.arrayOf(PropTypes.string),
+  kanjiParts: PropTypes.arrayOf(PropTypes.object),
   known: PropTypes.bool,
   nowLearning: PropTypes.bool,
   reading: PropTypes.string,
@@ -278,6 +289,7 @@ VocabularyDetails.defaultProps = {
   isCommon: null,
   isVerb: false,
   jlpt: [],
+  kanjiParts: null,
   known: false,
   nowLearning: false,
   reading: '',

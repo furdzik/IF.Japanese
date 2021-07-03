@@ -10553,8 +10553,8 @@
   {
     "vocab": "輸出",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -14680,6 +14680,7 @@
     "vocab": "曲がる",
     "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 5,
     "verb": {
@@ -27427,8 +27428,9 @@
   },
   {
     "vocab": "チーム",
-    "known": false,
-    "inProgress": true,
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 3
   },
@@ -34923,7 +34925,8 @@
   {
     "vocab": "曲げる",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -36356,7 +36359,8 @@
   {
     "vocab": "休講",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -38001,8 +38005,9 @@
   },
   {
     "vocab": "まあまあ",
-    "known": false,
+    "known": true,
     "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },

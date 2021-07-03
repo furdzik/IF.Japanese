@@ -74,6 +74,9 @@ const Details = (props) => {
               <div>{props.mainSection}</div>
             ) : null
           }
+          {
+            props.secondarySection ? props.secondarySection : null
+          }
         </SectionWrapper>
         {
           props.sections ? props.sections.map((section, index) => (
@@ -105,6 +108,7 @@ Details.propTypes = {
   known: PropTypes.bool,
   nowLearning: PropTypes.bool,
   reading: PropTypes.string,
+  secondarySection: PropTypes.node,
   sections: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     section: PropTypes.node
@@ -119,6 +123,7 @@ Details.defaultProps = {
   known: null,
   nowLearning: null,
   reading: null,
+  secondarySection: null,
   sections: null,
   tags: null
 };

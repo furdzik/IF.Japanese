@@ -38,6 +38,7 @@ const VocabularyDetails = (props) => {
       japanese={props.japanese}
       jlpt={props.jlpt}
       reading={props.reading}
+      kanjiParts={props.kanjiParts}
       known={props.known}
       pitch={props.pitch}
       tags={props.tags}
@@ -59,6 +60,7 @@ VocabularyDetails.propTypes = {
   isCommon: PropTypes.bool,
   japanese: PropTypes.arrayOf(PropTypes.object),
   jlpt: PropTypes.arrayOf(PropTypes.string),
+  kanjiParts: PropTypes.arrayOf(PropTypes.object),
   known: PropTypes.bool,
   nowLearning: PropTypes.bool,
   pitch: PropTypes.string,
@@ -76,6 +78,7 @@ VocabularyDetails.defaultProps = {
   isCommon: null,
   japanese: [],
   jlpt: [],
+  kanjiParts: null,
   known: false,
   nowLearning: false,
   pitch: '',

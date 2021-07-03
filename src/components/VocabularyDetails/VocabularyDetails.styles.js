@@ -76,6 +76,13 @@ const AdditionalExplanationWrapper = styled.div`
   margin-bottom: 6rem;
 `;
 
+const KanjiParts = styled.div`
+  margin-left: auto;
+  padding-left: 3rem;
+  width: 30rem;
+  outline: 1px dotted red;
+`;
+
 export {
   ConjugationLink,
   SensesList,
@@ -85,5 +92,6 @@ export {
   PartOfSpeechBox,
   AntonymsBox,
   AntonymsLink,
-  AdditionalExplanationWrapper
+  AdditionalExplanationWrapper,
+  KanjiParts
 };
