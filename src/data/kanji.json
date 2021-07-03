@@ -304,8 +304,9 @@
   },
   {
     "kanji": "生",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
     "joyo": true,
     "level": 5
   },
@@ -7041,7 +7042,8 @@
   {
     "kanji": "乱",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
+    "nowLearning": false,
     "joyo": true,
     "level": 2
   },

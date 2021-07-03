@@ -124,6 +124,7 @@ const VocabularyDetails = (props) => {
                       ))
                     }
                     <AdditionalInfo>{el.info}</AdditionalInfo>
+                    <AdditionalInfo>{el.tags.join(', ')}</AdditionalInfo>
                   </div>
                 </div>
               </SensesListItem>
