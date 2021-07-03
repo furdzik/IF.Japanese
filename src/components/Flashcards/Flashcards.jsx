@@ -21,6 +21,7 @@ import {
   TileStyled,
   ReadingWrapper,
   MeaningWrapper,
+  ButtonsWrapper,
   SeeMoreLink,
   IconStyled,
   SwitcherWrapper,
@@ -103,18 +104,20 @@ const Flashcards = (props) => {
                       ) : null
                     }
                     <MeaningWrapper>{props.flashcard?.meaning}</MeaningWrapper>
-                    <SeeMoreLink
-                      to={
-                        `/vocab/${props.flashcard?.moreLink}`
-                      }
-                      target="_blank"
-                    >
-                      {intl.formatMessage(defaultMessages.seeMoreText)}
-                      <IconStyled size={1.7} path={mdiChevronRight} />
-                    </SeeMoreLink>
-                    <Button onClick={(event) => meaningCardClickHandler(event)}>
-                      {intl.formatMessage(defaultMessages.next)}
-                    </Button>
+                    <ButtonsWrapper>
+                      <SeeMoreLink
+                        to={
+                          `/vocab/${props.flashcard?.moreLink}`
+                        }
+                        target="_blank"
+                      >
+                        {intl.formatMessage(defaultMessages.seeMoreText)}
+                        <IconStyled size={1.7} path={mdiChevronRight} />
+                      </SeeMoreLink>
+                      <Button onClick={(event) => meaningCardClickHandler(event)}>
+                        {intl.formatMessage(defaultMessages.next)}
+                      </Button>
+                    </ButtonsWrapper>
                   </MeaningCard>
                 ) : null
               }

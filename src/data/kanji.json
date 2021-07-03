@@ -1639,6 +1639,7 @@
     "kanji": "野",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
     "joyo": true,
     "level": 4
   },

@@ -41,6 +41,7 @@ const VocabCard = styled.div`
 `;
 
 const MeaningCard = styled(VocabCard)`
+  position: relative;
   justify-content: flex-start;
 `;
 
@@ -78,6 +79,13 @@ const MeaningWrapper = styled.div`
   margin-top: 2rem;
 `;
 
+const ButtonsWrapper = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 3rem;
+`;
+
 const SeeMoreLink = styled(Link)`
   display: inline-flex;
   align-items: center;
@@ -113,6 +121,7 @@ export {
   TileStyled,
   ReadingWrapper,
   MeaningWrapper,
+  ButtonsWrapper,
   SeeMoreLink,
   IconStyled,
   SwitcherWrapper,
