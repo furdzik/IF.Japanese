@@ -80,10 +80,10 @@ const MeaningWrapper = styled.div`
 `;
 
 const ButtonsWrapper = styled.div`
-  position: absolute;
   display: flex;
-  flex-direction: column;
+  position: absolute;
   bottom: 3rem;
+  flex-direction: column;
 `;
 
 const SeeMoreLink = styled(Link)`

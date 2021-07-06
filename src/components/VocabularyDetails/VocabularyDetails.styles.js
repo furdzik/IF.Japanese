@@ -77,9 +77,9 @@ const AdditionalExplanationWrapper = styled.div`
 `;
 
 const KanjiParts = styled.div`
+  width: 30rem;
   margin-left: auto;
   padding-left: 3rem;
-  width: 30rem;
   outline: 1px dotted red;
 `;
 
