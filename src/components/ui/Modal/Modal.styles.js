@@ -124,10 +124,10 @@ const ModalContent = styled.div`
   `};
 
   @media print {
-    max-height: none;
     overflow: unset;
-    padding-left: 0;
+    max-height: none;
     padding-right: 0;
+    padding-left: 0;
   }
 `;
 
