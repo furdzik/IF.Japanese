@@ -44,8 +44,7 @@ export default function(state = initialState, action) {
         tags[index] = `wanikani: level ${waniKaniLevel}`;
       });
       data.details.tags = tags;
-      console.log(data);
-      // kanjiParts, getKanjiDetails
+
       return {
         ...state,
         ...data.vocab,

@@ -27,6 +27,20 @@ const LayerWrapper = styled.div`
       height: auto;
     }
   `};
+  @media print {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    z-index: 10000;
+    justify-content: unset;
+    align-items: unset;
+    width: 100%;
+    height: 100%;
+    background: none;
+  }
 `;
 
 const ModalWrapper = styled.div`
@@ -42,6 +56,10 @@ const ModalWrapper = styled.div`
   ${(props) => props.isLoading && css`
     min-height: 10rem;
   `};
+
+  @media print {
+    box-shadow: none;
+  }
 `;
 
 const ModalHeader = styled.div`
@@ -77,6 +95,10 @@ const CloseButton = styled.button`
   font-size: 3rem;
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
+
+  @media print {
+    display: none;
+  }
 `;
 
 const ModalContent = styled.div`
@@ -100,6 +122,13 @@ const ModalContent = styled.div`
     padding-left: 1.6rem;
     padding-bottom: 0;
   `};
+
+  @media print {
+    max-height: none;
+    overflow: unset;
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 const ModalFooter = styled.div`
