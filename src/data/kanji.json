@@ -9096,7 +9096,7 @@
   {
     "kanji": "孤",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "joyo": true,
     "level": 1
   },
