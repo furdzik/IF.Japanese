@@ -131,7 +131,7 @@ export const othersMenu = [
   },
   {
     id: menuId.othersFlashcards,
-    name: 'フラッシュカード',
+    name: '暗記',
     link: '/flashcards'
   }
 ];
