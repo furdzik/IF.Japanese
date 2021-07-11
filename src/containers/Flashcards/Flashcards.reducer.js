@@ -13,8 +13,8 @@ import {
 } from '@utils/filters';
 import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
 
-import { getRandomVocab } from './utils';
-import { getFlashcardData } from './utils/getFlashcardData';
+import { getRandomVocab, getFlashcardData } from './utils';
+import messages from './Flashcards.messages';
 
 const actionTypes = {
   GET_FLASHCARD_INIT: 'FLASHCARDS/GET_FLASHCARD_INIT',
@@ -112,8 +112,7 @@ export const getFlashcard = () => (dispatch, getStore) => {
   const list = getSelectedFiltersList(vocabJson, selectedFilters, FILTERS_IDS);
 
   if (list.all.length === 0) {
-    // @TODO: error as intl - #49
-    dispatch(setErrorAction('Nothing to show, change filters'));
+    dispatch(setErrorAction((messages.errorNoResults)?.defaultMessage));
     return;
   }
 
@@ -126,7 +125,6 @@ export const getFlashcard = () => (dispatch, getStore) => {
       : randomVocab.vocab
   )
     .then((response) => {
-      // @TODO: refactor as function - see VocabularyDetails.reducer
       response.data.forEach((kanji) => {
         let flashcard;
 
