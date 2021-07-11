@@ -1,4 +1,4 @@
 export { getBaseEnding } from './getBaseEnding';
-export { getBunpouEnding } from './getBunpouEnding';
+export { getGrammarEnding } from './getGrammarEnding';
 export { getConjugation } from './getConjugation';
 export { getSpecialMain } from './getSpecialMain';

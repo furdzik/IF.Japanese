@@ -1,15 +1,15 @@
-import { bunpouTypes, inflectionTypes, verbGroupTypes } from '@config/constants';
+import { grammarTypes, inflectionTypes, verbGroupTypes } from '@config/constants';
 
 import messages from '../VerbConjugation.messages';
 
-export const getSpecialMain = (bunpou, verbGroup, inflection, teineiKei) => {
+export const getSpecialMain = (grammar, verbGroup, inflection, politeForm) => {
   switch (verbGroup) {
     case verbGroupTypes.specialVerb1: {
-      switch (bunpou) {
-        case bunpouTypes.JISHOU_KEI: {
+      switch (grammar) {
+        case grammarTypes.JISHOU_FORM: {
           if (
             inflection === inflectionTypes.NORMAL
-            && !teineiKei
+            && !politeForm
           ) {
             return (messages.mainSuru_su)?.defaultMessage;
           }
@@ -17,11 +17,11 @@ export const getSpecialMain = (bunpou, verbGroup, inflection, teineiKei) => {
           return (messages.mainSuru)?.defaultMessage;
         }
 
-        case bunpouTypes.KANOU_KEI: {
+        case grammarTypes.KANOU_FORM: {
           return (messages.mainSuru_de)?.defaultMessage;
         }
 
-        case bunpouTypes.MEIREI_KEI: {
+        case grammarTypes.MEIREI_FORM: {
           if (inflection === inflectionTypes.NEGATIVE) {
             return (messages.mainSuru_su)?.defaultMessage;
           }
@@ -29,7 +29,7 @@ export const getSpecialMain = (bunpou, verbGroup, inflection, teineiKei) => {
           return (messages.mainSuru)?.defaultMessage;
         }
 
-        case bunpouTypes.JOUKEN_BA_KEI: {
+        case grammarTypes.JOUKEN_BA_FORM: {
           if (inflection === inflectionTypes.NEGATIVE) {
             return (messages.mainSuru)?.defaultMessage;
           }
@@ -37,10 +37,10 @@ export const getSpecialMain = (bunpou, verbGroup, inflection, teineiKei) => {
           return (messages.mainSuru_su)?.defaultMessage;
         }
 
-        case bunpouTypes.UKEMI_KEI:
-        case bunpouTypes.SHIEKI_KEI:
-        case bunpouTypes.SHIEKIUKEMI_KEI:
-        case bunpouTypes.SHIEKIUKEMI_SHORT_KEI: {
+        case grammarTypes.UKEMI_FORM:
+        case grammarTypes.SHIEKI_FORM:
+        case grammarTypes.SHIEKIUKEMI_FORM:
+        case grammarTypes.SHIEKIUKEMI_SHORT_FORM: {
           return (messages.mainSuru_sa)?.defaultMessage;
         }
 
@@ -50,29 +50,29 @@ export const getSpecialMain = (bunpou, verbGroup, inflection, teineiKei) => {
     }
 
     case verbGroupTypes.specialVerb2: {
-      switch (bunpou) {
-        case bunpouTypes.JISHOU_KEI: {
+      switch (grammar) {
+        case grammarTypes.JISHOU_FORM: {
           if (
             inflection === inflectionTypes.NORMAL
-            && !teineiKei
+            && !politeForm
           ) {
             return (messages.mainKuru_ku)?.defaultMessage;
           } else if (
             (inflection === inflectionTypes.NEGATIVE
               || inflection === inflectionTypes.PAST_NEGATIVE
-            ) && !teineiKei) {
+            ) && !politeForm) {
             return (messages.mainKuru)?.defaultMessage;
           }
 
           return (messages.mainKuru_ki)?.defaultMessage;
         }
 
-        case bunpouTypes.TAI_KEI: {
+        case grammarTypes.TAI_FORM: {
           return (messages.mainKuru_ki)?.defaultMessage;
         }
 
-        case bunpouTypes.TE_KEI:
-        case bunpouTypes.JOUKEN_TARA_KEI: {
+        case grammarTypes.TE_FORM:
+        case grammarTypes.JOUKEN_TARA_FORM: {
           if (
             inflection === inflectionTypes.NEGATIVE
           ) {
@@ -82,8 +82,8 @@ export const getSpecialMain = (bunpou, verbGroup, inflection, teineiKei) => {
           return (messages.mainKuru_ki)?.defaultMessage;
         }
 
-        case bunpouTypes.MEIREI_KEI:
-        case bunpouTypes.JOUKEN_BA_KEI: {
+        case grammarTypes.MEIREI_FORM:
+        case grammarTypes.JOUKEN_BA_FORM: {
           if (inflection === inflectionTypes.NEGATIVE) {
             return (messages.mainKuru_ku)?.defaultMessage;
           }

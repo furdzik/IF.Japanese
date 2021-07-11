@@ -6,7 +6,7 @@ import { mdiChevronDown, mdiChevronUp } from '@mdi/js';
 
 import Collapsible from 'react-collapsible';
 
-import { bunpouTypes, verbType } from '@config/constants';
+import { grammarTypes, verbType } from '@config/constants';
 
 import { vocabItemShape } from '@types/vocabShape';
 
@@ -123,10 +123,10 @@ const VerbsListItem = (props) => {
         <BoxWrapper>
           <VerbConjugationGroup
             showLabel={collapsed}
-            label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JISHOU_KEI}Label`])}
+            label={intl.formatMessage(conjugationMessages[`${grammarTypes.JISHOU_FORM}Label`])}
             verb={props.item.verb}
-            bunpou={[bunpouTypes.JISHOU_KEI]}
-            teineiKei
+            grammar={[grammarTypes.JISHOU_FORM]}
+            politeForm
           />
 
           <Collapsible
@@ -138,85 +138,85 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.KANOU_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.KANOU_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.KANOU_KEI]}
-              teineiKei
+              grammar={[grammarTypes.KANOU_FORM]}
+              politeForm
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.TAI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.TAI_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.TAI_KEI]}
-              teineiKei
+              grammar={[grammarTypes.TAI_FORM]}
+              politeForm
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.TE_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.TE_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.TE_KEI]}
+              grammar={[grammarTypes.TE_FORM]}
               noPast
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.IKOU_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.IKOU_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.IKOU_KEI]}
+              grammar={[grammarTypes.IKOU_FORM]}
               noPast
               noNegative
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.MEIREI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.MEIREI_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.MEIREI_KEI]}
+              grammar={[grammarTypes.MEIREI_FORM]}
               noPast
             />
 
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JOUKEN_BA_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.JOUKEN_BA_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.JOUKEN_BA_KEI]}
+              grammar={[grammarTypes.JOUKEN_BA_FORM]}
               noPast
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.JOUKEN_TARA_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.JOUKEN_TARA_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.JOUKEN_TARA_KEI]}
+              grammar={[grammarTypes.JOUKEN_TARA_FORM]}
               noPast
             />
 
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.UKEMI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.UKEMI_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.UKEMI_KEI]}
-              teineiKei
+              grammar={[grammarTypes.UKEMI_FORM]}
+              politeForm
             />
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.SHIEKI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.SHIEKI_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[bunpouTypes.SHIEKI_KEI]}
-              teineiKei
+              grammar={[grammarTypes.SHIEKI_FORM]}
+              politeForm
             />
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${bunpouTypes.SHIEKIUKEMI_KEI}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.SHIEKIUKEMI_FORM}Label`])}
               verb={props.item.verb}
-              bunpou={[
-                bunpouTypes.SHIEKIUKEMI_KEI,
-                bunpouTypes.SHIEKIUKEMI_SHORT_KEI
+              grammar={[
+                grammarTypes.SHIEKIUKEMI_FORM,
+                grammarTypes.SHIEKIUKEMI_SHORT_FORM
               ]}
-              teineiKei
+              politeForm
             />
           </Collapsible>
         </BoxWrapper>

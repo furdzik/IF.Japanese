@@ -42,20 +42,20 @@ export const inflectionTypes = {
   NO_INFLECTION: 5
 };
 
-export const bunpouTypes = {
-  JISHOU_KEI: 'jishouKei',
-  TE_KEI: 'teKei',
-  TAI_KEI: 'taiKei',
-  IKOU_KEI: 'ikouKei',
-  MEIREI_KEI: 'meireiKei',
-  KINSHI_KEI: 'kinshiKei',
-  KANOU_KEI: 'kanouKei',
-  JOUKEN_BA_KEI: 'joukenBaKei',
-  JOUKEN_TARA_KEI: 'joukenTaraKei',
-  UKEMI_KEI: 'ukemiKei',
-  SHIEKI_KEI: 'shiekiKei',
-  SHIEKIUKEMI_KEI: 'shiekiukemiKei',
-  SHIEKIUKEMI_SHORT_KEI: 'shiekiukemiShortKei'
+export const grammarTypes = {
+  JISHOU_FORM: 'jishouForm',
+  TE_FORM: 'teForm',
+  TAI_FORM: 'taiForm',
+  IKOU_FORM: 'ikouForm',
+  MEIREI_FORM: 'meireiForm',
+  KINSHI_FORM: 'kinshiForm',
+  KANOU_FORM: 'kanouForm',
+  JOUKEN_BA_FORM: 'joukenBaForm',
+  JOUKEN_TARA_FORM: 'joukenTaraForm',
+  UKEMI_FORM: 'ukemiForm',
+  SHIEKI_FORM: 'shiekiForm',
+  SHIEKIUKEMI_FORM: 'shiekiukemiForm',
+  SHIEKIUKEMI_SHORT_FORM: 'shiekiukemiShortForm'
 };
 
 export const verbType = {

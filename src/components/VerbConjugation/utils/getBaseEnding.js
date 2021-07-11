@@ -1,13 +1,13 @@
-import { bunpouTypes, inflectionTypes, verbGroupTypes } from '@config/constants';
+import { grammarTypes, inflectionTypes, verbGroupTypes } from '@config/constants';
 
 import messages from '../VerbConjugation.messages';
 
-const isSpecialCasePastEnding = (bunpou, verbGroup) => (
-  (bunpou !== bunpouTypes.KANOU_KEI
-    && bunpou !== bunpouTypes.UKEMI_KEI
-    && bunpou !== bunpouTypes.SHIEKI_KEI
-    && bunpou !== bunpouTypes.SHIEKIUKEMI_KEI
-    && bunpou !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI)
+const isSpecialCasePastEnding = (grammar, verbGroup) => (
+  (grammar !== grammarTypes.KANOU_FORM
+    && grammar !== grammarTypes.UKEMI_FORM
+    && grammar !== grammarTypes.SHIEKI_FORM
+    && grammar !== grammarTypes.SHIEKIUKEMI_FORM
+    && grammar !== grammarTypes.SHIEKIUKEMI_SHORT_FORM)
   && (
     verbGroup === verbGroupTypes.group1Gu
     || verbGroup === verbGroupTypes.group1Bu
@@ -16,58 +16,58 @@ const isSpecialCasePastEnding = (bunpou, verbGroup) => (
   )
 );
 
-export const getBaseEnding = (bunpou, verbGroup, inflection, teineiKei, notInTheEnd = false) => {
+export const getBaseEnding = (grammar, verbGroup, inflection, politeForm, notInTheEnd = false) => {
   if (
-    bunpou === bunpouTypes.JISHOU_KEI
-    || bunpou === bunpouTypes.KANOU_KEI
-    || bunpou === bunpouTypes.UKEMI_KEI
-    || bunpou === bunpouTypes.SHIEKI_KEI
-    || bunpou === bunpouTypes.SHIEKIUKEMI_KEI
-    || bunpou === bunpouTypes.SHIEKIUKEMI_SHORT_KEI
+    grammar === grammarTypes.JISHOU_FORM
+    || grammar === grammarTypes.KANOU_FORM
+    || grammar === grammarTypes.UKEMI_FORM
+    || grammar === grammarTypes.SHIEKI_FORM
+    || grammar === grammarTypes.SHIEKIUKEMI_FORM
+    || grammar === grammarTypes.SHIEKIUKEMI_SHORT_FORM
     || notInTheEnd
   ) {
     switch (inflection) {
       case inflectionTypes.NORMAL: {
-        if (teineiKei) {
-          return (messages.baseTeineiKeiEnding).defaultMessage;
+        if (politeForm) {
+          return (messages.basePoliteFormEnding).defaultMessage;
         }
 
         return (
           verbGroup === verbGroupTypes.group2
-          || bunpou === bunpouTypes.KANOU_KEI
-          || bunpou === bunpouTypes.UKEMI_KEI
-          || bunpou === bunpouTypes.SHIEKI_KEI
-          || bunpou === bunpouTypes.SHIEKIUKEMI_KEI
-          || bunpou === bunpouTypes.SHIEKIUKEMI_SHORT_KEI
+          || grammar === grammarTypes.KANOU_FORM
+          || grammar === grammarTypes.UKEMI_FORM
+          || grammar === grammarTypes.SHIEKI_FORM
+          || grammar === grammarTypes.SHIEKIUKEMI_FORM
+          || grammar === grammarTypes.SHIEKIUKEMI_SHORT_FORM
         )
-          ? (messages.baseNaiRuEnding)?.defaultMessage
-          : messages[`jishouKeiEnding_${verbGroup}`]?.defaultMessage;
+          ? (messages.baseNegativeRuEnding)?.defaultMessage
+          : messages[`jishouFormEnding_${verbGroup}`]?.defaultMessage;
       }
 
       case inflectionTypes.NEGATIVE: {
-        return teineiKei
-          ? (messages.baseTeineiNaiKeiEnding)?.defaultMessage
-          : (messages.baseNaiKeiEnding)?.defaultMessage;
+        return politeForm
+          ? (messages.basePoliteNegativeFormEnding)?.defaultMessage
+          : (messages.baseNegativeFormEnding)?.defaultMessage;
       }
 
       case inflectionTypes.PAST: {
         let pastEnding;
 
-        if (isSpecialCasePastEnding(bunpou, verbGroup)) {
-          pastEnding = (messages.basePast2KeiEnding)?.defaultMessage;
+        if (isSpecialCasePastEnding(grammar, verbGroup)) {
+          pastEnding = (messages.basePast2FormEnding)?.defaultMessage;
         } else {
-          pastEnding = (messages.basePastKeiEnding)?.defaultMessage;
+          pastEnding = (messages.basePastFormEnding)?.defaultMessage;
         }
 
-        return teineiKei
-          ? (messages.baseTeineiPastKeiEnding)?.defaultMessage
+        return politeForm
+          ? (messages.basePolitePastFormEnding)?.defaultMessage
           : pastEnding;
       }
 
       case inflectionTypes.PAST_NEGATIVE: {
-        return teineiKei
-          ? (messages.baseTeineiNaiPastKeiEnding)?.defaultMessage
-          : (messages.baseNaiPastKeiEnding)?.defaultMessage;
+        return politeForm
+          ? (messages.basePoliteNegativePastFormEnding)?.defaultMessage
+          : (messages.baseNegativePastFormEnding)?.defaultMessage;
       }
 
       default:

@@ -1,11 +1,11 @@
 import { getBaseEnding } from './getBaseEnding';
-import { getBunpouEnding } from './getBunpouEnding';
+import { getGrammarEnding } from './getGrammarEnding';
 import { getSpecialMain } from './getSpecialMain';
 
-export const getConjugation = (bunpou, verbGroup, inflection, isPolite) => {
-  const specialMain = getSpecialMain(bunpou, verbGroup, inflection, isPolite);
-  const bunpouEnding = getBunpouEnding(bunpou, verbGroup, inflection, isPolite);
-  const baseEnding = getBaseEnding(bunpou, verbGroup, inflection, isPolite);
+export const getConjugation = (grammar, verbGroup, inflection, isPolite) => {
+  const specialMain = getSpecialMain(grammar, verbGroup, inflection, isPolite);
+  const grammarEnding = getGrammarEnding(grammar, verbGroup, inflection, isPolite);
+  const baseEnding = getBaseEnding(grammar, verbGroup, inflection, isPolite);
 
-  return specialMain + bunpouEnding + baseEnding;
+  return specialMain + grammarEnding + baseEnding;
 };
