@@ -18,6 +18,7 @@ const BoxItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 20rem;
   margin: 0 3rem 3rem;
   border: 2px solid ${(props) => props.theme.colors.black};
   border-radius: ${(props) => props.theme.layout.borderRadius};

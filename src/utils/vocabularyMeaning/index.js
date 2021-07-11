@@ -1,0 +1,1 @@
+export { isCorrectVocabularyMeaning } from './isCorrectVocabularyMeaning';

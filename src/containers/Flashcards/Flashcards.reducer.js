@@ -11,9 +11,10 @@ import {
   getLength,
   lengthInitialState
 } from '@utils/filters';
-import { getOnlyVocab } from '@utils/vocabulary';
+import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
 
 import { getRandomVocab } from './utils';
+import { getFlashcardData } from './utils/getFlashcardData';
 
 const actionTypes = {
   GET_FLASHCARD_INIT: 'FLASHCARDS/GET_FLASHCARD_INIT',
@@ -117,7 +118,7 @@ export const getFlashcard = () => (dispatch, getStore) => {
   }
 
   const randomVocab = getRandomVocab(list.all);
-  const { vocab, meaning } = randomVocab;
+  const { meaning } = randomVocab;
 
   fetchJisho(
     randomVocab.meaning
@@ -127,40 +128,23 @@ export const getFlashcard = () => (dispatch, getStore) => {
     .then((response) => {
       // @TODO: refactor as function - see VocabularyDetails.reducer
       response.data.forEach((kanji) => {
-        if (meaning) {
-          if (
-            (kanji.japanese[0]
-              && kanji.japanese[0].word === vocab && kanji.japanese[0].reading === meaning)
-            || (kanji.japanese[1]
-            && kanji.japanese[1].word === vocab && kanji.japanese[1].reading === meaning)
-          ) {
-            const flashcard = {
-              reading: kanji.japanese[0].reading,
-              meaning: kanji.senses[0].english_definitions.join(', '),
-              vocab: randomVocab.vocab,
-              moreLink: `${randomVocab.meaning ? `${getOnlyVocab(randomVocab.vocab)},${randomVocab.meaning},${randomVocab.vocab}` : randomVocab.vocab}`
-            };
+        let flashcard;
 
-            dispatch(getFlashcardAction({
-              list,
-              flashcard,
-              additionalInfo: randomVocab
-            }));
+        if (meaning) {
+          if (isCorrectVocabularyMeaning(kanji.japanese, randomVocab.vocab, randomVocab.meaning)) {
+            flashcard = getFlashcardData(kanji.japanese, kanji.senses, randomVocab);
           }
         } else {
-          const flashcard = {
-            reading: response.data[0].japanese[0].reading,
-            meaning: response.data[0].senses[0].english_definitions.join(', '),
-            vocab: randomVocab.vocab,
-            moreLink: `${randomVocab.meaning ? `${getOnlyVocab(randomVocab.vocab)},${randomVocab.meaning},${randomVocab.vocab}` : randomVocab.vocab}`
-          };
-
-          dispatch(getFlashcardAction({
-            list,
-            flashcard,
-            additionalInfo: randomVocab
-          }));
+          flashcard = getFlashcardData(
+            response.data[0].japanese, response.data[0].senses, randomVocab
+          );
         }
+
+        dispatch(getFlashcardAction({
+          list,
+          flashcard,
+          additionalInfo: randomVocab
+        }));
       });
     })
     .catch((error) => {

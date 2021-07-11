@@ -2274,7 +2274,7 @@
   {
     "vocab": "暗記",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3
@@ -17859,7 +17859,7 @@
   {
     "vocab": "スーツケース",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0
@@ -36538,7 +36538,7 @@
   {
     "vocab": "重量",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2
@@ -39576,7 +39576,7 @@
   {
     "vocab": "塩辛い",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2
@@ -40928,7 +40928,7 @@
   {
     "vocab": "仕様がない",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2

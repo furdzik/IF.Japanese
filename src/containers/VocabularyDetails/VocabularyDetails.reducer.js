@@ -4,6 +4,8 @@ import { fetchJisho } from '@api';
 
 import { URL_SEPARATOR } from '@config/constants';
 
+import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
+
 import { PROPER_NAME_TYPE, getProperName } from './utils';
 
 const actionTypes = {
@@ -101,14 +103,8 @@ export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => 
   fetchJisho(url || name)
     .then((response) => {
       if (vocabTrueName) {
-        // @TODO: refactor as function - see Flashcards.reducer
         response.data.forEach((kanji) => {
-          if (
-            (kanji.japanese[0]
-              && kanji.japanese[0].word === name && kanji.japanese[0].reading === kanjiMeaning)
-            || (kanji.japanese[1]
-            && kanji.japanese[1].word === name && kanji.japanese[1].reading === kanjiMeaning)
-          ) {
+          if (isCorrectVocabularyMeaning(kanji.japanese, name, kanjiMeaning)) {
             dispatch(getMeaning(kanji, name, url));
           }
         });
