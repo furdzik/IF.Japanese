@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 const Title = styled.div`
   margin-bottom: 3rem;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
   color: ${(props) => props.theme.colors.primaryColor};
 `;
 
@@ -30,7 +30,7 @@ const GameField = styled.div`
 const RandomKana = styled.div`
   padding: 2rem;
   font-size: 9rem;
-  font-weight: bold;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
 `;
 
 const Input = styled.input`

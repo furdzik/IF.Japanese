@@ -7,7 +7,7 @@ const List = styled.div`
   position: relative;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 0 3rem -1.1rem;
+  margin: 0 0 3rem -.8rem;
   padding: 0;
   list-style: none;
 

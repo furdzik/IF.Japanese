@@ -12,7 +12,7 @@ const MenuItem = styled.li`
   display: block;
   margin: 3rem 2rem 3rem 0;
   font-size: 2.3rem;
-  font-weight: bold;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
   color: ${(props) => props.theme.colors.black};
 
   &:last-child {

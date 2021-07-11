@@ -20,7 +20,7 @@ const BoxItem = styled.li`
   align-items: center;
   min-width: 20rem;
   margin: 0 3rem 3rem;
-  border: 2px solid ${(props) => props.theme.colors.black};
+  border: .2rem solid ${(props) => props.theme.colors.black};
   border-radius: ${(props) => props.theme.layout.borderRadius};
 
   &:nth-child(1n) {
@@ -34,7 +34,7 @@ const BoxItem = styled.li`
 const LinkStyled = styled(Link)`
   display: block;
   padding: 4rem;
-  font-weight: bold;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
 `;
 
 export {

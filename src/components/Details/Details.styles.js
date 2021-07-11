@@ -14,7 +14,7 @@ const WordHeader = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.secondaryColor};
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
 
   ${(props) => props.known && css`
     background: ${props.theme.colors.primaryColor};
@@ -45,7 +45,7 @@ const WordHeaderSeparator = styled.span`
 
 const JishoLink = styled.a`
   display: inline-block;
-  font-weight: 200;
+  font-weight: ${(props) => props.theme.typography.fontWeight.light};
   color: ${(props) => props.theme.colors.white};
 
   ${(props) => props.notKnow && css`

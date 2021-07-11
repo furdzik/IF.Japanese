@@ -17,7 +17,7 @@
     - [stylelint-order](https://github.com/hudochenkov/stylelint-order)
   - overwrited by:
     - [stylelint](../.stylelintrc)
-- Use mobile first approach, applay desktop layout from tablet breakpoint (768px)
+- Use mobile first approach, apply desktop layout from tablet breakpoint (768px)
 
 ## JSX
 

@@ -1,11 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
+import _map from 'lodash/map';
+
+import { typography } from './typography';
+
+const baseFontFamily = _map(typography.fontFamily, (el) => `${el}`).join(', ');
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
-
   html {
     background: ${(props) => props.theme.colors.lightGray};
-    font-size: 62.5%;
+    font-size: ${(props) => props.theme.typography.fontSize.base};
 
     @media print {
       background: none;
@@ -14,9 +17,10 @@ const GlobalStyles = createGlobalStyle`
   body {
     box-sizing: border-box;
     background: ${(props) => props.theme.colors.white};
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 1.8rem;
-    line-height: 1.5;
+    font-family: ${baseFontFamily};
+    font-size: ${(props) => props.theme.typography.fontSize.normal};
+    font-weight: ${(props) => props.theme.typography.fontWeight.regular};
+    line-height: ${(props) => props.theme.typography.lineHeight.normal};
     overflow-x: hidden;
   }
   *,
@@ -58,7 +62,7 @@ const GlobalStyles = createGlobalStyle`
       pointer-events: none;
     }
     &:-webkit-autofill {
-      box-shadow: 0 0 0 1000px ${(props) => props.theme.colors.white};
+      box-shadow: 0 0 0 100rem ${(props) => props.theme.colors.white};
     }
     &:required {
       box-shadow: none;

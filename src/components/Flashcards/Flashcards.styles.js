@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const Title = styled.div`
   margin-bottom: 3rem;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
   color: ${(props) => props.theme.colors.primaryColor};
 `;
 
@@ -46,18 +46,22 @@ const MeaningCard = styled(VocabCard)`
 `;
 
 const VocabStyle = css`
-  font-size: 5rem;
+  font-size: 4rem;
+
+  ${breakpointMixin.laptop`
+    font-size: 5rem;
+  `}
 `;
 
 const VocabWrapper = styled.div`
   ${VocabStyle};
-  font-weight: bold;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
 `;
 
 const TileStyled = styled(Tile)`
-  ${VocabStyle};
   margin: 1rem 0 0;
   padding: 0 2rem;
+  font-size: 3.5rem;
 
   ${(props) => !props.known && !props.inProgress && !props.nowLearning && css`
     border: 2px solid #a0a0a0;
@@ -66,11 +70,19 @@ const TileStyled = styled(Tile)`
   ${(props) => props.inProgress && !props.nowLearning && css`
     border: 2px solid #f39c9c;
   `}
+
+  ${breakpointMixin.laptop`
+    ${VocabStyle};
+  `}
 `;
 
 const ReadingWrapper = styled.div`
   margin-top: 1rem;
-  font-size: 4rem;
+  font-size: 3.5rem;
+
+  ${breakpointMixin.laptop`
+    font-size: 4rem;
+  `}
 `;
 
 const MeaningWrapper = styled.div`
@@ -97,6 +109,7 @@ const SeeMoreLink = styled(Link)`
 
 const IconStyled = styled(Icon)`
   display: inline-block;
+  margin-top: .3rem;
   fill: ${(props) => props.theme.colors.primaryColor};
 `;
 
