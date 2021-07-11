@@ -1,4 +1,1 @@
-export const getOtherForms = (otherForms) => {
-  // @TODO: get other forms
-  return otherForms;
-};
+export const getOtherForms = (otherForms) => otherForms.slice(1);

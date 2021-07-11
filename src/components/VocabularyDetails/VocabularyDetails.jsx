@@ -9,7 +9,8 @@ import {
   translationsShape,
   metadataShape,
   statusShape,
-  kanjiPartsShape
+  kanjiPartsShape,
+  otherFormsShape
 } from '@types/vocabularyDetailsShape';
 import { tagsShape } from '@types/commonDetailsShape';
 
@@ -74,7 +75,7 @@ const VocabularyDetails = (props) => {
       jishoLink={`https://jisho.org/word/${props.metadata.slug}`}
       tags={getTags()}
       additionalBox={(
-        props.antonyms ? (
+        props.antonyms.length > 0 ? (
           <AntonymsBox key={props.antonyms}>
             {intl.formatMessage(messages.antonymText)}
             {
@@ -121,6 +122,8 @@ const VocabularyDetails = (props) => {
               </TranslationsListItem>
             ))
           }
+          {/* @TODO other forms */}
+          {console.log(props.otherForms)}
         </TranslationsList>
       )}
       secondarySection={props.kanjiParts ? (
@@ -264,6 +267,7 @@ VocabularyDetails.propTypes = {
   antonyms: PropTypes.arrayOf(PropTypes.string),
   examples: PropTypes.arrayOf(PropTypes.string),
   kanjiParts: kanjiPartsShape,
+  otherForms: otherFormsShape,
   tags: tagsShape,
   verb: verbItemShape
 };
@@ -273,6 +277,7 @@ VocabularyDetails.defaultProps = {
   antonyms: null,
   examples: null,
   kanjiParts: null,
+  otherForms: null,
   tags: null,
   verb: null
 };

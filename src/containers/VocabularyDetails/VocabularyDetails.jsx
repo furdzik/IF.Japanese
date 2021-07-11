@@ -7,7 +7,8 @@ import {
   translationsShape,
   metadataShape,
   statusShape,
-  kanjiPartsShape
+  kanjiPartsShape,
+  otherFormsShape
 } from '@types/vocabularyDetailsShape';
 import { tagsShape } from '@types/commonDetailsShape';
 import { getVocabSpecificReading } from '@utils/vocabulary';
@@ -40,6 +41,7 @@ const VocabularyDetails = (props) => {
       examples={props.examples}
       status={props.status}
       metadata={props.metadata}
+      otherForms={props.otherForms}
       tags={props.tags}
       verb={props.verb}
       kanjiParts={props.kanjiParts}
@@ -59,6 +61,7 @@ VocabularyDetails.propTypes = {
   antonyms: PropTypes.arrayOf(PropTypes.string),
   examples: PropTypes.arrayOf(PropTypes.string),
   kanjiParts: kanjiPartsShape,
+  otherForms: otherFormsShape,
   tags: tagsShape,
   verb: verbItemShape
 };
@@ -68,6 +71,7 @@ VocabularyDetails.defaultProps = {
   antonyms: null,
   examples: null,
   kanjiParts: null,
+  otherForms: null,
   tags: null,
   verb: null
 };

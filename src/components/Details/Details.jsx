@@ -31,10 +31,10 @@ const Details = (props) => {
         <span>
           {props.name}
           {
-            props.reading && props.name !== props.reading ? (
+            props.meaning && props.name !== props.meaning ? (
               <React.Fragment>
                 <WordHeaderSeparator>/</WordHeaderSeparator>
-                {props.reading}
+                {props.meaning}
               </React.Fragment>
             ) : null
           }
@@ -106,8 +106,8 @@ Details.propTypes = {
   children: PropTypes.node,
   inProgress: PropTypes.bool,
   known: PropTypes.bool,
+  meaning: PropTypes.string,
   nowLearning: PropTypes.bool,
-  reading: PropTypes.string,
   secondarySection: PropTypes.node,
   sections: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
@@ -121,8 +121,8 @@ Details.defaultProps = {
   children: null,
   inProgress: null,
   known: null,
+  meaning: null,
   nowLearning: null,
-  reading: null,
   secondarySection: null,
   sections: null,
   tags: null
