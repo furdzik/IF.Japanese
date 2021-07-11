@@ -193,6 +193,7 @@
   "components.VocabularyDetails.examplesHeader": "Examples",
   "components.VocabularyDetails.jishoLinkText": "Jisho link",
   "components.VocabularyDetails.mainHeader": "Meaning of the word",
+  "containers.Flashcards.errorNoResults": "Nothing to show, change filters",
   "containers.Kanji.joyo": "常用漢字表",
   "utils.defaultMessages.all": "全部",
   "utils.defaultMessages.ikouFormLabel": "意向形",
