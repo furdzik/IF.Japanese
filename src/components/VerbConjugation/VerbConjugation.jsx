@@ -10,22 +10,22 @@ const VerbConjugation = (props) => (
     {props.verb?.main}
     {
       getConjugation(
-        props.bunpou, props.verb?.verbGroup, props.inflection, props.teineiKei
+        props.grammar, props.verb?.verbGroup, props.inflection, props.politeForm
       )
     }
   </div>
 );
 
 VerbConjugation.propTypes = {
-  bunpou: PropTypes.string.isRequired,
+  grammar: PropTypes.string.isRequired,
   inflection: PropTypes.number.isRequired,
   verb: vocabItemShape.isRequired,
   className: PropTypes.string,
-  teineiKei: PropTypes.bool
+  politeForm: PropTypes.bool
 };
 
 VerbConjugation.defaultProps = {
-  teineiKei: false,
+  politeForm: false,
   className: ''
 };
 

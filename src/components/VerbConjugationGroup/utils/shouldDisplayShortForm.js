@@ -1,7 +1,7 @@
-import { bunpouTypes, verbGroupTypes } from '@config/constants';
+import { grammarTypes, verbGroupTypes } from '@config/constants';
 
-export const shouldDisplayShortForm = (bunpou, verbGroup) => (
-  bunpou !== bunpouTypes.SHIEKIUKEMI_SHORT_KEI
+export const shouldDisplayShortForm = (grammar, verbGroup) => (
+  grammar !== grammarTypes.SHIEKIUKEMI_SHORT_FORM
   || (verbGroup !== verbGroupTypes.group2
     && verbGroup !== verbGroupTypes.specialVerb1
     && verbGroup !== verbGroupTypes.specialVerb2

@@ -22,20 +22,20 @@ const VerbConjugationGroup = (props) => props.verb ? (
       ) : null
     }
     {
-      props.bunpou
+      props.grammar
         .map((item, index) => shouldDisplayShortForm(item, props.verb.verbGroup) ? (
         // eslint-disable-next-line react/no-array-index-key
           <Box key={index}>
             <VerbConjugationWrapper
               verb={props.verb}
-              bunpou={item}
+              grammar={item}
               inflection={inflectionTypes.NORMAL}
             />
             {
               !props.noNegative ? (
                 <VerbConjugationWrapper
                   verb={props.verb}
-                  bunpou={item}
+                  grammar={item}
                   inflection={inflectionTypes.NEGATIVE}
                 />
               ) : null
@@ -45,12 +45,12 @@ const VerbConjugationGroup = (props) => props.verb ? (
                 <React.Fragment>
                   <VerbConjugationWrapper
                     verb={props.verb}
-                    bunpou={item}
+                    grammar={item}
                     inflection={inflectionTypes.PAST}
                   />
                   <VerbConjugationWrapper
                     verb={props.verb}
-                    bunpou={item}
+                    grammar={item}
                     inflection={inflectionTypes.PAST_NEGATIVE}
                   />
                 </React.Fragment>
@@ -60,25 +60,25 @@ const VerbConjugationGroup = (props) => props.verb ? (
         ) : null)
     }
     {
-      props.bunpou
-        .map((item, index) => props.teineiKei && shouldDisplayShortForm(
+      props.grammar
+        .map((item, index) => props.politeForm && shouldDisplayShortForm(
           item, props.verb.verbGroup
         ) ? (
           // eslint-disable-next-line react/no-array-index-key
           <Box key={index}>
             <VerbConjugationWrapper
               verb={props.verb}
-              bunpou={item}
+              grammar={item}
               inflection={inflectionTypes.NORMAL}
-              teineiKei
+              politeForm
             />
             {
               !props.noNegative ? (
                 <VerbConjugationWrapper
                   verb={props.verb}
-                  bunpou={item}
+                  grammar={item}
                   inflection={inflectionTypes.NEGATIVE}
-                  teineiKei
+                  politeForm
                 />
               ) : null
             }
@@ -87,15 +87,15 @@ const VerbConjugationGroup = (props) => props.verb ? (
                 <React.Fragment>
                   <VerbConjugationWrapper
                     verb={props.verb}
-                    bunpou={item}
+                    grammar={item}
                     inflection={inflectionTypes.PAST}
-                    teineiKei
+                    politeForm
                   />
                   <VerbConjugationWrapper
                     verb={props.verb}
-                    bunpou={item}
+                    grammar={item}
                     inflection={inflectionTypes.PAST_NEGATIVE}
-                    teineiKei
+                    politeForm
                   />
                 </React.Fragment>
               ) : null
@@ -107,23 +107,23 @@ const VerbConjugationGroup = (props) => props.verb ? (
 ) : null;
 
 VerbConjugationGroup.propTypes = {
-  bunpou: PropTypes.arrayOf(PropTypes.string).isRequired,
+  grammar: PropTypes.arrayOf(PropTypes.string).isRequired,
   verb: verbItemShape.isRequired,
   label: PropTypes.string,
   noNegative: PropTypes.bool,
   noPast: PropTypes.bool,
+  politeForm: PropTypes.bool,
   showLabel: PropTypes.bool,
-  showLine: PropTypes.bool,
-  teineiKei: PropTypes.bool
+  showLine: PropTypes.bool
 };
 
 VerbConjugationGroup.defaultProps = {
   label: '',
   noNegative: false,
   noPast: false,
+  politeForm: false,
   showLabel: false,
-  showLine: false,
-  teineiKei: false
+  showLine: false
 };
 
 export default VerbConjugationGroup;
