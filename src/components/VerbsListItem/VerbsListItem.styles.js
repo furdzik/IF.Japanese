@@ -16,7 +16,7 @@ const Item = styled.li`
     border-radius: 0 0 .4rem .4rem;
   }
   & + & {
-    margin-top: -1px;
+    margin-top: -.1rem;
   }
 
   ${breakpointMixin.laptop`

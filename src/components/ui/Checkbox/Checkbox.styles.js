@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components';
 
 const CheckboxLabel = styled.label`
   display: flex;
-  position: relative;
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
 `;
 
@@ -13,28 +12,25 @@ const CheckboxInput = styled.input`
 
 const CheckboxBox = styled.span`
   display: flex;
-  position: relative;
-  top: .25rem;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 1.7rem;
   height: 1.7rem;
   margin-right: 1rem;
-  border: 2px solid ${(props) => props.theme.colors.primaryColor};
-  border-radius: 2px;
+  border: .2rem solid ${(props) => props.theme.colors.primaryColor};
+  border-radius: .2rem;
   background: ${(props) => props.theme.colors.white};
-  transition: all 0.2s;
+  transition: all .2s;
   cursor: pointer;
   &::after {
     display: inline-block;
-    position: relative;
-    top: -2px;
     transform: rotate(-53deg);
-    width: 9px;
-    height: 6px;
-    border-bottom: 2px solid;
-    border-left: 2px solid;
+    width: .9rem;
+    height: .6rem;
+    margin-top: -.3rem;
+    border-bottom: .2rem solid;
+    border-left: .2rem solid;
     color: ${(props) => props.theme.colors.primaryColor};
     opacity: 0;
     content: '';

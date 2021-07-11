@@ -4,7 +4,7 @@ const AnchorWrapper = styled.span`
   cursor: pointer;
 
   &:focus {
-    outline: -webkit-focus-ring-color auto 5px;
+    outline: -webkit-focus-ring-color auto .5rem;
   }
 
   ${(props) => props.disabled && css`

@@ -74,7 +74,7 @@ const ModalHeader = styled.div`
 
 const Title = styled.div`
   font-size: 2.2rem;
-  font-weight: 200;
+  font-weight: ${(props) => props.theme.typography.fontWeight.regular};
   line-height: 1.3;
   letter-spacing: -.024rem;
 
@@ -112,7 +112,7 @@ const ModalContent = styled.div`
     max-height: calc(var(--vh, 1vh) * 76.6);
   `};
 
-  @media only screen and (max-height: 500px) {
+  @media only screen and (max-height: 50rem) {
     max-height: 40vh;
     max-height: calc(var(--vh, 1vh) * 40);
   }
@@ -137,7 +137,7 @@ const ModalFooter = styled.div`
 
   ${(props) => props.isOnlyMobile && css`
     padding: 1rem 1.55rem;
-    box-shadow: 0 -2px 7px ${shadowColor}, 0 -1px 3px ${shadowColor};
+    box-shadow: 0 -.2rem .7rem ${shadowColor}, 0 -.1rem .3rem ${shadowColor};
   `};
 `;
 

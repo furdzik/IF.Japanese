@@ -5,7 +5,7 @@ import { breakpointMixin } from '@styles/mixins';
 const ListItem = styled.div`
   position: relative;
   order: 3;
-  margin: 1.1rem;
+  margin: .8rem;
   padding: .6rem 1rem .4rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.mainCategoriesStyle.notKnown};

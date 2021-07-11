@@ -4,7 +4,7 @@ const SwitcherWrapper = styled.div`
   position: relative;
   width: 3.4rem;
   height: 1.4rem;
-  border-radius: 10px;
+  border-radius: 1rem;
   background-color: ${(props) => props.theme.colors.secondaryColorHover};
   transition: all .3s ease-in;
   cursor: pointer;

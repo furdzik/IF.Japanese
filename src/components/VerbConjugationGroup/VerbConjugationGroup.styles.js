@@ -17,7 +17,7 @@ const Box = styled.div`
 const Line = css`
   margin-top: 1rem;
   padding-top: 2rem;
-  border-top: 1px dashed ${(props) => props.theme.colors.lightGray};
+  border-top: .1rem dashed ${(props) => props.theme.colors.lightGray};
 `;
 
 const BoxGroup = styled.div`
