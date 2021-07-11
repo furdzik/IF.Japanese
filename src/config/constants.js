@@ -141,3 +141,12 @@ export const URL_SEPARATOR = ',';
 
 export const ENTER_CODE = 13;
 export const ESC_CODE = 27;
+
+/* VOCAB DETAILS */
+export const tagTypes = {
+  IS_VERB: 'isVerb',
+  IS_COMMON: 'isCommon',
+  JLPT: 'jlpt',
+  JOYO: 'joyo',
+  OTHER: 'other'
+};

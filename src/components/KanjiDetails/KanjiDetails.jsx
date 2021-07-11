@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { objectShape } from '@utils/types/objectShape';
+import { tagTypes } from '@config/constants';
+
+import { objectShape } from '@types/objectShape';
 
 import Details from '@components/Details';
 import Tag from '@components/Tag';
@@ -24,15 +26,15 @@ const KanjiDetails = (props) => {
 
   const getTags = () => {
     const tags = [];
-
+    // TODO: change object to one tags (like VocabularyDetails)
     if (props.isJoyo) {
       tags.push(
-        <Tag isCommon>{intl.formatMessage(messages.joyo)}</Tag>
+        <Tag tagType={tagTypes.JOYO}>{intl.formatMessage(messages.joyo)}</Tag>
       );
     }
     if (props.level !== 0) {
       tags.push(
-        <Tag isJlpt>
+        <Tag tagType={tagTypes.JLPT}>
           {intl.formatMessage(messages.jlptLevelText, { level: props.level })}
         </Tag>
       );

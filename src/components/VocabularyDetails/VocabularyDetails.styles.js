@@ -7,7 +7,7 @@ const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
 `;
 
-const SensesList = styled.ol`
+const TranslationsList = styled.ol`
   margin: 8rem 0 0 0;
   list-style: none;
 
@@ -16,7 +16,7 @@ const SensesList = styled.ol`
   `}
 `;
 
-const SensesListItem = styled.li`
+const TranslationsListItem = styled.li`
   display: flex;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -69,6 +69,8 @@ const AntonymsBox = styled.div`
 `;
 
 const AntonymsLink = styled(Link)`
+  display: inline-block;
+  margin-left: 1rem;
   color: ${(props) => props.theme.colors.primaryColor};
 `;
 
@@ -85,8 +87,8 @@ const KanjiParts = styled.div`
 
 export {
   ConjugationLink,
-  SensesList,
-  SensesListItem,
+  TranslationsList,
+  TranslationsListItem,
   AdditionalInfo,
   PartOfSpeechWrapper,
   PartOfSpeechBox,

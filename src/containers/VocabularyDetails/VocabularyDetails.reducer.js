@@ -6,7 +6,14 @@ import { URL_SEPARATOR } from '@config/constants';
 
 import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
 
-import { PROPER_NAME_TYPE, getProperName } from './utils';
+import {
+  PROPER_NAME_TYPE,
+  getProperName,
+  getTags,
+  getTranslations,
+  getAntonyms,
+  getOtherForms
+} from './utils';
 
 const actionTypes = {
   GET_VOCAB_DETAILS_INIT: 'VOCABULARY/GET_VOCAB_DETAILS_INIT',
@@ -15,50 +22,54 @@ const actionTypes = {
 
 const initialState = {
   loading: true,
-  reading: null,
-  additionalExplanation: null,
+  vocab: null,
+  meaning: '',
+  status: {},
+  metadata: {},
+  tags: null,
+  translations: [],
   antonyms: null,
-  senses: [],
-  jlpt: null,
-  isCommon: null,
-  tags: [],
-  known: null,
-  nowLearning: null,
-  meaning: null,
-  inProgress: null,
-  pitch: null,
-  level: null,
-  verb: null,
+  otherForms: null,
+  additionalExplanation: null,
   examples: null,
-  japanese: null
+  kanjiParts: null,
+  verb: null
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_VOCAB_DETAILS: {
       const data = action.payload;
-
-      const { tags } = data.details;
-
-      data.details.tags.forEach((el, index) => {
-        const waniKaniLevel = el.replace('wanikani', '');
-
-        tags[index] = `wanikani: level ${waniKaniLevel}`;
-      });
-      data.details.tags = tags;
-
+      console.log(data);
       return {
         ...state,
-        ...data.vocab,
-        meaning: data.vocab.meaning ? data.vocab.meaning : null,
-        antonyms: data.vocab.antonyms ? data.vocab.antonyms : null,
-        japanese: data.details.japanese,
-        reading: data.details.japanese[0].reading,
-        senses: data.details.senses,
-        jlpt: data.details.jlpt,
-        isCommon: data.details.is_common,
-        tags,
-        slug: data.details.slug,
+        vocab: data.vocab.vocab,
+        meaning: data.vocab.meaning
+          ? data.vocab.meaning
+          : data.details.japanese[0].reading,
+        status: {
+          known: data.vocab.known,
+          nowLearning: data.vocab.nowLearning,
+          inProgress: data.vocab.inProgress
+        },
+        metadata: {
+          slug: data.details.slug
+        },
+        tags: getTags(
+          data.details.tags,
+          data.vocab.verb,
+          data.details.jlpt,
+          data.details.is_common
+        ),
+        translations: getTranslations(data.details.senses),
+        antonyms: getAntonyms(data.vocab.antonyms, data.details.senses),
+        otherForms: getOtherForms(data.details.japanese), // wykluczyć 1 element
+        additionalExplanation: data.vocab.additionalExplanation,
+        examples: data.vocab.examples,
+        kanjiParts: null,
+        verb: data.vocab.verb ? {
+          ...data.vocab.verb
+        } : null,
         loading: false
       };
     }
