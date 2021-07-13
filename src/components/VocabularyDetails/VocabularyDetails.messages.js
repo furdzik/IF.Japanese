@@ -7,5 +7,6 @@ export default defineMessages({
   jishoLinkText: 'Jisho link',
   examplesHeader: 'Examples',
   otherFormsHeader: 'Other forms',
-  restrictionsText: 'Only applies to'
+  restrictionsText: 'Only applies to',
+  conjugationText: 'conjugation'
 });

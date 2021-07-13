@@ -66,7 +66,7 @@ export default function(state = initialState, action) {
         },
         tags: getTags(
           data.details.tags,
-          data.vocab.verb,
+          data.verb,
           data.details.jlpt,
           data.details.is_common
         ),
