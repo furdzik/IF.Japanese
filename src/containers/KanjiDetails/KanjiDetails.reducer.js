@@ -33,31 +33,17 @@ export default function(state = initialState, action) {
         nowLearning: originKanji.nowLearning,
         isJoyo: originKanji.joyo
       };
-      if (detailsAlternative) {
-        data = {
-          ...data,
-          grade: detailsAlternative.grade,
-          kunyomi: detailsAlternative?.kun_readings.join(', '),
-          onyomi: detailsAlternative?.on_readings.join(', '),
-          meaning: { english: detailsAlternative?.meanings.join(', ') },
-          numberOfStrokes: detailsAlternative?.stroke_count,
-          strokes: null,
-          radical: null,
-          examples: null
-        };
-      } else {
-        data = {
-          ...data,
-          grade: details?.references?.grade,
-          kunyomi: details?.kanji?.kunyomi?.hiragana,
-          onyomi: details?.kanji?.onyomi?.katakana,
-          meaning: details?.kanji?.meaning,
-          numberOfStrokes: details.kanji?.strokes?.count,
-          strokes: details.kanji?.strokes,
-          radical: details?.radical,
-          examples: details?.examples
-        };
-      }
+      data = {
+        ...data,
+        grade: details?.references?.grade,
+        kunyomi: detailsAlternative?.kun_readings.join(', '),
+        onyomi: detailsAlternative?.on_readings.join(', '),
+        meaning: details?.kanji?.meaning,
+        numberOfStrokes: details.kanji?.strokes?.count,
+        strokes: details.kanji?.strokes,
+        radical: details?.radical,
+        examples: details?.examples
+      };
 
       return {
         ...state,
@@ -93,15 +79,14 @@ export const getKanjiDetails = (name) => (dispatch) => {
 
   const originKanji = kanjiJson.filter((element) => element.kanji === name)[0];
 
-  fetchKanji(name)
-    .then((details) => {
-      if (details.error) {
-        fetchKanjiAlternative(name).then((detailsAlternative) => {
-          dispatch(getKanjiDetailsAction({ detailsAlternative, originKanji }));
-        });
-      } else {
-        dispatch(getKanjiDetailsAction({ details, originKanji }));
-      }
+  Promise.all(
+    [
+      fetchKanji(name),
+      fetchKanjiAlternative(name)
+    ]
+  )
+    .then(([details, detailsAlternative]) => {
+      dispatch(getKanjiDetailsAction({ details, detailsAlternative, originKanji }));
     })
     .catch((error) => {
       throw new Error(error);

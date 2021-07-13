@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 import { breakpointMixin } from '@styles/mixins';
 
+const SubHeader = styled.div`
+  width: 100%;
+  margin-bottom: .5rem;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
+`;
+
 const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
 `;
@@ -13,6 +19,7 @@ const TranslationsList = styled.ol`
 
   ${breakpointMixin.laptop`
     margin-top: 0;
+    margin-right: 4rem;
   `}
 `;
 
@@ -83,8 +90,9 @@ const AdditionalExplanationWrapper = styled.div`
 const KanjiParts = styled.div`
   width: 30rem;
   margin-left: auto;
-  padding-left: 3rem;
-  outline: 1px dotted red;
+  padding-left: 4rem;
+  border-left: 1px dotted ${(props) => props.theme.colors.secondaryColor};
+  border-radius: ${(props) => props.theme.layout.borderRadius};
 `;
 
 const OtherFormsWrapper = styled.div`
@@ -93,13 +101,8 @@ const OtherFormsWrapper = styled.div`
   margin-top: 1rem;
 `;
 
-const OtherFormsHeader = styled.div`
-  width: 100%;
-  margin-bottom: .5rem;
-  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
-`;
-
 export {
+  SubHeader,
   ConjugationLink,
   TranslationsList,
   TranslationsListItem,
@@ -110,6 +113,5 @@ export {
   AntonymsLink,
   AdditionalExplanationWrapper,
   KanjiParts,
-  OtherFormsWrapper,
-  OtherFormsHeader
+  OtherFormsWrapper
 };

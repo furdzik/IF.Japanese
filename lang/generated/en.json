@@ -191,6 +191,7 @@
   "components.VocabularyDetails.conjugationText": "conjugation",
   "components.VocabularyDetails.examplesHeader": "Examples",
   "components.VocabularyDetails.jishoLinkText": "Jisho link",
+  "components.VocabularyDetails.kanjiPartsHeader": "Kanji in this word",
   "components.VocabularyDetails.mainHeader": "Meaning of the word",
   "components.VocabularyDetails.otherFormsHeader": "Other forms",
   "components.VocabularyDetails.restrictionsText": "Only applies to",

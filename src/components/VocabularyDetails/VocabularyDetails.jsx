@@ -24,6 +24,7 @@ import Tag from '@components/Tag';
 import conjugationMessages from '@utils/defaultMessages/conjugation.messages';
 
 import {
+  SubHeader,
   ConjugationLink,
   TranslationsList,
   TranslationsListItem,
@@ -34,8 +35,7 @@ import {
   AntonymsLink,
   AdditionalExplanationWrapper,
   KanjiParts,
-  OtherFormsWrapper,
-  OtherFormsHeader
+  OtherFormsWrapper
 } from './VocabularyDetails.styles.js';
 import messages from './VocabularyDetails.messages';
 
@@ -135,9 +135,9 @@ const VocabularyDetails = (props) => {
           {
             props.otherForms.length ? (
               <OtherFormsWrapper>
-                <OtherFormsHeader>
+                <SubHeader>
                   {intl.formatMessage(messages.otherFormsHeader)}
-                </OtherFormsHeader>
+                </SubHeader>
                 {
                   props.otherForms.map((form, index) => (
                     <div key={`${form.word}_${form.reading}`}>
@@ -153,11 +153,15 @@ const VocabularyDetails = (props) => {
       )}
       secondarySection={props.kanjiParts ? (
         <KanjiParts>
-          {
-            props.kanjiParts.map((el) => (
-              <div>{el}</div>
-            ))
-          }
+          <SubHeader>
+            {intl.formatMessage(messages.kanjiPartsHeader)}
+          </SubHeader>
+          {console.log(props.kanjiParts)}
+          {/* { */}
+          {/*  props.kanjiParts.map((el) => ( */}
+          {/*    <div>{el}</div> */}
+          {/*  )) */}
+          {/* } */}
         </KanjiParts>
       ) : null}
       sections={[

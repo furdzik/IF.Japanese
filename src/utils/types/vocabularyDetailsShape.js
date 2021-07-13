@@ -44,7 +44,23 @@ export const otherFormShape = PropTypes.shape({
 export const otherFormsShape = PropTypes.arrayOf(otherFormShape);
 
 export const kanjiPartShape = PropTypes.shape({
-  // @TODO
+  kanji: PropTypes.string,
+  meaning: PropTypes.string,
+  reading: PropTypes.shape({
+    onyomi: PropTypes.string,
+    kunyomi: PropTypes.string
+  }),
+  status: {
+    known: PropTypes.bool,
+    nowLearning: PropTypes.bool,
+    inProgress: PropTypes.bool
+  },
+  tags: PropTypes.shape({
+    level: PropTypes.string,
+    grade: PropTypes.number,
+    isJoyo: PropTypes.bool,
+    strokes: PropTypes.number
+  })
 });
 
 export const kanjiPartsShape = PropTypes.arrayOf(kanjiPartShape);

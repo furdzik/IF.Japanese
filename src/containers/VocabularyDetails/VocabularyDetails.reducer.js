@@ -1,6 +1,6 @@
 import vocabJson from '@data/vocabulary.json';
 
-import { fetchJisho } from '@api';
+import { fetchJisho, fetchKanjiAlternative } from '@api';
 
 import { URL_SEPARATOR } from '@config/constants';
 
@@ -14,7 +14,9 @@ import {
   getAntonyms,
   getOtherForms,
   getKanji,
-  getFurigana
+  getFurigana,
+  getKanjiParts,
+  preperKanjiDetailsData
 } from './utils';
 
 const actionTypes = {
@@ -72,10 +74,10 @@ export default function(state = initialState, action) {
         ),
         translations: getTranslations(data.details.senses),
         antonyms: getAntonyms(data.antonyms, data.details.senses),
-        otherForms: getOtherForms(data.details.japanese), // wykluczyć 1 element
+        otherForms: getOtherForms(data.details.japanese),
         additionalExplanation: data.additionalExplanation,
         examples: data.examples,
-        kanjiParts: null,
+        kanjiParts: preperKanjiDetailsData(data.kanjiDetails),
         verb: data.verb ? {
           ...data.verb
         } : null,
@@ -110,9 +112,21 @@ const getMeaning = (response, name, url) => (dispatch) => {
     el.meaning && el.meaning === getProperName(url, PROPER_NAME_TYPE.MEANING)
   ) || (
     !el.meaning && el.vocab === getProperName(url, PROPER_NAME_TYPE.KANJI)
-  ));
+  ))[0];
 
-  dispatch(getVocabularyDetailsAction({ name, ...vocab[0], details: response }));
+  const kanjiParts = getKanjiParts(vocab.vocab);
+
+  Promise.all(
+    kanjiParts.map((el) => fetchKanjiAlternative(el))
+  )
+    .then((kanjiDetails) => {
+      dispatch(getVocabularyDetailsAction({
+        name,
+        ...vocab,
+        kanjiDetails,
+        details: response
+      }));
+    });
 };
 
 export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => {
