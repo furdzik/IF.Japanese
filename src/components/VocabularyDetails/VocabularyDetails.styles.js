@@ -85,6 +85,18 @@ const KanjiParts = styled.div`
   outline: 1px dotted red;
 `;
 
+const OtherFormsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+`;
+
+const OtherFormsHeader = styled.div`
+  width: 100%;
+  margin-bottom: .5rem;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
+`;
+
 export {
   ConjugationLink,
   TranslationsList,
@@ -95,5 +107,7 @@ export {
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  KanjiParts
+  KanjiParts,
+  OtherFormsWrapper,
+  OtherFormsHeader
 };

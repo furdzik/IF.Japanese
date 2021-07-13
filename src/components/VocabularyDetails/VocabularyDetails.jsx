@@ -6,6 +6,7 @@ import { grammarTypes, tagTypes } from '@config/constants';
 
 import { verbItemShape } from '@types/verbShape';
 import {
+  japaneseFormShape,
   translationsShape,
   metadataShape,
   statusShape,
@@ -32,14 +33,15 @@ import {
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  KanjiParts
+  KanjiParts,
+  OtherFormsWrapper,
+  OtherFormsHeader
 } from './VocabularyDetails.styles.js';
 import messages from './VocabularyDetails.messages';
 
 const VocabularyDetails = (props) => {
   const intl = useIntl();
   const [conjugationOpen, setConjugationOpen] = useState(false);
-  console.log(props);
 
   const getTags = () => {
     const tags = [];
@@ -69,6 +71,7 @@ const VocabularyDetails = (props) => {
     <Details
       name={props.name}
       meaning={props.meaning}
+      japaneseForm={props.japaneseForm}
       known={props.status.known}
       inProgress={props.status.inProgress}
       nowLearning={props.status.nowLearning}
@@ -112,6 +115,13 @@ const VocabularyDetails = (props) => {
                         <React.Fragment key={index}>
                           {def}
                           {el.englishDefinitions.length !== index + 1 ? ', ' : ''}
+                          {
+                            el.restrictions.length ? (
+                              <AdditionalInfo>
+                                {intl.formatMessage(messages.restrictionsText)} {el.restrictions.join(', ')}
+                              </AdditionalInfo>
+                            ) : null
+                          }
                         </React.Fragment>
                       ))
                     }
@@ -122,8 +132,23 @@ const VocabularyDetails = (props) => {
               </TranslationsListItem>
             ))
           }
-          {/* @TODO other forms */}
-          {console.log(props.otherForms)}
+          {
+            props.otherForms.length ? (
+              <OtherFormsWrapper>
+                <OtherFormsHeader>
+                  {intl.formatMessage(messages.otherFormsHeader)}
+                </OtherFormsHeader>
+                {
+                  props.otherForms.map((form, index) => (
+                    <div key={`${form.word}_${form.reading}`}>
+                      {form.word} 【{form.reading}】
+                      {props.otherForms.length - 1 !== index ? '、' : null}
+                    </div>
+                  ))
+                }
+              </OtherFormsWrapper>
+            ) : null
+          }
         </TranslationsList>
       )}
       secondarySection={props.kanjiParts ? (
@@ -258,6 +283,7 @@ const VocabularyDetails = (props) => {
 };
 
 VocabularyDetails.propTypes = {
+  japaneseForm: japaneseFormShape.isRequired,
   meaning: PropTypes.string.isRequired,
   metadata: metadataShape.isRequired,
   name: PropTypes.string.isRequired,

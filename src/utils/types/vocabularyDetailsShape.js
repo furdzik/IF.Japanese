@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { verbShape } from '@types/verbShape';
 import { tagsShape } from '@types/commonDetailsShape';
 
+export const japaneseFormShape = PropTypes.shape({
+  kanji: PropTypes.arrayOf(PropTypes.string),
+  furigana: PropTypes.arrayOf(PropTypes.string)
+});
+
 export const statusShape = PropTypes.shape({
   inProgress: PropTypes.bool,
   known: PropTypes.bool,
@@ -32,7 +37,8 @@ export const translationShape = PropTypes.shape({
 export const translationsShape = PropTypes.arrayOf(translationShape);
 
 export const otherFormShape = PropTypes.shape({
-  // @TODO
+  word: PropTypes.string,
+  reading: PropTypes.string
 });
 
 export const otherFormsShape = PropTypes.arrayOf(otherFormShape);
@@ -46,6 +52,7 @@ export const kanjiPartsShape = PropTypes.arrayOf(kanjiPartShape);
 export const vocabularyDetailsShape = PropTypes.shape({
   vocab: PropTypes.string,
   meaning: PropTypes.string,
+  japaneseForm: japaneseFormShape,
   status: statusShape,
   metadata: metadataShape,
   tags: tagsShape,

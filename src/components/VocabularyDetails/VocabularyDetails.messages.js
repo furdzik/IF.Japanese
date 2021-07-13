@@ -5,5 +5,7 @@ export default defineMessages({
   additionalExplanationHeader: 'Additional explanation for the word',
   antonymText: 'antonyms: ',
   jishoLinkText: 'Jisho link',
-  examplesHeader: 'Examples'
+  examplesHeader: 'Examples',
+  otherFormsHeader: 'Other forms',
+  restrictionsText: 'Only applies to'
 });

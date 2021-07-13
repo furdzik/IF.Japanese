@@ -12,7 +12,9 @@ import {
   getTags,
   getTranslations,
   getAntonyms,
-  getOtherForms
+  getOtherForms,
+  getKanji,
+  getFurigana
 } from './utils';
 
 const actionTypes = {
@@ -24,6 +26,7 @@ const initialState = {
   loading: true,
   vocab: null,
   meaning: '',
+  japaneseForm: {},
   status: {},
   metadata: {},
   tags: null,
@@ -40,17 +43,23 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_VOCAB_DETAILS: {
       const data = action.payload;
-      console.log(data);
+
       return {
         ...state,
-        vocab: data.vocab.vocab,
-        meaning: data.vocab.meaning
-          ? data.vocab.meaning
+        vocab: data.vocab,
+        meaning: data.meaning
+          ? data.meaning
           : data.details.japanese[0].reading,
+        japaneseForm: data.details.japanese[0].reading !== data.vocab ? {
+          kanji: getKanji(data.vocab),
+          furigana: getFurigana(
+            data.vocab, data.details.japanese[0].reading
+          )
+        } : null,
         status: {
-          known: data.vocab.known,
-          nowLearning: data.vocab.nowLearning,
-          inProgress: data.vocab.inProgress
+          known: data.known,
+          nowLearning: data.nowLearning,
+          inProgress: data.inProgress
         },
         metadata: {
           slug: data.details.slug
@@ -62,13 +71,13 @@ export default function(state = initialState, action) {
           data.details.is_common
         ),
         translations: getTranslations(data.details.senses),
-        antonyms: getAntonyms(data.vocab.antonyms, data.details.senses),
+        antonyms: getAntonyms(data.antonyms, data.details.senses),
         otherForms: getOtherForms(data.details.japanese), // wykluczyć 1 element
-        additionalExplanation: data.vocab.additionalExplanation,
-        examples: data.vocab.examples,
+        additionalExplanation: data.additionalExplanation,
+        examples: data.examples,
         kanjiParts: null,
-        verb: data.vocab.verb ? {
-          ...data.vocab.verb
+        verb: data.verb ? {
+          ...data.verb
         } : null,
         loading: false
       };
@@ -103,7 +112,7 @@ const getMeaning = (response, name, url) => (dispatch) => {
     !el.meaning && el.vocab === getProperName(url, PROPER_NAME_TYPE.KANJI)
   ));
 
-  dispatch(getVocabularyDetailsAction({ name, vocab: vocab[0], details: response }));
+  dispatch(getVocabularyDetailsAction({ name, ...vocab[0], details: response }));
 };
 
 export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => {
