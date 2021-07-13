@@ -1,16 +1,23 @@
+import { isHiragana } from 'wanakana';
+
 import { getKanji } from './getKanji';
 
 const { fit } = require('furigana');
 
 export const getFurigana = (kanji, furigana) => {
-  const furiganaArray = [];
+  let furiganaArray = [];
   const newArray = [];
   const kanjiArray = getKanji(kanji);
 
-  const furiganaObject = fit(kanji, furigana, { type: 'object' });
+  const detailedFurigana = fit(kanji, furigana, { type: 'object' });
 
-  furiganaObject.forEach((el) => {
-    furiganaArray.push(el.r);
+  detailedFurigana.forEach((el) => {
+    if (isHiragana(el.w) && el.w.length > 1) {
+      const splitHiragana = el.r.split('');
+      furiganaArray = furiganaArray.concat(splitHiragana);
+    } else {
+      furiganaArray.push(el.r);
+    }
   });
 
   kanjiArray.forEach((kanjiCharacter, kanjiIndex) => {

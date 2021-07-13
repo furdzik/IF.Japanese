@@ -90,7 +90,10 @@ const Header = styled.h2`
 const NameWrapper = styled.div`
   height: 100%;
   margin-top: 1rem;
-  margin-right: 4rem;
+
+  ${breakpointMixin.laptop`
+    margin-right: 4rem;
+  `}
 `;
 
 const CharacterBlock = styled.div`
@@ -98,9 +101,10 @@ const CharacterBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 27rem;
+  min-width: 27rem;
+  min-height: 16.5rem;
   margin-bottom: 2rem;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   border: 1px solid ${(props) => props.theme.colors.secondaryColor};
   border-radius: ${(props) => props.theme.layout.borderRadius};
   font-size: 4rem;
