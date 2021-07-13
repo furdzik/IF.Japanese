@@ -48,6 +48,12 @@ const ModalWrapper = styled.div`
   background: ${(props) => props.theme.colors.white};
   box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12);
 
+  ${breakpointMixin.landscapePhone`
+    min-width: 48rem;
+    max-width: 48rem;
+    border-radius: ${(props) => props.theme.layout.borderRadius};
+  `};
+
   ${breakpointMixin.laptop`
     min-width: 100rem;
     max-width: 100rem;
@@ -64,29 +70,35 @@ const ModalWrapper = styled.div`
 
 const ModalHeader = styled.div`
   position: relative;
-  padding: 2rem 5.2rem 2.5rem 2.5rem;
+  padding: 1.7rem 5.2rem 1.7rem 2.5rem;
+  background: ${(props) => props.theme.colors.secondaryColor};
+  color: ${(props) => props.theme.colors.primaryColor};
 
   ${(props) => props.isOnlyMobile && css`
     padding: 1.5rem 1.55rem;
     box-shadow: 0 2px 7px ${shadowColor}, 0 1px 3px ${shadowColor};
   `};
+
+  ${breakpointMixin.landscapePhone`
+    border-radius: ${(props) => props.theme.layout.borderRadius} ${(props) => props.theme.layout.borderRadius} 0 0;
+  `};
 `;
 
 const Title = styled.div`
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: ${(props) => props.theme.typography.fontWeight.regular};
   line-height: 1.3;
   letter-spacing: -.024rem;
 
   ${breakpointMixin.landscapePhone`
-    font-size: 2.4rem;
+    font-size: 2rem;
   `}
 `;
 
 const CloseButton = styled.button`
   display: block;
   position: absolute;
-  top: 2.2rem;
+  top: .8rem;
   right: 1.3rem;
   margin: 0;
   padding: 0;
@@ -103,18 +115,18 @@ const CloseButton = styled.button`
 
 const ModalContent = styled.div`
   overflow-y: auto;
-  max-height: calc(100vh - ${(props) => props.headerFooterHeight}px);
-  max-height: calc(calc(var(--vh, 1vh) * 100) - ${(props) => props.headerFooterHeight}px);
-  padding: 0 2.4rem 3rem;
+  height: calc(100vh - ${(props) => props.headerFooterHeight}px);
+  height: calc(calc(var(--vh, 1vh) * 100) - ${(props) => props.headerFooterHeight}px);
+  padding: 2rem;
 
   ${breakpointMixin.landscapePhone`
-    max-height: 76.6vh;
-    max-height: calc(var(--vh, 1vh) * 76.6);
+    height: 76.6vh;
+    height: calc(var(--vh, 1vh) * 76.6);
   `};
 
   @media only screen and (max-height: 50rem) {
-    max-height: 40vh;
-    max-height: calc(var(--vh, 1vh) * 40);
+    height: 40vh;
+    height: calc(var(--vh, 1vh) * 40);
   }
 
   ${(props) => props.isOnlyMobile && css`

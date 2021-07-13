@@ -187,7 +187,11 @@ const VocabularyDetails = (props) => {
       {
         conjugationOpen ? (
           <Modal
-            header={`${props.name} ${intl.formatMessage(messages.conjugationText)}`}
+            header={(
+              <React.Fragment>
+                <b>{props.name}</b> {intl.formatMessage(messages.conjugationText)}
+              </React.Fragment>
+            )}
             onClose={() => setConjugationOpen(false)}
           >
             <VerbConjugationGroup
