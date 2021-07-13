@@ -22,6 +22,7 @@ const TranslationsListItem = styled.li`
   padding-bottom: 4rem;
   &::before {
     display: block;
+    flex-shrink: 0;
     width: 4rem;
     height: 4rem;
     margin-right: 2rem;
@@ -46,18 +47,19 @@ const AdditionalInfo = styled.div`
 const PartOfSpeechWrapper = styled.div`
   min-height: 2.7rem;
   margin-top: -3rem;
-  margin-bottom: 1rem;
 `;
 
 const PartOfSpeechBox = styled.div`
   display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   padding: .2rem .5rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.lightGray};
   font-size: 1.2rem;
   text-transform: lowercase;
-  & + & {
-    margin-left: 1rem;
+  &:last-child {
+    margin-right: 0;
   }
 `;
 

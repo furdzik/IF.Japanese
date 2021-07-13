@@ -14,6 +14,7 @@ import Icon from '@mdi/react';
 import { mdiClose } from '@mdi/js';
 
 import OutsideClickHandler from 'react-outside-click-handler';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import { ESC_CODE } from '@config/constants';
 
@@ -91,8 +92,8 @@ const Modal = (props) => {
                 >
                   <Icon
                     path={mdiClose}
-                    color={useContext(ThemeContext).colorSecondary}
-                    size="3rem"
+                    color={useContext(ThemeContext).colors.secondaryColorHover}
+                    size="2.5rem"
                   />
                 </CloseButton>
               </ModalHeader>
@@ -109,11 +110,13 @@ const Modal = (props) => {
             isOnlyMobile={props.isOnlyMobile}
             headerFooterHeight={headerFooterHeight}
           >
-            {
-              props.spin ? (
-                <Loader />
-              ) : props.children
-            }
+            <Scrollbars>
+              {
+                props.spin ? (
+                  <Loader />
+                ) : props.children
+              }
+            </Scrollbars>
           </ModalContent>
           {
             props.footer ? (
@@ -136,10 +139,10 @@ Modal.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   footer: PropTypes.oneOfType([
-    PropTypes.func,
+    PropTypes.string,
     PropTypes.node
   ]),
-  header: PropTypes.string,
+  header: PropTypes.node,
   isOnlyMobile: PropTypes.bool,
   onClose: PropTypes.func
 };
