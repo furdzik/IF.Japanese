@@ -70,7 +70,8 @@
     "redux": "4.0.5",
     "redux-thunk": "2.3.0",
     "reselect": "4.0.0",
-    "styled-components": "5.0.1"
+    "styled-components": "5.0.1",
+    "wanakana": "4.0.2"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",

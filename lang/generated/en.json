@@ -188,6 +188,7 @@
   "components.VerbsListItem.verbTypeTransitiveText": "他動詞",
   "components.VocabularyDetails.additionalExplanationHeader": "Additional explanation for the word",
   "components.VocabularyDetails.antonymText": "antonyms: ",
+  "components.VocabularyDetails.conjugationText": "conjugation",
   "components.VocabularyDetails.examplesHeader": "Examples",
   "components.VocabularyDetails.jishoLinkText": "Jisho link",
   "components.VocabularyDetails.mainHeader": "Meaning of the word",
