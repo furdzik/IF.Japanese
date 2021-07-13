@@ -1,31 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { tagTypes } from '@config/constants';
+
+import { tagTypeShape } from '@types/commonDetailsShape';
+
 import {
   Wrapper
 } from './Tag.styles.js';
 
 const Tag = (props) => (
-  <Wrapper
-    isCommon={props.isCommon}
-    isJlpt={props.isJlpt}
-    isVerb={props.isVerb}
-  >
+  <Wrapper tagType={props.tagType}>
     {props.children}
   </Wrapper>
 );
 
 Tag.propTypes = {
   children: PropTypes.node.isRequired,
-  isCommon: PropTypes.bool,
-  isJlpt: PropTypes.bool,
-  isVerb: PropTypes.bool
+  tagType: tagTypeShape
 };
 
 Tag.defaultProps = {
-  isCommon: false,
-  isJlpt: false,
-  isVerb: false
+  tagType: tagTypes.OTHER
 };
 
 export default Tag;

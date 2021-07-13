@@ -2,8 +2,16 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { objectShape } from '@types/objectShape';
-
+import { verbItemShape } from '@types/verbShape';
+import {
+  japaneseFormShape,
+  translationsShape,
+  metadataShape,
+  statusShape,
+  kanjiPartsShape,
+  otherFormsShape
+} from '@types/vocabularyDetailsShape';
+import { tagsShape } from '@types/commonDetailsShape';
 import { getVocabSpecificReading } from '@utils/vocabulary';
 
 import Loader from '@components/ui/Loader';
@@ -27,64 +35,47 @@ const VocabularyDetails = (props) => {
   return !props.loading ? (
     <VocabularyDetailsComponent
       name={name}
-      senses={props.senses}
+      meaning={props.meaning}
+      japaneseForm={props.japaneseForm}
+      translations={props.translations}
       additionalExplanation={props.additionalExplanation}
       antonyms={props.antonyms}
       examples={props.examples}
-      inProgress={props.inProgress}
-      nowLearning={props.nowLearning}
-      isCommon={props.isCommon}
-      isVerb={!!(props.verb && props.verb.verbGroup)}
-      japanese={props.japanese}
-      jlpt={props.jlpt}
-      reading={props.reading}
-      kanjiParts={props.kanjiParts}
-      known={props.known}
-      pitch={props.pitch}
+      status={props.status}
+      metadata={props.metadata}
+      otherForms={props.otherForms}
       tags={props.tags}
       verb={props.verb}
-      slug={props.slug}
+      kanjiParts={props.kanjiParts}
     />
   ) : <Loader covered />;
 };
 
 VocabularyDetails.propTypes = {
   getVocabularyDetails: PropTypes.func.isRequired,
+  japaneseForm: japaneseFormShape.isRequired,
   loading: PropTypes.bool.isRequired,
+  meaning: PropTypes.string.isRequired,
+  metadata: metadataShape.isRequired,
   name: PropTypes.string.isRequired,
-  senses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  status: statusShape.isRequired,
+  translations: translationsShape.isRequired,
   additionalExplanation: PropTypes.string,
-  antonyms: PropTypes.string,
+  antonyms: PropTypes.arrayOf(PropTypes.string),
   examples: PropTypes.arrayOf(PropTypes.string),
-  inProgress: PropTypes.bool,
-  isCommon: PropTypes.bool,
-  japanese: PropTypes.arrayOf(PropTypes.object),
-  jlpt: PropTypes.arrayOf(PropTypes.string),
-  kanjiParts: PropTypes.arrayOf(PropTypes.object),
-  known: PropTypes.bool,
-  nowLearning: PropTypes.bool,
-  pitch: PropTypes.string,
-  reading: PropTypes.string,
-  slug: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
-  verb: objectShape
+  kanjiParts: kanjiPartsShape,
+  otherForms: otherFormsShape,
+  tags: tagsShape,
+  verb: verbItemShape
 };
 
 VocabularyDetails.defaultProps = {
   additionalExplanation: null,
   antonyms: null,
-  examples: [],
-  inProgress: false,
-  isCommon: null,
-  japanese: [],
-  jlpt: [],
+  examples: null,
   kanjiParts: null,
-  known: false,
-  nowLearning: false,
-  pitch: '',
-  reading: '',
-  slug: null,
-  tags: [],
+  otherForms: null,
+  tags: null,
   verb: null
 };
 

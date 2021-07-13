@@ -93,7 +93,11 @@ const NameWrapper = styled.div`
   margin-right: 4rem;
 `;
 
-const CharacterWrapper = styled.div`
+const CharacterBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 27rem;
   margin-bottom: 2rem;
   padding: 4rem 0;
@@ -101,6 +105,20 @@ const CharacterWrapper = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   font-size: 4rem;
   text-align: center;
+`;
+
+const CharacterWrapper = styled.div`
+  display: flex;
+  text-align: center;
+
+  ${(props) => props.furigana && css`
+    font-size: 1.6rem;
+    margin-bottom: -.5rem;
+  `}
+`;
+
+const OneCharacter = styled.div`
+  width: 5rem;
 `;
 
 export {
@@ -111,7 +129,9 @@ export {
   TagsWrapper,
   Content,
   SectionWrapper,
+  Header,
   NameWrapper,
+  CharacterBlock,
   CharacterWrapper,
-  Header
+  OneCharacter
 };

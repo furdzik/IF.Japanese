@@ -7,7 +7,7 @@ const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
 `;
 
-const SensesList = styled.ol`
+const TranslationsList = styled.ol`
   margin: 8rem 0 0 0;
   list-style: none;
 
@@ -16,7 +16,7 @@ const SensesList = styled.ol`
   `}
 `;
 
-const SensesListItem = styled.li`
+const TranslationsListItem = styled.li`
   display: flex;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -69,6 +69,8 @@ const AntonymsBox = styled.div`
 `;
 
 const AntonymsLink = styled(Link)`
+  display: inline-block;
+  margin-left: 1rem;
   color: ${(props) => props.theme.colors.primaryColor};
 `;
 
@@ -83,15 +85,29 @@ const KanjiParts = styled.div`
   outline: 1px dotted red;
 `;
 
+const OtherFormsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+`;
+
+const OtherFormsHeader = styled.div`
+  width: 100%;
+  margin-bottom: .5rem;
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
+`;
+
 export {
   ConjugationLink,
-  SensesList,
-  SensesListItem,
+  TranslationsList,
+  TranslationsListItem,
   AdditionalInfo,
   PartOfSpeechWrapper,
   PartOfSpeechBox,
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  KanjiParts
+  KanjiParts,
+  OtherFormsWrapper,
+  OtherFormsHeader
 };

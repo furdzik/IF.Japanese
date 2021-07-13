@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
+import { japaneseFormShape } from '@types/vocabularyDetailsShape';
+
 import Tag from '@components/Tag';
 
 import {
@@ -10,11 +12,13 @@ import {
   WordHeaderSeparator,
   JishoLink,
   Content,
-  Header,
   SectionWrapper,
+  Header,
   NameWrapper,
   TagsWrapper,
-  CharacterWrapper
+  CharacterBlock,
+  CharacterWrapper,
+  OneCharacter
 } from './Details.styles.js';
 import messages from './Details.messages';
 
@@ -31,10 +35,10 @@ const Details = (props) => {
         <span>
           {props.name}
           {
-            props.reading && props.name !== props.reading ? (
+            props.meaning && props.name !== props.meaning ? (
               <React.Fragment>
                 <WordHeaderSeparator>/</WordHeaderSeparator>
-                {props.reading}
+                {props.meaning}
               </React.Fragment>
             ) : null
           }
@@ -62,7 +66,30 @@ const Details = (props) => {
         <Header>{props.mainSectionHeader}</Header>
         <SectionWrapper flex>
           <NameWrapper>
-            <CharacterWrapper>{props.name}</CharacterWrapper>
+            <CharacterBlock>
+              {
+                props.japaneseForm?.furigana ? (
+                  <CharacterWrapper furigana>
+                    {
+                      props.japaneseForm?.furigana.map((el, index) => (
+                        <OneCharacter key={index}>{el}</OneCharacter>
+                      ))
+                    }
+                  </CharacterWrapper>
+                ) : null
+              }
+              {
+                props.japaneseForm?.kanji ? (
+                  <CharacterWrapper>
+                    {
+                      props.japaneseForm?.kanji.map((el, index) => (
+                        <OneCharacter key={index}>{el}</OneCharacter>
+                      ))
+                    }
+                  </CharacterWrapper>
+                ) : props.name
+              }
+            </CharacterBlock>
             {
               props.additionalBox ? (
                 props.additionalBox
@@ -105,9 +132,10 @@ Details.propTypes = {
   additionalBox: PropTypes.node,
   children: PropTypes.node,
   inProgress: PropTypes.bool,
+  japaneseForm: japaneseFormShape,
   known: PropTypes.bool,
+  meaning: PropTypes.string,
   nowLearning: PropTypes.bool,
-  reading: PropTypes.string,
   secondarySection: PropTypes.node,
   sections: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
@@ -120,9 +148,10 @@ Details.defaultProps = {
   additionalBox: null,
   children: null,
   inProgress: null,
+  japaneseForm: null,
   known: null,
+  meaning: null,
   nowLearning: null,
-  reading: null,
   secondarySection: null,
   sections: null,
   tags: null

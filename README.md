@@ -38,6 +38,7 @@ This repository presents frontend application for my Japanese APP
     "inProgress": true,
     "nowLearning": false,
     "pitch": "",
+    "antonyms": "入る",
     "level": 0,
     "examples": [
         "同じタイミングで言ってみました。"

@@ -131,18 +131,24 @@ export const getFlashcard = () => (dispatch, getStore) => {
         if (meaning) {
           if (isCorrectVocabularyMeaning(kanji.japanese, randomVocab.vocab, randomVocab.meaning)) {
             flashcard = getFlashcardData(kanji.japanese, kanji.senses, randomVocab);
+
+            dispatch(getFlashcardAction({
+              list,
+              flashcard,
+              additionalInfo: randomVocab
+            }));
           }
         } else {
           flashcard = getFlashcardData(
             response.data[0].japanese, response.data[0].senses, randomVocab
           );
-        }
 
-        dispatch(getFlashcardAction({
-          list,
-          flashcard,
-          additionalInfo: randomVocab
-        }));
+          dispatch(getFlashcardAction({
+            list,
+            flashcard,
+            additionalInfo: randomVocab
+          }));
+        }
       });
     })
     .catch((error) => {

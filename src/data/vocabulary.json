@@ -5711,7 +5711,7 @@
   {
     "vocab": "人達",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0
@@ -47040,6 +47040,22 @@
   },
   {
     "vocab": "定義",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "進化",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "退化",
     "known": false,
     "inProgress": false,
     "nowLearning": false,
