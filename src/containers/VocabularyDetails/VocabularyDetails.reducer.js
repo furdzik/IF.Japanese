@@ -1,4 +1,5 @@
 import vocabJson from '@data/vocabulary.json';
+import kanjiJson from '@data/kanji.json';
 
 import { fetchJisho, fetchKanjiAlternative } from '@api';
 
@@ -16,7 +17,7 @@ import {
   getKanji,
   getFurigana,
   getKanjiParts,
-  preperKanjiDetailsData
+  prepareKanjiDetailsData
 } from './utils';
 
 const actionTypes = {
@@ -77,7 +78,7 @@ export default function(state = initialState, action) {
         otherForms: getOtherForms(data.details.japanese),
         additionalExplanation: data.additionalExplanation,
         examples: data.examples,
-        kanjiParts: preperKanjiDetailsData(data.kanjiDetails),
+        kanjiParts: prepareKanjiDetailsData(data.kanjiDetails),
         verb: data.verb ? {
           ...data.verb
         } : null,
@@ -120,10 +121,23 @@ const getMeaning = (response, name, url) => (dispatch) => {
     kanjiParts.map((el) => fetchKanjiAlternative(el))
   )
     .then((kanjiDetails) => {
+      const completeKanjiParts = [];
+
+      kanjiDetails.forEach((kanjiPart) => {
+        kanjiJson.forEach((jsonEl) => {
+          if (kanjiPart.kanji === jsonEl.kanji) {
+            completeKanjiParts.push({
+              ...kanjiPart,
+              ...jsonEl
+            });
+          }
+        });
+      });
+
       dispatch(getVocabularyDetailsAction({
         name,
         ...vocab,
-        kanjiDetails,
+        kanjiDetails: completeKanjiParts,
         details: response
       }));
     });

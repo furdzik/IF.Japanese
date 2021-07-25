@@ -6,4 +6,4 @@ export { getOtherForms } from './getOtherForms';
 export { getKanji } from './getKanji';
 export { getFurigana } from './getFurigana';
 export { getKanjiParts } from './getKanjiParts';
-export { preperKanjiDetailsData } from './preperKanjiDetailsData';
+export { prepareKanjiDetailsData } from './prepareKanjiDetailsData';

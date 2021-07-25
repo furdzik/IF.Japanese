@@ -47,16 +47,16 @@ export const kanjiPartShape = PropTypes.shape({
   kanji: PropTypes.string,
   meaning: PropTypes.string,
   reading: PropTypes.shape({
-    onyomi: PropTypes.string,
-    kunyomi: PropTypes.string
+    onyomi: PropTypes.arrayOf(PropTypes.string),
+    kunyomi: PropTypes.arrayOf(PropTypes.string)
   }),
-  status: {
+  status: PropTypes.shape({
     known: PropTypes.bool,
     nowLearning: PropTypes.bool,
     inProgress: PropTypes.bool
-  },
+  }),
   tags: PropTypes.shape({
-    level: PropTypes.string,
+    level: PropTypes.number,
     grade: PropTypes.number,
     isJoyo: PropTypes.bool,
     strokes: PropTypes.number

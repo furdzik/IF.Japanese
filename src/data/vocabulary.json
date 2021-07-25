@@ -42344,7 +42344,7 @@
   {
     "vocab": "マイナス",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2
