@@ -30,22 +30,22 @@ export default function(state = initialState, action) {
 
       return {
         ...state,
-        meaning: details?.kanji?.meaning?.english,
+        meaning: detailsAlternative?.meanings.join(', '),
         reading: {
           onyomi: detailsAlternative?.on_readings,
           kunyomi: detailsAlternative?.kun_readings
         },
-        strokes: {
+        strokes: details ? {
           count: details.kanji?.strokes?.count,
           graphs: details.kanji?.strokes?.images
-        },
+        } : null,
         radicals: null,
         status: {
           known: kanji.known,
           inProgress: kanji.inProgress,
           nowLearning: kanji.nowLearning
         },
-        examples: getElements(details?.examples),
+        examples: details ? getElements(details?.examples) : null,
         metadata: {
           slug: kanji?.kanji
         },
@@ -91,7 +91,11 @@ export const getKanjiDetails = (name) => (dispatch) => {
     ]
   )
     .then(([details, detailsAlternative]) => {
-      dispatch(getKanjiDetailsAction({ details, detailsAlternative, kanji }));
+      dispatch(getKanjiDetailsAction({
+        details: details.error ? null : details,
+        detailsAlternative,
+        kanji
+      }));
     })
     .catch((error) => {
       throw new Error(error);

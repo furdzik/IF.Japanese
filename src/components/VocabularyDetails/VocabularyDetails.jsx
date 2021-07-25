@@ -35,7 +35,14 @@ import {
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  OtherFormsWrapper
+  OtherFormsWrapper,
+  KanjiPartsWrapper,
+  StyledTile,
+  KanjiTags,
+  KanjiMeaningWrapper,
+  KanjiWrapper,
+  KanjiMeaning,
+  KanjiReading
 } from './VocabularyDetails.styles.js';
 import messages from './VocabularyDetails.messages';
 
@@ -115,15 +122,15 @@ const VocabularyDetails = (props) => {
                         <React.Fragment key={index}>
                           {def}
                           {el.englishDefinitions.length !== index + 1 ? ', ' : ''}
-                          {
-                            el.restrictions.length ? (
-                              <AdditionalInfo>
-                                {intl.formatMessage(messages.restrictionsText)} {el.restrictions.join(', ')}
-                              </AdditionalInfo>
-                            ) : null
-                          }
                         </React.Fragment>
                       ))
+                    }
+                    {
+                      el.restrictions.length ? (
+                        <AdditionalInfo>
+                          {intl.formatMessage(messages.restrictionsText)} {el.restrictions.join(', ')}
+                        </AdditionalInfo>
+                      ) : null
                     }
                     <AdditionalInfo>{el.info}</AdditionalInfo>
                     <AdditionalInfo>{el.tags.join(', ')}</AdditionalInfo>
@@ -180,12 +187,53 @@ const VocabularyDetails = (props) => {
           <DetailsSubHeader>
             {intl.formatMessage(messages.kanjiPartsHeader)}
           </DetailsSubHeader>
-          {console.log(props.kanjiParts)}
-          {/* { */}
-          {/*  props.kanjiParts.map((el) => ( */}
-          {/*    <div>{el}</div> */}
-          {/*  )) */}
-          {/* } */}
+          {
+            props.kanjiParts.map((kanji, kanjiIndex) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <KanjiPartsWrapper key={kanjiIndex}>
+                {
+                  kanji.tags ? (
+                    <KanjiTags>
+                      {
+                        kanji.tags.map((tag, tagIndex) => (
+                          <Tag
+                            small
+                            tagType={tag.tagType}
+                            // eslint-disable-next-line react/no-array-index-key
+                            key={tagIndex}
+                          >
+                            {tag.label}
+                          </Tag>
+                        ))
+                      }
+                    </KanjiTags>
+                  ) : null
+                }
+                <KanjiWrapper>
+                  <div>
+                    <StyledTile
+                      level={0}
+                      known={kanji.status?.known}
+                      nowLearning={kanji.status?.nowLearning}
+                      inProgress={kanji.status?.inProgress}
+                      noOrder
+                    >
+                      <Link to={`/kanji/${kanji.kanji}`}>
+                        {kanji.kanji}
+                      </Link>
+                    </StyledTile>
+                  </div>
+                  <KanjiMeaningWrapper>
+                    <KanjiMeaning>{kanji.meaning}</KanjiMeaning>
+                    <KanjiReading>
+                      <div>Kun: {kanji.reading?.kunyomi.join(', ')}</div>
+                      <div>On: {kanji.reading?.onyomi.join(', ')}</div>
+                    </KanjiReading>
+                  </KanjiMeaningWrapper>
+                </KanjiWrapper>
+              </KanjiPartsWrapper>
+            ))
+          }
         </DetailsSecondarySection>
       ) : null}
       sections={[

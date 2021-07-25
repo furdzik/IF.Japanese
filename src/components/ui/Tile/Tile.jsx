@@ -24,17 +24,16 @@ Tile.propTypes = {
   inProgress: PropTypes.bool.isRequired,
   known: PropTypes.bool.isRequired,
   level: PropTypes.number.isRequired,
+  nowLearning: PropTypes.bool.isRequired,
   className: PropTypes.string,
   joyo: PropTypes.bool,
-  noOrder: PropTypes.bool,
-  nowLearning: PropTypes.bool
+  noOrder: PropTypes.bool
 };
 
 Tile.defaultProps = {
   className: '',
   joyo: null,
-  noOrder: false,
-  nowLearning: false
+  noOrder: false
 };
 
 export default Tile;

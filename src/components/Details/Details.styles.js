@@ -33,7 +33,7 @@ const WordHeader = styled.div`
     color: ${props.theme.colors.white};
   `}
 
-  ${breakpointMixin.landscapePhone`
+  ${breakpointMixin.landscapeTablet`
     flex-direction: row;
   `}
 `;
@@ -52,7 +52,7 @@ const JishoLink = styled.a`
     color: ${props.theme.colors.black};
   `}
 
-  ${breakpointMixin.landscapePhone`
+  ${breakpointMixin.landscapeTablet`
     margin-left: auto;
   `}
 `;
@@ -83,8 +83,24 @@ const SectionWrapper = styled.div`
   `}
 `;
 
+const SectionInner = styled.div`
+  ${breakpointMixin.laptop`
+    display: flex;
+    flex-wrap: wrap;
+  `}
+`;
+
+// @TODO: calculate this container
+const MainSection = styled.div`
+  margin-top: 2rem;
+
+  ${breakpointMixin.laptop`
+    max-width: 53rem;
+    margin-top: 0;
+  `}
+`;
+
 const NameWrapper = styled.div`
-  height: 100%;
   margin-top: 1rem;
 
   ${breakpointMixin.laptop`
@@ -107,6 +123,10 @@ const CharacterBlock = styled.div`
   text-align: center;
 `;
 
+const OneCharacter = styled.div`
+  width: 5rem;
+`;
+
 const CharacterWrapper = styled.div`
   display: flex;
   text-align: center;
@@ -114,11 +134,32 @@ const CharacterWrapper = styled.div`
   ${(props) => props.furigana && css`
     font-size: 1.6rem;
     margin-bottom: -.5rem;
-  `}
-`;
+  `};
 
-const OneCharacter = styled.div`
-  width: 5rem;
+  ${(props) => props.small && css`
+    margin-bottom: -.5rem;
+    font-size: 1.6rem;
+
+    ${OneCharacter} {
+      width: 2.5rem;
+    }
+
+    ${props.furigana && css`
+      font-size: 1.2rem;
+    `};
+  `};
+
+  ${breakpointMixin.phablet`
+    font-size: 4rem;
+
+    ${(props) => props.furigana && css`
+      font-size: 1.6rem;
+    `};
+
+     ${OneCharacter} {
+       width: 5rem;
+     }
+  `};
 `;
 
 export {
@@ -129,6 +170,8 @@ export {
   TagsWrapper,
   Content,
   SectionWrapper,
+  SectionInner,
+  MainSection,
   NameWrapper,
   CharacterBlock,
   CharacterWrapper,

@@ -19,6 +19,7 @@ const fontSize = {
   medium: '2rem',
   normal: '1.8rem',
   small: '1.6rem',
+  extraSmall: '1.4rem',
   desktop: {
     headingLarge: '',
     headingBig: '',
@@ -26,7 +27,8 @@ const fontSize = {
     headingSmall: '',
     medium: '2rem',
     normal: '1.8rem',
-    small: '1.6rem'
+    small: '1.6rem',
+    extraSmall: '1.4rem'
   }
 };
 

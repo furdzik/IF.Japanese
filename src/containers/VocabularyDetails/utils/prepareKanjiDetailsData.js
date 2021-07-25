@@ -1,3 +1,5 @@
+import { getTags } from '@utils/commonDetails';
+
 export const prepareKanjiDetailsData = (kanjiDetails) => {
   const kanjiParts = [];
 
@@ -14,12 +16,12 @@ export const prepareKanjiDetailsData = (kanjiDetails) => {
         nowLearning: el.nowLearning,
         inProgress: el.inProgress
       },
-      tags: {
-        level: el.jlpt ? el.jlpt : 0,
-        grade: el.grade,
+      tags: getTags({
         isJoyo: el.joyo,
-        strokes: el.stroke_count
-      }
+        jlpt: [el.level ? el.level.toString() : null],
+        grade: el.grade,
+        strokes: el.stroke_count.toString()
+      }, true)
     });
   });
 

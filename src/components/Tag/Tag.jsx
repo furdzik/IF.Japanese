@@ -10,17 +10,19 @@ import {
 } from './Tag.styles.js';
 
 const Tag = (props) => (
-  <Wrapper tagType={props.tagType}>
+  <Wrapper small={props.small} tagType={props.tagType}>
     {props.children}
   </Wrapper>
 );
 
 Tag.propTypes = {
   children: PropTypes.node.isRequired,
+  small: PropTypes.bool,
   tagType: tagTypeShape
 };
 
 Tag.defaultProps = {
+  small: false,
   tagType: tagTypes.OTHER
 };
 

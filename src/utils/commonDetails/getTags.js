@@ -5,9 +5,12 @@ import messages from '@utils/defaultMessages/details.messages';
 const WANI_KANI_TEXT = 'wanikani';
 const JLPT_TEXT = 'jlpt';
 
-export const getTags = ({
-  tags, isCommon, isJoyo, isVerb, jlpt
-}) => {
+export const getTags = (
+  {
+    tags, isCommon, isJoyo, isVerb, jlpt, grade, strokes
+  },
+  shortMsg = false
+) => {
   const newTags = [];
 
   if (isVerb) {
@@ -19,25 +22,41 @@ export const getTags = ({
   if (isCommon) {
     newTags.push({
       tagType: tagTypes.IS_COMMON,
-      label: (messages.common)?.defaultMessage
+      label: shortMsg ? (messages.commonShort)?.defaultMessage : (messages.common)?.defaultMessage
     });
   }
 
   if (isJoyo) {
     newTags.push({
       tagType: tagTypes.JOYO,
-      label: (messages.joyo)?.defaultMessage
+      label: shortMsg ? (messages.joyoShort)?.defaultMessage : (messages.joyo)?.defaultMessage
     });
   }
 
   if (jlpt) {
     jlpt.forEach((el) => {
-      newTags.push({
-        tagType: tagTypes.JLPT,
-        label: el.indexOf(JLPT_TEXT) > -1
-          ? el.toUpperCase()
-          : `${(messages.jlptText)?.defaultMessage}-${el}`
-      });
+      if (el !== '0') {
+        newTags.push({
+          tagType: tagTypes.JLPT,
+          label: el.indexOf(JLPT_TEXT) > -1
+            ? el.toUpperCase()
+            : `${(messages.jlptText)?.defaultMessage}-${el}`
+        });
+      }
+    });
+  }
+
+  if (grade) {
+    newTags.push({
+      tagType: tagTypes.GRADE,
+      label: `${(messages.grade)?.defaultMessage} ${grade}`
+    });
+  }
+
+  if (strokes) {
+    newTags.push({
+      tagType: tagTypes.OTHER,
+      label: `${(messages.strokes)?.defaultMessage} ${strokes}`
     });
   }
 

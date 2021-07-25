@@ -90,10 +90,10 @@ const ListItem = styled.div`
     }
   `};
 
-  ${(props) => props.inProgress && props.known && css`
+  ${(props) => ((props.inProgress && props.known) || (props.inProgress && props.nowLearning) || (props.known && props.nowLearning)) && css`
     background: ${props.theme.colors.black};
     color: ${props.theme.colors.white};
-    order: 4;
+    order: 5 !important;
     &::before {
       color: ${props.theme.colors.white};
     }

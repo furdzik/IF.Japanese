@@ -48,12 +48,7 @@ export const kanjiPartShape = PropTypes.shape({
   meaning: PropTypes.string,
   reading: kanjiReadingShape,
   status: statusShape,
-  tags: PropTypes.shape({
-    level: PropTypes.number,
-    grade: PropTypes.number,
-    isJoyo: PropTypes.bool,
-    strokes: PropTypes.number
-  })
+  tags: tagsShape
 });
 
 export const kanjiPartsShape = PropTypes.arrayOf(kanjiPartShape);

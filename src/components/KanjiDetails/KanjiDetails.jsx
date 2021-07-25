@@ -66,7 +66,7 @@ const KanjiDetails = (props) => {
             {props.meaning}
           </ReadingListItem>
           {
-            props.reading?.kunyomi ? (
+            props.reading?.kunyomi.length ? (
               <ReadingListItem>
                 <b>{intl.formatMessage(messages.kunyomiText)}</b>
                 {props.reading?.kunyomi.join(', ')}
@@ -74,7 +74,7 @@ const KanjiDetails = (props) => {
             ) : null
           }
           {
-            props.reading?.onyomi ? (
+            props.reading?.onyomi.length ? (
               <ReadingListItem>
                 <b>{intl.formatMessage(messages.onyomiText)}</b>
                 {props.reading?.onyomi.join(', ')}
@@ -91,9 +91,9 @@ const KanjiDetails = (props) => {
         </DetailsSecondarySection>
       ) : null}
       sections={[
-        {
+        props.strokes ? {
           title: intl.formatMessage(messages.strokesHeader),
-          section: props.strokes ? (
+          section: (
             <StrokeWrapper>
               {
                 props.strokes?.graphs.map((image, index) => (
@@ -104,8 +104,8 @@ const KanjiDetails = (props) => {
                 ))
               }
             </StrokeWrapper>
-          ) : null
-        },
+          )
+        } : null,
         props.examples ? {
           title: intl.formatMessage(messages.examplesHeader),
           section: (
