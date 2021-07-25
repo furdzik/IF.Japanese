@@ -34,11 +34,10 @@ const BoxItem = styled.li`
     background: #8350c7;
   }
   &:nth-child(3n) {
-    //background: #f7d802;
-    background: #53D9F7;
+    background: #53d9f7;
     color: ${(props) => props.theme.colors.black};
   }
-   &:nth-child(4n) {
+  &:nth-child(4n) {
     background: #f7d802;
     color: ${(props) => props.theme.colors.black};
   }
@@ -52,8 +51,8 @@ const LinkStyled = styled(Link)`
   width: 100%;
   height: 100%;
   padding: 4rem;
-  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
   border: 2px solid ${(props) => props.theme.colors.white};
+  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
 `;
 
 export {
