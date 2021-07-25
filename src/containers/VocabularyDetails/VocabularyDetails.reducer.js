@@ -6,11 +6,11 @@ import { fetchJisho, fetchKanjiAlternative } from '@api';
 import { URL_SEPARATOR } from '@config/constants';
 
 import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
+import { getTags } from '@utils/commonDetails';
 
 import {
   PROPER_NAME_TYPE,
   getProperName,
-  getTags,
   getTranslations,
   getAntonyms,
   getOtherForms,
@@ -26,20 +26,20 @@ const actionTypes = {
 };
 
 const initialState = {
-  loading: true,
-  vocab: null,
+  japaneseForm: null,
   meaning: '',
-  japaneseForm: {},
-  status: {},
+  vocab: null,
   metadata: {},
-  tags: null,
+  status: {},
   translations: [],
-  antonyms: null,
-  otherForms: null,
   additionalExplanation: null,
+  antonyms: null,
   examples: null,
   kanjiParts: null,
-  verb: null
+  otherForms: null,
+  tags: null,
+  verb: null,
+  loading: true
 };
 
 export default function(state = initialState, action) {
@@ -67,12 +67,12 @@ export default function(state = initialState, action) {
         metadata: {
           slug: data.details.slug
         },
-        tags: getTags(
-          data.details.tags,
-          data.verb,
-          data.details.jlpt,
-          data.details.is_common
-        ),
+        tags: getTags({
+          tags: data.details.tags,
+          isCommon: data.details.is_common,
+          isVerb: !!data.verb,
+          jlpt: data.details.jlpt
+        }),
         translations: getTranslations(data.details.senses),
         antonyms: getAntonyms(data.antonyms, data.details.senses),
         otherForms: getOtherForms(data.details.japanese),

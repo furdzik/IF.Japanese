@@ -3,12 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { breakpointMixin } from '@styles/mixins';
 
-const SubHeader = styled.div`
-  width: 100%;
-  margin-bottom: .5rem;
-  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
-`;
-
 const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
 `;
@@ -87,14 +81,6 @@ const AdditionalExplanationWrapper = styled.div`
   margin-bottom: 6rem;
 `;
 
-const KanjiParts = styled.div`
-  width: 30rem;
-  margin-left: auto;
-  padding-left: 4rem;
-  border-left: 1px dotted ${(props) => props.theme.colors.secondaryColor};
-  border-radius: ${(props) => props.theme.layout.borderRadius};
-`;
-
 const OtherFormsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -102,7 +88,6 @@ const OtherFormsWrapper = styled.div`
 `;
 
 export {
-  SubHeader,
   ConjugationLink,
   TranslationsList,
   TranslationsListItem,
@@ -112,6 +97,5 @@ export {
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  KanjiParts,
   OtherFormsWrapper
 };

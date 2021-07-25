@@ -23,5 +23,5 @@ export const prepareKanjiDetailsData = (kanjiDetails) => {
     });
   });
 
-  return kanjiParts;
+  return kanjiParts.length ? kanjiParts : null;
 };

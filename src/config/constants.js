@@ -148,5 +148,6 @@ export const tagTypes = {
   IS_COMMON: 'isCommon',
   JLPT: 'jlpt',
   JOYO: 'joyo',
-  OTHER: 'other'
+  OTHER: 'other',
+  GRADE: 'grade'
 };

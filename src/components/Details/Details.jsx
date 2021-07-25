@@ -5,6 +5,7 @@ import { useIntl } from 'react-intl';
 import { japaneseFormShape } from '@types/vocabularyDetailsShape';
 
 import Tag from '@components/Tag';
+import DetailsHeader from '@components/DetailsHeader';
 
 import {
   DetailsWrapper,
@@ -13,7 +14,6 @@ import {
   JishoLink,
   Content,
   SectionWrapper,
-  Header,
   NameWrapper,
   TagsWrapper,
   CharacterBlock,
@@ -63,7 +63,7 @@ const Details = (props) => {
             )) : null
           }
         </TagsWrapper>
-        <Header>{props.mainSectionHeader}</Header>
+        <DetailsHeader>{props.mainSectionHeader}</DetailsHeader>
         <SectionWrapper flex>
           <NameWrapper>
             <CharacterBlock>
@@ -110,7 +110,7 @@ const Details = (props) => {
             section.section ? (
               // eslint-disable-next-line react/no-array-index-key
               <React.Fragment key={index}>
-                <Header>{section.title}</Header>
+                <DetailsHeader>{section.title}</DetailsHeader>
                 <SectionWrapper>
                   {section.section}
                 </SectionWrapper>

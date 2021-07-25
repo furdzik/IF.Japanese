@@ -2,29 +2,30 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
+import { Link } from 'react-router-dom';
+
 import { grammarTypes, tagTypes } from '@config/constants';
 
 import { verbItemShape } from '@types/verbShape';
+import { statusShape, tagsShape, metadataShape } from '@types/commonDetailsShape';
 import {
   japaneseFormShape,
   translationsShape,
-  metadataShape,
-  statusShape,
   kanjiPartsShape,
   otherFormsShape
 } from '@types/vocabularyDetailsShape';
-import { tagsShape } from '@types/commonDetailsShape';
 
 import Modal from '@components/ui/Modal';
 
 import Details from '@components/Details';
-import VerbConjugationGroup from '@components/VerbConjugationGroup';
+import DetailsSecondarySection from '@components/DetailsSecondarySection';
+import DetailsSubHeader from '@components/DetailsSubHeader';
 import Tag from '@components/Tag';
+import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
 import conjugationMessages from '@utils/defaultMessages/conjugation.messages';
 
 import {
-  SubHeader,
   ConjugationLink,
   TranslationsList,
   TranslationsListItem,
@@ -34,7 +35,6 @@ import {
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  KanjiParts,
   OtherFormsWrapper
 } from './VocabularyDetails.styles.js';
 import messages from './VocabularyDetails.messages';
@@ -71,10 +71,10 @@ const VocabularyDetails = (props) => {
     <Details
       name={props.name}
       meaning={props.meaning}
+      known={props.status?.known}
+      inProgress={props.status?.inProgress}
+      nowLearning={props.status?.nowLearning}
       japaneseForm={props.japaneseForm}
-      known={props.status.known}
-      inProgress={props.status.inProgress}
-      nowLearning={props.status.nowLearning}
       jishoLink={`https://jisho.org/word/${props.metadata.slug}`}
       tags={getTags()}
       additionalBox={(
@@ -127,6 +127,30 @@ const VocabularyDetails = (props) => {
                     }
                     <AdditionalInfo>{el.info}</AdditionalInfo>
                     <AdditionalInfo>{el.tags.join(', ')}</AdditionalInfo>
+                    {
+                      el.seeAlso ? (
+                        el.seeAlso.map((seeAlsoEl, seeAlsoIndex) => (
+                          // eslint-disable-next-line react/no-array-index-key
+                          <AdditionalInfo key={seeAlsoIndex}>
+                            {intl.formatMessage(messages.SeeAlsoText)}
+                            <Link to={`vocab/${seeAlsoEl}`}>{seeAlsoEl}</Link>
+                          </AdditionalInfo>
+                        ))
+                      ) : null
+                    }
+                    {
+                      el.source ? (
+                        el.source.map((sourceEl, sourceIndex) => (
+                          // eslint-disable-next-line react/no-array-index-key
+                          <AdditionalInfo key={sourceIndex}>
+                            {intl.formatMessage(messages.sourceText, {
+                              language: sourceEl.language,
+                              word: sourceEl.word
+                            })}
+                          </AdditionalInfo>
+                        ))
+                      ) : null
+                    }
                   </div>
                 </div>
               </TranslationsListItem>
@@ -135,9 +159,9 @@ const VocabularyDetails = (props) => {
           {
             props.otherForms.length ? (
               <OtherFormsWrapper>
-                <SubHeader>
+                <DetailsSubHeader>
                   {intl.formatMessage(messages.otherFormsHeader)}
-                </SubHeader>
+                </DetailsSubHeader>
                 {
                   props.otherForms.map((form, index) => (
                     <div key={`${form.word}_${form.reading}`}>
@@ -152,17 +176,17 @@ const VocabularyDetails = (props) => {
         </TranslationsList>
       )}
       secondarySection={props.kanjiParts ? (
-        <KanjiParts>
-          <SubHeader>
+        <DetailsSecondarySection>
+          <DetailsSubHeader>
             {intl.formatMessage(messages.kanjiPartsHeader)}
-          </SubHeader>
+          </DetailsSubHeader>
           {console.log(props.kanjiParts)}
           {/* { */}
           {/*  props.kanjiParts.map((el) => ( */}
           {/*    <div>{el}</div> */}
           {/*  )) */}
           {/* } */}
-        </KanjiParts>
+        </DetailsSecondarySection>
       ) : null}
       sections={[
         {
@@ -291,7 +315,6 @@ const VocabularyDetails = (props) => {
 };
 
 VocabularyDetails.propTypes = {
-  japaneseForm: japaneseFormShape.isRequired,
   meaning: PropTypes.string.isRequired,
   metadata: metadataShape.isRequired,
   name: PropTypes.string.isRequired,
@@ -300,6 +323,7 @@ VocabularyDetails.propTypes = {
   additionalExplanation: PropTypes.string,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   examples: PropTypes.arrayOf(PropTypes.string),
+  japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
   otherForms: otherFormsShape,
   tags: tagsShape,
@@ -310,6 +334,7 @@ VocabularyDetails.defaultProps = {
   additionalExplanation: null,
   antonyms: null,
   examples: null,
+  japaneseForm: null,
   kanjiParts: null,
   otherForms: null,
   tags: null,

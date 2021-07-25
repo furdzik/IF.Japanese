@@ -2,52 +2,57 @@ import kanjiJson from '@data/kanji.json';
 
 import { fetchKanji, fetchKanjiAlternative } from '@api';
 
+import { getTags } from '@utils/commonDetails';
+
+import { getElements } from './utils';
+
 const actionTypes = {
   GET_KANJI_DETAILS_INIT: 'KANJI/GET_DETAILS_INIT',
   GET_KANJI_DETAILS: 'KANJI/GET_DETAILS'
 };
 
 const initialState = {
-  loading: true,
-  level: null,
-  known: null,
-  inProgress: null,
-  grade: null,
-  kunyomi: null,
-  onyomi: null,
+  examples: [],
   meaning: null,
+  metadata: null,
+  radicals: null,
+  reading: null,
+  status: null,
   strokes: null,
-  radical: null,
-  examples: null,
-  isJoyo: null
+  tags: [],
+  loading: true
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_KANJI_DETAILS: {
-      const { detailsAlternative, details, originKanji } = action.payload;
-      let data = {
-        level: originKanji.level,
-        known: originKanji.known,
-        inProgress: originKanji.inProgress,
-        nowLearning: originKanji.nowLearning,
-        isJoyo: originKanji.joyo
-      };
-      data = {
-        ...data,
-        grade: details?.references?.grade,
-        kunyomi: detailsAlternative?.kun_readings.join(', '),
-        onyomi: detailsAlternative?.on_readings.join(', '),
-        meaning: details?.kanji?.meaning,
-        numberOfStrokes: details.kanji?.strokes?.count,
-        strokes: details.kanji?.strokes,
-        radical: details?.radical,
-        examples: details?.examples
-      };
+      const { detailsAlternative, details, kanji } = action.payload;
 
       return {
         ...state,
-        ...data,
+        meaning: details?.kanji?.meaning?.english,
+        reading: {
+          onyomi: detailsAlternative?.on_readings,
+          kunyomi: detailsAlternative?.kun_readings
+        },
+        strokes: {
+          count: details.kanji?.strokes?.count,
+          graphs: details.kanji?.strokes?.images
+        },
+        radicals: null,
+        status: {
+          known: kanji.known,
+          inProgress: kanji.inProgress,
+          nowLearning: kanji.nowLearning
+        },
+        examples: getElements(details?.examples),
+        metadata: {
+          slug: kanji?.kanji
+        },
+        tags: getTags({
+          jlpt: [kanji.level.toString()],
+          isJoyo: kanji.joyo
+        }),
         loading: false
       };
     }
@@ -77,7 +82,7 @@ const getKanjiDetailsInitAction = () => ({
 export const getKanjiDetails = (name) => (dispatch) => {
   dispatch(getKanjiDetailsInitAction());
 
-  const originKanji = kanjiJson.filter((element) => element.kanji === name)[0];
+  const kanji = kanjiJson.filter((element) => element.kanji === name)[0];
 
   Promise.all(
     [
@@ -86,7 +91,7 @@ export const getKanjiDetails = (name) => (dispatch) => {
     ]
   )
     .then(([details, detailsAlternative]) => {
-      dispatch(getKanjiDetailsAction({ details, detailsAlternative, originKanji }));
+      dispatch(getKanjiDetailsAction({ details, detailsAlternative, kanji }));
     })
     .catch((error) => {
       throw new Error(error);

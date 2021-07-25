@@ -83,10 +83,6 @@ const SectionWrapper = styled.div`
   `}
 `;
 
-const Header = styled.h2`
-  margin-bottom: 2rem;
-`;
-
 const NameWrapper = styled.div`
   height: 100%;
   margin-top: 1rem;
@@ -133,7 +129,6 @@ export {
   TagsWrapper,
   Content,
   SectionWrapper,
-  Header,
   NameWrapper,
   CharacterBlock,
   CharacterWrapper,
