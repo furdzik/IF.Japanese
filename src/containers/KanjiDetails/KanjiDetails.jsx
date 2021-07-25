@@ -2,7 +2,13 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { objectShape } from '@utils/types/objectShape';
+import {
+  kanjiReadingShape,
+  statusShape,
+  tagsShape,
+  metadataShape
+} from '@types/commonDetailsShape';
+import { strokesShape, examplesShape } from '@types/kanjiDetailsShape';
 
 import Loader from '@components/ui/Loader';
 
@@ -19,19 +25,14 @@ const KanjiDetails = (props) => {
   return !props.loading ? (
     <KanjiDetailsComponent
       kanji={props.kanji}
-      level={props.level}
-      known={props.known}
-      nowLearning={props.nowLearning}
-      inProgress={props.inProgress}
-      grade={props.grade}
-      kunyomi={props.kunyomi}
-      onyomi={props.onyomi}
-      meaning={props.meaning}
-      numberOfStrokes={props.numberOfStrokes}
-      strokes={props.strokes}
-      radical={props.radical}
       examples={props.examples}
-      isJoyo={props.isJoyo}
+      meaning={props.meaning}
+      metadata={props.metadata}
+      radicals={props.radicals}
+      reading={props.reading}
+      status={props.status}
+      strokes={props.strokes}
+      tags={props.tags}
     />
   ) : <Loader covered />;
 };
@@ -40,35 +41,25 @@ KanjiDetails.propTypes = {
   getKanjiDetails: PropTypes.func.isRequired,
   kanji: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
-  examples: PropTypes.arrayOf(objectShape),
-  grade: PropTypes.number,
-  inProgress: PropTypes.bool,
-  isJoyo: PropTypes.bool,
-  known: PropTypes.bool,
-  kunyomi: PropTypes.string,
-  level: PropTypes.number,
-  meaning: objectShape,
-  nowLearning: PropTypes.bool,
-  numberOfStrokes: PropTypes.number,
-  onyomi: PropTypes.string,
-  radical: objectShape,
-  strokes: objectShape
+  examples: examplesShape,
+  meaning: PropTypes.string,
+  metadata: metadataShape,
+  radicals: PropTypes.arrayOf(PropTypes.string),
+  reading: kanjiReadingShape,
+  status: statusShape,
+  strokes: strokesShape,
+  tags: tagsShape
 };
 
 KanjiDetails.defaultProps = {
-  examples: [],
-  grade: null,
-  inProgress: null,
-  isJoyo: null,
-  known: null,
-  kunyomi: null,
-  level: null,
-  nowLearning: null,
+  examples: null,
   meaning: null,
-  numberOfStrokes: null,
-  onyomi: null,
-  radical: null,
-  strokes: null
+  metadata: null,
+  radicals: null,
+  reading: null,
+  status: null,
+  strokes: null,
+  tags: null
 };
 
 const mapDispatchToProps = {

@@ -2,11 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { tagTypes } from '@config/constants';
-
-import { objectShape } from '@types/objectShape';
+import {
+  kanjiReadingShape,
+  tagsShape,
+  statusShape,
+  metadataShape
+} from '@types/commonDetailsShape';
+import { strokesShape, examplesShape } from '@types/kanjiDetailsShape';
 
 import Details from '@components/Details';
+import DetailsSecondarySection from '@components/DetailsSecondarySection';
+import DetailsSubHeader from '@components/DetailsSubHeader';
 import Tag from '@components/Tag';
 
 import {
@@ -26,23 +32,12 @@ const KanjiDetails = (props) => {
 
   const getTags = () => {
     const tags = [];
-    // TODO: change object to one tags (like VocabularyDetails)
-    if (props.isJoyo) {
-      tags.push(
-        <Tag tagType={tagTypes.JOYO}>{intl.formatMessage(messages.joyo)}</Tag>
-      );
-    }
-    if (props.level !== 0) {
-      tags.push(
-        <Tag tagType={tagTypes.JLPT}>
-          {intl.formatMessage(messages.jlptLevelText, { level: props.level })}
-        </Tag>
-      );
-    }
-    if (props.grade) {
-      tags.push(
-        <Tag>{intl.formatMessage(messages.gradeLevelText, { grade: props.grade })}</Tag>
-      );
+
+    if (props.tags) {
+      props.tags.forEach((el, index) => {
+        // eslint-disable-next-line react/no-array-index-key
+        tags.push(<Tag tagType={el.tagType} key={index}>{el.label}</Tag>);
+      });
     }
 
     return tags;
@@ -51,15 +46,15 @@ const KanjiDetails = (props) => {
   return (
     <Details
       name={props.kanji}
-      known={props.known}
-      inProgress={props.inProgress}
-      nowLearning={props.nowLearning}
-      jishoLink={`https://jisho.org/search/%23kanji%20${props.kanji}`}
+      known={props.status?.known}
+      inProgress={props.status?.inProgress}
+      nowLearning={props.status?.nowLearning}
+      jishoLink={`https://jisho.org/search/%23kanji%20${props.metadata?.slug}`}
       tags={getTags()}
-      additionalBox={props.numberOfStrokes ? (
+      additionalBox={props.strokes?.count ? (
         <div>
           {intl.formatMessage(messages.numberOfStrokes, {
-            number: <StrokeNumberWrapper>{props.numberOfStrokes}</StrokeNumberWrapper>
+            number: <StrokeNumberWrapper>{props.strokes?.count}</StrokeNumberWrapper>
           })}
         </div>
       ) : null}
@@ -67,31 +62,41 @@ const KanjiDetails = (props) => {
       mainSection={(
         <ReadingList>
           <ReadingListItem>
-            <b>{intl.formatMessage(messages.meaningText)}:</b> {props.meaning?.english}
+            <b>{intl.formatMessage(messages.meaningText)}</b>
+            {props.meaning}
           </ReadingListItem>
           {
-            props.kunyomi && props.kunyomi !== '' ? (
+            props.reading?.kunyomi.length ? (
               <ReadingListItem>
-                <b>{intl.formatMessage(messages.kunyomiText)}:</b> {props.kunyomi}
+                <b>{intl.formatMessage(messages.kunyomiText)}</b>
+                {props.reading?.kunyomi.join(', ')}
               </ReadingListItem>
             ) : null
           }
           {
-            props.onyomi && props.onyomi !== '' ? (
+            props.reading?.onyomi.length ? (
               <ReadingListItem>
-                <b>{intl.formatMessage(messages.onyomiText)}:</b> {props.onyomi}
+                <b>{intl.formatMessage(messages.onyomiText)}</b>
+                {props.reading?.onyomi.join(', ')}
               </ReadingListItem>
             ) : null
           }
         </ReadingList>
       )}
+      secondarySection={props.radicals ? (
+        <DetailsSecondarySection>
+          <DetailsSubHeader>
+            {intl.formatMessage(messages.radicalsHeader)}
+          </DetailsSubHeader>
+        </DetailsSecondarySection>
+      ) : null}
       sections={[
-        {
+        props.strokes ? {
           title: intl.formatMessage(messages.strokesHeader),
-          section: props.strokes ? (
+          section: (
             <StrokeWrapper>
               {
-                props.strokes.images.map((image, index) => (
+                props.strokes?.graphs.map((image, index) => (
                   // eslint-disable-next-line react/no-array-index-key
                   <StrokeBox key={index}>
                     <StrokeImage src={image} alt="" />
@@ -99,17 +104,17 @@ const KanjiDetails = (props) => {
                 ))
               }
             </StrokeWrapper>
-          ) : null
-        },
-        {
+          )
+        } : null,
+        props.examples ? {
           title: intl.formatMessage(messages.examplesHeader),
-          section: props.examples ? (
+          section: (
             <ExampleWrapper>
               {
                 props.examples.map((example, index) => (
                   // eslint-disable-next-line react/no-array-index-key
                   <p key={index}>
-                    {example.japanese}: {example.meaning?.english}
+                    {example.japanese}: {example.meaning}
                   </p>
                 ))
               }
@@ -117,8 +122,8 @@ const KanjiDetails = (props) => {
                 {intl.formatMessage(messages.examplesMoreText)}
               </MoreExamplesLink>
             </ExampleWrapper>
-          ) : null
-        }
+          )
+        } : null
       ]}
     />
   );
@@ -126,33 +131,25 @@ const KanjiDetails = (props) => {
 
 KanjiDetails.propTypes = {
   kanji: PropTypes.string.isRequired,
-  examples: PropTypes.arrayOf(objectShape),
-  grade: PropTypes.number,
-  inProgress: PropTypes.bool,
-  isJoyo: PropTypes.bool,
-  known: PropTypes.bool,
-  kunyomi: PropTypes.string,
-  level: PropTypes.number,
-  meaning: objectShape,
-  nowLearning: PropTypes.bool,
-  numberOfStrokes: PropTypes.number,
-  onyomi: PropTypes.string,
-  strokes: objectShape
+  examples: examplesShape,
+  meaning: PropTypes.string,
+  metadata: metadataShape,
+  radicals: PropTypes.arrayOf(PropTypes.string),
+  reading: kanjiReadingShape,
+  status: statusShape,
+  strokes: strokesShape,
+  tags: tagsShape
 };
 
 KanjiDetails.defaultProps = {
-  examples: [],
-  grade: null,
-  inProgress: null,
-  isJoyo: null,
-  known: null,
-  kunyomi: null,
-  level: null,
+  examples: null,
   meaning: null,
-  nowLearning: null,
-  numberOfStrokes: null,
-  onyomi: null,
-  strokes: null
+  metadata: null,
+  radicals: null,
+  reading: null,
+  status: null,
+  strokes: null,
+  tags: null
 };
 
 export default KanjiDetails;

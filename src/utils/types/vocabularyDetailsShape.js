@@ -1,26 +1,26 @@
 import PropTypes from 'prop-types';
 
 import { verbShape } from '@types/verbShape';
-import { tagsShape } from '@types/commonDetailsShape';
+import {
+  tagsShape,
+  statusShape,
+  kanjiReadingShape,
+  metadataShape
+} from '@types/commonDetailsShape';
 
 export const japaneseFormShape = PropTypes.shape({
   kanji: PropTypes.arrayOf(PropTypes.string),
   furigana: PropTypes.arrayOf(PropTypes.string)
 });
 
-export const statusShape = PropTypes.shape({
-  inProgress: PropTypes.bool,
-  known: PropTypes.bool,
-  nowLearning: PropTypes.bool
-});
-
-export const metadataShape = PropTypes.shape({
-  slug: PropTypes.string
-});
-
 export const linksShape = PropTypes.shape({
   text: PropTypes.string,
   url: PropTypes.string
+});
+
+export const sourceShape = PropTypes.shape({
+  language: PropTypes.string,
+  word: PropTypes.string
 });
 
 export const translationShape = PropTypes.shape({
@@ -30,7 +30,7 @@ export const translationShape = PropTypes.shape({
   partsOfSpeech: PropTypes.arrayOf(PropTypes.string),
   restrictions: PropTypes.arrayOf(PropTypes.string),
   seeAlso: PropTypes.arrayOf(PropTypes.string),
-  source: PropTypes.arrayOf(PropTypes.string),
+  source: PropTypes.arrayOf(sourceShape),
   tags: PropTypes.arrayOf(PropTypes.string)
 });
 
@@ -44,7 +44,11 @@ export const otherFormShape = PropTypes.shape({
 export const otherFormsShape = PropTypes.arrayOf(otherFormShape);
 
 export const kanjiPartShape = PropTypes.shape({
-  // @TODO
+  kanji: PropTypes.string,
+  meaning: PropTypes.string,
+  reading: kanjiReadingShape,
+  status: statusShape,
+  tags: tagsShape
 });
 
 export const kanjiPartsShape = PropTypes.arrayOf(kanjiPartShape);

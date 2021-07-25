@@ -34148,7 +34148,7 @@
     "vocab": "形容詞",
     "known": false,
     "inProgress": true,
-    "nowLEarning": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 2
   },
@@ -42344,7 +42344,7 @@
   {
     "vocab": "マイナス",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2

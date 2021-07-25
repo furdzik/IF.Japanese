@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { verbItemShape } from '@types/verbShape';
+import { statusShape, tagsShape, metadataShape } from '@types/commonDetailsShape';
 import {
   japaneseFormShape,
   translationsShape,
-  metadataShape,
-  statusShape,
   kanjiPartsShape,
   otherFormsShape
 } from '@types/vocabularyDetailsShape';
-import { tagsShape } from '@types/commonDetailsShape';
+
 import { getVocabSpecificReading } from '@utils/vocabulary';
 
 import Loader from '@components/ui/Loader';
@@ -34,26 +33,25 @@ const VocabularyDetails = (props) => {
 
   return !props.loading ? (
     <VocabularyDetailsComponent
-      name={name}
       meaning={props.meaning}
-      japaneseForm={props.japaneseForm}
+      metadata={props.metadata}
+      name={name}
+      status={props.status}
       translations={props.translations}
       additionalExplanation={props.additionalExplanation}
       antonyms={props.antonyms}
       examples={props.examples}
-      status={props.status}
-      metadata={props.metadata}
+      japaneseForm={props.japaneseForm}
+      kanjiParts={props.kanjiParts}
       otherForms={props.otherForms}
       tags={props.tags}
       verb={props.verb}
-      kanjiParts={props.kanjiParts}
     />
   ) : <Loader covered />;
 };
 
 VocabularyDetails.propTypes = {
   getVocabularyDetails: PropTypes.func.isRequired,
-  japaneseForm: japaneseFormShape.isRequired,
   loading: PropTypes.bool.isRequired,
   meaning: PropTypes.string.isRequired,
   metadata: metadataShape.isRequired,
@@ -63,6 +61,7 @@ VocabularyDetails.propTypes = {
   additionalExplanation: PropTypes.string,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   examples: PropTypes.arrayOf(PropTypes.string),
+  japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
   otherForms: otherFormsShape,
   tags: tagsShape,
@@ -73,6 +72,7 @@ VocabularyDetails.defaultProps = {
   additionalExplanation: null,
   antonyms: null,
   examples: null,
+  japaneseForm: null,
   kanjiParts: null,
   otherForms: null,
   tags: null,

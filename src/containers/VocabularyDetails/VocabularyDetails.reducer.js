@@ -1,20 +1,23 @@
 import vocabJson from '@data/vocabulary.json';
+import kanjiJson from '@data/kanji.json';
 
-import { fetchJisho } from '@api';
+import { fetchJisho, fetchKanjiAlternative } from '@api';
 
 import { URL_SEPARATOR } from '@config/constants';
 
 import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
+import { getTags } from '@utils/commonDetails';
 
 import {
   PROPER_NAME_TYPE,
   getProperName,
-  getTags,
   getTranslations,
   getAntonyms,
   getOtherForms,
   getKanji,
-  getFurigana
+  getFurigana,
+  getKanjiParts,
+  prepareKanjiDetailsData
 } from './utils';
 
 const actionTypes = {
@@ -23,20 +26,20 @@ const actionTypes = {
 };
 
 const initialState = {
-  loading: true,
-  vocab: null,
+  japaneseForm: null,
   meaning: '',
-  japaneseForm: {},
-  status: {},
+  vocab: null,
   metadata: {},
-  tags: null,
+  status: {},
   translations: [],
-  antonyms: null,
-  otherForms: null,
   additionalExplanation: null,
+  antonyms: null,
   examples: null,
   kanjiParts: null,
-  verb: null
+  otherForms: null,
+  tags: null,
+  verb: null,
+  loading: true
 };
 
 export default function(state = initialState, action) {
@@ -64,18 +67,18 @@ export default function(state = initialState, action) {
         metadata: {
           slug: data.details.slug
         },
-        tags: getTags(
-          data.details.tags,
-          data.verb,
-          data.details.jlpt,
-          data.details.is_common
-        ),
+        tags: getTags({
+          tags: data.details.tags,
+          isCommon: data.details.is_common,
+          isVerb: !!data.verb,
+          jlpt: data.details.jlpt
+        }),
         translations: getTranslations(data.details.senses),
         antonyms: getAntonyms(data.antonyms, data.details.senses),
-        otherForms: getOtherForms(data.details.japanese), // wykluczyć 1 element
+        otherForms: getOtherForms(data.details.japanese),
         additionalExplanation: data.additionalExplanation,
         examples: data.examples,
-        kanjiParts: null,
+        kanjiParts: prepareKanjiDetailsData(data.kanjiDetails),
         verb: data.verb ? {
           ...data.verb
         } : null,
@@ -110,9 +113,34 @@ const getMeaning = (response, name, url) => (dispatch) => {
     el.meaning && el.meaning === getProperName(url, PROPER_NAME_TYPE.MEANING)
   ) || (
     !el.meaning && el.vocab === getProperName(url, PROPER_NAME_TYPE.KANJI)
-  ));
+  ))[0];
 
-  dispatch(getVocabularyDetailsAction({ name, ...vocab[0], details: response }));
+  const kanjiParts = getKanjiParts(vocab.vocab);
+
+  Promise.all(
+    kanjiParts.map((el) => fetchKanjiAlternative(el))
+  )
+    .then((kanjiDetails) => {
+      const completeKanjiParts = [];
+
+      kanjiDetails.forEach((kanjiPart) => {
+        kanjiJson.forEach((jsonEl) => {
+          if (kanjiPart.kanji === jsonEl.kanji) {
+            completeKanjiParts.push({
+              ...kanjiPart,
+              ...jsonEl
+            });
+          }
+        });
+      });
+
+      dispatch(getVocabularyDetailsAction({
+        name,
+        ...vocab,
+        kanjiDetails: completeKanjiParts,
+        details: response
+      }));
+    });
 };
 
 export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => {

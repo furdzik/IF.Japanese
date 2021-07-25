@@ -8,5 +8,8 @@ export default defineMessages({
   examplesHeader: 'Examples',
   otherFormsHeader: 'Other forms',
   restrictionsText: 'Only applies to',
-  conjugationText: 'conjugation'
+  conjugationText: 'conjugation',
+  kanjiPartsHeader: 'Kanji in this word',
+  SeeAlsoText: 'See also:\u2000',
+  sourceText: '外来語: from {language} word: {word}'
 });

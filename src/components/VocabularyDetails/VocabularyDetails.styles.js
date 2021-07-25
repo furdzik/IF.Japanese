@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom';
 
 import { breakpointMixin } from '@styles/mixins';
 
+import Tile from '@components/ui/Tile';
+
 const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
 `;
 
 const TranslationsList = styled.ol`
-  margin: 8rem 0 0 0;
+  margin: 0;
   list-style: none;
 
   ${breakpointMixin.laptop`
     margin-top: 0;
+    margin-right: 4rem;
   `}
 `;
 
@@ -80,23 +83,50 @@ const AdditionalExplanationWrapper = styled.div`
   margin-bottom: 6rem;
 `;
 
-const KanjiParts = styled.div`
-  width: 30rem;
-  margin-left: auto;
-  padding-left: 3rem;
-  outline: 1px dotted red;
-`;
-
 const OtherFormsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 1rem;
 `;
 
-const OtherFormsHeader = styled.div`
+const KanjiPartsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4rem;
+  padding: 2rem 0 2rem 4rem;
+  border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+`;
+
+const KanjiTags = styled.div`
   width: 100%;
-  margin-bottom: .5rem;
-  font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
+  margin-bottom: 1rem;
+  font-size: ${(props) => props.theme.typography.fontSize.small};
+`;
+
+const StyledTile = styled(Tile)`
+  margin: 0 2rem 0 0;
+`;
+
+const KanjiMeaningWrapper = styled.div`
+  max-width: 19.5rem;
+`;
+
+const KanjiWrapper = styled.div`
+  display: flex;
+`;
+
+const KanjiMeaning = styled.div`
+  margin: -.8rem 0 1rem;
+  font-size: ${(props) => props.theme.typography.fontSize.small};
+`;
+
+const KanjiReading = styled.div`
+  font-size: ${(props) => props.theme.typography.fontSize.extraSmall};
 `;
 
 export {
@@ -109,7 +139,12 @@ export {
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  KanjiParts,
   OtherFormsWrapper,
-  OtherFormsHeader
+  KanjiTags,
+  KanjiPartsWrapper,
+  StyledTile,
+  KanjiWrapper,
+  KanjiMeaningWrapper,
+  KanjiMeaning,
+  KanjiReading
 };

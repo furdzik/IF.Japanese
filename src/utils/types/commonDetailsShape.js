@@ -7,7 +7,8 @@ export const tagTypeShape = PropTypes.oneOf([
   tagTypes.IS_VERB,
   tagTypes.JLPT,
   tagTypes.JOYO,
-  tagTypes.OTHER
+  tagTypes.OTHER,
+  tagTypes.GRADE
 ]);
 
 export const tagShape = PropTypes.shape({
@@ -16,3 +17,18 @@ export const tagShape = PropTypes.shape({
 });
 
 export const tagsShape = PropTypes.arrayOf(tagShape);
+
+export const statusShape = PropTypes.shape({
+  inProgress: PropTypes.bool,
+  known: PropTypes.bool,
+  nowLearning: PropTypes.bool
+});
+
+export const metadataShape = PropTypes.shape({
+  slug: PropTypes.string
+});
+
+export const kanjiReadingShape = PropTypes.shape({
+  onyomi: PropTypes.arrayOf(PropTypes.string),
+  kunyomi: PropTypes.arrayOf(PropTypes.string)
+});

@@ -5,6 +5,7 @@ import { useIntl } from 'react-intl';
 import { japaneseFormShape } from '@types/vocabularyDetailsShape';
 
 import Tag from '@components/Tag';
+import DetailsHeader from '@components/DetailsHeader';
 
 import {
   DetailsWrapper,
@@ -13,7 +14,8 @@ import {
   JishoLink,
   Content,
   SectionWrapper,
-  Header,
+  SectionInner,
+  MainSection,
   NameWrapper,
   TagsWrapper,
   CharacterBlock,
@@ -63,56 +65,72 @@ const Details = (props) => {
             )) : null
           }
         </TagsWrapper>
-        <Header>{props.mainSectionHeader}</Header>
+        <DetailsHeader>{props.mainSectionHeader}</DetailsHeader>
         <SectionWrapper flex>
-          <NameWrapper>
-            <CharacterBlock>
+          <SectionInner>
+            <NameWrapper>
+              <CharacterBlock small={props.japaneseForm?.kanji.length > 5}>
+                {
+                  props.japaneseForm?.furigana ? (
+                    <CharacterWrapper
+                      furigana
+                      small={props.japaneseForm?.kanji.length > 5}
+                    >
+                      {
+                        props.japaneseForm?.furigana.map((el, index) => (
+                          <OneCharacter key={index}>
+                            {el}
+                          </OneCharacter>
+                        ))
+                      }
+                    </CharacterWrapper>
+                  ) : null
+                }
+                {
+                  props.japaneseForm?.kanji ? (
+                    <CharacterWrapper
+                      kanji
+                      small={props.japaneseForm?.kanji.length > 5}
+                    >
+                      {
+                        props.japaneseForm?.kanji.map((el, index) => (
+                          <OneCharacter key={index}>
+                            {el}
+                          </OneCharacter>
+                        ))
+                      }
+                    </CharacterWrapper>
+                  ) : props.name
+                }
+              </CharacterBlock>
               {
-                props.japaneseForm?.furigana ? (
-                  <CharacterWrapper furigana>
-                    {
-                      props.japaneseForm?.furigana.map((el, index) => (
-                        <OneCharacter key={index}>{el}</OneCharacter>
-                      ))
-                    }
-                  </CharacterWrapper>
+                props.additionalBox ? (
+                  props.additionalBox
                 ) : null
               }
-              {
-                props.japaneseForm?.kanji ? (
-                  <CharacterWrapper>
-                    {
-                      props.japaneseForm?.kanji.map((el, index) => (
-                        <OneCharacter key={index}>{el}</OneCharacter>
-                      ))
-                    }
-                  </CharacterWrapper>
-                ) : props.name
-              }
-            </CharacterBlock>
+            </NameWrapper>
             {
-              props.additionalBox ? (
-                props.additionalBox
+              props.mainSection ? (
+                <MainSection
+                  wide={!props.secondarySection}
+                >
+                  {props.mainSection}
+                </MainSection>
               ) : null
             }
-          </NameWrapper>
-          {
-            props.mainSection ? (
-              <div>{props.mainSection}</div>
-            ) : null
-          }
+          </SectionInner>
           {
             props.secondarySection ? props.secondarySection : null
           }
         </SectionWrapper>
         {
           props.sections ? props.sections.map((section, index) => (
-            section.section ? (
+            section?.section ? (
               // eslint-disable-next-line react/no-array-index-key
               <React.Fragment key={index}>
-                <Header>{section.title}</Header>
+                <DetailsHeader>{section.title}</DetailsHeader>
                 <SectionWrapper>
-                  {section.section}
+                  {section?.section}
                 </SectionWrapper>
               </React.Fragment>
             ) : null

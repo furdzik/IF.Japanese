@@ -76,6 +76,7 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     background: none;
     font: inherit;
+    text-transform: inherit;
     &:hover, &:active, &:focus {
       outline: none;
       cursor: pointer;
