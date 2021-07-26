@@ -11,8 +11,11 @@ const ColoredBoxList = (props) => (
   <BoxList>
     {
       props.list.map((menuItem, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <BoxItem key={index}>
+        <BoxItem
+          // eslint-disable-next-line react/no-array-index-key
+          key={index}
+          data-tip={menuItem.label}
+        >
           <LinkStyled to={menuItem.link}>{menuItem.name}</LinkStyled>
         </BoxItem>
       ))
