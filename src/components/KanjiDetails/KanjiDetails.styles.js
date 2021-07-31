@@ -51,7 +51,11 @@ const StrokeImage = styled.img`
   max-width: 100%;
 `;
 
-const StrokeNumberWrapper = styled.span`
+const StrokeNumberWrapper = styled.div`
+  margin-bottom: 2rem;
+`;
+
+const StrokeNumber = styled.span`
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -84,6 +88,7 @@ export {
   StrokeBox,
   StrokeImage,
   StrokeNumberWrapper,
+  StrokeNumber,
   ExampleWrapper,
   MoreExamplesLink
 };

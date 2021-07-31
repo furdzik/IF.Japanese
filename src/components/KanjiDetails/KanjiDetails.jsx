@@ -22,6 +22,7 @@ import {
   StrokeBox,
   StrokeImage,
   StrokeNumberWrapper,
+  StrokeNumber,
   ExampleWrapper,
   MoreExamplesLink
 } from './KanjiDetails.styles.js';
@@ -51,13 +52,6 @@ const KanjiDetails = (props) => {
       nowLearning={props.status?.nowLearning}
       jishoLink={`https://jisho.org/search/%23kanji%20${props.metadata?.slug}`}
       tags={getTags()}
-      additionalBox={props.strokes?.count ? (
-        <div>
-          {intl.formatMessage(messages.numberOfStrokes, {
-            number: <StrokeNumberWrapper>{props.strokes?.count}</StrokeNumberWrapper>
-          })}
-        </div>
-      ) : null}
       mainSectionHeader={intl.formatMessage(messages.mainHeader)}
       mainSection={(
         <ReadingList>
@@ -94,16 +88,31 @@ const KanjiDetails = (props) => {
         props.strokes ? {
           title: intl.formatMessage(messages.strokesHeader),
           section: (
-            <StrokeWrapper>
+            <React.Fragment>
               {
-                props.strokes?.graphs.map((image, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <StrokeBox key={index}>
-                    <StrokeImage src={image} alt="" />
-                  </StrokeBox>
-                ))
+                props.strokes?.count ? (
+                  <StrokeNumberWrapper>
+                    {intl.formatMessage(messages.numberOfStrokes, {
+                      number: <StrokeNumber>{props.strokes?.count}</StrokeNumber>
+                    })}
+                  </StrokeNumberWrapper>
+                ) : null
               }
-            </StrokeWrapper>
+              {
+                props.strokes?.graphs ? (
+                  <StrokeWrapper>
+                    {
+                      props.strokes?.graphs.map((image, index) => (
+                        // eslint-disable-next-line react/no-array-index-key
+                        <StrokeBox key={index}>
+                          <StrokeImage src={image} alt="" />
+                        </StrokeBox>
+                      ))
+                    }
+                  </StrokeWrapper>
+                ) : null
+              }
+            </React.Fragment>
           )
         } : null,
         props.examples ? {

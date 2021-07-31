@@ -27,7 +27,7 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_KANJI_DETAILS: {
       const { detailsAlternative, details, kanji } = action.payload;
-
+      console.log(detailsAlternative, details, kanji);
       return {
         ...state,
         meaning: detailsAlternative?.meanings.join(', '),
@@ -51,7 +51,9 @@ export default function(state = initialState, action) {
         },
         tags: getTags({
           jlpt: [kanji.level.toString()],
-          isJoyo: kanji.joyo
+          isJoyo: kanji.joyo,
+          grade: detailsAlternative.grade,
+          strokes: details.kanji?.strokes?.count
         }),
         loading: false
       };
