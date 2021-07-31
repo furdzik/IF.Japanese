@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 import { itemShape } from '@types/itemShape';
 
 import Checkbox from '@components/ui/Checkbox';
+import Tooltip from '@components/ui/Tooltip';
 
 import {
   CheckboxListWrapper,
   ListItem
 } from './CheckboxList.styles';
+
+const CHECKBOX_TOOLTIP_ID = 'checkbox';
 
 const CheckboxList = (props) => (
   <CheckboxListWrapper
@@ -20,6 +23,7 @@ const CheckboxList = (props) => (
         <ListItem
           key={`${item.name}_${item.label}_${item.value}`}
           data-tip={item.helper}
+          data-for={CHECKBOX_TOOLTIP_ID}
         >
           <Checkbox
             name={props.name}
@@ -34,6 +38,7 @@ const CheckboxList = (props) => (
         </ListItem>
       ))
     }
+    <Tooltip id={CHECKBOX_TOOLTIP_ID} />
   </CheckboxListWrapper>
 );
 

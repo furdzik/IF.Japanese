@@ -9,8 +9,16 @@ const StyledReactTooltip = styled(ReactTooltip)`
     font-size: 1.2rem;
     color: ${(props) => props.theme.colors.white};
     opacity: 1;
+    &.show {
+      opacity: 1;
+    }
     &.place-top {
       margin-top: -.5rem;
+      &::after {
+        border-color: ${(props) => props.theme.colors.secondaryColorHover} transparent;
+      }
+    }
+    &.place-bottom {
       &::after {
         border-color: ${(props) => props.theme.colors.secondaryColorHover} transparent;
       }

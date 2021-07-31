@@ -18,43 +18,41 @@ const Filters = (props) => {
   const isDesktop = useBreakpoint(`(min-width: ${breakpoints.laptop})`);
 
   return (
-    <React.Fragment>
-      <Wrapper>
-        <FiltersBox primary>
+    <Wrapper>
+      <FiltersBox primary>
+        <CheckboxList
+          name="filters"
+          onCheckboxClick={props.changeFilters}
+          items={props.filterList}
+          selected={props.selectedFilters}
+          centered={isDesktop}
+        />
+      </FiltersBox>
+      <FiltersGroup>
+        <FiltersBox noHeight={props.additionalFilterList}>
           <CheckboxList
             name="filters"
             onCheckboxClick={props.changeFilters}
-            items={props.filterList}
+            items={props.secondaryFilterList}
             selected={props.selectedFilters}
             centered={isDesktop}
           />
         </FiltersBox>
-        <FiltersGroup>
-          <FiltersBox noHeight={props.additionalFilterList}>
-            <CheckboxList
-              name="filters"
-              onCheckboxClick={props.changeFilters}
-              items={props.secondaryFilterList}
-              selected={props.selectedFilters}
-              centered={isDesktop}
-            />
-          </FiltersBox>
-          {
-            props.additionalFilterList ? (
-              <FiltersBox noHeight={props.additionalFilterList}>
-                <CheckboxList
-                  name="filters"
-                  onCheckboxClick={props.changeFilters}
-                  items={props.additionalFilterList}
-                  selected={props.selectedFilters}
-                  centered={isDesktop}
-                />
-              </FiltersBox>
-            ) : null
-          }
-        </FiltersGroup>
-      </Wrapper>
-    </React.Fragment>
+        {
+          props.additionalFilterList ? (
+            <FiltersBox noHeight={props.additionalFilterList}>
+              <CheckboxList
+                name="filters"
+                onCheckboxClick={props.changeFilters}
+                items={props.additionalFilterList}
+                selected={props.selectedFilters}
+                centered={isDesktop}
+              />
+            </FiltersBox>
+          ) : null
+        }
+      </FiltersGroup>
+    </Wrapper>
   );
 };
 

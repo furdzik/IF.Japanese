@@ -79,12 +79,6 @@ const ListItem = styled.div`
     color: ${props.theme.colors.white};
     order: 1;
 
-    ${breakpointMixin.laptop`
-      margin: 1rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    `}
-
     &::before {
       color: ${props.theme.colors.white};
     }

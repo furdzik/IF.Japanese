@@ -21,8 +21,6 @@ import { english } from '@lang';
 import theme from '@styles/theme';
 import { GlobalStyles } from '@styles/global.styles';
 
-import Tooltip from '@components/ui/Tooltip';
-
 const middlewareEnhancer = applyMiddleware(thunk);
 const enhancer = production ? middlewareEnhancer : composeWithDevTools(middlewareEnhancer);
 const store = createStore(reducers, undefined, enhancer);
@@ -36,7 +34,6 @@ const App = () => (
       <Provider store={store}>
         <Routes />
         <GlobalStyles />
-        <Tooltip />
       </Provider>
     </ThemeProvider>
   </IntlProvider>
