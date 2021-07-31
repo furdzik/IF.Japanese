@@ -68,6 +68,8 @@
           "left",
           "bottom",
           "overflow",
+          "overflow-x",
+          "overflow-y",
           "visibility",
           "z-index"
         ]

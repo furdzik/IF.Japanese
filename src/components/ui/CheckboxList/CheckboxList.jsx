@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { itemShape } from '@utils/types/itemShape';
+import { itemShape } from '@types/itemShape';
 
 import Checkbox from '@components/ui/Checkbox';
+import Tooltip from '@components/ui/Tooltip';
 
-import { CheckboxListWrapper, ListItem } from './CheckboxList.styles';
+import {
+  CheckboxListWrapper,
+  ListItem
+} from './CheckboxList.styles';
+
+const CHECKBOX_TOOLTIP_ID = 'checkbox';
 
 const CheckboxList = (props) => (
   <CheckboxListWrapper
@@ -14,7 +20,11 @@ const CheckboxList = (props) => (
   >
     {
       props.items.map((item) => (
-        <ListItem key={`${item.name}_${item.label}_${item.value}`}>
+        <ListItem
+          key={`${item.name}_${item.label}_${item.value}`}
+          data-tip={item.helper}
+          data-for={CHECKBOX_TOOLTIP_ID}
+        >
           <Checkbox
             name={props.name}
             checked={props.selected.indexOf(item.value) !== -1}
@@ -28,6 +38,7 @@ const CheckboxList = (props) => (
         </ListItem>
       ))
     }
+    <Tooltip id={CHECKBOX_TOOLTIP_ID} />
   </CheckboxListWrapper>
 );
 

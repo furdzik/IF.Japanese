@@ -1,27 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Tooltip from '@components/ui/Tooltip';
+
 import {
   MenuWrapper,
   MenuItem,
   LinkStyled
 } from './Menu.styles.js';
 
+const MENU_TOOLTIP_ID = 'menu';
+
 const Menu = (props) => (
-  <MenuWrapper>
-    {
-      props.list.map((el) => (
-        <MenuItem key={el.id}>
-          <LinkStyled
-            active={props.active === el.id ? 1 : 0}
-            to={`${el.link}`}
-          >
-            {el.name}
-          </LinkStyled>
-        </MenuItem>
-      ))
-    }
-  </MenuWrapper>
+  <React.Fragment>
+    <MenuWrapper>
+      {
+        props.list.map((el) => (
+          <MenuItem key={el.id}>
+            <LinkStyled
+              active={props.active === el.id ? 1 : 0}
+              to={`${el.link}`}
+              data-tip={el.label}
+              data-for={MENU_TOOLTIP_ID}
+            >
+              {el.name}
+            </LinkStyled>
+          </MenuItem>
+        ))
+      }
+    </MenuWrapper>
+    <Tooltip id={MENU_TOOLTIP_ID} />
+  </React.Fragment>
 );
 
 Menu.propTypes = {

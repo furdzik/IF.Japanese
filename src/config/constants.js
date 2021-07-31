@@ -1,3 +1,5 @@
+import messages from '@utils/defaultMessages/menu.messages';
+
 /* FILTERS */
 export const localStorageKeyVocab = 'vocabSelectedFilters';
 export const localStorageKeyVerbs = 'verbsSelectedFilters';
@@ -80,27 +82,32 @@ export const menuId = {
 export const menu = [
   {
     id: menuId.vocab,
-    name: '単語',
+    name: (messages.vocabText)?.defaultMessage,
+    label: (messages.vocabLabel)?.defaultMessage,
     link: '/'
   },
   {
     id: menuId.kanji,
-    name: '漢字',
+    name: (messages.kanjiText)?.defaultMessage,
+    label: (messages.kanjiLabel)?.defaultMessage,
     link: '/kanji'
   },
   {
     id: menuId.verbs,
-    name: '動詞',
+    name: (messages.verbsText)?.defaultMessage,
+    label: (messages.verbsLabel)?.defaultMessage,
     link: '/verbs'
   },
   {
     id: menuId.grammar,
-    name: '文法',
+    name: (messages.grammarText)?.defaultMessage,
+    label: (messages.grammarLabel)?.defaultMessage,
     link: '/grammar'
   },
   {
     id: menuId.others,
-    name: '他',
+    name: (messages.othersText)?.defaultMessage,
+    label: (messages.othersLabel)?.defaultMessage,
     link: '/others'
   }
 ];
@@ -108,17 +115,20 @@ export const menu = [
 export const grammarMenu = [
   {
     id: menuId.grammarToRepeat,
-    name: '復習',
+    name: (messages.grammarToRepeatText)?.defaultMessage,
+    label: (messages.grammarToRepeatLabel)?.defaultMessage,
     link: '/grammar-to-repeat'
   },
   {
     id: menuId.grammarPoliteness,
-    name: '丁寧さ',
+    name: (messages.grammarPolitenessText)?.defaultMessage,
+    label: (messages.grammarPolitenessLabel)?.defaultMessage,
     link: '/grammar-politeness'
   },
   {
     id: menuId.grammarPoliteness,
-    name: 'よく使う表現',
+    name: (messages.expressionsText)?.defaultMessage,
+    label: (messages.expressionsLabel)?.defaultMessage,
     link: '/expressions'
   }
 ];
@@ -126,12 +136,14 @@ export const grammarMenu = [
 export const othersMenu = [
   {
     id: menuId.othersGame,
-    name: '仮名のゲーム',
+    name: (messages.kanaGameText)?.defaultMessage,
+    label: (messages.kanaGameLabel)?.defaultMessage,
     link: '/kana-game'
   },
   {
     id: menuId.othersFlashcards,
-    name: '暗記',
+    name: (messages.flashcardsText)?.defaultMessage,
+    label: (messages.flashcardsLabel)?.defaultMessage,
     link: '/flashcards'
   }
 ];

@@ -4,19 +4,23 @@ import defaultMessages from '@utils/defaultMessages/default.messages';
 export const filterLabels = [
   {
     value: FILTERS_IDS.KNOWN,
-    label: (defaultMessages.known).defaultMessage
+    label: (defaultMessages.known).defaultMessage,
+    helper: (defaultMessages.knownHelper).defaultMessage
   },
   {
     value: FILTERS_IDS.NOW_LEARNING,
-    label: (defaultMessages.nowLearning).defaultMessage
+    label: (defaultMessages.nowLearning).defaultMessage,
+    helper: (defaultMessages.nowLearningHelper).defaultMessage
   },
   {
     value: FILTERS_IDS.IN_PROGRESS,
-    label: (defaultMessages.inProgress).defaultMessage
+    label: (defaultMessages.inProgress).defaultMessage,
+    helper: (defaultMessages.inProgressHelper).defaultMessage
   },
   {
     value: FILTERS_IDS.NOT_KNOWN,
-    label: (defaultMessages.notKnown).defaultMessage
+    label: (defaultMessages.notKnown).defaultMessage,
+    helper: (defaultMessages.notKnownHelper).defaultMessage
   }
 ];
 

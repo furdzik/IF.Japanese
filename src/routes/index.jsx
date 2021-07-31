@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -20,11 +20,15 @@ import KanjiDetails from '@containers/KanjiDetails/KanjiDetails';
 import Verbs from '@containers/Verbs/Verbs';
 import Flashcards from '@containers/Flashcards';
 
+import VocabularyListLoading from '@components/loaders/VocabularyListLoading';
+
 const Routes = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 200);
+    window.addEventListener('load', () => {
+      setLoading(!loading);
+    });
   }, []);
 
   return (
@@ -34,6 +38,9 @@ const Routes = () => {
           exact
           path="/"
         >
+          {
+            loading ? <VocabularyListLoading /> : null
+          }
           <Layout list={menu} menuActive={menuId.vocab}>
             <Vocabulary />
           </Layout>
@@ -54,6 +61,12 @@ const Routes = () => {
             const { kanji } = props.match.params;
 
             if (kanji) {
+              window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              });
+
               return (
                 <Layout list={menu} menuActive={menuId.kanji}>
                   <KanjiDetails kanji={kanji} />
@@ -72,6 +85,12 @@ const Routes = () => {
             const { vocab } = props.match.params;
 
             if (vocab) {
+              window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              });
+
               return (
                 <Layout list={menu} menuActive={menuId.vocab}>
                   <VocabularyDetails name={vocab} />

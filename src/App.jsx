@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
 import { ThemeProvider } from 'styled-components';
+
 import { IntlProvider } from 'react-intl';
 
 import Routes from '@root/routes';
@@ -31,11 +32,8 @@ const App = () => (
   >
     <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <React.Fragment>
-          {/* NAV */}
-          <Routes />
-          <GlobalStyles />
-        </React.Fragment>
+        <Routes />
+        <GlobalStyles />
       </Provider>
     </ThemeProvider>
   </IntlProvider>

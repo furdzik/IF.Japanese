@@ -16,12 +16,12 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     box-sizing: border-box;
+    overflow: hidden scroll;
     background: ${(props) => props.theme.colors.white};
     font-family: ${baseFontFamily};
     font-size: ${(props) => props.theme.typography.fontSize.normal};
     font-weight: ${(props) => props.theme.typography.fontWeight.regular};
     line-height: ${(props) => props.theme.typography.lineHeight.normal};
-    overflow-x: hidden;
   }
   *,
   *::before,
