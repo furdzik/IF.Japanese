@@ -31,16 +31,20 @@ const FiltersBox = styled.div`
     min-height: 6.4rem;
     margin-bottom: 0;
     padding: 0 1rem;
-  `}
+  `};
 
   ${(props) => props.primary && css`
     width: 100%;
     background: none;
 
     ${breakpointMixin.laptop`
+      width: 56%;
+      background: ${props.theme.mainColors.secondary};
+    `};
+
+    ${breakpointMixin.desktop`
       width: 45%;
-      background: ${props.theme.colors.secondaryColor};
-    `}
+    `};
   `}
 
   ${(props) => props.noHeight && css`

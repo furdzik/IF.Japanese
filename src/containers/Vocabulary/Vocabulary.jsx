@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { vocabShape } from '@types/vocabShape';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
 
-import { filterLabels, secondaryFilterLabels } from '@utils/filters';
+import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import Loader from '@components/ui/Loader';
 
@@ -27,14 +27,14 @@ const Vocabulary = (props) => {
       <Filters
         changeFilters={props.changeFilters}
         selectedFilters={props.selectedFilters}
-        filterList={filterLabels}
+        filterList={getFilterLabels()}
         secondaryFilterList={secondaryFilterLabels}
       />
       <Legend length={props.vocabLength} />
       <ProgressBar length={props.vocabLength} />
       <VocabularyList vocab={props.vocab} />
     </React.Fragment>
-  ) : <Loader static />;
+  ) : <Loader />;
 };
 
 Vocabulary.propTypes = {

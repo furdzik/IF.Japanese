@@ -18,7 +18,7 @@ const CheckboxBox = styled.span`
   width: 1.7rem;
   height: 1.7rem;
   margin-right: 1rem;
-  border: .2rem solid ${(props) => props.theme.colors.primaryColor};
+  border: .2rem solid ${(props) => props.theme.mainColors.primary};
   border-radius: .2rem;
   background: ${(props) => props.theme.colors.white};
   transition: all .2s;
@@ -31,21 +31,21 @@ const CheckboxBox = styled.span`
     margin-top: -.3rem;
     border-bottom: .2rem solid;
     border-left: .2rem solid;
-    color: ${(props) => props.theme.colors.primaryColor};
+    color: ${(props) => props.theme.mainColors.primary};
     opacity: 0;
     content: '';
   }
 
   ${(props) => props.isActive && css`
     background-color: ${props.theme.colors.white};
-    border-color: ${props.theme.colors.primaryColor};
+    border-color: ${props.theme.mainColors.primary};
     &:after {
       opacity: 1;
     }
   `};
 
   ${(props) => props.isDisabled && css`
-    border-color: ${props.theme.colors.secondaryColor};
+    border-color: ${props.theme.mainColors.secondary};
   `};
 `;
 
@@ -54,7 +54,7 @@ const LabelText = styled.span`
   cursor: pointer;
 
   ${(props) => props.isDisabled && css`
-    color: ${props.theme.colors.secondaryColor};
+    color: ${props.theme.mainColors.secondary};
   `};
 `;
 

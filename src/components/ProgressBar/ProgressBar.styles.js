@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -8,30 +8,41 @@ const Wrapper = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.mainCategoriesStyle.notKnown};
+  background: ${(props) => props.theme.mainCategoriesStyle.notKnown.background};
+`;
+
+const ProgressStyles = css`
+  width: ${(props) => props.percent}%;
+  height: 100%;
 `;
 
 const KnownProgress = styled.div`
-  width: ${(props) => props.percent}%;
-  height: 100%;
-  background: ${(props) => props.theme.mainCategoriesStyle.known};
+  ${ProgressStyles};
+  background: ${(props) => props.theme.mainCategoriesStyle.known.background};
 `;
 
-const InProgressProgress = styled.div`
-  width: ${(props) => props.percent}%;
-  height: 100%;
-  background: ${(props) => props.theme.mainCategoriesStyle.inProgress};
+const ToRepeatProgress = styled.div`
+  ${ProgressStyles};
+  border-right: 1px solid #ec4a4a;
+  background: ${(props) => props.theme.mainCategoriesStyle.toRepeat.background};
 `;
 
 const NowLearningProgress = styled.div`
-  width: ${(props) => props.percent}%;
-  height: 100%;
+  ${ProgressStyles};
+  border-right: 1px solid #f36a6a;
   background: ${(props) => props.theme.mainCategoriesStyle.nowLearning.background};
+`;
+
+const InProgressProgress = styled.div`
+  ${ProgressStyles};
+  border-right: 1px solid #e0acac;
+  background: ${(props) => props.theme.mainCategoriesStyle.inProgress.background};
 `;
 
 export {
   Wrapper,
   KnownProgress,
-  InProgressProgress,
-  NowLearningProgress
+  ToRepeatProgress,
+  NowLearningProgress,
+  InProgressProgress
 };

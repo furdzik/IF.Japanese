@@ -2,11 +2,152 @@
   {
     "grammarId": "start",
     "grammarName": "スタート",
-    "known": false,
-    "inProgress": false,
+    "known": true,
+    "toRepeat": false,
     "nowLearning": false,
-    "repeat": false,
+    "inProgress": false,
     "level": 5,
-    "origin": "MinnaNoNihongoAka"
+    "levelGroup": "elementary",
+    "origin": [
+      {
+        "originName": "MinnaNoNihongoAka",
+        "originChapter": ["Introduction"]
+      }
+    ],
+    "explanation":  "",
+    "examples": [
+      "...",
+      "..."
+    ]
+  },
+  {
+    "grammarId": "joshi",
+    "grammarName": "助詞",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": true,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "all",
+    "origin": [],
+    "originChapter": null,
+    "explanation":  "",
+    "examples": null,
+    "similarities": [
+      "josuushi"
+    ]
+  },
+  {
+    "grammarId": "josuushi",
+    "grammarName": "助数詞",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": true,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "all",
+    "origin": [],
+    "originChapter": null,
+    "explanation":  "",
+    "examples": null,
+    "similarities": [
+      "joshi"
+    ]
+  },
+  {
+    "grammarId": "n1han2desu",
+    "grammarName": "N₁はN₂です",
+    "known": true,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "elementary",
+    "origin": [
+      {
+        "originName": "MinnaNoNihongoAka",
+        "originChapter": ["1"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["1"]
+      }
+    ],
+    "explanation":  "",
+    "examples": [
+      "...",
+      "..."
+    ]
+  },
+  {
+    "grammarId": "k-s-a",
+    "grammarName": "こ〜 ／そ〜 ／あ〜",
+    "known": false,
+    "toRepeat": true,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "all",
+    "origin": [
+      {
+        "originName": "MinnaNoNihongoAka",
+        "originChapter": ["1"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["1"]
+      }
+    ],
+    "explanation":  "",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "problems": [
+      "speaking",
+      "writhing"
+    ]
+  },
+  {
+    "grammarId": "interrogative",
+    "grammarName": "疑問詞",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": true,
+    "level": 5,
+    "levelGroup": "all",
+    "origin": [
+    ],
+    "explanation":  "",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "problems": [
+      "speaking",
+      "writhing"
+    ]
+  },
+  {
+    "grammarId": "tame",
+    "grammarName": "〜ため",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "all",
+    "origin": [
+    ],
+    "explanation":  "",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "problems": [
+      "speaking",
+      "writhing"
+    ]
   }
 ]

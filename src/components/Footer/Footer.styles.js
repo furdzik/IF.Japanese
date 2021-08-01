@@ -5,7 +5,7 @@ const FooterWrapper = styled.div`
   padding: 3rem 0;
   background: ${(props) => props.theme.colors.lightGray};
   font-size: 1.2rem;
-  color: ${(props) => props.theme.colors.secondaryColorHover};
+  color: ${(props) => props.theme.colors.darkGray};
   text-align: center;
 
   @media print {

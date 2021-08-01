@@ -6,7 +6,7 @@ import { breakpointMixin } from '@styles/mixins';
 import Tile from '@components/ui/Tile';
 
 const Item = styled.li`
-  border: 1px solid ${(props) => props.theme.colors.secondaryColor};
+  border: 1px solid ${(props) => props.theme.mainColors.secondary};
   list-style: none;
 
   &:first-child {
@@ -37,11 +37,11 @@ const MainBox = styled.div`
   align-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.colors.secondaryColor};
+  border-bottom: 1px solid ${(props) => props.theme.mainColors.secondary};
 
   ${breakpointMixin.laptop`
     width: 22rem;
-    border-right: 1px solid ${(props) => props.theme.colors.secondaryColor};
+    border-right: 1px solid ${(props) => props.theme.mainColors.secondary};
     border-bottom: 0;
   `}
 `;
@@ -69,21 +69,21 @@ const BoxContent = styled.div`
 `;
 
 const TriggerWrapper = styled.div`
-  display: flex;
   position: absolute;
   top: -.5rem;
   right: .5rem;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: ${(props) => props.theme.colors.secondaryColor};
+  background: ${(props) => props.theme.mainColors.secondary};
   color: ${(props) => props.theme.colors.white};
   cursor: pointer;
 
   &:hover {
-    background: ${(props) => props.theme.colors.secondaryColorHover};
+    background: ${(props) => props.theme.colors.darkGray};
   }
 
   ${(props) => props.isCollaps && css`
@@ -104,7 +104,7 @@ const VerbType = styled.span`
   display: inline-block;
   margin-top: 2.5rem;
   font-size: 3rem;
-  color: ${(props) => props.theme.colors.secondaryColor};
+  color: ${(props) => props.theme.mainColors.secondary};
   cursor: default;
 `;
 
@@ -126,7 +126,7 @@ const ParticleListItem = styled.li`
   margin: .4rem;
   padding: .2rem .7rem;
   border-radius: 50%;
-  background: ${(props) => props.theme.colors.secondaryColor};
+  background: ${(props) => props.theme.mainColors.secondary};
   font-size: 1.5rem;
 `;
 

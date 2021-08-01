@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   text-transform: uppercase;
 
   ${(props) => props.tagType === tagTypes.IS_VERB && css`
-    background: ${props.theme.colors.primaryColor};
+    background: ${props.theme.mainColors.primary};
     color: ${props.theme.colors.white};
   `}
   ${(props) => (props.tagType === tagTypes.IS_COMMON || props.tagType === tagTypes.JOYO) && css`

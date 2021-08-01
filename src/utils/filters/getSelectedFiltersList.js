@@ -4,6 +4,7 @@ import { getKnownUnknownFilters } from './getKnownUnknownFilters';
 export const getSelectedFiltersList = (originalList, selectedFilters, IDS, isKanji = false) => {
   let list = {
     knownList: [],
+    toRepeatList: [],
     notKnownList: [],
     inProgressList: [],
     nowLearningList: [],
@@ -46,6 +47,7 @@ export const getSelectedFiltersList = (originalList, selectedFilters, IDS, isKan
   }
 
   list.all = list.knownList.concat(
+    list.toRepeatList,
     list.nowLearningList,
     list.inProgressList,
     list.notKnownList

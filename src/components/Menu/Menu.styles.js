@@ -33,12 +33,12 @@ const LinkStyled = styled(Link)`
   color: ${(props) => props.theme.colors.black};
   text-decoration: none;
   &:hover {
-    color: ${(props) => props.theme.colors.primaryColor};
+    color: ${(props) => props.theme.mainColors.primary};
     transition: all 0.3s ease 0s;
   }
 
   ${(props) => props.active && css`
-    color: ${props.theme.colors.primaryColor};
+    color: ${props.theme.mainColors.primary};
   `};
 
   @media print {

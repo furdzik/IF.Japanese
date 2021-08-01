@@ -5,6 +5,7 @@ export const localStorageKeyVocab = 'vocabSelectedFilters';
 export const localStorageKeyVerbs = 'verbsSelectedFilters';
 export const localStorageKeyKanji = 'kanjiSelectedFilters';
 export const localStorageKeyFlashcards = 'flashcardsSelectedFilters';
+export const localStorageKeyGrammar = 'grammarSelectedFilters';
 
 export const FILTERS_IDS = {
   KNOWN: 1,
@@ -17,7 +18,8 @@ export const FILTERS_IDS = {
   LEVEL_2: 7,
   LEVEL_1: 8,
   OTHER: 9,
-  JOYO_KANJI: 10
+  JOYO_KANJI: 10,
+  TO_REPEAT: 12
 };
 
 /* VERBS */
@@ -72,11 +74,10 @@ export const menuId = {
   kanji: 1,
   verbs: 2,
   grammar: 3,
-  grammarToRepeat: 4,
-  grammarPoliteness: 5,
-  others: 6,
-  othersGame: 7,
-  othersFlashcards: 8
+  grammarPoliteness: 4,
+  others: 5,
+  othersGame: 6,
+  othersFlashcards: 7
 };
 
 export const menu = [
@@ -114,10 +115,10 @@ export const menu = [
 
 export const grammarMenu = [
   {
-    id: menuId.grammarToRepeat,
-    name: (messages.grammarToRepeatText)?.defaultMessage,
-    label: (messages.grammarToRepeatLabel)?.defaultMessage,
-    link: '/grammar-to-repeat'
+    id: menuId.grammarPoliteness,
+    name: (messages.grammarFormsText)?.defaultMessage,
+    label: (messages.grammarFormsLabel)?.defaultMessage,
+    link: '/forms'
   },
   {
     id: menuId.grammarPoliteness,
@@ -163,3 +164,28 @@ export const tagTypes = {
   OTHER: 'other',
   GRADE: 'grade'
 };
+
+/* GRAMMAR */
+export const grammarLevels = {
+  LEVEL_5: 5,
+  LEVEL_4: 4,
+  LEVEL_3: 3,
+  LEVEL_2: 2,
+  LEVEL_1: 1,
+  OTHER: 0
+};
+
+export const grammarGroups = {
+  ELEMENTARY_LEVEL: 'elementary',
+  INTERMEDIATE_LEVEL: 'intermediate',
+  ADVANCED_LEVEL: 'advanced',
+  ALL: 'all'
+};
+
+export const grammarGroupsLabels = {
+  elementaryLevel: (messages.elementaryLevel)?.defaultMessage,
+  intermediateLevel: (messages.intermediateLevel)?.defaultMessage,
+  advancedLevel: (messages.advancedLevel)?.defaultMessage
+};
+
+export const GRAMMAR_HAS_TO_REPEAT = true;

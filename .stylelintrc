@@ -61,21 +61,17 @@
       {
         "properties": [
           "box-sizing",
-          "display",
           "position",
           "top",
           "right",
           "left",
           "bottom",
-          "overflow",
-          "overflow-x",
-          "overflow-y",
-          "visibility",
           "z-index"
         ]
       },
       {
         "properties": [
+          "display",
           "flex",
           "flex-grow",
           "flex-shrink",
@@ -93,6 +89,10 @@
       },
       {
         "properties": [
+          "overflow",
+          "overflow-x",
+          "overflow-y",
+          "visibility",
           "float",
           "clear"
         ]

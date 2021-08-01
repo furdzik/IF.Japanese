@@ -20,7 +20,7 @@ const StyledSkeleton = styled(Skeleton)`
   width: 100%;
   max-width: 100%;
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColorHover};
+  background: ${(props) => props.theme.colors.darkGray};
 `;
 
 const HeaderSkeleton = styled(Skeleton)`

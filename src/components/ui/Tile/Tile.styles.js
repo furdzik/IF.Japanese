@@ -8,7 +8,7 @@ const ListItem = styled.div`
   margin: .8rem;
   padding: .6rem 1rem .4rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.mainCategoriesStyle.notKnown};
+  background: ${(props) => props.theme.mainCategoriesStyle.notKnown.background};
   font-size: 2rem;
 
   ${breakpointMixin.laptop`
@@ -34,35 +34,49 @@ const ListItem = styled.div`
   }
 
   ${(props) => props.joyo === false && css`
-    border: 1px solid #a0a0a0;
+    border: ${props.theme.mainCategoriesStyle.joyo.border};
   `};
 
   ${(props) => props.known && css`
-    background: ${props.theme.mainCategoriesStyle.known};
-    color: ${props.theme.colors.white};
+    background: ${props.theme.mainCategoriesStyle.known.background};
+    color: ${props.theme.mainCategoriesStyle.known.color};
     order: 0;
     &::before {
       color: ${props.theme.colors.white};
-      text-shadow: -1px 1px 8px #750101;
+      text-shadow: ${props.theme.mainCategoriesStyle.known.textShadow};
     }
 
     ${props.joyo === false && css`
-      border: 1px solid #750101;
+      border-color: ${props.theme.colors.veryDarkPink};
     `}
   `};
 
+  ${(props) => props.nowLearning && css`
+    background: ${props.theme.mainCategoriesStyle.nowLearning.background};
+    border: ${props.theme.mainCategoriesStyle.nowLearning.border};
+    padding: .4rem .8rem .2rem;
+    color: ${props.theme.mainCategoriesStyle.nowLearning.color};
+    text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
+    order: 1;
+
+    &::before {
+      color: ${props.theme.mainCategoriesStyle.nowLearning.color};
+      text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
+    }
+  `};
+
   ${(props) => props.inProgress && css`
-    background: ${props.theme.mainCategoriesStyle.inProgress};
-    color: ${props.theme.colors.white};
-    text-shadow: -1px 1px 8px #750101;
+    background: ${props.theme.mainCategoriesStyle.inProgress.background};
+    color: ${props.theme.mainCategoriesStyle.inProgress.color};
+    text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
     order: 2;
     &::before {
       color: ${props.theme.colors.white};
-      text-shadow: -1px 1px 8px #750101;
+      text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
     }
 
     ${props.joyo === false && css`
-      border: 1px solid #f65e5e;
+      border-color: #f65e5e;
     `};
 
     @media print {
@@ -72,19 +86,7 @@ const ListItem = styled.div`
     }
   `};
 
-  ${(props) => props.nowLearning && css`
-    background: ${props.theme.mainCategoriesStyle.nowLearning.background};
-    border: ${props.theme.mainCategoriesStyle.nowLearning.border};
-    padding: .4rem .8rem .2rem;
-    color: ${props.theme.colors.white};
-    order: 1;
-
-    &::before {
-      color: ${props.theme.colors.white};
-    }
-  `};
-
-  ${(props) => ((props.inProgress && props.known) || (props.inProgress && props.nowLearning) || (props.known && props.nowLearning)) && css`
+  ${(props) => ((props.inProgress && props.known) || (props.inProgress && props.toRepeat) || (props.inProgress && props.nowLearning) || (props.known && props.nowLearning)) && css`
     background: ${props.theme.colors.black};
     color: ${props.theme.colors.white};
     order: 5 !important;

@@ -15,7 +15,7 @@ const Title = styled.div`
   margin-bottom: 3rem;
   font-size: 3rem;
   font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
-  color: ${(props) => props.theme.colors.primaryColor};
+  color: ${(props) => props.theme.mainColors.primary};
 `;
 
 const Box = styled.div`
@@ -33,7 +33,7 @@ const VocabCard = styled.div`
   height: 40rem;
   padding: 3rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
+  background: ${(props) => props.theme.mainColors.secondary};
 
   ${breakpointMixin.laptop`
     width: 50rem;
@@ -92,9 +92,9 @@ const MeaningWrapper = styled.div`
 `;
 
 const ButtonsWrapper = styled.div`
-  display: flex;
   position: absolute;
   bottom: 3rem;
+  display: flex;
   flex-direction: column;
 `;
 
@@ -103,14 +103,14 @@ const SeeMoreLink = styled(Link)`
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 3rem;
-  color: ${(props) => props.theme.colors.primaryColor};
+  color: ${(props) => props.theme.mainColors.primary};
   text-decoration: none;
 `;
 
 const IconStyled = styled(Icon)`
   display: inline-block;
   margin-top: .3rem;
-  fill: ${(props) => props.theme.colors.primaryColor};
+  fill: ${(props) => props.theme.mainColors.primary};
 `;
 
 const SwitcherWrapper = styled.div`

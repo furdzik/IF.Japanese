@@ -14,10 +14,18 @@ export default defineMessages({
   nowLearningHelper: 'Now learning',
   inProgress: '始めた',
   inProgressHelper: 'In progress',
+  toRepeat: '復習',
+  toRepeatHelper: 'To repeat',
   n5: 'N5',
   n4: 'N4',
   n3: 'N3',
   n2: 'N2',
   n1: 'N1',
-  other: 'OTHER'
+  other: 'OTHER',
+  elementaryLevel: '初級',
+  elementaryLevelHelper: 'Elementary level',
+  intermediateLevel: '中級',
+  intermediateLevelHelper: 'Intermediate level',
+  advancedLevel: '上級',
+  advancedLevelHelper: 'Advanced Level'
 });

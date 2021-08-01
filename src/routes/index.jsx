@@ -9,16 +9,16 @@ import { menuId, menu } from '@config/constants';
 
 import Layout from '@components/Layout';
 import PageNotFound from '@components/PageNotFound';
-import GrammarMainPage from '@components/GrammarMainPage';
 import OthersMainPage from '@components/OthersMainPage';
 import KanaGame from '@components/KanaGame';
 
-import Vocabulary from '@containers/Vocabulary/Vocabulary';
-import VocabularyDetails from '@containers/VocabularyDetails/VocabularyDetails';
-import Kanji from '@containers/Kanji/Kanji';
-import KanjiDetails from '@containers/KanjiDetails/KanjiDetails';
-import Verbs from '@containers/Verbs/Verbs';
+import Vocabulary from '@containers/Vocabulary';
+import VocabularyDetails from '@containers/VocabularyDetails';
+import Kanji from '@containers/Kanji';
+import KanjiDetails from '@containers/KanjiDetails';
+import Verbs from '@containers/Verbs';
 import Flashcards from '@containers/Flashcards';
+import Grammar from '@containers/Grammar';
 
 import VocabularyListLoading from '@components/loaders/VocabularyListLoading';
 
@@ -114,7 +114,7 @@ const Routes = () => {
           path="/grammar"
         >
           <Layout list={menu} menuActive={menuId.grammar}>
-            <GrammarMainPage />
+            <Grammar />
           </Layout>
         </Route>
         <Route
@@ -122,15 +122,7 @@ const Routes = () => {
           path="/expressions"
         >
           <Layout list={menu} menuActive={menuId.grammar}>
-            expressions
-          </Layout>
-        </Route>
-        <Route
-          exact
-          path="/grammar-to-repeat"
-        >
-          <Layout list={menu} menuActive={menuId.grammar}>
-            grammar-to-repeat WIP
+            expressions WIP
           </Layout>
         </Route>
         <Route

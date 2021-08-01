@@ -8,7 +8,7 @@ import { FILTERS_IDS } from '@config/constants';
 import { kanjiShape } from '@types/kanjiShape';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
 
-import { filterLabels, secondaryFilterLabels } from '@utils/filters';
+import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import Loader from '@components/ui/Loader';
 import Filters from '@components/Filters';
@@ -41,7 +41,7 @@ const Kanji = (props) => {
         length={props.kanjiLength}
         changeFilters={props.changeFilters}
         selectedFilters={props.selectedFilters}
-        filterList={filterLabels}
+        filterList={getFilterLabels()}
         secondaryFilterList={secondaryFilterLabels}
         additionalFilterList={additionalFilterList}
       />

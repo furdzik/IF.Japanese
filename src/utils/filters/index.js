@@ -6,6 +6,6 @@ export { getSelectedFiltersList } from './getSelectedFiltersList';
 
 export { setChangeFilters } from './setChangeFilters';
 
-export { filterLabels, secondaryFilterLabels } from './defaultFilterLabels';
+export { getFilterLabels, secondaryFilterLabels } from './defaultFilterLabels';
 
 export { getLength, lengthInitialState } from './getLength';
