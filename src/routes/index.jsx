@@ -19,6 +19,7 @@ import KanjiDetails from '@containers/KanjiDetails';
 import Verbs from '@containers/Verbs';
 import Flashcards from '@containers/Flashcards';
 import Grammar from '@containers/Grammar';
+import GrammarDetails from '@containers/GrammarDetails';
 
 import VocabularyListLoading from '@components/loaders/VocabularyListLoading';
 
@@ -117,6 +118,30 @@ const Routes = () => {
             <Grammar />
           </Layout>
         </Route>
+        <Route
+          exact
+          path="/grammar/:grammarId"
+          render={(props) => {
+            // eslint-disable-next-line react/prop-types
+            const { grammarId } = props.match.params;
+
+            if (grammarId) {
+              window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              });
+
+              return (
+                <Layout list={menu} menuActive={menuId.grammar}>
+                  <GrammarDetails grammarId={grammarId} />
+                </Layout>
+              );
+            }
+
+            return null;
+          }}
+        />
         <Route
           exact
           path="/expressions"

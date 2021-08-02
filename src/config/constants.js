@@ -188,4 +188,15 @@ export const grammarGroupsLabels = {
   advancedLevel: (messages.advancedLevel)?.defaultMessage
 };
 
+export const grammarOriginTypes = {
+  MINNA_NO_NIHONGO_AKA: 'minnaNoNihongo1',
+  MINNA_NO_NIHONGO_AOI: 'minnaNoNihongo2',
+  TRY_N5: 'TryN5',
+  TRY_N4: 'TryN4',
+  TRY_N3: 'TryN3',
+  TRY_N2: 'TryN2',
+  TRY_N1: 'TryN1'
+  // pinku, orengi, blue
+};
+
 export const GRAMMAR_HAS_TO_REPEAT = true;

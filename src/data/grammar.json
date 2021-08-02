@@ -8,9 +8,10 @@
     "inProgress": false,
     "level": 5,
     "levelGroup": "elementary",
+    "isCommon": true,
     "origin": [
       {
-        "originName": "MinnaNoNihongoAka",
+        "originName": "minnaNoNihongoAka",
         "originChapter": ["Introduction"]
       }
     ],
@@ -29,6 +30,7 @@
     "inProgress": false,
     "level": 5,
     "levelGroup": "all",
+    "isCommon": true,
     "origin": [],
     "originChapter": null,
     "explanation":  "",
@@ -46,6 +48,7 @@
     "inProgress": false,
     "level": 5,
     "levelGroup": "all",
+    "isCommon": true,
     "origin": [],
     "originChapter": null,
     "explanation":  "",
@@ -63,9 +66,10 @@
     "inProgress": false,
     "level": 5,
     "levelGroup": "elementary",
+    "isCommon": true,
     "origin": [
       {
-        "originName": "MinnaNoNihongoAka",
+        "originName": "minnaNoNihongoAka",
         "originChapter": ["1"]
       },
       {
@@ -88,9 +92,10 @@
     "inProgress": false,
     "level": 5,
     "levelGroup": "all",
+    "isCommon": true,
     "origin": [
       {
-        "originName": "MinnaNoNihongoAka",
+        "originName": "minnaNoNihongoAka",
         "originChapter": ["1"]
       },
       {
@@ -117,6 +122,7 @@
     "inProgress": true,
     "level": 5,
     "levelGroup": "all",
+    "isCommon": true,
     "origin": [
     ],
     "explanation":  "",
@@ -137,10 +143,11 @@
     "nowLearning": false,
     "inProgress": false,
     "level": 5,
-    "levelGroup": "all",
+    "levelGroup": "elementary",
+    "isCommon": false,
     "origin": [
     ],
-    "explanation":  "",
+    "explanation": "",
     "examples": [
       "...",
       "..."

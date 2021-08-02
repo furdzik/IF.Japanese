@@ -1,86 +1,47 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { verbItemShape } from '@types/verbShape';
-import { statusShape, tagsShape, metadataShape } from '@types/commonDetailsShape';
-import {
-  japaneseFormShape,
-  translationsShape,
-  kanjiPartsShape,
-  otherFormsShape
-} from '@types/vocabularyDetailsShape';
-
-import { getVocabSpecificReading } from '@utils/vocabulary';
+import { statusShape, tagsShape } from '@types/commonDetailsShape';
 
 import Loader from '@components/ui/Loader';
 
-import VocabularyDetailsComponent from '@components/VocabularyDetails';
-
-import { PROPER_NAME_TYPE, getProperName } from './utils';
+import GrammarDetailsComponent from '@components/GrammarDetails';
 
 import selector from './GrammarDetails.selector';
-import { getVocabularyDetails } from './GrammarDetails.reducer';
+import { getGrammarDetails } from './GrammarDetails.reducer';
+
 
 const GrammarDetails = (props) => {
-  const [name, setName] = useState(getProperName(props.name, PROPER_NAME_TYPE.KANJI));
-
   useEffect(() => {
-    setName(getProperName(props.name, PROPER_NAME_TYPE.KANJI));
-
-    props.getVocabularyDetails(name, props.name, getVocabSpecificReading(props.name));
-  }, [props.name]);
+    props.getGrammarDetails(props.grammarId);
+  }, [props.grammarId]);
 
   return !props.loading ? (
-    <VocabularyDetailsComponent
-      meaning={props.meaning}
-      metadata={props.metadata}
-      name={name}
+    <GrammarDetailsComponent
+      grammarId={props.grammarId}
+      grammarName={props.grammarName}
       status={props.status}
-      translations={props.translations}
-      additionalExplanation={props.additionalExplanation}
-      antonyms={props.antonyms}
-      examples={props.examples}
-      japaneseForm={props.japaneseForm}
-      kanjiParts={props.kanjiParts}
-      otherForms={props.otherForms}
       tags={props.tags}
-      verb={props.verb}
     />
   ) : <Loader covered />;
 };
 
 GrammarDetails.propTypes = {
-  getVocabularyDetails: PropTypes.func.isRequired,
+  getGrammarDetails: PropTypes.func.isRequired,
+  grammarId: PropTypes.string.isRequired,
+  grammarName: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
-  meaning: PropTypes.string.isRequired,
-  metadata: metadataShape.isRequired,
-  name: PropTypes.string.isRequired,
   status: statusShape.isRequired,
-  translations: translationsShape.isRequired,
-  additionalExplanation: PropTypes.string,
-  antonyms: PropTypes.arrayOf(PropTypes.string),
-  examples: PropTypes.arrayOf(PropTypes.string),
-  japaneseForm: japaneseFormShape,
-  kanjiParts: kanjiPartsShape,
-  otherForms: otherFormsShape,
-  tags: tagsShape,
-  verb: verbItemShape
+  tags: tagsShape
 };
 
 GrammarDetails.defaultProps = {
-  additionalExplanation: null,
-  antonyms: null,
-  examples: null,
-  japaneseForm: null,
-  kanjiParts: null,
-  otherForms: null,
-  tags: null,
-  verb: null
+  tags: []
 };
 
 const mapDispatchToProps = {
-  getVocabularyDetails
+  getGrammarDetails
 };
 
 export default connect(selector, mapDispatchToProps)(GrammarDetails);

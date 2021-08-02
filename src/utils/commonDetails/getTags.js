@@ -7,22 +7,32 @@ const JLPT_TEXT = 'jlpt';
 
 export const getTags = (
   {
-    tags, isCommon, isJoyo, isVerb, jlpt, grade, strokes
+    tags, isCommon, isJoyo, isVerb, jlpt, isGrammar,
+    grade, strokes, levelGroup, grammarOrigin
   },
   shortMsg = false
 ) => {
   const newTags = [];
-
+  console.log(tags, isCommon, isJoyo, isVerb, jlpt,
+    grade, strokes, levelGroup, grammarOrigin);
   if (isVerb) {
     newTags.push({
       tagType: tagTypes.IS_VERB,
       label: (messages.conjugationText)?.defaultMessage
     });
   }
-  if (isCommon) {
+
+  if (isCommon && !isGrammar) {
     newTags.push({
       tagType: tagTypes.IS_COMMON,
       label: shortMsg ? (messages.commonShort)?.defaultMessage : (messages.common)?.defaultMessage
+    });
+  }
+
+  if (isCommon && isGrammar) {
+    newTags.push({
+      tagType: tagTypes.IS_COMMON,
+      label: (messages.commonGrammar)?.defaultMessage
     });
   }
 
@@ -57,6 +67,20 @@ export const getTags = (
     newTags.push({
       tagType: tagTypes.OTHER,
       label: `${(messages.strokes)?.defaultMessage} ${strokes}`
+    });
+  }
+
+  if (levelGroup) {
+    newTags.push({
+      tagType: tagTypes.OTHER,
+      label: (messages.levelGroup)?.defaultMessage + (messages[`${levelGroup}Level`])?.defaultMessage
+    });
+  }
+
+  if (grammarOrigin) {
+    newTags.push({
+      tagType: tagTypes.OTHER,
+      label: 'grammarOrigin TODO'
     });
   }
 

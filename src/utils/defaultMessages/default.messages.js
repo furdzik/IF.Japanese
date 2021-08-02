@@ -21,11 +21,5 @@ export default defineMessages({
   n3: 'N3',
   n2: 'N2',
   n1: 'N1',
-  other: 'OTHER',
-  elementaryLevel: '初級',
-  elementaryLevelHelper: 'Elementary level',
-  intermediateLevel: '中級',
-  intermediateLevelHelper: 'Intermediate level',
-  advancedLevel: '上級',
-  advancedLevelHelper: 'Advanced Level'
+  other: 'OTHER'
 });

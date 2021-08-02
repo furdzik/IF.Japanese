@@ -45,13 +45,17 @@ const Details = (props) => {
             ) : null
           }
         </span>
-        <JishoLink
-          href={props.jishoLink}
-          target="_blank"
-          notKnow={!props.known && !props.inProgress && !props.nowLearning}
-        >
-          {intl.formatMessage(messages.jishoLinkText)}
-        </JishoLink>
+        {
+          props.jishoLink ? (
+            <JishoLink
+              href={props.jishoLink}
+              target="_blank"
+              notKnow={!props.known && !props.inProgress && !props.nowLearning}
+            >
+              {intl.formatMessage(messages.jishoLinkText)}
+            </JishoLink>
+          ) : null
+        }
       </WordHeader>
       <Content>
         <TagsWrapper>

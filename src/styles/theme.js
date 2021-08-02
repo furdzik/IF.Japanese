@@ -24,7 +24,6 @@ export default {
     },
 
     nowLearning: {
-      // background: colors.darkPink,
       background: `repeating-linear-gradient(45deg, #ef8888, #fba5a5 1px, ${colors.darkPink} 2px, ${colors.darkPink} 5px)`,
       border: `2px solid ${colors.red}`,
       color: colors.white,
