@@ -62,7 +62,7 @@ const JishoLink = styled.a`
 const TagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const Content = styled.div`

@@ -11,7 +11,7 @@
     "isCommon": true,
     "origin": [
       {
-        "originName": "minnaNoNihongoAka",
+        "originName": "minnaNoNihongo1",
         "originChapter": ["Introduction"]
       }
     ],
@@ -35,7 +35,7 @@
     "originChapter": null,
     "explanation":  "",
     "examples": null,
-    "similarities": [
+    "similarGrammar": [
       "josuushi"
     ]
   },
@@ -53,7 +53,7 @@
     "originChapter": null,
     "explanation":  "",
     "examples": null,
-    "similarities": [
+    "similarGrammar": [
       "joshi"
     ]
   },
@@ -69,7 +69,7 @@
     "isCommon": true,
     "origin": [
       {
-        "originName": "minnaNoNihongoAka",
+        "originName": "minnaNoNihongo1",
         "originChapter": ["1"]
       },
       {
@@ -95,7 +95,7 @@
     "isCommon": true,
     "origin": [
       {
-        "originName": "minnaNoNihongoAka",
+        "originName": "minnaNoNihongo1",
         "originChapter": ["1"]
       },
       {
@@ -136,6 +136,27 @@
     ]
   },
   {
+    "grammarId": "kara",
+    "grammarName": "〜から",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "elementary",
+    "isCommon": false,
+    "origin": [
+    ],
+    "explanation": "",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "similarGrammar": [
+      "tame"
+    ]
+  },
+  {
     "grammarId": "tame",
     "grammarName": "〜ため",
     "known": false,
@@ -152,9 +173,8 @@
       "...",
       "..."
     ],
-    "problems": [
-      "speaking",
-      "writhing"
+    "similarGrammar": [
+      "kara"
     ]
   }
 ]

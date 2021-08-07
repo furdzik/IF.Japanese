@@ -14402,7 +14402,7 @@
   {
     "kanji": "猫",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "level": 3

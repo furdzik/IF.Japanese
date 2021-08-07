@@ -5,6 +5,7 @@ export const colors = {
   veryDarkPink: '#750101',
 
   blue: '#0088e1',
+  lightBlue: '#33d6ff',
   lightGreen: '#15bb00',
   green: '#00952c',
   yellow: '#ffb300',

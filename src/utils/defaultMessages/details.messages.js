@@ -21,5 +21,15 @@ export default defineMessages({
   allLevel: 'ALL',
   allLevelHelper: 'All Levels',
   minnaNoNihongo1: 'みんなの日本語初級１',
-  minnaNoNihongo2: 'みんなの日本語初級2'
+  minnaNoNihongo2: 'みんなの日本語初級2',
+  TryN5: 'TRY日本語能力試験N5',
+  TryN4: 'TRY日本語能力試験N2',
+  TryN3: 'TRY日本語能力試験N3',
+  TryN2: 'TRY日本語能力試験N4',
+  TryN1: 'TRY日本語能力試験N5',
+  TryN5Short: 'TRY N5',
+  TryN4Short: 'TRY N2',
+  TryN3Short: 'TRY N3',
+  TryN2Short: 'TRY N4',
+  TryN1Short: 'TRY N5'
 });

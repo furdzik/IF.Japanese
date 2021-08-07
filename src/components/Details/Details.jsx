@@ -147,7 +147,6 @@ const Details = (props) => {
 };
 
 Details.propTypes = {
-  jishoLink: PropTypes.string.isRequired,
   mainSection: PropTypes.node.isRequired,
   mainSectionHeader: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -155,6 +154,7 @@ Details.propTypes = {
   children: PropTypes.node,
   inProgress: PropTypes.bool,
   japaneseForm: japaneseFormShape,
+  jishoLink: PropTypes.string,
   known: PropTypes.bool,
   meaning: PropTypes.string,
   nowLearning: PropTypes.bool,
@@ -171,6 +171,7 @@ Details.defaultProps = {
   children: null,
   inProgress: null,
   japaneseForm: null,
+  jishoLink: null,
   known: null,
   meaning: null,
   nowLearning: null,

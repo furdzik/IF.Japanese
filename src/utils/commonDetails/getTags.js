@@ -13,8 +13,7 @@ export const getTags = (
   shortMsg = false
 ) => {
   const newTags = [];
-  console.log(tags, isCommon, isJoyo, isVerb, jlpt,
-    grade, strokes, levelGroup, grammarOrigin);
+
   if (isVerb) {
     newTags.push({
       tagType: tagTypes.IS_VERB,
@@ -56,6 +55,22 @@ export const getTags = (
     });
   }
 
+  if (levelGroup) {
+    newTags.push({
+      tagType: tagTypes.LEVEL_GROUP,
+      label: (messages.levelGroup)?.defaultMessage + (messages[`${levelGroup}Level`])?.defaultMessage
+    });
+  }
+
+  if (grammarOrigin) {
+    grammarOrigin.forEach((el) => {
+      newTags.push({
+        tagType: tagTypes.GRAMMAR_ORIGIN,
+        label: `${(messages[el.originName])?.defaultMessage} chapter ${el.originChapter}`
+      });
+    });
+  }
+
   if (grade) {
     newTags.push({
       tagType: tagTypes.GRADE,
@@ -67,20 +82,6 @@ export const getTags = (
     newTags.push({
       tagType: tagTypes.OTHER,
       label: `${(messages.strokes)?.defaultMessage} ${strokes}`
-    });
-  }
-
-  if (levelGroup) {
-    newTags.push({
-      tagType: tagTypes.OTHER,
-      label: (messages.levelGroup)?.defaultMessage + (messages[`${levelGroup}Level`])?.defaultMessage
-    });
-  }
-
-  if (grammarOrigin) {
-    newTags.push({
-      tagType: tagTypes.OTHER,
-      label: 'grammarOrigin TODO'
     });
   }
 

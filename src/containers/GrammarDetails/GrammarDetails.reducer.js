@@ -1,10 +1,8 @@
 import grammarJson from '@data/grammar.json';
 
 import { getTags } from '@utils/commonDetails';
-//
-// import {
-//
-// } from './utils';
+
+import { getSimilarGrammar } from './utils';
 
 const actionTypes = {
   GET_GRAMMAR_DETAILS_INIT: 'GRAMMAR/GET_GRAMMAR_DETAILS_INIT',
@@ -38,6 +36,7 @@ export default function(state = initialState, action) {
           levelGroup: grammar.levelGroup,
           grammarOrigin: grammar.origin
         }),
+        similarGrammar: getSimilarGrammar(grammar.similarGrammar),
         loading: false
       };
     }

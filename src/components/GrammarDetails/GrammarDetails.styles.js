@@ -1,8 +1,12 @@
-// import styled from 'styled-components';
+import styled from 'styled-components';
 // import { Link } from 'react-router-dom';
 //
 // import { breakpointMixin } from '@styles/mixins';
 
-export {
+const ExamplesWrapper = styled.div`
 
+`;
+
+export {
+  ExamplesWrapper
 };

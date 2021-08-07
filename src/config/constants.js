@@ -162,7 +162,9 @@ export const tagTypes = {
   JLPT: 'jlpt',
   JOYO: 'joyo',
   OTHER: 'other',
-  GRADE: 'grade'
+  GRADE: 'grade',
+  LEVEL_GROUP: 'levelGroup',
+  GRAMMAR_ORIGIN: 'grammarOrigin'
 };
 
 /* GRAMMAR */
@@ -189,8 +191,8 @@ export const grammarGroupsLabels = {
 };
 
 export const grammarOriginTypes = {
-  MINNA_NO_NIHONGO_AKA: 'minnaNoNihongo1',
-  MINNA_NO_NIHONGO_AOI: 'minnaNoNihongo2',
+  MINNA_NO_NIHONGO_1: 'minnaNoNihongo1',
+  MINNA_NO_NIHONGO_2: 'minnaNoNihongo2',
   TRY_N5: 'TryN5',
   TRY_N4: 'TryN4',
   TRY_N3: 'TryN3',
