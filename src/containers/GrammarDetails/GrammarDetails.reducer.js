@@ -10,15 +10,16 @@ const actionTypes = {
 };
 
 const initialState = {
-  grammarName: null,
-  status: {}
+  grammarName: '',
+  status: {},
+  loading: false
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_GRAMMAR_DETAILS: {
       const grammar = action.payload;
-      console.log('GET_GRAMMAR_DETAILS', grammar);
+      console.log(grammar);
       return {
         ...state,
         grammarName: grammar.grammarName,
@@ -37,6 +38,9 @@ export default function(state = initialState, action) {
           grammarOrigin: grammar.origin
         }),
         similarGrammar: getSimilarGrammar(grammar.similarGrammar),
+        examples: grammar.examples,
+        explanation: grammar.explanation,
+        problems: grammar.problems,
         loading: false
       };
     }

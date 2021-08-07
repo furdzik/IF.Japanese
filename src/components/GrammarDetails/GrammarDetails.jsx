@@ -7,7 +7,12 @@ import { useIntl } from 'react-intl';
 // import { grammarTypes, tagTypes } from '@config/constants';
 
 import { statusShape, tagsShape } from '@types/commonDetailsShape';
-import { examplesShape, similarGrammarShape } from '@types/grammarShape';
+import {
+  examplesShape,
+  similarGrammarDetailsShape,
+  problemsShape,
+  explanationShape
+} from '@types/grammarShape';
 
 // import {
 //   japaneseFormShape,
@@ -18,17 +23,21 @@ import { examplesShape, similarGrammarShape } from '@types/grammarShape';
 
 import Details from '@components/Details';
 import DetailsSecondarySection from '@components/DetailsSecondarySection';
-// import DetailsSubHeader from '@components/DetailsSubHeader';
+import DetailsSubHeader from '@components/DetailsSubHeader';
 import Tag from '@components/Tag';
 
+import { getComponentGrammar } from './utils';
+
 import {
+  MainSectionWrapper,
   ExamplesWrapper
 } from './GrammarDetails.styles.js';
 import messages from './GrammarDetails.messages';
-import DetailsSubHeader from '../DetailsSubHeader';
 
 const GrammarDetails = (props) => {
   const intl = useIntl();
+  const ComponentGrammar = getComponentGrammar(props.grammarId);
+  console.log(props);
 
   const getTags = () => {
     const tags = [];
@@ -45,7 +54,6 @@ const GrammarDetails = (props) => {
 
   return (
     <Details
-      grammarId={props.grammarId}
       name={props.grammarName}
       known={props.status?.known}
       inProgress={props.status?.inProgress}
@@ -54,18 +62,28 @@ const GrammarDetails = (props) => {
       tags={getTags()}
       mainSectionHeader={intl.formatMessage(messages.mainHeader)}
       mainSection={(
-        <div>Tu będzie komponent z gramatyką - explanation i komponent</div>
+        <MainSectionWrapper>
+          {props.explanation}
+          {ComponentGrammar}
+        </MainSectionWrapper>
       )}
-      secondarySection={props.similarGrammar ? (
+      secondarySection={props.similarGrammar?.length ? (
         <DetailsSecondarySection>
-          <DetailsSubHeader>{intl.formatMessage(messages.similarGrammarHeader)}</DetailsSubHeader>
-          Tu będą podobne gramatyki
+          <DetailsSubHeader>
+            {intl.formatMessage(messages.similarGrammarHeader)}
+          </DetailsSubHeader>
+          {
+            props.similarGrammar.map((el, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <div key={index}>{el.grammarName}</div>
+            ))
+          }
         </DetailsSecondarySection>
       ) : null}
       sections={[
-        {
+        props.examples?.length ? {
           title: intl.formatMessage(messages.examplesHeader),
-          section: props.examples ? (
+          section: (
             <ExamplesWrapper>
               {
                 props.examples.map((el, index) => (
@@ -74,8 +92,21 @@ const GrammarDetails = (props) => {
                 ))
               }
             </ExamplesWrapper>
-          ) : null
-        }
+          )
+        } : null,
+        props.problems?.length ? {
+          title: intl.formatMessage(messages.problemsHeader),
+          section: (
+            <ExamplesWrapper>
+              {
+                props.problems.map((el, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <div key={index}>{el}</div>
+                ))
+              }
+            </ExamplesWrapper>
+          )
+        } : null
       ]}
     />
   );
@@ -86,12 +117,16 @@ GrammarDetails.propTypes = {
   grammarName: PropTypes.string.isRequired,
   status: statusShape.isRequired,
   examples: examplesShape,
-  similarGrammar: similarGrammarShape,
+  explanation: explanationShape,
+  problems: problemsShape,
+  similarGrammar: similarGrammarDetailsShape,
   tags: tagsShape
 };
 
 GrammarDetails.defaultProps = {
   examples: [],
+  explanation: null,
+  problems: [],
   similarGrammar: [],
   tags: []
 };

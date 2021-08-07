@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 
-export const similarGrammarShape = PropTypes.arrayOf(PropTypes.string); // grammarID
-
 export const examplesShape = PropTypes.arrayOf(PropTypes.string);
 
 export const problemsShape = PropTypes.arrayOf(PropTypes.string);
+export const explanationShape = PropTypes.string;
 
-export const grammarItemShape = PropTypes.shape({
+const grammarItem = {
   grammarId: PropTypes.string,
   grammarName: PropTypes.string,
   known: PropTypes.bool,
@@ -16,9 +15,23 @@ export const grammarItemShape = PropTypes.shape({
   level: PropTypes.number,
   levelGroup: PropTypes.string,
   originChapter: PropTypes.arrayOf(PropTypes.string),
-  similarGrammar: similarGrammarShape,
+  explanation: explanationShape,
   examples: examplesShape,
   problems: problemsShape
+};
+
+export const similarGrammarDetailsShape = PropTypes.arrayOf(PropTypes.shape({
+  ...grammarItem,
+  similarGrammar: PropTypes.arrayOf(PropTypes.string)
+}));
+
+export const similarGrammarShape = PropTypes.arrayOf(PropTypes.string);
+
+export const grammarItemShape = PropTypes.shape({
+  ...grammarItem,
+  similarGrammar: similarGrammarShape
 });
 
 export const grammarShape = PropTypes.arrayOf(grammarItemShape);
+
+

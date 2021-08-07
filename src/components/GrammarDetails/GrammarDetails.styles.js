@@ -3,10 +3,15 @@ import styled from 'styled-components';
 //
 // import { breakpointMixin } from '@styles/mixins';
 
+const MainSectionWrapper = styled.div`
+
+`;
+
 const ExamplesWrapper = styled.div`
 
 `;
 
 export {
+  MainSectionWrapper,
   ExamplesWrapper
 };

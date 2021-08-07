@@ -1,13 +1,11 @@
 import grammarJson from '@data/grammar.json';
 
 export const getSimilarGrammar = (similarGrammar = []) => {
-  console.log(similarGrammar);
-
-  let similarGrammarInfo = [];
+  const similarGrammarInfo = [];
 
   similarGrammar.forEach((similar) => {
-    similarGrammarInfo = grammarJson.filter((el) => similar === el.grammarId);
+    similarGrammarInfo.push(grammarJson.filter((el) => similar === el.grammarId)[0]);
   });
 
-  console.log(similarGrammarInfo);
+  return similarGrammarInfo;
 };

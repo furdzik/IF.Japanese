@@ -15,7 +15,7 @@
         "originChapter": ["Introduction"]
       }
     ],
-    "explanation":  "",
+    "explanation": "some explanation start",
     "examples": [
       "...",
       "..."
@@ -33,10 +33,11 @@
     "isCommon": true,
     "origin": [],
     "originChapter": null,
-    "explanation":  "",
+    "explanation": "some explanation joshi",
     "examples": null,
     "similarGrammar": [
-      "josuushi"
+      "josuushi",
+      "interrogative"
     ]
   },
   {
@@ -51,10 +52,11 @@
     "isCommon": true,
     "origin": [],
     "originChapter": null,
-    "explanation":  "",
+    "explanation": "some explanation josuushi",
     "examples": null,
     "similarGrammar": [
-      "joshi"
+      "joshi",
+      "interrogative"
     ]
   },
   {
@@ -77,7 +79,7 @@
         "originChapter": ["1"]
       }
     ],
-    "explanation":  "",
+    "explanation": "some explanation n1han2desu",
     "examples": [
       "...",
       "..."
@@ -103,7 +105,7 @@
         "originChapter": ["1"]
       }
     ],
-    "explanation":  "",
+    "explanation": "some explanation k-s-a",
     "examples": [
       "...",
       "..."
@@ -125,7 +127,7 @@
     "isCommon": true,
     "origin": [
     ],
-    "explanation":  "",
+    "explanation": "some explanation interrogative",
     "examples": [
       "...",
       "..."
@@ -133,6 +135,10 @@
     "problems": [
       "speaking",
       "writhing"
+    ],
+    "similarGrammar": [
+      "joshi",
+      "josuushi"
     ]
   },
   {
@@ -147,17 +153,17 @@
     "isCommon": false,
     "origin": [
     ],
-    "explanation": "",
+    "explanation": "some explanation kara",
     "examples": [
       "...",
       "..."
     ],
     "similarGrammar": [
-      "tame"
+      "tame2"
     ]
   },
   {
-    "grammarId": "tame",
+    "grammarId": "tame2",
     "grammarName": "〜ため",
     "known": false,
     "toRepeat": false,
@@ -168,7 +174,7 @@
     "isCommon": false,
     "origin": [
     ],
-    "explanation": "",
+    "explanation": "some explanation tame",
     "examples": [
       "...",
       "..."

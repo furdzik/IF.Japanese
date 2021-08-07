@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { statusShape, tagsShape } from '@types/commonDetailsShape';
-import { similarGrammarShape } from '@types/grammarShape';
+import {
+  examplesShape,
+  explanationShape,
+  similarGrammarDetailsShape,
+  problemsShape
+} from '@types/grammarShape';
 
 import Loader from '@components/ui/Loader';
 
@@ -22,8 +27,11 @@ const GrammarDetails = (props) => {
       grammarId={props.grammarId}
       grammarName={props.grammarName}
       status={props.status}
-      tags={props.tags}
+      examples={props.examples}
+      explanation={props.explanation}
+      problems={props.problems}
       similarGrammar={props.similarGrammar}
+      tags={props.tags}
     />
   ) : <Loader covered />;
 };
@@ -34,13 +42,19 @@ GrammarDetails.propTypes = {
   grammarName: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   status: statusShape.isRequired,
-  similarGrammar: similarGrammarShape,
+  examples: examplesShape,
+  explanation: explanationShape,
+  problems: problemsShape,
+  similarGrammar: similarGrammarDetailsShape,
   tags: tagsShape
 };
 
 GrammarDetails.defaultProps = {
+  examples: [],
+  explanation: null,
   similarGrammar: [],
-  tags: []
+  tags: [],
+  problems: []
 };
 
 const mapDispatchToProps = {
