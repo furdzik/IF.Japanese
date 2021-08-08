@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { breakpointMixin } from '@styles/mixins';
-
 const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
 `;
@@ -10,11 +8,6 @@ const ConjugationLink = styled.button`
 const TranslationsList = styled.ol`
   margin: 0;
   list-style: none;
-
-  ${breakpointMixin.laptop`
-    margin-top: 0;
-    margin-right: 4rem;
-  `}
 `;
 
 const TranslationsListItem = styled.li`

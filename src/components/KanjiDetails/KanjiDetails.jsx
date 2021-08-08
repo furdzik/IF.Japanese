@@ -11,7 +11,6 @@ import {
 import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
 
 import Details from '@components/Details';
-import DetailsSecondarySection from '@components/DetailsSecondarySection';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
@@ -80,7 +79,7 @@ const KanjiDetails = (props) => {
         </ReadingList>
       )}
       secondarySection={props.similarKanji?.length ? (
-        <DetailsSecondarySection>
+        <React.Fragment>
           <DetailsSubHeader>
             {intl.formatMessage(messages.similarKanjiHeader)}
           </DetailsSubHeader>
@@ -101,7 +100,7 @@ const KanjiDetails = (props) => {
               </DetailsParts>
             ))
           }
-        </DetailsSecondarySection>
+        </React.Fragment>
       ) : null}
       additionalBox={props.radicals?.length ? (
         <DetailsSubHeader>

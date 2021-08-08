@@ -2,10 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
+import { v4 as uuidv4 } from 'uuid';
+
+import { sectionTypes } from '@config/constants';
+
 import { japaneseFormShape } from '@types/vocabularyDetailsShape';
 
 import Tag from '@components/Tag';
 import DetailsHeader from '@components/DetailsHeader';
+import DetailsSection from '@components/DetailsSection';
 
 import {
   DetailsWrapper,
@@ -13,8 +18,7 @@ import {
   WordHeaderSeparator,
   JishoLink,
   Content,
-  SectionWrapper,
-  SectionInner,
+  SectionsWrapper,
   MainSection,
   NameWrapper,
   TagsWrapper,
@@ -61,86 +65,86 @@ const Details = (props) => {
       <Content>
         <TagsWrapper>
           {
-            props.tags ? props.tags.map((el, index) => (
+            props.tags ? props.tags.map((el) => (
               React.createElement(Tag, {
-                // eslint-disable-next-line react/no-array-index-key
-                key: index,
+                key: uuidv4(),
                 ...el.props
               })
             )) : null
           }
         </TagsWrapper>
         <DetailsHeader>{props.mainSectionHeader}</DetailsHeader>
-        <SectionWrapper flex>
-          <SectionInner>
-            <NameWrapper>
-              <CharacterBlock small={props.japaneseForm?.kanji.length > 5}>
+        <SectionsWrapper>
+          <DetailsSection type={sectionTypes.PRIMARY} wide={!props.secondarySection}>
+            <DetailsSection type={sectionTypes.NAME}>
+              <NameWrapper>
+                <CharacterBlock small={props.japaneseForm?.kanji.length > 5}>
+                  {
+                    props.japaneseForm?.furigana ? (
+                      <CharacterWrapper
+                        furigana
+                        small={props.japaneseForm?.kanji.length > 5}
+                      >
+                        {
+                          props.japaneseForm?.furigana.map((el, index) => (
+                            <OneCharacter key={index}>
+                              {el}
+                            </OneCharacter>
+                          ))
+                        }
+                      </CharacterWrapper>
+                    ) : null
+                  }
+                  {
+                    props.japaneseForm?.kanji ? (
+                      <CharacterWrapper
+                        kanji
+                        small={props.japaneseForm?.kanji.length > 5}
+                      >
+                        {
+                          props.japaneseForm?.kanji.map((el, index) => (
+                            <OneCharacter key={index}>
+                              {el}
+                            </OneCharacter>
+                          ))
+                        }
+                      </CharacterWrapper>
+                    ) : props.name
+                  }
+                </CharacterBlock>
                 {
-                  props.japaneseForm?.furigana ? (
-                    <CharacterWrapper
-                      furigana
-                      small={props.japaneseForm?.kanji.length > 5}
-                    >
-                      {
-                        props.japaneseForm?.furigana.map((el, index) => (
-                          <OneCharacter key={index}>
-                            {el}
-                          </OneCharacter>
-                        ))
-                      }
-                    </CharacterWrapper>
+                  props.additionalBox ? (
+                    props.additionalBox
                   ) : null
                 }
-                {
-                  props.japaneseForm?.kanji ? (
-                    <CharacterWrapper
-                      kanji
-                      small={props.japaneseForm?.kanji.length > 5}
-                    >
-                      {
-                        props.japaneseForm?.kanji.map((el, index) => (
-                          <OneCharacter key={index}>
-                            {el}
-                          </OneCharacter>
-                        ))
-                      }
-                    </CharacterWrapper>
-                  ) : props.name
-                }
-              </CharacterBlock>
+              </NameWrapper>
               {
-                props.additionalBox ? (
-                  props.additionalBox
+                props.mainSection ? (
+                  <MainSection wide={props.japaneseForm?.kanji.length > 5}>
+                    {props.mainSection}
+                  </MainSection>
                 ) : null
               }
-            </NameWrapper>
+            </DetailsSection>
             {
-              props.mainSection ? (
-                <MainSection
-                  wide={!props.secondarySection}
-                >
-                  {props.mainSection}
-                </MainSection>
-              ) : null
+              props.sections ? props.sections.map((section) => (
+                section?.section ? (
+                  <DetailsSection key={uuidv4()}>
+                    <DetailsHeader>{section.title}</DetailsHeader>
+                    {section?.section}
+                  </DetailsSection>
+                ) : null
+              )) : null
             }
-          </SectionInner>
+          </DetailsSection>
           {
-            props.secondarySection ? props.secondarySection : null
-          }
-        </SectionWrapper>
-        {
-          props.sections ? props.sections.map((section, index) => (
-            section?.section ? (
-              // eslint-disable-next-line react/no-array-index-key
-              <React.Fragment key={index}>
-                <DetailsHeader>{section.title}</DetailsHeader>
-                <SectionWrapper>
-                  {section?.section}
-                </SectionWrapper>
-              </React.Fragment>
+            props.secondarySection ? (
+              <DetailsSection type={sectionTypes.SECONDARY}>
+                {props.secondarySection}
+              </DetailsSection>
             ) : null
-          )) : null
-        }
+          }
+        </SectionsWrapper>
         {props.children}
       </Content>
     </DetailsWrapper>

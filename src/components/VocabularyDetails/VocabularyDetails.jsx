@@ -18,7 +18,6 @@ import {
 import Modal from '@components/ui/Modal';
 
 import Details from '@components/Details';
-import DetailsSecondarySection from '@components/DetailsSecondarySection';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
@@ -178,7 +177,7 @@ const VocabularyDetails = (props) => {
         </TranslationsList>
       )}
       secondarySection={props.kanjiParts ? (
-        <DetailsSecondarySection>
+        <React.Fragment>
           <DetailsSubHeader>
             {intl.formatMessage(messages.kanjiPartsHeader)}
           </DetailsSubHeader>
@@ -199,7 +198,7 @@ const VocabularyDetails = (props) => {
               </DetailsParts>
             ))
           }
-        </DetailsSecondarySection>
+        </React.Fragment>
       ) : null}
       sections={[
         {

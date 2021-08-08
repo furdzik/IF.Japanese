@@ -84,18 +84,7 @@ const Content = styled.div`
   `}
 `;
 
-const SectionWrapper = styled.div`
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-
-  ${(props) => props.flex && css`
-    ${breakpointMixin.laptop`
-      display: flex;
-    `}
-  `}
-`;
-
-const SectionInner = styled.div`
+const SectionsWrapper = styled.div`
   ${breakpointMixin.laptop`
     display: flex;
     flex-wrap: wrap;
@@ -109,6 +98,12 @@ const MainSection = styled.div`
   ${breakpointMixin.laptop`
     max-width: 53rem;
     margin-top: 0;
+  `};
+
+  ${(props) => props.wide && css`
+    ${breakpointMixin.laptop`
+      width: 100%;
+    `}
   `}
 `;
 
@@ -181,8 +176,7 @@ export {
   JishoLink,
   TagsWrapper,
   Content,
-  SectionWrapper,
-  SectionInner,
+  SectionsWrapper,
   MainSection,
   NameWrapper,
   CharacterBlock,

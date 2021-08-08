@@ -20,7 +20,7 @@ export const prepareKanjiDetailsData = (kanjiDetails) => {
       },
       tags: getTags({
         isJoyo: el.joyo,
-        jlpt: [el.level ? el.level.toString() : null],
+        jlpt: [el?.level.toString() || el?.jlpt.toString()],
         grade: el.grade,
         strokes: el.stroke_count.toString()
       }, IS_SHORT)

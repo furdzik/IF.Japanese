@@ -11,7 +11,6 @@ import {
 } from '@types/grammarShape';
 
 import Details from '@components/Details';
-import DetailsSecondarySection from '@components/DetailsSecondarySection';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
 import Tag from '@components/Tag';
@@ -62,7 +61,7 @@ const GrammarDetails = (props) => {
         </MainSectionWrapper>
       )}
       secondarySection={props.similarGrammar?.length ? (
-        <DetailsSecondarySection>
+        <React.Fragment>
           <DetailsSubHeader>
             {intl.formatMessage(messages.similarGrammarHeader)}
           </DetailsSubHeader>
@@ -81,7 +80,7 @@ const GrammarDetails = (props) => {
               </DetailsParts>
             ))
           }
-        </DetailsSecondarySection>
+        </React.Fragment>
       ) : null}
       sections={[
         props.examples?.length ? {
