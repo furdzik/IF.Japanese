@@ -10,14 +10,14 @@ const Title = styled.div`
   margin-bottom: 3rem;
   font-size: 3rem;
   font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
-  color: ${(props) => props.theme.colors.primaryColor};
+  color: ${(props) => props.theme.mainColors.primary};
 `;
 
 const GameField = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 0 0 4rem;
-  border: 2px solid ${(props) => props.theme.colors.secondaryColor};
+  border: 2px solid ${(props) => props.theme.mainColors.secondary};
   border-radius: ${(props) => props.theme.layout.borderRadius};
   text-align: center;
 
@@ -36,7 +36,7 @@ const RandomKana = styled.div`
 const Input = styled.input`
   width: 22rem;
   padding: 2rem;
-  border: 4px solid ${(props) => props.theme.colors.secondaryColorHover};
+  border: 4px solid ${(props) => props.theme.colors.darkGray};
   border-radius: ${(props) => props.theme.layout.borderRadius};
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 6rem;
@@ -59,7 +59,7 @@ const Input = styled.input`
 const Instructions = styled.div`
   margin-top: 2rem;
   font-size: 1.6rem;
-  color: ${(props) => props.theme.colors.secondaryColorHover};
+  color: ${(props) => props.theme.colors.darkGray};
   text-align: center;
 `;
 

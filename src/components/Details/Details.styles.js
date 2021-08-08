@@ -9,28 +9,40 @@ const DetailsWrapper = styled.div`
 const WordHeader = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 6.2rem;
   margin-bottom: 3rem;
   padding: 1.6rem 2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
+  background: ${(props) => props.theme.mainColors.secondary};
   font-size: 2rem;
   font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
 
   ${(props) => props.known && css`
-    background: ${props.theme.colors.primaryColor};
-    color: ${props.theme.colors.white};
+    background: ${props.theme.mainCategoriesStyle.known.background};
+    color: ${props.theme.mainCategoriesStyle.known.color};
   `}
+
   ${(props) => props.inProgress && css`
-    background: repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${props.theme.colors.tartaryColor} 4px, ${props.theme.colors.tartaryColor} 6px);
-    color: ${props.theme.colors.white};
-    text-shadow: -1px 1px 8px #750101;
+    background: ${props.theme.mainCategoriesStyle.inProgress.background};
+    color: ${props.theme.mainCategoriesStyle.inProgress.color};
+    text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
   `}
+
   ${(props) => props.nowLearning && css`
-    background: #f18181;
-    border: 2px solid ${props.theme.colors.primaryColor};
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
-    color: ${props.theme.colors.white};
+    border: ${props.theme.mainCategoriesStyle.nowLearning.border};
+    background: ${props.theme.mainCategoriesStyle.nowLearning.background};
+    color: ${props.theme.mainCategoriesStyle.nowLearning.color};
+    text-shadow: ${props.theme.mainCategoriesStyle.nowLearning.textShadow};
+  `}
+
+  ${(props) => props.toRepeat && css`
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    background: ${props.theme.mainCategoriesStyle.toRepeat.background};
+    color: ${props.theme.mainCategoriesStyle.toRepeat.color};
+    text-shadow: ${props.theme.mainCategoriesStyle.toRepeat.textShadow};
   `}
 
   ${breakpointMixin.landscapeTablet`
@@ -60,7 +72,7 @@ const JishoLink = styled.a`
 const TagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const Content = styled.div`
@@ -72,18 +84,7 @@ const Content = styled.div`
   `}
 `;
 
-const SectionWrapper = styled.div`
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-
-  ${(props) => props.flex && css`
-    ${breakpointMixin.laptop`
-      display: flex;
-    `}
-  `}
-`;
-
-const SectionInner = styled.div`
+const SectionsWrapper = styled.div`
   ${breakpointMixin.laptop`
     display: flex;
     flex-wrap: wrap;
@@ -97,6 +98,12 @@ const MainSection = styled.div`
   ${breakpointMixin.laptop`
     max-width: 53rem;
     margin-top: 0;
+  `};
+
+  ${(props) => props.wide && css`
+    ${breakpointMixin.laptop`
+      width: 100%;
+    `}
   `}
 `;
 
@@ -117,7 +124,7 @@ const CharacterBlock = styled.div`
   min-height: 16.5rem;
   margin-bottom: 2rem;
   padding: 4rem 1rem;
-  border: 1px solid ${(props) => props.theme.colors.secondaryColor};
+  border: 1px solid ${(props) => props.theme.mainColors.secondary};
   border-radius: ${(props) => props.theme.layout.borderRadius};
   font-size: 4rem;
   text-align: center;
@@ -169,8 +176,7 @@ export {
   JishoLink,
   TagsWrapper,
   Content,
-  SectionWrapper,
-  SectionInner,
+  SectionsWrapper,
   MainSection,
   NameWrapper,
   CharacterBlock,

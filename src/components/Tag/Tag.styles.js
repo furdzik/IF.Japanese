@@ -15,15 +15,23 @@ const Wrapper = styled.div`
   text-transform: uppercase;
 
   ${(props) => props.tagType === tagTypes.IS_VERB && css`
-    background: ${props.theme.colors.primaryColor};
+    background: ${props.theme.mainColors.primary};
     color: ${props.theme.colors.white};
   `}
   ${(props) => (props.tagType === tagTypes.IS_COMMON || props.tagType === tagTypes.JOYO) && css`
-    background: #15bb00;
+    background: ${props.theme.colors.lightGreen};
     color: ${props.theme.colors.white};
   `}
   ${(props) => props.tagType === tagTypes.JLPT && css`
-    background: #8350c7;
+    background: ${props.theme.colors.lightViolet};
+    color: ${props.theme.colors.white};
+  `}
+  ${(props) => props.tagType === tagTypes.LEVEL_GROUP && css`
+    background: ${props.theme.colors.blue};
+    color: ${props.theme.colors.white};
+  `}
+  ${(props) => props.tagType === tagTypes.GRAMMAR_ORIGIN && css`
+    background: ${props.theme.colors.lightBlue};
     color: ${props.theme.colors.white};
   `}
 

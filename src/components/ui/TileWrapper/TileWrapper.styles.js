@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { breakpointMixin } from '@styles/mixins';
 
 const List = styled.div`
-  display: flex;
   position: relative;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin: 0 0 3rem -.8rem;

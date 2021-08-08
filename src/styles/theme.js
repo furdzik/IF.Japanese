@@ -4,15 +4,50 @@ import { typography } from './typography';
 export default {
   colors,
   typography,
-  mainCategoriesStyle: {
-    known: colors.primaryColor,
-    inProgress: `repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${colors.tartaryColor} 4px, ${colors.tartaryColor} 6px)`,
-    nowLearning: {
-      background: '#f18181',
-      border: `2px solid ${colors.primaryColor}`
-    },
-    notKnown: colors.secondaryColor
+
+  mainColors: {
+    primary: colors.red,
+    secondary: colors.gray,
+    tartary: colors.pink,
+    quaternary: colors.darkPink
   },
+
+  mainCategoriesStyle: {
+    known: {
+      background: colors.red,
+      color: colors.white,
+      textShadow: `-1px 1px 8px ${colors.veryDarkPink}`
+    },
+
+    toRepeat: {
+      background: `repeating-linear-gradient(45deg, #ef8888, #fba5a5 1px, ${colors.red} 2px, ${colors.pink} 5px)`,
+      color: colors.white,
+      textShadow: `-1px 1px 8px ${colors.veryDarkPink}`
+    },
+
+    nowLearning: {
+      background: `repeating-linear-gradient(45deg, #ef8888, #fba5a5 1px, ${colors.darkPink} 2px, ${colors.darkPink} 5px)`,
+      border: `2px solid ${colors.red}`,
+      color: colors.white,
+      textShadow: `-1px 1px 8px ${colors.veryDarkPink}`
+    },
+
+    inProgress: {
+      background: `repeating-linear-gradient(45deg, #ef8888, #fba5a5 2px, ${colors.pink} 4px, ${colors.pink} 6px)`,
+      color: colors.white,
+      textShadow: `-1px 1px 8px ${colors.veryDarkPink}`
+    },
+
+    notKnown: {
+      background: colors.gray,
+      color: colors.black
+    },
+
+    joyo: {
+      border: '1px solid #a0a0a0'
+    }
+  },
+
   layout: {
     borderRadius: '.4rem',
     containerWidth: '128rem',

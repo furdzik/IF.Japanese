@@ -14,6 +14,8 @@ export default defineMessages({
   nowLearningHelper: 'Now learning',
   inProgress: '始めた',
   inProgressHelper: 'In progress',
+  toRepeat: '復習',
+  toRepeatHelper: 'To repeat',
   n5: 'N5',
   n4: 'N4',
   n3: 'N3',

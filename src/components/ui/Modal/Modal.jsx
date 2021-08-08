@@ -92,7 +92,7 @@ const Modal = (props) => {
                 >
                   <Icon
                     path={mdiClose}
-                    color={useContext(ThemeContext).colors.secondaryColorHover}
+                    color={useContext(ThemeContext).colors.darkGray}
                     size="2.5rem"
                   />
                 </CloseButton>

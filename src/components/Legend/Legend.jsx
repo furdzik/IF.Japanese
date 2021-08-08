@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
 import { filtersLengthShape } from '@types/filtersShape';
@@ -27,6 +28,16 @@ const Legend = (props) => {
         >
           {intl.formatMessage(defaultMessages.known)}: {props.length.known}
         </LegendItem>
+        {
+          props.hasToRepeat ? (
+            <LegendItem
+              data-tip={intl.formatMessage(defaultMessages.toRepeatHelper)}
+              data-for={LEGEND_TOOLTIP_ID}
+            >
+              {intl.formatMessage(defaultMessages.toRepeat)}: {props.length.toRepeat}
+            </LegendItem>
+          ) : null
+        }
         <LegendItem
           data-tip={intl.formatMessage(defaultMessages.nowLearningHelper)}
           data-for={LEGEND_TOOLTIP_ID}
@@ -59,7 +70,12 @@ const Legend = (props) => {
 };
 
 Legend.propTypes = {
-  length: filtersLengthShape.isRequired
+  length: filtersLengthShape.isRequired,
+  hasToRepeat: PropTypes.bool
+};
+
+Legend.defaultProps = {
+  hasToRepeat: false
 };
 
 export default Legend;

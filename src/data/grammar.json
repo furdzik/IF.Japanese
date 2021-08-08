@@ -2,11 +2,196 @@
   {
     "grammarId": "start",
     "grammarName": "スタート",
-    "known": false,
-    "inProgress": false,
+    "known": true,
+    "toRepeat": false,
     "nowLearning": false,
-    "repeat": false,
+    "inProgress": false,
     "level": 5,
-    "origin": "MinnaNoNihongoAka"
+    "levelGroup": "elementary",
+    "isCommon": true,
+    "origin": [
+      {
+        "originName": "minnaNoNihongo1",
+        "originChapter": ["Introduction"]
+      }
+    ],
+    "explanation": "some explanation start",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "similarGrammar": [
+      "n1han2desu"
+    ]
+  },
+  {
+    "grammarId": "joshi",
+    "grammarName": "助詞",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": true,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "all",
+    "isCommon": true,
+    "origin": [],
+    "originChapter": null,
+    "explanation": "some explanation joshi",
+    "examples": null,
+    "similarGrammar": [
+      "josuushi",
+      "interrogative"
+    ]
+  },
+  {
+    "grammarId": "josuushi",
+    "grammarName": "助数詞",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": true,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "all",
+    "isCommon": true,
+    "origin": [],
+    "originChapter": null,
+    "explanation": "some explanation josuushi",
+    "examples": null,
+    "similarGrammar": [
+      "joshi",
+      "interrogative"
+    ]
+  },
+  {
+    "grammarId": "n1han2desu",
+    "grammarName": "N₁はN₂です",
+    "known": true,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "elementary",
+    "isCommon": true,
+    "origin": [
+      {
+        "originName": "minnaNoNihongo1",
+        "originChapter": ["1"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["1"]
+      }
+    ],
+    "explanation": "some explanation n1han2desu",
+    "examples": [
+      "...",
+      "..."
+    ]
+  },
+  {
+    "grammarId": "k-s-a",
+    "grammarName": "こ〜 ／そ〜 ／あ〜",
+    "known": false,
+    "toRepeat": true,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "all",
+    "isCommon": true,
+    "origin": [
+      {
+        "originName": "minnaNoNihongo1",
+        "originChapter": ["1"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["1"]
+      }
+    ],
+    "explanation": "some explanation k-s-a",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "problems": [
+      "speaking",
+      "writhing"
+    ]
+  },
+  {
+    "grammarId": "interrogative",
+    "grammarName": "疑問詞",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": true,
+    "level": 5,
+    "levelGroup": "all",
+    "isCommon": true,
+    "origin": [
+    ],
+    "explanation": "some explanation interrogative",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "problems": [
+      "speaking",
+      "writhing"
+    ],
+    "similarGrammar": [
+      "joshi",
+      "josuushi"
+    ]
+  },
+  {
+    "grammarId": "kara",
+    "grammarName": "〜から",
+    "known": false,
+    "toRepeat": true,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "elementary",
+    "isCommon": true,
+    "origin": [
+      {
+        "originName": "minnaNoNihongo1",
+        "originChapter": ["9"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["25"]
+      }
+    ],
+    "explanation": "some explanation kara",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "similarGrammar": [
+      "tame2"
+    ]
+  },
+  {
+    "grammarId": "tame2",
+    "grammarName": "〜ため",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "elementary",
+    "isCommon": false,
+    "origin": [
+    ],
+    "explanation": "some explanation tame",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "similarGrammar": [
+      "kara"
+    ]
   }
 ]

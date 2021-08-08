@@ -5,6 +5,7 @@ export const getOnlyJoyoKanji = (selectedFilters, item, IDS) => selectedFilters
 
 export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = false) => {
   let knownList = [];
+  let toRepeatList = [];
   let nowLearningList = [];
   let inProgressList = [];
   let notKnownList = [];
@@ -16,6 +17,13 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
       knownList = knownList
         .filter((item) => getOnlyJoyoKanji(selectedFilters, item, IDS));
     }
+  }
+
+  if (selectedFilters.indexOf(IDS.TO_REPEAT) > -1) {
+    // Only grammar
+    toRepeatList = list.filter(
+      (item) => item.toRepeat && !item.known && !item.inProgress && !item.nowLearning
+    );
   }
 
   if (selectedFilters.indexOf(IDS.IN_PROGRESS) > -1) {
@@ -37,7 +45,9 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
   }
 
   if (selectedFilters.indexOf(IDS.NOT_KNOWN) > -1) {
-    notKnownList = list.filter((item) => !item.known && !item.inProgress && !item.nowLearning);
+    notKnownList = list.filter(
+      (item) => !item.known && !item.toRepeat && !item.inProgress && !item.nowLearning
+    );
 
     if (isKanji) {
       notKnownList = notKnownList
@@ -47,6 +57,7 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
 
   return {
     knownList,
+    toRepeatList,
     nowLearningList,
     inProgressList,
     notKnownList

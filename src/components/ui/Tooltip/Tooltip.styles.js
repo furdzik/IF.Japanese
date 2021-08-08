@@ -5,7 +5,7 @@ const StyledReactTooltip = styled(ReactTooltip)`
   &.__react_component_tooltip { /* to override default styles */
     display: flex;
     flex-direction: column;
-    background: ${(props) => props.theme.colors.secondaryColorHover};
+    background: ${(props) => props.theme.colors.darkGray};
     font-size: 1.2rem;
     color: ${(props) => props.theme.colors.white};
     opacity: 1;
@@ -15,12 +15,12 @@ const StyledReactTooltip = styled(ReactTooltip)`
     &.place-top {
       margin-top: -.5rem;
       &::after {
-        border-color: ${(props) => props.theme.colors.secondaryColorHover} transparent;
+        border-color: ${(props) => props.theme.colors.darkGray} transparent;
       }
     }
     &.place-bottom {
       &::after {
-        border-color: ${(props) => props.theme.colors.secondaryColorHover} transparent;
+        border-color: ${(props) => props.theme.colors.darkGray} transparent;
       }
     }
   }

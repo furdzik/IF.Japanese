@@ -50,9 +50,9 @@ const GlobalStyles = createGlobalStyle`
       pointer-events: none;
     }
     &::-webkit-contacts-auto-fill-button {
-      display: none;
       position: absolute;
       right: 0;
+      display: none;
       visibility: hidden;
       pointer-events: none;
     }

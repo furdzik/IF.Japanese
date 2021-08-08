@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
 
 const LoaderWrapper = styled.div`
-  display: flex;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 1000;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: transparent;
@@ -31,8 +31,8 @@ const Spinner = styled.div`
 `;
 
 const CenterWrapper = styled.div`
-  display: flex;
   position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 9rem;

@@ -661,6 +661,7 @@
     "inProgress": false,
     "nowLearning": false,
     "joyo": true,
+    "similarKanji": ["雪", "雷", "電", "需"],
     "level": 2
   },
   {
@@ -14402,7 +14403,7 @@
   {
     "kanji": "猫",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "level": 3

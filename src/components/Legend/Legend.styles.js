@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   margin-left: auto;
   padding: .5rem 1rem .3rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
-  background: ${(props) => props.theme.colors.secondaryColor};
+  background: ${(props) => props.theme.mainColors.secondary};
 
   ${breakpointMixin.laptop`
     display: inline-block;

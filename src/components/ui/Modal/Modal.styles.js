@@ -5,13 +5,13 @@ import { breakpointMixin } from '@styles/mixins';
 const shadowColor = 'rgba(0, 0, 0, 0.1)';
 
 const LayerWrapper = styled.div`
-  display: flex;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 10000;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -28,13 +28,13 @@ const LayerWrapper = styled.div`
     }
   `};
   @media print {
-    display: block;
     position: absolute;
     top: 0;
     right: auto;
     left: auto;
     bottom: auto;
     z-index: 10000;
+    display: block;
     justify-content: unset;
     align-items: unset;
     width: 100%;
@@ -71,8 +71,8 @@ const ModalWrapper = styled.div`
 const ModalHeader = styled.div`
   position: relative;
   padding: 1.7rem 5.2rem 1.7rem 2.5rem;
-  background: ${(props) => props.theme.colors.secondaryColor};
-  color: ${(props) => props.theme.colors.primaryColor};
+  background: ${(props) => props.theme.mainColors.secondary};
+  color: ${(props) => props.theme.mainColors.primary};
 
   ${(props) => props.isOnlyMobile && css`
     padding: 1.5rem 1.55rem;
@@ -96,10 +96,10 @@ const Title = styled.div`
 `;
 
 const CloseButton = styled.button`
-  display: block;
   position: absolute;
   top: .8rem;
   right: 1.3rem;
+  display: block;
   margin: 0;
   padding: 0;
   border: none;

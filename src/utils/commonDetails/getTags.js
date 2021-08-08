@@ -7,7 +7,8 @@ const JLPT_TEXT = 'jlpt';
 
 export const getTags = (
   {
-    tags, isCommon, isJoyo, isVerb, jlpt, grade, strokes
+    tags, isCommon, isJoyo, isVerb, jlpt, isGrammar,
+    grade, strokes, levelGroup, grammarOrigin
   },
   shortMsg = false
 ) => {
@@ -19,10 +20,18 @@ export const getTags = (
       label: (messages.conjugationText)?.defaultMessage
     });
   }
-  if (isCommon) {
+
+  if (isCommon && !isGrammar) {
     newTags.push({
       tagType: tagTypes.IS_COMMON,
       label: shortMsg ? (messages.commonShort)?.defaultMessage : (messages.common)?.defaultMessage
+    });
+  }
+
+  if (isCommon && isGrammar) {
+    newTags.push({
+      tagType: tagTypes.IS_COMMON,
+      label: (messages.commonGrammar)?.defaultMessage
     });
   }
 
@@ -43,6 +52,24 @@ export const getTags = (
             : `${(messages.jlptText)?.defaultMessage}-${el}`
         });
       }
+    });
+  }
+
+  if (levelGroup) {
+    newTags.push({
+      tagType: tagTypes.LEVEL_GROUP,
+      label: shortMsg
+        ? (messages[`${levelGroup}Level`])?.defaultMessage
+        : (messages.levelGroup)?.defaultMessage + (messages[`${levelGroup}Level`])?.defaultMessage
+    });
+  }
+
+  if (grammarOrigin) {
+    grammarOrigin.forEach((el) => {
+      newTags.push({
+        tagType: tagTypes.GRAMMAR_ORIGIN,
+        label: `${(messages[el.originName])?.defaultMessage} chapter ${el.originChapter}`
+      });
     });
   }
 

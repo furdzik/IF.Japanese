@@ -1,0 +1,1 @@
+export { getSimilarGrammar } from './getSimilarGrammar';

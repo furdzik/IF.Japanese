@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { filterLabels, secondaryFilterLabels } from '@utils/filters';
+import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 
 import { flashcardShape, additionalInfoShape } from '@types/flashcardShape';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
@@ -27,7 +27,7 @@ const Flashcards = (props) => {
         length={props.flashcardLength}
         changeFilters={props.changeFilters}
         selectedFilters={props.selectedFilters}
-        filterList={filterLabels}
+        filterList={getFilterLabels()}
         secondaryFilterList={secondaryFilterLabels}
       />
       <Legend length={props.flashcardLength} />

@@ -1592,7 +1592,7 @@
   {
     "vocab": "猫舌",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0

@@ -8,7 +8,9 @@ export const tagTypeShape = PropTypes.oneOf([
   tagTypes.JLPT,
   tagTypes.JOYO,
   tagTypes.OTHER,
-  tagTypes.GRADE
+  tagTypes.GRADE,
+  tagTypes.LEVEL_GROUP,
+  tagTypes.GRAMMAR_ORIGIN
 ]);
 
 export const tagShape = PropTypes.shape({
@@ -29,6 +31,6 @@ export const metadataShape = PropTypes.shape({
 });
 
 export const kanjiReadingShape = PropTypes.shape({
-  onyomi: PropTypes.arrayOf(PropTypes.string),
-  kunyomi: PropTypes.arrayOf(PropTypes.string)
+  onyomi: PropTypes.string,
+  kunyomi: PropTypes.string
 });

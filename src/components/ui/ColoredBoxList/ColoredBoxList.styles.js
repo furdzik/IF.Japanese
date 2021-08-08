@@ -12,7 +12,6 @@ const BoxList = styled.ul`
   ${breakpointMixin.portraitTablet`
     display: flex;
     flex-wrap: wrap;
-
   `}
 `;
 
@@ -27,22 +26,17 @@ const BoxItem = styled.li`
   font-size: 2rem;
   color: ${(props) => props.theme.colors.white};
 
-  &:nth-child(1n) {
-    background: #15bb00;
+  &:nth-child(4n+1) {
+    background: ${(props) => props.theme.colors.lightGreen};
   }
-  &:nth-child(2n) {
-    background: #8350c7;
+  &:nth-child(4n+2) {
+    background: ${(props) => props.theme.colors.lightViolet};
   }
-  &:nth-child(3n) {
-    background: #53d9f7;
-    color: ${(props) => props.theme.colors.black};
+  &:nth-child(4n+3) {
+    background: ${(props) => props.theme.colors.orange};
   }
-  &:nth-child(4n) {
-    background: #f7d802;
-    color: ${(props) => props.theme.colors.black};
-  }
-  &:nth-child(5n) {
-    background: #fa24e9;
+  &:nth-child(4n+4) {
+    background: ${(props) => props.theme.colors.neonPink};
   }
 `;
 

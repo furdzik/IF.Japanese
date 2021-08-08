@@ -2,7 +2,7 @@ import kanjiJson from '@data/kanji.json';
 
 import { fetchKanji, fetchKanjiAlternative } from '@api';
 
-import { getTags } from '@utils/commonDetails';
+import { getTags, prepareKanjiDetailsData } from '@utils/commonDetails';
 
 import { getElements } from './utils';
 
@@ -26,20 +26,23 @@ const initialState = {
 export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_KANJI_DETAILS: {
-      const { detailsAlternative, details, kanji } = action.payload;
-      console.log(detailsAlternative, details, kanji);
+      const {
+        detailsAlternative, details, kanji, similarKanji
+      } = action.payload;
+
       return {
         ...state,
         meaning: detailsAlternative?.meanings.join(', '),
         reading: {
-          onyomi: detailsAlternative?.on_readings,
-          kunyomi: detailsAlternative?.kun_readings
+          onyomi: detailsAlternative?.on_readings.join(', '),
+          kunyomi: detailsAlternative?.kun_readings.join(', ')
         },
         strokes: details ? {
           count: details.kanji?.strokes?.count,
           graphs: details.kanji?.strokes?.images
         } : null,
         radicals: null,
+        similarKanji: prepareKanjiDetailsData(similarKanji),
         status: {
           known: kanji.known,
           inProgress: kanji.inProgress,
@@ -85,18 +88,30 @@ export const getKanjiDetails = (name) => (dispatch) => {
   dispatch(getKanjiDetailsInitAction());
 
   const kanji = kanjiJson.filter((element) => element.kanji === name)[0];
+  const similarKanjiRequests = kanji.similarKanji?.map((el) => fetchKanjiAlternative(el)) || [];
 
   Promise.all(
     [
       fetchKanji(name),
-      fetchKanjiAlternative(name)
+      fetchKanjiAlternative(name),
+      ...similarKanjiRequests
     ]
   )
-    .then(([details, detailsAlternative]) => {
+    .then(([details, detailsAlternative, ...similarKanjiRes]) => {
+      const similarKanji = [];
+
+      similarKanjiRes.forEach((similar) => {
+        similarKanji.push({
+          ...similar,
+          ...kanjiJson.filter((jsonElement) => jsonElement.kanji === similar.kanji)[0]
+        });
+      });
+
       dispatch(getKanjiDetailsAction({
         details: details.error ? null : details,
         detailsAlternative,
-        kanji
+        kanji,
+        similarKanji
       }));
     })
     .catch((error) => {

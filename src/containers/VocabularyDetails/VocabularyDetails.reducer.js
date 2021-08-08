@@ -6,7 +6,7 @@ import { fetchJisho, fetchKanjiAlternative } from '@api';
 import { URL_SEPARATOR } from '@config/constants';
 
 import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
-import { getTags } from '@utils/commonDetails';
+import { getTags, prepareKanjiDetailsData } from '@utils/commonDetails';
 
 import {
   PROPER_NAME_TYPE,
@@ -16,8 +16,7 @@ import {
   getOtherForms,
   getKanji,
   getFurigana,
-  getKanjiParts,
-  prepareKanjiDetailsData
+  getKanjiParts
 } from './utils';
 
 const actionTypes = {

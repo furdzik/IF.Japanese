@@ -52,7 +52,7 @@ const Label = styled.span`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.lightGray};
   font-size: 1.3rem;
-  color: ${(props) => props.theme.colors.primaryColor};
+  color: ${(props) => props.theme.mainColors.primary};
 `;
 
 export {

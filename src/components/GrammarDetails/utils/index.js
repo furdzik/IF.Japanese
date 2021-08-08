@@ -1,0 +1,1 @@
+export { getComponentGrammar } from './getComponentGrammar';
