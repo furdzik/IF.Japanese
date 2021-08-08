@@ -6,14 +6,10 @@ import React from 'react';
 // } from './StartGrammar.styles.js';
 // import messages from './PageNotFound.messages';
 
-const StartGrammar = () => {
-  // const intl = useIntl();
-  console.log('StartGrammar');
-  return (
-    <React.Fragment>
-      StartGrammar
-    </React.Fragment>
-  );
-};
+const StartGrammar = () => (
+  <React.Fragment>
+    StartGrammar
+  </React.Fragment>
+);
 
 export default StartGrammar;

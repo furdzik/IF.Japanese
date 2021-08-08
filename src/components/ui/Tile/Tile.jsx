@@ -10,6 +10,7 @@ const Tile = (props) => (
     className={props.className}
     inProgress={props.inProgress}
     nowLearning={props.nowLearning}
+    toRepeat={props.toRepeat}
     known={props.known}
     level={props.level}
     joyo={props.joyo}
@@ -27,13 +28,15 @@ Tile.propTypes = {
   nowLearning: PropTypes.bool.isRequired,
   className: PropTypes.string,
   joyo: PropTypes.bool,
-  noOrder: PropTypes.bool
+  noOrder: PropTypes.bool,
+  toRepeat: PropTypes.bool
 };
 
 Tile.defaultProps = {
   className: '',
   joyo: null,
-  noOrder: false
+  noOrder: false,
+  toRepeat: null
 };
 
 export default Tile;

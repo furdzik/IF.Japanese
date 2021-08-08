@@ -39,7 +39,7 @@ const StyledTile = styled(Tile)`
 
   ${(props) => props.isWideElement && css`
     margin-right: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   `}
 `;
 

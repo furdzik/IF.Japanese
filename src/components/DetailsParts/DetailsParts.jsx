@@ -16,50 +16,48 @@ import {
   MeaningWrapper
 } from './DetailsParts.styles.js';
 
-const DetailsParts = (props) => {
-  console.log(props);
-  return (
-    <Wrapper>
-      {
-        props.tags ? (
-          <SmallTags>
-            {
-              props.tags.map((tag, tagIndex) => (
-                <Tag
-                  small
-                  tagType={tag.tagType}
-                  // eslint-disable-next-line react/no-array-index-key
-                  key={tagIndex}
-                >
-                  {tag.label}
-                </Tag>
-              ))
-            }
-          </SmallTags>
-        ) : null
-      }
-      <ElementWrapper isWideElement={props.isWideElement}>
-        <TileWrapper isWideElement={props.isWideElement}>
-          <StyledTile
-            level={0}
-            known={props.status?.known}
-            nowLearning={props.status?.nowLearning}
-            inProgress={props.status?.inProgress}
-            isWideElement={props.isWideElement}
-            noOrder
-          >
-            <Link to={props.link}>
-              {props.element}
-            </Link>
-          </StyledTile>
-        </TileWrapper>
-        <MeaningWrapper isWideElement={props.isWideElement}>
-          {props.children}
-        </MeaningWrapper>
-      </ElementWrapper>
-    </Wrapper>
-  );
-};
+const DetailsParts = (props) => (
+  <Wrapper>
+    {
+      props.tags ? (
+        <SmallTags>
+          {
+            props.tags.map((tag, tagIndex) => (
+              <Tag
+                small
+                tagType={tag.tagType}
+                // eslint-disable-next-line react/no-array-index-key
+                key={tagIndex}
+              >
+                {tag.label}
+              </Tag>
+            ))
+          }
+        </SmallTags>
+      ) : null
+    }
+    <ElementWrapper isWideElement={props.isWideElement}>
+      <TileWrapper isWideElement={props.isWideElement}>
+        <StyledTile
+          level={0}
+          known={props.status?.known}
+          nowLearning={props.status?.nowLearning}
+          inProgress={props.status?.inProgress}
+          toRepeat={props.status?.toRepeat}
+          isWideElement={props.isWideElement}
+          noOrder
+        >
+          <Link to={props.link}>
+            {props.element}
+          </Link>
+        </StyledTile>
+      </TileWrapper>
+      <MeaningWrapper isWideElement={props.isWideElement}>
+        {props.children}
+      </MeaningWrapper>
+    </ElementWrapper>
+  </Wrapper>
+);
 
 DetailsParts.propTypes = {
   children: PropTypes.node.isRequired,

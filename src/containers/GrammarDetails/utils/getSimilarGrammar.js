@@ -9,7 +9,7 @@ export const getSimilarGrammar = (similarGrammar = []) => {
 
   similarGrammar.forEach((similar) => {
     const grammar = grammarJson.filter((el) => similar === el.grammarId)[0];
-    console.log(grammar);
+
     similarGrammarInfo.push({
       grammarId: grammar.grammarId,
       grammarName: grammar.grammarName,

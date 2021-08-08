@@ -51,6 +51,27 @@ const ListItem = styled.div`
     `}
   `};
 
+  ${(props) => props.toRepeat && css`
+    background: ${props.theme.mainCategoriesStyle.toRepeat.background};
+    color: ${props.theme.mainCategoriesStyle.toRepeat.color};
+    text-shadow: ${props.theme.mainCategoriesStyle.toRepeat.textShadow};
+    order: 2;
+    &::before {
+      color: ${props.theme.colors.white};
+      text-shadow: ${props.theme.mainCategoriesStyle.toRepeat.textShadow};
+    }
+
+    ${props.joyo === false && css`
+      border-color: #f65e5e;
+    `};
+
+    @media print {
+      background: #f65e5e;
+      color: ${props.theme.colors.white};
+      text-shadow: none;
+    }
+  `};
+
   ${(props) => props.nowLearning && css`
     background: ${props.theme.mainCategoriesStyle.nowLearning.background};
     border: ${props.theme.mainCategoriesStyle.nowLearning.border};

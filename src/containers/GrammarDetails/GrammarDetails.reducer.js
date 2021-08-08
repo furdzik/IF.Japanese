@@ -19,7 +19,7 @@ export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_GRAMMAR_DETAILS: {
       const grammar = action.payload;
-      console.log(grammar);
+
       return {
         ...state,
         grammarName: grammar.grammarName,
