@@ -8,7 +8,7 @@ import {
   tagsShape,
   metadataShape
 } from '@types/commonDetailsShape';
-import { strokesShape, examplesShape } from '@types/kanjiDetailsShape';
+import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
 
 import Loader from '@components/ui/Loader';
 
@@ -30,6 +30,7 @@ const KanjiDetails = (props) => {
       metadata={props.metadata}
       radicals={props.radicals}
       reading={props.reading}
+      similarKanji={props.similarKanji}
       status={props.status}
       strokes={props.strokes}
       tags={props.tags}
@@ -46,6 +47,7 @@ KanjiDetails.propTypes = {
   metadata: metadataShape,
   radicals: PropTypes.arrayOf(PropTypes.string),
   reading: kanjiReadingShape,
+  similarKanji: similarKanjiArrayShape,
   status: statusShape,
   strokes: strokesShape,
   tags: tagsShape
@@ -57,6 +59,7 @@ KanjiDetails.defaultProps = {
   metadata: null,
   radicals: null,
   reading: null,
+  similarKanji: null,
   status: null,
   strokes: null,
   tags: null

@@ -21,6 +21,7 @@ import Details from '@components/Details';
 import DetailsSecondarySection from '@components/DetailsSecondarySection';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
+import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import Tag from '@components/Tag';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
@@ -36,9 +37,7 @@ import {
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  OtherFormsWrapper,
-  KanjiMeaning,
-  KanjiReading
+  OtherFormsWrapper
 } from './VocabularyDetails.styles.js';
 import messages from './VocabularyDetails.messages';
 
@@ -193,17 +192,10 @@ const VocabularyDetails = (props) => {
                 link={`/kanji/${kanji.kanji}`}
                 element={kanji.kanji}
               >
-                <KanjiMeaning>{kanji.meaning}</KanjiMeaning>
-                <KanjiReading>
-                  <div>
-                    {intl.formatMessage(messages.kanjiPartsKunLabel)}
-                    {kanji.reading?.kunyomi.join(', ')}
-                  </div>
-                  <div>
-                    {intl.formatMessage(messages.kanjiPartsOnLabel)}
-                    {kanji.reading?.onyomi.join(', ')}
-                  </div>
-                </KanjiReading>
+                <ShortKanjiDetailsParts
+                  meaning={kanji.meaning}
+                  reading={kanji.reading}
+                />
               </DetailsParts>
             ))
           }

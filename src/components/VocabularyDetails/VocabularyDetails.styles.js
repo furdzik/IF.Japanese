@@ -87,15 +87,6 @@ const OtherFormsWrapper = styled.div`
   margin-top: 1rem;
 `;
 
-const KanjiMeaning = styled.div`
-  margin: -.8rem 0 1rem;
-  font-size: ${(props) => props.theme.typography.fontSize.small};
-`;
-
-const KanjiReading = styled.div`
-  font-size: ${(props) => props.theme.typography.fontSize.extraSmall};
-`;
-
 export {
   ConjugationLink,
   TranslationsList,
@@ -106,7 +97,5 @@ export {
   AntonymsBox,
   AntonymsLink,
   AdditionalExplanationWrapper,
-  OtherFormsWrapper,
-  KanjiMeaning,
-  KanjiReading
+  OtherFormsWrapper
 };

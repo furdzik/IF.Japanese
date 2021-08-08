@@ -28,7 +28,6 @@ import messages from './GrammarDetails.messages';
 const GrammarDetails = (props) => {
   const intl = useIntl();
   const ComponentGrammar = getComponentGrammar(props.grammarId);
-  console.log(props);
 
   const getTags = () => {
     const tags = [];

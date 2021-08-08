@@ -153,7 +153,7 @@
     "inProgress": false,
     "level": 5,
     "levelGroup": "elementary",
-    "isCommon": false,
+    "isCommon": true,
     "origin": [
       {
         "originName": "minnaNoNihongo1",

@@ -12,6 +12,16 @@ export const strokesShape = PropTypes.shape({
   graphs: PropTypes.arrayOf(PropTypes.string)
 });
 
+export const similarKanjiShape = PropTypes.shape({
+  kanji: PropTypes.string,
+  meaning: PropTypes.string,
+  reading: kanjiReadingShape,
+  status: statusShape,
+  tags: tagsShape
+});
+
+export const similarKanjiArrayShape = PropTypes.arrayOf(similarKanjiShape);
+
 export const exampleShape = PropTypes.shape({
   japanese: PropTypes.string,
   meaning: PropTypes.string
@@ -33,6 +43,7 @@ export const kanjiDetailsShape = PropTypes.shape({
   strokes: strokesShape,
   radicals: radicalsShape,
   status: statusShape,
+  similarKanji: similarKanjiArrayShape,
   examples: examplesShape,
   metadata: metadataShape,
   tags: tagsShape

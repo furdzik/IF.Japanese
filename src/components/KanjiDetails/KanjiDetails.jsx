@@ -8,11 +8,13 @@ import {
   statusShape,
   metadataShape
 } from '@types/commonDetailsShape';
-import { strokesShape, examplesShape } from '@types/kanjiDetailsShape';
+import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
 
 import Details from '@components/Details';
 import DetailsSecondarySection from '@components/DetailsSecondarySection';
 import DetailsSubHeader from '@components/DetailsSubHeader';
+import DetailsParts from '@components/DetailsParts';
+import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import Tag from '@components/Tag';
 
 import {
@@ -63,7 +65,7 @@ const KanjiDetails = (props) => {
             props.reading?.kunyomi.length ? (
               <ReadingListItem>
                 <b>{intl.formatMessage(messages.kunyomiText)}</b>
-                {props.reading?.kunyomi.join(', ')}
+                {props.reading?.kunyomi}
               </ReadingListItem>
             ) : null
           }
@@ -71,18 +73,40 @@ const KanjiDetails = (props) => {
             props.reading?.onyomi.length ? (
               <ReadingListItem>
                 <b>{intl.formatMessage(messages.onyomiText)}</b>
-                {props.reading?.onyomi.join(', ')}
+                {props.reading?.onyomi}
               </ReadingListItem>
             ) : null
           }
         </ReadingList>
       )}
-      secondarySection={props.radicals ? (
+      secondarySection={props.similarKanji?.length ? (
         <DetailsSecondarySection>
           <DetailsSubHeader>
-            {intl.formatMessage(messages.radicalsHeader)}
+            {intl.formatMessage(messages.similarKanjiHeader)}
           </DetailsSubHeader>
+          {
+            props.similarKanji.map((kanji, index) => (
+              <DetailsParts
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                tags={kanji.tags}
+                status={kanji.status}
+                link={`/kanji/${kanji.kanji}`}
+                element={kanji.kanji}
+              >
+                <ShortKanjiDetailsParts
+                  meaning={kanji.meaning}
+                  reading={kanji.reading}
+                />
+              </DetailsParts>
+            ))
+          }
         </DetailsSecondarySection>
+      ) : null}
+      additionalBox={props.radicals?.length ? (
+        <DetailsSubHeader>
+          {intl.formatMessage(messages.radicalsHeader)}
+        </DetailsSubHeader>
       ) : null}
       sections={[
         props.strokes ? {
@@ -145,6 +169,7 @@ KanjiDetails.propTypes = {
   metadata: metadataShape,
   radicals: PropTypes.arrayOf(PropTypes.string),
   reading: kanjiReadingShape,
+  similarKanji: similarKanjiArrayShape,
   status: statusShape,
   strokes: strokesShape,
   tags: tagsShape
@@ -156,6 +181,7 @@ KanjiDetails.defaultProps = {
   metadata: null,
   radicals: null,
   reading: null,
+  similarKanji: null,
   status: null,
   strokes: null,
   tags: null

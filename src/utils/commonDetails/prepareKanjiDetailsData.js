@@ -1,4 +1,4 @@
-import { getTags } from '@utils/commonDetails';
+import { getTags } from './getTags';
 
 const IS_SHORT = true;
 
@@ -10,8 +10,8 @@ export const prepareKanjiDetailsData = (kanjiDetails) => {
       kanji: el.kanji,
       meaning: el.meanings.join(', '),
       reading: {
-        onyomi: el.kun_readings,
-        kunyomi: el.on_readings
+        onyomi: el.kun_readings.join(', '),
+        kunyomi: el.on_readings.join(', ')
       },
       status: {
         known: el.known,

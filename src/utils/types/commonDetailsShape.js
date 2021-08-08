@@ -31,6 +31,6 @@ export const metadataShape = PropTypes.shape({
 });
 
 export const kanjiReadingShape = PropTypes.shape({
-  onyomi: PropTypes.arrayOf(PropTypes.string),
-  kunyomi: PropTypes.arrayOf(PropTypes.string)
+  onyomi: PropTypes.string,
+  kunyomi: PropTypes.string
 });
