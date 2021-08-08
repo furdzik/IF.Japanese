@@ -23,6 +23,16 @@ const StyledReactTooltip = styled(ReactTooltip)`
         border-color: ${(props) => props.theme.colors.darkGray} transparent;
       }
     }
+    &.place-left {
+      &::after {
+        border-color: transparent ${(props) => props.theme.colors.darkGray};
+      }
+    }
+    &.place-right {
+      &::after {
+        border-color:  transparent ${(props) => props.theme.colors.darkGray};
+      }
+    }
   }
 `;
 
