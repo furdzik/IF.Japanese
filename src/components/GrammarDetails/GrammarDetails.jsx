@@ -2,10 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-// import { Link } from 'react-router-dom';
-
-// import { grammarTypes, tagTypes } from '@config/constants';
-
 import { statusShape, tagsShape } from '@types/commonDetailsShape';
 import {
   examplesShape,
@@ -14,23 +10,18 @@ import {
   explanationShape
 } from '@types/grammarShape';
 
-// import {
-//   japaneseFormShape,
-//   translationsShape,
-//   kanjiPartsShape,
-//   otherFormsShape
-// } from '@types/vocabularyDetailsShape';
-
 import Details from '@components/Details';
 import DetailsSecondarySection from '@components/DetailsSecondarySection';
 import DetailsSubHeader from '@components/DetailsSubHeader';
+import DetailsParts from '@components/DetailsParts';
 import Tag from '@components/Tag';
 
 import { getComponentGrammar } from './utils';
 
 import {
   MainSectionWrapper,
-  ExamplesWrapper
+  ExamplesWrapper,
+  ProblemsWrapper
 } from './GrammarDetails.styles.js';
 import messages from './GrammarDetails.messages';
 
@@ -58,12 +49,16 @@ const GrammarDetails = (props) => {
       known={props.status?.known}
       inProgress={props.status?.inProgress}
       nowLearning={props.status?.nowLearning}
-      toRepeat={props.status?.nowLearning}
+      toRepeat={props.status?.toRepeat}
       tags={getTags()}
       mainSectionHeader={intl.formatMessage(messages.mainHeader)}
       mainSection={(
         <MainSectionWrapper>
-          {props.explanation}
+          {
+            props.explanation ? (
+              <div>{props.explanation}</div>
+            ) : null
+          }
           {ComponentGrammar}
         </MainSectionWrapper>
       )}
@@ -73,9 +68,18 @@ const GrammarDetails = (props) => {
             {intl.formatMessage(messages.similarGrammarHeader)}
           </DetailsSubHeader>
           {
-            props.similarGrammar.map((el, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <div key={index}>{el.grammarName}</div>
+            props.similarGrammar.map((grammar, index) => (
+              <DetailsParts
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                tags={grammar.tags}
+                status={grammar.status}
+                link={`/grammar/${grammar.grammarId}`}
+                element={grammar.grammarName}
+                isWideElement
+              >
+                {grammar.explanation}
+              </DetailsParts>
             ))
           }
         </DetailsSecondarySection>
@@ -97,14 +101,14 @@ const GrammarDetails = (props) => {
         props.problems?.length ? {
           title: intl.formatMessage(messages.problemsHeader),
           section: (
-            <ExamplesWrapper>
+            <ProblemsWrapper>
               {
                 props.problems.map((el, index) => (
                   // eslint-disable-next-line react/no-array-index-key
                   <div key={index}>{el}</div>
                 ))
               }
-            </ExamplesWrapper>
+            </ProblemsWrapper>
           )
         } : null
       ]}

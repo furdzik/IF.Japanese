@@ -33,6 +33,7 @@ const Details = (props) => {
         known={props.known}
         inProgress={props.inProgress}
         nowLearning={props.nowLearning}
+        toRepeat={props.toRepeat}
       >
         <span>
           {props.name}
@@ -163,7 +164,8 @@ Details.propTypes = {
     title: PropTypes.string,
     section: PropTypes.node
   })),
-  tags: PropTypes.arrayOf(PropTypes.node)
+  tags: PropTypes.arrayOf(PropTypes.node),
+  toRepeat: PropTypes.bool
 };
 
 Details.defaultProps = {
@@ -177,7 +179,8 @@ Details.defaultProps = {
   nowLearning: null,
   secondarySection: null,
   sections: null,
-  tags: null
+  tags: null,
+  toRepeat: null
 };
 
 export default Details;

@@ -145,13 +145,21 @@
     "grammarId": "kara",
     "grammarName": "〜から",
     "known": false,
-    "toRepeat": false,
+    "toRepeat": true,
     "nowLearning": false,
     "inProgress": false,
     "level": 5,
     "levelGroup": "elementary",
     "isCommon": false,
     "origin": [
+      {
+        "originName": "minnaNoNihongo1",
+        "originChapter": ["9"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["25"]
+      }
     ],
     "explanation": "some explanation kara",
     "examples": [

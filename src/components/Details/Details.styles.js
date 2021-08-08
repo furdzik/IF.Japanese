@@ -9,6 +9,7 @@ const DetailsWrapper = styled.div`
 const WordHeader = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 6.2rem;
   margin-bottom: 3rem;
   padding: 1.6rem 2rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
@@ -33,6 +34,15 @@ const WordHeader = styled.div`
     border: ${props.theme.mainCategoriesStyle.nowLearning.border};
     background: ${props.theme.mainCategoriesStyle.nowLearning.background};
     color: ${props.theme.mainCategoriesStyle.nowLearning.color};
+    text-shadow: ${props.theme.mainCategoriesStyle.nowLearning.textShadow};
+  `}
+
+  ${(props) => props.toRepeat && css`
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    background: ${props.theme.mainCategoriesStyle.toRepeat.background};
+    color: ${props.theme.mainCategoriesStyle.toRepeat.color};
+    text-shadow: ${props.theme.mainCategoriesStyle.toRepeat.textShadow};
   `}
 
   ${breakpointMixin.landscapeTablet`

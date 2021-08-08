@@ -1,5 +1,7 @@
 import { getTags } from '@utils/commonDetails';
 
+const IS_SHORT = true;
+
 export const prepareKanjiDetailsData = (kanjiDetails) => {
   const kanjiParts = [];
 
@@ -21,7 +23,7 @@ export const prepareKanjiDetailsData = (kanjiDetails) => {
         jlpt: [el.level ? el.level.toString() : null],
         grade: el.grade,
         strokes: el.stroke_count.toString()
-      }, true)
+      }, IS_SHORT)
     });
   });
 

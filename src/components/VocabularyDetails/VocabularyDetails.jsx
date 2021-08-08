@@ -20,6 +20,7 @@ import Modal from '@components/ui/Modal';
 import Details from '@components/Details';
 import DetailsSecondarySection from '@components/DetailsSecondarySection';
 import DetailsSubHeader from '@components/DetailsSubHeader';
+import DetailsParts from '@components/DetailsParts';
 import Tag from '@components/Tag';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
@@ -36,11 +37,6 @@ import {
   AntonymsLink,
   AdditionalExplanationWrapper,
   OtherFormsWrapper,
-  KanjiPartsWrapper,
-  StyledTile,
-  KanjiTags,
-  KanjiMeaningWrapper,
-  KanjiWrapper,
   KanjiMeaning,
   KanjiReading
 } from './VocabularyDetails.styles.js';
@@ -189,49 +185,26 @@ const VocabularyDetails = (props) => {
           </DetailsSubHeader>
           {
             props.kanjiParts.map((kanji, kanjiIndex) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <KanjiPartsWrapper key={kanjiIndex}>
-                {
-                  kanji.tags ? (
-                    <KanjiTags>
-                      {
-                        kanji.tags.map((tag, tagIndex) => (
-                          <Tag
-                            small
-                            tagType={tag.tagType}
-                            // eslint-disable-next-line react/no-array-index-key
-                            key={tagIndex}
-                          >
-                            {tag.label}
-                          </Tag>
-                        ))
-                      }
-                    </KanjiTags>
-                  ) : null
-                }
-                <KanjiWrapper>
+              <DetailsParts
+                // eslint-disable-next-line react/no-array-index-key
+                key={kanjiIndex}
+                tags={kanji.tags}
+                status={kanji.status}
+                link={`/kanji/${kanji.kanji}`}
+                element={kanji.kanji}
+              >
+                <KanjiMeaning>{kanji.meaning}</KanjiMeaning>
+                <KanjiReading>
                   <div>
-                    <StyledTile
-                      level={0}
-                      known={kanji.status?.known}
-                      nowLearning={kanji.status?.nowLearning}
-                      inProgress={kanji.status?.inProgress}
-                      noOrder
-                    >
-                      <Link to={`/kanji/${kanji.kanji}`}>
-                        {kanji.kanji}
-                      </Link>
-                    </StyledTile>
+                    {intl.formatMessage(messages.kanjiPartsKunLabel)}
+                    {kanji.reading?.kunyomi.join(', ')}
                   </div>
-                  <KanjiMeaningWrapper>
-                    <KanjiMeaning>{kanji.meaning}</KanjiMeaning>
-                    <KanjiReading>
-                      <div>Kun: {kanji.reading?.kunyomi.join(', ')}</div>
-                      <div>On: {kanji.reading?.onyomi.join(', ')}</div>
-                    </KanjiReading>
-                  </KanjiMeaningWrapper>
-                </KanjiWrapper>
-              </KanjiPartsWrapper>
+                  <div>
+                    {intl.formatMessage(messages.kanjiPartsOnLabel)}
+                    {kanji.reading?.onyomi.join(', ')}
+                  </div>
+                </KanjiReading>
+              </DetailsParts>
             ))
           }
         </DetailsSecondarySection>

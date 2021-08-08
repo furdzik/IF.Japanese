@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
 
+import { statusShape, tagsShape } from '@types/commonDetailsShape';
+
 export const examplesShape = PropTypes.arrayOf(PropTypes.string);
 
 export const problemsShape = PropTypes.arrayOf(PropTypes.string);
+
 export const explanationShape = PropTypes.string;
 
 const grammarItem = {
@@ -21,8 +24,11 @@ const grammarItem = {
 };
 
 export const similarGrammarDetailsShape = PropTypes.arrayOf(PropTypes.shape({
-  ...grammarItem,
-  similarGrammar: PropTypes.arrayOf(PropTypes.string)
+  grammarId: PropTypes.string,
+  grammarName: PropTypes.string,
+  explanation: PropTypes.string,
+  status: statusShape,
+  tags: tagsShape
 }));
 
 export const similarGrammarShape = PropTypes.arrayOf(PropTypes.string);
@@ -33,5 +39,3 @@ export const grammarItemShape = PropTypes.shape({
 });
 
 export const grammarShape = PropTypes.arrayOf(grammarItemShape);
-
-

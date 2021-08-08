@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { breakpointMixin } from '@styles/mixins';
 
-import Tile from '@components/ui/Tile';
-
 const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
 `;
@@ -89,37 +87,6 @@ const OtherFormsWrapper = styled.div`
   margin-top: 1rem;
 `;
 
-const KanjiPartsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -4rem;
-  padding: 2rem 0 2rem 4rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
-
-  &:last-child {
-    margin-bottom: 0;
-    border-bottom: none;
-  }
-`;
-
-const KanjiTags = styled.div`
-  width: 100%;
-  margin-bottom: 1rem;
-  font-size: ${(props) => props.theme.typography.fontSize.small};
-`;
-
-const StyledTile = styled(Tile)`
-  margin: 0 2rem 0 0;
-`;
-
-const KanjiMeaningWrapper = styled.div`
-  max-width: 19.5rem;
-`;
-
-const KanjiWrapper = styled.div`
-  display: flex;
-`;
-
 const KanjiMeaning = styled.div`
   margin: -.8rem 0 1rem;
   font-size: ${(props) => props.theme.typography.fontSize.small};
@@ -140,11 +107,6 @@ export {
   AntonymsLink,
   AdditionalExplanationWrapper,
   OtherFormsWrapper,
-  KanjiTags,
-  KanjiPartsWrapper,
-  StyledTile,
-  KanjiWrapper,
-  KanjiMeaningWrapper,
   KanjiMeaning,
   KanjiReading
 };

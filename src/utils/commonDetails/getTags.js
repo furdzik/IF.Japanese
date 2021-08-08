@@ -58,7 +58,9 @@ export const getTags = (
   if (levelGroup) {
     newTags.push({
       tagType: tagTypes.LEVEL_GROUP,
-      label: (messages.levelGroup)?.defaultMessage + (messages[`${levelGroup}Level`])?.defaultMessage
+      label: shortMsg
+        ? (messages[`${levelGroup}Level`])?.defaultMessage
+        : (messages.levelGroup)?.defaultMessage + (messages[`${levelGroup}Level`])?.defaultMessage
     });
   }
 

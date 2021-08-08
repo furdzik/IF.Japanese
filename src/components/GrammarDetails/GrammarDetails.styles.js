@@ -1,17 +1,19 @@
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
-//
-// import { breakpointMixin } from '@styles/mixins';
 
 const MainSectionWrapper = styled.div`
-
+  display: block;
 `;
 
 const ExamplesWrapper = styled.div`
+  display: block;
+`;
 
+const ProblemsWrapper = styled.div`
+  display: block;
 `;
 
 export {
   MainSectionWrapper,
-  ExamplesWrapper
+  ExamplesWrapper,
+  ProblemsWrapper
 };

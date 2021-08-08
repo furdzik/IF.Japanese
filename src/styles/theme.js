@@ -20,7 +20,9 @@ export default {
     },
 
     toRepeat: {
-      background: `repeating-linear-gradient(45deg, #ef8888, #fba5a5 1px, ${colors.red} 2px, ${colors.pink} 5px)`
+      background: `repeating-linear-gradient(45deg, #ef8888, #fba5a5 1px, ${colors.red} 2px, ${colors.pink} 5px)`,
+      color: colors.white,
+      textShadow: `-1px 1px 8px ${colors.veryDarkPink}`
     },
 
     nowLearning: {
