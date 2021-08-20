@@ -10,8 +10,8 @@ export const prepareKanjiDetailsData = (kanjiDetails) => {
       kanji: el.kanji,
       meaning: el.meanings.join(', '),
       reading: {
-        onyomi: el.kun_readings.join(', '),
-        kunyomi: el.on_readings.join(', ')
+        onyomi: el.on_readings.join(', '),
+        kunyomi: el.kun_readings.join(', ')
       },
       status: {
         known: el.known,
@@ -20,6 +20,7 @@ export const prepareKanjiDetailsData = (kanjiDetails) => {
       },
       tags: getTags({
         isJoyo: el.joyo,
+        isJinmeiyo: el.jinmeiyo,
         jlpt: [el?.level.toString() || el?.jlpt.toString()],
         grade: el.grade,
         strokes: el.stroke_count.toString()

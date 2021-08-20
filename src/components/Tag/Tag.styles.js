@@ -22,6 +22,10 @@ const Wrapper = styled.div`
     background: ${props.theme.colors.lightGreen};
     color: ${props.theme.colors.white};
   `}
+  ${(props) => (props.tagType === tagTypes.JINMEIYO) && css`
+    background: ${props.theme.colors.blue};
+    color: ${props.theme.colors.white};
+  `}
   ${(props) => props.tagType === tagTypes.JLPT && css`
     background: ${props.theme.colors.lightViolet};
     color: ${props.theme.colors.white};

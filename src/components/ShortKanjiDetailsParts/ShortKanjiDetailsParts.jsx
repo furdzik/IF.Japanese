@@ -15,14 +15,22 @@ const ShortKanjiDetailsParts = (props) => {
     <React.Fragment>
       <KanjiMeaning>{props.meaning}</KanjiMeaning>
       <KanjiReading>
-        <div>
-          {intl.formatMessage(messages.kanjiPartsKunLabel)}
-          {props.reading?.kunyomi}
-        </div>
-        <div>
-          {intl.formatMessage(messages.kanjiPartsOnLabel)}
-          {props.reading?.onyomi}
-        </div>
+        {
+          props.reading?.kunyomi ? (
+            <div>
+              {intl.formatMessage(messages.kanjiPartsKunLabel)}
+              {props.reading?.kunyomi}
+            </div>
+          ) : null
+        }
+        {
+          props.reading?.onyomi ? (
+            <div>
+              {intl.formatMessage(messages.kanjiPartsOnLabel)}
+              {props.reading?.onyomi}
+            </div>
+          ) : null
+        }
       </KanjiReading>
     </React.Fragment>
   );

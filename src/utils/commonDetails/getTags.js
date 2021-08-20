@@ -7,7 +7,7 @@ const JLPT_TEXT = 'jlpt';
 
 export const getTags = (
   {
-    tags, isCommon, isJoyo, isVerb, jlpt, isGrammar,
+    tags, isCommon, isJoyo, isJinmeiyo, isVerb, jlpt, isGrammar,
     grade, strokes, levelGroup, grammarOrigin
   },
   shortMsg = false
@@ -38,7 +38,18 @@ export const getTags = (
   if (isJoyo) {
     newTags.push({
       tagType: tagTypes.JOYO,
-      label: shortMsg ? (messages.joyoShort)?.defaultMessage : (messages.joyo)?.defaultMessage
+      label: shortMsg
+        ? (messages.joyoShort)?.defaultMessage
+        : (messages.joyo)?.defaultMessage
+    });
+  }
+
+  if (isJinmeiyo) {
+    newTags.push({
+      tagType: tagTypes.JINMEIYO,
+      label: shortMsg
+        ? (messages.jinmeiyoShort)?.defaultMessage
+        : (messages.jinmeiyo)?.defaultMessage
     });
   }
 
