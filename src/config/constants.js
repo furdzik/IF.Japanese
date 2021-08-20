@@ -168,6 +168,7 @@ export const tagTypes = {
   IS_COMMON: 'isCommon',
   JLPT: 'jlpt',
   JOYO: 'joyo',
+  JINMEIYO: 'jinmeiyo',
   OTHER: 'other',
   GRADE: 'grade',
   LEVEL_GROUP: 'levelGroup',

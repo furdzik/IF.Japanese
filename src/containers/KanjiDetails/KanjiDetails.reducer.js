@@ -4,7 +4,10 @@ import { fetchKanji, fetchKanjiAlternative } from '@api';
 
 import { getTags, prepareKanjiDetailsData } from '@utils/commonDetails';
 
-import { getElements } from './utils';
+import {
+  getElements,
+  getSimilarKanjiData
+} from './utils';
 
 const actionTypes = {
   GET_KANJI_DETAILS_INIT: 'KANJI/GET_DETAILS_INIT',
@@ -38,8 +41,8 @@ export default function(state = initialState, action) {
           kunyomi: detailsAlternative?.kun_readings.join(', ')
         },
         strokes: details ? {
-          count: details.kanji?.strokes?.count,
-          graphs: details.kanji?.strokes?.images
+          count: details?.kanji?.strokes?.count,
+          graphs: details?.kanji?.strokes?.images
         } : null,
         radicals: null,
         similarKanji: prepareKanjiDetailsData(similarKanji),
@@ -55,8 +58,9 @@ export default function(state = initialState, action) {
         tags: getTags({
           jlpt: [kanji.level.toString()],
           isJoyo: kanji.joyo,
+          isJinmeiyo: kanji.jinmeiyo,
           grade: detailsAlternative.grade,
-          strokes: details.kanji?.strokes?.count
+          strokes: details?.kanji?.strokes?.count
         }),
         loading: false
       };
@@ -88,6 +92,9 @@ export const getKanjiDetails = (name) => (dispatch) => {
   dispatch(getKanjiDetailsInitAction());
 
   const kanji = kanjiJson.filter((element) => element.kanji === name)[0];
+
+  kanji.similarKanji = getSimilarKanjiData(name);
+
   const similarKanjiRequests = kanji.similarKanji?.map((el) => fetchKanjiAlternative(el)) || [];
 
   Promise.all(
