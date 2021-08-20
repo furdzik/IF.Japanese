@@ -252,6 +252,8 @@
   "utils.defaultMessages.inProgressHelper": "In progress",
   "utils.defaultMessages.intermediateLevel": "中級",
   "utils.defaultMessages.intermediateLevelHelper": "Intermediate level",
+  "utils.defaultMessages.jinmeiyo": "Jinmeiyō kanji",
+  "utils.defaultMessages.jinmeiyoShort": "Jinmeiyō",
   "utils.defaultMessages.jishouFormLabel": "辞書形",
   "utils.defaultMessages.jlptText": "JLPT",
   "utils.defaultMessages.joukenBaFormLabel": "条件形 ~えば",
@@ -297,5 +299,5 @@
   "utils.defaultMessages.verbsText": "動詞",
   "utils.defaultMessages.vocabLabel": "Words",
   "utils.defaultMessages.vocabText": "単語",
-  "utils.defaultMessages.waniKaniText": "Wanikani: level "
+  "utils.defaultMessages.waniKaniText": "WaniKani: level "
 }
