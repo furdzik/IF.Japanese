@@ -144,7 +144,12 @@ const KanjiDetails = (props) => {
           title: intl.formatMessage(messages.examplesHeader),
           section: (
             <ExampleWrapper>
-              <VocabExamples examples={props.examples} />
+              {
+                props.examples.length ? (
+                  <VocabExamples examples={props.examples} />
+                ) : null
+              }
+
               <MoreExamplesLink href={`https://jisho.org/search/*${props.kanji}*`} target="_blank">
                 {intl.formatMessage(messages.examplesMoreText)}
               </MoreExamplesLink>

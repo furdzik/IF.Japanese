@@ -7,6 +7,7 @@ import {
 
 const Button = (props) => (
   <ButtonWrapper
+    className={props.className}
     disabled={props.disabled}
     onClick={props.onClick}
   >
@@ -16,13 +17,15 @@ const Button = (props) => (
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func
 };
 
 Button.defaultProps = {
-  onClick: () => {},
-  disabled: false
+  className: '',
+  disabled: false,
+  onClick: () => {}
 };
 
 export default Button;

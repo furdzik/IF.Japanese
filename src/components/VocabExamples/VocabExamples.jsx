@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -9,77 +10,97 @@ import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamplesSha
 import Tag from '@components/Tag';
 
 import {
-  Wrapper,
-  LoadMoreButton,
   List,
   ListItem,
   ListItemContent,
-  TagWrapper
+  TagWrapper,
+  ExampleWrapper,
+  StyledTile,
+  StyledButton,
+  MeaningWrapper
 } from './VocabExamples.styles.js';
+import messages from './VocabExamples.messages';
 
-import { StyledTile } from '../DetailsParts/DetailsParts.styles';
+const VocabExamples = (props) => {
+  const intl = useIntl();
 
-const VocabExamples = (props) => (
-  <Wrapper>
-    {console.log(props.vocabExamples)}
-    {
-      props.vocabExamples.length ? (
-        <List>
-          {
-            props.vocabExamples.map((el) => (
-              <ListItem key={uuidv4()}>
-                <ListItemContent>
-                  <TagWrapper>
-                    {
-                      el.tags ? el.tags.map((tag) => (
-                        <Tag
-                          small
-                          tagType={tag.tagType}
-                          key={uuidv4()}
+  // console.log(props.examples);
+  return (
+    <React.Fragment>
+      {
+        props.vocabExamples.length ? (
+          <List>
+            {
+              props.vocabExamples.map((el) => (
+                <ListItem key={uuidv4()} hasTags={!!el.tags.length}>
+                  <ListItemContent>
+                    <div>
+                      {
+                        el.tags.length ? (
+                          <TagWrapper>
+                            {
+                              el.tags.map((tag) => (
+                                <Tag
+                                  small
+                                  tagType={tag.tagType}
+                                  key={uuidv4()}
+                                >
+                                  {tag.label}
+                                </Tag>
+                              ))
+                            }
+                          </TagWrapper>
+                        ) : null
+                      }
+                      <ExampleWrapper>
+                        <StyledTile
+                          level={0}
+                          known={el.status?.known}
+                          nowLearning={el.status?.nowLearning}
+                          inProgress={el.status?.inProgress}
+                          furigana={el.reading}
+                          isWideElement
+                          noOrder
                         >
-                          {tag.label}
-                        </Tag>
-                      )) : null
-                    }
-                  </TagWrapper>
-                  <div>
-                    {el.vocab} / {el.reading} / {el.meaning}
-                  </div>
-                  <StyledTile
-                    level={0}
-                    known={el.status?.known}
-                    nowLearning={el.status?.nowLearning}
-                    inProgress={el.status?.inProgress}
-                    isWideElement
-                    noOrder
-                  >
-                    {
-                      el.status ? (
-                        <Link to={el.meaning ? `${el.vocab},${el.meaning}}` : el.vocab}>
-                          {el.vocab}
-                        </Link>
-                      ) : el.vocab
-                    }
-                  </StyledTile>
-                </ListItemContent>
-              </ListItem>
-            ))
-          }
-        </List>
-      ) : null
-    }
-    {
-      props.showLoadMoreButton ? (
-        <LoadMoreButton
-          type="button"
-          onClick={() => props.getVocabExamples(props.examples, props.vocabExamples.length)}
-        >
-          See more
-        </LoadMoreButton>
-      ) : null
-    }
-  </Wrapper>
-);
+                          {
+                            el.original ? (
+                              <Link
+                                to={
+                                  `/vocab/${el.original.meaning
+                                    ? `${el.original.vocab},${el.original.meaning},${el.original.vocab}`
+                                    : el.vocab}`
+                                }
+                              >
+                                {el.vocab}
+                              </Link>
+                            ) : el.vocab
+                          }
+                        </StyledTile>
+                        <MeaningWrapper>
+                          {el.meaning}
+                        </MeaningWrapper>
+                      </ExampleWrapper>
+                    </div>
+                  </ListItemContent>
+                </ListItem>
+              ))
+            }
+          </List>
+        ) : null
+      }
+      {
+        props.showLoadMoreButton ? (
+          <StyledButton
+            type="button"
+            onClick={() => props.getVocabExamples(props.examples, props.vocabExamples.length)}
+          >
+            {intl.formatMessage(messages.seeMoreLabel)}
+          </StyledButton>
+        ) : null
+      }
+    </React.Fragment>
+  );
+};
 
 VocabExamples.propTypes = {
   getVocabExamples: PropTypes.func.isRequired,

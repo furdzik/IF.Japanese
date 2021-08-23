@@ -30,6 +30,7 @@ export default function(state = initialState, action) {
     case actionTypes.GET_VOCAB_EXAMPLES_INIT: {
       return {
         ...state,
+        vocabExamples: [], // ???
         loading: true
       };
     }
@@ -49,13 +50,17 @@ const getVocabExamplesAction = (payload) => ({
 });
 
 export const getVocabExamples = (examples, lastElementIndex = 0) => (dispatch, getStore) => {
+  console.log('examples', examples, lastElementIndex);
   if (lastElementIndex === 0) {
     dispatch(getVocabExamplesInitAction());
   }
-  console.log('examples', examples);
-  const exampleRequestToSend = examples
+
+  console.log('vocabExamples', getStore().VocabExamples.vocabExamples);
+  const exampleToSend = examples
     .filter((el, index) => (index <= lastElementIndex + MAX_REQUESTS_INDEX)
-    && index >= lastElementIndex && index < examples.length)
+      && index >= lastElementIndex && index < examples.length);
+
+  const exampleRequestToSend = exampleToSend
     .map(
       (el) => fetchJisho(el.reading ? `${el.vocab},${el.reading},${el.vocab}` : el.vocab)
     );
@@ -65,14 +70,12 @@ export const getVocabExamples = (examples, lastElementIndex = 0) => (dispatch, g
   )
     .then((exampleResponse) => {
       const { vocabExamples } = getStore().VocabExamples;
-
       const newVocabExamples = _cloneDeep(vocabExamples);
 
-      examples.forEach((exElement, exIndex) => {
+      exampleToSend.forEach((exElement, exIndex) => {
         exampleResponse.forEach((response, responseIndex) => {
-          // TODO: coś nie działa
           if (
-            exampleRequestToSend.length + lastElementIndex === exampleResponse.length
+            exampleRequestToSend.length === exampleResponse.length
             && exIndex === responseIndex
           ) {
             const vocabFromResponse = getVocabExampleFromResponse(response, exElement);
