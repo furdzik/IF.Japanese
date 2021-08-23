@@ -8,6 +8,7 @@ import Verbs from '@containers/Verbs/Verbs.reducer';
 import Flashcards from '@containers/Flashcards/Flashcards.reducer';
 import Grammar from '@containers/Grammar/Grammar.reducer';
 import GrammarDetails from '@containers/GrammarDetails/GrammarDetails.reducer';
+import VocabExamples from '@containers/VocabExamples/VocabExamples.reducer';
 
 export default combineReducers({
   Vocabulary,
@@ -17,5 +18,6 @@ export default combineReducers({
   Verbs,
   Flashcards,
   Grammar,
-  GrammarDetails
+  GrammarDetails,
+  VocabExamples
 });

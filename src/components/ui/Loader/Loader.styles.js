@@ -8,8 +8,6 @@ const LoaderWrapper = styled.div`
   bottom: 0;
   z-index: 1000;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background: transparent;
 
   ${(props) => props.covered && css`
@@ -23,6 +21,10 @@ const LoaderWrapper = styled.div`
   `}
   ${(props) => props.transparent && css`
     background: transparent;
+  `}
+  ${(props) => props.center && css`
+    justify-content: center;
+    align-items: center;
   `}
 `;
 

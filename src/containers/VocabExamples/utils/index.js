@@ -1,0 +1,1 @@
+export { getVocabExampleFromResponse } from './getVocabExampleFromResponse';

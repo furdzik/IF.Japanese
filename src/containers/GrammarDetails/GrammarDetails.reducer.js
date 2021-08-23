@@ -33,7 +33,7 @@ export default function(state = initialState, action) {
           tags: [],
           isGrammar: true,
           isCommon: grammar.isCommon,
-          jlpt: [grammar.level.toString()],
+          jlpt: grammar.level,
           levelGroup: grammar.levelGroup,
           grammarOrigin: grammar.origin
         }),

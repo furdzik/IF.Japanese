@@ -21,7 +21,7 @@ export const getSimilarGrammar = (similarGrammar = []) => {
         toRepeat: grammar.toRepeat
       },
       tags: getTags({
-        jlpt: [grammar.level ? grammar.level.toString() : null],
+        jlpt: grammar.level,
         isCommon: grammar.isCommon,
         levelGroup: grammar.levelGroup,
         grammarOrigin: grammar.grammarOrigin

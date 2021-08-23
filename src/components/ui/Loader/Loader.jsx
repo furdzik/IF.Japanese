@@ -16,6 +16,7 @@ const Loader = (props) => {
       fixed={props.fixed}
       static={props.static}
       transparent={props.transparent}
+      center={props.center}
     >
       <Spinner>
         <LoaderIcon />
@@ -45,7 +46,7 @@ Loader.propTypes = {
 };
 
 Loader.defaultProps = {
-  center: false,
+  center: true,
   covered: false,
   fixed: false,
   static: false,

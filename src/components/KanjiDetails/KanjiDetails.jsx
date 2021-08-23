@@ -16,6 +16,8 @@ import DetailsParts from '@components/DetailsParts';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import Tag from '@components/Tag';
 
+import VocabExamples from '@containers/VocabExamples';
+
 import {
   ReadingList,
   ReadingListItem,
@@ -142,14 +144,7 @@ const KanjiDetails = (props) => {
           title: intl.formatMessage(messages.examplesHeader),
           section: (
             <ExampleWrapper>
-              {
-                props.examples.map((example, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <p key={index}>
-                    {example.japanese}: {example.meaning}
-                  </p>
-                ))
-              }
+              <VocabExamples examples={props.examples} />
               <MoreExamplesLink href={`https://jisho.org/search/*${props.kanji}*`} target="_blank">
                 {intl.formatMessage(messages.examplesMoreText)}
               </MoreExamplesLink>
