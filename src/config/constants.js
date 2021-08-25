@@ -162,6 +162,11 @@ export const sectionTypes = {
   OTHER: 'other'
 };
 
+export const characterType = {
+  FURIGANA: 'furigana',
+  KANJI: 'kanji'
+};
+
 /* VOCAB DETAILS */
 export const tagTypes = {
   IS_VERB: 'isVerb',

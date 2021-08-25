@@ -54,16 +54,24 @@ export const getTags = (
   }
 
   if (jlpt) {
-    jlpt.forEach((el) => {
-      if (el !== '0') {
+    if (typeof jlpt === 'object') {
+      jlpt.forEach((el) => {
         newTags.push({
           tagType: tagTypes.JLPT,
           label: el.indexOf(JLPT_TEXT) > -1
             ? el.toUpperCase()
             : `${(messages.jlptText)?.defaultMessage}-${el}`
         });
-      }
-    });
+      });
+    } else {
+      const level = jlpt.toString();
+      newTags.push({
+        tagType: tagTypes.JLPT,
+        label: level.indexOf(JLPT_TEXT) > -1
+          ? level.toUpperCase()
+          : `${(messages.jlptText)?.defaultMessage}-${level}`
+      });
+    }
   }
 
   if (levelGroup) {

@@ -5,7 +5,7 @@ import { fetchKanji, fetchKanjiAlternative } from '@api';
 import { getTags, prepareKanjiDetailsData } from '@utils/commonDetails';
 
 import {
-  getElements,
+  getExamplesWords,
   getSimilarKanjiData
 } from './utils';
 
@@ -51,12 +51,12 @@ export default function(state = initialState, action) {
           inProgress: kanji.inProgress,
           nowLearning: kanji.nowLearning
         },
-        examples: details ? getElements(details?.examples) : null,
+        examples: getExamplesWords(kanji?.kanji, details?.examples),
         metadata: {
           slug: kanji?.kanji
         },
         tags: getTags({
-          jlpt: [kanji.level.toString()],
+          jlpt: kanji.level,
           isJoyo: kanji.joyo,
           isJinmeiyo: kanji.jinmeiyo,
           grade: detailsAlternative.grade,
@@ -107,12 +107,14 @@ export const getKanjiDetails = (name) => (dispatch) => {
     .then(([details, detailsAlternative, ...similarKanjiRes]) => {
       const similarKanji = [];
 
-      similarKanjiRes.forEach((similar) => {
-        similarKanji.push({
-          ...similar,
-          ...kanjiJson.filter((jsonElement) => jsonElement.kanji === similar.kanji)[0]
+      if (similarKanjiRes) {
+        similarKanjiRes.forEach((similar) => {
+          similarKanji.push({
+            ...similar,
+            ...kanjiJson.filter((jsonElement) => jsonElement.kanji === similar.kanji)[0]
+          });
         });
-      });
+      }
 
       dispatch(getKanjiDetailsAction({
         details: details.error ? null : details,

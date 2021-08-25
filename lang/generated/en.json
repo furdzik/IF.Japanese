@@ -194,6 +194,7 @@
   "components.VerbsListItem.verbTypeOtherText": "他",
   "components.VerbsListItem.verbTypeTransitive": "°",
   "components.VerbsListItem.verbTypeTransitiveText": "他動詞",
+  "components.VocabExamples.seeMoreLabel": "Load more",
   "components.VocabularyDetails.SeeAlsoText": "See also: ",
   "components.VocabularyDetails.additionalExplanationHeader": "Additional explanation for the word",
   "components.VocabularyDetails.antonymText": "antonyms: ",

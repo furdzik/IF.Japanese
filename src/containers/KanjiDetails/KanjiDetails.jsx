@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -18,9 +18,19 @@ import selector from './KanjiDetails.selector';
 import { getKanjiDetails } from './KanjiDetails.reducer';
 
 const KanjiDetails = (props) => {
+  const [hasMounted, setHasMounted] = useState(false);
+
   useEffect(() => {
     props.getKanjiDetails(props.kanji);
   }, [props.kanji]);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
 
   return !props.loading ? (
     <KanjiDetailsComponent

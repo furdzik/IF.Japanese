@@ -23,8 +23,11 @@ export const similarKanjiShape = PropTypes.shape({
 export const similarKanjiArrayShape = PropTypes.arrayOf(similarKanjiShape);
 
 export const exampleShape = PropTypes.shape({
-  japanese: PropTypes.string,
-  meaning: PropTypes.string
+  vocab: PropTypes.string,
+  reading: PropTypes.string,
+  meaning: PropTypes.string,
+  status: statusShape,
+  tags: tagsShape
 });
 
 export const examplesShape = PropTypes.arrayOf(exampleShape);

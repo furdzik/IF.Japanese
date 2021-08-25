@@ -56,7 +56,7 @@ const Routes = () => (
 
             return (
               <Layout list={menu} menuActive={menuId.kanji}>
-                <KanjiDetails kanji={kanji} />
+                <KanjiDetails key={kanji} kanji={kanji} />
               </Layout>
             );
           }

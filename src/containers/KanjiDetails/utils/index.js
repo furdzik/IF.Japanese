@@ -1,2 +1,2 @@
-export { getElements } from './getElements';
+export { getExamplesWords } from './getExamplesWords';
 export { getSimilarKanjiData } from './getSimilarKanjiData';

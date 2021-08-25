@@ -7,7 +7,7 @@ export const tagTypeShape = PropTypes.oneOf([
   tagTypes.IS_VERB,
   tagTypes.JLPT,
   tagTypes.JOYO,
-  tagTypes.JINMEIYOU,
+  tagTypes.JINMEIYO,
   tagTypes.OTHER,
   tagTypes.GRADE,
   tagTypes.LEVEL_GROUP,

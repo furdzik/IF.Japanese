@@ -1,4 +1,4 @@
-import { isHiragana } from 'wanakana';
+import { isHiragana, isKanji } from 'wanakana';
 
 import { getKanji } from './getKanji';
 
@@ -15,6 +15,8 @@ export const getFurigana = (kanji, furigana) => {
     if (isHiragana(el.w) && el.w.length > 1) {
       const splitHiragana = el.r.split('');
       furiganaArray = furiganaArray.concat(splitHiragana);
+    } else if (isKanji(el.w) && el.w.length > 1) {
+      furiganaArray.push(...el.r.split(''));
     } else {
       furiganaArray.push(el.r);
     }
