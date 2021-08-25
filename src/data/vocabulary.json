@@ -9650,7 +9650,7 @@
   {
     "vocab": "何度",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0
@@ -32462,7 +32462,7 @@
   {
     "vocab": "苗字",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2

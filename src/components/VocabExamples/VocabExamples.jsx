@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 
 import { v4 as uuidv4 } from 'uuid';
 
+import { characterType } from '@config/constants';
+
 import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamplesShape';
 
 import Tag from '@components/Tag';
+import Character from '@components/Character';
 
 import {
   List,
@@ -20,11 +23,26 @@ import {
   MeaningWrapper
 } from './VocabExamples.styles.js';
 import messages from './VocabExamples.messages';
-import Character from '../Character';
-import { characterType } from '../../config/constants';
 
 const VocabExamples = (props) => {
   const intl = useIntl();
+
+  const kanjiWithFurigana = (el) => (
+    <React.Fragment>
+      <Character
+        type={characterType.FURIGANA}
+        elements={el.japaneseForm?.furigana}
+        mainCharacters={false}
+        small
+      />
+      <Character
+        type={characterType.KANJI}
+        elements={el.japaneseForm?.kanji}
+        mainCharacters={false}
+        small
+      />
+    </React.Fragment>
+  );
 
   return (
     <React.Fragment>
@@ -71,20 +89,17 @@ const VocabExamples = (props) => {
                                     : el.vocab}`
                                 }
                               >
-                                <Character
-                                  type={characterType.FURIGANA}
-                                  elements={el.japaneseForm?.furigana}
-                                  mainCharacters={false}
-                                  small
-                                />
-                                <Character
-                                  type={characterType.KANJI}
-                                  elements={el.japaneseForm?.kanji}
-                                  mainCharacters={false}
-                                  small
-                                />
+                                {kanjiWithFurigana(el)}
                               </Link>
-                            ) : el.vocab
+                            ) : (
+                              <a
+                                href={`https://jisho.org/search/${el.vocab}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {kanjiWithFurigana(el)}
+                              </a>
+                            )
                           }
                         </StyledTile>
                         <MeaningWrapper>

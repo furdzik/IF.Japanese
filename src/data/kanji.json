@@ -7957,9 +7957,9 @@
   },
   {
     "kanji": "私",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 4
@@ -17749,7 +17749,7 @@
   },
   {
     "kanji": "又",
-    "known": false,
+    "known": true,
     "inProgress": false,
     "nowLearning": false,
     "joyo": true,
