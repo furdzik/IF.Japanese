@@ -77,6 +77,7 @@ const VocabExamples = (props) => {
                           known={el.status?.known}
                           nowLearning={el.status?.nowLearning}
                           inProgress={el.status?.inProgress}
+                          joyo={!!el.original}
                           isWideElement
                           noOrder
                         >
