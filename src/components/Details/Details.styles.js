@@ -130,45 +130,6 @@ const CharacterBlock = styled.div`
   text-align: center;
 `;
 
-const OneCharacter = styled.div`
-  width: 5rem;
-`;
-
-const CharacterWrapper = styled.div`
-  display: flex;
-  text-align: center;
-
-  ${(props) => props.furigana && css`
-    font-size: 1.6rem;
-    margin-bottom: -.5rem;
-  `};
-
-  ${(props) => props.small && css`
-    margin-bottom: -.5rem;
-    font-size: 1.6rem;
-
-    ${OneCharacter} {
-      width: 2.5rem;
-    }
-
-    ${props.furigana && css`
-      font-size: 1.2rem;
-    `};
-  `};
-
-  ${breakpointMixin.phablet`
-    font-size: 4rem;
-
-    ${(props) => props.furigana && css`
-      font-size: 1.6rem;
-    `};
-
-     ${OneCharacter} {
-       width: 5rem;
-     }
-  `};
-`;
-
 export {
   DetailsWrapper,
   WordHeader,
@@ -179,7 +140,5 @@ export {
   SectionsWrapper,
   MainSection,
   NameWrapper,
-  CharacterBlock,
-  CharacterWrapper,
-  OneCharacter
+  CharacterBlock
 };

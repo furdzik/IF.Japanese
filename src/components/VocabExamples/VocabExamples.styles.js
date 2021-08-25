@@ -1,34 +1,39 @@
 import styled, { css } from 'styled-components';
 
-// import { breakpointMixin } from '@styles/mixins';
+import { breakpointMixin } from '@styles/mixins';
+
 import Button from '@components/ui/Button';
 import Tile from '@components/ui/Tile';
 
 const List = styled.ul`
-  list-style: none;
   margin-bottom: 2rem;
+  list-style: none;
 `;
 
 const ListItem = styled.li`
   display: inline-block;
-  padding-bottom: 2rem;
+  width: 100%;
+  min-height: 6rem;
   margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px dashed ${(props) => props.theme.mainColors.secondary};
-  width: calc(50% - 1rem);
-  min-height: 6.5rem;
-  &:nth-child(2n) {
-    margin-left: 2rem;
-  }
 
   ${(props) => props.hasTags && css`
     margin-top: 3rem;
+  `}
+
+  ${breakpointMixin.landscapeTablet`
+    width: calc(50% - 1rem);
+    &:nth-child(2n) {
+      margin-left: 2rem;
+    }
   `}
 `;
 
 const ListItemContent = styled.div`
   display: flex;
-  align-items: flex-start;
   flex-wrap: nowrap;
+  align-items: flex-start;
   width: 100%;
   &::before {
     display: inline-block;
@@ -46,8 +51,8 @@ const ListItemContent = styled.div`
 const TagWrapper = styled.div`
   flex-shrink: 0;
   width: 100%;
-  margin-bottom: .5rem;
   margin-top: -3.7rem;
+  margin-bottom: .5rem;
 `;
 
 const ExampleWrapper = styled.div`

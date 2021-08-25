@@ -4,13 +4,14 @@ import { useIntl } from 'react-intl';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { sectionTypes } from '@config/constants';
+import { sectionTypes, characterType } from '@config/constants';
 
 import { japaneseFormShape } from '@types/vocabularyDetailsShape';
 
-import Tag from '@components/Tag';
+import Character from '@components/Character';
 import DetailsHeader from '@components/DetailsHeader';
 import DetailsSection from '@components/DetailsSection';
+import Tag from '@components/Tag';
 
 import {
   DetailsWrapper,
@@ -22,9 +23,7 @@ import {
   MainSection,
   NameWrapper,
   TagsWrapper,
-  CharacterBlock,
-  CharacterWrapper,
-  OneCharacter
+  CharacterBlock
 } from './Details.styles.js';
 import messages from './Details.messages';
 
@@ -81,34 +80,20 @@ const Details = (props) => {
                 <CharacterBlock small={props.japaneseForm?.kanji.length > 5}>
                   {
                     props.japaneseForm?.furigana ? (
-                      <CharacterWrapper
-                        furigana
+                      <Character
+                        type={characterType.FURIGANA}
+                        elements={props.japaneseForm?.furigana}
                         small={props.japaneseForm?.kanji.length > 5}
-                      >
-                        {
-                          props.japaneseForm?.furigana.map((el, index) => (
-                            <OneCharacter key={index}>
-                              {el}
-                            </OneCharacter>
-                          ))
-                        }
-                      </CharacterWrapper>
+                      />
                     ) : null
                   }
                   {
                     props.japaneseForm?.kanji ? (
-                      <CharacterWrapper
-                        kanji
+                      <Character
+                        type={characterType.KANJI}
+                        elements={props.japaneseForm?.kanji}
                         small={props.japaneseForm?.kanji.length > 5}
-                      >
-                        {
-                          props.japaneseForm?.kanji.map((el, index) => (
-                            <OneCharacter key={index}>
-                              {el}
-                            </OneCharacter>
-                          ))
-                        }
-                      </CharacterWrapper>
+                      />
                     ) : props.name
                   }
                 </CharacterBlock>

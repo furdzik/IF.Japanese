@@ -7,6 +7,7 @@ import { URL_SEPARATOR } from '@config/constants';
 
 import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
 import { getTags, prepareKanjiDetailsData } from '@utils/commonDetails';
+import { getKanji, getFurigana } from '@utils/kanji';
 
 import {
   PROPER_NAME_TYPE,
@@ -14,8 +15,6 @@ import {
   getTranslations,
   getAntonyms,
   getOtherForms,
-  getKanji,
-  getFurigana,
   getKanjiParts
 } from './utils';
 

@@ -13,14 +13,14 @@ import { getVocabExamples } from './VocabExamples.reducer';
 const VocabExamples = (props) => {
   useEffect(() => {
     props.getVocabExamples(props.examples);
-  }, [props.examples]);
+  }, []);
 
   return !props.loading ? (
     <VocabExamplesComponent
       getVocabExamples={props.getVocabExamples}
       examples={props.examples}
       vocabExamples={props.vocabExamples}
-      showLoadMoreButton={props.vocabExamples.length < props.examples.length}
+      showLoadMoreButton={props.showLoadMoreButton}
     />
   ) : <Loader center={false} static />;
 };
@@ -29,12 +29,14 @@ VocabExamples.propTypes = {
   getVocabExamples: PropTypes.func.isRequired,
   examples: simpleExamplesShape,
   loading: PropTypes.bool,
+  showLoadMoreButton: PropTypes.bool,
   vocabExamples: vocabExamplesShape
 };
 
 VocabExamples.defaultProps = {
   examples: null,
   loading: false,
+  showLoadMoreButton: false,
   vocabExamples: null
 };
 

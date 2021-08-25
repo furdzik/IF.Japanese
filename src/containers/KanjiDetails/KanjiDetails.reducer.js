@@ -107,12 +107,14 @@ export const getKanjiDetails = (name) => (dispatch) => {
     .then(([details, detailsAlternative, ...similarKanjiRes]) => {
       const similarKanji = [];
 
-      similarKanjiRes.forEach((similar) => {
-        similarKanji.push({
-          ...similar,
-          ...kanjiJson.filter((jsonElement) => jsonElement.kanji === similar.kanji)[0]
+      if (similarKanjiRes) {
+        similarKanjiRes.forEach((similar) => {
+          similarKanji.push({
+            ...similar,
+            ...kanjiJson.filter((jsonElement) => jsonElement.kanji === similar.kanji)[0]
+          });
         });
-      });
+      }
 
       dispatch(getKanjiDetailsAction({
         details: details.error ? null : details,

@@ -3,7 +3,7 @@ import _cloneDeep from 'lodash/cloneDeep';
 import { fetchJisho } from '@api';
 import { getVocabExampleFromResponse } from './utils';
 
-const MAX_REQUESTS_INDEX = 14; // from 0 - 14 indexes = 15 elements
+const MAX_REQUESTS_INDEX = 11; // from 0 - 11 indexes = 12 elements
 
 const actionTypes = {
   GET_VOCAB_EXAMPLES_INIT: 'VOCAB_EXAMPLES/GET_VOCAB_INIT',
@@ -12,17 +12,19 @@ const actionTypes = {
 
 const initialState = {
   loading: true,
+  showLoadMoreButton: false,
   vocabExamples: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_VOCAB_EXAMPLES: {
-      const vocabExamples = action.payload;
+      const { vocabExamples, showLoadMoreButton } = action.payload;
 
       return {
         ...state,
         vocabExamples,
+        showLoadMoreButton,
         loading: false
       };
     }
@@ -30,13 +32,14 @@ export default function(state = initialState, action) {
     case actionTypes.GET_VOCAB_EXAMPLES_INIT: {
       return {
         ...state,
-        vocabExamples: [], // ???
+        ...initialState,
         loading: true
       };
     }
 
-    default:
+    default: {
       return state;
+    }
   }
 }
 
@@ -50,12 +53,10 @@ const getVocabExamplesAction = (payload) => ({
 });
 
 export const getVocabExamples = (examples, lastElementIndex = 0) => (dispatch, getStore) => {
-  console.log('examples', examples, lastElementIndex);
   if (lastElementIndex === 0) {
     dispatch(getVocabExamplesInitAction());
   }
 
-  console.log('vocabExamples', getStore().VocabExamples.vocabExamples);
   const exampleToSend = examples
     .filter((el, index) => (index <= lastElementIndex + MAX_REQUESTS_INDEX)
       && index >= lastElementIndex && index < examples.length);
@@ -87,7 +88,10 @@ export const getVocabExamples = (examples, lastElementIndex = 0) => (dispatch, g
         });
       });
 
-      dispatch(getVocabExamplesAction(newVocabExamples));
+      dispatch(getVocabExamplesAction({
+        vocabExamples: newVocabExamples,
+        showLoadMoreButton: lastElementIndex + MAX_REQUESTS_INDEX < examples.length
+      }));
     })
     .catch((error) => {
       throw new Error(error);

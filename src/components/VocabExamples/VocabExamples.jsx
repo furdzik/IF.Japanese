@@ -20,11 +20,12 @@ import {
   MeaningWrapper
 } from './VocabExamples.styles.js';
 import messages from './VocabExamples.messages';
+import Character from '../Character';
+import { characterType } from '../../config/constants';
 
 const VocabExamples = (props) => {
   const intl = useIntl();
 
-  // console.log(props.examples);
   return (
     <React.Fragment>
       {
@@ -58,7 +59,6 @@ const VocabExamples = (props) => {
                           known={el.status?.known}
                           nowLearning={el.status?.nowLearning}
                           inProgress={el.status?.inProgress}
-                          furigana={el.reading}
                           isWideElement
                           noOrder
                         >
@@ -71,7 +71,18 @@ const VocabExamples = (props) => {
                                     : el.vocab}`
                                 }
                               >
-                                {el.vocab}
+                                <Character
+                                  type={characterType.FURIGANA}
+                                  elements={el.japaneseForm?.furigana}
+                                  mainCharacters={false}
+                                  small
+                                />
+                                <Character
+                                  type={characterType.KANJI}
+                                  elements={el.japaneseForm?.kanji}
+                                  mainCharacters={false}
+                                  small
+                                />
                               </Link>
                             ) : el.vocab
                           }

@@ -1,6 +1,6 @@
 import vocabJson from '@data/vocabulary.json';
 
-export const getExamplesWords = (kanji, examples) => {
+export const getExamplesWords = (kanji, examples = []) => {
   const exampleWords = [];
 
   const ownExamples = vocabJson.filter((el) => el.vocab.indexOf(kanji) !== -1);
