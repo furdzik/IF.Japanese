@@ -103,6 +103,7 @@ const MainSection = styled.div`
   ${(props) => props.wide && css`
     ${breakpointMixin.laptop`
       width: 100%;
+      max-width: none;
     `}
   `}
 `;

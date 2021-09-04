@@ -60,15 +60,16 @@ const DetailsParts = (props) => (
 );
 
 DetailsParts.propTypes = {
-  children: PropTypes.node.isRequired,
   element: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  children: PropTypes.node,
   isWideElement: PropTypes.bool,
   status: statusShape,
   tags: tagsShape
 };
 
 DetailsParts.defaultProps = {
+  children: '',
   isWideElement: false,
   tags: [],
   status: null

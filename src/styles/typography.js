@@ -11,20 +11,17 @@ const fontFamily = {
 
 const fontSize = {
   base: '62.5%',
-  // @TODO: change to my typography
-  headingLarge: '',
-  headingBig: '',
-  headingMedium: '',
-  headingSmall: '',
+  headingBig: '2.7rem',
+  headingMedium: '2.5rem',
+  headingSmall: '2.2rem',
   medium: '2rem',
   normal: '1.8rem',
   small: '1.6rem',
   extraSmall: '1.4rem',
   desktop: {
-    headingLarge: '',
-    headingBig: '',
-    headingMedium: '',
-    headingSmall: '',
+    headingBig: '2.7rem',
+    headingMedium: '2.5rem',
+    headingSmall: '2.2rem',
     medium: '2rem',
     normal: '1.8rem',
     small: '1.6rem',
@@ -34,7 +31,6 @@ const fontSize = {
 
 const lineHeight = {
   normal: 1.5
-  // @TODO: change to my typography
 };
 const fontWeight = {
   light: 100,

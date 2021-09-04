@@ -37,10 +37,11 @@ export default function(state = initialState, action) {
           levelGroup: grammar.levelGroup,
           grammarOrigin: grammar.origin
         }),
-        similarGrammar: getSimilarGrammar(grammar.similarGrammar),
+        similarGrammar: getSimilarGrammar(grammar.grammarId),
         examples: grammar.examples,
-        explanation: grammar.explanation,
+        shortExplanation: grammar.shortExplanation,
         problems: grammar.problems,
+        wide: grammar.wide,
         loading: false
       };
     }

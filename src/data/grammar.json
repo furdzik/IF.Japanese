@@ -15,14 +15,7 @@
         "originChapter": ["Introduction"]
       }
     ],
-    "explanation": "some explanation start",
-    "examples": [
-      "...",
-      "..."
-    ],
-    "similarGrammar": [
-      "n1han2desu"
-    ]
+    "wide": true
   },
   {
     "grammarId": "joshi",
@@ -36,12 +29,8 @@
     "isCommon": true,
     "origin": [],
     "originChapter": null,
-    "explanation": "some explanation joshi",
-    "examples": null,
-    "similarGrammar": [
-      "josuushi",
-      "interrogative"
-    ]
+    "shortExplanation": "some explanation joshi",
+    "examples": null
   },
   {
     "grammarId": "josuushi",
@@ -55,11 +44,29 @@
     "isCommon": true,
     "origin": [],
     "originChapter": null,
-    "explanation": "some explanation josuushi",
-    "examples": null,
-    "similarGrammar": [
-      "joshi",
-      "interrogative"
+    "shortExplanation": "some explanation josuushi",
+    "examples": null
+  },
+  {
+    "grammarId": "interrogative",
+    "grammarName": "疑問詞",
+    "known": false,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": true,
+    "level": 5,
+    "levelGroup": "all",
+    "isCommon": true,
+    "origin": [
+    ],
+    "shortExplanation": "some explanation interrogative",
+    "examples": [
+      "...",
+      "..."
+    ],
+    "problems": [
+      "speaking",
+      "writhing"
     ]
   },
   {
@@ -82,10 +89,10 @@
         "originChapter": ["1"]
       }
     ],
-    "explanation": "some explanation n1han2desu",
+    "shortExplanation": "Basic construction of a sentence",
     "examples": [
-      "...",
-      "..."
+      "私はイザベラです。",
+      "私は会社員です。"
     ]
   },
   {
@@ -108,7 +115,7 @@
         "originChapter": ["1"]
       }
     ],
-    "explanation": "some explanation k-s-a",
+    "shortExplanation": "some explanation k-s-a",
     "examples": [
       "...",
       "..."
@@ -116,32 +123,6 @@
     "problems": [
       "speaking",
       "writhing"
-    ]
-  },
-  {
-    "grammarId": "interrogative",
-    "grammarName": "疑問詞",
-    "known": false,
-    "toRepeat": false,
-    "nowLearning": false,
-    "inProgress": true,
-    "level": 5,
-    "levelGroup": "all",
-    "isCommon": true,
-    "origin": [
-    ],
-    "explanation": "some explanation interrogative",
-    "examples": [
-      "...",
-      "..."
-    ],
-    "problems": [
-      "speaking",
-      "writhing"
-    ],
-    "similarGrammar": [
-      "joshi",
-      "josuushi"
     ]
   },
   {
@@ -164,13 +145,10 @@
         "originChapter": ["25"]
       }
     ],
-    "explanation": "some explanation kara",
+    "shortExplanation": "some explanation kara",
     "examples": [
       "...",
       "..."
-    ],
-    "similarGrammar": [
-      "tame2"
     ]
   },
   {
@@ -185,13 +163,10 @@
     "isCommon": false,
     "origin": [
     ],
-    "explanation": "some explanation tame",
+    "shortExplanation": "some explanation tame",
     "examples": [
       "...",
       "..."
-    ],
-    "similarGrammar": [
-      "kara"
     ]
   }
 ]

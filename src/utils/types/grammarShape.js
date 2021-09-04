@@ -6,7 +6,7 @@ export const examplesShape = PropTypes.arrayOf(PropTypes.string);
 
 export const problemsShape = PropTypes.arrayOf(PropTypes.string);
 
-export const explanationShape = PropTypes.string;
+export const shortExplanationShape = PropTypes.string;
 
 const grammarItem = {
   grammarId: PropTypes.string,
@@ -18,7 +18,7 @@ const grammarItem = {
   level: PropTypes.number,
   levelGroup: PropTypes.string,
   originChapter: PropTypes.arrayOf(PropTypes.string),
-  explanation: explanationShape,
+  explanation: shortExplanationShape,
   examples: examplesShape,
   problems: problemsShape
 };

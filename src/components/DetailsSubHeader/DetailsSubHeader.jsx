@@ -6,15 +6,22 @@ import {
 } from './DetailsSubHeader.styles.js';
 
 const DetailsSubHeader = (props) => (
-  <Title className={props.className}>{props.children}</Title>
+  <Title
+    className={props.className}
+    bigger={props.bigger}
+  >
+    {props.children}
+  </Title>
 );
 
 DetailsSubHeader.propTypes = {
   children: PropTypes.node.isRequired,
+  bigger: PropTypes.bool,
   className: PropTypes.string
 };
 
 DetailsSubHeader.defaultProps = {
+  bigger: false,
   className: ''
 };
 

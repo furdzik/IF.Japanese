@@ -108,8 +108,8 @@
   },
   {
     "vocab": "文",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3
@@ -9220,7 +9220,7 @@
   {
     "vocab": "例文",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0
@@ -24137,6 +24137,14 @@
     "level": 3
   },
   {
+    "vocab": "インドネシア",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
     "vocab": "旅",
     "known": false,
     "inProgress": false,
@@ -30122,6 +30130,7 @@
   },
   {
     "vocab": "節",
+    "meaning": "ふし",
     "known": false,
     "inProgress": false,
     "nowLearning": false,
@@ -30252,8 +30261,8 @@
   },
   {
     "vocab": "語",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3
@@ -42768,7 +42777,7 @@
   {
     "vocab": "目次",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2
@@ -49529,6 +49538,87 @@
   },
   {
     "vocab": "存続",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "ロマンチック",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "節",
+    "meaning": "せつ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "行",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "フォーム",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "修飾",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "肯定",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "主題",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "インド",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "タイ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "エンジニア",
     "known": false,
     "inProgress": false,
     "nowLearning": false,

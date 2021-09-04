@@ -7,7 +7,7 @@ import {
   examplesShape,
   similarGrammarDetailsShape,
   problemsShape,
-  explanationShape
+  shortExplanationShape
 } from '@types/grammarShape';
 
 import Details from '@components/Details';
@@ -20,7 +20,8 @@ import { getComponentGrammar } from './utils';
 import {
   MainSectionWrapper,
   ExamplesWrapper,
-  ProblemsWrapper
+  ProblemsWrapper,
+  ShortExplanationWrapper
 } from './GrammarDetails.styles.js';
 import messages from './GrammarDetails.messages';
 
@@ -43,7 +44,7 @@ const GrammarDetails = (props) => {
 
   return (
     <Details
-      name={props.grammarName}
+      name={!props.wide ? props.grammarName : null}
       known={props.status?.known}
       inProgress={props.status?.inProgress}
       nowLearning={props.status?.nowLearning}
@@ -52,14 +53,12 @@ const GrammarDetails = (props) => {
       mainSectionHeader={intl.formatMessage(messages.mainHeader)}
       mainSection={(
         <MainSectionWrapper>
-          {
-            props.explanation ? (
-              <div>{props.explanation}</div>
-            ) : null
-          }
           {ComponentGrammar}
         </MainSectionWrapper>
       )}
+      additionalBox={props.shortExplanation ? (
+        <ShortExplanationWrapper>{props.shortExplanation}</ShortExplanationWrapper>
+      ) : null}
       secondarySection={props.similarGrammar?.length ? (
         <React.Fragment>
           <DetailsSubHeader>
@@ -119,18 +118,20 @@ GrammarDetails.propTypes = {
   grammarName: PropTypes.string.isRequired,
   status: statusShape.isRequired,
   examples: examplesShape,
-  explanation: explanationShape,
+  shortExplanation: shortExplanationShape,
   problems: problemsShape,
   similarGrammar: similarGrammarDetailsShape,
-  tags: tagsShape
+  tags: tagsShape,
+  wide: PropTypes.bool
 };
 
 GrammarDetails.defaultProps = {
   examples: [],
-  explanation: null,
+  shortExplanation: null,
   problems: [],
   similarGrammar: [],
-  tags: []
+  tags: [],
+  wide: false
 };
 
 export default GrammarDetails;

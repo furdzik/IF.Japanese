@@ -18,5 +18,6 @@ export const colors = {
   lightGray: '#eeeeee',
   gray: '#dbdbdb',
   darkGray: '#b8b8b8',
+  veryDarkGray: '#5a5a5a',
   black: '#000000'
 };
