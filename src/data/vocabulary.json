@@ -21290,11 +21290,26 @@
   },
   {
     "vocab": "食事",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "食事",
+      "verbGroup": "special1",
+      "verbType": "transitive"
+    },
+    "problems": [
+      {
+        "problem": "食事 is suru verb, that's why we can say:「食事します」 or 「食事をします」. Not 「食事を食べる」.",
+        "frequency": 1,
+        "resolved": false,
+        "info": [
+          "I did that only once so far."
+        ]
+      }
+    ]
   },
   {
     "vocab": "行動",

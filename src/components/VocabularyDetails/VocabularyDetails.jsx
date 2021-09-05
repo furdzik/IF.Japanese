@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { grammarTypes, tagTypes } from '@config/constants';
 
 import { verbItemShape } from '@types/verbShape';
-import { statusShape, tagsShape, metadataShape } from '@types/commonDetailsShape';
+import { statusShape, tagsShape, metadataShape, problemsShape } from '@types/commonDetailsShape';
 import {
   japaneseFormShape,
   translationsShape,
@@ -221,6 +221,19 @@ const VocabularyDetails = (props) => {
               }
             </AdditionalExplanationWrapper>
           ) : null
+        },
+        {
+          title: intl.formatMessage(messages.problemsHeader),
+          section: props.problems ? (
+            <AdditionalExplanationWrapper>
+              {
+                props.problems.map((el, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <div key={index}>{el.problem}</div>
+                ))
+              }
+            </AdditionalExplanationWrapper>
+          ) : null
         }
       ]}
     >
@@ -338,6 +351,7 @@ VocabularyDetails.propTypes = {
   japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
   otherForms: otherFormsShape,
+  problems: problemsShape,
   tags: tagsShape,
   verb: verbItemShape
 };
@@ -349,6 +363,7 @@ VocabularyDetails.defaultProps = {
   japaneseForm: null,
   kanjiParts: null,
   otherForms: null,
+  problems: null,
   tags: null,
   verb: null
 };

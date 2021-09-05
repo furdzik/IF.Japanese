@@ -1,0 +1,19 @@
+[
+  {
+    "grammar": "interrogative",
+    "problems": [
+      {
+        "problem": "speaking",
+        "frequency": 5,
+        "resolved": false,
+        "info": []
+      },
+      {
+        "problem": "writing",
+        "frequency": 5,
+        "resolved": false,
+        "info": []
+      }
+    ]
+  }
+]

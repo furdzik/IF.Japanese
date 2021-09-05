@@ -2,12 +2,11 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { statusShape, tagsShape } from '@types/commonDetailsShape';
+import { statusShape, tagsShape, problemsShape } from '@types/commonDetailsShape';
 import {
   examplesShape,
   shortExplanationShape,
-  similarGrammarDetailsShape,
-  problemsShape
+  similarGrammarDetailsShape
 } from '@types/grammarShape';
 
 import Loader from '@components/ui/Loader';

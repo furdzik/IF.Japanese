@@ -63,7 +63,7 @@ const StrokeNumber = styled.span`
   height: 4rem;
   margin-right: 1rem;
   border-radius: 50%;
-  background: ${(props) => props.theme.mainColors.secondary};
+  background: ${(props) => props.theme.colors.lightGray};
   vertical-align: middle;
 `;
 

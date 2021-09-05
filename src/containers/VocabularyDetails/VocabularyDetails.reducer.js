@@ -75,6 +75,7 @@ export default function(state = initialState, action) {
         antonyms: getAntonyms(data.antonyms, data.details.senses),
         otherForms: getOtherForms(data.details.japanese),
         additionalExplanation: data.additionalExplanation,
+        problems: data.problems,
         examples: data.examples,
         kanjiParts: prepareKanjiDetailsData(data.kanjiDetails),
         verb: data.verb ? {

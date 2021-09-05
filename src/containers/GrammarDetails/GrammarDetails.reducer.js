@@ -2,7 +2,11 @@ import grammarJson from '@data/grammar.json';
 
 import { getTags } from '@utils/commonDetails';
 
-import { getSimilarGrammar } from './utils';
+import {
+  getProblems,
+  getSimilarGrammar,
+  prepareExamples
+} from './utils';
 
 const actionTypes = {
   GET_GRAMMAR_DETAILS_INIT: 'GRAMMAR/GET_GRAMMAR_DETAILS_INIT',
@@ -38,9 +42,11 @@ export default function(state = initialState, action) {
           grammarOrigin: grammar.origin
         }),
         similarGrammar: getSimilarGrammar(grammar.grammarId),
-        examples: grammar.examples,
+        examples: grammar.examples
+          ? prepareExamples(grammar.examples?.keys, grammar.examples?.examples)
+          : null,
         shortExplanation: grammar.shortExplanation,
-        problems: grammar.problems,
+        problems: getProblems(grammar.grammarId),
         wide: grammar.wide,
         loading: false
       };

@@ -8,11 +8,11 @@ export const colors = {
   lightBlue: '#33d6ff',
   lightGreen: '#15bb00',
   green: '#00952c',
-  yellow: '#ffb300',
+  yellow: '#ffd400',
   orange: '#ff4800',
+  neonPink: '#fa24e9',
   violet: '#8d08b5',
   lightViolet: '#8350c7',
-  neonPink: '#fa24e9',
 
   white: '#ffffff',
   lightGray: '#eeeeee',

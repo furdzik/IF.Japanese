@@ -10,6 +10,7 @@ export default defineMessages({
   restrictionsText: 'Only applies to',
   conjugationText: 'conjugation',
   kanjiPartsHeader: 'Kanji in this word',
+  problemsHeader: 'Problems',
   SeeAlsoText: 'See also:\u2000',
   sourceText: '外来語: from {language} word: {word}',
   kanjiPartsKunLabel: 'Kun:\u2000',

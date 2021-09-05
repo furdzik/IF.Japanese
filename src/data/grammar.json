@@ -59,18 +59,10 @@
     "isCommon": true,
     "origin": [
     ],
-    "shortExplanation": "some explanation interrogative",
-    "examples": [
-      "...",
-      "..."
-    ],
-    "problems": [
-      "speaking",
-      "writhing"
-    ]
+    "shortExplanation": "some explanation interrogative"
   },
   {
-    "grammarId": "n1han2desu",
+    "grammarId": "n1wan2desu",
     "grammarName": "N₁はN₂です",
     "known": true,
     "toRepeat": false,
@@ -90,13 +82,49 @@
       }
     ],
     "shortExplanation": "Basic construction of a sentence",
-    "examples": [
-      "私はイザベラです。",
-      "私は会社員です。"
-    ]
+    "examples": {
+      "keys": ["は", "です"],
+      "examples": [
+        ["私", "は", "イザベラ", "です", "。"],
+        ["私", "は", "会社員", "です", "。"],
+        ["私", "は", "ポーランド人", "です", "。"],
+        ["これ", "は", "ペン", "です", "。"]
+      ]
+    }
   },
   {
-    "grammarId": "k-s-a",
+    "grammarId": "n1wan2janaidesu",
+    "grammarName": "N₁はN₂じゃないです",
+    "known": true,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "elementary",
+    "isCommon": true,
+    "origin": [
+      {
+        "originName": "minnaNoNihongo1",
+        "originChapter": ["1"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["1"]
+      }
+    ],
+    "shortExplanation": "Basic construction of a negative sentence",
+    "examples": {
+      "keys": ["は", "じゃないです"],
+      "examples": [
+        ["私", "は", "イザベラ", "じゃないです", "。"],
+        ["私", "は", "会社員", "じゃないです", "。"],
+        ["私", "は", "ポーランド人", "じゃないです", "。"],
+        ["これ", "は", "ペン", "じゃないです", "。"]
+      ]
+    }
+  },
+  {
+    "grammarId": "ko-so-a",
     "grammarName": "こ〜 ／そ〜 ／あ〜",
     "known": false,
     "toRepeat": true,
@@ -116,14 +144,14 @@
       }
     ],
     "shortExplanation": "some explanation k-s-a",
-    "examples": [
-      "...",
-      "..."
-    ],
-    "problems": [
-      "speaking",
-      "writhing"
-    ]
+    "examples": {
+      "keys": ["あれ", "これ", "それ", "あの", "この", "その"],
+      "examples": [
+        ["これ", "は", "ペン", "です", "。"],
+        ["これ", "は", "ペン", "じゃないです", "。"],
+        ["この", "ペン", "は", "あかい", "です", "。"]
+      ]
+    }
   },
   {
     "grammarId": "kara",
@@ -146,10 +174,12 @@
       }
     ],
     "shortExplanation": "some explanation kara",
-    "examples": [
-      "...",
-      "..."
-    ]
+    "examples": {
+      "keys": ["から"],
+      "examples": [
+        ["この", "服", "は", "きれい", "です", "から", "、", "買います", "。"]
+      ]
+    }
   },
   {
     "grammarId": "tame2",
@@ -161,12 +191,7 @@
     "level": 5,
     "levelGroup": "elementary",
     "isCommon": false,
-    "origin": [
-    ],
-    "shortExplanation": "some explanation tame",
-    "examples": [
-      "...",
-      "..."
-    ]
+    "origin": [],
+    "shortExplanation": "some explanation tame"
   }
 ]

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
+import { v4 as uuidv4 } from 'uuid';
 
-import { statusShape, tagsShape } from '@types/commonDetailsShape';
+import { statusShape, tagsShape, problemsShape } from '@types/commonDetailsShape';
 import {
   examplesShape,
   similarGrammarDetailsShape,
-  problemsShape,
   shortExplanationShape
 } from '@types/grammarShape';
 
@@ -20,6 +20,8 @@ import { getComponentGrammar } from './utils';
 import {
   MainSectionWrapper,
   ExamplesWrapper,
+  ExampleWord,
+  ExampleElement,
   ProblemsWrapper,
   ShortExplanationWrapper
 } from './GrammarDetails.styles.js';
@@ -87,9 +89,21 @@ const GrammarDetails = (props) => {
           section: (
             <ExamplesWrapper>
               {
-                props.examples.map((el, index) => (
+                props.examples.map((example) => (
                   // eslint-disable-next-line react/no-array-index-key
-                  <div key={index}>{el}</div>
+                  <ExampleWord key={uuidv4()}>
+                    {
+                      example.map((el) => (
+                        <ExampleElement
+                          key={uuidv4()}
+                          isGrammarWord={el.grammarWord}
+                          grammarWordIndex={el.grammarWordIndex}
+                        >
+                          {el.word}
+                        </ExampleElement>
+                      ))
+                    }
+                  </ExampleWord>
                 ))
               }
             </ExamplesWrapper>
@@ -102,7 +116,7 @@ const GrammarDetails = (props) => {
               {
                 props.problems.map((el, index) => (
                   // eslint-disable-next-line react/no-array-index-key
-                  <div key={index}>{el}</div>
+                  <div key={index}>{el.problem}</div>
                 ))
               }
             </ProblemsWrapper>
@@ -118,8 +132,8 @@ GrammarDetails.propTypes = {
   grammarName: PropTypes.string.isRequired,
   status: statusShape.isRequired,
   examples: examplesShape,
-  shortExplanation: shortExplanationShape,
   problems: problemsShape,
+  shortExplanation: shortExplanationShape,
   similarGrammar: similarGrammarDetailsShape,
   tags: tagsShape,
   wide: PropTypes.bool

@@ -7607,7 +7607,7 @@
   {
     "kanji": "疑",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,

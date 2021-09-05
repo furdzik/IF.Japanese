@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { verbItemShape } from '@types/verbShape';
-import { statusShape, tagsShape, metadataShape } from '@types/commonDetailsShape';
+import {
+  statusShape,
+  tagsShape,
+  metadataShape,
+  problemsShape
+} from '@types/commonDetailsShape';
 import {
   japaneseFormShape,
   translationsShape,
@@ -39,6 +44,7 @@ const VocabularyDetails = (props) => {
       status={props.status}
       translations={props.translations}
       additionalExplanation={props.additionalExplanation}
+      problems={props.problems}
       antonyms={props.antonyms}
       examples={props.examples}
       japaneseForm={props.japaneseForm}
@@ -64,6 +70,7 @@ VocabularyDetails.propTypes = {
   japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
   otherForms: otherFormsShape,
+  problems: problemsShape,
   tags: tagsShape,
   verb: verbItemShape
 };
@@ -75,6 +82,7 @@ VocabularyDetails.defaultProps = {
   japaneseForm: null,
   kanjiParts: null,
   otherForms: null,
+  problems: null,
   tags: null,
   verb: null
 };

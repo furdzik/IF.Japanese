@@ -14,6 +14,15 @@ export const tagTypeShape = PropTypes.oneOf([
   tagTypes.GRAMMAR_ORIGIN
 ]);
 
+export const problemShape = PropTypes.shape({
+  problem: PropTypes.string,
+  frequency: PropTypes.number, // scale: from 1 - 10
+  resolved: PropTypes.bool,
+  info: PropTypes.arrayOf(PropTypes.string)
+});
+
+export const problemsShape = PropTypes.arrayOf(problemShape);
+
 export const tagShape = PropTypes.shape({
   tagType: tagTypeShape,
   label: PropTypes.string

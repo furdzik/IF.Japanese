@@ -5,7 +5,8 @@ import {
   tagsShape,
   statusShape,
   kanjiReadingShape,
-  metadataShape
+  metadataShape,
+  problemsShape
 } from '@types/commonDetailsShape';
 
 export const japaneseFormShape = PropTypes.shape({
@@ -64,6 +65,7 @@ export const vocabularyDetailsShape = PropTypes.shape({
   antonyms: PropTypes.arrayOf(PropTypes.string),
   otherForms: otherFormsShape,
   additionalExplanation: PropTypes.string,
+  problems: problemsShape,
   examples: PropTypes.arrayOf(PropTypes.string),
   kanjiParts: kanjiPartsShape,
   verb: verbShape
