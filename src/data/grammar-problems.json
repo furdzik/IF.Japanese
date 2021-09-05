@@ -1,35 +1,22 @@
 [
   {
-    "grammar": "interrogative",
-    "problems": [
-      {
-        "problem": "speaking",
-        "frequency": 5,
-        "resolved": false,
-        "info": []
-      },
-      {
-        "problem": "writing",
-        "frequency": 5,
-        "resolved": false,
-        "info": []
-      }
-    ]
-  },
-  {
     "grammar": "n1wan2desu",
     "problems": [
       {
         "problem": "speaking",
         "frequency": 5,
         "resolved": false,
-        "info": []
+        "info": [
+          "I have problem with this and this"
+        ]
       },
       {
         "problem": "writing",
         "frequency": 5,
         "resolved": false,
-        "info": []
+        "info": [
+          "I have problem with this and this"
+        ]
       }
     ]
   }

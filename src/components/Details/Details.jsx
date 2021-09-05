@@ -75,9 +75,12 @@ const Details = (props) => {
         <DetailsHeader>{props.mainSectionHeader}</DetailsHeader>
         <SectionsWrapper>
           <DetailsSection type={sectionTypes.PRIMARY} wide={!props.secondarySection}>
-            <DetailsSection type={sectionTypes.NAME}>
+            <DetailsSection
+              type={sectionTypes.NAME}
+              wide={props.japaneseForm?.kanji.length > 5 || props.wide}
+            >
               {
-                props.name ? (
+                props.name && !props.wide ? (
                   <NameWrapper>
                     <CharacterBlock small={props.japaneseForm?.kanji.length > 5}>
                       {
@@ -109,7 +112,7 @@ const Details = (props) => {
               }
               {
                 props.mainSection ? (
-                  <MainSection wide={props.japaneseForm?.kanji.length > 5 || !props.name}>
+                  <MainSection wide={props.japaneseForm?.kanji.length > 5 || props.wide}>
                     {props.mainSection}
                   </MainSection>
                 ) : null
@@ -119,7 +122,11 @@ const Details = (props) => {
               props.sections ? props.sections.map((section) => (
                 section?.section ? (
                   <DetailsSection key={uuidv4()}>
-                    <DetailsHeader>{section.title}</DetailsHeader>
+                    {
+                      section.title ? (
+                        <DetailsHeader>{section.title}</DetailsHeader>
+                      ) : null
+                    }
                     {section?.section}
                   </DetailsSection>
                 ) : null
@@ -158,7 +165,8 @@ Details.propTypes = {
     section: PropTypes.node
   })),
   tags: PropTypes.arrayOf(PropTypes.node),
-  toRepeat: PropTypes.bool
+  toRepeat: PropTypes.bool,
+  wide: PropTypes.bool
 };
 
 Details.defaultProps = {
@@ -174,7 +182,8 @@ Details.defaultProps = {
   secondarySection: null,
   sections: null,
   tags: null,
-  toRepeat: null
+  toRepeat: null,
+  wide: false
 };
 
 export default Details;

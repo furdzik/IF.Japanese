@@ -13,8 +13,10 @@ import {
 import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
 
 import Details from '@components/Details';
+import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
+import DetailsProblems from '@components/DetailsProblems';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import Tag from '@components/Tag';
 
@@ -158,29 +160,19 @@ const KanjiDetails = (props) => {
           )
         } : null,
         props.additionalExplanation ? {
-          title: intl.formatMessage(messages.additionalExplanationHeader),
           section: (
-            <ExampleWrapper>
-              {
-                props.additionalExplanation.map((el, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <div key={index}>{el}</div>
-                ))
-              }
-            </ExampleWrapper>
+            <DetailsAdditionalExplanation
+              header={intl.formatMessage(messages.additionalExplanationHeader)}
+              additionalExplanation={props.additionalExplanation}
+            />
           )
         } : null,
-        props.problems ? {
-          title: intl.formatMessage(messages.problemsHeader),
+        props.problems?.length ? {
           section: (
-            <ExampleWrapper>
-              {
-                props.problems.map((el, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <div key={index}>{el.problem}</div>
-                ))
-              }
-            </ExampleWrapper>
+            <DetailsProblems
+              header={intl.formatMessage(messages.problemsHeader)}
+              problems={props.problems}
+            />
           )
         } : null
       ]}
@@ -204,6 +196,7 @@ KanjiDetails.propTypes = {
 };
 
 KanjiDetails.defaultProps = {
+  additionalExplanation: null,
   examples: null,
   meaning: null,
   metadata: null,

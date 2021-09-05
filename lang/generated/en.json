@@ -1,9 +1,10 @@
 {
   "components.Details.jishoLinkText": "Jisho link",
+  "components.DetailsProblems.content": "© 2021 All rights reserved",
   "components.Flashcards.switcherLabel": "裏だけ",
   "components.Flashcards.title": "暗記",
-  "components.Footer.content": "© 2021 All rights reserved",
-  "components.GrammarDetails.additionalExplanationsHeader": "Additional explanation for this grammar",
+  "components.Footer.content": "IZABELA FURDZIK © 2021 All rights reserved",
+  "components.GrammarDetails.additionalExplanationHeader": "Additional explanation for this grammar",
   "components.GrammarDetails.examplesHeader": "Examples",
   "components.GrammarDetails.mainHeader": "Grammar explanation",
   "components.GrammarDetails.problemsHeader": "My problems",

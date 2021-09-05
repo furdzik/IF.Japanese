@@ -49688,6 +49688,21 @@
     "level": 0
   },
   {
+    "vocab": "ポーランド",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "problems": [
+      {
+        "problem": "Long vowels",
+        "frequency": 7,
+        "resolved": false
+      }
+    ],
+    "level": 0
+  },
+  {
     "vocab": "エンジニア",
     "known": false,
     "inProgress": false,

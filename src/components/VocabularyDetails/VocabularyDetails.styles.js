@@ -70,7 +70,7 @@ const AntonymsLink = styled(Link)`
   color: ${(props) => props.theme.mainColors.primary};
 `;
 
-const AdditionalExplanationWrapper = styled.div`
+const ExamplesWrapper = styled.div`
   margin-bottom: 6rem;
 `;
 
@@ -89,6 +89,6 @@ export {
   PartOfSpeechBox,
   AntonymsBox,
   AntonymsLink,
-  AdditionalExplanationWrapper,
+  ExamplesWrapper,
   OtherFormsWrapper
 };

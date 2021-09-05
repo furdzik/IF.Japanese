@@ -11,9 +11,9 @@ const fontFamily = {
 
 const fontSize = {
   base: '62.5%',
-  headingBig: '2.7rem',
-  headingMedium: '2.5rem',
-  headingSmall: '2.2rem',
+  headingBig: '2.2rem',
+  headingMedium: '2rem',
+  headingSmall: '1.8rem',
   medium: '2rem',
   normal: '1.8rem',
   small: '1.6rem',

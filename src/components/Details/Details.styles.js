@@ -85,6 +85,8 @@ const Content = styled.div`
 `;
 
 const SectionsWrapper = styled.div`
+  width: 100%;
+
   ${breakpointMixin.laptop`
     display: flex;
     flex-wrap: wrap;

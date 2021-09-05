@@ -215,3 +215,8 @@ export const grammarOriginTypes = {
 };
 
 export const GRAMMAR_HAS_TO_REPEAT = true;
+
+export const DETAILS_HEADER_ICON_TYPES = {
+  problem: 'problem',
+  attention: 'attention'
+};

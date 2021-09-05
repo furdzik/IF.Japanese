@@ -16,8 +16,10 @@ import {
 } from '@types/grammarShape';
 
 import Details from '@components/Details';
+import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
+import DetailsProblems from '@components/DetailsProblems';
 import Tag from '@components/Tag';
 
 import { getComponentGrammar } from './utils';
@@ -48,10 +50,11 @@ const GrammarDetails = (props) => {
 
     return tags;
   };
-  console.log(props);
+
   return (
     <Details
-      name={!props.wide ? props.grammarName : null}
+      name={props.grammarName}
+      wide={props.wide}
       known={props.status?.known}
       inProgress={props.status?.inProgress}
       nowLearning={props.status?.nowLearning}
@@ -95,7 +98,6 @@ const GrammarDetails = (props) => {
             <ExamplesWrapper>
               {
                 props.examples.map((example) => (
-                  // eslint-disable-next-line react/no-array-index-key
                   <ExampleWord key={uuidv4()}>
                     {
                       example.map((el) => (
@@ -115,29 +117,19 @@ const GrammarDetails = (props) => {
           )
         } : null,
         props.additionalExplanation ? {
-          title: intl.formatMessage(messages.additionalExplanationHeader),
           section: (
-            <ProblemsWrapper>
-              {
-                props.additionalExplanation.map((el, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <div key={index}>{el}</div>
-                ))
-              }
-            </ProblemsWrapper>
+            <DetailsAdditionalExplanation
+              header={intl.formatMessage(messages.additionalExplanationHeader)}
+              additionalExplanation={props.additionalExplanation}
+            />
           )
         } : null,
         props.problems?.length ? {
-          title: intl.formatMessage(messages.problemsHeader),
           section: (
-            <ProblemsWrapper>
-              {
-                props.problems.map((el, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <div key={index}>{el.problem}</div>
-                ))
-              }
-            </ProblemsWrapper>
+            <DetailsProblems
+              header={intl.formatMessage(messages.problemsHeader)}
+              problems={props.problems}
+            />
           )
         } : null
       ]}
