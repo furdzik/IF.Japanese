@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { v4 as uuidv4 } from 'uuid';
 
-import { statusShape, tagsShape, problemsShape } from '@types/commonDetailsShape';
+import {
+  additionalExplanationShape,
+  statusShape,
+  tagsShape,
+  problemsShape
+} from '@types/commonDetailsShape';
 import {
   examplesShape,
   similarGrammarDetailsShape,
@@ -43,7 +48,7 @@ const GrammarDetails = (props) => {
 
     return tags;
   };
-
+  console.log(props);
   return (
     <Details
       name={!props.wide ? props.grammarName : null}
@@ -84,7 +89,7 @@ const GrammarDetails = (props) => {
         </React.Fragment>
       ) : null}
       sections={[
-        props.examples?.length ? {
+        props.examples ? {
           title: intl.formatMessage(messages.examplesHeader),
           section: (
             <ExamplesWrapper>
@@ -109,6 +114,19 @@ const GrammarDetails = (props) => {
             </ExamplesWrapper>
           )
         } : null,
+        props.additionalExplanation ? {
+          title: intl.formatMessage(messages.additionalExplanationHeader),
+          section: (
+            <ProblemsWrapper>
+              {
+                props.additionalExplanation.map((el, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <div key={index}>{el}</div>
+                ))
+              }
+            </ProblemsWrapper>
+          )
+        } : null,
         props.problems?.length ? {
           title: intl.formatMessage(messages.problemsHeader),
           section: (
@@ -131,6 +149,7 @@ GrammarDetails.propTypes = {
   grammarId: PropTypes.string.isRequired,
   grammarName: PropTypes.string.isRequired,
   status: statusShape.isRequired,
+  additionalExplanation: additionalExplanationShape,
   examples: examplesShape,
   problems: problemsShape,
   shortExplanation: shortExplanationShape,
@@ -140,11 +159,12 @@ GrammarDetails.propTypes = {
 };
 
 GrammarDetails.defaultProps = {
-  examples: [],
+  additionalExplanation: null,
+  examples: null,
   shortExplanation: null,
-  problems: [],
-  similarGrammar: [],
-  tags: [],
+  problems: null,
+  similarGrammar: null,
+  tags: null,
   wide: false
 };
 

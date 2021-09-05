@@ -16,6 +16,13 @@ const actionTypes = {
 const initialState = {
   grammarName: '',
   status: {},
+  tags: null,
+  additionalExplanation: null,
+  similarGrammar: null,
+  examples: null,
+  shortExplanation: null,
+  problems: null,
+  wide: false,
   loading: false
 };
 
@@ -47,6 +54,7 @@ export default function(state = initialState, action) {
           : null,
         shortExplanation: grammar.shortExplanation,
         problems: getProblems(grammar.grammarId),
+        additionalExplanation: grammar.additionalExplanation,
         wide: grammar.wide,
         loading: false
       };

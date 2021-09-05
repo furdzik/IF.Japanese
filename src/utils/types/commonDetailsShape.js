@@ -14,6 +14,8 @@ export const tagTypeShape = PropTypes.oneOf([
   tagTypes.GRAMMAR_ORIGIN
 ]);
 
+export const additionalExplanationShape = PropTypes.arrayOf(PropTypes.string);
+
 export const problemShape = PropTypes.shape({
   problem: PropTypes.string,
   frequency: PropTypes.number, // scale: from 1 - 10

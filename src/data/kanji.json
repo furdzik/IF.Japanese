@@ -1075,6 +1075,17 @@
     "known": false,
     "inProgress": false,
     "nowLearning": true,
+    "problems": [
+      {
+        "problem": "remembering",
+        "frequency": 3,
+        "resolved": false,
+        "info": []
+      }
+    ],
+    "additionalExplanation": [
+      "additionalExplanation example :P"
+    ],
     "joyo": true,
     "jinmeiyo": false,
     "level": 4

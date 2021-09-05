@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import { verbItemShape } from '@types/verbShape';
 import {
+  additionalExplanationShape,
   statusShape,
   tagsShape,
   metadataShape,
@@ -64,7 +65,7 @@ VocabularyDetails.propTypes = {
   name: PropTypes.string.isRequired,
   status: statusShape.isRequired,
   translations: translationsShape.isRequired,
-  additionalExplanation: PropTypes.string,
+  additionalExplanation: additionalExplanationShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   examples: PropTypes.arrayOf(PropTypes.string),
   japaneseForm: japaneseFormShape,

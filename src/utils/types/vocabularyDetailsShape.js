@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 import { verbShape } from '@types/verbShape';
 import {
+  additionalExplanationShape,
   tagsShape,
   statusShape,
   kanjiReadingShape,
@@ -64,7 +65,7 @@ export const vocabularyDetailsShape = PropTypes.shape({
   translations: translationsShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   otherForms: otherFormsShape,
-  additionalExplanation: PropTypes.string,
+  additionalExplanation: additionalExplanationShape,
   problems: problemsShape,
   examples: PropTypes.arrayOf(PropTypes.string),
   kanjiParts: kanjiPartsShape,

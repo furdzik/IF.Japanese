@@ -35,6 +35,7 @@ const initialState = {
   examples: null,
   kanjiParts: null,
   otherForms: null,
+  problems: null,
   tags: null,
   verb: null,
   loading: true

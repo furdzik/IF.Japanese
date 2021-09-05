@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
 import {
+  additionalExplanationShape,
   kanjiReadingShape,
-  tagsShape,
+  metadataShape,
+  problemsShape,
   statusShape,
-  metadataShape
+  tagsShape
 } from '@types/commonDetailsShape';
 import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
 
@@ -149,10 +151,35 @@ const KanjiDetails = (props) => {
                   <VocabExamples examples={props.examples} />
                 ) : null
               }
-
               <MoreExamplesLink href={`https://jisho.org/search/*${props.kanji}*`} target="_blank">
                 {intl.formatMessage(messages.examplesMoreText)}
               </MoreExamplesLink>
+            </ExampleWrapper>
+          )
+        } : null,
+        props.additionalExplanation ? {
+          title: intl.formatMessage(messages.additionalExplanationHeader),
+          section: (
+            <ExampleWrapper>
+              {
+                props.additionalExplanation.map((el, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <div key={index}>{el}</div>
+                ))
+              }
+            </ExampleWrapper>
+          )
+        } : null,
+        props.problems ? {
+          title: intl.formatMessage(messages.problemsHeader),
+          section: (
+            <ExampleWrapper>
+              {
+                props.problems.map((el, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <div key={index}>{el.problem}</div>
+                ))
+              }
             </ExampleWrapper>
           )
         } : null
@@ -163,9 +190,11 @@ const KanjiDetails = (props) => {
 
 KanjiDetails.propTypes = {
   kanji: PropTypes.string.isRequired,
+  additionalExplanation: additionalExplanationShape,
   examples: examplesShape,
   meaning: PropTypes.string,
   metadata: metadataShape,
+  problems: problemsShape,
   radicals: PropTypes.arrayOf(PropTypes.string),
   reading: kanjiReadingShape,
   similarKanji: similarKanjiArrayShape,
@@ -178,6 +207,7 @@ KanjiDetails.defaultProps = {
   examples: null,
   meaning: null,
   metadata: null,
+  problems: null,
   radicals: null,
   reading: null,
   similarKanji: null,

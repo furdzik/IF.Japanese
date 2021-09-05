@@ -2,7 +2,12 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { statusShape, tagsShape, problemsShape } from '@types/commonDetailsShape';
+import {
+  additionalExplanationShape,
+  statusShape,
+  tagsShape,
+  problemsShape
+} from '@types/commonDetailsShape';
 import {
   examplesShape,
   shortExplanationShape,
@@ -26,6 +31,7 @@ const GrammarDetails = (props) => {
       grammarId={props.grammarId}
       grammarName={props.grammarName}
       status={props.status}
+      additionalExplanation={props.additionalExplanation}
       examples={props.examples}
       shortExplanation={props.shortExplanation}
       problems={props.problems}
@@ -42,6 +48,7 @@ GrammarDetails.propTypes = {
   grammarName: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   status: statusShape.isRequired,
+  additionalExplanation: additionalExplanationShape,
   examples: examplesShape,
   problems: problemsShape,
   shortExplanation: shortExplanationShape,
@@ -51,11 +58,12 @@ GrammarDetails.propTypes = {
 };
 
 GrammarDetails.defaultProps = {
-  examples: [],
-  problems: [],
+  additionalExplanation: null,
+  examples: null,
+  problems: null,
   shortExplanation: null,
-  similarGrammar: [],
-  tags: [],
+  similarGrammar: null,
+  tags: null,
   wide: false
 };
 

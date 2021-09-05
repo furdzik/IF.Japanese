@@ -90,7 +90,10 @@
         ["私", "は", "ポーランド人", "です", "。"],
         ["これ", "は", "ペン", "です", "。"]
       ]
-    }
+    },
+    "additionalExplanation": [
+      "fsdfsdfsdf"
+    ]
   },
   {
     "grammarId": "n1wan2janaidesu",

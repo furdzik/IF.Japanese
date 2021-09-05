@@ -7,7 +7,13 @@ import { Link } from 'react-router-dom';
 import { grammarTypes, tagTypes } from '@config/constants';
 
 import { verbItemShape } from '@types/verbShape';
-import { statusShape, tagsShape, metadataShape, problemsShape } from '@types/commonDetailsShape';
+import {
+  additionalExplanationShape,
+  statusShape,
+  tagsShape,
+  metadataShape,
+  problemsShape
+} from '@types/commonDetailsShape';
 import {
   japaneseFormShape,
   translationsShape,
@@ -202,14 +208,6 @@ const VocabularyDetails = (props) => {
       ) : null}
       sections={[
         {
-          title: intl.formatMessage(messages.additionalExplanationHeader),
-          section: props.additionalExplanation ? (
-            <AdditionalExplanationWrapper>
-              {props.additionalExplanation}
-            </AdditionalExplanationWrapper>
-          ) : null
-        },
-        {
           title: intl.formatMessage(messages.examplesHeader),
           section: props.examples ? (
             <AdditionalExplanationWrapper>
@@ -219,6 +217,14 @@ const VocabularyDetails = (props) => {
                   <div key={index}>{el}</div>
                 ))
               }
+            </AdditionalExplanationWrapper>
+          ) : null
+        },
+        {
+          title: intl.formatMessage(messages.additionalExplanationHeader),
+          section: props.additionalExplanation ? (
+            <AdditionalExplanationWrapper>
+              {props.additionalExplanation}
             </AdditionalExplanationWrapper>
           ) : null
         },
@@ -345,7 +351,7 @@ VocabularyDetails.propTypes = {
   name: PropTypes.string.isRequired,
   status: statusShape.isRequired,
   translations: translationsShape.isRequired,
-  additionalExplanation: PropTypes.string,
+  additionalExplanation: additionalExplanationShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   examples: PropTypes.arrayOf(PropTypes.string),
   japaneseForm: japaneseFormShape,
