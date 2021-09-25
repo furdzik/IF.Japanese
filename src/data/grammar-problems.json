@@ -3,17 +3,17 @@
     "grammar": "n1wan2desu",
     "problems": [
       {
-        "problem": "speaking",
-        "frequency": 5,
+        "problem": "には",
+        "frequency": 8,
         "resolved": false,
         "info": [
-          "I have problem with this and this"
+          "In Japanese には is rarely used. は it is more natural."
         ]
       },
       {
         "problem": "writing",
         "frequency": 5,
-        "resolved": false,
+        "resolved": true,
         "info": [
           "I have problem with this and this"
         ]

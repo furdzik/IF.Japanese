@@ -94,8 +94,8 @@
     }
   },
   {
-    "grammarId": "n1wan2janaidesu",
-    "grammarName": "N₁はN₂じゃないです",
+    "grammarId": "n1wan2jaarimasen",
+    "grammarName": "N₁はN₂じゃありません",
     "known": true,
     "toRepeat": false,
     "nowLearning": false,
@@ -115,12 +115,43 @@
     ],
     "shortExplanation": "Basic construction of a negative sentence",
     "examples": {
-      "keys": ["は", "じゃないです"],
+      "keys": ["は", "じゃありません"],
       "examples": [
-        ["私", "は", "イザベラ", "じゃないです", "。"],
-        ["私", "は", "会社員", "じゃないです", "。"],
-        ["私", "は", "ポーランド人", "じゃないです", "。"],
-        ["これ", "は", "ペン", "じゃないです", "。"]
+        ["私", "は", "イザベラ", "じゃありません", "。"],
+        ["私", "は", "会社員", "じゃありません", "。"],
+        ["私", "は", "ポーランド人", "じゃありません", "。"],
+        ["これ", "は", "ペン", "じゃありません", "。"]
+      ]
+    }
+  },
+  {
+    "grammarId": "n1wan2desuka",
+    "grammarName": "N₁はN₂ですか",
+    "known": true,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "elementary",
+    "isCommon": true,
+    "origin": [
+      {
+        "originName": "minnaNoNihongo1",
+        "originChapter": ["1"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["1"]
+      }
+    ],
+    "shortExplanation": "Basic construction of a interrogative sentence",
+    "examples": {
+      "keys": ["は", "ですか"],
+      "examples": [
+        ["田中さん", "は", "会社員", "ですか", "。"],
+        ["あの方", "は", "どなた", "ですか", "。"],
+        ["あの人", "は", "だれ", "ですか", "。"],
+        ["これ", "は", "何", "ですか", "。"]
       ]
     }
   },

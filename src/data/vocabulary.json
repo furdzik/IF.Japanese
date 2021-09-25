@@ -18390,11 +18390,25 @@
   },
   {
     "vocab": "最初",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "additionalExplanation":  [
+      "「いつ」という質問の答えなので、名詞のあと「に」をつけます。",
+      "ですから「最初に」は正しいです。"
+    ],
+    "problems": [
+      {
+        "problem": "「最初で」",
+        "frequency": 8,
+        "resolved": false,
+        "info": [
+          "I mistake「最初に」 with 「最初で」. 「最初で」 is incorrect."
+        ]
+      }
+    ]
   },
   {
     "vocab": "反対",
@@ -22423,9 +22437,9 @@
   },
   {
     "vocab": "教科書",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },

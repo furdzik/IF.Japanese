@@ -63,7 +63,7 @@ This repository presents frontend application for my Japanese APP
 ```
 
 `special1` suru verb  
-`special1` kuru verb
+`special2` kuru verb
 
 - suru verb schema
 
