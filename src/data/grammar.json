@@ -156,6 +156,34 @@
     }
   },
   {
+    "grammarId": "n1mon2desu",
+    "grammarName": "N₁もN₂です",
+    "known": true,
+    "toRepeat": false,
+    "nowLearning": false,
+    "inProgress": false,
+    "level": 5,
+    "levelGroup": "elementary",
+    "isCommon": true,
+    "origin": [
+      {
+        "originName": "minnaNoNihongo1",
+        "originChapter": ["1"]
+      },
+      {
+        "originName": "TryN5",
+        "originChapter": ["1"]
+      }
+    ],
+    "shortExplanation": "Marks the inclusion of a noun",
+    "examples": {
+      "keys": ["も"],
+      "examples": [
+        ["田中さん", "は", "会社員", "です", "。", "山田さん", "も", "会社員", "です", "。"]
+      ]
+    }
+  },
+  {
     "grammarId": "ko-so-a",
     "grammarName": "こ〜 ／そ〜 ／あ〜",
     "known": false,
