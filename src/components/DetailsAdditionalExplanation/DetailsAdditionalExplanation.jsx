@@ -21,6 +21,7 @@ const DetailsAdditionalExplanation = (props) => (
         <DetailsHeader
           iconType={DETAILS_HEADER_ICON_TYPES.attention}
           iconPath={mdiHelp}
+          small
         >
           {props.header}
         </DetailsHeader>

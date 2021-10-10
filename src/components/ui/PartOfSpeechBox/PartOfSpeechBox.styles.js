@@ -1,12 +1,10 @@
-import styled, { css } from 'styled-components';
-
-// import { breakpointMixin } from '@styles/mixins';
+import styled from 'styled-components';
 
 const Wrapper = styled.span`
   display: inline-block;
   padding: .1rem .3rem .3rem;
-  border-radius: ${(props) => props.theme.layout.borderRadius};
   border: 1px solid ${(props) => props.theme.mainColors.primary};
+  border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.lightGray};
   font-size: ${(props) => props.theme.typography.fontSize.small};
   line-height: 1.3;
@@ -14,10 +12,6 @@ const Wrapper = styled.span`
   & + & {
     margin-left: 1rem;
   }
-
-  ${(props) => props.small && css`
-
-  `};
 `;
 
 export {

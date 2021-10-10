@@ -1,16 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Icon from '@mdi/react';
+
 import {
   Title,
-  StyledIcon
+  IconWrapper
 } from './DetailsHeader.styles.js';
 
 const DetailsHeader = (props) => (
-  <Title className={props.className}>
+  <Title className={props.className} small={props.small}>
     {
       props.iconPath ? (
-        <StyledIcon iconType={props.iconType} path={props.iconPath} />
+        <IconWrapper iconType={props.iconType}>
+          <Icon path={props.iconPath} size={1.2} />
+        </IconWrapper>
       ) : null
     }
     {props.children}
@@ -21,13 +25,15 @@ DetailsHeader.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   iconPath: PropTypes.string,
-  iconType: PropTypes.string
+  iconType: PropTypes.string,
+  small: PropTypes.bool
 };
 
 DetailsHeader.defaultProps = {
   className: '',
   iconPath: null,
-  iconType: null
+  iconType: null,
+  small: false
 };
 
 export default DetailsHeader;

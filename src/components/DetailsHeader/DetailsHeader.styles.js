@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
 
-import Icon from '@mdi/react';
-
 import { DETAILS_HEADER_ICON_TYPES } from '@config/constants';
 
 import { breakpointMixin } from '@styles/mixins';
@@ -16,14 +14,22 @@ const Title = styled.h2`
   ${breakpointMixin.landscapeTablet`
     font-size: ${(props) => props.theme.typography.fontSize.desktop.headingBig};
   `}
+
+  ${(props) => props.small && css`
+    font-size: ${props.theme.typography.fontSize.medium};
+
+     ${breakpointMixin.landscapeTablet`
+      font-size: ${props.theme.typography.fontSize.desktop.medium};
+    `}
+  `}
 `;
 
-const StyledIcon = styled(Icon)`
-  width: 4.7rem;
-  margin-right: 2rem;
-  padding: 1.3rem;
-  border-radius: 50%;
+const IconWrapper = styled.div`
+  display: flex;
   flex-shrink: 0;
+  margin-right: 2rem;
+  padding: .7rem;
+  border-radius: 50%;
 
   ${(props) => props.iconType === DETAILS_HEADER_ICON_TYPES.attention && css`
     background: ${props.theme.colors.yellow};
@@ -32,11 +38,9 @@ const StyledIcon = styled(Icon)`
     background: ${props.theme.colors.red};
     fill: ${props.theme.colors.white};
   `};
-
-
 `;
 
 export {
   Title,
-  StyledIcon
+  IconWrapper
 };

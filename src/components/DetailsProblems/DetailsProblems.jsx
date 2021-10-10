@@ -27,7 +27,7 @@ import messages from './DetailsProblems.messages';
 
 const DetailsProblems = (props) => {
   const intl = useIntl();
-  console.log(props);
+
   return (
     <Wrapper>
       {
@@ -35,6 +35,7 @@ const DetailsProblems = (props) => {
           <DetailsHeader
             iconType={DETAILS_HEADER_ICON_TYPES.problem}
             iconPath={mdiExclamationThick}
+            small
           >
             {props.header}
           </DetailsHeader>
@@ -48,15 +49,6 @@ const DetailsProblems = (props) => {
                 <BoxWrapper noFlex>
                   <div><b>{el.problem}</b></div>
                   <div>{el.info}</div>
-                </BoxWrapper>
-                <BoxWrapper>
-                  <Label>{intl.formatMessage(messages.frequencyText)}</Label>
-                  <FrequencyBar frequency={el.frequency}>
-                    <Bar /><Bar /><Bar />
-                    <Bar /><Bar /><Bar />
-                    <Bar /><Bar /><Bar />
-                    <Bar />
-                  </FrequencyBar>
                 </BoxWrapper>
                 <BoxWrapper>
                   <Label>{intl.formatMessage(messages.resolvedText)}</Label>
@@ -76,6 +68,19 @@ const DetailsProblems = (props) => {
                     )
                   }
                 </BoxWrapper>
+                {
+                  !el.resolved ? (
+                    <BoxWrapper>
+                      <Label>{intl.formatMessage(messages.frequencyText)}</Label>
+                      <FrequencyBar frequency={el.frequency}>
+                        <Bar /><Bar /><Bar />
+                        <Bar /><Bar /><Bar />
+                        <Bar /><Bar /><Bar />
+                        <Bar />
+                      </FrequencyBar>
+                    </BoxWrapper>
+                  ) : null
+                }
               </div>
             </ProblemsListItem>
           ))

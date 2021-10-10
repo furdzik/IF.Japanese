@@ -18396,7 +18396,7 @@
     "pitch": "",
     "level": 4,
     "additionalExplanation":  [
-      "「いつ」という質問の答えなので、名詞のあと「に」をつけます。",
+      "「いつ」という質問の答えるので、名詞のあと「に」をつけます。",
       "ですから「最初に」は正しいです。"
     ],
     "problems": [
@@ -49717,8 +49717,8 @@
     "pitch": "",
     "problems": [
       {
-        "problem": "Long vowels",
-        "frequency": 7,
+        "problem": "I always say: ポランド. I have a problem with long vowels.",
+        "frequency": 9,
         "resolved": false
       }
     ],

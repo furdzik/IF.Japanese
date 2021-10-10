@@ -33,7 +33,7 @@ const N1wan2desuGrammar = () => {
       </p>
       <p>
         {intl.formatMessage(messages.desuCopy2, {
-          n1wan2janaidesu: <GrammarLink to="grammar/n1wan2janaidesu">{intl.formatMessage(messages.n1wan2janaidesuGrammar)}</GrammarLink>
+          n1wan2jaarimasen: <GrammarLink to="grammar/n1wan2jaarimasen">{intl.formatMessage(messages.n1wan2janaidesuGrammar)}</GrammarLink>
         })}
       </p>
     </React.Fragment>

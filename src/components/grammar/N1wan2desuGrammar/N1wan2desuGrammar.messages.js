@@ -9,6 +9,6 @@ export default defineMessages({
   noun: 'noun',
   desuHeader: 'です',
   desuCopy: 'If before the です is a {noun} it indicate predicates. です also indicates judgment or assertion. It is a polite way of "だ" and it means that something is.',
-  desuCopy2: 'See also {n1wan2janaidesu}.',
-  n1wan2janaidesuGrammar: 'N₁はN₂じゃないです'
+  desuCopy2: 'See also {n1wan2jaarimasen}.',
+  n1wan2janaidesuGrammar: 'N₁はN₂じゃありません'
 });

@@ -29,7 +29,6 @@ import {
   ExamplesWrapper,
   ExampleWord,
   ExampleElement,
-  ProblemsWrapper,
   ShortExplanationWrapper
 } from './GrammarDetails.styles.js';
 import messages from './GrammarDetails.messages';

@@ -47,10 +47,6 @@ const ExampleElement = styled.span`
   `};
 `;
 
-const ProblemsWrapper = styled.div`
-  display: block;
-`;
-
 const ShortExplanationWrapper = styled.div`
   margin-top: -2.4rem;
   margin-bottom: 2rem;
@@ -66,6 +62,5 @@ export {
   ExamplesWrapper,
   ExampleWord,
   ExampleElement,
-  ProblemsWrapper,
   ShortExplanationWrapper
 };

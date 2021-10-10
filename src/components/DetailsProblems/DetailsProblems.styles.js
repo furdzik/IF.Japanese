@@ -1,5 +1,23 @@
 import styled, { css } from 'styled-components';
 
+const frequencyMixin = (frequency, Bar) => {
+  const bars = [];
+
+  Array
+    .from({ length: 10 }, (_, i) => i + 1)
+    .forEach((i) => {
+      if (i <= frequency) {
+        bars.push(css`
+        ${Bar}:nth-child(${i}) {
+          background: ${(props) => props.theme.mainColors.primary};
+        }
+      `);
+      }
+    });
+
+  return bars;
+};
+
 const Wrapper = styled.div`
   padding: 3.5rem 4rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
@@ -7,24 +25,24 @@ const Wrapper = styled.div`
 `;
 
 const ProblemsList = styled.ul`
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 `;
 
 const ProblemsListItem = styled.li`
   display: flex;
 
   &::before {
-    flex-shrink: 0;
-    content: '';
     display: inline-block;
+    flex-shrink: 0;
     width: 1rem;
     height: 1rem;
     margin-top: .7rem;
     margin-right: 1.5rem;
     border-radius: 50%;
     background: ${(props) => props.theme.mainColors.primary};
+    content: '';
   }
 
   & + & {
@@ -33,8 +51,9 @@ const ProblemsListItem = styled.li`
 `;
 
 const Label = styled.div`
-    margin-right: 2rem;
-    margin-top: -.2rem;
+  width: 9rem;
+  margin-top: -.2rem;
+  margin-right: 2rem;
 `;
 
 const BoxWrapper = styled.div`
@@ -47,13 +66,18 @@ const BoxWrapper = styled.div`
 `;
 
 const Bar = styled.div`
-
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 1px;
+  border: 1px solid ${(props) => props.theme.mainColors.primary};
 `;
 
 const FrequencyBar = styled.div`
-  ${Bar} {
+  display: flex;
 
-  }
+  ${(props) => props.frequency && css`
+    ${frequencyMixin(props.frequency, Bar)}
+  `};
 `;
 
 export {
