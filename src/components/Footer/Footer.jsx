@@ -10,11 +10,14 @@ import messages from './Footer.messages';
 
 const Footer = () => {
   const intl = useIntl();
+  const currentYear = new Date().getFullYear();
 
   return (
     <FooterWrapper>
       <Container>
-        {intl.formatMessage(messages.content)}
+        {intl.formatMessage(messages.content, {
+          currentYear
+        })}
       </Container>
     </FooterWrapper>
   );
