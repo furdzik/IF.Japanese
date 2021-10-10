@@ -41,6 +41,12 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  p {
+    margin-bottom: 2rem;
+  }
+  b, strong {
+    font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
+  }
   input {
     padding: 0;
     border-radius: 0;

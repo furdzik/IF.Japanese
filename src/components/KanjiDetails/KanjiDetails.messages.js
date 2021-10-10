@@ -14,5 +14,7 @@ export default defineMessages({
   numberOfStrokes: '{number} strokes',
   examplesMoreText: 'See more examples',
   radicalsHeader: 'Radicals in this word',
+  problemsHeader: 'My problems',
+  additionalExplanationHeader: 'Additional explanation for this kanji',
   similarKanjiHeader: 'Similar kanji'
 });

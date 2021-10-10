@@ -4,5 +4,6 @@ export default defineMessages({
   mainHeader: 'Grammar explanation',
   examplesHeader: 'Examples',
   similarGrammarHeader: 'Similar grammar',
-  problemsHeader: 'My problems'
+  problemsHeader: 'My problems',
+  additionalExplanationHeader: 'Additional explanation for this grammar'
 });

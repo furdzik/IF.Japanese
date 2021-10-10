@@ -108,8 +108,8 @@
   },
   {
     "vocab": "文",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3
@@ -1530,7 +1530,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "「中止」はエベントがなくなるという意味です。「キャンセル」は私が行かないという意味です。"
+    "additionalExplanation": [
+      "「中止」はエベントがなくなるという意味です。「キャンセル」は私が行かないという意味です。"
+    ]
   },
   {
     "vocab": "キャンセル",
@@ -1539,7 +1541,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 0,
-    "additionalExplanation": "「中止」はエベントがなくなるという意味です。「キャンセル」は私が行かないという意味です。"
+    "additionalExplanation": [
+      "「中止」はエベントがなくなるという意味です。「キャンセル」は私が行かないという意味です。"
+    ]
   },
   {
     "vocab": "用いる",
@@ -1958,7 +1962,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "「無理」に気をつけたほうがいい。ちょっと失礼な言葉だ。"
+    "additionalExplanation": [
+      "「無理」に気をつけたほうがいい。ちょっと失礼な言葉だ。"
+    ]
   },
   {
     "vocab": "非難",
@@ -6741,7 +6747,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "「ノートをします」ということがない。"
+    "additionalExplanation": [
+      "「ノートをします」ということがない。"
+    ]
   },
   {
     "vocab": "五感",
@@ -8000,7 +8008,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 4,
-    "additionalExplanation": "「間」は時という意味で、とても長いという感じだ。"
+    "additionalExplanation": [
+      "「間」は時という意味で、とても長いという感じだ。"
+    ]
   },
   {
     "vocab": "内臓",
@@ -8851,7 +8861,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "「急にメッセージを送ってすみません」とかは知てる人にあまり使いない。最初目か５年ぶりだったら、書いてもいい。"
+    "additionalExplanation": [
+      "「急にメッセージを送ってすみません」とかは知てる人にあまり使いない。最初目か５年ぶりだったら、書いてもいい。"
+    ]
   },
   {
     "vocab": "どうも",
@@ -8860,7 +8872,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "「どうも」はそうかもという意味もある。「ようだ」と一緒に使われる。その時70%ぐらいそうかもだと思うという意味になる。"
+    "additionalExplanation": [
+      "「どうも」はそうかもという意味もある。「ようだ」と一緒に使われる。その時70%ぐらいそうかもだと思うという意味になる。"
+    ]
   },
   {
     "vocab": "手伝う",
@@ -9220,7 +9234,7 @@
   {
     "vocab": "例文",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0
@@ -9776,7 +9790,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "「家に帰る」という意味で、「行く」は間違いだ。",
+    "additionalExplanation": [
+      "「家に帰る」という意味で、「行く」は間違いだ。"
+    ],
     "verb": {
       "main": "行",
       "verbGroup": "ku",
@@ -15001,7 +15017,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "「大変に」は間違いだ。そういう副詞がない。"
+    "additionalExplanation": [
+      "「大変に」は間違いだ。そういう副詞がない。"
+    ]
   },
   {
     "vocab": "作る",
@@ -15969,7 +15987,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "「家に帰る」という意味で、「行く」は間違いだ。",
+    "additionalExplanation": [
+      "「家に帰る」という意味で、「行く」は間違いだ。"
+    ],
     "verb": {
       "main": "帰",
       "verbGroup": "ru",
@@ -16017,7 +16037,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "ネガティブな意味だ。",
+    "additionalExplanation": [
+      "ネガティブな意味だ。"
+    ],
     "verb": {
       "main": "掛か",
       "verbGroup": "ru",
@@ -16131,7 +16153,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "本当に最初の一回だけだ。もし「久しぶりにした」と言ったかったら、「ぶり」を使う。"
+    "additionalExplanation": [
+      "本当に最初の一回だけだ。もし「久しぶりにした」と言ったかったら、「ぶり」を使う。"
+    ]
   },
   {
     "vocab": "始まる",
@@ -18313,7 +18337,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 4,
-    "additionalExplanation": "「最近から」は変。「最近」は似ている意味で、「前から今まで」という意味を表す。"
+    "additionalExplanation": [
+      "「最近から」は変。「最近」は似ている意味で、「前から今まで」という意味を表す。"
+    ]
   },
   {
     "vocab": "払う",
@@ -18364,11 +18390,25 @@
   },
   {
     "vocab": "最初",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "additionalExplanation":  [
+      "「いつ」という質問の答えるので、名詞のあと「に」をつけます。",
+      "ですから「最初に」は正しいです。"
+    ],
+    "problems": [
+      {
+        "problem": "「最初で」",
+        "frequency": 8,
+        "resolved": false,
+        "info": [
+          "I mistake「最初に」 with 「最初で」. 「最初で」 is incorrect."
+        ]
+      }
+    ]
   },
   {
     "vocab": "反対",
@@ -21290,11 +21330,26 @@
   },
   {
     "vocab": "食事",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "食事",
+      "verbGroup": "special1",
+      "verbType": "transitive"
+    },
+    "problems": [
+      {
+        "problem": "食事 is suru verb, that's why we can say:「食事します」 or 「食事をします」. Not 「食事を食べる」.",
+        "frequency": 1,
+        "resolved": false,
+        "info": [
+          "I did that only once so far."
+        ]
+      }
+    ]
   },
   {
     "vocab": "行動",
@@ -22382,9 +22437,9 @@
   },
   {
     "vocab": "教科書",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -23937,7 +23992,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "誘っている人がホストだ。"
+    "additionalExplanation": [
+      "誘っている人がホストだ。"
+    ]
   },
   {
     "vocab": "出会う",
@@ -24135,6 +24192,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "インドネシア",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "旅",
@@ -26072,7 +26137,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "クリスマスイブを祝う。",
+    "additionalExplanation": [
+      "クリスマスイブを祝う。"
+    ],
     "verb": {
       "main": "祝",
       "verbGroup": "u",
@@ -30122,6 +30189,7 @@
   },
   {
     "vocab": "節",
+    "meaning": "ふし",
     "known": false,
     "inProgress": false,
     "nowLearning": false,
@@ -30252,8 +30320,8 @@
   },
   {
     "vocab": "語",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3
@@ -31505,10 +31573,27 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "「ノートをします」ということがない。",
+    "additionalExplanation": [
+      "「ノートをします」ということがない。"
+    ],
     "examples": [
       "教科書にメモをする。"
-    ]
+    ],
+    "problems": [
+      {
+        "problem": "I confuse it with「ノート」",
+        "frequency": 5,
+        "resolved": false,
+        "info": [
+          "「ノートをします」ということがない。"
+        ]
+      }
+    ],
+    "verb": {
+      "main": "メモ",
+      "verbGroup": "special1",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "ざっと",
@@ -32090,7 +32175,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3,
-    "additionalExplanation": "一緒に何かをすることだ。"
+    "additionalExplanation": [
+      "一緒に何かをすることだ。"
+    ]
   },
   {
     "vocab": "書き直す",
@@ -39805,7 +39892,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 2,
-    "additionalExplanation": "仕事とかの意味でマッチする。",
+    "additionalExplanation": [
+      "仕事とかの意味でマッチする。"
+    ],
     "verb": {
       "main": "釣り合",
       "verbGroup": "u",
@@ -42768,7 +42857,7 @@
   {
     "vocab": "目次",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2
@@ -44412,7 +44501,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
-    "additionalExplanation": "椅子の上を立つ。椅子に乗る。"
+    "additionalExplanation": [
+      "椅子の上を立つ。椅子に乗る。"
+    ]
   },
   {
     "vocab": "車椅子",
@@ -45183,7 +45274,9 @@
     "nowLearning": false,
     "pitch": "",
     "level": 0,
-    "additionalExplanation": "ゲットする。"
+    "additionalExplanation": [
+      "ゲットする。"
+    ]
   },
   {
     "vocab": "多く",
@@ -49529,6 +49622,110 @@
   },
   {
     "vocab": "存続",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "ロマンチック",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "節",
+    "meaning": "せつ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "行",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "フォーム",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "修飾",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "肯定",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "手帳",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "主題",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "インド",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "タイ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "ポーランド",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "problems": [
+      {
+        "problem": "I always say: ポランド. I have a problem with long vowels.",
+        "frequency": 9,
+        "resolved": false
+      }
+    ],
+    "level": 0
+  },
+  {
+    "vocab": "エンジニア",
     "known": false,
     "inProgress": false,
     "nowLearning": false,

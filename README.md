@@ -44,6 +44,16 @@ This repository presents frontend application for my Japanese APP
         "同じタイミングで言ってみました。"
     ],
     "additionalExplanation": "椅子の上を立つ。椅子に乗る。",
+    "problems": [
+      {
+        "problem": "食事 is suru verb, that's why we can say:「食事します」 or 「食事をします」. Not 「食事を食べる」.",
+        "frequency": 1, // from 1 - 10
+        "resolved": false,
+        "info": [
+          "I did that only once so far."
+        ]
+      }
+    ]
     "verb": {
         "main": "降",
         "verbGroup": "2|special1|special2|u|ku|gu|su|tsu|bu|mu|nu|ru",
@@ -53,7 +63,7 @@ This repository presents frontend application for my Japanese APP
 ```
 
 `special1` suru verb  
-`special1` kuru verb
+`special2` kuru verb
 
 - suru verb schema
 

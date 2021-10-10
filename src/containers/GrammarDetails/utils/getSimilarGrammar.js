@@ -1,11 +1,19 @@
 import grammarJson from '@data/grammar.json';
+import similarGrammarJson from '@data/similar-grammar.json';
 
 import { getTags } from '@utils/commonDetails';
 
 const IS_SHORT = true;
 
-export const getSimilarGrammar = (similarGrammar = []) => {
+export const getSimilarGrammar = (grammarId = []) => {
   const similarGrammarInfo = [];
+  const similarGrammar = [];
+
+  similarGrammarJson.forEach((similarGrammarSet) => {
+    if (similarGrammarSet.indexOf(grammarId) !== -1) {
+      similarGrammar.push(...similarGrammarSet.filter((el) => el !== grammarId));
+    }
+  });
 
   similarGrammar.forEach((similar) => {
     const grammar = grammarJson.filter((el) => similar === el.grammarId)[0];

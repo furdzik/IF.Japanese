@@ -7,7 +7,13 @@ import { Link } from 'react-router-dom';
 import { grammarTypes, tagTypes } from '@config/constants';
 
 import { verbItemShape } from '@types/verbShape';
-import { statusShape, tagsShape, metadataShape } from '@types/commonDetailsShape';
+import {
+  additionalExplanationShape,
+  statusShape,
+  tagsShape,
+  metadataShape,
+  problemsShape
+} from '@types/commonDetailsShape';
 import {
   japaneseFormShape,
   translationsShape,
@@ -18,8 +24,10 @@ import {
 import Modal from '@components/ui/Modal';
 
 import Details from '@components/Details';
+import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
+import DetailsProblems from '@components/DetailsProblems';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import Tag from '@components/Tag';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
@@ -35,7 +43,7 @@ import {
   PartOfSpeechBox,
   AntonymsBox,
   AntonymsLink,
-  AdditionalExplanationWrapper,
+  ExamplesWrapper,
   OtherFormsWrapper
 } from './VocabularyDetails.styles.js';
 import messages from './VocabularyDetails.messages';
@@ -202,26 +210,34 @@ const VocabularyDetails = (props) => {
       ) : null}
       sections={[
         {
-          title: intl.formatMessage(messages.additionalExplanationHeader),
-          section: props.additionalExplanation ? (
-            <AdditionalExplanationWrapper>
-              {props.additionalExplanation}
-            </AdditionalExplanationWrapper>
-          ) : null
-        },
-        {
           title: intl.formatMessage(messages.examplesHeader),
           section: props.examples ? (
-            <AdditionalExplanationWrapper>
+            <ExamplesWrapper>
               {
                 props.examples.map((el, index) => (
                   // eslint-disable-next-line react/no-array-index-key
                   <div key={index}>{el}</div>
                 ))
               }
-            </AdditionalExplanationWrapper>
+            </ExamplesWrapper>
           ) : null
-        }
+        },
+        props.additionalExplanation ? {
+          section: (
+            <DetailsAdditionalExplanation
+              header={intl.formatMessage(messages.additionalExplanationHeader)}
+              additionalExplanation={props.additionalExplanation}
+            />
+          )
+        } : null,
+        props.problems?.length ? {
+          section: (
+            <DetailsProblems
+              header={intl.formatMessage(messages.problemsHeader)}
+              problems={props.problems}
+            />
+          )
+        } : null
       ]}
     >
       {
@@ -332,12 +348,13 @@ VocabularyDetails.propTypes = {
   name: PropTypes.string.isRequired,
   status: statusShape.isRequired,
   translations: translationsShape.isRequired,
-  additionalExplanation: PropTypes.string,
+  additionalExplanation: additionalExplanationShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   examples: PropTypes.arrayOf(PropTypes.string),
   japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
   otherForms: otherFormsShape,
+  problems: problemsShape,
   tags: tagsShape,
   verb: verbItemShape
 };
@@ -349,6 +366,7 @@ VocabularyDetails.defaultProps = {
   japaneseForm: null,
   kanjiParts: null,
   otherForms: null,
+  problems: null,
   tags: null,
   verb: null
 };

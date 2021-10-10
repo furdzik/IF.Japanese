@@ -2,12 +2,16 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { statusShape, tagsShape } from '@types/commonDetailsShape';
+import {
+  additionalExplanationShape,
+  statusShape,
+  tagsShape,
+  problemsShape
+} from '@types/commonDetailsShape';
 import {
   examplesShape,
-  explanationShape,
-  similarGrammarDetailsShape,
-  problemsShape
+  shortExplanationShape,
+  similarGrammarDetailsShape
 } from '@types/grammarShape';
 
 import Loader from '@components/ui/Loader';
@@ -27,11 +31,13 @@ const GrammarDetails = (props) => {
       grammarId={props.grammarId}
       grammarName={props.grammarName}
       status={props.status}
+      additionalExplanation={props.additionalExplanation}
       examples={props.examples}
-      explanation={props.explanation}
+      shortExplanation={props.shortExplanation}
       problems={props.problems}
       similarGrammar={props.similarGrammar}
       tags={props.tags}
+      wide={props.wide}
     />
   ) : <Loader covered />;
 };
@@ -42,19 +48,23 @@ GrammarDetails.propTypes = {
   grammarName: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   status: statusShape.isRequired,
+  additionalExplanation: additionalExplanationShape,
   examples: examplesShape,
-  explanation: explanationShape,
   problems: problemsShape,
+  shortExplanation: shortExplanationShape,
   similarGrammar: similarGrammarDetailsShape,
-  tags: tagsShape
+  tags: tagsShape,
+  wide: PropTypes.bool
 };
 
 GrammarDetails.defaultProps = {
-  examples: [],
-  explanation: null,
-  similarGrammar: [],
-  tags: [],
-  problems: []
+  additionalExplanation: null,
+  examples: null,
+  problems: null,
+  shortExplanation: null,
+  similarGrammar: null,
+  tags: null,
+  wide: false
 };
 
 const mapDispatchToProps = {

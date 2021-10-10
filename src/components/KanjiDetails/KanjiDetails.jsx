@@ -3,16 +3,20 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
 import {
+  additionalExplanationShape,
   kanjiReadingShape,
-  tagsShape,
+  metadataShape,
+  problemsShape,
   statusShape,
-  metadataShape
+  tagsShape
 } from '@types/commonDetailsShape';
 import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
 
 import Details from '@components/Details';
+import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
+import DetailsProblems from '@components/DetailsProblems';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import Tag from '@components/Tag';
 
@@ -149,11 +153,26 @@ const KanjiDetails = (props) => {
                   <VocabExamples examples={props.examples} />
                 ) : null
               }
-
               <MoreExamplesLink href={`https://jisho.org/search/*${props.kanji}*`} target="_blank">
                 {intl.formatMessage(messages.examplesMoreText)}
               </MoreExamplesLink>
             </ExampleWrapper>
+          )
+        } : null,
+        props.additionalExplanation ? {
+          section: (
+            <DetailsAdditionalExplanation
+              header={intl.formatMessage(messages.additionalExplanationHeader)}
+              additionalExplanation={props.additionalExplanation}
+            />
+          )
+        } : null,
+        props.problems?.length ? {
+          section: (
+            <DetailsProblems
+              header={intl.formatMessage(messages.problemsHeader)}
+              problems={props.problems}
+            />
           )
         } : null
       ]}
@@ -163,9 +182,11 @@ const KanjiDetails = (props) => {
 
 KanjiDetails.propTypes = {
   kanji: PropTypes.string.isRequired,
+  additionalExplanation: additionalExplanationShape,
   examples: examplesShape,
   meaning: PropTypes.string,
   metadata: metadataShape,
+  problems: problemsShape,
   radicals: PropTypes.arrayOf(PropTypes.string),
   reading: kanjiReadingShape,
   similarKanji: similarKanjiArrayShape,
@@ -175,9 +196,11 @@ KanjiDetails.propTypes = {
 };
 
 KanjiDetails.defaultProps = {
+  additionalExplanation: null,
   examples: null,
   meaning: null,
   metadata: null,
+  problems: null,
   radicals: null,
   reading: null,
   similarKanji: null,

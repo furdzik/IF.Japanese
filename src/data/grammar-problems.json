@@ -1,0 +1,23 @@
+[
+  {
+    "grammar": "n1wan2desu",
+    "problems": [
+      {
+        "problem": "I frequently use には",
+        "frequency": 8,
+        "resolved": false,
+        "info": [
+          "In Japanese には is rarely used. は it is more natural."
+        ]
+      },
+      {
+        "problem": "writing",
+        "frequency": 5,
+        "resolved": true,
+        "info": [
+          "I have problem with this and this"
+        ]
+      }
+    ]
+  }
+]

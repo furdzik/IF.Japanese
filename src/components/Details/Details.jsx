@@ -75,37 +75,44 @@ const Details = (props) => {
         <DetailsHeader>{props.mainSectionHeader}</DetailsHeader>
         <SectionsWrapper>
           <DetailsSection type={sectionTypes.PRIMARY} wide={!props.secondarySection}>
-            <DetailsSection type={sectionTypes.NAME}>
-              <NameWrapper>
-                <CharacterBlock small={props.japaneseForm?.kanji.length > 5}>
-                  {
-                    props.japaneseForm?.furigana ? (
-                      <Character
-                        type={characterType.FURIGANA}
-                        elements={props.japaneseForm?.furigana}
-                        small={props.japaneseForm?.kanji.length > 5}
-                      />
-                    ) : null
-                  }
-                  {
-                    props.japaneseForm?.kanji ? (
-                      <Character
-                        type={characterType.KANJI}
-                        elements={props.japaneseForm?.kanji}
-                        small={props.japaneseForm?.kanji.length > 5}
-                      />
-                    ) : props.name
-                  }
-                </CharacterBlock>
-                {
-                  props.additionalBox ? (
-                    props.additionalBox
-                  ) : null
-                }
-              </NameWrapper>
+            <DetailsSection
+              type={sectionTypes.NAME}
+              wide={props.japaneseForm?.kanji.length > 5 || props.wide}
+            >
+              {
+                props.name && !props.wide ? (
+                  <NameWrapper>
+                    <CharacterBlock small={props.japaneseForm?.kanji.length > 5}>
+                      {
+                        props.japaneseForm?.furigana ? (
+                          <Character
+                            type={characterType.FURIGANA}
+                            elements={props.japaneseForm?.furigana}
+                            small={props.japaneseForm?.kanji.length > 5}
+                          />
+                        ) : null
+                      }
+                      {
+                        props.japaneseForm?.kanji ? (
+                          <Character
+                            type={characterType.KANJI}
+                            elements={props.japaneseForm?.kanji}
+                            small={props.japaneseForm?.kanji.length > 5}
+                          />
+                        ) : props.name
+                      }
+                    </CharacterBlock>
+                    {
+                      props.additionalBox ? (
+                        props.additionalBox
+                      ) : null
+                    }
+                  </NameWrapper>
+                ) : null
+              }
               {
                 props.mainSection ? (
-                  <MainSection wide={props.japaneseForm?.kanji.length > 5}>
+                  <MainSection wide={props.japaneseForm?.kanji.length > 5 || props.wide}>
                     {props.mainSection}
                   </MainSection>
                 ) : null
@@ -115,7 +122,11 @@ const Details = (props) => {
               props.sections ? props.sections.map((section) => (
                 section?.section ? (
                   <DetailsSection key={uuidv4()}>
-                    <DetailsHeader>{section.title}</DetailsHeader>
+                    {
+                      section.title ? (
+                        <DetailsHeader>{section.title}</DetailsHeader>
+                      ) : null
+                    }
                     {section?.section}
                   </DetailsSection>
                 ) : null
@@ -139,7 +150,6 @@ const Details = (props) => {
 Details.propTypes = {
   mainSection: PropTypes.node.isRequired,
   mainSectionHeader: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
   additionalBox: PropTypes.node,
   children: PropTypes.node,
   inProgress: PropTypes.bool,
@@ -147,6 +157,7 @@ Details.propTypes = {
   jishoLink: PropTypes.string,
   known: PropTypes.bool,
   meaning: PropTypes.string,
+  name: PropTypes.string,
   nowLearning: PropTypes.bool,
   secondarySection: PropTypes.node,
   sections: PropTypes.arrayOf(PropTypes.shape({
@@ -154,7 +165,8 @@ Details.propTypes = {
     section: PropTypes.node
   })),
   tags: PropTypes.arrayOf(PropTypes.node),
-  toRepeat: PropTypes.bool
+  toRepeat: PropTypes.bool,
+  wide: PropTypes.bool
 };
 
 Details.defaultProps = {
@@ -164,12 +176,14 @@ Details.defaultProps = {
   japaneseForm: null,
   jishoLink: null,
   known: null,
+  name: null,
   meaning: null,
   nowLearning: null,
   secondarySection: null,
   sections: null,
   tags: null,
-  toRepeat: null
+  toRepeat: null,
+  wide: false
 };
 
 export default Details;

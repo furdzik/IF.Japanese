@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import {
+  additionalExplanationShape,
   kanjiReadingShape,
+  metadataShape,
+  problemsShape,
   statusShape,
-  tagsShape,
-  metadataShape
+  tagsShape
 } from '@types/commonDetailsShape';
-import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
+import { examplesShape, similarKanjiArrayShape, strokesShape } from '@types/kanjiDetailsShape';
 
 import Loader from '@components/ui/Loader';
 
@@ -28,6 +30,7 @@ const KanjiDetails = (props) => {
     setHasMounted(true);
   }, []);
 
+  /* To prevent Example container to send previous data requests */
   if (!hasMounted) {
     return null;
   }
@@ -36,8 +39,10 @@ const KanjiDetails = (props) => {
     <KanjiDetailsComponent
       kanji={props.kanji}
       examples={props.examples}
+      additionalExplanation={props.additionalExplanation}
       meaning={props.meaning}
       metadata={props.metadata}
+      problems={props.problems}
       radicals={props.radicals}
       reading={props.reading}
       similarKanji={props.similarKanji}
@@ -52,9 +57,11 @@ KanjiDetails.propTypes = {
   getKanjiDetails: PropTypes.func.isRequired,
   kanji: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
+  additionalExplanation: additionalExplanationShape,
   examples: examplesShape,
   meaning: PropTypes.string,
   metadata: metadataShape,
+  problems: problemsShape,
   radicals: PropTypes.arrayOf(PropTypes.string),
   reading: kanjiReadingShape,
   similarKanji: similarKanjiArrayShape,
@@ -64,9 +71,11 @@ KanjiDetails.propTypes = {
 };
 
 KanjiDetails.defaultProps = {
+  additionalExplanation: null,
   examples: null,
   meaning: null,
   metadata: null,
+  problems: null,
   radicals: null,
   reading: null,
   similarKanji: null,

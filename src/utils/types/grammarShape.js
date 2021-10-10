@@ -1,12 +1,19 @@
 import PropTypes from 'prop-types';
 
-import { statusShape, tagsShape } from '@types/commonDetailsShape';
+import { statusShape, tagsShape, problemsShape } from '@types/commonDetailsShape';
 
-export const examplesShape = PropTypes.arrayOf(PropTypes.string);
+export const examplesShape = PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.shape({
+  word: PropTypes.shape,
+  grammarWord: PropTypes.bool,
+  grammarWordIndex: PropTypes.number
+})));
 
-export const problemsShape = PropTypes.arrayOf(PropTypes.string);
+export const originalExamplesShape = PropTypes.shape({
+  keys: PropTypes.arrayOf(PropTypes.string),
+  examples: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string))
+});
 
-export const explanationShape = PropTypes.string;
+export const shortExplanationShape = PropTypes.string;
 
 const grammarItem = {
   grammarId: PropTypes.string,
@@ -18,8 +25,8 @@ const grammarItem = {
   level: PropTypes.number,
   levelGroup: PropTypes.string,
   originChapter: PropTypes.arrayOf(PropTypes.string),
-  explanation: explanationShape,
-  examples: examplesShape,
+  explanation: shortExplanationShape,
+  examples: originalExamplesShape,
   problems: problemsShape
 };
 

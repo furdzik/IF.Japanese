@@ -15,9 +15,11 @@ const actionTypes = {
 };
 
 const initialState = {
+  additionalExplanation: null,
   examples: [],
   meaning: null,
   metadata: null,
+  problems: null,
   radicals: null,
   reading: null,
   status: null,
@@ -62,6 +64,8 @@ export default function(state = initialState, action) {
           grade: detailsAlternative.grade,
           strokes: details?.kanji?.strokes?.count
         }),
+        problems: kanji?.problems,
+        additionalExplanation: kanji?.additionalExplanation,
         loading: false
       };
     }

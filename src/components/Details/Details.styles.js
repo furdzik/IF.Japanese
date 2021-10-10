@@ -85,6 +85,8 @@ const Content = styled.div`
 `;
 
 const SectionsWrapper = styled.div`
+  width: 100%;
+
   ${breakpointMixin.laptop`
     display: flex;
     flex-wrap: wrap;
@@ -103,6 +105,7 @@ const MainSection = styled.div`
   ${(props) => props.wide && css`
     ${breakpointMixin.laptop`
       width: 100%;
+      max-width: none;
     `}
   `}
 `;

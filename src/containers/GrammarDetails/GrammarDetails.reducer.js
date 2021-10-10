@@ -2,7 +2,11 @@ import grammarJson from '@data/grammar.json';
 
 import { getTags } from '@utils/commonDetails';
 
-import { getSimilarGrammar } from './utils';
+import {
+  getProblems,
+  getSimilarGrammar,
+  prepareExamples
+} from './utils';
 
 const actionTypes = {
   GET_GRAMMAR_DETAILS_INIT: 'GRAMMAR/GET_GRAMMAR_DETAILS_INIT',
@@ -12,6 +16,13 @@ const actionTypes = {
 const initialState = {
   grammarName: '',
   status: {},
+  tags: null,
+  additionalExplanation: null,
+  similarGrammar: null,
+  examples: null,
+  shortExplanation: null,
+  problems: null,
+  wide: false,
   loading: false
 };
 
@@ -37,10 +48,14 @@ export default function(state = initialState, action) {
           levelGroup: grammar.levelGroup,
           grammarOrigin: grammar.origin
         }),
-        similarGrammar: getSimilarGrammar(grammar.similarGrammar),
-        examples: grammar.examples,
-        explanation: grammar.explanation,
-        problems: grammar.problems,
+        similarGrammar: getSimilarGrammar(grammar.grammarId),
+        examples: grammar.examples
+          ? prepareExamples(grammar.examples?.keys, grammar.examples?.examples)
+          : null,
+        shortExplanation: grammar.shortExplanation,
+        problems: getProblems(grammar.grammarId),
+        additionalExplanation: grammar.additionalExplanation,
+        wide: grammar.wide,
         loading: false
       };
     }

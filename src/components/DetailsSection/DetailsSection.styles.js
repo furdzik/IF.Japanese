@@ -37,9 +37,12 @@ const SecondarySection = css`
 `;
 
 const NameSection = css`
+  width: auto;
+  ${(props) => props.wide && css`
+    flex-wrap: wrap;
+  `};
   ${breakpointMixin.laptop`
     display: flex;
-    flex-wrap: wrap;
   `};
 `;
 
@@ -50,6 +53,8 @@ const OtherSection = css`
 `;
 
 const Wrapper = styled.div`
+  width: 100%;
+
   ${(props) => props.type === sectionTypes.PRIMARY && css`
     ${PrimarySection};
   `};
