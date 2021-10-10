@@ -15,12 +15,13 @@ import {
   shortExplanationShape
 } from '@types/grammarShape';
 
+import Tag from '@components/ui/Tag';
+
 import Details from '@components/Details';
 import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
 import DetailsProblems from '@components/DetailsProblems';
-import Tag from '@components/Tag';
 
 import { getComponentGrammar } from './utils';
 

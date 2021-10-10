@@ -9,7 +9,8 @@ import { characterType } from '@config/constants';
 
 import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamplesShape';
 
-import Tag from '@components/Tag';
+import Tag from '@components/ui/Tag';
+
 import Character from '@components/Character';
 
 import {

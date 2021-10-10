@@ -8,10 +8,11 @@ import { sectionTypes, characterType } from '@config/constants';
 
 import { japaneseFormShape } from '@types/vocabularyDetailsShape';
 
+import Tag from '@components/ui/Tag';
+
 import Character from '@components/Character';
 import DetailsHeader from '@components/DetailsHeader';
 import DetailsSection from '@components/DetailsSection';
-import Tag from '@components/Tag';
 
 import {
   DetailsWrapper,

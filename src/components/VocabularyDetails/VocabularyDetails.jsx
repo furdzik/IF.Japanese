@@ -22,6 +22,7 @@ import {
 } from '@types/vocabularyDetailsShape';
 
 import Modal from '@components/ui/Modal';
+import Tag from '@components/ui/Tag';
 
 import Details from '@components/Details';
 import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
@@ -29,7 +30,6 @@ import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
 import DetailsProblems from '@components/DetailsProblems';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
-import Tag from '@components/Tag';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
 import conjugationMessages from '@utils/defaultMessages/conjugation.messages';

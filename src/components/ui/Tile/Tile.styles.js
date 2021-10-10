@@ -6,9 +6,7 @@ const baseMobilePaddingTop = '.6rem';
 const baseMobilePaddingLeftRight = '1rem';
 const baseMobilePaddingBottom = '.4rem';
 
-const basePaddingTop = '.6rem';
 const basePaddingLeftRight = '1.2rem';
-const basePaddingBottom = '.4rem';
 
 const ListItem = styled.div`
   position: relative;

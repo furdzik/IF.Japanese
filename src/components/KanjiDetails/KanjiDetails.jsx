@@ -12,13 +12,14 @@ import {
 } from '@types/commonDetailsShape';
 import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
 
+import Tag from '@components/ui/Tag';
+
 import Details from '@components/Details';
 import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
 import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
 import DetailsProblems from '@components/DetailsProblems';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
-import Tag from '@components/Tag';
 
 import VocabExamples from '@containers/VocabExamples';
 

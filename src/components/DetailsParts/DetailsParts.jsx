@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { statusShape, tagsShape } from '@types/commonDetailsShape';
 
-import Tag from '@components/Tag';
+import Tag from '@components/ui/Tag';
 
 import {
   Wrapper,
