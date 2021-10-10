@@ -2,19 +2,27 @@ import styled, { css } from 'styled-components';
 
 import { breakpointMixin } from '@styles/mixins';
 
+const baseMobilePaddingTop = '.6rem';
+const baseMobilePaddingLeftRight = '1rem';
+const baseMobilePaddingBottom = '.4rem';
+
+const basePaddingTop = '.6rem';
+const basePaddingLeftRight = '1.2rem';
+const basePaddingBottom = '.4rem';
+
 const ListItem = styled.div`
   position: relative;
   order: 3;
   margin: .8rem;
-  padding: .6rem 1rem .4rem;
+  padding: ${baseMobilePaddingTop} ${baseMobilePaddingLeftRight} ${baseMobilePaddingBottom};
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.mainCategoriesStyle.notKnown.background};
   font-size: 2rem;
 
   ${breakpointMixin.laptop`
     margin: 1rem;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+    padding-left: ${basePaddingLeftRight};
+    padding-right: ${basePaddingLeftRight};
   `};
 
   @media print {
@@ -35,6 +43,15 @@ const ListItem = styled.div`
 
   ${(props) => props.joyo === false && css`
     border: ${props.theme.mainCategoriesStyle.joyo.border};
+    padding-top: calc(${baseMobilePaddingTop} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
+    padding-left: calc(${baseMobilePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
+    padding-right: calc(${baseMobilePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
+    padding-bottom: calc(${baseMobilePaddingBottom} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
+
+    ${breakpointMixin.laptop`
+      padding-left: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
+      padding-right: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
+    `};
   `};
 
   ${(props) => props.known && css`
@@ -84,6 +101,15 @@ const ListItem = styled.div`
       color: ${props.theme.mainCategoriesStyle.nowLearning.color};
       text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
     }
+
+    ${breakpointMixin.laptop`
+      padding-left: 1rem;
+      padding-right: 1rem;
+    `};
+
+    ${props.joyo === false && css`
+      border-color: #c73636;
+    `};
   `};
 
   ${(props) => props.inProgress && css`

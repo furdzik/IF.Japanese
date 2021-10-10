@@ -27,6 +27,7 @@ export default {
 
     nowLearning: {
       background: `repeating-linear-gradient(45deg, #ef8888, #fba5a5 1px, ${colors.darkPink} 2px, ${colors.darkPink} 5px)`,
+      borderSize: '2px',
       border: `2px solid ${colors.red}`,
       color: colors.white,
       textShadow: `-1px 1px 8px ${colors.veryDarkPink}`
@@ -44,6 +45,7 @@ export default {
     },
 
     joyo: {
+      borderSize: '1px',
       border: '1px solid #a0a0a0'
     }
   },
