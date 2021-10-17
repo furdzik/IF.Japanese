@@ -1947,7 +1947,7 @@
     "kanji": "分",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 0

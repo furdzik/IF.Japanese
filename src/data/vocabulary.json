@@ -1088,11 +1088,24 @@
   },
   {
     "vocab": "分かる",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5,
+    "additionalExplanation": [
+      "「〜が分かる」だけは正しいです。"
+    ],
+    "problems": [
+      {
+        "problem": "「〜が分かる」 is correct, but I almost always say 「〜を分かる」.",
+        "frequency": 9,
+        "resolved": false,
+        "info": [
+          "I did that only once so far."
+        ]
+      }
+    ],
     "verb": {
       "main": "分か",
       "verbGroup": "ru",
