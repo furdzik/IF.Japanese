@@ -180,6 +180,20 @@ export const tagTypes = {
   GRAMMAR_ORIGIN: 'grammarOrigin'
 };
 
+export const LIST_OF_READING_EXCEPTIONS = {
+  periodOfMonths: {
+    kanji: 'ヶ月',
+    furigana: 'ヶげつ'
+  }
+};
+
+export const KATAKANA_FURIGANA_EXCEPTIONS = {
+  smallKa: {
+    kanji: 'ヶ',
+    furigana: 'か'
+  }
+};
+
 /* GRAMMAR */
 export const grammarLevels = {
   LEVEL_5: 5,

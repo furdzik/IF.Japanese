@@ -49744,5 +49744,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "ヶ月",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "classifier": true,
+    "pitch": "",
+    "level": 1
   }
 ]
