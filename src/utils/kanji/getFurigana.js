@@ -19,8 +19,6 @@ export const getFurigana = (kanji, furigana) => {
 
   const detailedFurigana = fit(kanji, newFurigana, { type: 'object' });
 
-  console.log(kanji, newFurigana, detailedFurigana);
-
   const newDetailedFurigana = _cloneDeep(detailedFurigana);
 
   detailedFurigana.forEach((el, index) => {

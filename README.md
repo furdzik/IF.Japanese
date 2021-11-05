@@ -44,7 +44,9 @@ This repository presents frontend application for my Japanese APP
     "examples": [
         "同じタイミングで言ってみました。"
     ],
-    "additionalExplanation": "椅子の上を立つ。椅子に乗る。",
+    "additionalExplanation": [
+        "椅子の上を立つ。椅子に乗る。"
+    ],
     "problems": [
       {
         "problem": "食事 is suru verb, that's why we can say:「食事します」 or 「食事をします」. Not 「食事を食べる」.",

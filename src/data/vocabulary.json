@@ -9774,11 +9774,23 @@
   },
   {
     "vocab": "色々",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "problems": [
+      {
+        "problem": "I forgot it's na-adjective and I said: '色々がありました。'",
+        "frequency": 4,
+        "resolved": false
+      }
+    ],
+    "examples": [
+      "色々ありました。",
+      "色々なことがありました。",
+      "色々と有り難うございます。忘れないように彼はそれを書き留めた。"
+    ]
   },
   {
     "vocab": "考え方",
@@ -15995,13 +16007,21 @@
   },
   {
     "vocab": "帰る",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5,
     "additionalExplanation": [
-      "「家に帰る」という意味で、「行く」は間違いだ。"
+      "「家に帰る」という意味で、「行く」は間違いだ。",
+      "「家に帰る」や「国に帰る」(じぶんのメインな場所)しか使えない。"
+    ],
+    "problems": [
+      {
+        "problem": "I used '戻る' in sens of '帰る'",
+        "frequency": 8,
+        "resolved": false
+      }
     ],
     "verb": {
       "main": "帰",
@@ -16882,11 +16902,14 @@
   },
   {
     "vocab": "ニュース",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 5
+    "level": 5,
+    "additionalExplanation": [
+      "テレビや、ラジオや、新聞などだけ使える。"
+    ]
   },
   {
     "vocab": "辛い",
@@ -18958,16 +18981,34 @@
   },
   {
     "vocab": "壊れる",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4,
     "verb": {
       "main": "壊れ",
       "verbGroup": "2",
       "verbType": "intransitive"
-    }
+    },
+    "additionalExplanation": [
+      "物だけに使える。"
+    ],
+    "problems": [
+      {
+        "problem": "Often mistaken with not existing word: こわる",
+        "frequency": 8,
+        "resolved": false
+      },
+      {
+        "problem": "I used it for problem with legs. It's incorrect.",
+        "frequency": 6,
+        "resolved": false,
+        "info": [
+          "To be exact: '足がこわれました。'. In this context correct is: '足の状態が悪いです。'"
+        ]
+      }
+    ]
   },
   {
     "vocab": "具合",
@@ -19884,11 +19925,23 @@
   },
   {
     "vocab": "戻る",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "problems": [
+      {
+        "problem": "I used it in sens of '帰る'",
+        "frequency": 8,
+        "resolved": false
+      }
+    ],
+    "verb": {
+      "main": "戻る",
+      "verbGroup": "ru",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "調べる",
@@ -34103,7 +34156,7 @@
   {
     "vocab": "肘",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 2
@@ -38914,6 +38967,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "膝",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 3
   },
   {
     "vocab": "砕ける",
@@ -49749,7 +49810,7 @@
     "vocab": "ヶ月",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "classifier": true,
     "pitch": "",
     "level": 1
