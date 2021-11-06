@@ -1,9 +1,9 @@
-import { kanjiAliveApiKey } from '@config/environment';
+import { kanjiAliveApiUrl, kanjiAliveApiKey } from '@config/environment';
 
 import api from './api';
 
 export const fetchKanji = (kanji) => (
-  api.get(`https://kanjialive-api.p.rapidapi.com/api/public/kanji/${kanji}`,
+  api.get(`${kanjiAliveApiUrl}${kanji}`,
     {
       headers: {
         'x-rapidapi-key': kanjiAliveApiKey,

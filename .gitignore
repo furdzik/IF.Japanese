@@ -17,6 +17,8 @@ node_modules/
 
 # env
 .env
+.env.production
+.env.development
 
 # Optional npm cache directory
 .npm
