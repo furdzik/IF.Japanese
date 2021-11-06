@@ -15,6 +15,9 @@ coverage
 # Dependency directories
 node_modules/
 
+# env
+.env
+
 # Optional npm cache directory
 .npm
 

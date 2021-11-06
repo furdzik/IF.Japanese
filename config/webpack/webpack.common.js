@@ -1,6 +1,7 @@
 const { resolve } = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { LoaderOptionsPlugin } = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const { version } = require('../../package');
 
@@ -50,6 +51,7 @@ module.exports = ({ production }) => ({
     ]
   },
   plugins: [
+    new Dotenv(),
     new LoaderOptionsPlugin({
       options: {
         handlebarsLoader: {}
