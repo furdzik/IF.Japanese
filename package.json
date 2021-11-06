@@ -54,6 +54,7 @@
     "@mdi/react": "1.3.0",
     "axios": "0.21.4",
     "core-js": "3.6.4",
+    "dotenv-webpack": "7.0.3",
     "formik": "2.1.4",
     "furigana": "0.19.3",
     "lodash": "4.17.21",
