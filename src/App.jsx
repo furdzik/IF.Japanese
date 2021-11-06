@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { IntlProvider } from 'react-intl';
 
-import Routes from '@root/routes';
+import RoutesConfig from '@root/routes';
 
 import { production } from '@config/environment';
 
@@ -32,7 +32,7 @@ const App = () => (
   >
     <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <Routes />
+        <RoutesConfig />
         <GlobalStyles />
       </Provider>
     </ThemeProvider>

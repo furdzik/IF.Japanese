@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route,
-  Switch
+  Routes
 } from 'react-router-dom';
 
 import { menuId, menu } from '@config/constants';
@@ -21,162 +21,115 @@ import Flashcards from '@containers/Flashcards';
 import Grammar from '@containers/Grammar';
 import GrammarDetails from '@containers/GrammarDetails';
 
-const Routes = () => (
-  <Router>
-    <Switch>
+const RoutesConfig = () => (
+  <BrowserRouter>
+    <Routes>
       <Route
-        exact
         path="/"
-      >
-        <Layout list={menu} menuActive={menuId.vocab}>
-          <Vocabulary />
-        </Layout>
-      </Route>
+        element={(
+          <Layout list={menu} menuActive={menuId.vocab}>
+            <Vocabulary />
+          </Layout>
+        )}
+      />
       <Route
-        exact
         path="/kanji"
-      >
-        <Layout list={menu} menuActive={menuId.kanji}>
-          <Kanji />
-        </Layout>
-      </Route>
+        element={(
+          <Layout list={menu} menuActive={menuId.kanji}>
+            <Kanji />
+          </Layout>
+        )}
+      />
       <Route
-        exact
         path="/kanji/:kanji"
-        render={(props) => {
-          // eslint-disable-next-line react/prop-types
-          const { kanji } = props.match.params;
-
-          if (kanji) {
-            window.scrollTo({
-              top: 0,
-              left: 0,
-              behavior: 'smooth'
-            });
-
-            return (
-              <Layout list={menu} menuActive={menuId.kanji}>
-                <KanjiDetails key={kanji} kanji={kanji} />
-              </Layout>
-            );
-          }
-
-          return null;
-        }}
+        element={(
+          <Layout list={menu} menuActive={menuId.kanji}>
+            <KanjiDetails />
+          </Layout>
+        )}
       />
       <Route
-        exact
         path="/vocab/:vocab"
-        render={(props) => {
-          // eslint-disable-next-line react/prop-types
-          const { vocab } = props.match.params;
-
-          if (vocab) {
-            window.scrollTo({
-              top: 0,
-              left: 0,
-              behavior: 'smooth'
-            });
-
-            return (
-              <Layout list={menu} menuActive={menuId.vocab}>
-                <VocabularyDetails name={vocab} />
-              </Layout>
-            );
-          }
-
-          return null;
-        }}
+        element={(
+          <Layout list={menu} menuActive={menuId.vocab}>
+            <VocabularyDetails />
+          </Layout>
+        )}
       />
       <Route
-        exact
         path="/verbs"
-      >
-        <Layout list={menu} menuActive={menuId.verbs}>
-          <Verbs />
-        </Layout>
-      </Route>
-      <Route
-        exact
-        path="/grammar"
-      >
-        <Layout list={menu} menuActive={menuId.grammar}>
-          <Grammar />
-        </Layout>
-      </Route>
-      <Route
-        exact
-        path="/grammar/:grammarId"
-        render={(props) => {
-          // eslint-disable-next-line react/prop-types
-          const { grammarId } = props.match.params;
-
-          if (grammarId) {
-            window.scrollTo({
-              top: 0,
-              left: 0,
-              behavior: 'smooth'
-            });
-
-            return (
-              <Layout list={menu} menuActive={menuId.grammar}>
-                <GrammarDetails grammarId={grammarId} />
-              </Layout>
-            );
-          }
-
-          return null;
-        }}
+        element={(
+          <Layout list={menu} menuActive={menuId.verbs}>
+            <Verbs />
+          </Layout>
+        )}
       />
       <Route
-        exact
+        path="/grammar"
+        element={(
+          <Layout list={menu} menuActive={menuId.grammar}>
+            <Grammar />
+          </Layout>
+        )}
+      />
+      <Route
+        path="/grammar/:grammarId"
+        element={(
+          <Layout list={menu} menuActive={menuId.grammar}>
+            <GrammarDetails />
+          </Layout>
+        )}
+      />
+      <Route
         path="/expressions"
-      >
-        <Layout list={menu} menuActive={menuId.grammar}>
-          expressions WIP
-        </Layout>
-      </Route>
+        element={(
+          <Layout list={menu} menuActive={menuId.grammar}>
+            expressions WIP
+          </Layout>
+        )}
+      />
       <Route
-        exact
         path="/grammar-politeness"
-      >
-        <Layout list={menu} menuActive={menuId.grammar}>
-          grammar-politeness WIP
-        </Layout>
-      </Route>
+        element={(
+          <Layout list={menu} menuActive={menuId.grammar}>
+            grammar-politeness WIP
+          </Layout>
+        )}
+      />
       <Route
-        exact
         path="/others"
-      >
-        <Layout list={menu} menuActive={menuId.others}>
-          <OthersMainPage />
-        </Layout>
-      </Route>
+        element={(
+          <Layout list={menu} menuActive={menuId.others}>
+            <OthersMainPage />
+          </Layout>
+        )}
+      />
       <Route
-        exact
         path="/kana-game"
-      >
-        <Layout list={menu} menuActive={menuId.others}>
-          <KanaGame />
-        </Layout>
-      </Route>
+        element={(
+          <Layout list={menu} menuActive={menuId.others}>
+            <KanaGame />
+          </Layout>
+        )}
+      />
       <Route
-        exact
         path="/flashcards"
-      >
-        <Layout list={menu} menuActive={menuId.others}>
-          <Flashcards />
-        </Layout>
-      </Route>
+        element={(
+          <Layout list={menu} menuActive={menuId.others}>
+            <Flashcards />
+          </Layout>
+        )}
+      />
       <Route
-        render={() => (
+        path="*"
+        element={(
           <Layout list={menu} menuActive={-1}>
             <PageNotFound />
           </Layout>
         )}
       />
-    </Switch>
-  </Router>
+    </Routes>
+  </BrowserRouter>
 );
 
-export default Routes;
+export default RoutesConfig;
