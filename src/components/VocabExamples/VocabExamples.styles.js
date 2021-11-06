@@ -4,9 +4,15 @@ import { breakpointMixin } from '@styles/mixins';
 
 import Button from '@components/ui/Button';
 import Tile from '@components/ui/Tile';
+import SimpleLoader from '@components/ui/SimpleLoader';
+
+const ListWrapper = styled.div`
+  position: relative;
+  padding-bottom: 2rem;
+`;
 
 const List = styled.ul`
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   list-style: none;
 `;
 
@@ -35,6 +41,7 @@ const ListItemContent = styled.div`
   flex-wrap: nowrap;
   align-items: flex-start;
   width: 100%;
+
   &::before {
     display: inline-block;
     flex-shrink: 0;
@@ -73,7 +80,13 @@ const MeaningWrapper = styled.div`
   font-size: 1.4rem;
 `;
 
+const StyledSimpleLoader = styled(SimpleLoader)`
+  position: absolute;
+  bottom: .7rem;
+`;
+
 export {
+  ListWrapper,
   List,
   ListItem,
   ListItemContent,
@@ -81,5 +94,6 @@ export {
   ExampleWrapper,
   StyledTile,
   StyledButton,
-  MeaningWrapper
+  MeaningWrapper,
+  StyledSimpleLoader
 };

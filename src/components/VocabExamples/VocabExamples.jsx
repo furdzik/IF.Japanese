@@ -14,6 +14,7 @@ import Tag from '@components/ui/Tag';
 import Character from '@components/Character';
 
 import {
+  ListWrapper,
   List,
   ListItem,
   ListItemContent,
@@ -21,7 +22,8 @@ import {
   ExampleWrapper,
   StyledTile,
   StyledButton,
-  MeaningWrapper
+  MeaningWrapper,
+  StyledSimpleLoader
 } from './VocabExamples.styles.js';
 import messages from './VocabExamples.messages';
 
@@ -49,71 +51,78 @@ const VocabExamples = (props) => {
     <React.Fragment>
       {
         props.vocabExamples.length ? (
-          <List>
-            {
-              props.vocabExamples.map((el) => (
-                <ListItem key={uuidv4()} hasTags={!!el.tags.length}>
-                  <ListItemContent>
-                    <div>
-                      {
-                        el.tags.length ? (
-                          <TagWrapper>
+          <ListWrapper>
+            <List>
+              {
+                props.vocabExamples.map((el) => (
+                  <ListItem key={uuidv4()} hasTags={!!el.tags.length}>
+                    <ListItemContent>
+                      <div>
+                        {
+                          el.tags.length ? (
+                            <TagWrapper>
+                              {
+                                el.tags.map((tag) => (
+                                  <Tag
+                                    small
+                                    tagType={tag.tagType}
+                                    key={uuidv4()}
+                                  >
+                                    {tag.label}
+                                  </Tag>
+                                ))
+                              }
+                            </TagWrapper>
+                          ) : null
+                        }
+                        <ExampleWrapper>
+                          <StyledTile
+                            level={0}
+                            known={el.status?.known}
+                            nowLearning={el.status?.nowLearning}
+                            inProgress={el.status?.inProgress}
+                            joyo={!!el.original}
+                            isWideElement
+                            noOrder
+                          >
                             {
-                              el.tags.map((tag) => (
-                                <Tag
-                                  small
-                                  tagType={tag.tagType}
-                                  key={uuidv4()}
+                              el.original ? (
+                                <Link
+                                  to={
+                                    `/vocab/${el.original.meaning
+                                      ? `${el.original.vocab},${el.original.meaning},${el.original.vocab}`
+                                      : el.vocab}`
+                                  }
                                 >
-                                  {tag.label}
-                                </Tag>
-                              ))
+                                  {kanjiWithFurigana(el)}
+                                </Link>
+                              ) : (
+                                <a
+                                  href={`https://jisho.org/search/${el.vocab}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {kanjiWithFurigana(el)}
+                                </a>
+                              )
                             }
-                          </TagWrapper>
-                        ) : null
-                      }
-                      <ExampleWrapper>
-                        <StyledTile
-                          level={0}
-                          known={el.status?.known}
-                          nowLearning={el.status?.nowLearning}
-                          inProgress={el.status?.inProgress}
-                          joyo={!!el.original}
-                          isWideElement
-                          noOrder
-                        >
-                          {
-                            el.original ? (
-                              <Link
-                                to={
-                                  `/vocab/${el.original.meaning
-                                    ? `${el.original.vocab},${el.original.meaning},${el.original.vocab}`
-                                    : el.vocab}`
-                                }
-                              >
-                                {kanjiWithFurigana(el)}
-                              </Link>
-                            ) : (
-                              <a
-                                href={`https://jisho.org/search/${el.vocab}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {kanjiWithFurigana(el)}
-                              </a>
-                            )
-                          }
-                        </StyledTile>
-                        <MeaningWrapper>
-                          {el.meaning}
-                        </MeaningWrapper>
-                      </ExampleWrapper>
-                    </div>
-                  </ListItemContent>
-                </ListItem>
-              ))
+                          </StyledTile>
+                          <MeaningWrapper>
+                            {el.meaning}
+                          </MeaningWrapper>
+                        </ExampleWrapper>
+                      </div>
+                    </ListItemContent>
+                  </ListItem>
+                ))
+              }
+            </List>
+            {
+              props.showMoreLoading ? (
+                <StyledSimpleLoader />
+              ) : null
             }
-          </List>
+          </ListWrapper>
         ) : null
       }
       {
@@ -134,12 +143,14 @@ VocabExamples.propTypes = {
   getVocabExamples: PropTypes.func.isRequired,
   examples: simpleExamplesShape,
   showLoadMoreButton: PropTypes.bool,
+  showMoreLoading: PropTypes.bool,
   vocabExamples: vocabExamplesShape
 };
 
 VocabExamples.defaultProps = {
   examples: [],
-  showLoadMoreButton: true,
+  showLoadMoreButton: false,
+  showMoreLoading: false,
   vocabExamples: []
 };
 
