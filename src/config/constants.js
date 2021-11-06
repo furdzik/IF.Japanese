@@ -194,6 +194,14 @@ export const KATAKANA_FURIGANA_EXCEPTIONS = {
   }
 };
 
+export const KANA_TYPE = {
+  both: 'both',
+  hiragana: 'hiragana',
+  katakana: 'katakana'
+};
+
+export const KANA_GAME_INIT = [KANA_TYPE.katakana, KANA_TYPE.hiragana];
+
 /* GRAMMAR */
 export const grammarLevels = {
   LEVEL_5: 5,

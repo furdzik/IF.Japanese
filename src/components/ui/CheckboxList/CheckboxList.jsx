@@ -30,7 +30,7 @@ const CheckboxList = (props) => (
             checked={props.selected.indexOf(item.value) !== -1}
             required={props.required}
             disabled={props.disabled}
-            onChange={() => { props.onCheckboxClick(item.value); }}
+            onChange={() => props.onCheckboxClick(item.value)}
             value={item.value}
           >
             {item.label}
