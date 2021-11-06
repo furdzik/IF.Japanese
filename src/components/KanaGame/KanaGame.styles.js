@@ -13,6 +13,12 @@ const Title = styled.div`
   color: ${(props) => props.theme.mainColors.primary};
 `;
 
+const FiltersWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+`;
+
 const GameField = styled.div`
   width: 100%;
   margin: 0 auto;
@@ -66,6 +72,7 @@ const Instructions = styled.div`
 export {
   Wrapper,
   Title,
+  FiltersWrapper,
   GameField,
   RandomKana,
   Input,
