@@ -21,16 +21,10 @@
     "lint": "npm run eslint && npm run stylelint",
     "lang": "extract-messages -l=en -d=en -o lang/generated --flat \"src/**/**/**/*.messages.js\"",
     "find-duplicates": "jscpd ./src/",
-    "dev": "npx webpack-dev-server --history-api-fallback --open",
     "stylelint": "npx stylelint \"**/*.styles.{js,jsx}\"",
-    "eslint": "eslint src/ --ext .jsx,.js"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run lang",
-      "pre-push": "npm run lint && npm run find-duplicates"
-    }
+    "eslint": "eslint src/ --ext .jsx,.js",
+    "dev": "npx webpack-dev-server --history-api-fallback --open",
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
