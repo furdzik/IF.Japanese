@@ -23,7 +23,7 @@ const initialState = {
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyKanji, FILTERS_IDS)
 };
 
-export default function(state = initialState, action) {
+export default function kanjiReducer (state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_KANJI: {
       const kanjiList = action.payload;

@@ -15,7 +15,7 @@
     "stylelint-order"
   ],
   "rules": {
-    "at-rule-empty-line-before": null,
+    "rule-empty-line-before": null,
     "at-rule-no-unknown": [
       true,
       {
@@ -212,6 +212,8 @@
     "string-quotes": "single",
     "no-descending-specificity": null,
     "value-keyword-case": null,
-    "selector-type-case": null
+    "selector-type-case": null,
+    "alpha-value-notation": null,
+    "selector-class-pattern": null
   }
 }

@@ -33,7 +33,7 @@ const initialState = {
   error: null
 };
 
-export default function(state = initialState, action) {
+export default function flashcardsReducer (state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_FLASHCARD: {
       const { list, flashcard, additionalInfo } = action.payload;

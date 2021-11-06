@@ -23,7 +23,7 @@ const initialState = {
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyVocab, FILTERS_IDS)
 };
 
-export default function(state = initialState, action) {
+export default function vocabularyReducer (state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_VOCAB: {
       const vocabList = action.payload;
