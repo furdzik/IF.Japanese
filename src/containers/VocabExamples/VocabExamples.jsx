@@ -21,6 +21,7 @@ const VocabExamples = (props) => {
       examples={props.examples}
       vocabExamples={props.vocabExamples}
       showLoadMoreButton={props.showLoadMoreButton}
+      showMoreLoading={props.showMoreLoading}
     />
   ) : <Loader center={false} static />;
 };
@@ -30,6 +31,7 @@ VocabExamples.propTypes = {
   examples: simpleExamplesShape,
   loading: PropTypes.bool,
   showLoadMoreButton: PropTypes.bool,
+  showMoreLoading: PropTypes.bool,
   vocabExamples: vocabExamplesShape
 };
 
@@ -37,6 +39,7 @@ VocabExamples.defaultProps = {
   examples: null,
   loading: false,
   showLoadMoreButton: false,
+  showMoreLoading: false,
   vocabExamples: null
 };
 

@@ -7,6 +7,7 @@ const MAX_REQUESTS_INDEX = 11; // from 0 - 11 indexes = 12 elements
 
 const actionTypes = {
   GET_VOCAB_EXAMPLES_INIT: 'VOCAB_EXAMPLES/GET_VOCAB_INIT',
+  GET_VOCAB_EXAMPLES_SHOW_MORE_LOADING: 'VOCAB_EXAMPLES/GET_VOCAB_EXAMPLES_SHOW_MORE_LOADING',
   GET_VOCAB_EXAMPLES: 'VOCAB_EXAMPLES/GET_VOCAB_EXAMPLES'
 };
 
@@ -25,7 +26,15 @@ export default function(state = initialState, action) {
         ...state,
         vocabExamples,
         showLoadMoreButton,
-        loading: false
+        loading: false,
+        showMoreLoading: false
+      };
+    }
+
+    case actionTypes.GET_VOCAB_EXAMPLES_SHOW_MORE_LOADING: {
+      return {
+        ...state,
+        showMoreLoading: true
       };
     }
 
@@ -47,6 +56,10 @@ const getVocabExamplesInitAction = () => ({
   type: actionTypes.GET_VOCAB_EXAMPLES_INIT
 });
 
+const showMoreLoadingAction = () => ({
+  type: actionTypes.GET_VOCAB_EXAMPLES_SHOW_MORE_LOADING
+});
+
 const getVocabExamplesAction = (payload) => ({
   type: actionTypes.GET_VOCAB_EXAMPLES,
   payload
@@ -55,6 +68,8 @@ const getVocabExamplesAction = (payload) => ({
 export const getVocabExamples = (examples, lastElementIndex = 0) => (dispatch, getStore) => {
   if (lastElementIndex === 0) {
     dispatch(getVocabExamplesInitAction());
+  } else {
+    dispatch(showMoreLoadingAction());
   }
 
   const exampleToSend = examples
