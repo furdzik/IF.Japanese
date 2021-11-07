@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { DETAILS_HEADER_ICON_TYPES } from '@config/constants';
 
@@ -11,17 +12,17 @@ const Title = styled.h2`
   font-size: ${(props) => props.theme.typography.fontSize.headingBig};
   font-weight: ${(props) => props.theme.typography.fontWeight.bold};
 
-  ${breakpointMixin.landscapeTablet`
+  ${breakpointMixin.landscapeTablet(css`
     font-size: ${(props) => props.theme.typography.fontSize.desktop.headingBig};
-  `}
+  `)};
 
   ${(props) => props.small && css`
     font-size: ${props.theme.typography.fontSize.medium};
 
-     ${breakpointMixin.landscapeTablet`
+     ${breakpointMixin.landscapeTablet(css`
       font-size: ${props.theme.typography.fontSize.desktop.medium};
-    `}
-  `}
+    `)};
+  `};
 `;
 
 const IconWrapper = styled.div`

@@ -28,7 +28,7 @@ const initialState = {
   loading: true
 };
 
-export default function(state = initialState, action) {
+export default function kanjiDetailsReducer (state = initialState, action) {
   switch (action.type) {
     case actionTypes.GET_KANJI_DETAILS: {
       const {

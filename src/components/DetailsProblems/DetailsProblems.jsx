@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { useIntl } from 'react-intl';
 
-import { ThemeContext } from 'styled-components';
+import { useTheme } from '@emotion/react';
 
 import { mdiExclamationThick, mdiCheck, mdiClose } from '@mdi/js';
 import Icon from '@mdi/react';
@@ -26,6 +26,7 @@ import {
 import messages from './DetailsProblems.messages';
 
 const DetailsProblems = (props) => {
+  const theme = useTheme();
   const intl = useIntl();
 
   return (
@@ -57,13 +58,13 @@ const DetailsProblems = (props) => {
                       <Icon
                         path={mdiCheck}
                         size={2}
-                        color={useContext(ThemeContext).colors.green}
+                        color={theme.colors.green}
                       />
                     ) : (
                       <Icon
                         path={mdiClose}
                         size={2}
-                        color={useContext(ThemeContext).colors.red}
+                        color={theme.colors.red}
                       />
                     )
                   }

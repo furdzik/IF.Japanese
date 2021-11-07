@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -17,19 +18,19 @@ const ListItem = styled.div`
   background: ${(props) => props.theme.mainCategoriesStyle.notKnown.background};
   font-size: 2rem;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     margin: 1rem;
     padding-left: ${basePaddingLeftRight};
     padding-right: ${basePaddingLeftRight};
-  `};
+  `)};
 
   @media print {
     && {
       display: inline-block;
       min-width: 4rem;
       height: 3.5rem;
-      margin: .5rem .5rem;
-      padding: .5rem .5rem;
+      margin: .5rem;
+      padding: .5rem;
       line-height: 1.2;
       text-align: center;
       page-break-inside: avoid;
@@ -46,10 +47,10 @@ const ListItem = styled.div`
     padding-right: calc(${baseMobilePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
     padding-bottom: calc(${baseMobilePaddingBottom} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
 
-    ${breakpointMixin.laptop`
+    ${breakpointMixin.laptop(css`
       padding-left: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
       padding-right: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
-    `};
+    `)};
   `};
 
   ${(props) => props.known && css`
@@ -100,10 +101,10 @@ const ListItem = styled.div`
       text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
     }
 
-    ${breakpointMixin.laptop`
+    ${breakpointMixin.laptop(css`
       padding-left: 1rem;
       padding-right: 1rem;
-    `};
+    `)};
 
     ${props.joyo === false && css`
       border-color: #c73636;

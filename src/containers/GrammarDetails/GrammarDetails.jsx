@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -22,13 +23,15 @@ import selector from './GrammarDetails.selector';
 import { getGrammarDetails } from './GrammarDetails.reducer';
 
 const GrammarDetails = (props) => {
+  const params = useParams();
+
   useEffect(() => {
-    props.getGrammarDetails(props.grammarId);
-  }, [props.grammarId]);
+    props.getGrammarDetails(params.grammarId);
+  }, [params.grammarId]);
 
   return !props.loading ? (
     <GrammarDetailsComponent
-      grammarId={props.grammarId}
+      grammarId={params.grammarId}
       grammarName={props.grammarName}
       status={props.status}
       additionalExplanation={props.additionalExplanation}
@@ -44,7 +47,6 @@ const GrammarDetails = (props) => {
 
 GrammarDetails.propTypes = {
   getGrammarDetails: PropTypes.func.isRequired,
-  grammarId: PropTypes.string.isRequired,
   grammarName: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   status: statusShape.isRequired,

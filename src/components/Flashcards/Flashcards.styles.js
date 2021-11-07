@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -35,9 +36,9 @@ const VocabCard = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.mainColors.secondary};
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     width: 50rem;
-  `}
+  `)};
 `;
 
 const MeaningCard = styled(VocabCard)`
@@ -48,9 +49,9 @@ const MeaningCard = styled(VocabCard)`
 const VocabStyle = css`
   font-size: 4rem;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     font-size: 5rem;
-  `}
+  `)};
 `;
 
 const VocabWrapper = styled.div`
@@ -65,24 +66,24 @@ const TileStyled = styled(Tile)`
 
   ${(props) => !props.known && !props.inProgress && !props.nowLearning && css`
     border: 2px solid #a0a0a0;
-  `}
+  `};
 
   ${(props) => props.inProgress && !props.nowLearning && css`
     border: 2px solid #f39c9c;
-  `}
+  `};
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     ${VocabStyle};
-  `}
+  `)};
 `;
 
 const ReadingWrapper = styled.div`
   margin-top: 1rem;
   font-size: 3.5rem;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     font-size: 4rem;
-  `}
+  `)};
 `;
 
 const MeaningWrapper = styled.div`

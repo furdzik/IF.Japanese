@@ -1,12 +1,13 @@
 {
   "presets": [
+    "@emotion/babel-preset-css-prop",
     "@babel/preset-react",
     ["@babel/preset-env", {
+      "loose": true,
       "shippedProposals": true
     }]
   ],
   "plugins": [
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
     "@babel/plugin-transform-runtime",
     ["module-resolver", {
       "alias": {
@@ -27,7 +28,8 @@
     ["react-intl-auto", {
       "removePrefix": "src",
       "filebase": false
-    }]
+    }],
+    "@emotion"
   ],
   "env": {
     "test": {

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -20,11 +21,12 @@ import selector from './KanjiDetails.selector';
 import { getKanjiDetails } from './KanjiDetails.reducer';
 
 const KanjiDetails = (props) => {
+  const params = useParams();
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    props.getKanjiDetails(props.kanji);
-  }, [props.kanji]);
+    props.getKanjiDetails(params.kanji);
+  }, [params.kanji]);
 
   useEffect(() => {
     setHasMounted(true);
@@ -37,7 +39,7 @@ const KanjiDetails = (props) => {
 
   return !props.loading ? (
     <KanjiDetailsComponent
-      kanji={props.kanji}
+      kanji={params.kanji}
       examples={props.examples}
       additionalExplanation={props.additionalExplanation}
       meaning={props.meaning}
@@ -55,7 +57,6 @@ const KanjiDetails = (props) => {
 
 KanjiDetails.propTypes = {
   getKanjiDetails: PropTypes.func.isRequired,
-  kanji: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   additionalExplanation: additionalExplanationShape,
   examples: examplesShape,

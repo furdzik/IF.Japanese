@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { Link } from 'react-router-dom';
 
@@ -30,8 +31,7 @@ const LinkStyled = styled(Link)`
 
 const GrammarBoxWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   margin-right: -1rem;
   margin-left: -1rem;

@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 const CheckboxListWrapper = styled.ul`
   display: flex;
@@ -10,11 +11,11 @@ const CheckboxListWrapper = styled.ul`
 
   ${(props) => props.isCentered && css`
     justify-content: center;
-  `}
+  `};
 
   ${(props) => props.isVertical && css`
     display: block;
-  `}
+  `};
 
   @media print {
     justify-content: left;

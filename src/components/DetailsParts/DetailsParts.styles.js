@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import Tile from '@components/ui/Tile';
 
@@ -24,14 +25,14 @@ const SmallTags = styled.div`
 const ElementWrapper = styled.div`
   ${(props) => !props.isWideElement && css`
     display: flex;
-  `}
+  `};
 `;
 
 const TileWrapper = styled.div`
   ${(props) => props.isWideElement && css`
      display: flex;
      width: 100%;
-  `}
+  `};
 `;
 
 const StyledTile = styled(Tile)`
@@ -40,7 +41,7 @@ const StyledTile = styled(Tile)`
   ${(props) => props.isWideElement && css`
     margin-right: 0;
     margin-bottom: 1rem;
-  `}
+  `};
 `;
 
 const MeaningWrapper = styled.div`
@@ -48,7 +49,7 @@ const MeaningWrapper = styled.div`
 
   ${(props) => !props.isWideElement && css`
     max-width: 19.5rem;
-  `}
+  `};
 `;
 
 export {

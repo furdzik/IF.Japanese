@@ -1,6 +1,5 @@
 import React, {
   useCallback,
-  useContext,
   useEffect,
   useRef,
   useState
@@ -8,7 +7,7 @@ import React, {
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-import { ThemeContext } from 'styled-components';
+import { useTheme } from '@emotion/react';
 
 import Icon from '@mdi/react';
 import { mdiClose } from '@mdi/js';
@@ -37,6 +36,8 @@ import {
 } from './Modal.styles';
 
 const Modal = (props) => {
+  const theme = useTheme();
+
   const modalHeaderRef = useRef(null);
   const modalFooterRef = useRef(null);
   const [headerFooterHeight, setHeaderFooterHeight] = useState(0);
@@ -92,7 +93,7 @@ const Modal = (props) => {
                 >
                   <Icon
                     path={mdiClose}
-                    color={useContext(ThemeContext).colors.darkGray}
+                    color={theme.colors.darkGray}
                     size="2.5rem"
                   />
                 </CloseButton>

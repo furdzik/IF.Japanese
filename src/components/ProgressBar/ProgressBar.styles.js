@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,8 +12,8 @@ const Wrapper = styled.div`
   background: ${(props) => props.theme.mainCategoriesStyle.notKnown.background};
 `;
 
-const ProgressStyles = css`
-  width: ${(props) => props.percent}%;
+const ProgressStyles = (props) => css`
+  width: ${props.percent}%;
   height: 100%;
 `;
 

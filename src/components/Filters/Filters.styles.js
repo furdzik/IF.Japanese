@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -11,10 +12,10 @@ const Wrapper = styled.div`
     justify-content: left;
   }
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     display: flex;
     align-items: center;
-  `}
+  `)};
 `;
 
 const FiltersBox = styled.div`
@@ -25,33 +26,33 @@ const FiltersBox = styled.div`
     margin-top: 1rem;
   }
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     display: flex;
     align-items: center;
     min-height: 6.4rem;
     margin-bottom: 0;
     padding: 0 1rem;
-  `};
+  `)};
 
   ${(props) => props.primary && css`
     width: 100%;
     background: none;
 
-    ${breakpointMixin.laptop`
+    ${breakpointMixin.laptop(css`
       width: 56%;
       background: ${props.theme.mainColors.secondary};
-    `};
+    `)};
 
-    ${breakpointMixin.desktop`
+    ${breakpointMixin.desktop(css`
       width: 45%;
-    `};
-  `}
+    `)};
+  `};
 
   ${(props) => props.noHeight && css`
-    ${breakpointMixin.laptop`
+    ${breakpointMixin.laptop(css`
       min-height: auto;
-    `}
-  `}
+    `)};
+  `};
 
   @media print {
     justify-content: left;
@@ -67,9 +68,9 @@ const FiltersBox = styled.div`
 const FiltersGroup = styled.div`
   margin-left: auto;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     width: 50%;
-  `}
+  `)};
 `;
 
 export {

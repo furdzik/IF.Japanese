@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -20,13 +21,13 @@ const WordHeader = styled.div`
   ${(props) => props.known && css`
     background: ${props.theme.mainCategoriesStyle.known.background};
     color: ${props.theme.mainCategoriesStyle.known.color};
-  `}
+  `};
 
   ${(props) => props.inProgress && css`
     background: ${props.theme.mainCategoriesStyle.inProgress.background};
     color: ${props.theme.mainCategoriesStyle.inProgress.color};
     text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
-  `}
+  `};
 
   ${(props) => props.nowLearning && css`
     padding-top: 1.4rem;
@@ -35,7 +36,7 @@ const WordHeader = styled.div`
     background: ${props.theme.mainCategoriesStyle.nowLearning.background};
     color: ${props.theme.mainCategoriesStyle.nowLearning.color};
     text-shadow: ${props.theme.mainCategoriesStyle.nowLearning.textShadow};
-  `}
+  `};
 
   ${(props) => props.toRepeat && css`
     padding-top: 1.4rem;
@@ -43,11 +44,11 @@ const WordHeader = styled.div`
     background: ${props.theme.mainCategoriesStyle.toRepeat.background};
     color: ${props.theme.mainCategoriesStyle.toRepeat.color};
     text-shadow: ${props.theme.mainCategoriesStyle.toRepeat.textShadow};
-  `}
+  `};
 
-  ${breakpointMixin.landscapeTablet`
+  ${breakpointMixin.landscapeTablet(css`
     flex-direction: row;
-  `}
+  `)};
 `;
 
 const WordHeaderSeparator = styled.span`
@@ -62,11 +63,11 @@ const JishoLink = styled.a`
 
   ${(props) => props.notKnow && css`
     color: ${props.theme.colors.black};
-  `}
+  `};
 
-  ${breakpointMixin.landscapeTablet`
+  ${breakpointMixin.landscapeTablet(css`
     margin-left: auto;
-  `}
+  `)};
 `;
 
 const TagsWrapper = styled.div`
@@ -78,44 +79,44 @@ const TagsWrapper = styled.div`
 const Content = styled.div`
   margin: 0 1.5rem;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     margin-left: 3rem;
     margin-right: 3rem;
-  `}
+  `)};
 `;
 
 const SectionsWrapper = styled.div`
   width: 100%;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     display: flex;
     flex-wrap: wrap;
-  `}
+  `)};
 `;
 
 // @TODO: calculate this container
 const MainSection = styled.div`
   margin-top: 2rem;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     max-width: 53rem;
     margin-top: 0;
-  `};
+  `)};
 
   ${(props) => props.wide && css`
-    ${breakpointMixin.laptop`
+    ${breakpointMixin.laptop(css`
       width: 100%;
       max-width: none;
-    `}
-  `}
+    `)};
+  `};
 `;
 
 const NameWrapper = styled.div`
   margin-top: 1rem;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     margin-right: 4rem;
-  `}
+  `)};
 `;
 
 const CharacterBlock = styled.div`

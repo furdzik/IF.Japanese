@@ -4,11 +4,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-import { ThemeProvider } from 'styled-components';
+import { Global, ThemeProvider } from '@emotion/react';
 
 import { IntlProvider } from 'react-intl';
 
-import Routes from '@root/routes';
+import RoutesConfig from '@root/routes';
 
 import { production } from '@config/environment';
 
@@ -31,9 +31,9 @@ const App = () => (
     messages={english}
   >
     <ThemeProvider theme={theme}>
+      <Global styles={GlobalStyles} />
       <Provider store={store}>
-        <Routes />
-        <GlobalStyles />
+        <RoutesConfig />
       </Provider>
     </ThemeProvider>
   </IntlProvider>

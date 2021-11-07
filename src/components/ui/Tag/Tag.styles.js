@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { tagTypes } from '@config/constants';
 
@@ -17,32 +18,32 @@ const Wrapper = styled.div`
   ${(props) => props.tagType === tagTypes.IS_VERB && css`
     background: ${props.theme.mainColors.primary};
     color: ${props.theme.colors.white};
-  `}
+  `};
   ${(props) => (props.tagType === tagTypes.IS_COMMON || props.tagType === tagTypes.JOYO) && css`
     background: ${props.theme.colors.lightGreen};
     color: ${props.theme.colors.white};
-  `}
+  `};
   ${(props) => (props.tagType === tagTypes.JINMEIYO) && css`
     background: ${props.theme.colors.blue};
     color: ${props.theme.colors.white};
-  `}
+  `};
   ${(props) => props.tagType === tagTypes.JLPT && css`
     background: ${props.theme.colors.lightViolet};
     color: ${props.theme.colors.white};
-  `}
+  `};
   ${(props) => props.tagType === tagTypes.LEVEL_GROUP && css`
     background: ${props.theme.colors.blue};
     color: ${props.theme.colors.white};
-  `}
+  `};
   ${(props) => props.tagType === tagTypes.GRAMMAR_ORIGIN && css`
     background: ${props.theme.colors.lightBlue};
     color: ${props.theme.colors.white};
-  `}
+  `};
 
-  ${breakpointMixin.landscapePhone`
+  ${breakpointMixin.landscapePhone(css`
     margin-right: 2rem;
     margin-bottom: 2rem;
-  `}
+  `)};
 
   ${(props) => props.small && css`
     margin-right: .5rem;
@@ -50,10 +51,10 @@ const Wrapper = styled.div`
     padding: 0 .5rem;
     font-size: 1.2rem;
 
-    ${breakpointMixin.landscapePhone`
+    ${breakpointMixin.landscapePhone(css`
       margin-right: .5rem;
       margin-bottom: .5rem;
-    `}
+    `)};
   `}
 `;
 

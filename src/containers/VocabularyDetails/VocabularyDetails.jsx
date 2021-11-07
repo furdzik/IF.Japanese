@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -29,13 +30,14 @@ import selector from './VocabularyDetails.selector';
 import { getVocabularyDetails } from './VocabularyDetails.reducer';
 
 const VocabularyDetails = (props) => {
-  const [name, setName] = useState(getProperName(props.name, PROPER_NAME_TYPE.KANJI));
+  const params = useParams();
+  const [name, setName] = useState(getProperName(params.vocab, PROPER_NAME_TYPE.KANJI));
 
   useEffect(() => {
-    setName(getProperName(props.name, PROPER_NAME_TYPE.KANJI));
+    setName(getProperName(params.vocab, PROPER_NAME_TYPE.KANJI));
 
-    props.getVocabularyDetails(name, props.name, getVocabSpecificReading(props.name));
-  }, [props.name]);
+    props.getVocabularyDetails(name, params.vocab, getVocabSpecificReading(params.vocab));
+  }, [params.vocab]);
 
   return !props.loading ? (
     <VocabularyDetailsComponent
@@ -62,7 +64,6 @@ VocabularyDetails.propTypes = {
   loading: PropTypes.bool.isRequired,
   meaning: PropTypes.string.isRequired,
   metadata: metadataShape.isRequired,
-  name: PropTypes.string.isRequired,
   status: statusShape.isRequired,
   translations: translationsShape.isRequired,
   additionalExplanation: additionalExplanationShape,

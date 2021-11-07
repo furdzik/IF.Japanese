@@ -1,14 +1,16 @@
-import { createGlobalStyle } from 'styled-components';
+import { css } from '@emotion/react';
+
 import _map from 'lodash/map';
 
-import { typography } from './typography';
+import { typography } from '@styles/typography';
+import theme from '@styles/theme';
 
 const baseFontFamily = _map(typography.fontFamily, (el) => `${el}`).join(', ');
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = css`
   html {
-    background: ${(props) => props.theme.colors.lightGray};
-    font-size: ${(props) => props.theme.typography.fontSize.base};
+    background: ${theme.colors.lightGray};
+    font-size: ${theme.typography.fontSize.base};
 
     @media print {
       background: none;
@@ -17,11 +19,11 @@ const GlobalStyles = createGlobalStyle`
   body {
     box-sizing: border-box;
     overflow: hidden scroll;
-    background: ${(props) => props.theme.colors.white};
+    background: ${theme.colors.white};
     font-family: ${baseFontFamily};
-    font-size: ${(props) => props.theme.typography.fontSize.normal};
-    font-weight: ${(props) => props.theme.typography.fontWeight.regular};
-    line-height: ${(props) => props.theme.typography.lineHeight.normal};
+    font-size: ${theme.typography.fontSize.normal};
+    font-weight: ${theme.typography.fontWeight.regular};
+    line-height: ${theme.typography.lineHeight.normal};
   }
   *,
   *::before,
@@ -45,7 +47,7 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom: 2rem;
   }
   b, strong {
-    font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
+    font-weight: ${theme.typography.fontWeight.semibold};
   }
   input {
     padding: 0;
@@ -68,7 +70,7 @@ const GlobalStyles = createGlobalStyle`
       pointer-events: none;
     }
     &:-webkit-autofill {
-      box-shadow: 0 0 0 100rem ${(props) => props.theme.colors.white};
+      box-shadow: 0 0 0 100rem ${theme.colors.white};
     }
     &:required {
       box-shadow: none;

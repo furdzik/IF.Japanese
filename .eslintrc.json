@@ -1,9 +1,9 @@
 {
+  "root": true,
   "extends": "eslint-config-airbnb",
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "env": {
     "browser": true,
-    "jest": true,
     "es6": true
   },
   "plugins": [

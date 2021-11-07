@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+
 import ReactTooltip from 'react-tooltip';
 
 const StyledReactTooltip = styled(ReactTooltip)`
@@ -30,7 +31,7 @@ const StyledReactTooltip = styled(ReactTooltip)`
     }
     &.place-right {
       &::after {
-        border-color:  transparent ${(props) => props.theme.colors.darkGray};
+        border-color: transparent ${(props) => props.theme.colors.darkGray};
       }
     }
   }

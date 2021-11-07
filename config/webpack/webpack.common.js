@@ -21,14 +21,16 @@ module.exports = ({ production }) => ({
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules\/(?!react-intl|intl-messageformat|intl-messageformat-parser)/,
-        loader: 'babel-loader',
-        options: {
-          plugins: [
-            ["babel-plugin-styled-components", {
-              "pure": !!production,
-              "displayName": !production
-            }]
-          ]
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: [
+              ["babel-plugin-styled-components", {
+                "pure": !!production,
+                "displayName": !production
+              }]
+            ]
+          }
         }
       },
       {
@@ -45,9 +47,12 @@ module.exports = ({ production }) => ({
       },
       {
         test: /\.(svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file-loader?name=assets/fonts/[name].[ext]"
+        use: "file-loader?name=assets/fonts/[name].[ext]"
       },
-      { test: /\.hbs$/, loader: "handlebars-loader" }
+      {
+        test: /\.hbs$/,
+        use: "handlebars-loader"
+      }
     ]
   },
   plugins: [
@@ -63,7 +68,7 @@ module.exports = ({ production }) => ({
       favicon: './public/favicon.ico',
       appVersion: `${version}`,
       noscript: 'Proszę włączyć obsługę JavaScript w przeglądarce.',
-      appUrl: production ? '#{APP_URL}#' : 'http://if.japanese.local:2017',
+      appUrl: production ? process.env.APP_URL : 'http://if.japanese.local:2017',
       base: '/',
       minify: {
         removeAttributeQuotes: true,
