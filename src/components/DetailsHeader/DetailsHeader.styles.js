@@ -12,16 +12,16 @@ const Title = styled.h2`
   font-size: ${(props) => props.theme.typography.fontSize.headingBig};
   font-weight: ${(props) => props.theme.typography.fontWeight.bold};
 
-  ${breakpointMixin.landscapeTablet`
+  ${breakpointMixin.landscapeTablet(css`
     font-size: ${(props) => props.theme.typography.fontSize.desktop.headingBig};
-  `};
+  `)};
 
   ${(props) => props.small && css`
     font-size: ${props.theme.typography.fontSize.medium};
 
-     ${breakpointMixin.landscapeTablet`
+     ${breakpointMixin.landscapeTablet(css`
       font-size: ${props.theme.typography.fontSize.desktop.medium};
-    `};
+    `)};
   `};
 `;
 

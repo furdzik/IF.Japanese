@@ -36,9 +36,9 @@ const VocabCard = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.mainColors.secondary};
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     width: 50rem;
-  `};
+  `)};
 `;
 
 const MeaningCard = styled(VocabCard)`
@@ -49,9 +49,9 @@ const MeaningCard = styled(VocabCard)`
 const VocabStyle = css`
   font-size: 4rem;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     font-size: 5rem;
-  `};
+  `)};
 `;
 
 const VocabWrapper = styled.div`
@@ -72,18 +72,18 @@ const TileStyled = styled(Tile)`
     border: 2px solid #f39c9c;
   `};
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     ${VocabStyle};
-  `};
+  `)};
 `;
 
 const ReadingWrapper = styled.div`
   margin-top: 1rem;
   font-size: 3.5rem;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     font-size: 4rem;
-  `};
+  `)};
 `;
 
 const MeaningWrapper = styled.div`

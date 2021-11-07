@@ -18,24 +18,24 @@ const ProgressStyles = (props) => css`
 `;
 
 const KnownProgress = styled.div`
-  ${(props) => ProgressStyles(props)};
+  ${ProgressStyles};
   background: ${(props) => props.theme.mainCategoriesStyle.known.background};
 `;
 
 const ToRepeatProgress = styled.div`
-  ${(props) => ProgressStyles(props)};
+  ${ProgressStyles};
   border-right: 1px solid #ec4a4a;
   background: ${(props) => props.theme.mainCategoriesStyle.toRepeat.background};
 `;
 
 const NowLearningProgress = styled.div`
-  ${(props) => ProgressStyles(props)};
+  ${ProgressStyles};
   border-right: 1px solid #f36a6a;
   background: ${(props) => props.theme.mainCategoriesStyle.nowLearning.background};
 `;
 
 const InProgressProgress = styled.div`
-  ${(props) => ProgressStyles(props)};
+  ${ProgressStyles};
   border-right: 1px solid #e0acac;
   background: ${(props) => props.theme.mainCategoriesStyle.inProgress.background};
 `;

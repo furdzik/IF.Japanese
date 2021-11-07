@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { Link } from 'react-router-dom';
 
@@ -10,10 +11,10 @@ const BoxList = styled.ul`
   text-align: center;
   list-style: none;
 
-  ${breakpointMixin.portraitTablet`
+  ${breakpointMixin.portraitTablet(css`
     display: flex;
     flex-wrap: wrap;
-  `};
+  `)};
 `;
 
 const BoxItem = styled.li`

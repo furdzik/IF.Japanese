@@ -40,10 +40,10 @@ const Wrapper = styled.div`
     color: ${props.theme.colors.white};
   `};
 
-  ${breakpointMixin.landscapePhone`
+  ${breakpointMixin.landscapePhone(css`
     margin-right: 2rem;
     margin-bottom: 2rem;
-  `};
+  `)};
 
   ${(props) => props.small && css`
     margin-right: .5rem;
@@ -51,10 +51,10 @@ const Wrapper = styled.div`
     padding: 0 .5rem;
     font-size: 1.2rem;
 
-    ${breakpointMixin.landscapePhone`
+    ${breakpointMixin.landscapePhone(css`
       margin-right: .5rem;
       margin-bottom: .5rem;
-    `};
+    `)};
   `}
 `;
 

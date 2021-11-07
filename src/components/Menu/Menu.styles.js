@@ -20,10 +20,10 @@ const MenuItem = styled.li`
     margin-right: 0;
   }
 
-  ${breakpointMixin.portraitTablet`
+  ${breakpointMixin.portraitTablet(css`
     margin-right: 3rem;
     font-size: 2.7rem;
-  `};
+  `)};
 
   @media print {
     margin-top: 0;

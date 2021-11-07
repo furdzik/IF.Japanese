@@ -14,13 +14,13 @@ const Title = styled.h3`
     font-size: ${props.theme.typography.fontSize.headingSmall};
   `};
 
-  ${breakpointMixin.landscapeTablet`
+  ${breakpointMixin.landscapeTablet(css`
     font-size: ${(props) => props.theme.typography.fontSize.desktop.medium};
 
     ${(props) => props.bigger && css`
       font-size: ${props.theme.typography.fontSize.desktop.headingSmall};
     `};
-  `};
+  `)};
 `;
 
 export {

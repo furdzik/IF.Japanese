@@ -1,11 +1,11 @@
 {
   "presets": [
+    "@emotion/babel-preset-css-prop",
     "@babel/preset-react",
     ["@babel/preset-env", {
       "loose": true,
       "shippedProposals": true
-    }],
-    "@emotion/babel-preset-css-prop"
+    }]
   ],
   "plugins": [
     "@babel/plugin-transform-runtime",

@@ -22,12 +22,14 @@ const LayerWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-  ${breakpointMixin.landscapePhone`
+
+  ${breakpointMixin.landscapePhone(css`
     & > div {
       width: auto;
       height: auto;
     }
-  `};
+  `)};
+
   @media print {
     position: absolute;
     top: 0;
@@ -49,16 +51,16 @@ const ModalWrapper = styled.div`
   background: ${(props) => props.theme.colors.white};
   box-shadow: 0 11px 15px -7px rgba(0 0 0 / .2), 0 24px 38px 3px rgba(0 0 0 / .14), 0 9px 46px 8px rgba(0 0 0 / .12);
 
-  ${breakpointMixin.landscapePhone`
+  ${breakpointMixin.landscapePhone(css`
     min-width: 48rem;
     max-width: 48rem;
     border-radius: ${(props) => props.theme.layout.borderRadius};
-  `};
+  `)};
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     min-width: 100rem;
     max-width: 100rem;
-  `};
+  `)};
 
   ${(props) => props.isLoading && css`
     min-height: 10rem;
@@ -80,9 +82,9 @@ const ModalHeader = styled.div`
     box-shadow: 0 2px 7px ${shadowColor}, 0 1px 3px ${shadowColor};
   `};
 
-  ${breakpointMixin.landscapePhone`
+  ${breakpointMixin.landscapePhone(css`
     border-radius: ${(props) => props.theme.layout.borderRadius} ${(props) => props.theme.layout.borderRadius} 0 0;
-  `};
+  `)};
 `;
 
 const Title = styled.div`
@@ -91,9 +93,9 @@ const Title = styled.div`
   line-height: 1.3;
   letter-spacing: -.024rem;
 
-  ${breakpointMixin.landscapePhone`
+  ${breakpointMixin.landscapePhone(css`
     font-size: 2rem;
-  `};
+  `)};
 `;
 
 const CloseButton = styled.button`
@@ -120,10 +122,10 @@ const ModalContent = styled.div`
   height: calc(calc(var(--vh, 1vh) * 100) - ${(props) => props.headerFooterHeight}px);
   padding: 2rem;
 
-  ${breakpointMixin.landscapePhone`
+  ${breakpointMixin.landscapePhone(css`
     height: 76.6vh;
     height: calc(var(--vh, 1vh) * 76.6);
-  `};
+  `)};
 
   @media only screen and (max-height: 50rem) {
     height: 40vh;

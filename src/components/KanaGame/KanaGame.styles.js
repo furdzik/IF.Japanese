@@ -28,10 +28,10 @@ const GameField = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   text-align: center;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     max-width: 50rem;
     width: auto;
-  `};
+  `)};
 `;
 
 const RandomKana = styled.div`

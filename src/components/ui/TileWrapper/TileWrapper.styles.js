@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -11,11 +12,11 @@ const List = styled.div`
   padding: 0;
   list-style: none;
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     justify-content: space-between;
     margin-left: -1rem;
     margin-right: -1rem;
-  `};
+  `)};
 
   @media print {
     display: block;

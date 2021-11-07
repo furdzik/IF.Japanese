@@ -29,12 +29,12 @@ const ListItem = styled.li`
     margin-top: 3rem;
   `};
 
-  ${breakpointMixin.landscapeTablet`
+  ${breakpointMixin.landscapeTablet(css`
     width: calc(50% - 1rem);
     &:nth-child(2n) {
       margin-left: 2rem;
     }
-  `};
+  `)};
 `;
 
 const ListItemContent = styled.div`

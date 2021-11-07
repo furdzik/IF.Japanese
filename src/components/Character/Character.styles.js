@@ -46,7 +46,7 @@ const CharacterWrapper = styled.div`
 
        }
     `};
-    ${breakpointMixin.phablet`
+    ${breakpointMixin.phablet(css`
         font-size: 4rem;
 
       ${props.type === characterType.FURIGANA && css`
@@ -56,7 +56,7 @@ const CharacterWrapper = styled.div`
        ${OneCharacter} {
          width: 5rem;
        }
-    `};
+    `)};
    `};
 `;
 

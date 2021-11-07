@@ -6,15 +6,16 @@ import { sectionTypes } from '@config/constants';
 import { breakpointMixin } from '@styles/mixins';
 
 const PrimarySection = css`
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     max-width: calc(100% - 30rem);
     padding-right: 4rem;
-  `};
+  `)};
+
   ${(props) => props.wide && css`
-    ${breakpointMixin.laptop`
+    ${breakpointMixin.laptop(css`
       max-width: 100%;
       padding-right: 0;
-    `};
+    `)};
   `};
 `;
 
@@ -25,7 +26,7 @@ const SecondarySection = css`
   padding-top: 4rem;
   border-top: 1px dotted ${(props) => props.theme.mainColors.secondary};
 
-  ${breakpointMixin.laptop`
+  ${breakpointMixin.laptop(css`
     width: 30rem;
     margin-top: 0;
     margin-left: auto;
@@ -34,17 +35,19 @@ const SecondarySection = css`
     border-top: none;
     border-left: 1px dotted ${(props) => props.theme.mainColors.secondary};
     border-radius: ${(props) => props.theme.layout.borderRadius};
-  `};
+  `)};
 `;
 
 const NameSection = css`
   width: auto;
+
   ${(props) => props.wide && css`
     flex-wrap: wrap;
   `};
-  ${breakpointMixin.laptop`
+
+  ${breakpointMixin.laptop(css`
     display: flex;
-  `};
+  `)};
 `;
 
 const OtherSection = css`
