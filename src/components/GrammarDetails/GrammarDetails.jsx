@@ -8,20 +8,20 @@ import {
   statusShape,
   tagsShape,
   problemsShape
-} from '@types/commonDetailsShape';
+} from '@types/commonDetails';
 import {
   examplesShape,
   similarGrammarDetailsShape,
   shortExplanationShape
-} from '@types/grammarShape';
+} from '@types/grammar';
 
 import Tag from '@components/ui/Tag';
 
+import AdditionalExplanationBox from '@components/AdditionalExplanationBox';
 import Details from '@components/Details';
-import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
-import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
-import DetailsProblems from '@components/DetailsProblems';
+import ProblemsBox from '@components/ProblemsBox';
+import SubHeading from '@components/SubHeading';
 
 import { getComponentGrammar } from './utils';
 
@@ -71,9 +71,9 @@ const GrammarDetails = (props) => {
       ) : null}
       secondarySection={props.similarGrammar?.length ? (
         <React.Fragment>
-          <DetailsSubHeader>
+          <SubHeading>
             {intl.formatMessage(messages.similarGrammarHeader)}
-          </DetailsSubHeader>
+          </SubHeading>
           {
             props.similarGrammar.map((grammar, index) => (
               <DetailsParts
@@ -118,7 +118,7 @@ const GrammarDetails = (props) => {
         } : null,
         props.additionalExplanation ? {
           section: (
-            <DetailsAdditionalExplanation
+            <AdditionalExplanationBox
               header={intl.formatMessage(messages.additionalExplanationHeader)}
               additionalExplanation={props.additionalExplanation}
             />
@@ -126,7 +126,7 @@ const GrammarDetails = (props) => {
         } : null,
         props.problems?.length ? {
           section: (
-            <DetailsProblems
+            <ProblemsBox
               header={intl.formatMessage(messages.problemsHeader)}
               problems={props.problems}
             />

@@ -6,11 +6,11 @@ import { mdiChevronDown, mdiChevronUp } from '@mdi/js';
 
 import Collapsible from 'react-collapsible';
 
-import { grammarTypes, verbType } from '@config/constants';
+import { grammarTypes, verbType } from '@constants';
 
-import { vocabItemShape } from '@types/vocabShape';
+import { vocabItemShape } from '@types/vocab';
 
-import conjugationMessages from '@utils/defaultMessages/conjugation.messages';
+import conjugationMessages from '@lang/defaultMessages/conjugation.messages';
 
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
@@ -96,7 +96,7 @@ const VerbsListItem = (props) => {
           known={props.item.known}
           level={props.item.level}
         >
-          <VocabLink to={`vocab/${props.item.vocab}`}>{props.item.vocab}</VocabLink>
+          <VocabLink to={`/vocab/${props.item.vocab}`}>{props.item.vocab}</VocabLink>
         </TileStyled>
         <VerbType title={verbTypeLabel(props.item.verb?.verbType)}>
           {verbTypeLabel(props.item.verb?.verbType, true)}

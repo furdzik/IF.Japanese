@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { selectedFiltersShape, filterListShape } from '@types/filtersShape';
+import { selectedFiltersShape, filterListShape } from '@types/filters';
 
-import { useBreakpoint } from '@utils/hooks/useBreakpoint';
+import { useBreakpoint } from '@hooks/useBreakpoint';
 import { breakpoints } from '@styles/basic/breakpoints';
 
 import CheckboxList from '@components/ui/CheckboxList';

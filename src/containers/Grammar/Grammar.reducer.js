@@ -1,6 +1,6 @@
 import grammarJson from '@data/grammar.json';
 
-import { localStorageKeyGrammar, FILTERS_IDS, GRAMMAR_HAS_TO_REPEAT } from '@config/constants';
+import { localStorageKeyGrammar, FILTERS_IDS, GRAMMAR_HAS_TO_REPEAT } from '@constants';
 
 import {
   getSelectedFiltersInitialValues,

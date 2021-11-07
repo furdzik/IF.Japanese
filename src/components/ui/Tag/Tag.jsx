@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { tagTypes } from '@config/constants';
+import { tagTypes } from '@constants';
 
-import { tagTypeShape } from '@types/commonDetailsShape';
+import { tagTypeShape } from '@types/commonDetails';
 
 import {
   Wrapper

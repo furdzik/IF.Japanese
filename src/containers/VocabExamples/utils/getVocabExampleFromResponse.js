@@ -1,6 +1,6 @@
 import vocabJson from '@data/vocabulary.json';
 
-import { getTags } from '@utils/commonDetails';
+import { getTags } from '@utils/common-details';
 import { getKanji, getFurigana } from '@utils/kanji';
 
 const IS_SHORT = true;

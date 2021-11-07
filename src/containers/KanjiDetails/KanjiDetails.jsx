@@ -10,8 +10,8 @@ import {
   problemsShape,
   statusShape,
   tagsShape
-} from '@types/commonDetailsShape';
-import { examplesShape, similarKanjiArrayShape, strokesShape } from '@types/kanjiDetailsShape';
+} from '@types/commonDetails';
+import { examplesShape, similarKanjiArrayShape, strokesShape } from '@types/kanjiDetails';
 
 import Loader from '@components/ui/Loader';
 

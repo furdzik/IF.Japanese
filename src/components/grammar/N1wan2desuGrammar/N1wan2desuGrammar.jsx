@@ -1,8 +1,8 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 
-import DetailsSubHeader from '@components/DetailsSubHeader';
 import PartOfSpeechBox from '@components/ui/PartOfSpeechBox';
+import SubHeading from '@components/SubHeading';
 
 import {
   GrammarLink
@@ -14,7 +14,7 @@ const N1wan2desuGrammar = () => {
 
   return (
     <React.Fragment>
-      <DetailsSubHeader bigger>{intl.formatMessage(messages.particleWaHeader)}</DetailsSubHeader>
+      <SubHeading bigger>{intl.formatMessage(messages.particleWaHeader)}</SubHeading>
       <p>
         {intl.formatMessage(messages.particleWaCopy)}
       </p>
@@ -25,7 +25,7 @@ const N1wan2desuGrammar = () => {
       </p>
       <p>{intl.formatMessage(messages.particleWaCopy3)}</p>
       <p>{intl.formatMessage(messages.particleWaCopy4)}</p>
-      <DetailsSubHeader bigger>{intl.formatMessage(messages.desuHeader)}</DetailsSubHeader>
+      <SubHeading bigger>{intl.formatMessage(messages.desuHeader)}</SubHeading>
       <p>
         {intl.formatMessage(messages.desuCopy, {
           noun: <PartOfSpeechBox>noun</PartOfSpeechBox>

@@ -31,7 +31,7 @@ const ListItem = styled.li`
 
   ${breakpointMixin.landscapeTablet(css`
     width: calc(50% - 1rem);
-    &:nth-child(2n) {
+    &:nth-of-type(2n) {
       margin-left: 2rem;
     }
   `)};
@@ -69,8 +69,10 @@ const ExampleWrapper = styled.div`
 `;
 
 const StyledTile = styled(Tile)`
-  flex-shrink: 0;
-  margin: 0 2rem 0 0;
+  && {
+    flex-shrink: 0;
+    margin: 0 2rem 0 0;
+  }
 `;
 
 const StyledButton = styled(Button)`

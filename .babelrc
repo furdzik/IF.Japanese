@@ -13,16 +13,19 @@
       "alias": {
         "@mocks": "./__mocks__",
         "@root": "./src",
+        "@routes": "./src/routes",
         "@api": "./src/api",
-        "@data": "./src/data",
+        "@assets": "./src/assets",
         "@components": "./src/components",
         "@containers": "./src/containers",
+        "@constants": "./src/constants",
         "@config": "./src/config",
+        "@data": "./src/data",
+        "@hooks": "./src/hooks",
+        "@lang": "./src/lang",
         "@styles": "./src/styles",
-        "@utils": "./src/utils",
-        "@lang": "./lang",
-        "@assets": "./src/assets",
-        "@types": "./src/utils/types"
+        "@types": "./src/types",
+        "@utils": "./src/utils"
       }
     }],
     ["react-intl-auto", {

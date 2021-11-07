@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { filtersLengthShape } from '@types/filtersShape';
+import { filtersLengthShape } from '@types/filters';
 
 import {
   Wrapper,

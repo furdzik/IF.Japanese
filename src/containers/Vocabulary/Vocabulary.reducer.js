@@ -1,6 +1,6 @@
 import vocabJson from '@data/vocabulary.json';
 
-import { localStorageKeyVocab, FILTERS_IDS } from '@config/constants';
+import { localStorageKeyVocab, FILTERS_IDS } from '@constants';
 
 import {
   getSelectedFiltersInitialValues,

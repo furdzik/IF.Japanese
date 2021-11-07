@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { GRAMMAR_HAS_TO_REPEAT } from '@config/constants';
+import { GRAMMAR_HAS_TO_REPEAT } from '@constants';
 
-import { grammarShape } from '@types/grammarShape';
-import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
+import { grammarShape } from '@types/grammar';
+import { filtersLengthShape, selectedFiltersShape } from '@types/filters';
 
 import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 

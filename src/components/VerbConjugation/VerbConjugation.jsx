@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { vocabItemShape } from '@types/vocabShape';
+import { vocabItemShape } from '@types/vocab';
 
 import { getConjugation } from './utils';
 

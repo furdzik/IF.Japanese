@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { itemShape } from '@types/itemShape';
+import { itemShape } from '@types/item';
 
 import Checkbox from '@components/ui/Checkbox';
 import Tooltip from '@components/ui/Tooltip';

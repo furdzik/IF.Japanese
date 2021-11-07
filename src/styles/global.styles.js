@@ -2,10 +2,9 @@ import { css } from '@emotion/react';
 
 import _map from 'lodash/map';
 
-import { typography } from '@styles/typography';
 import theme from '@styles/theme';
 
-const baseFontFamily = _map(typography.fontFamily, (el) => `${el}`).join(', ');
+const baseFontFamily = _map(theme.typography.fontFamily, (el) => `${el}`).join(', ');
 
 const GlobalStyles = css`
   html {

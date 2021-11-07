@@ -15,21 +15,21 @@ const Box = styled.div`
   `)};
 `;
 
-const Line = css`
+const Line = (props) => css`
   margin-top: 1rem;
   padding-top: 2rem;
-  border-top: .1rem dashed ${(props) => props.theme.colors.lightGray};
+  border-top: .1rem dashed ${props.theme.colors.lightGray};
 `;
 
 const BoxGroup = styled.div`
   margin-right: 3rem;
   margin-left: 1rem;
   & + & {
-    ${Line}
+    ${(props) => Line(props)};
   }
 
   ${(props) => props.showLine && css`
-    ${Line}
+    ${Line(props)};
   `};
 
   ${breakpointMixin.laptop(css`

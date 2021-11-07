@@ -4,35 +4,35 @@ import { useIntl } from 'react-intl';
 
 import { Link } from 'react-router-dom';
 
-import { grammarTypes, tagTypes } from '@config/constants';
+import { grammarTypes, tagTypes } from '@constants';
 
-import { verbItemShape } from '@types/verbShape';
+import { verbItemShape } from '@types/verb';
 import {
   additionalExplanationShape,
   statusShape,
   tagsShape,
   metadataShape,
   problemsShape
-} from '@types/commonDetailsShape';
+} from '@types/commonDetails';
 import {
   japaneseFormShape,
   translationsShape,
   kanjiPartsShape,
   otherFormsShape
-} from '@types/vocabularyDetailsShape';
+} from '@types/vocabularyDetails';
 
 import Modal from '@components/ui/Modal';
 import Tag from '@components/ui/Tag';
 
+import AdditionalExplanationBox from '@components/AdditionalExplanationBox';
 import Details from '@components/Details';
-import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
-import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
-import DetailsProblems from '@components/DetailsProblems';
+import ProblemsBox from '@components/ProblemsBox';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
+import SubHeading from '@components/SubHeading';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
-import conjugationMessages from '@utils/defaultMessages/conjugation.messages';
+import conjugationMessages from '@lang/defaultMessages/conjugation.messages';
 
 import {
   ConjugationLink,
@@ -168,9 +168,9 @@ const VocabularyDetails = (props) => {
           {
             props.otherForms.length ? (
               <OtherFormsWrapper>
-                <DetailsSubHeader>
+                <SubHeading>
                   {intl.formatMessage(messages.otherFormsHeader)}
-                </DetailsSubHeader>
+                </SubHeading>
                 {
                   props.otherForms.map((form, index) => (
                     <div key={`${form.word}_${form.reading}`}>
@@ -186,9 +186,9 @@ const VocabularyDetails = (props) => {
       )}
       secondarySection={props.kanjiParts ? (
         <React.Fragment>
-          <DetailsSubHeader>
+          <SubHeading>
             {intl.formatMessage(messages.kanjiPartsHeader)}
-          </DetailsSubHeader>
+          </SubHeading>
           {
             props.kanjiParts.map((kanji, kanjiIndex) => (
               <DetailsParts
@@ -224,7 +224,7 @@ const VocabularyDetails = (props) => {
         },
         props.additionalExplanation ? {
           section: (
-            <DetailsAdditionalExplanation
+            <AdditionalExplanationBox
               header={intl.formatMessage(messages.additionalExplanationHeader)}
               additionalExplanation={props.additionalExplanation}
             />
@@ -232,7 +232,7 @@ const VocabularyDetails = (props) => {
         } : null,
         props.problems?.length ? {
           section: (
-            <DetailsProblems
+            <ProblemsBox
               header={intl.formatMessage(messages.problemsHeader)}
               problems={props.problems}
             />

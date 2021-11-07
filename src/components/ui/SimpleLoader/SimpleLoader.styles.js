@@ -30,11 +30,11 @@ const Dot = styled.div`
   & + & {
     margin-left: .5rem;
   }
-  &:nth-child(2) {
+  &:nth-of-type(2) {
     animation-delay: .3s;
   }
 
-  &:nth-child(3) {
+  &:nth-of-type(3) {
     animation-delay: .7s;
   }
 `;

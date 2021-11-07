@@ -2,7 +2,7 @@ import vocabJson from '@data/vocabulary.json';
 
 import { fetchJisho } from '@api';
 
-import { localStorageKeyFlashcards, FILTERS_IDS } from '@config/constants';
+import { localStorageKeyFlashcards, FILTERS_IDS } from '@constants';
 
 import {
   getSelectedFiltersInitialValues,
@@ -11,7 +11,7 @@ import {
   getLength,
   lengthInitialState
 } from '@utils/filters';
-import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
+import { isCorrectVocabularyMeaning } from '@utils/vocabulary-meaning';
 
 import { getRandomVocab, getFlashcardData } from './utils';
 import messages from './Flashcards.messages';

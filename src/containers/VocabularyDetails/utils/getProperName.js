@@ -1,4 +1,4 @@
-import { URL_SEPARATOR } from '@config/constants';
+import { URL_SEPARATOR } from '@constants';
 
 export const PROPER_NAME_TYPE = {
   KANJI: 'kanji',

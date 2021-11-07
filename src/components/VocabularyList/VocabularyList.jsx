@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { vocabShape } from '@types/vocabShape';
+import { vocabShape } from '@types/vocab';
 
 import { getOnlyVocab } from '@utils/vocabulary';
 

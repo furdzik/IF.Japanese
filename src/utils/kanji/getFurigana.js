@@ -1,7 +1,7 @@
 import _cloneDeep from 'lodash/cloneDeep';
 import { isHiragana, isKatakana, isKanji } from 'wanakana';
 
-import { LIST_OF_READING_EXCEPTIONS, KATAKANA_FURIGANA_EXCEPTIONS } from '@config/constants';
+import { LIST_OF_READING_EXCEPTIONS, KATAKANA_FURIGANA_EXCEPTIONS } from '@constants';
 
 import { getKanji } from './getKanji';
 

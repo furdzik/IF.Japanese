@@ -35,7 +35,7 @@ const LinkStyled = styled(Link)`
   text-decoration: none;
   &:hover {
     color: ${(props) => props.theme.mainColors.primary};
-    transition: all 0.3s ease 0s;
+    transition: ${(props) => props.theme.layout.transition};
   }
 
   ${(props) => props.active && css`

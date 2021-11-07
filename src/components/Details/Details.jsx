@@ -4,15 +4,16 @@ import { useIntl } from 'react-intl';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { sectionTypes, characterType } from '@config/constants';
+import { sectionTypes, characterType } from '@constants';
 
-import { japaneseFormShape } from '@types/vocabularyDetailsShape';
+import { japaneseFormShape } from '@types/vocabularyDetails';
 
+import Character from '@components/ui/Character';
 import Tag from '@components/ui/Tag';
 
-import Character from '@components/Character';
-import DetailsHeader from '@components/DetailsHeader';
-import DetailsSection from '@components/DetailsSection';
+import Heading from '@components/Heading';
+
+import Section from './Section';
 
 import {
   DetailsWrapper,
@@ -73,10 +74,10 @@ const Details = (props) => {
             )) : null
           }
         </TagsWrapper>
-        <DetailsHeader>{props.mainSectionHeader}</DetailsHeader>
+        <Heading>{props.mainSectionHeader}</Heading>
         <SectionsWrapper>
-          <DetailsSection type={sectionTypes.PRIMARY} wide={!props.secondarySection}>
-            <DetailsSection
+          <Section type={sectionTypes.PRIMARY} wide={!props.secondarySection}>
+            <Section
               type={sectionTypes.NAME}
               wide={props.japaneseForm?.kanji.length > 5 || props.wide}
             >
@@ -118,27 +119,27 @@ const Details = (props) => {
                   </MainSection>
                 ) : null
               }
-            </DetailsSection>
+            </Section>
             {
               props.sections ? props.sections.map((section) => (
                 section?.section ? (
-                  <DetailsSection key={uuidv4()}>
+                  <Section key={uuidv4()}>
                     {
                       section.title ? (
-                        <DetailsHeader>{section.title}</DetailsHeader>
+                        <Heading>{section.title}</Heading>
                       ) : null
                     }
                     {section?.section}
-                  </DetailsSection>
+                  </Section>
                 ) : null
               )) : null
             }
-          </DetailsSection>
+          </Section>
           {
             props.secondarySection ? (
-              <DetailsSection type={sectionTypes.SECONDARY}>
+              <Section type={sectionTypes.SECONDARY}>
                 {props.secondarySection}
-              </DetailsSection>
+              </Section>
             ) : null
           }
         </SectionsWrapper>

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { vocabShape } from '@types/vocabShape';
-import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
+import { vocabShape } from '@types/vocab';
+import { filtersLengthShape, selectedFiltersShape } from '@types/filters';
 
 import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 

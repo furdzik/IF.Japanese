@@ -1,5 +1,4 @@
-import { colors } from './colors';
-import { typography } from './typography';
+import { colors, typography } from './basic';
 
 export default {
   colors,
@@ -54,6 +53,7 @@ export default {
     borderRadius: '.4rem',
     containerWidth: '128rem',
     padding: '0 2rem',
-    mobilePadding: '0 1rem'
+    mobilePadding: '0 1rem',
+    transition: 'all .3s ease-in'
   }
 };

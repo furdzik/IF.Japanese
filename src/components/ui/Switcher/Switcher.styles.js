@@ -7,7 +7,7 @@ const SwitcherWrapper = styled.div`
   height: 1.4rem;
   border-radius: 1rem;
   background-color: ${(props) => props.theme.colors.darkGray};
-  transition: all .3s ease-in;
+  transition: ${(props) => props.theme.layout.transition};
   cursor: pointer;
   &::before {
     position: absolute;
@@ -19,7 +19,7 @@ const SwitcherWrapper = styled.div`
     border-radius: 50%;
     background: ${(props) => props.theme.mainColors.secondary};
     box-shadow: 0 1px 4px 0 rgba(0 0 0 / .2);
-    transition: all .3s ease-in;
+    transition: ${(props) => props.theme.layout.transition};
     content: '';
   }
   ${(props) => props.checked && css`

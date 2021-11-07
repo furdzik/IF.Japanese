@@ -1,5 +1,5 @@
-import { FILTERS_IDS } from '@config/constants';
-import defaultMessages from '@utils/defaultMessages/default.messages';
+import { FILTERS_IDS } from '@constants';
+import defaultMessages from '@lang/defaultMessages/default.messages';
 
 export const getFilterLabels = (hasToRepeat = false) => {
   const newFilters = [];
