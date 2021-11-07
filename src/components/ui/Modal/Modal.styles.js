@@ -51,10 +51,10 @@ const ModalWrapper = styled.div`
   background: ${(props) => props.theme.colors.white};
   box-shadow: 0 11px 15px -7px rgba(0 0 0 / .2), 0 24px 38px 3px rgba(0 0 0 / .14), 0 9px 46px 8px rgba(0 0 0 / .12);
 
-  ${breakpointMixin.landscapePhone(css`
+  ${(props) => breakpointMixin.landscapePhone(css`
     min-width: 48rem;
     max-width: 48rem;
-    border-radius: ${(props) => props.theme.layout.borderRadius};
+    border-radius: ${props.theme.layout.borderRadius};
   `)};
 
   ${breakpointMixin.laptop(css`
@@ -82,8 +82,8 @@ const ModalHeader = styled.div`
     box-shadow: 0 2px 7px ${shadowColor}, 0 1px 3px ${shadowColor};
   `};
 
-  ${breakpointMixin.landscapePhone(css`
-    border-radius: ${(props) => props.theme.layout.borderRadius} ${(props) => props.theme.layout.borderRadius} 0 0;
+  ${(props) => breakpointMixin.landscapePhone(css`
+    border-radius: ${props.theme.layout.borderRadius} ${props.theme.layout.borderRadius} 0 0;
   `)};
 `;
 

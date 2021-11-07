@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { othersMenu } from '@config/constants';
+import { othersMenu } from '@constants';
 
 import ColoredBoxList from '@components/ui/ColoredBoxList';
 

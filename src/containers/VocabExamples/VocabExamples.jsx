@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamplesShape';
+import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamples';
 
 import Loader from '@components/ui/Loader';
 import VocabExamplesComponent from '@components/VocabExamples';

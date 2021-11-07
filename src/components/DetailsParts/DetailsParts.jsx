@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
 
-import { statusShape, tagsShape } from '@types/commonDetailsShape';
+import { statusShape, tagsShape } from '@types/commonDetails';
 
 import Tag from '@components/ui/Tag';
 

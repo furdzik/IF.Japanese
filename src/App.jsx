@@ -8,18 +8,19 @@ import { Global, ThemeProvider } from '@emotion/react';
 
 import { IntlProvider } from 'react-intl';
 
-import RoutesConfig from '@root/routes';
+import '@formatjs/intl-relativetimeformat/dist/locale-data/en';
 
 import { production } from '@config/environment';
-
-import reducers from '@containers/reducers';
-
-import '@formatjs/intl-relativetimeformat/dist/locale-data/en';
-import { defaultLocale } from '@lang/config';
-import { english } from '@lang';
+import { defaultLocale } from '@config/lang';
 
 import theme from '@styles/theme';
 import { GlobalStyles } from '@styles/global.styles';
+
+import { english } from '@lang';
+
+import RoutesConfig from '@routes';
+
+import reducers from '@containers/reducers';
 
 const middlewareEnhancer = applyMiddleware(thunk);
 const enhancer = production ? middlewareEnhancer : composeWithDevTools(middlewareEnhancer);

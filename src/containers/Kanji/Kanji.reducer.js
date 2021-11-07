@@ -1,6 +1,6 @@
 import kanjiJson from '@data/kanji.json';
 
-import { localStorageKeyKanji, FILTERS_IDS } from '@config/constants';
+import { localStorageKeyKanji, FILTERS_IDS } from '@constants';
 
 import {
   getSelectedFiltersInitialValues,

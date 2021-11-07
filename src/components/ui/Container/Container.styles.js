@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   margin: 0 auto;
   padding: ${(props) => props.theme.layout.mobilePadding};
 
-  ${breakpointMixin.portraitTablet(css`
-    padding: ${(props) => props.theme.layout.padding};
+  ${(props) => breakpointMixin.portraitTablet(css`
+    padding: ${props.theme.layout.padding};
   `)};
 `;
 

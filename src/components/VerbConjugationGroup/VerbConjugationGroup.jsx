@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { inflectionTypes } from '@config/constants';
+import { inflectionTypes } from '@constants';
 
-import { verbItemShape } from '@types/verbShape';
+import { verbItemShape } from '@types/verb';
 
 import { shouldDisplayShortForm } from './utils';
 

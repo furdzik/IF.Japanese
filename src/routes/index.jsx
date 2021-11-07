@@ -5,7 +5,7 @@ import {
   Routes
 } from 'react-router-dom';
 
-import { menuId, menu } from '@config/constants';
+import { menuId, menu } from '@constants';
 
 import Layout from '@components/Layout';
 import PageNotFound from '@components/PageNotFound';

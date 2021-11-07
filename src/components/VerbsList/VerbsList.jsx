@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { verbShape } from '@types/verbShape';
+import { verbShape } from '@types/verb';
 
 import VerbsListItem from '@components/VerbsListItem';
 

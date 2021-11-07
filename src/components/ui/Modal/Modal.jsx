@@ -15,7 +15,7 @@ import { mdiClose } from '@mdi/js';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { Scrollbars } from 'react-custom-scrollbars';
 
-import { ESC_CODE } from '@config/constants';
+import { ESC_CODE } from '@constants';
 
 import Loader from '@components/ui/Loader';
 

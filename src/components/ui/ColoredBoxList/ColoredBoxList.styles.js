@@ -28,16 +28,16 @@ const BoxItem = styled.li`
   font-size: 2rem;
   color: ${(props) => props.theme.colors.white};
 
-  &:nth-child(4n+1) {
+  &:nth-of-type(4n+1) {
     background: ${(props) => props.theme.colors.lightGreen};
   }
-  &:nth-child(4n+2) {
+  &:nth-of-type(4n+2) {
     background: ${(props) => props.theme.colors.lightViolet};
   }
-  &:nth-child(4n+3) {
+  &:nth-of-type(4n+3) {
     background: ${(props) => props.theme.colors.orange};
   }
-  &:nth-child(4n+4) {
+  &:nth-of-type(4n+4) {
     background: ${(props) => props.theme.colors.neonPink};
   }
 `;

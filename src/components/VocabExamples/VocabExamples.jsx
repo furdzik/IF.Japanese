@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { characterType } from '@config/constants';
+import { characterType } from '@constants';
 
-import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamplesShape';
+import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamples';
 
+import Character from '@components/ui/Character';
 import Tag from '@components/ui/Tag';
-
-import Character from '@components/Character';
 
 import {
   ListWrapper,

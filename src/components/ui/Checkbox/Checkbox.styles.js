@@ -22,7 +22,7 @@ const CheckboxBox = styled.span`
   border: .2rem solid ${(props) => props.theme.mainColors.primary};
   border-radius: .2rem;
   background: ${(props) => props.theme.colors.white};
-  transition: all .2s;
+  transition: ${(props) => props.theme.layout.transition};
   cursor: pointer;
   &::after {
     display: inline-block;

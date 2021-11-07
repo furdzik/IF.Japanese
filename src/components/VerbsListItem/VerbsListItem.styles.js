@@ -11,7 +11,7 @@ const Item = styled.li`
   border: 1px solid ${(props) => props.theme.mainColors.secondary};
   list-style: none;
 
-  &:first-child {
+  &:first-of-type {
     border-radius: .4rem .4rem 0 0;
   }
   &:last-child {
@@ -28,9 +28,11 @@ const Item = styled.li`
 `;
 
 const TileStyled = styled(Tile)`
-  position: relative;
-  order: initial;
-  margin: 2.1rem 2rem 0;
+  && {
+    position: relative;
+    order: initial;
+    margin: 2.1rem 2rem 0;
+  }
 `;
 
 const MainBox = styled.div`
@@ -41,9 +43,9 @@ const MainBox = styled.div`
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.mainColors.secondary};
 
-  ${breakpointMixin.laptop(css`
+  ${(props) => breakpointMixin.laptop(css`
     width: 22rem;
-    border-right: 1px solid ${(props) => props.theme.mainColors.secondary};
+    border-right: 1px solid ${props.theme.mainColors.secondary};
     border-bottom: 0;
   `)};
 `;
@@ -81,7 +83,7 @@ const TriggerWrapper = styled.div`
   height: 3rem;
   border-radius: 50%;
   background: ${(props) => props.theme.mainColors.secondary};
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.black};
   cursor: pointer;
 
   &:hover {
@@ -92,12 +94,12 @@ const TriggerWrapper = styled.div`
     top: -1.5rem;
   `};
 
-  ${breakpointMixin.laptop(css`
+  ${(props) => breakpointMixin.laptop(css`
     top: 2.6rem;
     right: -1.5rem;
 
-    ${(props) => props.isCollaps && css`
-      top: 2.6rem;
+    ${props.isCollaps && css`
+      top: 1.6rem;
     `};
   `)};
 `;

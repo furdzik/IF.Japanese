@@ -9,17 +9,17 @@ import {
   problemsShape,
   statusShape,
   tagsShape
-} from '@types/commonDetailsShape';
-import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetailsShape';
+} from '@types/commonDetails';
+import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetails';
 
 import Tag from '@components/ui/Tag';
 
+import AdditionalExplanationBox from '@components/AdditionalExplanationBox';
 import Details from '@components/Details';
-import DetailsAdditionalExplanation from '@components/DetailsAdditionalExplanation';
-import DetailsSubHeader from '@components/DetailsSubHeader';
 import DetailsParts from '@components/DetailsParts';
-import DetailsProblems from '@components/DetailsProblems';
+import ProblemsBox from '@components/ProblemsBox';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
+import SubHeading from '@components/SubHeading';
 
 import VocabExamples from '@containers/VocabExamples';
 
@@ -87,9 +87,9 @@ const KanjiDetails = (props) => {
       )}
       secondarySection={props.similarKanji?.length ? (
         <React.Fragment>
-          <DetailsSubHeader>
+          <SubHeading>
             {intl.formatMessage(messages.similarKanjiHeader)}
-          </DetailsSubHeader>
+          </SubHeading>
           {
             props.similarKanji.map((kanji, index) => (
               <DetailsParts
@@ -110,9 +110,9 @@ const KanjiDetails = (props) => {
         </React.Fragment>
       ) : null}
       additionalBox={props.radicals?.length ? (
-        <DetailsSubHeader>
+        <SubHeading>
           {intl.formatMessage(messages.radicalsHeader)}
-        </DetailsSubHeader>
+        </SubHeading>
       ) : null}
       sections={[
         props.strokes ? {
@@ -145,7 +145,7 @@ const KanjiDetails = (props) => {
             </React.Fragment>
           )
         } : null,
-        props.examples ? {
+        props.examples.length ? {
           title: intl.formatMessage(messages.examplesHeader),
           section: (
             <ExampleWrapper>
@@ -162,7 +162,7 @@ const KanjiDetails = (props) => {
         } : null,
         props.additionalExplanation ? {
           section: (
-            <DetailsAdditionalExplanation
+            <AdditionalExplanationBox
               header={intl.formatMessage(messages.additionalExplanationHeader)}
               additionalExplanation={props.additionalExplanation}
             />
@@ -170,7 +170,7 @@ const KanjiDetails = (props) => {
         } : null,
         props.problems?.length ? {
           section: (
-            <DetailsProblems
+            <ProblemsBox
               header={intl.formatMessage(messages.problemsHeader)}
               problems={props.problems}
             />

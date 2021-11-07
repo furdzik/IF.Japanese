@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 import { Link } from 'react-router-dom';
 
-import { grammarLevels } from '@config/constants';
+import { grammarLevels } from '@constants';
 
 const List = styled.ul`
   display: flex;
@@ -25,7 +25,7 @@ const LinkStyled = styled(Link)`
 
   &:hover {
     color: ${(props) => props.theme.mainColors.primary};
-    transition: all 0.3s ease 0s;
+    transition: ${(props) => props.theme.layout.transition};
   }
 `;
 

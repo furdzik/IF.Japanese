@@ -1,4 +1,4 @@
-import { grammarTypes, verbGroupTypes } from '@config/constants';
+import { grammarTypes, verbGroupTypes } from '@constants';
 
 export const shouldDisplayShortForm = (grammar, verbGroup) => (
   grammar !== grammarTypes.SHIEKIUKEMI_SHORT_FORM

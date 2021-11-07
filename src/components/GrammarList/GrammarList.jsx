@@ -2,9 +2,9 @@ import React from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { grammarMenu } from '@config/constants';
+import { grammarMenu } from '@constants';
 
-import { grammarShape } from '@types/grammarShape';
+import { grammarShape } from '@types/grammar';
 
 import Tooltip from '@components/ui/Tooltip';
 
@@ -49,7 +49,7 @@ const GrammarList = (props) => (
                 nowLearning={grammar.nowLearning}
                 toRepeat={grammar.toRepeat}
               >
-                <GrammarBoxLink to={`grammar/${grammar.grammarId}`}>
+                <GrammarBoxLink to={`/grammar/${grammar.grammarId}`}>
                   {grammar.grammarName}
                 </GrammarBoxLink>
               </GrammarBox>

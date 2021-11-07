@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useIntl } from 'react-intl';
 
-import { FILTERS_IDS } from '@config/constants';
+import { FILTERS_IDS } from '@constants';
 
-import { kanjiShape } from '@types/kanjiShape';
-import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
+import { kanjiShape } from '@types/kanji';
+import { filtersLengthShape, selectedFiltersShape } from '@types/filters';
 
 import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 

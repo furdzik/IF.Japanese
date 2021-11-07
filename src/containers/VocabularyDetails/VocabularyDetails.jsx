@@ -3,20 +3,20 @@ import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { verbItemShape } from '@types/verbShape';
+import { verbItemShape } from '@types/verb';
 import {
   additionalExplanationShape,
   statusShape,
   tagsShape,
   metadataShape,
   problemsShape
-} from '@types/commonDetailsShape';
+} from '@types/commonDetails';
 import {
   japaneseFormShape,
   translationsShape,
   kanjiPartsShape,
   otherFormsShape
-} from '@types/vocabularyDetailsShape';
+} from '@types/vocabularyDetails';
 
 import { getVocabSpecificReading } from '@utils/vocabulary';
 

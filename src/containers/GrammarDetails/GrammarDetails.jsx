@@ -8,12 +8,12 @@ import {
   statusShape,
   tagsShape,
   problemsShape
-} from '@types/commonDetailsShape';
+} from '@types/commonDetails';
 import {
   examplesShape,
   shortExplanationShape,
   similarGrammarDetailsShape
-} from '@types/grammarShape';
+} from '@types/grammar';
 
 import Loader from '@components/ui/Loader';
 

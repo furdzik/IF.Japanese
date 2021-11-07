@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 
-import { flashcardShape, additionalInfoShape } from '@types/flashcardShape';
-import { filtersLengthShape, selectedFiltersShape } from '@types/filtersShape';
+import { flashcardShape, additionalInfoShape } from '@types/flashcard';
+import { filtersLengthShape, selectedFiltersShape } from '@types/filters';
 
 import Filters from '@components/Filters';
 import Legend from '@components/Legend';

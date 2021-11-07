@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { tagTypes } from '@config/constants';
+import { tagTypes } from '@constants';
 
 import { breakpointMixin } from '@styles/mixins';
 

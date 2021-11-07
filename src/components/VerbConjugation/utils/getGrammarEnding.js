@@ -1,4 +1,4 @@
-import { grammarTypes, inflectionTypes, verbGroupTypes } from '@config/constants';
+import { grammarTypes, inflectionTypes, verbGroupTypes } from '@constants';
 
 import { getBaseEnding } from './getBaseEnding';
 

@@ -1,6 +1,6 @@
 import kana from '@data/kana.json';
 
-import { KANA_GAME_INIT, KANA_TYPE } from '@config/constants';
+import { KANA_GAME_INIT, KANA_TYPE } from '@constants';
 
 const MIN_INDEX = 0;
 

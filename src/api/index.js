@@ -1,3 +1,3 @@
-export { fetchJisho } from './fetchJisho';
-export { fetchKanji } from './fetchKanji';
-export { fetchKanjiAlternative } from './fetchKanjiAlternative';
+export { fetchJisho } from './endpoints/fetchJisho';
+export { fetchKanji } from './endpoints/fetchKanji';
+export { fetchKanjiAlternative } from './endpoints/fetchKanjiAlternative';

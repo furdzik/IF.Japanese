@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { filtersLengthShape } from '@types/filtersShape';
+import { filtersLengthShape } from '@types/filters';
 
-import defaultMessages from '@utils/defaultMessages/default.messages';
+import defaultMessages from '@lang/defaultMessages/default.messages';
 
 import Tooltip from '@components/ui/Tooltip';
 

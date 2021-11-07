@@ -4,9 +4,9 @@ import { useIntl } from 'react-intl';
 
 import { mdiChevronRight } from '@mdi/js';
 
-import { flashcardShape, additionalInfoShape } from '@types/flashcardShape';
+import { flashcardShape, additionalInfoShape } from '@types/flashcard';
 
-import defaultMessages from '@utils/defaultMessages/default.messages';
+import defaultMessages from '@lang/defaultMessages/default.messages';
 
 import Button from '@components/ui/Button';
 import Switcher from '@components/ui/Switcher';
