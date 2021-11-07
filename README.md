@@ -1,30 +1,19 @@
 # IF.Japanese
 
-This repository presents frontend application for my Japanese APP
-
-@TODO Readme
-
-<!--
+This repository presents frontend application for my **Japanese APP**
 
 ---
 
-## Table of contents
-
-
----
-
-## Data schema description
+## Data schema's description
 
 ### Vocab
 
-#### Verbs
+- general json options:
 
-- general schema:
-
-```
+```json
   {
     "vocab": "降る",
-    "meaning": "ふる", // when 2 readings
+    "meaning": "ふる",
     "known": false,
     "inProgress": true,
     "nowLearning": false,
@@ -40,90 +29,112 @@ This repository presents frontend application for my Japanese APP
     ],
     "problems": [
       {
-        "problem": "食事 is suru verb, that's why we can say:「食事します」 or 「食事をします」. Not 「食事を食べる」.",
-        "frequency": 1, // from 1 - 10
+        "problem": "食事 is suru verb, that's why we can say:「食事します」",
+        "frequency": 1,
         "resolved": false,
         "info": [
           "I did that only once so far."
         ]
       }
-    ]
+    ],
     "verb": {
         "main": "降",
-        "verbGroup": "2|special1|special2|u|ku|gu|su|tsu|bu|mu|nu|ru",
-        "verbType": "intransitive|transitive|other"
+        "verbGroup": "ru",
+        "verbType": "intransitive"
     }
 }
 ```
 
-`special1` suru verb  
-`special2` kuru verb
+### LEGEND
 
-- suru verb schema
+#### General
 
-```
-{
-    "vocab": "集中",
-    ...
-    "verb": {
-        "main": "集中",
-        "verbGroup": "special1",
-        "verbType": "transitive"
-    }
-}
+- **vocab** `required` - vocab name written in kanji
+- **meaning** - when vocab has 2 readings, use `meaning` key to different one from another (write it in kana)
+- **known** `required` - (see below)
+- **inProgress** `required` - (see below)
+- **nowLearning** `required` - (see below)
+- **pitch** `required` - name of used pitch accent to pronounce it
+- **antonyms** - if API don't hase `antonyms` for this word use this option instead
+- **classifier** - if word is a `classifier` set to true
+- **level** `required` - JLPT level
+- **examples** - array od examples
+- **additionalExplanation** - array of additional explanation for this word
+- **problems** - array of my problems with this word (when not resolved problems are in a word, know option should be as false)
+- **verb** - is word is a verb, use this option (see below)
 
-```
+(Stick with this order)
 
-## Description
+#### Statuses
 - **`inProgress`** - probably can say or guess meaning or reading, often confused about one or both (need to say at least 10 times before moving it to `nowLearning`)
-- **`nowLearning`:** - last step of learning, when can very fast read it and say meaning 3 times before can move it to `known`. (If made mistake, move to  `inProgress`)
-- **`known`:** - Can read and know meaning, can use
+- **`nowLearning`** - last step of learning, when can very fast read it and say meaning 3 times before can move it to `known`. (If made mistake, move to  `inProgress`)
+- **`known`** - Can read and know meaning, can use
 
+
+#### Verbs
+
+- **main** `required` - main stream for a verb word (e.g. in `降る` it is `降`)
+
+- **verbGroup** `required` - group of a verb. Possible options: 
+
+  - `2` - second group
+  - `special1` - suru verb
+  - `special2` - kuru verb
+  - `u` - godan verb with u ending 
+  - `ku` - godan verb with ku ending
+  - `gu` - godan verb with gu ending
+  - `su` - godan verb with su ending
+  - `tsu` - godan verb with tsu ending
+  - `bu` - godan verb with bu ending
+  - `mu` - godan verb with mu ending
+  - `nu` - godan verb with nu ending
+  - `ru` - godan verb with ru ending
+
+- **verbType** `required` - type of verb. Possible options:
+  - intransitive
+  - transitive
+  - other (when none from above)
+  
 ---
 
 ## Development
 
 ### Requirements
 
-
+- `NodeJS` >= v10.14.1  
+- `npm` >= 6.4.1  
+- `Git` Bash (for versioning)  
 
 ### Installation
 
-1. Clone project from GitHub repository `git clone git@github.com:furdzik/if.japanese.git` or `git clone https://github.com/furdzik/if.japanese.git`
-2. Add alias to your `hosts` file: `127.0.0.1         if.japanese.local`
-3. `cd if.japanese`
-5. Install dependencies `npm install`
+- Clone project from GitHub repository
+- Add alias to your `hosts` file: `127.0.0.1 if.japanese.local`
+- `cd if.japanese`
+- Install dependencies `npm install`
 
 ### Running
 
-Run
+- Create `.env` files (see **WIKI** for more information)
+- Use `npm start` for starting dev server.
 
-```sh
-npm start
-```
+Browser automatically open `http://if.japanese.local:2017/`.  
+The app will automatically reload if you change any of the source files.
 
-for starting dev server. Navigate to `http://if.japanese.local:2017/`. The app will automatically reload if you change any of the source files.
+### Deploy to prod
 
-### Build
-
-Run
-
-```sh
-npm run build
-```
-
-to build project.
+- Copy `.env.prodaction` to `.env`
+- Run `npm run build` to build project
 
 \* The build artifacts will be stored in the `dist/` directory.
 
-To run project locally run
+---
 
-```sh
-cd dist
-```
+## Contributing
 
-### Updating packages
+If you want to contribute read the [contributing guidelines]() before opening an issue [WIP].
 
-Package.json is strictly connected with package-lock.json. Updating package should have reflection in package-lock. Also take care of installing exactly specified package version (see package.json [suffix](https://docs.npmjs.com/files/package.json#dependencies))
+---
 
--->
+## Style guide
+
+I use my own style guidelines: [GP.Kamisama](https://github.com/furdzik/IF.Kamisama).
