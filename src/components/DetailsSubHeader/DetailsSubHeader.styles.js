@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -19,7 +20,7 @@ const Title = styled.h3`
     ${(props) => props.bigger && css`
       font-size: ${props.theme.typography.fontSize.desktop.headingSmall};
     `};
-  `}
+  `};
 `;
 
 export {

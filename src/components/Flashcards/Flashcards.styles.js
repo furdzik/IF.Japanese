@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -37,7 +38,7 @@ const VocabCard = styled.div`
 
   ${breakpointMixin.laptop`
     width: 50rem;
-  `}
+  `};
 `;
 
 const MeaningCard = styled(VocabCard)`
@@ -50,7 +51,7 @@ const VocabStyle = css`
 
   ${breakpointMixin.laptop`
     font-size: 5rem;
-  `}
+  `};
 `;
 
 const VocabWrapper = styled.div`
@@ -65,15 +66,15 @@ const TileStyled = styled(Tile)`
 
   ${(props) => !props.known && !props.inProgress && !props.nowLearning && css`
     border: 2px solid #a0a0a0;
-  `}
+  `};
 
   ${(props) => props.inProgress && !props.nowLearning && css`
     border: 2px solid #f39c9c;
-  `}
+  `};
 
   ${breakpointMixin.laptop`
     ${VocabStyle};
-  `}
+  `};
 `;
 
 const ReadingWrapper = styled.div`
@@ -82,7 +83,7 @@ const ReadingWrapper = styled.div`
 
   ${breakpointMixin.laptop`
     font-size: 4rem;
-  `}
+  `};
 `;
 
 const MeaningWrapper = styled.div`

@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -26,14 +27,14 @@ const ListItem = styled.li`
 
   ${(props) => props.hasTags && css`
     margin-top: 3rem;
-  `}
+  `};
 
   ${breakpointMixin.landscapeTablet`
     width: calc(50% - 1rem);
     &:nth-child(2n) {
       margin-left: 2rem;
     }
-  `}
+  `};
 `;
 
 const ListItemContent = styled.div`

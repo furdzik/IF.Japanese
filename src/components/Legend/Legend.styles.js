@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
   ${breakpointMixin.laptop`
     display: inline-block;
-  `}
+  `};
 
   @media print {
     display: flex;
@@ -29,7 +29,7 @@ const LegendList = styled.ul`
   ${breakpointMixin.portraitTablet`
     justify-content: space-between;
     font-size: 1.8rem;
-  `}
+  `};
 `;
 
 const LegendItem = styled.li`
@@ -37,7 +37,7 @@ const LegendItem = styled.li`
 
   ${breakpointMixin.portraitTablet`
     width: auto;
-  `}
+  `};
 
   @media print {
     width: auto;

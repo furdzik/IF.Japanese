@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -11,7 +12,7 @@ const Box = styled.div`
 
   ${breakpointMixin.laptop`
     flex-wrap: nowrap;
-  `}
+  `};
 `;
 
 const Line = css`
@@ -29,11 +30,11 @@ const BoxGroup = styled.div`
 
   ${(props) => props.showLine && css`
     ${Line}
-  `}
+  `};
 
   ${breakpointMixin.laptop`
     margin-right: 1rem;
-  `}
+  `};
 `;
 
 const VerbConjugationWrapper = styled(VerbConjugation)`
@@ -41,7 +42,7 @@ const VerbConjugationWrapper = styled(VerbConjugation)`
 
   ${breakpointMixin.laptop`
     width: 25%;
-  `}
+  `};
 `;
 
 const Label = styled.span`

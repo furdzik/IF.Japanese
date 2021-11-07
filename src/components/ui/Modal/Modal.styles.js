@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -92,7 +93,7 @@ const Title = styled.div`
 
   ${breakpointMixin.landscapePhone`
     font-size: 2rem;
-  `}
+  `};
 `;
 
 const CloseButton = styled.button`

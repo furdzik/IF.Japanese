@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 const ReadingList = styled.ul`
   margin-top: 2rem;

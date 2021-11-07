@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 
   ${breakpointMixin.portraitTablet`
     padding: ${(props) => props.theme.layout.padding};
-  `}
+  `};
 `;
 
 export {

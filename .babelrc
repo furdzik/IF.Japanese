@@ -4,7 +4,8 @@
     ["@babel/preset-env", {
       "loose": true,
       "shippedProposals": true
-    }]
+    }],
+    "@emotion/babel-preset-css-prop"
   ],
   "plugins": [
     "@babel/plugin-transform-runtime",
@@ -27,7 +28,8 @@
     ["react-intl-auto", {
       "removePrefix": "src",
       "filebase": false
-    }]
+    }],
+    "@emotion"
   ],
   "env": {
     "test": {

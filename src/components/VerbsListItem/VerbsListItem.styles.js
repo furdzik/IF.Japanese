@@ -1,4 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+
 import { Link } from 'react-router-dom';
 
 import { breakpointMixin } from '@styles/mixins';
@@ -22,7 +24,7 @@ const Item = styled.li`
   ${breakpointMixin.laptop`
     display: flex;
     flex-wrap: wrap;
-  `}
+  `};
 `;
 
 const TileStyled = styled(Tile)`
@@ -43,7 +45,7 @@ const MainBox = styled.div`
     width: 22rem;
     border-right: 1px solid ${(props) => props.theme.mainColors.secondary};
     border-bottom: 0;
-  `}
+  `};
 `;
 
 const VocabLink = styled(Link)`
@@ -61,11 +63,11 @@ const BoxContent = styled.div`
 
   ${(props) => props.smallerMargin && css`
     margin: 1rem 0;
-  `}
+  `};
 
   ${breakpointMixin.laptop`
     width: calc(100% - 22rem);
-  `}
+  `};
 `;
 
 const TriggerWrapper = styled.div`
@@ -88,7 +90,7 @@ const TriggerWrapper = styled.div`
 
   ${(props) => props.isCollaps && css`
     top: -1.5rem;
-  `}
+  `};
 
   ${breakpointMixin.laptop`
     top: 2.6rem;
@@ -96,8 +98,8 @@ const TriggerWrapper = styled.div`
 
     ${(props) => props.isCollaps && css`
       top: 2.6rem;
-    `}
-  `}
+    `};
+  `};
 `;
 
 const VerbType = styled.span`

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 const ButtonWrapper = styled.button`
   padding: .5rem 2rem;

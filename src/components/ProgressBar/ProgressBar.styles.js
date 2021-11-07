@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,30 +12,30 @@ const Wrapper = styled.div`
   background: ${(props) => props.theme.mainCategoriesStyle.notKnown.background};
 `;
 
-const ProgressStyles = css`
-  width: ${(props) => props.percent}%;
+const ProgressStyles = (props) => css`
+  width: ${props.percent}%;
   height: 100%;
 `;
 
 const KnownProgress = styled.div`
-  ${ProgressStyles};
+  ${(props) => ProgressStyles(props)};
   background: ${(props) => props.theme.mainCategoriesStyle.known.background};
 `;
 
 const ToRepeatProgress = styled.div`
-  ${ProgressStyles};
+  ${(props) => ProgressStyles(props)};
   border-right: 1px solid #ec4a4a;
   background: ${(props) => props.theme.mainCategoriesStyle.toRepeat.background};
 `;
 
 const NowLearningProgress = styled.div`
-  ${ProgressStyles};
+  ${(props) => ProgressStyles(props)};
   border-right: 1px solid #f36a6a;
   background: ${(props) => props.theme.mainCategoriesStyle.nowLearning.background};
 `;
 
 const InProgressProgress = styled.div`
-  ${ProgressStyles};
+  ${(props) => ProgressStyles(props)};
   border-right: 1px solid #e0acac;
   background: ${(props) => props.theme.mainCategoriesStyle.inProgress.background};
 `;

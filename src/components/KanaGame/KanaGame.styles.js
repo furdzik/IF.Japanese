@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -30,7 +31,7 @@ const GameField = styled.div`
   ${breakpointMixin.laptop`
     max-width: 50rem;
     width: auto;
-  `}
+  `};
 `;
 
 const RandomKana = styled.div`
@@ -55,11 +56,11 @@ const Input = styled.input`
 
   ${(props) => props.isCorrect && css`
     background: #d4ffd4;
-  `}
+  `};
 
   ${(props) => props.isIncorrect && css`
     background: #ffd3d3;
-  `}
+  `};
 `;
 
 const Instructions = styled.div`

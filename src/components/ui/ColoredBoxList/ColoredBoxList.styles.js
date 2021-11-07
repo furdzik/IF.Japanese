@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+
 import { Link } from 'react-router-dom';
 
 import { breakpointMixin } from '@styles/mixins';
@@ -12,7 +13,7 @@ const BoxList = styled.ul`
   ${breakpointMixin.portraitTablet`
     display: flex;
     flex-wrap: wrap;
-  `}
+  `};
 `;
 
 const BoxItem = styled.li`

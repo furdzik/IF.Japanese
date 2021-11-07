@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 const SwitcherWrapper = styled.div`
   position: relative;
@@ -28,7 +29,7 @@ const SwitcherWrapper = styled.div`
       left: auto;
       background: ${props.theme.mainColors.primary};
     }
-  `}
+  `};
   ${(props) => props.disabled && css`
     background-color: ${props.theme.mainColors.primary};
     &::before {
@@ -36,7 +37,7 @@ const SwitcherWrapper = styled.div`
       left: auto;
       background: ${props.theme.mainColors.primary};
     }
-  `}
+  `};
 `;
 
 export {
