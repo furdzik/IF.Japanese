@@ -22,8 +22,7 @@ const webpackProduction = () => ({
     }),
     new CopyPlugin({
       patterns: [
-        { from: './public/', to: './' },
-        { from: './config/.htaccess', to: './' },
+        { from: './public/', to: './' }
       ]
     }),
     new WebpackCdnPlugin({

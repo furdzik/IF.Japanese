@@ -137,4 +137,4 @@ If you want to contribute read the [contributing guidelines]() before opening an
 
 ## Style guide
 
-I use my own style guidelines: [GP.Kamisama](https://github.com/furdzik/IF.Kamisama).
+I use my own style guidelines: [IF.Kamisama](https://github.com/furdzik/IF.Kamisama).

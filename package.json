@@ -17,7 +17,7 @@
   "description": "My app for learning japanese",
   "scripts": {
     "start": "npm run lang && npm run dev",
-    "build": "npx webpack --env.production --progress --colors",
+    "build": "npx webpack --progress",
     "lint": "npm run eslint && npm run stylelint",
     "lang": "extract-messages -l=en -d=en -o lang/generated --flat \"src/**/**/**/*.messages.js\"",
     "find-duplicates": "jscpd ./src/",
