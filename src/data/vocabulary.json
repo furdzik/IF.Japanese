@@ -12,6 +12,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "h"
+    },
     "pitch": "",
     "level": 5
   },
@@ -393,6 +396,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "sai"
+    },
     "pitch": "",
     "level": 0
   },
@@ -1007,6 +1013,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "default"
+    },
     "pitch": "",
     "level": 3
   },
@@ -2905,6 +2914,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "k"
+    },
     "pitch": "",
     "level": 1
   },
@@ -2913,6 +2925,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "h"
+    },
     "pitch": "",
     "level": 5
   },
@@ -3799,6 +3814,7 @@
   },
   {
     "vocab": "年",
+    "meaning": "とし",
     "known": true,
     "inProgress": false,
     "nowLearning": false,
@@ -4233,6 +4249,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "k"
+    },
     "pitch": "",
     "level": 3
   },
@@ -5902,6 +5921,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "s"
+    },
     "pitch": "",
     "level": 1
   },
@@ -6803,9 +6825,6 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
-    "counter": {
-      "counterGroup": "tsu"
-    },
     "pitch": "",
     "level": 0
   },
@@ -13855,6 +13874,9 @@
     "known": false,
     "inProgress": true,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "default"
+    },
     "pitch": "",
     "level": 1
   },
@@ -14215,6 +14237,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "ji"
+    },
     "pitch": "",
     "level": 5
   },
@@ -24457,6 +24482,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "s"
+    },
     "pitch": "",
     "level": 3
   },
@@ -24695,6 +24723,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "nin"
+    },
     "pitch": "",
     "level": 0
   },
@@ -26811,6 +26842,9 @@
     "known": false,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "ke"
+    },
     "pitch": "",
     "level": 3
   },
@@ -27950,7 +27984,7 @@
     "inProgress": false,
     "nowLearning": false,
     "counter": {
-      "counterGroup": "j"
+      "counterGroup": "ji"
     },
     "pitch": "",
     "level": 0
@@ -30334,7 +30368,7 @@
     "inProgress": false,
     "nowLearning": false,
     "counter": {
-      "counterGroup": "ba"
+      "counterGroup": "default"
     },
     "pitch": "",
     "level": 3
@@ -32966,6 +33000,18 @@
     "nowLearning": false,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "年",
+    "meaning": "ねん",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "default"
+    },
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "灰色",
@@ -49164,8 +49210,11 @@
   {
     "vocab": "匹",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "h"
+    },
     "pitch": "",
     "level": 1
   },
@@ -49831,7 +49880,7 @@
     "inProgress": false,
     "nowLearning": true,
     "counter": {
-      "counterGroup": "ka"
+      "counterGroup": "k"
     },
     "pitch": "",
     "level": 1
@@ -49843,9 +49892,43 @@
     "inProgress": false,
     "nowLearning": true,
     "counter": {
+      "reading": "つ",
       "counterGroup": "tsu"
     },
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "杯",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "h"
+    },
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "個",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "k"
+    },
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "着",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "s"
+    },
+    "pitch": "",
+    "level": 1
   }
 ]

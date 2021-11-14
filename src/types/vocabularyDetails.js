@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+import { COUNTERS_GROUPS } from '@constants';
+
 import { verbShape } from '@types/verb';
 import {
   additionalExplanationShape,
@@ -55,19 +57,26 @@ export const kanjiPartShape = PropTypes.shape({
 
 export const kanjiPartsShape = PropTypes.arrayOf(kanjiPartShape);
 
+export const countersGroupShape = PropTypes.oneOf(Object.keys(COUNTERS_GROUPS));
+
+export const counterShape = PropTypes.shape({
+  countersGroup: countersGroupShape
+});
+
 export const vocabularyDetailsShape = PropTypes.shape({
   vocab: PropTypes.string,
   meaning: PropTypes.string,
-  japaneseForm: japaneseFormShape,
-  status: statusShape,
   metadata: metadataShape,
-  tags: tagsShape,
+  status: statusShape,
   translations: translationsShape,
-  antonyms: PropTypes.arrayOf(PropTypes.string),
-  otherForms: otherFormsShape,
   additionalExplanation: additionalExplanationShape,
-  problems: problemsShape,
+  antonyms: PropTypes.arrayOf(PropTypes.string),
+  counter: counterShape,
   examples: PropTypes.arrayOf(PropTypes.string),
+  japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
+  otherForms: otherFormsShape,
+  problems: problemsShape,
+  tags: tagsShape,
   verb: verbShape
 });

@@ -1,5 +1,7 @@
 import messages from '@lang/defaultMessages/menu.messages';
 
+export * from './counters';
+
 /* FILTERS */
 export const localStorageKeyVocab = 'vocabSelectedFilters';
 export const localStorageKeyVerbs = 'verbsSelectedFilters';

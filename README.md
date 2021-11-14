@@ -17,11 +17,11 @@ This repository presents frontend application for my **Japanese APP**
     "known": false,
     "inProgress": true,
     "nowLearning": false,
-    "pitch": "",
-    "antonyms": "入る",
     "counter": {
       "counterGroup": "tsu"
     },
+    "pitch": "",
+    "antonyms": "入る",
     "level": 0,
     "examples": [
         "同じタイミングで言ってみました。"
@@ -99,38 +99,30 @@ This repository presents frontend application for my **Japanese APP**
 
 #### Counter
 
+- **reading** - only if counter has a special reading
 - **counterGroup** `required` - group of counter. Possible options:
-  - `ba`
-  - `bu`
-  - `byou`
-  - `ch`
-  - `da`
-  - `do`
-  - `e`
-  - `fu`
-  - `gou`
-  - `ha`
-  - `hatsu`
-  - `he`
-  - `hi`
-  - `ho`
-  - `j`
-  - `jou` (条)
+  - `default`
   - `k`
-  - `nichi`
-  - `maki` (間, 巻)
-  - `ma`
-  - `me`
-  - `ne`
-  - `nin`
-  - `r`
   - `s`
-  - `sao`
   - `t`
-  - `tsu`
+  - `h`
+  - `f`
+  - `p`
+  - `r`
+  - `w`
+
+  - `ji`
+  - `nichi`
+  - `nin`
+  -`tsu`
+  -`sai`
+  -`ke`
+  -`so`
+
+  - `maki` (間, 巻)
+  - `sao`
   - `tsuu`
   - `tsui`
-  - `w`
   - `zen`
   
 ---

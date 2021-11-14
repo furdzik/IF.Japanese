@@ -4,11 +4,11 @@ import { useIntl } from 'react-intl';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { sectionTypes, characterType } from '@constants';
+import { sectionTypes } from '@constants';
 
 import { japaneseFormShape } from '@types/vocabularyDetails';
 
-import Character from '@components/ui/Character';
+import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
 import Tag from '@components/ui/Tag';
 
 import Heading from '@components/Heading';
@@ -86,19 +86,10 @@ const Details = (props) => {
                   <NameWrapper>
                     <CharacterBlock small={props.japaneseForm?.kanji.length > 5}>
                       {
-                        props.japaneseForm?.furigana ? (
-                          <Character
-                            type={characterType.FURIGANA}
-                            elements={props.japaneseForm?.furigana}
-                            small={props.japaneseForm?.kanji.length > 5}
-                          />
-                        ) : null
-                      }
-                      {
                         props.japaneseForm?.kanji ? (
-                          <Character
-                            type={characterType.KANJI}
-                            elements={props.japaneseForm?.kanji}
+                          <KanjiWithFurigana
+                            kanji={props.japaneseForm?.kanji}
+                            furigana={props.japaneseForm?.furigana}
                             small={props.japaneseForm?.kanji.length > 5}
                           />
                         ) : props.name

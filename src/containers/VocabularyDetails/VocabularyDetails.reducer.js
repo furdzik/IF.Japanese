@@ -32,6 +32,7 @@ const initialState = {
   translations: [],
   additionalExplanation: null,
   antonyms: null,
+  counter: null,
   examples: null,
   kanjiParts: null,
   otherForms: null,
@@ -52,34 +53,35 @@ export default function vocabularyDetailsReducer (state = initialState, action) 
         meaning: data.meaning
           ? data.meaning
           : data.details.japanese[0].reading,
+        metadata: {
+          slug: data.details.slug
+        },
+        status: {
+          known: data.known,
+          nowLearning: data.nowLearning,
+          inProgress: data.inProgress
+        },
+        translations: getTranslations(data.details.senses),
+        additionalExplanation: data.additionalExplanation,
+        antonyms: getAntonyms(data.antonyms, data.details.senses),
+        counter: data.counter,
+        examples: data.examples,
         japaneseForm: data.details.japanese[0].reading !== data.vocab ? {
           kanji: getKanji(data.vocab),
           furigana: getFurigana(
             data.vocab, data.details.japanese[0].reading
           )
         } : null,
-        status: {
-          known: data.known,
-          nowLearning: data.nowLearning,
-          inProgress: data.inProgress
-        },
-        metadata: {
-          slug: data.details.slug
-        },
+        kanjiParts: prepareKanjiDetailsData(data.kanjiDetails),
+        otherForms: getOtherForms(data.details.japanese),
+        problems: data.problems,
         tags: getTags({
           tags: data.details.tags,
           isCommon: data.details.is_common,
           isVerb: !!data.verb,
           jlpt: data.details.jlpt,
-          counter: !!data.counter
+          isCounter: !!data.counter
         }),
-        translations: getTranslations(data.details.senses),
-        antonyms: getAntonyms(data.antonyms, data.details.senses),
-        otherForms: getOtherForms(data.details.japanese),
-        additionalExplanation: data.additionalExplanation,
-        problems: data.problems,
-        examples: data.examples,
-        kanjiParts: prepareKanjiDetailsData(data.kanjiDetails),
         verb: data.verb ? {
           ...data.verb
         } : null,

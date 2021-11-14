@@ -81,6 +81,12 @@ const OtherFormsWrapper = styled.div`
   margin-top: 1rem;
 `;
 
+const ConjugationHeader = styled.span`
+  display: inline-block;
+  margin-left: 2rem;
+  font-size: 1.8rem;
+`;
+
 export {
   ConjugationLink,
   TranslationsList,
@@ -91,5 +97,6 @@ export {
   AntonymsBox,
   AntonymsLink,
   ExamplesWrapper,
-  OtherFormsWrapper
+  OtherFormsWrapper,
+  ConjugationHeader
 };

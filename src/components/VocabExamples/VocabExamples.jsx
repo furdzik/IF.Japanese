@@ -2,14 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
-
 import { v4 as uuidv4 } from 'uuid';
-
-import { characterType } from '@constants';
 
 import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamples';
 
-import Character from '@components/ui/Character';
+import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
 import Tag from '@components/ui/Tag';
 
 import {
@@ -28,23 +25,6 @@ import messages from './VocabExamples.messages';
 
 const VocabExamples = (props) => {
   const intl = useIntl();
-
-  const kanjiWithFurigana = (el) => (
-    <React.Fragment>
-      <Character
-        type={characterType.FURIGANA}
-        elements={el.japaneseForm?.furigana}
-        mainCharacters={false}
-        small
-      />
-      <Character
-        type={characterType.KANJI}
-        elements={el.japaneseForm?.kanji}
-        mainCharacters={false}
-        small
-      />
-    </React.Fragment>
-  );
 
   return (
     <React.Fragment>
@@ -93,7 +73,10 @@ const VocabExamples = (props) => {
                                       : el.vocab}`
                                   }
                                 >
-                                  {kanjiWithFurigana(el)}
+                                  <KanjiWithFurigana
+                                    kanji={el.japaneseForm?.kanji}
+                                    furigana={el.japaneseForm?.furigana}
+                                  />
                                 </Link>
                               ) : (
                                 <a
@@ -101,7 +84,10 @@ const VocabExamples = (props) => {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
-                                  {kanjiWithFurigana(el)}
+                                  <KanjiWithFurigana
+                                    kanji={el.japaneseForm?.kanji}
+                                    furigana={el.japaneseForm?.furigana}
+                                  />
                                 </a>
                               )
                             }
