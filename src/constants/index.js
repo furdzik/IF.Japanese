@@ -177,7 +177,8 @@ export const tagTypes = {
   OTHER: 'other',
   GRADE: 'grade',
   LEVEL_GROUP: 'levelGroup',
-  GRAMMAR_ORIGIN: 'grammarOrigin'
+  GRAMMAR_ORIGIN: 'grammarOrigin',
+  COUNTER: 'counter'
 };
 
 export const LIST_OF_READING_EXCEPTIONS = {

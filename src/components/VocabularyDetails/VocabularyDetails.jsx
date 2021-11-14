@@ -293,7 +293,7 @@ const VocabularyDetails = (props) => {
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.IKOU_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.MEIREI_FORM}Label`])}
               verb={props.verb}
               grammar={[grammarTypes.MEIREI_FORM]}
               noPast

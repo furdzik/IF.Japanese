@@ -19,7 +19,9 @@ This repository presents frontend application for my **Japanese APP**
     "nowLearning": false,
     "pitch": "",
     "antonyms": "入る",
-    "classifier": true,
+    "counter": {
+      "counterGroup": "tsu"
+    },
     "level": 0,
     "examples": [
         "同じタイミングで言ってみました。"
@@ -56,7 +58,7 @@ This repository presents frontend application for my **Japanese APP**
 - **nowLearning** `required` - (see below)
 - **pitch** `required` - name of used pitch accent to pronounce it
 - **antonyms** - if API don't hase `antonyms` for this word use this option instead
-- **classifier** - if word is a `classifier` set to true
+- **counter** - if word is a `counter` add `counterGroup` (see below)
 - **level** `required` - JLPT level
 - **examples** - array od examples
 - **additionalExplanation** - array of additional explanation for this word
@@ -94,6 +96,42 @@ This repository presents frontend application for my **Japanese APP**
   - intransitive
   - transitive
   - other (when none from above)
+
+#### Counter
+
+- **counterGroup** `required` - group of counter. Possible options:
+  - `ba`
+  - `bu`
+  - `byou`
+  - `ch`
+  - `da`
+  - `do`
+  - `e`
+  - `fu`
+  - `gou`
+  - `ha`
+  - `hatsu`
+  - `he`
+  - `hi`
+  - `ho`
+  - `j`
+  - `jou` (条)
+  - `k`
+  - `nichi`
+  - `maki` (間, 巻)
+  - `ma`
+  - `me`
+  - `ne`
+  - `nin`
+  - `r`
+  - `s`
+  - `sao`
+  - `t`
+  - `tsu`
+  - `tsuu`
+  - `tsui`
+  - `w`
+  - `zen`
   
 ---
 

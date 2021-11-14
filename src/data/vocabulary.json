@@ -5470,6 +5470,7 @@
   },
   {
     "vocab": "時",
+    "meaning": "とき",
     "known": true,
     "inProgress": false,
     "nowLearning": false,
@@ -6802,6 +6803,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "tsu"
+    },
     "pitch": "",
     "level": 0
   },
@@ -27940,6 +27944,18 @@
     "level": 3
   },
   {
+    "vocab": "時",
+    "meaning": "じ",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "j"
+    },
+    "pitch": "",
+    "level": 0
+  },
+  {
     "vocab": "地",
     "known": true,
     "inProgress": false,
@@ -30317,6 +30333,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "ba"
+    },
     "pitch": "",
     "level": 3
   },
@@ -49811,8 +49830,22 @@
     "known": false,
     "inProgress": false,
     "nowLearning": true,
-    "classifier": true,
+    "counter": {
+      "counterGroup": "ka"
+    },
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "箇",
+    "meaning": "つ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "counter": {
+      "counterGroup": "tsu"
+    },
+    "pitch": "",
+    "level": 0
   }
 ]

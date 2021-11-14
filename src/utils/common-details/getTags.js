@@ -19,7 +19,7 @@ const reducedJPLT = (prev, current) => {
 export const getTags = (
   {
     tags, isCommon, isJoyo, isJinmeiyo, isVerb, jlpt, isGrammar,
-    grade, strokes, levelGroup, grammarOrigin
+    grade, strokes, levelGroup, grammarOrigin, counter
   },
   shortMsg = false
 ) => {
@@ -43,6 +43,13 @@ export const getTags = (
     newTags.push({
       tagType: tagTypes.IS_COMMON,
       label: (messages.commonGrammar)?.defaultMessage
+    });
+  }
+
+  if (counter) {
+    newTags.push({
+      tagType: tagTypes.COUNTER,
+      label: (messages.counter)?.defaultMessage
     });
   }
 

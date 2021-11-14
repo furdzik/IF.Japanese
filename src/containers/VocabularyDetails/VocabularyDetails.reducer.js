@@ -70,7 +70,8 @@ export default function vocabularyDetailsReducer (state = initialState, action) 
           tags: data.details.tags,
           isCommon: data.details.is_common,
           isVerb: !!data.verb,
-          jlpt: data.details.jlpt
+          jlpt: data.details.jlpt,
+          counter: !!data.counter
         }),
         translations: getTranslations(data.details.senses),
         antonyms: getAntonyms(data.antonyms, data.details.senses),

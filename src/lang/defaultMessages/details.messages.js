@@ -14,6 +14,7 @@ export default defineMessages({
   waniKaniText: 'WaniKani: level ',
   jlptText: 'JLPT',
   levelGroup: 'Level group:\u2000',
+  counter: 'Counter',
   elementaryLevel: '初級',
   elementaryLevelHelper: 'Elementary level',
   intermediateLevel: '中級',
