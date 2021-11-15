@@ -6,14 +6,14 @@ const Wrapper = styled.div`
 `;
 
 const Box = styled.div`
-  width: 12rem;
+  //width: 20rem;
 `;
 
 const AlternativeBox = styled.div`
   &::before {
     display: inline-block;
-    margin: 0 3rem;
-    content: '/';
+    margin: 0 3rem 0 0;
+    content: '、';
   }
 `;
 

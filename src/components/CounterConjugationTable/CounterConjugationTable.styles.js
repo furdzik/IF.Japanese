@@ -5,6 +5,7 @@ const Table = styled.table`
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
+  border-collapse: separate;
 `;
 
 const tdAndThCommonStyles = (props) => css`
@@ -23,8 +24,10 @@ const Td = styled.td`
 
 const Th = styled.th`
   ${(props) => tdAndThCommonStyles(props)};
-
+  position: sticky;
+  top: 0;
   border-bottom: .3rem solid ${(props) => props.theme.mainColors.primary};
+  background: white;
   text-align: left;
 
   &:nth-of-type(1) {
@@ -38,6 +41,10 @@ const Tr = styled.tr`
       border-bottom: .1rem solid ${(props) => props.theme.mainColors.secondary};
     }
   }
+
+  ${(props) => props.question && css`
+    background: ${props.theme.colors.lightGray};
+  `};
 `;
 
 const Number = styled.span`
@@ -47,6 +54,14 @@ const Number = styled.span`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.mainColors.secondary};
   font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
+
+  ${(props) => props.additionalNumber && css`
+    background: ${props.theme.mainColors.tartary};
+  `};
+`;
+
+const QuestionWrapper = styled.div`
+  display: flex;
 `;
 
 export {
@@ -54,5 +69,6 @@ export {
   Tr,
   Th,
   Td,
-  Number
+  Number,
+  QuestionWrapper
 };

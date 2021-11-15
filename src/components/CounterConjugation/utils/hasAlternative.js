@@ -14,6 +14,7 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
         || counterGroup === COUNTERS_GROUPS.so
+        || counterGroup === COUNTERS_GROUPS.gatsu
       );
     }
 
@@ -28,6 +29,7 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
         || counterGroup === COUNTERS_GROUPS.so
+        || counterGroup === COUNTERS_GROUPS.gatsu
       );
     }
 
@@ -37,6 +39,7 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.tsu
         || counterGroup === COUNTERS_GROUPS.ji
         || counterGroup === COUNTERS_GROUPS.nin
+        || counterGroup === COUNTERS_GROUPS.gatsu
       );
     }
 

@@ -60,7 +60,10 @@ export const kanjiPartsShape = PropTypes.arrayOf(kanjiPartShape);
 export const countersGroupShape = PropTypes.oneOf(Object.keys(COUNTERS_GROUPS));
 
 export const counterShape = PropTypes.shape({
-  countersGroup: countersGroupShape
+  countersGroup: countersGroupShape,
+  question: japaneseFormShape,
+  reading: PropTypes.string,
+  additionalNumbers: PropTypes.arrayOf(PropTypes.number)
 });
 
 export const vocabularyDetailsShape = PropTypes.shape({

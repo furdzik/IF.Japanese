@@ -18,6 +18,7 @@ export const COUNTERS_GROUPS = {
   sai: 'sai',
   ke: 'ke',
   so: 'so',
+  gatsu: 'gatsu',
 
   maki: 'maki', // (間, 巻)
   sao: 'sao',
@@ -36,7 +37,28 @@ export const NUMBERS = {
   seven: 7,
   eight: 8,
   nine: 9,
-  ten: 10
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+  thirteen: 13,
+  fourteen: 14,
+  fifteen: 15,
+  sixteen: 16,
+  seventeen: 17,
+  eighteen: 18,
+  nineteen: 19,
+  twenty: 20,
+  twentyOne: 21,
+  twentyTwo: 22,
+  twentyThree: 23,
+  twentyFour: 24,
+  twentyFive: 25,
+  twentySix: 26,
+  twentySeven: 27,
+  twentyEight: 28,
+  twentyNine: 29,
+  thirty: 30,
+  thirtyOne: 31
 };
 
 export const FURIGANA_RENDAKU = {
@@ -68,4 +90,9 @@ export const FURIGANA_RENDAKU_LETTER_TO = {
   handakutenH: 'p',
   dakutenK: 'g',
   dakutenS: 'z'
+};
+
+export const QUESTION_JAPANESE_FORM = {
+  kanji: ['何'],
+  furigana: ['なん']
 };

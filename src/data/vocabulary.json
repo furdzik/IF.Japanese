@@ -159,6 +159,7 @@
   },
   {
     "vocab": "月",
+    "meaning": "つき",
     "known": true,
     "inProgress": false,
     "nowLearning": false,
@@ -397,7 +398,8 @@
     "inProgress": false,
     "nowLearning": false,
     "counter": {
-      "counterGroup": "sai"
+      "counterGroup": "sai",
+      "additionalNumbers": [20]
     },
     "pitch": "",
     "level": 0
@@ -49916,7 +49918,13 @@
     "nowLearning": true,
     "counter": {
       "reading": "つ",
-      "counterGroup": "tsu"
+      "counterGroup": "tsu",
+      "question": {
+        "japaneseForm": {
+          "kanji": ["幾", "つ"],
+          "furigana": ["いく", " "]
+        }
+      }
     },
     "pitch": "",
     "level": 0
@@ -49953,5 +49961,18 @@
     },
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "月",
+    "meaning": "がつ",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "gatsu",
+      "additionalNumbers": [11, 12]
+    },
+    "pitch": "",
+    "level": 5
   }
 ]

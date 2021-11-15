@@ -1,4 +1,5 @@
 import vocabJson from '@data/vocabulary.json';
+import vocabNotInApiJson from '@data/vocabulary-not-in-api.json';
 import kanjiJson from '@data/kanji.json';
 
 import { fetchJisho, fetchKanjiAlternative } from '@api';
@@ -154,11 +155,22 @@ export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => 
   fetchJisho(url || name)
     .then((response) => {
       if (vocabTrueName) {
+        let hasApiMeaning = false;
+
         response.data.forEach((kanji) => {
           if (isCorrectVocabularyMeaning(kanji.japanese, name, kanjiMeaning)) {
+            hasApiMeaning = true;
             dispatch(getMeaning(kanji, name, url));
           }
         });
+
+        if (!hasApiMeaning) {
+          const dataFromJson = vocabNotInApiJson.filter(
+            (el) => el.vocab === vocabTrueName && kanjiMeaning === el.meaning
+          );
+
+          dispatch(getMeaning(...dataFromJson, name, url));
+        }
       } else {
         dispatch(getMeaning(response.data[0], name, url));
       }

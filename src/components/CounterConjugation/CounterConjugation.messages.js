@@ -15,6 +15,8 @@ export default defineMessages({
   nineGroupDefault: 'きゅう',
   tenGroupDefault: 'じゅう',
   tenGroupDefaultAlternative: 'じっ',
+  twentyGroupSaiFurigana: 'はたち',
+  twentyGroupSaiKanji: '二十歳',
 
   // Groups
   oneGroupKHS: 'いっ',

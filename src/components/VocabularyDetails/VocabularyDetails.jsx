@@ -370,7 +370,9 @@ const VocabularyDetails = (props) => {
             <CounterConjugationTable
               vocab={props.counter?.reading ? props.counter?.reading : props.name}
               japaneseForm={props.japaneseForm}
-              counterGroup={props.counter.counterGroup}
+              counterGroup={props.counter?.counterGroup}
+              additionalNumbers={props.counter?.additionalNumbers}
+              question={props.counter?.question}
             />
           </Modal>
         ) : null
