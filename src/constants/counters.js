@@ -17,7 +17,7 @@ export const COUNTERS_GROUPS = {
   tsu: 'tsu',
   sai: 'sai',
   ke: 'ke',
-  so: 'ke',
+  so: 'so',
 
   maki: 'maki', // (間, 巻)
   sao: 'sao',
@@ -44,10 +44,28 @@ export const FURIGANA_RENDAKU = {
   hi: 'ひ',
   fu: 'ふ',
   he: 'へ',
-  ho: 'ほ'
+  ho: 'ほ',
+  ka: 'か',
+  ki: 'き',
+  ku: 'く',
+  ke: 'け',
+  ko: 'こ',
+  sa: 'さ',
+  si: 'し',
+  su: 'す',
+  se: 'せ',
+  so: 'そ'
 };
 
-export const FURIGANA_RENDAKU_LETTER = {
-  dakuten: 'b',
-  handakuten: 'p'
+export const FURIGANA_RENDAKU_LETTER_FROM = {
+  rendakuH: 'h',
+  rendakuK: 'k',
+  rendakuS: 's'
+};
+
+export const FURIGANA_RENDAKU_LETTER_TO = {
+  dakutenH: 'b',
+  handakutenH: 'p',
+  dakutenK: 'g',
+  dakutenS: 'z'
 };

@@ -14359,6 +14359,7 @@
   },
   {
     "vocab": "足",
+    "meaning": "あし",
     "known": true,
     "inProgress": false,
     "nowLearning": false,
@@ -25942,6 +25943,18 @@
     "level": 3
   },
   {
+    "vocab": "足",
+    "meaning": "そく",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "so"
+    },
+    "pitch": "",
+    "level": 0
+  },
+  {
     "vocab": "快適",
     "known": false,
     "inProgress": true,
@@ -26839,12 +26852,10 @@
   },
   {
     "vocab": "軒",
+    "meaning": "のき",
     "known": false,
     "inProgress": false,
     "nowLearning": false,
-    "counter": {
-      "counterGroup": "ke"
-    },
     "pitch": "",
     "level": 3
   },
@@ -41822,6 +41833,18 @@
     "nowLearning": false,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "軒",
+    "meaning": "けん",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "ke"
+    },
+    "pitch": "",
+    "level": 3
   },
   {
     "vocab": "白髪",

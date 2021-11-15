@@ -15,6 +15,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.h
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
+        || counterGroup === COUNTERS_GROUPS.so
       ) {
         return (messages.oneGroupKHS)?.defaultMessage;
       }
@@ -99,6 +100,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.h
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
+        || counterGroup === COUNTERS_GROUPS.so
       ) {
         return (messages.eightGroupKHS)?.defaultMessage;
       }
@@ -128,6 +130,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.h
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
+        || counterGroup === COUNTERS_GROUPS.so
       ) {
         return (messages.tenGroupKHS)?.defaultMessage;
       }

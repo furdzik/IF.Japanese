@@ -47,5 +47,15 @@ export default defineMessages({
   piFurigana: 'ぴ',
   puFurigana: 'ぷ',
   peFurigana: 'ぺ',
-  poFurigana: 'ぽ'
+  poFurigana: 'ぽ',
+  gaFurigana: 'が',
+  giFurigana: 'ぎ',
+  guFurigana: 'ぐ',
+  geFurigana: 'げ',
+  goFurigana: 'ご',
+  zaFurigana: 'ざ',
+  ziFurigana: 'じ',
+  zuFurigana: 'ず',
+  zeFurigana: 'ぜ',
+  zoFurigana: 'ぞ'
 });

@@ -4,29 +4,30 @@ import {
   NUMBERS,
   COUNTERS_GROUPS,
   FURIGANA_RENDAKU,
-  FURIGANA_RENDAKU_LETTER
+  FURIGANA_RENDAKU_LETTER_FROM,
+  FURIGANA_RENDAKU_LETTER_TO
 } from '@constants';
 
 import messages from '../CounterConjugation.messages';
 
 const FIRST_MOJI_INDEX = 0;
 
-const change = (furiganaFirstMoji, rendakuLetter) => {
+const getChangedFirstMoji = (furiganaFirstMoji, rendakuFrom, rendakuTo) => {
   switch (furiganaFirstMoji) {
-    case FURIGANA_RENDAKU.ha: {
-      return (messages[`${rendakuLetter}aFurigana`])?.defaultMessage;
+    case FURIGANA_RENDAKU[`${rendakuFrom}a`]: {
+      return (messages[`${rendakuTo}aFurigana`])?.defaultMessage;
     }
-    case FURIGANA_RENDAKU.hi: {
-      return (messages[`${rendakuLetter}iFurigana`])?.defaultMessage;
+    case FURIGANA_RENDAKU[`${rendakuFrom}i`]: {
+      return (messages[`${rendakuTo}iFurigana`])?.defaultMessage;
     }
-    case FURIGANA_RENDAKU.fu: {
-      return (messages[`${rendakuLetter}uFurigana`])?.defaultMessage;
+    case FURIGANA_RENDAKU[`${rendakuFrom}u`]: {
+      return (messages[`${rendakuTo}uFurigana`])?.defaultMessage;
     }
-    case FURIGANA_RENDAKU.he: {
-      return (messages[`${rendakuLetter}eFurigana`])?.defaultMessage;
+    case FURIGANA_RENDAKU[`${rendakuFrom}e`]: {
+      return (messages[`${rendakuTo}eFurigana`])?.defaultMessage;
     }
-    case FURIGANA_RENDAKU.ho: {
-      return (messages[`${rendakuLetter}oFurigana`])?.defaultMessage;
+    case FURIGANA_RENDAKU[`${rendakuFrom}o`]: {
+      return (messages[`${rendakuTo}oFurigana`])?.defaultMessage;
     }
 
     default:
@@ -65,11 +66,49 @@ export const getFurigana = (number, counterGroup, originalFurigana) => {
         || number === NUMBERS.eight
         || number === NUMBERS.ten
       ) {
-        newFirstMoji = change(furiganaFirstMoji, FURIGANA_RENDAKU_LETTER.handakuten);
+        newFirstMoji = getChangedFirstMoji(
+          furiganaFirstMoji,
+          FURIGANA_RENDAKU_LETTER_FROM.rendakuH,
+          FURIGANA_RENDAKU_LETTER_TO.handakutenH
+        );
       }
 
       if (number === NUMBERS.three) {
-        newFirstMoji = change(furiganaFirstMoji, FURIGANA_RENDAKU_LETTER.dakuten);
+        newFirstMoji = getChangedFirstMoji(
+          furiganaFirstMoji,
+          FURIGANA_RENDAKU_LETTER_FROM.rendakuH,
+          FURIGANA_RENDAKU_LETTER_TO.dakutenH
+        );
+      }
+
+      newFirstIndex = newFirstMoji + firstIndexAfterFirstMoji;
+      newFurigana.push(newFirstIndex, ...originalFuriganaBesidesFirstMoji);
+
+      return newFurigana;
+    }
+
+    case COUNTERS_GROUPS.so: {
+      if (number === NUMBERS.three) {
+        newFirstMoji = getChangedFirstMoji(
+          furiganaFirstMoji,
+          FURIGANA_RENDAKU_LETTER_FROM.rendakuS,
+          FURIGANA_RENDAKU_LETTER_TO.dakutenS
+        );
+      }
+
+      newFirstIndex = newFirstMoji + firstIndexAfterFirstMoji;
+      newFurigana.push(newFirstIndex, ...originalFuriganaBesidesFirstMoji);
+
+      return newFurigana;
+    }
+
+    case COUNTERS_GROUPS.ke: {
+      if (number === NUMBERS.three) {
+        newFirstMoji = getChangedFirstMoji(
+          furiganaFirstMoji,
+          FURIGANA_RENDAKU_LETTER_FROM.rendakuK,
+          FURIGANA_RENDAKU_LETTER_TO.dakutenK
+        );
       }
 
       newFirstIndex = newFirstMoji + firstIndexAfterFirstMoji;

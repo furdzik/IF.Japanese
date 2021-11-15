@@ -13,6 +13,7 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.ke
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
+        || counterGroup === COUNTERS_GROUPS.so
       );
     }
 
@@ -26,6 +27,7 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.ke
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
+        || counterGroup === COUNTERS_GROUPS.so
       );
     }
 
