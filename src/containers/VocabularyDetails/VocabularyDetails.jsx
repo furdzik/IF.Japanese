@@ -55,6 +55,7 @@ const VocabularyDetails = (props) => {
       otherForms={props.otherForms}
       tags={props.tags}
       verb={props.verb}
+      apiError={props.apiError}
     />
   ) : <Loader covered />;
 };
@@ -68,6 +69,7 @@ VocabularyDetails.propTypes = {
   translations: translationsShape.isRequired,
   additionalExplanation: additionalExplanationShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
+  apiError: PropTypes.bool,
   examples: PropTypes.arrayOf(PropTypes.string),
   japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
@@ -80,6 +82,7 @@ VocabularyDetails.propTypes = {
 VocabularyDetails.defaultProps = {
   additionalExplanation: null,
   antonyms: null,
+  apiError: false,
   examples: null,
   japaneseForm: null,
   kanjiParts: null,

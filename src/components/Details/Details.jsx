@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
+import { useTheme } from '@emotion/react';
+
+import { mdiAlert } from '@mdi/js';
+import Icon from '@mdi/react';
+
 import { v4 as uuidv4 } from 'uuid';
 
 import { sectionTypes, characterType } from '@constants';
@@ -25,11 +30,14 @@ import {
   MainSection,
   NameWrapper,
   TagsWrapper,
-  CharacterBlock
+  CharacterBlock,
+  ApiErrorWrapper,
+  Message
 } from './Details.styles.js';
 import messages from './Details.messages';
 
 const Details = (props) => {
+  const theme = useTheme();
   const intl = useIntl();
 
   return (
@@ -63,6 +71,18 @@ const Details = (props) => {
           ) : null
         }
       </WordHeader>
+      {
+        props.apiError ? (
+          <ApiErrorWrapper>
+            <Icon
+              path={mdiAlert}
+              size={2}
+              color={theme.colors.red}
+            />
+            <Message>{intl.formatMessage(messages.apiErrorMsg)}</Message>
+          </ApiErrorWrapper>
+        ) : null
+      }
       <Content>
         <TagsWrapper>
           {
@@ -153,6 +173,7 @@ Details.propTypes = {
   mainSection: PropTypes.node.isRequired,
   mainSectionHeader: PropTypes.string.isRequired,
   additionalBox: PropTypes.node,
+  apiError: PropTypes.bool,
   children: PropTypes.node,
   inProgress: PropTypes.bool,
   japaneseForm: japaneseFormShape,
@@ -173,6 +194,7 @@ Details.propTypes = {
 
 Details.defaultProps = {
   additionalBox: null,
+  apiError: false,
   children: null,
   inProgress: null,
   japaneseForm: null,
