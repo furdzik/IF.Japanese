@@ -10,6 +10,10 @@ import Tile from '@components/ui/Tile';
 
 const Wrapper = styled.div`
   text-align: center;
+
+  ${(props) => props.hasApiError && css`
+    margin-top: 3rem;
+  `};
 `;
 
 const Title = styled.div`

@@ -63,12 +63,16 @@ const KanjiDetails = (props) => {
       mainSectionHeader={intl.formatMessage(messages.mainHeader)}
       mainSection={(
         <ReadingList>
-          <ReadingListItem>
-            <b>{intl.formatMessage(messages.meaningText)}</b>
-            {props.meaning}
-          </ReadingListItem>
           {
-            props.reading?.kunyomi.length ? (
+            props.meaning ? (
+              <ReadingListItem>
+                <b>{intl.formatMessage(messages.meaningText)}</b>
+                {props.meaning}
+              </ReadingListItem>
+            ) : null
+          }
+          {
+            props.reading?.kunyomi?.length ? (
               <ReadingListItem>
                 <b>{intl.formatMessage(messages.kunyomiText)}</b>
                 {props.reading?.kunyomi}
@@ -76,7 +80,7 @@ const KanjiDetails = (props) => {
             ) : null
           }
           {
-            props.reading?.onyomi.length ? (
+            props.reading?.onyomi?.length ? (
               <ReadingListItem>
                 <b>{intl.formatMessage(messages.onyomiText)}</b>
                 {props.reading?.onyomi}
@@ -177,6 +181,7 @@ const KanjiDetails = (props) => {
           )
         } : null
       ]}
+      apiError={props.apiError}
     />
   );
 };
@@ -184,6 +189,7 @@ const KanjiDetails = (props) => {
 KanjiDetails.propTypes = {
   kanji: PropTypes.string.isRequired,
   additionalExplanation: additionalExplanationShape,
+  apiError: PropTypes.bool,
   examples: examplesShape,
   meaning: PropTypes.string,
   metadata: metadataShape,
@@ -198,6 +204,7 @@ KanjiDetails.propTypes = {
 
 KanjiDetails.defaultProps = {
   additionalExplanation: null,
+  apiError: false,
   examples: null,
   meaning: null,
   metadata: null,
