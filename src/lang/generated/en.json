@@ -1,6 +1,6 @@
 {
-  "components.Details.apiErrorMsg": "We have some problems, the data may not be complete. Please, try again later.",
   "components.Details.jishoLinkText": "Jisho link",
+  "components.Flashcards.apiErrorMsg": "We are unable to retrieve the data. Please try again latter.",
   "components.Flashcards.switcherLabel": "裏だけ",
   "components.Flashcards.title": "暗記",
   "components.Footer.content": "IZABELA FURDZIK © {currentYear} All rights reserved",
@@ -249,6 +249,7 @@
   "components.grammar.StartGrammar.verbsLabel": "verbs",
   "components.grammar.StartGrammar.wordOrderCopy": "...",
   "components.grammar.StartGrammar.wordOrderHeader": "Word order and how to compose sentence",
+  "components.ui.ErrorMessageBox.defaultErrorMessage": "We have some problems, the data may not be complete. Please, try again later.",
   "containers.Flashcards.errorNoResults": "Nothing to show, change filters",
   "containers.Grammar.toRepeat": "復習したほうがいい",
   "containers.Kanji.joyo": "常用漢字表",

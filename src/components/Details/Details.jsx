@@ -2,11 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
-import { useTheme } from '@emotion/react';
-
-import { mdiAlert } from '@mdi/js';
-import Icon from '@mdi/react';
-
 import { v4 as uuidv4 } from 'uuid';
 
 import { sectionTypes, characterType } from '@constants';
@@ -14,6 +9,7 @@ import { sectionTypes, characterType } from '@constants';
 import { japaneseFormShape } from '@types/vocabularyDetails';
 
 import Character from '@components/ui/Character';
+import ErrorMessageBox from '@components/ui/ErrorMessageBox';
 import Tag from '@components/ui/Tag';
 
 import Heading from '@components/Heading';
@@ -30,14 +26,11 @@ import {
   MainSection,
   NameWrapper,
   TagsWrapper,
-  CharacterBlock,
-  ApiErrorWrapper,
-  Message
+  CharacterBlock
 } from './Details.styles.js';
 import messages from './Details.messages';
 
 const Details = (props) => {
-  const theme = useTheme();
   const intl = useIntl();
 
   return (
@@ -73,14 +66,7 @@ const Details = (props) => {
       </WordHeader>
       {
         props.apiError ? (
-          <ApiErrorWrapper>
-            <Icon
-              path={mdiAlert}
-              size={2}
-              color={theme.colors.red}
-            />
-            <Message>{intl.formatMessage(messages.apiErrorMsg)}</Message>
-          </ApiErrorWrapper>
+          <ErrorMessageBox />
         ) : null
       }
       <Content>

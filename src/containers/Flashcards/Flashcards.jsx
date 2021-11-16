@@ -36,6 +36,7 @@ const Flashcards = (props) => {
         flashcard={props.flashcard}
         getFlashcard={props.getFlashcard}
         additionalInfo={props.additionalInfo}
+        apiError={props.apiError}
         loading={props.loading}
         error={props.error}
         isRevealed={props.isRevealed}
@@ -52,6 +53,7 @@ Flashcards.propTypes = {
   selectedFilters: selectedFiltersShape.isRequired,
   setReveal: PropTypes.func.isRequired,
   additionalInfo: additionalInfoShape,
+  apiError: PropTypes.bool,
   error: PropTypes.string,
   flashcard: flashcardShape,
   isRevealed: PropTypes.bool,
@@ -60,6 +62,7 @@ Flashcards.propTypes = {
 
 Flashcards.defaultProps = {
   additionalInfo: null,
+  apiError: false,
   error: null,
   flashcard: null,
   isRevealed: false,
