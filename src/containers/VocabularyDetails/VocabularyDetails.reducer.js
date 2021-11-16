@@ -46,6 +46,8 @@ export default function vocabularyDetailsReducer (state = initialState, action) 
     case actionTypes.GET_VOCAB_DETAILS: {
       const data = action.payload;
 
+      const level = data.level ? [data.level.toString()] : null;
+
       return {
         ...state,
         vocab: data.vocab,
@@ -70,7 +72,7 @@ export default function vocabularyDetailsReducer (state = initialState, action) 
           tags: data.details?.tags,
           isCommon: data.details?.is_common,
           isVerb: !!data.verb,
-          jlpt: data.details?.jlpt || [data.level.toString()]
+          jlpt: data.details ? data.details?.jlpt : level
         }),
         translations: data.details ? getTranslations(data.details?.senses) : [],
         antonyms: data.details ? getAntonyms(data.antonyms, data.details?.senses) : [],

@@ -27,7 +27,8 @@ export default function vocabExamplesReducer (state = initialState, action) {
         vocabExamples,
         showLoadMoreButton,
         loading: false,
-        showMoreLoading: false
+        showMoreLoading: false,
+        apiError: !vocabExamples
       };
     }
 
@@ -108,7 +109,10 @@ export const getVocabExamples = (examples, lastElementIndex = 0) => (dispatch, g
         showLoadMoreButton: lastElementIndex + MAX_REQUESTS_INDEX < examples.length
       }));
     })
-    .catch((error) => {
-      throw new Error(error);
+    .catch(() => {
+      dispatch(getVocabExamplesAction({
+        vocabExamples: null,
+        showLoadMoreButton: false
+      }));
     });
 };

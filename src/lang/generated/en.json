@@ -203,6 +203,7 @@
   "components.VerbsListItem.verbTypeOtherText": "他",
   "components.VerbsListItem.verbTypeTransitive": "°",
   "components.VerbsListItem.verbTypeTransitiveText": "他動詞",
+  "components.VocabExamples.apiErrorMsg": "We are unable to retrieve the data. Please try again in a moment.",
   "components.VocabExamples.seeMoreLabel": "Load more",
   "components.VocabularyDetails.SeeAlsoText": "See also: ",
   "components.VocabularyDetails.additionalExplanationHeader": "Additional explanation for this word",

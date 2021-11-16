@@ -18,7 +18,7 @@ const ErrorMessageBox = (props) => {
   const intl = useIntl();
 
   return (
-    <Wrapper>
+    <Wrapper simple={props.simple}>
       <Icon
         path={mdiAlert}
         size={2}
@@ -30,11 +30,13 @@ const ErrorMessageBox = (props) => {
 };
 
 ErrorMessageBox.propTypes = {
-  message: PropTypes.string
+  message: PropTypes.string,
+  simple: PropTypes.bool
 };
 
 ErrorMessageBox.defaultProps = {
-  message: null
+  message: null,
+  simple: false
 };
 
 export default ErrorMessageBox;
