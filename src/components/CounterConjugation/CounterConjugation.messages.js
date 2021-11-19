@@ -27,6 +27,8 @@ export default defineMessages({
   fourGroupJNin: 'よ',
   nineGroupJ: 'く',
 
+  oneGroupNichi: 'ついた',
+
   // Tsu
   oneGroupTsu: 'ひと',
   twoGroupTsu: 'ふた',
@@ -40,6 +42,8 @@ export default defineMessages({
 
   // Furigana
   ninSpecialFurigana: 'り',
+  defaultNichiFurigana: 'にち',
+  oneNichiFurigana: 'ち',
   baFurigana: 'ば',
   biFurigana: 'び',
   buFurigana: 'ぶ',

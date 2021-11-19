@@ -21,6 +21,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.so
       ) {
         return (messages.oneGroupKHS)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.oneGroupNichi)?.defaultMessage;
       }
 
       return (messages.oneGroupDefault)?.defaultMessage;

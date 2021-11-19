@@ -9,7 +9,7 @@ import { japaneseFormShape, countersGroupShape } from '@types/vocabularyDetails'
 import CounterConjugation from '@components/CounterConjugation';
 import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
 
-import { shouldBeAdditionalNumber, shouldHaveMain } from './utils';
+import { hasSpecialNumberConjugation, shouldHaveMain } from './utils';
 
 import {
   Table,
@@ -24,17 +24,9 @@ import messages from './CounterConjugationTable.messages';
 const CounterConjugationTable = (props) => {
   const intl = useIntl();
 
-  const numbers = Array.from({ length: 10 }, (_, i) => i + 1);
-
-  const counterConjugation = (number) => (
-    <CounterConjugation
-      vocab={props.vocab}
-      counterGroup={props.counterGroup}
-      japaneseForm={props.japaneseForm}
-      noMain={shouldHaveMain(props.counterGroup, number)}
-      number={number}
-    />
-  );
+  const numbers = Array
+    .from({ length: 10 }, (_, i) => i + 1)
+    .concat(props.additionalNumbers);
 
   return (
     <Table>
@@ -49,26 +41,18 @@ const CounterConjugationTable = (props) => {
           numbers.map((number) => (
             <Tr key={number}>
               <Td>
-                <Number>
+                <Number additionalNumber={hasSpecialNumberConjugation(props.counterGroup, number)}>
                   {number}
                 </Number>
               </Td>
               <Td>
-                {counterConjugation(number)}
-              </Td>
-            </Tr>
-          ))
-        }
-        {
-          props.additionalNumbers.map((number) => (
-            <Tr key={number}>
-              <Td>
-                <Number additionalNumber={shouldBeAdditionalNumber(props.counterGroup)}>
-                  {number}
-                </Number>
-              </Td>
-              <Td>
-                {counterConjugation(number)}
+                <CounterConjugation
+                  vocab={props.vocab}
+                  counterGroup={props.counterGroup}
+                  japaneseForm={props.japaneseForm}
+                  noMain={shouldHaveMain(props.counterGroup, number)}
+                  number={number}
+                />
               </Td>
             </Tr>
           ))

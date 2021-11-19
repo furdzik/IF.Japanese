@@ -117,6 +117,31 @@ export const getFurigana = (number, counterGroup, originalFurigana) => {
       return newFurigana;
     }
 
+    case COUNTERS_GROUPS.nichi: {
+      if (number === NUMBERS.one) {
+        newFurigana.push((messages.oneNichiFurigana)?.defaultMessage);
+      } else if (
+        number !== NUMBERS.two
+        && number !== NUMBERS.three
+        && number !== NUMBERS.four
+        && number !== NUMBERS.five
+        && number !== NUMBERS.six
+        && number !== NUMBERS.seven
+        && number !== NUMBERS.eight
+        && number !== NUMBERS.nine
+        && number !== NUMBERS.ten
+        && number !== NUMBERS.fourteen
+        && number !== NUMBERS.twenty
+        && number !== NUMBERS.twentyFour
+      ) {
+        newFurigana.push((messages.defaultNichiFurigana)?.defaultMessage);
+      } else {
+        newFurigana.push(...originalFurigana);
+      }
+
+      return newFurigana;
+    }
+
     default:
       return originalFurigana;
   }
