@@ -34,6 +34,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.nin
       ) {
         return (messages.twoGroupTsu)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.twoGroupNichi)?.defaultMessage;
       }
 
       return (messages.twoGroupDefault)?.defaultMessage;
@@ -42,6 +44,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     case NUMBERS.three: {
       if (counterGroup === COUNTERS_GROUPS.tsu) {
         return (messages.threeGroupTsu)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.threeGroupNichi)?.defaultMessage;
       }
 
       return (messages.threeGroupDefault)?.defaultMessage;
@@ -61,6 +65,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         return (messages.fourGroupJNin)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.gatsu) {
         return (messages.fourGroupDefaultAlternative)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.fourGroupNichi)?.defaultMessage;
       }
 
       return (messages.fourGroupDefault)?.defaultMessage;
@@ -69,6 +75,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     case NUMBERS.five: {
       if (counterGroup === COUNTERS_GROUPS.tsu) {
         return (messages.fiveGroupTsu)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.fiveGroupNichi)?.defaultMessage;
       }
 
       return (messages.fiveGroupDefault)?.defaultMessage;
@@ -82,6 +90,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.h
       ) {
         return (messages.sixGroupKH)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.sixGroupNichi)?.defaultMessage;
       }
 
       return (messages.sixGroupDefault)?.defaultMessage;
@@ -97,6 +107,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.gatsu
       ) {
         return (messages.sevenGroupDefaultAlternative)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.sevenGroupNichi)?.defaultMessage;
       }
 
       return (messages.sevenGroupDefault)?.defaultMessage;
@@ -113,6 +125,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.so
       ) {
         return (messages.eightGroupKHS)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.eightGroupNichi)?.defaultMessage;
       }
 
       return (messages.eightGroupDefault)?.defaultMessage;
@@ -125,7 +139,9 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         counterGroup === COUNTERS_GROUPS.ji
         || counterGroup === COUNTERS_GROUPS.gatsu
       ) {
-        return (messages.nineGroupJ)?.defaultMessage;
+        return (messages.nineGroupDefaultAlternative)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.nineGroupNichi)?.defaultMessage;
       }
 
       return (messages.nineGroupDefault)?.defaultMessage;
@@ -146,6 +162,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.so
       ) {
         return (messages.tenGroupKHS)?.defaultMessage;
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.tenGroupNichi)?.defaultMessage;
       }
 
       return (messages.tenGroupDefault)?.defaultMessage;
@@ -167,6 +185,11 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     }
 
     case NUMBERS.fourteen: {
+      if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.tenGroupDefault)?.defaultMessage
+          + (messages.fourGroupNichi)?.defaultMessage;
+      }
+
       return (messages.tenGroupDefault)?.defaultMessage
         + (messages.fourGroupDefault)?.defaultMessage;
     }
@@ -182,6 +205,11 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     }
 
     case NUMBERS.seventeen: {
+      if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.tenGroupDefault)?.defaultMessage
+          + (messages.sevenGroupDefaultAlternative)?.defaultMessage;
+      }
+
       return (messages.tenGroupDefault)?.defaultMessage
         + (messages.sevenGroupDefault)?.defaultMessage;
     }
@@ -192,6 +220,11 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     }
 
     case NUMBERS.nineteen: {
+      if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.tenGroupDefault)?.defaultMessage
+          + (messages.nineGroupDefaultAlternative)?.defaultMessage;
+      }
+
       return (messages.tenGroupDefault)?.defaultMessage
         + (messages.nineGroupDefault)?.defaultMessage;
     }
@@ -204,6 +237,8 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
             furigana={(messages.twentyGroupSaiFurigana)?.defaultMessage.split('')}
           />
         );
+      } else if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.twentyGroupNichi)?.defaultMessage;
       }
 
       return (messages.twoGroupDefault)?.defaultMessage
@@ -229,6 +264,12 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     }
 
     case NUMBERS.twentyFour: {
+      if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.twoGroupDefault)?.defaultMessage
+          + (messages.tenGroupDefault)?.defaultMessage
+          + (messages.fourGroupNichi)?.defaultMessage;
+      }
+
       return (messages.twoGroupDefault)?.defaultMessage
         + (messages.tenGroupDefault)?.defaultMessage
         + (messages.fourGroupDefault)?.defaultMessage;
@@ -247,6 +288,12 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     }
 
     case NUMBERS.twentySeven: {
+      if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.twoGroupDefault)?.defaultMessage
+          + (messages.tenGroupDefault)?.defaultMessage
+          + (messages.sevenGroupDefaultAlternative)?.defaultMessage;
+      }
+
       return (messages.twoGroupDefault)?.defaultMessage
         + (messages.tenGroupDefault)?.defaultMessage
         + (messages.sevenGroupDefault)?.defaultMessage;
@@ -259,6 +306,12 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     }
 
     case NUMBERS.twentyNine: {
+      if (counterGroup === COUNTERS_GROUPS.nichi) {
+        return (messages.twoGroupDefault)?.defaultMessage
+          + (messages.tenGroupDefault)?.defaultMessage
+          + (messages.nineGroupDefaultAlternative)?.defaultMessage;
+      }
+
       return (messages.twoGroupDefault)?.defaultMessage
         + (messages.tenGroupDefault)?.defaultMessage
         + (messages.nineGroupDefault)?.defaultMessage;

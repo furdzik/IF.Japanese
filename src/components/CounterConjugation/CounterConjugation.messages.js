@@ -13,6 +13,7 @@ export default defineMessages({
   sevenGroupDefaultAlternative: 'しち',
   eightGroupDefault: 'はち',
   nineGroupDefault: 'きゅう',
+  nineGroupDefaultAlternative: 'く',
   tenGroupDefault: 'じゅう',
   tenGroupDefaultAlternative: 'じっ',
   twentyGroupSaiFurigana: 'はたち',
@@ -23,11 +24,20 @@ export default defineMessages({
   sixGroupKH: 'ろっ',
   eightGroupKHS: 'はっ',
   tenGroupKHS: 'じゅっ',
-
   fourGroupJNin: 'よ',
-  nineGroupJ: 'く',
 
+  // Nichi
   oneGroupNichi: 'ついた',
+  twoGroupNichi: 'ふつ',
+  threeGroupNichi: 'みっ',
+  fourGroupNichi: 'よっ',
+  fiveGroupNichi: 'いつ',
+  sixGroupNichi: 'むい',
+  sevenGroupNichi: 'なの',
+  eightGroupNichi: 'よう',
+  nineGroupNichi: 'ここの',
+  tenGroupNichi: 'とお',
+  twentyGroupNichi: 'はつ',
 
   // Tsu
   oneGroupTsu: 'ひと',
