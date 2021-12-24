@@ -81,7 +81,8 @@ export default function vocabularyDetailsReducer (state = initialState, action) 
           tags: data.details?.tags,
           isCommon: data.details?.is_common,
           isVerb: !!data.verb,
-          jlpt: data.details ? data.details?.jlpt : level
+          jlpt: data.details ? data.details?.jlpt : level,
+          isCounter: !!data.counter
         }),
         verb: data.verb ? {
           ...data.verb
