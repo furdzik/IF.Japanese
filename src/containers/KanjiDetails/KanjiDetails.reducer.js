@@ -47,7 +47,7 @@ export default function kanjiDetailsReducer (state = initialState, action) {
           graphs: details?.kanji?.strokes?.images
         } : null,
         radicals: null,
-        similarKanji: prepareKanjiDetailsData(similarKanji),
+        similarKanji: similarKanji ? prepareKanjiDetailsData(similarKanji) : [],
         status: {
           known: kanji.known,
           inProgress: kanji.inProgress,
@@ -61,12 +61,13 @@ export default function kanjiDetailsReducer (state = initialState, action) {
           jlpt: kanji.level,
           isJoyo: kanji.joyo,
           isJinmeiyo: kanji.jinmeiyo,
-          grade: detailsAlternative.grade,
+          grade: detailsAlternative?.grade,
           strokes: details?.kanji?.strokes?.count
         }),
         problems: kanji?.problems,
         additionalExplanation: kanji?.additionalExplanation,
-        loading: false
+        loading: false,
+        apiError: !detailsAlternative && !details
       };
     }
 
@@ -127,7 +128,12 @@ export const getKanjiDetails = (name) => (dispatch) => {
         similarKanji
       }));
     })
-    .catch((error) => {
-      throw new Error(error);
+    .catch(() => {
+      dispatch(getKanjiDetailsAction({
+        details: null,
+        detailsAlternative: null,
+        kanji,
+        similarKanji: null
+      }));
     });
 };

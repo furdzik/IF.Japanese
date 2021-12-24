@@ -30,7 +30,8 @@ const initialState = {
   additionalInfo: null,
   isRevealed: false,
   selectedFilters: getSelectedFiltersInitialValues(localStorageKeyFlashcards, FILTERS_IDS),
-  error: null
+  error: null,
+  apiError: false
 };
 
 export default function flashcardsReducer (state = initialState, action) {
@@ -43,7 +44,8 @@ export default function flashcardsReducer (state = initialState, action) {
         flashcard,
         additionalInfo,
         flashcardLength: getLength(list),
-        loading: false
+        loading: false,
+        apiError: !flashcard
       };
     }
 
@@ -151,8 +153,12 @@ export const getFlashcard = () => (dispatch, getStore) => {
         }
       });
     })
-    .catch((error) => {
-      throw new Error(error);
+    .catch(() => {
+      dispatch(getFlashcardAction({
+        list,
+        flashcard: null,
+        additionalInfo: randomVocab
+      }));
     });
 };
 

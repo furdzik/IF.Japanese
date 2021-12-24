@@ -42,6 +42,7 @@ const KanjiDetails = (props) => {
       kanji={params.kanji}
       examples={props.examples}
       additionalExplanation={props.additionalExplanation}
+      apiError={props.apiError}
       meaning={props.meaning}
       metadata={props.metadata}
       problems={props.problems}
@@ -59,6 +60,7 @@ KanjiDetails.propTypes = {
   getKanjiDetails: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   additionalExplanation: additionalExplanationShape,
+  apiError: PropTypes.bool,
   examples: examplesShape,
   meaning: PropTypes.string,
   metadata: metadataShape,
@@ -73,6 +75,7 @@ KanjiDetails.propTypes = {
 
 KanjiDetails.defaultProps = {
   additionalExplanation: null,
+  apiError: false,
   examples: null,
   meaning: null,
   metadata: null,

@@ -13,13 +13,15 @@ export const getAntonyms = (antonyms, senses) => {
     newAntonyms.push(antonyms);
   }
 
-  senses.forEach((sensesAntonyms) => {
-    if (sensesAntonyms.antonyms.length > 0) {
-      sensesAntonyms.antonyms.forEach((antonym) => {
-        newAntonyms.push(antonym.split(' ')[0]);
-      });
-    }
-  });
+  if (senses && senses.length) {
+    senses.forEach((sensesAntonyms) => {
+      if (sensesAntonyms.antonyms.length > 0) {
+        sensesAntonyms.antonyms.forEach((antonym) => {
+          newAntonyms.push(antonym.split(' ')[0]);
+        });
+      }
+    });
+  }
 
   return newAntonyms.reduce(reducedAntonyms, []);
 };

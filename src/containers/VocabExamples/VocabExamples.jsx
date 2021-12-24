@@ -18,6 +18,7 @@ const VocabExamples = (props) => {
   return !props.loading ? (
     <VocabExamplesComponent
       getVocabExamples={props.getVocabExamples}
+      apiError={props.apiError}
       examples={props.examples}
       vocabExamples={props.vocabExamples}
       showLoadMoreButton={props.showLoadMoreButton}
@@ -28,6 +29,7 @@ const VocabExamples = (props) => {
 
 VocabExamples.propTypes = {
   getVocabExamples: PropTypes.func.isRequired,
+  apiError: PropTypes.bool,
   examples: simpleExamplesShape,
   loading: PropTypes.bool,
   showLoadMoreButton: PropTypes.bool,
@@ -36,6 +38,7 @@ VocabExamples.propTypes = {
 };
 
 VocabExamples.defaultProps = {
+  apiError: false,
   examples: null,
   loading: false,
   showLoadMoreButton: false,

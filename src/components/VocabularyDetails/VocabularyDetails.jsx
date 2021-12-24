@@ -252,6 +252,7 @@ const VocabularyDetails = (props) => {
           )
         } : null
       ]}
+      apiError={props.apiError}
     >
       {
         verbConjugationOpen ? (
@@ -389,6 +390,7 @@ VocabularyDetails.propTypes = {
   translations: translationsShape.isRequired,
   additionalExplanation: additionalExplanationShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
+  apiError: PropTypes.bool,
   counter: counterShape,
   examples: PropTypes.arrayOf(PropTypes.string),
   japaneseForm: japaneseFormShape,
@@ -402,6 +404,7 @@ VocabularyDetails.propTypes = {
 VocabularyDetails.defaultProps = {
   additionalExplanation: null,
   antonyms: null,
+  apiError: false,
   counter: null,
   examples: null,
   japaneseForm: null,

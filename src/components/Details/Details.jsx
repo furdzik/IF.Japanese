@@ -9,6 +9,7 @@ import { sectionTypes } from '@constants';
 import { japaneseFormShape } from '@types/vocabularyDetails';
 
 import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
+import ErrorMessageBox from '@components/ui/ErrorMessageBox';
 import Tag from '@components/ui/Tag';
 
 import Heading from '@components/Heading';
@@ -63,6 +64,11 @@ const Details = (props) => {
           ) : null
         }
       </WordHeader>
+      {
+        props.apiError ? (
+          <ErrorMessageBox />
+        ) : null
+      }
       <Content>
         <TagsWrapper>
           {
@@ -144,6 +150,7 @@ Details.propTypes = {
   mainSection: PropTypes.node.isRequired,
   mainSectionHeader: PropTypes.string.isRequired,
   additionalBox: PropTypes.node,
+  apiError: PropTypes.bool,
   children: PropTypes.node,
   inProgress: PropTypes.bool,
   japaneseForm: japaneseFormShape,
@@ -164,6 +171,7 @@ Details.propTypes = {
 
 Details.defaultProps = {
   additionalBox: null,
+  apiError: false,
   children: null,
   inProgress: null,
   japaneseForm: null,

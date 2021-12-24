@@ -9,6 +9,7 @@ import { flashcardShape, additionalInfoShape } from '@types/flashcard';
 import defaultMessages from '@lang/defaultMessages/default.messages';
 
 import Button from '@components/ui/Button';
+import ErrorMessageBox from '@components/ui/ErrorMessageBox';
 import Switcher from '@components/ui/Switcher';
 
 import {
@@ -57,7 +58,12 @@ const Flashcards = (props) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper hasApiError={props.apiError}>
+      {
+        props.apiError ? (
+          <ErrorMessageBox message={intl.formatMessage(messages.apiErrorMsg)} />
+        ) : null
+      }
       <Title>{intl.formatMessage(messages.title)}</Title>
       {
         props.error ? (
@@ -65,7 +71,7 @@ const Flashcards = (props) => {
         ) : null
       }
       {
-        !props.error ? (
+        !props.error && !props.apiError ? (
           <React.Fragment>
             <SwitcherWrapper>
               <SwitcherLabel>{intl.formatMessage(messages.switcherLabel)}</SwitcherLabel>
@@ -133,6 +139,7 @@ Flashcards.propTypes = {
   getFlashcard: PropTypes.func.isRequired,
   setReveal: PropTypes.func.isRequired,
   additionalInfo: additionalInfoShape,
+  apiError: PropTypes.bool,
   error: PropTypes.string,
   flashcard: flashcardShape,
   isRevealed: PropTypes.bool,
@@ -141,6 +148,7 @@ Flashcards.propTypes = {
 
 Flashcards.defaultProps = {
   additionalInfo: null,
+  apiError: false,
   error: null,
   flashcard: null,
   isRevealed: false,

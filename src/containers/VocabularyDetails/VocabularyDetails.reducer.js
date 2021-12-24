@@ -1,4 +1,3 @@
-import vocabJson from '@data/vocabulary.json';
 import vocabNotInApiJson from '@data/vocabulary-not-in-api.json';
 import kanjiJson from '@data/kanji.json';
 
@@ -11,12 +10,11 @@ import { getTags, prepareKanjiDetailsData } from '@utils/common-details';
 import { getKanji, getFurigana } from '@utils/kanji';
 
 import {
-  PROPER_NAME_TYPE,
-  getProperName,
   getTranslations,
   getAntonyms,
   getOtherForms,
-  getKanjiParts
+  getKanjiParts,
+  getVocabFromJson
 } from './utils';
 
 const actionTypes = {
@@ -33,6 +31,7 @@ const initialState = {
   translations: [],
   additionalExplanation: null,
   antonyms: null,
+  apiError: false,
   counter: null,
   examples: null,
   kanjiParts: null,
@@ -48,45 +47,47 @@ export default function vocabularyDetailsReducer (state = initialState, action) 
     case actionTypes.GET_VOCAB_DETAILS: {
       const data = action.payload;
 
+      const level = data.level ? [data.level.toString()] : null;
+
       return {
         ...state,
         vocab: data.vocab,
         meaning: data.meaning
           ? data.meaning
-          : data.details.japanese[0].reading,
+          : data.details?.japanese[0]?.reading,
         metadata: {
-          slug: data.details.slug
+          slug: data.details?.slug
         },
         status: {
           known: data.known,
           nowLearning: data.nowLearning,
           inProgress: data.inProgress
         },
-        translations: getTranslations(data.details.senses),
+        translations: data.details ? getTranslations(data.details?.senses) : [],
         additionalExplanation: data.additionalExplanation,
-        antonyms: getAntonyms(data.antonyms, data.details.senses),
+        antonyms: data.details ? getAntonyms(data.antonyms, data.details?.senses) : [],
         counter: data.counter,
         examples: data.examples,
-        japaneseForm: data.details.japanese[0].reading !== data.vocab ? {
+        japaneseForm: data.details && data.details?.japanese[0]?.reading !== data.vocab ? {
           kanji: getKanji(data.vocab),
           furigana: getFurigana(
-            data.vocab, data.details.japanese[0].reading
+            data.vocab, data.details?.japanese[0]?.reading
           )
         } : null,
-        kanjiParts: prepareKanjiDetailsData(data.kanjiDetails),
-        otherForms: getOtherForms(data.details.japanese),
+        kanjiParts: data.kanjiDetails ? prepareKanjiDetailsData(data.kanjiDetails) : null,
+        otherForms: data.details ? getOtherForms(data.details?.japanese) : [],
         problems: data.problems,
         tags: getTags({
-          tags: data.details.tags,
-          isCommon: data.details.is_common,
+          tags: data.details?.tags,
+          isCommon: data.details?.is_common,
           isVerb: !!data.verb,
-          jlpt: data.details.jlpt,
-          isCounter: !!data.counter
+          jlpt: data.details ? data.details?.jlpt : level
         }),
         verb: data.verb ? {
           ...data.verb
         } : null,
-        loading: false
+        loading: false,
+        apiError: !data.details
       };
     }
 
@@ -113,11 +114,7 @@ const getVocabularyDetailsInitAction = () => ({
 });
 
 const getMeaning = (response, name, url) => (dispatch) => {
-  const vocab = vocabJson.filter((el) => (
-    el.meaning && el.meaning === getProperName(url, PROPER_NAME_TYPE.MEANING)
-  ) || (
-    !el.meaning && el.vocab === getProperName(url, PROPER_NAME_TYPE.KANJI)
-  ))[0];
+  const vocab = getVocabFromJson(url);
 
   const kanjiParts = getKanjiParts(vocab.vocab);
 
@@ -175,7 +172,14 @@ export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => 
         dispatch(getMeaning(response.data[0], name, url));
       }
     })
-    .catch((error) => {
-      throw new Error(error);
+    .catch(() => {
+      const vocab = getVocabFromJson(url);
+
+      dispatch(getVocabularyDetailsAction({
+        name,
+        ...vocab,
+        kanjiDetails: null,
+        details: null
+      }));
     });
 };

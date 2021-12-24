@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamples';
 
 import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
+import ErrorMessageBox from '@components/ui/ErrorMessageBox';
 import Tag from '@components/ui/Tag';
 
 import {
@@ -29,7 +30,7 @@ const VocabExamples = (props) => {
   return (
     <React.Fragment>
       {
-        props.vocabExamples.length ? (
+        !props.apiError && props.vocabExamples.length ? (
           <ListWrapper>
             <List>
               {
@@ -120,12 +121,18 @@ const VocabExamples = (props) => {
           </StyledButton>
         ) : null
       }
+      {
+        props.apiError ? (
+          <ErrorMessageBox message={intl.formatMessage(messages.apiErrorMsg)} simple />
+        ) : null
+      }
     </React.Fragment>
   );
 };
 
 VocabExamples.propTypes = {
   getVocabExamples: PropTypes.func.isRequired,
+  apiError: PropTypes.bool,
   examples: simpleExamplesShape,
   showLoadMoreButton: PropTypes.bool,
   showMoreLoading: PropTypes.bool,
@@ -133,6 +140,7 @@ VocabExamples.propTypes = {
 };
 
 VocabExamples.defaultProps = {
+  apiError: false,
   examples: [],
   showLoadMoreButton: false,
   showMoreLoading: false,
