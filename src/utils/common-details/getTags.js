@@ -19,18 +19,11 @@ const reducedJPLT = (prev, current) => {
 export const getTags = (
   {
     tags, isCommon, isJoyo, isJinmeiyo, isVerb, jlpt, isGrammar,
-    grade, strokes, levelGroup, grammarOrigin
+    grade, strokes, levelGroup, grammarOrigin, isCounter
   },
   shortMsg = false
 ) => {
   const newTags = [];
-
-  if (isVerb) {
-    newTags.push({
-      tagType: tagTypes.IS_VERB,
-      label: (messages.conjugationText)?.defaultMessage
-    });
-  }
 
   if (isCommon && !isGrammar) {
     newTags.push({
@@ -61,6 +54,20 @@ export const getTags = (
       label: shortMsg
         ? (messages.jinmeiyoShort)?.defaultMessage
         : (messages.jinmeiyo)?.defaultMessage
+    });
+  }
+
+  if (isVerb) {
+    newTags.push({
+      tagType: tagTypes.IS_VERB,
+      label: (messages.conjugationText)?.defaultMessage
+    });
+  }
+
+  if (isCounter) {
+    newTags.push({
+      tagType: tagTypes.COUNTER,
+      label: (messages.counter)?.defaultMessage
     });
   }
 

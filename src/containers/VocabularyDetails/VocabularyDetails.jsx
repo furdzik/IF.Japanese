@@ -15,7 +15,8 @@ import {
   japaneseFormShape,
   translationsShape,
   kanjiPartsShape,
-  otherFormsShape
+  otherFormsShape,
+  counterShape
 } from '@types/vocabularyDetails';
 
 import { getVocabSpecificReading } from '@utils/vocabulary';
@@ -41,18 +42,19 @@ const VocabularyDetails = (props) => {
 
   return !props.loading ? (
     <VocabularyDetailsComponent
+      name={name}
       meaning={props.meaning}
       metadata={props.metadata}
-      name={name}
       status={props.status}
       translations={props.translations}
       additionalExplanation={props.additionalExplanation}
-      problems={props.problems}
       antonyms={props.antonyms}
+      counter={props.counter}
       examples={props.examples}
       japaneseForm={props.japaneseForm}
       kanjiParts={props.kanjiParts}
       otherForms={props.otherForms}
+      problems={props.problems}
       tags={props.tags}
       verb={props.verb}
       apiError={props.apiError}
@@ -70,6 +72,7 @@ VocabularyDetails.propTypes = {
   additionalExplanation: additionalExplanationShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   apiError: PropTypes.bool,
+  counter: counterShape,
   examples: PropTypes.arrayOf(PropTypes.string),
   japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
@@ -83,6 +86,7 @@ VocabularyDetails.defaultProps = {
   additionalExplanation: null,
   antonyms: null,
   apiError: false,
+  counter: null,
   examples: null,
   japaneseForm: null,
   kanjiParts: null,

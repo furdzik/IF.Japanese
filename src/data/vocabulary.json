@@ -12,6 +12,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "h"
+    },
     "pitch": "",
     "level": 5
   },
@@ -156,6 +159,7 @@
   },
   {
     "vocab": "月",
+    "meaning": "つき",
     "known": true,
     "inProgress": false,
     "nowLearning": false,
@@ -393,6 +397,10 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "sai",
+      "additionalNumbers": [20]
+    },
     "pitch": "",
     "level": 0
   },
@@ -1007,6 +1015,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "default"
+    },
     "pitch": "",
     "level": 3
   },
@@ -1127,6 +1138,16 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "f",
+      "additionalNumbers": [30],
+      "question": {
+        "japaneseForm": {
+          "kanji": ["何", "分"],
+          "furigana": ["なん", "ぷん"]
+        }
+      }
+    },
     "pitch": "",
     "level": 1
   },
@@ -1262,6 +1283,16 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "nichi",
+      "additionalNumbers": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+      "question": {
+        "japaneseForm": {
+          "kanji": ["何", "日"],
+          "furigana": ["なん", "にち"]
+        }
+      }
+    },
     "pitch": "",
     "level": 3
   },
@@ -2905,6 +2936,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "k"
+    },
     "pitch": "",
     "level": 1
   },
@@ -2913,6 +2947,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "h"
+    },
     "pitch": "",
     "level": 5
   },
@@ -3799,6 +3836,7 @@
   },
   {
     "vocab": "年",
+    "meaning": "とし",
     "known": true,
     "inProgress": false,
     "nowLearning": false,
@@ -4233,6 +4271,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "k"
+    },
     "pitch": "",
     "level": 3
   },
@@ -5470,6 +5511,7 @@
   },
   {
     "vocab": "時",
+    "meaning": "とき",
     "known": true,
     "inProgress": false,
     "nowLearning": false,
@@ -5901,6 +5943,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "s"
+    },
     "pitch": "",
     "level": 1
   },
@@ -13851,6 +13896,9 @@
     "known": false,
     "inProgress": true,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "default"
+    },
     "pitch": "",
     "level": 1
   },
@@ -14211,6 +14259,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "ji"
+    },
     "pitch": "",
     "level": 5
   },
@@ -14330,6 +14381,7 @@
   },
   {
     "vocab": "足",
+    "meaning": "あし",
     "known": true,
     "inProgress": false,
     "nowLearning": false,
@@ -16535,6 +16587,16 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "nichi",
+      "additionalNumbers": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+      "question": {
+        "japaneseForm": {
+          "kanji": ["何", "日"],
+          "furigana": ["なん", "にち"]
+        }
+      }
+    },
     "pitch": "",
     "level": 0
   },
@@ -24453,6 +24515,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "s"
+    },
     "pitch": "",
     "level": 3
   },
@@ -24691,6 +24756,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "nin"
+    },
     "pitch": "",
     "level": 0
   },
@@ -25907,6 +25975,18 @@
     "level": 3
   },
   {
+    "vocab": "足",
+    "meaning": "そく",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "so"
+    },
+    "pitch": "",
+    "level": 0
+  },
+  {
     "vocab": "快適",
     "known": false,
     "inProgress": true,
@@ -26804,6 +26884,7 @@
   },
   {
     "vocab": "軒",
+    "meaning": "のき",
     "known": false,
     "inProgress": false,
     "nowLearning": false,
@@ -27938,6 +28019,18 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "時",
+    "meaning": "じ",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "ji"
+    },
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "地",
@@ -30317,6 +30410,9 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "default"
+    },
     "pitch": "",
     "level": 3
   },
@@ -32947,6 +33043,18 @@
     "nowLearning": false,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "年",
+    "meaning": "ねん",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "nen"
+    },
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "灰色",
@@ -41759,6 +41867,18 @@
     "level": 2
   },
   {
+    "vocab": "軒",
+    "meaning": "けん",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "ke"
+    },
+    "pitch": "",
+    "level": 3
+  },
+  {
     "vocab": "白髪",
     "known": false,
     "inProgress": false,
@@ -49145,8 +49265,11 @@
   {
     "vocab": "匹",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "h"
+    },
     "pitch": "",
     "level": 1
   },
@@ -49811,8 +49934,75 @@
     "known": false,
     "inProgress": false,
     "nowLearning": true,
-    "classifier": true,
+    "counter": {
+      "counterGroup": "k"
+    },
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "箇",
+    "meaning": "つ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "counter": {
+      "reading": "つ",
+      "counterGroup": "tsu",
+      "question": {
+        "japaneseForm": {
+          "kanji": ["幾", "つ"],
+          "furigana": ["いく", " "]
+        }
+      }
+    },
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "杯",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "h"
+    },
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "個",
+    "known": false,
+    "inProgress": true,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "k"
+    },
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "着",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "s"
+    },
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "月",
+    "meaning": "がつ",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "counter": {
+      "counterGroup": "gatsu",
+      "additionalNumbers": [11, 12]
+    },
+    "pitch": "",
+    "level": 5
   }
 ]

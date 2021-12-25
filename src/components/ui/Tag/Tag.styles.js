@@ -39,6 +39,10 @@ const Wrapper = styled.div`
     background: ${props.theme.colors.lightBlue};
     color: ${props.theme.colors.white};
   `};
+  ${(props) => props.tagType === tagTypes.COUNTER && css`
+    background: ${props.theme.colors.neoDarkPink};
+    color: ${props.theme.colors.white};
+  `};
 
   ${breakpointMixin.landscapePhone(css`
     margin-right: 2rem;

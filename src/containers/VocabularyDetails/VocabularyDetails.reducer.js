@@ -1,4 +1,4 @@
-
+import vocabNotInApiJson from '@data/vocabulary-not-in-api.json';
 import kanjiJson from '@data/kanji.json';
 
 import { fetchJisho, fetchKanjiAlternative } from '@api';
@@ -32,6 +32,7 @@ const initialState = {
   additionalExplanation: null,
   antonyms: null,
   apiError: false,
+  counter: null,
   examples: null,
   kanjiParts: null,
   otherForms: null,
@@ -53,34 +54,36 @@ export default function vocabularyDetailsReducer (state = initialState, action) 
         vocab: data.vocab,
         meaning: data.meaning
           ? data.meaning
-          : data.details?.japanese[0]?.reading || '',
+          : data.details?.japanese[0]?.reading,
+        metadata: {
+          slug: data.details?.slug
+        },
+        status: {
+          known: data.known,
+          nowLearning: data.nowLearning,
+          inProgress: data.inProgress
+        },
+        translations: data.details ? getTranslations(data.details?.senses) : [],
+        additionalExplanation: data.additionalExplanation,
+        antonyms: data.details ? getAntonyms(data.antonyms, data.details?.senses) : [],
+        counter: data.counter,
+        examples: data.examples,
         japaneseForm: data.details && data.details?.japanese[0]?.reading !== data.vocab ? {
           kanji: getKanji(data.vocab),
           furigana: getFurigana(
             data.vocab, data.details?.japanese[0]?.reading
           )
         } : null,
-        status: {
-          known: data.known,
-          nowLearning: data.nowLearning,
-          inProgress: data.inProgress
-        },
-        metadata: {
-          slug: data.details?.slug
-        },
+        kanjiParts: data.kanjiDetails ? prepareKanjiDetailsData(data.kanjiDetails) : null,
+        otherForms: data.details ? getOtherForms(data.details?.japanese) : [],
+        problems: data.problems,
         tags: getTags({
           tags: data.details?.tags,
           isCommon: data.details?.is_common,
           isVerb: !!data.verb,
-          jlpt: data.details ? data.details?.jlpt : level
+          jlpt: data.details ? data.details?.jlpt : level,
+          isCounter: !!data.counter
         }),
-        translations: data.details ? getTranslations(data.details?.senses) : [],
-        antonyms: data.details ? getAntonyms(data.antonyms, data.details?.senses) : [],
-        otherForms: data.details ? getOtherForms(data.details?.japanese) : [],
-        additionalExplanation: data.additionalExplanation,
-        problems: data.problems,
-        examples: data.examples,
-        kanjiParts: data.kanjiDetails ? prepareKanjiDetailsData(data.kanjiDetails) : null,
         verb: data.verb ? {
           ...data.verb
         } : null,
@@ -150,11 +153,22 @@ export const getVocabularyDetails = (name, url, vocabTrueName) => (dispatch) => 
   fetchJisho(url || name)
     .then((response) => {
       if (vocabTrueName) {
+        let hasApiMeaning = false;
+
         response.data.forEach((kanji) => {
           if (isCorrectVocabularyMeaning(kanji.japanese, name, kanjiMeaning)) {
+            hasApiMeaning = true;
             dispatch(getMeaning(kanji, name, url));
           }
         });
+
+        if (!hasApiMeaning) {
+          const dataFromJson = vocabNotInApiJson.filter(
+            (el) => el.vocab === vocabTrueName && kanjiMeaning === el.meaning
+          );
+
+          dispatch(getMeaning(...dataFromJson, name, url));
+        }
       } else {
         dispatch(getMeaning(response.data[0], name, url));
       }

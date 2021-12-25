@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Link } from 'react-router-dom';
 
@@ -18,7 +19,8 @@ import {
   japaneseFormShape,
   translationsShape,
   kanjiPartsShape,
-  otherFormsShape
+  otherFormsShape,
+  counterShape
 } from '@types/vocabularyDetails';
 
 import Modal from '@components/ui/Modal';
@@ -31,6 +33,7 @@ import ProblemsBox from '@components/ProblemsBox';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import SubHeading from '@components/SubHeading';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
+import CounterConjugationTable from '@components/CounterConjugationTable';
 
 import conjugationMessages from '@lang/defaultMessages/conjugation.messages';
 
@@ -44,31 +47,41 @@ import {
   AntonymsBox,
   AntonymsLink,
   ExamplesWrapper,
-  OtherFormsWrapper
+  OtherFormsWrapper,
+  ConjugationHeader
 } from './VocabularyDetails.styles.js';
 import messages from './VocabularyDetails.messages';
 
 const VocabularyDetails = (props) => {
   const intl = useIntl();
-  const [conjugationOpen, setConjugationOpen] = useState(false);
+  const [verbConjugationOpen, setVerbConjugationOpen] = useState(false);
+  const [counterConjugationOpen, setCounterConjugationOpen] = useState(false);
 
   const getTags = () => {
     const tags = [];
 
     if (props.tags) {
-      props.tags.forEach((el, index) => {
+      props.tags.forEach((el) => {
         if (el.tagType === tagTypes.IS_VERB) {
           tags.push(
-            // eslint-disable-next-line react/no-array-index-key
-            <Tag tagType={el.tagType} key={index}>
-              <ConjugationLink type="button" onClick={() => setConjugationOpen(true)}>
+            <Tag tagType={el.tagType} key={uuidv4()}>
+              <ConjugationLink type="button" onClick={() => setVerbConjugationOpen(true)}>
+                {el.label}
+              </ConjugationLink>
+            </Tag>
+          );
+        } else if (el.tagType === tagTypes.COUNTER) {
+          tags.push(
+            <Tag tagType={el.tagType} key={uuidv4()}>
+              <ConjugationLink type="button" onClick={() => setCounterConjugationOpen(true)}>
                 {el.label}
               </ConjugationLink>
             </Tag>
           );
         } else {
-          // eslint-disable-next-line react/no-array-index-key
-          tags.push(<Tag tagType={el.tagType} key={index}>{el.label}</Tag>);
+          tags.push(
+            <Tag tagType={el.tagType} key={uuidv4()}>{el.label}</Tag>
+          );
         }
       });
     }
@@ -242,14 +255,17 @@ const VocabularyDetails = (props) => {
       apiError={props.apiError}
     >
       {
-        conjugationOpen ? (
+        verbConjugationOpen ? (
           <Modal
             header={(
               <React.Fragment>
-                <b>{props.name}</b> {intl.formatMessage(messages.conjugationText)}
+                <b>{props.name}</b>
+                <ConjugationHeader>
+                  {intl.formatMessage(messages.verbConjugationText)}
+                </ConjugationHeader>
               </React.Fragment>
             )}
-            onClose={() => setConjugationOpen(false)}
+            onClose={() => setVerbConjugationOpen(false)}
           >
             <VerbConjugationGroup
               showLabel
@@ -294,7 +310,7 @@ const VocabularyDetails = (props) => {
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.IKOU_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${grammarTypes.MEIREI_FORM}Label`])}
               verb={props.verb}
               grammar={[grammarTypes.MEIREI_FORM]}
               noPast
@@ -339,6 +355,29 @@ const VocabularyDetails = (props) => {
           </Modal>
         ) : null
       }
+      {
+        counterConjugationOpen ? (
+          <Modal
+            header={(
+              <React.Fragment>
+                <b>~{props.name}</b>
+                <ConjugationHeader>
+                  {intl.formatMessage(messages.counterConjugationText)}
+                </ConjugationHeader>
+              </React.Fragment>
+            )}
+            onClose={() => setCounterConjugationOpen(false)}
+          >
+            <CounterConjugationTable
+              vocab={props.counter?.reading ? props.counter?.reading : props.name}
+              japaneseForm={props.japaneseForm}
+              counterGroup={props.counter?.counterGroup}
+              additionalNumbers={props.counter?.additionalNumbers}
+              question={props.counter?.question}
+            />
+          </Modal>
+        ) : null
+      }
     </Details>
   );
 };
@@ -352,6 +391,7 @@ VocabularyDetails.propTypes = {
   additionalExplanation: additionalExplanationShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   apiError: PropTypes.bool,
+  counter: counterShape,
   examples: PropTypes.arrayOf(PropTypes.string),
   japaneseForm: japaneseFormShape,
   kanjiParts: kanjiPartsShape,
@@ -365,6 +405,7 @@ VocabularyDetails.defaultProps = {
   additionalExplanation: null,
   antonyms: null,
   apiError: false,
+  counter: null,
   examples: null,
   japaneseForm: null,
   kanjiParts: null,

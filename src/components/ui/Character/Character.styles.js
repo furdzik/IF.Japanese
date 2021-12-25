@@ -33,7 +33,7 @@ const CharacterWrapper = styled.div`
 
     ${props.type === characterType.FURIGANA && css`
       margin-bottom: -.5rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: ${props.theme.typography.fontWeight.regular};
     `};
   `};

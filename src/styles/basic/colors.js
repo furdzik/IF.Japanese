@@ -12,6 +12,7 @@ export const colors = {
   yellow: '#ffd400',
   lightRed: '#ffe6e6',
   orange: '#ff4800',
+  neoDarkPink: '#CD2ACF',
   neonPink: '#fa24e9',
   violet: '#8d08b5',
   lightViolet: '#8350c7',

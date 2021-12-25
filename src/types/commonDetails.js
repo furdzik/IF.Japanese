@@ -11,7 +11,8 @@ export const tagTypeShape = PropTypes.oneOf([
   tagTypes.OTHER,
   tagTypes.GRADE,
   tagTypes.LEVEL_GROUP,
-  tagTypes.GRAMMAR_ORIGIN
+  tagTypes.GRAMMAR_ORIGIN,
+  tagTypes.COUNTER
 ]);
 
 export const additionalExplanationShape = PropTypes.arrayOf(PropTypes.string);

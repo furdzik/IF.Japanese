@@ -1,0 +1,41 @@
+[
+  {
+    "vocab": "月",
+    "meaning": "がつ",
+
+    "slug": null,
+    "is_common": true,
+    "tags": [],
+    "jlpt": [
+      "jlpt-n5"
+    ],
+    "japanese": [
+      {
+        "word": "月",
+        "reading": "がつ"
+      }
+    ],
+    "senses": [
+      {
+        "english_definitions": [
+          "Counter for month"
+        ],
+        "parts_of_speech": [
+          "Counter"
+        ],
+        "links": [],
+        "tags": [],
+        "restrictions": [],
+        "see_also": [],
+        "antonyms": [],
+        "source": [],
+        "info": []
+      }
+    ],
+    "attribution": {
+      "jmdict": false,
+      "jmnedict": false,
+      "dbpedia": false
+    }
+  }
+]

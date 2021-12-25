@@ -36,12 +36,14 @@ const TileWrapper = styled.div`
 `;
 
 const StyledTile = styled(Tile)`
-  margin: 0 2rem 0 0;
+  && {
+    margin: 0 2rem 0 0;
 
-  ${(props) => props.isWideElement && css`
-    margin-right: 0;
-    margin-bottom: 1rem;
-  `};
+    ${(props) => props.isWideElement && css`
+      margin-right: 0;
+      margin-bottom: 1rem;
+    `};
+  }
 `;
 
 const MeaningWrapper = styled.div`

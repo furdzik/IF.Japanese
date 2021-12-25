@@ -89,6 +89,15 @@ const GlobalStyles = css`
       cursor: pointer;
     }
   }
+  table {
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  tr, th, td {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export {

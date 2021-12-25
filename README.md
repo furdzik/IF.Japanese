@@ -17,9 +17,19 @@ This repository presents frontend application for my **Japanese APP**
     "known": false,
     "inProgress": true,
     "nowLearning": false,
+    "counter": {
+      "reading": "つ",
+      "counterGroup": "tsu",
+      "additionalNumbers": [11, 12],
+      "question": {
+        "japaneseForm": {
+          "kanji": ["幾", "つ"],
+          "furigana": ["いく", "つ"]
+        }
+      }
+    },
     "pitch": "",
     "antonyms": "入る",
-    "classifier": true,
     "level": 0,
     "examples": [
         "同じタイミングで言ってみました。"
@@ -47,6 +57,8 @@ This repository presents frontend application for my **Japanese APP**
 
 ### LEGEND
 
+If word is not in Jisho API then in `vocabulary-not-in-api.json` add missing data (schema is the same as Jisho API). See 月 ('がつ' meaning).
+
 #### General
 
 - **vocab** `required` - vocab name written in kanji
@@ -56,7 +68,7 @@ This repository presents frontend application for my **Japanese APP**
 - **nowLearning** `required` - (see below)
 - **pitch** `required` - name of used pitch accent to pronounce it
 - **antonyms** - if API don't hase `antonyms` for this word use this option instead
-- **classifier** - if word is a `classifier` set to true
+- **counter** - if word is a `counter` add `counterGroup` (see below)
 - **level** `required` - JLPT level
 - **examples** - array od examples
 - **additionalExplanation** - array of additional explanation for this word
@@ -94,6 +106,40 @@ This repository presents frontend application for my **Japanese APP**
   - intransitive
   - transitive
   - other (when none from above)
+
+#### Counter
+
+- **reading** - only if counter has a special reading
+- **additionalNumbers** - only if counter has exceptions in other numbers (e.g. 歳 has exception in 20)
+- **question** - only if question od counter is different from default `何~`. Add `japaneseFormShape` schema (see e.g.: 個)
+- **counterGroup** `required` - group of counter. Possible options:
+  - `default`
+  - `k`
+  - `s`
+  - `h`
+  - `f`
+
+  // special
+  - `ji`
+  - `nichi`
+  - `nin`
+  - `nen`
+  -`tsu`
+  -`sai`
+  -`ke`
+  -`so`
+  - `gatsu`
+
+  // not yet
+  - `t`
+  - `p`
+  - `r`
+  - `w`
+  - `maki` (間, 巻)
+  - `sao`
+  - `tsuu`
+  - `tsui`
+  - `zen`
   
 ---
 
@@ -111,6 +157,7 @@ This repository presents frontend application for my **Japanese APP**
 - Add alias to your `hosts` file: `127.0.0.1 if.japanese.local`
 - `cd if.japanese`
 - Install dependencies `npm install`
+- Run `npm run prepare` to init husky configuration
 
 ### Running
 
