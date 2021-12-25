@@ -2,6 +2,28 @@ import { COUNTERS_GROUPS, NUMBERS } from '@constants';
 
 export const hasSpecialNumberConjugation = (counterGroup, number) => (
   (
+    (
+      counterGroup === COUNTERS_GROUPS.s
+      || counterGroup === COUNTERS_GROUPS.so
+    ) && (
+      number === NUMBERS.one
+      || number === NUMBERS.eight
+      || number === NUMBERS.ten
+    )
+  )
+  || (
+    (
+      counterGroup === COUNTERS_GROUPS.k
+      || counterGroup === COUNTERS_GROUPS.h
+      || counterGroup === COUNTERS_GROUPS.f
+    ) && (
+      number === NUMBERS.one
+      || number === NUMBERS.six
+      || number === NUMBERS.eight
+      || number === NUMBERS.ten
+    )
+  )
+  || (
     counterGroup === COUNTERS_GROUPS.gatsu && (
       number === NUMBERS.four
       || number === NUMBERS.seven
@@ -44,7 +66,10 @@ export const hasSpecialNumberConjugation = (counterGroup, number) => (
   )
   || (
     counterGroup === COUNTERS_GROUPS.sai && (
-      number === NUMBERS.twenty
+      number === NUMBERS.one
+      || number === NUMBERS.eight
+      || number === NUMBERS.ten
+      || number === NUMBERS.twenty
     )
   )
   || (

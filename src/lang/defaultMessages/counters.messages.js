@@ -56,6 +56,7 @@ export default defineMessages({
   // Furigana
   ninSpecialFurigana: 'り',
   defaultNichiFurigana: 'にち',
+  NichiKaFurigana: 'か',
   oneNichiFurigana: 'ち',
   baFurigana: 'ば',
   biFurigana: 'び',

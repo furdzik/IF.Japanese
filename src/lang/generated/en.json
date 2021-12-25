@@ -258,6 +258,7 @@
   "containers.Flashcards.errorNoResults": "Nothing to show, change filters",
   "containers.Grammar.toRepeat": "復習したほうがいい",
   "containers.Kanji.joyo": "常用漢字表",
+  "lang.defaultMessages.NichiKaFurigana": "か",
   "lang.defaultMessages.TryN1": "TRY日本語能力試験N5",
   "lang.defaultMessages.TryN1Short": "TRY N5",
   "lang.defaultMessages.TryN2": "TRY日本語能力試験N4",

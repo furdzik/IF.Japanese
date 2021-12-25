@@ -158,7 +158,7 @@ export const getFurigana = (number, counterGroup, originalFurigana) => {
       ) {
         newFurigana.push((messages.defaultNichiFurigana)?.defaultMessage);
       } else {
-        newFurigana.push(...originalFurigana);
+        newFurigana.push((messages.NichiKaFurigana)?.defaultMessage);
       }
 
       return newFurigana;

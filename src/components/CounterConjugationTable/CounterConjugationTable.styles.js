@@ -26,6 +26,7 @@ const Th = styled.th`
   ${(props) => tdAndThCommonStyles(props)};
   position: sticky;
   top: 0;
+  z-index: 1;
   border-bottom: .3rem solid ${(props) => props.theme.mainColors.primary};
   background: white;
   text-align: left;
@@ -48,7 +49,9 @@ const Tr = styled.tr`
 `;
 
 const Number = styled.span`
+  position: relative;
   display: inline-block;
+  overflow: hidden;
   width: 4rem;
   padding: .3rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
@@ -62,6 +65,24 @@ const Number = styled.span`
   ${(props) => props.specialConjugation && css`
     background: ${props.theme.mainColors.tartary};
   `};
+
+  ${(props) => props.specialPronunciation && props.specialConjugation && css`
+    background: ${props.theme.mainColors.tartary};
+    &::before {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      content: '';
+      border-color: transparent #a2dfef;
+      border-style: solid;
+      border-width: 3.3rem 4rem 0 0;
+    }
+  `};
+`;
+
+const NumberInner = styled.div`
+  position: relative;
+  text-shadow: 0 0 4px ${(props) => props.theme.colors.white};
 `;
 
 const QuestionWrapper = styled.div`
@@ -74,5 +95,6 @@ export {
   Th,
   Td,
   Number,
+  NumberInner,
   QuestionWrapper
 };

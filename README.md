@@ -157,6 +157,7 @@ If word is not in Jisho API then in `vocabulary-not-in-api.json` add missing dat
 - Add alias to your `hosts` file: `127.0.0.1 if.japanese.local`
 - `cd if.japanese`
 - Install dependencies `npm install`
+- Run `npm run prepare` to init husky configuration
 
 ### Running
 

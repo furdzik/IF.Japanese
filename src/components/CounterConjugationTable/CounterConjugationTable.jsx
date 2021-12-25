@@ -21,6 +21,7 @@ import {
   Th,
   Td,
   Number,
+  NumberInner,
   QuestionWrapper
 } from './CounterConjugationTable.styles.js';
 import messages from './CounterConjugationTable.messages';
@@ -53,7 +54,7 @@ const CounterConjugationTable = (props) => {
                     ), props.japaneseForm?.furigana)
                   }
                 >
-                  {number}
+                  <NumberInner>{number}</NumberInner>
                 </Number>
               </Td>
               <Td>
