@@ -19,12 +19,15 @@ export default defineMessages({
   twentyGroupSaiFurigana: 'はたち',
   twentyGroupSaiKanji: '二十歳',
 
+  thirtyGroupFunAlternativeFurigana: 'はん',
+  thirtyGroupFunAlternativeKanji: '半',
+
   // Groups
   oneGroupKHS: 'いっ',
   sixGroupKH: 'ろっ',
   eightGroupKHS: 'はっ',
   tenGroupKHS: 'じゅっ',
-  fourGroupJNin: 'よ',
+  fourGroupJNinNen: 'よ',
 
   // Nichi
   oneGroupNichi: 'ついた',

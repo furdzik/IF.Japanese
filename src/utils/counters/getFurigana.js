@@ -8,7 +8,7 @@ import {
   FURIGANA_RENDAKU_LETTER_TO
 } from '@constants';
 
-import messages from '../CounterConjugation.messages';
+import messages from '@lang/defaultMessages/counters.messages';
 
 const FIRST_MOJI_INDEX = 0;
 
@@ -58,8 +58,7 @@ export const getFurigana = (number, counterGroup, originalFurigana) => {
       return originalFurigana;
     }
 
-    case COUNTERS_GROUPS.h:
-    case COUNTERS_GROUPS.f: {
+    case COUNTERS_GROUPS.h: {
       if (
         number === NUMBERS.one
         || number === NUMBERS.six
@@ -78,6 +77,29 @@ export const getFurigana = (number, counterGroup, originalFurigana) => {
           furiganaFirstMoji,
           FURIGANA_RENDAKU_LETTER_FROM.rendakuH,
           FURIGANA_RENDAKU_LETTER_TO.dakutenH
+        );
+      }
+
+      newFirstIndex = newFirstMoji + firstIndexAfterFirstMoji;
+      newFurigana.push(newFirstIndex, ...originalFuriganaBesidesFirstMoji);
+
+      return newFurigana;
+    }
+
+    case COUNTERS_GROUPS.f: {
+      if (
+        number === NUMBERS.one
+        || number === NUMBERS.three
+        || number === NUMBERS.four
+        || number === NUMBERS.six
+        || number === NUMBERS.eight
+        || number === NUMBERS.ten
+        || number === NUMBERS.thirty
+      ) {
+        newFirstMoji = getChangedFirstMoji(
+          furiganaFirstMoji,
+          FURIGANA_RENDAKU_LETTER_FROM.rendakuF,
+          FURIGANA_RENDAKU_LETTER_TO.handakutenF
         );
       }
 

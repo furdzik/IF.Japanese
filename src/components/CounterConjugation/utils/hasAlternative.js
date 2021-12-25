@@ -16,6 +16,8 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.so
         || counterGroup === COUNTERS_GROUPS.gatsu
         || counterGroup === COUNTERS_GROUPS.nichi
+        || counterGroup === COUNTERS_GROUPS.nen
+        || counterGroup === COUNTERS_GROUPS.f
       );
     }
 
@@ -35,7 +37,8 @@ export const hasAlternative = (number, counterGroup) => {
       );
     }
 
-    case NUMBERS.ten: {
+    case NUMBERS.ten:
+    case NUMBERS.thirty: {
       return !(
         counterGroup === COUNTERS_GROUPS.default
         || counterGroup === COUNTERS_GROUPS.tsu
@@ -43,6 +46,7 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.nin
         || counterGroup === COUNTERS_GROUPS.gatsu
         || counterGroup === COUNTERS_GROUPS.nichi
+        || counterGroup === COUNTERS_GROUPS.nen
       );
     }
 

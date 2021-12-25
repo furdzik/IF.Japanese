@@ -1138,6 +1138,16 @@
     "known": true,
     "inProgress": false,
     "nowLearning": false,
+    "counter": {
+      "counterGroup": "fun",
+      "additionalNumbers": [30],
+      "question": {
+        "japaneseForm": {
+          "kanji": ["何", "分"],
+          "furigana": ["なん", "ぷん"]
+        }
+      }
+    },
     "pitch": "",
     "level": 1
   },
@@ -33031,7 +33041,7 @@
     "inProgress": false,
     "nowLearning": false,
     "counter": {
-      "counterGroup": "default"
+      "counterGroup": "nen"
     },
     "pitch": "",
     "level": 0

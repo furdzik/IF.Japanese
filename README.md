@@ -116,22 +116,25 @@ If word is not in Jisho API then in `vocabulary-not-in-api.json` add missing dat
   - `default`
   - `k`
   - `s`
-  - `t`
   - `h`
   - `f`
-  - `p`
-  - `r`
-  - `w`
 
+  // special
   - `ji`
   - `nichi`
   - `nin`
+  - `nen`
   -`tsu`
   -`sai`
   -`ke`
   -`so`
   - `gatsu`
 
+  // not yet
+  - `t`
+  - `p`
+  - `r`
+  - `w`
   - `maki` (間, 巻)
   - `sao`
   - `tsuu`

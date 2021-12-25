@@ -2,8 +2,9 @@ import React from 'react';
 
 import { NUMBERS, COUNTERS_GROUPS } from '@constants';
 
-import messages from '../CounterConjugation.messages';
-import KanjiWithFurigana from '../../ui/KanjiWithFurigana';
+import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
+
+import messages from '@lang/defaultMessages/counters.messages';
 
 export const getNumberReading = (number, counterGroup, alternative = false) => {
   switch (number) {
@@ -19,6 +20,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
         || counterGroup === COUNTERS_GROUPS.so
+        || counterGroup === COUNTERS_GROUPS.f
       ) {
         return (messages.oneGroupKHS)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
@@ -61,8 +63,9 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
       } else if (
         counterGroup === COUNTERS_GROUPS.ji
         || counterGroup === COUNTERS_GROUPS.nin
+        || counterGroup === COUNTERS_GROUPS.nen
       ) {
-        return (messages.fourGroupJNin)?.defaultMessage;
+        return (messages.fourGroupJNinNen)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.gatsu) {
         return (messages.fourGroupDefaultAlternative)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
@@ -88,6 +91,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
       } else if (
         counterGroup === COUNTERS_GROUPS.k
         || counterGroup === COUNTERS_GROUPS.h
+        || counterGroup === COUNTERS_GROUPS.f
       ) {
         return (messages.sixGroupKH)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
@@ -123,6 +127,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
         || counterGroup === COUNTERS_GROUPS.so
+        || counterGroup === COUNTERS_GROUPS.f
       ) {
         return (messages.eightGroupKHS)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
@@ -160,6 +165,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
         || counterGroup === COUNTERS_GROUPS.so
+        || counterGroup === COUNTERS_GROUPS.f
       ) {
         return (messages.tenGroupKHS)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
@@ -318,6 +324,19 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
     }
 
     case NUMBERS.thirty: {
+      if (alternative) {
+        return (
+          <KanjiWithFurigana
+            kanji={(messages.thirtyGroupFunAlternativeKanji)?.defaultMessage.split('')}
+            furigana={(messages.thirtyGroupFunAlternativeFurigana)?.defaultMessage.split('')}
+          />
+        );
+      }
+
+      if (counterGroup === COUNTERS_GROUPS.f) {
+        return (messages.threeGroupDefault)?.defaultMessage
+          + (messages.tenGroupKHS)?.defaultMessage;
+      }
       return (messages.threeGroupDefault)?.defaultMessage
         + (messages.tenGroupDefault)?.defaultMessage;
     }

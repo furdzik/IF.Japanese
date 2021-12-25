@@ -4,22 +4,25 @@ export const COUNTERS_GROUPS = {
   default: 'default',
   k: 'k',
   s: 's',
-  t: 't',
   h: 'h',
   f: 'f',
-  p: 'p',
-  r: 'r',
-  w: 'w',
-  // Special
+
+  // special
   ji: 'ji',
   nichi: 'nichi',
   nin: 'nin',
+  nen: 'nen',
   tsu: 'tsu',
   sai: 'sai',
   ke: 'ke',
   so: 'so',
   gatsu: 'gatsu',
 
+  // not yet
+  t: 't',
+  p: 'p',
+  r: 'r',
+  w: 'w',
   maki: 'maki', // (間, 巻)
   sao: 'sao',
   tsuu: 'tsuu',
@@ -80,12 +83,14 @@ export const FURIGANA_RENDAKU = {
 };
 
 export const FURIGANA_RENDAKU_LETTER_FROM = {
+  rendakuF: 'f',
   rendakuH: 'h',
   rendakuK: 'k',
   rendakuS: 's'
 };
 
 export const FURIGANA_RENDAKU_LETTER_TO = {
+  handakutenF: 'p',
   dakutenH: 'b',
   handakutenH: 'p',
   dakutenK: 'g',

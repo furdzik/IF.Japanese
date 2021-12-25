@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 
+import _isEqual from 'lodash/isEqual';
+
 import { QUESTION_JAPANESE_FORM } from '@constants';
 
 import { japaneseFormShape, countersGroupShape } from '@types/vocabularyDetails';
 
+import { getFurigana } from '@utils/counters/getFurigana';
+
 import CounterConjugation from '@components/CounterConjugation';
 import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
 
-import { hasSpecialNumberConjugation, shouldHaveMain } from './utils';
+import { hasSpecialNumberConjugation } from './utils';
 
 import {
   Table,
@@ -41,7 +45,14 @@ const CounterConjugationTable = (props) => {
           numbers.map((number) => (
             <Tr key={number}>
               <Td>
-                <Number additionalNumber={hasSpecialNumberConjugation(props.counterGroup, number)}>
+                <Number
+                  specialConjugation={hasSpecialNumberConjugation(props.counterGroup, number)}
+                  specialPronunciation={
+                    !_isEqual(getFurigana(
+                      number, props.counterGroup, props.japaneseForm?.furigana
+                    ), props.japaneseForm?.furigana)
+                  }
+                >
                   {number}
                 </Number>
               </Td>
@@ -50,7 +61,6 @@ const CounterConjugationTable = (props) => {
                   vocab={props.vocab}
                   counterGroup={props.counterGroup}
                   japaneseForm={props.japaneseForm}
-                  noMain={shouldHaveMain(props.counterGroup, number)}
                   number={number}
                 />
               </Td>

@@ -55,7 +55,11 @@ const Number = styled.span`
   background: ${(props) => props.theme.mainColors.secondary};
   font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
 
-  ${(props) => props.additionalNumber && css`
+  ${(props) => props.specialPronunciation && css`
+    background: #a2dfef;
+  `};
+
+  ${(props) => props.specialConjugation && css`
     background: ${props.theme.mainColors.tartary};
   `};
 `;

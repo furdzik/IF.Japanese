@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 import { japaneseFormShape, countersGroupShape } from '@types/vocabularyDetails';
 
+import { getFurigana } from '@utils/counters/getFurigana';
+
 import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
 
-import { getNumberReading, hasAlternative, getFurigana } from './utils';
+import { getNumberReading, hasAlternative, shouldHaveMain } from './utils';
 
 import {
   Wrapper,
@@ -28,7 +30,7 @@ const CounterConjugation = (props) => {
           getNumberReading(props.number, props.counterGroup)
         }
         {
-          !props.noMain ? main() : null
+          !shouldHaveMain(props.counterGroup, props.number) ? main() : null
         }
       </Box>
       {
@@ -38,7 +40,7 @@ const CounterConjugation = (props) => {
               getNumberReading(props.number, props.counterGroup, true)
             }
             {
-              !props.noMain ? main() : null
+              !shouldHaveMain(props.counterGroup, props.number, true) ? main() : null
             }
           </AlternativeBox>
         ) : null
@@ -52,13 +54,11 @@ CounterConjugation.propTypes = {
   japaneseForm: japaneseFormShape.isRequired,
   number: PropTypes.number.isRequired,
   vocab: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  noMain: PropTypes.bool
+  className: PropTypes.string
 };
 
 CounterConjugation.defaultProps = {
-  className: '',
-  noMain: false
+  className: ''
 };
 
 export default CounterConjugation;
