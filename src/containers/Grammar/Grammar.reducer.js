@@ -1,6 +1,6 @@
 import grammarJson from '@data/grammar.json';
 
-import { localStorageKeyGrammar, FILTERS_IDS, GRAMMAR_HAS_TO_REPEAT } from '@constants';
+import { LOCAL_STORAGE_KEY_GRAMMAR, FILTERS_IDS, GRAMMAR_HAS_TO_REPEAT_FILTER } from '@constants';
 
 import {
   getSelectedFiltersInitialValues,
@@ -21,7 +21,7 @@ const initialState = {
   vocab: null,
   vocabLength: lengthInitialState,
   selectedFilters: getSelectedFiltersInitialValues(
-    localStorageKeyGrammar, FILTERS_IDS, GRAMMAR_HAS_TO_REPEAT
+    LOCAL_STORAGE_KEY_GRAMMAR, FILTERS_IDS, GRAMMAR_HAS_TO_REPEAT_FILTER
   )
 };
 
@@ -84,7 +84,7 @@ export const getGrammar = () => (dispatch) => {
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Grammar;
 
-  setChangeFilters(filter, selectedFilters, localStorageKeyGrammar);
+  setChangeFilters(filter, selectedFilters, LOCAL_STORAGE_KEY_GRAMMAR);
 
   dispatch(setFiltersAction(selectedFilters));
   dispatch(getGrammar());

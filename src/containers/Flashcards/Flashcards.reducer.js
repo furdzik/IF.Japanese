@@ -2,7 +2,7 @@ import vocabJson from '@data/vocabulary.json';
 
 import { fetchJisho } from '@api';
 
-import { localStorageKeyFlashcards, FILTERS_IDS } from '@constants';
+import { LOCAL_STORAGE_KEY_FLASHCARDS, FILTERS_IDS } from '@constants';
 
 import {
   getSelectedFiltersInitialValues,
@@ -29,7 +29,7 @@ const initialState = {
   flashcardLength: lengthInitialState,
   additionalInfo: null,
   isRevealed: false,
-  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyFlashcards, FILTERS_IDS),
+  selectedFilters: getSelectedFiltersInitialValues(LOCAL_STORAGE_KEY_FLASHCARDS, FILTERS_IDS),
   error: null,
   apiError: false
 };
@@ -165,7 +165,7 @@ export const getFlashcard = () => (dispatch, getStore) => {
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Flashcards;
 
-  setChangeFilters(filter, selectedFilters, localStorageKeyFlashcards);
+  setChangeFilters(filter, selectedFilters, LOCAL_STORAGE_KEY_FLASHCARDS);
 
   dispatch(setFiltersAction(selectedFilters));
   dispatch(getFlashcard());

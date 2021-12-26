@@ -1,6 +1,6 @@
 import kanjiJson from '@data/kanji.json';
 
-import { localStorageKeyKanji, FILTERS_IDS } from '@constants';
+import { LOCAL_STORAGE_KEY_KANJI, FILTERS_IDS } from '@constants';
 
 import {
   getSelectedFiltersInitialValues,
@@ -20,7 +20,7 @@ const initialState = {
   loading: true,
   kanji: null,
   kanjiLength: lengthInitialState,
-  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyKanji, FILTERS_IDS)
+  selectedFilters: getSelectedFiltersInitialValues(LOCAL_STORAGE_KEY_KANJI, FILTERS_IDS)
 };
 
 export default function kanjiReducer (state = initialState, action) {
@@ -82,7 +82,7 @@ export const getKanji = () => (dispatch) => {
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Kanji;
 
-  setChangeFilters(filter, selectedFilters, localStorageKeyKanji);
+  setChangeFilters(filter, selectedFilters, LOCAL_STORAGE_KEY_KANJI);
 
   dispatch(setFiltersAction(selectedFilters));
   dispatch(getKanji());

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
-import { characterType } from '@constants';
+import { CHARACTER_TYPE } from '@constants';
 
 import {
   CharacterWrapper,
@@ -33,8 +33,8 @@ const Character = (props) => (
 Character.propTypes = {
   elements: PropTypes.arrayOf(PropTypes.string).isRequired,
   type: PropTypes.oneOf([
-    characterType.FURIGANA,
-    characterType.KANJI
+    CHARACTER_TYPE.furigana,
+    CHARACTER_TYPE.kanji
   ]).isRequired,
   mainCharacters: PropTypes.bool,
   small: PropTypes.bool

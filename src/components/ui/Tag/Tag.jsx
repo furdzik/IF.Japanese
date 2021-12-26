@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { tagTypes } from '@constants';
+import { TAG_TYPES } from '@constants';
 
 import { tagTypeShape } from '@types/commonDetails';
 
@@ -23,7 +23,7 @@ Tag.propTypes = {
 
 Tag.defaultProps = {
   small: false,
-  tagType: tagTypes.OTHER
+  tagType: TAG_TYPES.other
 };
 
 export default Tag;

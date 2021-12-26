@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { Link } from 'react-router-dom';
 
-import { grammarTypes, tagTypes } from '@constants';
+import { grammarTypes, TAG_TYPES } from '@constants';
 
 import { verbItemShape } from '@types/verb';
 import {
@@ -62,7 +62,7 @@ const VocabularyDetails = (props) => {
 
     if (props.tags) {
       props.tags.forEach((el) => {
-        if (el.tagType === tagTypes.IS_VERB) {
+        if (el.tagType === TAG_TYPES.isVerb) {
           tags.push(
             <Tag tagType={el.tagType} key={uuidv4()}>
               <ConjugationLink type="button" onClick={() => setVerbConjugationOpen(true)}>
@@ -70,7 +70,7 @@ const VocabularyDetails = (props) => {
               </ConjugationLink>
             </Tag>
           );
-        } else if (el.tagType === tagTypes.COUNTER) {
+        } else if (el.tagType === TAG_TYPES.counter) {
           tags.push(
             <Tag tagType={el.tagType} key={uuidv4()}>
               <ConjugationLink type="button" onClick={() => setCounterConjugationOpen(true)}>

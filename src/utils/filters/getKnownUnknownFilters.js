@@ -1,5 +1,5 @@
 export const getOnlyJoyoKanji = (selectedFilters, item, IDS) => selectedFilters
-  .indexOf(IDS.JOYO_KANJI) > -1
+  .indexOf(IDS.joyoKanji) > -1
   ? item.joyo === true
   : (item.joyo === true || item.joyo === false);
 
@@ -10,7 +10,7 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
   let inProgressList = [];
   let notKnownList = [];
 
-  if (selectedFilters.indexOf(IDS.KNOWN) > -1) {
+  if (selectedFilters.indexOf(IDS.known) > -1) {
     knownList = list.filter((item) => item.known && !item.inProgress && !item.nowLearning);
 
     if (isKanji) {
@@ -19,14 +19,14 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
     }
   }
 
-  if (selectedFilters.indexOf(IDS.TO_REPEAT) > -1) {
+  if (selectedFilters.indexOf(IDS.toRepeat) > -1) {
     // Only grammar
     toRepeatList = list.filter(
       (item) => item.toRepeat && !item.known && !item.inProgress && !item.nowLearning
     );
   }
 
-  if (selectedFilters.indexOf(IDS.IN_PROGRESS) > -1) {
+  if (selectedFilters.indexOf(IDS.inProgress) > -1) {
     inProgressList = list.filter((item) => item.inProgress && !item.nowLearning);
 
     if (isKanji) {
@@ -35,7 +35,7 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
     }
   }
 
-  if (selectedFilters.indexOf(IDS.NOW_LEARNING) > -1) {
+  if (selectedFilters.indexOf(IDS.nowLearning) > -1) {
     nowLearningList = list.filter((item) => item.nowLearning && !item.inProgress);
 
     if (isKanji) {
@@ -44,7 +44,7 @@ export const getKnownUnknownFilters = (selectedFilters, list, IDS, isKanji = fal
     }
   }
 
-  if (selectedFilters.indexOf(IDS.NOT_KNOWN) > -1) {
+  if (selectedFilters.indexOf(IDS.notKnown) > -1) {
     notKnownList = list.filter(
       (item) => !item.known && !item.toRepeat && !item.inProgress && !item.nowLearning
     );

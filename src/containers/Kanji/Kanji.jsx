@@ -30,7 +30,7 @@ const Kanji = (props) => {
 
   const additionalFilterList = [
     {
-      value: FILTERS_IDS.JOYO_KANJI,
+      value: FILTERS_IDS.joyoKanji,
       label: intl.formatMessage(messages.joyo)
     }
   ];

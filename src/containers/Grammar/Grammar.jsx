@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { GRAMMAR_HAS_TO_REPEAT } from '@constants';
+import { GRAMMAR_HAS_TO_REPEAT_FILTER } from '@constants';
 
 import { grammarShape } from '@types/grammar';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filters';
@@ -29,10 +29,10 @@ const Grammar = (props) => {
       <Filters
         changeFilters={props.changeFilters}
         selectedFilters={props.selectedFilters}
-        filterList={getFilterLabels(GRAMMAR_HAS_TO_REPEAT)}
+        filterList={getFilterLabels(GRAMMAR_HAS_TO_REPEAT_FILTER)}
         secondaryFilterList={secondaryFilterLabels}
       />
-      <Legend length={props.grammarLength} hasToRepeat={GRAMMAR_HAS_TO_REPEAT} />
+      <Legend length={props.grammarLength} hasToRepeat={GRAMMAR_HAS_TO_REPEAT_FILTER} />
       <ProgressBar length={props.grammarLength} />
       <GrammarList grammar={props.grammar} />
     </React.Fragment>

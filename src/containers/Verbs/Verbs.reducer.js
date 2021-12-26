@@ -1,6 +1,6 @@
 import vocabJson from '@data/vocabulary.json';
 
-import { localStorageKeyVerbs, FILTERS_IDS } from '@constants';
+import { LOCAL_STORAGE_KEY_VERBS, FILTERS_IDS } from '@constants';
 
 import {
   getSelectedFiltersInitialValues,
@@ -20,7 +20,7 @@ const initialState = {
   loading: true,
   verbs: [],
   verbsLength: lengthInitialState,
-  selectedFilters: getSelectedFiltersInitialValues(localStorageKeyVerbs, FILTERS_IDS)
+  selectedFilters: getSelectedFiltersInitialValues(LOCAL_STORAGE_KEY_VERBS, FILTERS_IDS)
 };
 
 export default function verbsReducer (state = initialState, action) {
@@ -86,7 +86,7 @@ export const getVerbs = () => (dispatch) => {
 export const changeFilters = (filter) => (dispatch, getStore) => {
   const { selectedFilters } = getStore().Verbs;
 
-  setChangeFilters(filter, selectedFilters, localStorageKeyVerbs);
+  setChangeFilters(filter, selectedFilters, LOCAL_STORAGE_KEY_VERBS);
 
   dispatch(setFiltersAction(selectedFilters));
   dispatch(getVerbs());

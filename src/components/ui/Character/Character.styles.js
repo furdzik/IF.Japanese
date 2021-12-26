@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { characterType } from '@constants';
+import { CHARACTER_TYPE } from '@constants';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -16,7 +16,7 @@ const CharacterWrapper = styled.div`
   justify-content: center;
   text-align: center;
 
-  ${(props) => props.type === characterType.FURIGANA && css`
+  ${(props) => props.type === CHARACTER_TYPE.furigana && css`
     font-size: 1.6rem;
     margin-bottom: -.5rem;
   `};
@@ -31,7 +31,7 @@ const CharacterWrapper = styled.div`
       width: auto;
     }
 
-    ${props.type === characterType.FURIGANA && css`
+    ${props.type === CHARACTER_TYPE.furigana && css`
       margin-bottom: -.5rem;
       font-size: 1.2rem;
       font-weight: ${props.theme.typography.fontWeight.regular};
@@ -43,13 +43,13 @@ const CharacterWrapper = styled.div`
       margin-bottom: 0;
       ${OneCharacter} {
          width: 2.5rem;
-
        }
     `};
+
     ${breakpointMixin.phablet(css`
         font-size: 4rem;
 
-      ${props.type === characterType.FURIGANA && css`
+      ${props.type === CHARACTER_TYPE.furigana && css`
         font-size: 1.6rem;
       `};
 

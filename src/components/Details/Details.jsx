@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { sectionTypes } from '@constants';
+import { SECTION_TYPES } from '@constants';
 
 import { japaneseFormShape } from '@types/vocabularyDetails';
 
@@ -82,9 +82,9 @@ const Details = (props) => {
         </TagsWrapper>
         <Heading>{props.mainSectionHeader}</Heading>
         <SectionsWrapper>
-          <Section type={sectionTypes.PRIMARY} wide={!props.secondarySection}>
+          <Section type={SECTION_TYPES.primary} wide={!props.secondarySection}>
             <Section
-              type={sectionTypes.NAME}
+              type={SECTION_TYPES.name}
               wide={props.japaneseForm?.kanji.length > 5 || props.wide}
             >
               {
@@ -94,6 +94,7 @@ const Details = (props) => {
                       {
                         props.japaneseForm?.kanji ? (
                           <KanjiWithFurigana
+                            mainCharacters
                             kanji={props.japaneseForm?.kanji}
                             furigana={props.japaneseForm?.furigana}
                             small={props.japaneseForm?.kanji.length > 5}
@@ -134,7 +135,7 @@ const Details = (props) => {
           </Section>
           {
             props.secondarySection ? (
-              <Section type={sectionTypes.SECONDARY}>
+              <Section type={SECTION_TYPES.secondary}>
                 {props.secondarySection}
               </Section>
             ) : null

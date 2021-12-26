@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { characterType } from '@constants';
+import { CHARACTER_TYPE } from '@constants';
 
 import Character from '@components/ui/Character';
 
@@ -14,17 +14,17 @@ const KanjiWithFurigana = (props) => (
     {
       props.furigana ? (
         <Character
-          type={characterType.FURIGANA}
+          type={CHARACTER_TYPE.furigana}
           elements={props.furigana}
-          mainCharacters={false}
+          mainCharacters={props.mainCharacters}
           small={props.small}
         />
       ) : null
     }
     <Character
-      type={characterType.KANJI}
+      type={CHARACTER_TYPE.kanji}
       elements={props.kanji}
-      mainCharacters={false}
+      mainCharacters={props.mainCharacters}
       small={props.small}
     />
   </Wrapper>
@@ -33,11 +33,13 @@ const KanjiWithFurigana = (props) => (
 KanjiWithFurigana.propTypes = {
   kanji: PropTypes.arrayOf(PropTypes.string).isRequired,
   furigana: PropTypes.arrayOf(PropTypes.string),
+  mainCharacters: PropTypes.bool,
   small: PropTypes.bool
 };
 
 KanjiWithFurigana.defaultProps = {
   furigana: null,
+  mainCharacters: false,
   small: true
 };
 
