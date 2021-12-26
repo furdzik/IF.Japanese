@@ -1,6 +1,6 @@
 import grammarJson from '@data/grammar.json';
 
-import { getTags } from '@utils/common-details';
+import { getTags } from '@utils/commonDetails';
 
 import {
   getProblems,

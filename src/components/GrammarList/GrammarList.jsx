@@ -2,11 +2,11 @@ import React from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { grammarMenu } from '@constants';
+import { GRAMMAR_MENU } from '@constants';
 
 import { grammarShape } from '@types/grammar';
 
-import Tooltip from '@components/ui/Tooltip';
+import Tooltip from '@components/Tooltip';
 
 import {
   List,
@@ -23,7 +23,7 @@ const GrammarList = (props) => (
   <React.Fragment>
     <List>
       {
-        grammarMenu.map((menuItem) => (
+        GRAMMAR_MENU.map((menuItem) => (
           <ListItem
             key={uuidv4()}
             data-tip={menuItem.label}

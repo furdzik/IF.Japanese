@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl';
 
 import { Link } from 'react-router-dom';
 
-import Container from '@components/ui/Container';
+import Container from '@components/Container';
 
 import {
   Wrapper,

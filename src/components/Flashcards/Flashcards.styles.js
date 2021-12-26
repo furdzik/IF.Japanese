@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { breakpointMixin } from '@styles/mixins';
-
 import { Link } from 'react-router-dom';
 import Icon from '@mdi/react';
 
-import Tile from '@components/ui/Tile';
+import { breakpointMixin } from '@styles/mixins';
+
+import Tile from '@components/Tile';
 
 const Wrapper = styled.div`
   text-align: center;

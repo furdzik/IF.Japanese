@@ -1,6 +1,7 @@
 import _cloneDeep from 'lodash/cloneDeep';
 
 import { fetchJisho } from '@api';
+
 import { getVocabExampleFromResponse } from './utils';
 
 const MAX_REQUESTS_INDEX = 11; // from 0 - 11 indexes = 12 elements

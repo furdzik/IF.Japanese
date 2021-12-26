@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { breakpointMixin } from '@styles/mixins';
 
-import Tile from '@components/ui/Tile';
+import Tile from '@components/Tile';
 
 const Item = styled.li`
   border: 1px solid ${(props) => props.theme.mainColors.secondary};

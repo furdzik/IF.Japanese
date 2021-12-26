@@ -15,13 +15,12 @@ import {
   shortExplanationShape
 } from '@types/grammar';
 
-import Tag from '@components/ui/Tag';
-
 import AdditionalExplanationBox from '@components/AdditionalExplanationBox';
 import Details from '@components/Details';
 import DetailsParts from '@components/DetailsParts';
 import ProblemsBox from '@components/ProblemsBox';
 import SubHeading from '@components/SubHeading';
+import Tag from '@components/Tag';
 
 import { getComponentGrammar } from './utils';
 
@@ -42,9 +41,8 @@ const GrammarDetails = (props) => {
     const tags = [];
 
     if (props.tags) {
-      props.tags.forEach((el, index) => {
-        // eslint-disable-next-line react/no-array-index-key
-        tags.push(<Tag tagType={el.tagType} key={index}>{el.label}</Tag>);
+      props.tags.forEach((el) => {
+        tags.push(<Tag tagType={el.tagType} key={uuidv4()}>{el.label}</Tag>);
       });
     }
 
@@ -75,10 +73,9 @@ const GrammarDetails = (props) => {
             {intl.formatMessage(messages.similarGrammarHeader)}
           </SubHeading>
           {
-            props.similarGrammar.map((grammar, index) => (
+            props.similarGrammar.map((grammar) => (
               <DetailsParts
-                // eslint-disable-next-line react/no-array-index-key
-                key={index}
+                key={uuidv4()}
                 tags={grammar.tags}
                 status={grammar.status}
                 link={`/grammar/${grammar.grammarId}`}

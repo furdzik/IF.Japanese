@@ -6,9 +6,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamples';
 
-import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
-import ErrorMessageBox from '@components/ui/ErrorMessageBox';
-import Tag from '@components/ui/Tag';
+import ErrorMessageBox from '@components/ErrorMessageBox';
+import KanjiWithFurigana from '@components/KanjiWithFurigana';
+import Tag from '@components/Tag';
 
 import {
   ListWrapper,

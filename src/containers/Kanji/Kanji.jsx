@@ -10,14 +10,14 @@ import { filtersLengthShape, selectedFiltersShape } from '@types/filters';
 
 import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 
-import Loader from '@components/ui/Loader';
 import Filters from '@components/Filters';
-import Legend from '@components/Legend';
 import KanjiList from '@components/KanjiList';
+import Legend from '@components/Legend';
+import Loader from '@components/Loader';
 import ProgressBar from '@components/ProgressBar';
 
+import { changeFilters, getKanji } from './Kanji.reducer';
 import selector from './Kanji.selector';
-import { getKanji, changeFilters } from './Kanji.reducer';
 
 import messages from './Kanji.messages';
 

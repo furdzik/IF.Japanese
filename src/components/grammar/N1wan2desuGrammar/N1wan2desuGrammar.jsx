@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 
-import PartOfSpeechBox from '@components/ui/PartOfSpeechBox';
+import PartOfSpeechBox from '@components/PartOfSpeechBox';
 import SubHeading from '@components/SubHeading';
 
 import {

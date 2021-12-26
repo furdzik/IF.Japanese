@@ -2,9 +2,9 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 import { v4 as uuidv4 } from 'uuid';
 
-import Tooltip from '@components/ui/Tooltip';
-import PartOfSpeechBox from '@components/ui/PartOfSpeechBox';
+import PartOfSpeechBox from '@components/PartOfSpeechBox';
 import SubHeading from '@components/SubHeading';
+import Tooltip from '@components/Tooltip';
 
 import {
   PartOfSpeechElementsWrapper

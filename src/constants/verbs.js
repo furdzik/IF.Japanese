@@ -1,6 +1,6 @@
 /* VERBS */
 
-export const verbGroupTypes = {
+export const VERB_GROUP_TYPES = {
   group2: '2',
   specialVerb1: 'special1', // suru
   specialVerb2: 'special2', // kuru
@@ -15,32 +15,32 @@ export const verbGroupTypes = {
   group1Ru: 'ru'
 };
 
-export const inflectionTypes = {
-  NORMAL: 1,
-  NEGATIVE: 2,
-  PAST: 3,
-  PAST_NEGATIVE: 4,
-  NO_INFLECTION: 5
+export const INFLECTION_TYPES = {
+  normal: 1,
+  negative: 2,
+  past: 3,
+  pastNegative: 4,
+  noInflection: 5
 };
 
-export const grammarTypes = {
-  JISHOU_FORM: 'jishouForm',
-  TE_FORM: 'teForm',
-  TAI_FORM: 'taiForm',
-  IKOU_FORM: 'ikouForm',
-  MEIREI_FORM: 'meireiForm',
-  KINSHI_FORM: 'kinshiForm',
-  KANOU_FORM: 'kanouForm',
-  JOUKEN_BA_FORM: 'joukenBaForm',
-  JOUKEN_TARA_FORM: 'joukenTaraForm',
-  UKEMI_FORM: 'ukemiForm',
-  SHIEKI_FORM: 'shiekiForm',
-  SHIEKIUKEMI_FORM: 'shiekiukemiForm',
-  SHIEKIUKEMI_SHORT_FORM: 'shiekiukemiShortForm'
+export const GRAMMAR_TYPES = {
+  jishouForm: 'jishouForm',
+  teForm: 'teForm',
+  taiForm: 'taiForm',
+  ikouForm: 'ikouForm',
+  meireiForm: 'meireiForm',
+  kinshiForm: 'kinshiForm',
+  kanouForm: 'kanouForm',
+  joukenBaForm: 'joukenBaForm',
+  joukenTaraForm: 'joukenTaraForm',
+  ukemiForm: 'ukemiForm',
+  shiekiForm: 'shiekiForm',
+  shiekiukemiForm: 'shiekiukemiForm',
+  shiekiukemiShortForm: 'shiekiukemiShortForm'
 };
 
-export const verbType = {
-  TRANSITIVE: 'transitive',
-  INTRANSITIVE: 'intransitive',
-  OTHER: 'other'
+export const VERB_TYPE = {
+  transitive: 'transitive',
+  intransitive: 'intransitive',
+  other: 'other'
 };

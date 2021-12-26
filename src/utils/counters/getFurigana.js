@@ -8,7 +8,7 @@ import {
   FURIGANA_RENDAKU_LETTER_TO
 } from '@constants';
 
-import messages from '@lang/defaultMessages/counters.messages';
+import messages from '@lang/messages/counters.messages';
 
 const FIRST_MOJI_INDEX = 0;
 

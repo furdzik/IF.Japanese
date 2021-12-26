@@ -4,9 +4,9 @@ import { useIntl } from 'react-intl';
 
 import { filtersLengthShape } from '@types/filters';
 
-import defaultMessages from '@lang/defaultMessages/default.messages';
+import defaultMessages from '@lang/messages/default.messages';
 
-import Tooltip from '@components/ui/Tooltip';
+import Tooltip from '@components/Tooltip';
 
 import {
   Wrapper,

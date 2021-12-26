@@ -1,4 +1,4 @@
-import detailsMessages from '@lang/defaultMessages/details.messages';
+import detailsMessages from '@lang/messages/details.messages';
 
 export * from './counters';
 export * from './filters';

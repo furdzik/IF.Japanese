@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
+import { v4 as uuidv4 } from 'uuid';
 
 import Icon from '@mdi/react';
 import { mdiChevronDown, mdiChevronUp } from '@mdi/js';
 
 import Collapsible from 'react-collapsible';
 
-import { grammarTypes, verbType } from '@constants';
+import { GRAMMAR_TYPES, VERB_TYPE } from '@constants';
 
 import { vocabItemShape } from '@types/vocab';
 
-import conjugationMessages from '@lang/defaultMessages/conjugation.messages';
+import conjugationMessages from '@lang/messages/conjugation.messages';
 
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
 
@@ -37,17 +38,17 @@ const VerbsListItem = (props) => {
 
   const verbTypeLabel = (type, symbol = false) => {
     switch (type) {
-      case verbType.TRANSITIVE: {
+      case VERB_TYPE.transitive: {
         return symbol
           ? intl.formatMessage(messages.verbTypeTransitive)
           : intl.formatMessage(messages.verbTypeTransitiveText);
       }
-      case verbType.INTRANSITIVE: {
+      case VERB_TYPE.intransitive: {
         return symbol
           ? intl.formatMessage(messages.verbTypeIntransitive)
           : intl.formatMessage(messages.verbTypeIntransitiveText);
       }
-      case verbType.OTHER: {
+      case VERB_TYPE.other: {
         return symbol
           ? intl.formatMessage(messages.verbTypeOther)
           : intl.formatMessage(messages.verbTypeOtherText);
@@ -109,9 +110,8 @@ const VerbsListItem = (props) => {
               </ParticleLabel>
               <ParticleList>
                 {
-                  props.item.verb.particles.map((el, index) => (
-                    // eslint-disable-next-line react/no-array-index-key
-                    <ParticleListItem key={index}>{el}</ParticleListItem>
+                  props.item.verb.particles.map((el) => (
+                    <ParticleListItem key={uuidv4()}>{el}</ParticleListItem>
                   ))
                 }
               </ParticleList>
@@ -123,9 +123,9 @@ const VerbsListItem = (props) => {
         <BoxWrapper>
           <VerbConjugationGroup
             showLabel={collapsed}
-            label={intl.formatMessage(conjugationMessages[`${grammarTypes.JISHOU_FORM}Label`])}
+            label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.jishouForm}Label`])}
             verb={props.item.verb}
-            grammar={[grammarTypes.JISHOU_FORM]}
+            grammar={[GRAMMAR_TYPES.jishouForm]}
             politeForm
           />
 
@@ -138,83 +138,83 @@ const VerbsListItem = (props) => {
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.KANOU_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.kanouForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.KANOU_FORM]}
+              grammar={[GRAMMAR_TYPES.kanouForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.TAI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.taiForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.TAI_FORM]}
+              grammar={[GRAMMAR_TYPES.taiForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.TE_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.teForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.TE_FORM]}
+              grammar={[GRAMMAR_TYPES.teForm]}
               noPast
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.IKOU_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.ikouForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.IKOU_FORM]}
+              grammar={[GRAMMAR_TYPES.ikouForm]}
               noPast
               noNegative
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.MEIREI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.meireiForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.MEIREI_FORM]}
+              grammar={[GRAMMAR_TYPES.meireiForm]}
               noPast
             />
 
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.JOUKEN_BA_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.joukenBaForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.JOUKEN_BA_FORM]}
+              grammar={[GRAMMAR_TYPES.joukenBaForm]}
               noPast
             />
             <VerbConjugationGroup
               showLine={collapsed}
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.JOUKEN_TARA_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.joukenTaraForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.JOUKEN_TARA_FORM]}
+              grammar={[GRAMMAR_TYPES.joukenTaraForm]}
               noPast
             />
 
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.UKEMI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.ukemiForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.UKEMI_FORM]}
+              grammar={[GRAMMAR_TYPES.ukemiForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.SHIEKI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.shiekiForm}Label`])}
               verb={props.item.verb}
-              grammar={[grammarTypes.SHIEKI_FORM]}
+              grammar={[GRAMMAR_TYPES.shiekiForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLabel={collapsed}
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.SHIEKIUKEMI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.shiekiukemiForm}Label`])}
               verb={props.item.verb}
               grammar={[
-                grammarTypes.SHIEKIUKEMI_FORM,
-                grammarTypes.SHIEKIUKEMI_SHORT_FORM
+                GRAMMAR_TYPES.shiekiukemiForm,
+                GRAMMAR_TYPES.shiekiukemiShortForm
               ]}
               politeForm
             />

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { CHARACTER_TYPE } from '@constants';
 
-import Character from '@components/ui/Character';
+import Character from '@components/Character';
 
 import {
   Wrapper

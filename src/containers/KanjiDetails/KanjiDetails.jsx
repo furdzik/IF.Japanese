@@ -13,12 +13,11 @@ import {
 } from '@types/commonDetails';
 import { examplesShape, similarKanjiArrayShape, strokesShape } from '@types/kanjiDetails';
 
-import Loader from '@components/ui/Loader';
-
 import KanjiDetailsComponent from '@components/KanjiDetails';
+import Loader from '@components/Loader';
 
-import selector from './KanjiDetails.selector';
 import { getKanjiDetails } from './KanjiDetails.reducer';
+import selector from './KanjiDetails.selector';
 
 const KanjiDetails = (props) => {
   const params = useParams();

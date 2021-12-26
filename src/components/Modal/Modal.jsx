@@ -17,7 +17,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 import { ESC_CODE } from '@constants';
 
-import Loader from '@components/ui/Loader';
+import Loader from '@components/Loader';
 
 import {
   calculateViewportHeight,

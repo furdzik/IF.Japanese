@@ -5,13 +5,12 @@ import { japaneseFormShape, countersGroupShape } from '@types/vocabularyDetails'
 
 import { getFurigana } from '@utils/counters/getFurigana';
 
-import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
+import KanjiWithFurigana from '@components/KanjiWithFurigana';
 
 import { getNumberReading, hasAlternative, shouldHaveMain } from './utils';
 
 import {
   Wrapper,
-  Box,
   AlternativeBox
 } from './CounterConjugation.styles.js';
 
@@ -25,14 +24,14 @@ const CounterConjugation = (props) => {
 
   return (
     <Wrapper className={props.className}>
-      <Box>
+      <div>
         {
           getNumberReading(props.number, props.counterGroup)
         }
         {
           !shouldHaveMain(props.counterGroup, props.number) ? main() : null
         }
-      </Box>
+      </div>
       {
         hasAlternative(props.number, props.counterGroup) ? (
           <AlternativeBox>

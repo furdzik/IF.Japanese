@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { kanjiShape } from '@types/kanji';
 
-import TileWrapper from '@components/ui/TileWrapper';
-import Tile from '@components/ui/Tile';
+import Tile from '@components/Tile';
+import TileWrapper from '@components/TileWrapper';
 
 const KanjiList = (props) => (
   <TileWrapper>

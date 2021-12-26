@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 
 import { objectShape } from '@types/object';
 
-import Container from '@components/ui/Container';
-
-import Menu from '@components/Menu';
-import Header from '@components/Header';
+import Container from '@components/Container';
 import Footer from '@components/Footer';
+import Header from '@components/Header';
+import Menu from '@components/Menu';
 
 const Layout = (props) => {
   const location = useLocation();

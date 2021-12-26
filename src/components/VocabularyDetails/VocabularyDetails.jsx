@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { Link } from 'react-router-dom';
 
-import { grammarTypes, TAG_TYPES } from '@constants';
+import { GRAMMAR_TYPES, TAG_TYPES } from '@constants';
 
 import { verbItemShape } from '@types/verb';
 import {
@@ -23,19 +23,18 @@ import {
   counterShape
 } from '@types/vocabularyDetails';
 
-import Modal from '@components/ui/Modal';
-import Tag from '@components/ui/Tag';
+import conjugationMessages from '@lang/messages/conjugation.messages';
 
 import AdditionalExplanationBox from '@components/AdditionalExplanationBox';
+import CounterConjugationTable from '@components/CounterConjugationTable';
 import Details from '@components/Details';
 import DetailsParts from '@components/DetailsParts';
+import Modal from '@components/Modal';
 import ProblemsBox from '@components/ProblemsBox';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import SubHeading from '@components/SubHeading';
+import Tag from '@components/Tag';
 import VerbConjugationGroup from '@components/VerbConjugationGroup';
-import CounterConjugationTable from '@components/CounterConjugationTable';
-
-import conjugationMessages from '@lang/defaultMessages/conjugation.messages';
 
 import {
   ConjugationLink,
@@ -117,26 +116,22 @@ const VocabularyDetails = (props) => {
       mainSection={(
         <TranslationsList>
           {
-            props.translations && props.translations.map((el, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <TranslationsListItem number={index + 1} key={index}>
+            props.translations && props.translations.map((el, translationsIndex) => (
+              <TranslationsListItem number={translationsIndex + 1} key={uuidv4()}>
                 <div>
                   <PartOfSpeechWrapper>
                     {
-                      el.partsOfSpeech.map((s, key) => (
-                        // eslint-disable-next-line react/no-array-index-key
-                        <PartOfSpeechBox key={key}>{s}</PartOfSpeechBox>
+                      el.partsOfSpeech.map((partsOfSpeech) => (
+                        <PartOfSpeechBox key={uuidv4()}>{partsOfSpeech}</PartOfSpeechBox>
                       ))
                     }
                   </PartOfSpeechWrapper>
                   <div>
                     {
-                      // eslint-disable-next-line no-shadow
-                      el.englishDefinitions.map((def, index) => (
-                        // eslint-disable-next-line react/no-array-index-key
-                        <React.Fragment key={index}>
-                          {def}
-                          {el.englishDefinitions.length !== index + 1 ? ', ' : ''}
+                      el.englishDefinitions.map((definition, definitionIndex) => (
+                        <React.Fragment key={uuidv4()}>
+                          {definition}
+                          {el.englishDefinitions.length !== definitionIndex + 1 ? ', ' : ''}
                         </React.Fragment>
                       ))
                     }
@@ -151,9 +146,8 @@ const VocabularyDetails = (props) => {
                     <AdditionalInfo>{el.tags.join(', ')}</AdditionalInfo>
                     {
                       el.seeAlso ? (
-                        el.seeAlso.map((seeAlsoEl, seeAlsoIndex) => (
-                          // eslint-disable-next-line react/no-array-index-key
-                          <AdditionalInfo key={seeAlsoIndex}>
+                        el.seeAlso.map((seeAlsoEl) => (
+                          <AdditionalInfo key={uuidv4()}>
                             {intl.formatMessage(messages.SeeAlsoText)}
                             <Link to={`vocab/${seeAlsoEl}`}>{seeAlsoEl}</Link>
                           </AdditionalInfo>
@@ -162,9 +156,8 @@ const VocabularyDetails = (props) => {
                     }
                     {
                       el.source ? (
-                        el.source.map((sourceEl, sourceIndex) => (
-                          // eslint-disable-next-line react/no-array-index-key
-                          <AdditionalInfo key={sourceIndex}>
+                        el.source.map((sourceEl) => (
+                          <AdditionalInfo key={uuidv4()}>
                             {intl.formatMessage(messages.sourceText, {
                               language: sourceEl.language,
                               word: sourceEl.word
@@ -185,10 +178,10 @@ const VocabularyDetails = (props) => {
                   {intl.formatMessage(messages.otherFormsHeader)}
                 </SubHeading>
                 {
-                  props.otherForms.map((form, index) => (
-                    <div key={`${form.word}_${form.reading}`}>
-                      {form.word} 【{form.reading}】
-                      {props.otherForms.length - 1 !== index ? '、' : null}
+                  props.otherForms.map((otherForm, otherFormIndex) => (
+                    <div key={uuidv4()}>
+                      {otherForm.word} 【{otherForm.reading}】
+                      {props.otherForms.length - 1 !== otherFormIndex ? '、' : null}
                     </div>
                   ))
                 }
@@ -203,10 +196,9 @@ const VocabularyDetails = (props) => {
             {intl.formatMessage(messages.kanjiPartsHeader)}
           </SubHeading>
           {
-            props.kanjiParts.map((kanji, kanjiIndex) => (
+            props.kanjiParts.map((kanji) => (
               <DetailsParts
-                // eslint-disable-next-line react/no-array-index-key
-                key={kanjiIndex}
+                key={uuidv4()}
                 tags={kanji.tags}
                 status={kanji.status}
                 link={`/kanji/${kanji.kanji}`}
@@ -227,9 +219,8 @@ const VocabularyDetails = (props) => {
           section: props.examples ? (
             <ExamplesWrapper>
               {
-                props.examples.map((el, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <div key={index}>{el}</div>
+                props.examples.map((example) => (
+                  <div key={uuidv4()}>{example}</div>
                 ))
               }
             </ExamplesWrapper>
@@ -269,87 +260,87 @@ const VocabularyDetails = (props) => {
           >
             <VerbConjugationGroup
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.JISHOU_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.jishouForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.JISHOU_FORM]}
+              grammar={[GRAMMAR_TYPES.jishouForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.KANOU_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.kanouForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.KANOU_FORM]}
+              grammar={[GRAMMAR_TYPES.kanouForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.TAI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.taiForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.TAI_FORM]}
+              grammar={[GRAMMAR_TYPES.taiForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.TE_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.teForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.TE_FORM]}
+              grammar={[GRAMMAR_TYPES.teForm]}
               noPast
             />
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.IKOU_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.ikouForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.IKOU_FORM]}
+              grammar={[GRAMMAR_TYPES.ikouForm]}
               noPast
               noNegative
             />
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.MEIREI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.meireiForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.MEIREI_FORM]}
+              grammar={[GRAMMAR_TYPES.meireiForm]}
               noPast
             />
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.JOUKEN_BA_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.joukenBaForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.JOUKEN_BA_FORM]}
+              grammar={[GRAMMAR_TYPES.joukenBaForm]}
               noPast
             />
             <VerbConjugationGroup
               showLine
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.JOUKEN_TARA_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.joukenTaraForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.JOUKEN_TARA_FORM]}
+              grammar={[GRAMMAR_TYPES.joukenTaraForm]}
               noPast
             />
             <VerbConjugationGroup
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.UKEMI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.ukemiForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.UKEMI_FORM]}
+              grammar={[GRAMMAR_TYPES.ukemiForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.SHIEKI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.shiekiForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.SHIEKI_FORM]}
+              grammar={[GRAMMAR_TYPES.shiekiForm]}
               politeForm
             />
             <VerbConjugationGroup
               showLabel
-              label={intl.formatMessage(conjugationMessages[`${grammarTypes.SHIEKIUKEMI_FORM}Label`])}
+              label={intl.formatMessage(conjugationMessages[`${GRAMMAR_TYPES.shiekiukemiForm}Label`])}
               verb={props.verb}
-              grammar={[grammarTypes.SHIEKIUKEMI_FORM, grammarTypes.SHIEKIUKEMI_SHORT_FORM]}
+              grammar={[GRAMMAR_TYPES.shiekiukemiForm, GRAMMAR_TYPES.shiekiukemiShortForm]}
               politeForm
             />
           </Modal>

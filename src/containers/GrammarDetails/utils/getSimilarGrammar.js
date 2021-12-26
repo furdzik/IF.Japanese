@@ -1,7 +1,7 @@
 import grammarJson from '@data/grammar.json';
 import similarGrammarJson from '@data/similar-grammar.json';
 
-import { getTags } from '@utils/common-details';
+import { getTags } from '@utils/commonDetails';
 
 const IS_SHORT = true;
 

@@ -8,12 +8,11 @@ import { flashcardShape, additionalInfoShape } from '@types/flashcard';
 import { filtersLengthShape, selectedFiltersShape } from '@types/filters';
 
 import Filters from '@components/Filters';
+import FlashcardsComponent from '@components/Flashcards';
 import Legend from '@components/Legend';
 import ProgressBar from '@components/ProgressBar';
-import FlashcardsComponent from '@components/Flashcards';
 
-import { getFlashcard, changeFilters, setReveal } from './Flashcards.reducer';
-
+import { changeFilters, getFlashcard, setReveal } from './Flashcards.reducer';
 import selector from './Flashcards.selector';
 
 const Flashcards = (props) => {
@@ -70,8 +69,8 @@ Flashcards.defaultProps = {
 };
 
 const mapDispatchToProps = {
-  getFlashcard,
   changeFilters,
+  getFlashcard,
   setReveal
 };
 
