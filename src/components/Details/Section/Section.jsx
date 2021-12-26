@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { sectionTypes } from '@constants';
+import { SECTION_TYPES } from '@constants';
 
 import {
   Wrapper
@@ -21,17 +21,17 @@ Section.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   type: PropTypes.oneOf([
-    sectionTypes.PRIMARY,
-    sectionTypes.SECONDARY,
-    sectionTypes.NAME,
-    sectionTypes.OTHER
+    SECTION_TYPES.primary,
+    SECTION_TYPES.secondary,
+    SECTION_TYPES.name,
+    SECTION_TYPES.other
   ]),
   wide: PropTypes.bool
 };
 
 Section.defaultProps = {
   className: '',
-  type: sectionTypes.OTHER,
+  type: SECTION_TYPES.other,
   wide: false
 };
 

@@ -19,22 +19,22 @@ export const getSelectedFiltersList = (originalList, selectedFilters, IDS, isKan
 
   // N5..N1 filters
   if (oneOfN5toN1Filters(selectedFilters, IDS)) {
-    if (selectedFilters.indexOf(IDS.LEVEL_5) > -1) {
+    if (selectedFilters.indexOf(IDS.level5) > -1) {
       list.n5 = originalList.filter((item) => item.level === 5);
     }
-    if (selectedFilters.indexOf(IDS.LEVEL_4) > -1) {
+    if (selectedFilters.indexOf(IDS.level4) > -1) {
       list.n4 = originalList.filter((item) => item.level === 4);
     }
-    if (selectedFilters.indexOf(IDS.LEVEL_3) > -1) {
+    if (selectedFilters.indexOf(IDS.level3) > -1) {
       list.n3 = originalList.filter((item) => item.level === 3);
     }
-    if (selectedFilters.indexOf(IDS.LEVEL_2) > -1) {
+    if (selectedFilters.indexOf(IDS.level2) > -1) {
       list.n2 = originalList.filter((item) => item.level === 2);
     }
-    if (selectedFilters.indexOf(IDS.LEVEL_1) > -1) {
+    if (selectedFilters.indexOf(IDS.level1) > -1) {
       list.n1 = originalList.filter((item) => item.level === 1);
     }
-    if (selectedFilters.indexOf(IDS.OTHER) > -1) {
+    if (selectedFilters.indexOf(IDS.other) > -1) {
       list.other = originalList.filter((item) => item.level === 0);
     }
 

@@ -1,4 +1,4 @@
-import { tagTypes } from '@constants';
+import { TAG_TYPES } from '@constants';
 
 import messages from '@lang/defaultMessages/details.messages';
 
@@ -27,21 +27,21 @@ export const getTags = (
 
   if (isCommon && !isGrammar) {
     newTags.push({
-      tagType: tagTypes.IS_COMMON,
+      tagType: TAG_TYPES.isCommon,
       label: shortMsg ? (messages.commonShort)?.defaultMessage : (messages.common)?.defaultMessage
     });
   }
 
   if (isCommon && isGrammar) {
     newTags.push({
-      tagType: tagTypes.IS_COMMON,
+      tagType: TAG_TYPES.isCommon,
       label: (messages.commonGrammar)?.defaultMessage
     });
   }
 
   if (isJoyo) {
     newTags.push({
-      tagType: tagTypes.JOYO,
+      tagType: TAG_TYPES.joyo,
       label: shortMsg
         ? (messages.joyoShort)?.defaultMessage
         : (messages.joyo)?.defaultMessage
@@ -50,7 +50,7 @@ export const getTags = (
 
   if (isJinmeiyo) {
     newTags.push({
-      tagType: tagTypes.JINMEIYO,
+      tagType: TAG_TYPES.jinmeiyo,
       label: shortMsg
         ? (messages.jinmeiyoShort)?.defaultMessage
         : (messages.jinmeiyo)?.defaultMessage
@@ -59,14 +59,14 @@ export const getTags = (
 
   if (isVerb) {
     newTags.push({
-      tagType: tagTypes.IS_VERB,
+      tagType: TAG_TYPES.IS_VERB,
       label: (messages.conjugationText)?.defaultMessage
     });
   }
 
   if (isCounter) {
     newTags.push({
-      tagType: tagTypes.COUNTER,
+      tagType: TAG_TYPES.counter,
       label: (messages.counter)?.defaultMessage
     });
   }
@@ -76,7 +76,7 @@ export const getTags = (
       const onlyOneJLPTTag = jlpt.reduce(reducedJPLT);
 
       newTags.push({
-        tagType: tagTypes.JLPT,
+        tagType: TAG_TYPES.jlpt,
         label: onlyOneJLPTTag.indexOf(JLPT_TEXT) > -1
           ? onlyOneJLPTTag.toUpperCase()
           : `${(messages.jlptText)?.defaultMessage}-${onlyOneJLPTTag}`
@@ -85,7 +85,7 @@ export const getTags = (
     if (typeof jlpt === 'number') {
       const level = jlpt.toString();
       newTags.push({
-        tagType: tagTypes.JLPT,
+        tagType: TAG_TYPES.jlpt,
         label: level.indexOf(JLPT_TEXT) > -1
           ? level.toUpperCase()
           : `${(messages.jlptText)?.defaultMessage}-${level}`
@@ -95,7 +95,7 @@ export const getTags = (
 
   if (levelGroup) {
     newTags.push({
-      tagType: tagTypes.LEVEL_GROUP,
+      tagType: TAG_TYPES.levelGroup,
       label: shortMsg
         ? (messages[`${levelGroup}Level`])?.defaultMessage
         : (messages.levelGroup)?.defaultMessage + (messages[`${levelGroup}Level`])?.defaultMessage
@@ -105,7 +105,7 @@ export const getTags = (
   if (grammarOrigin) {
     grammarOrigin.forEach((el) => {
       newTags.push({
-        tagType: tagTypes.GRAMMAR_ORIGIN,
+        tagType: TAG_TYPES.grammarOrigin,
         label: `${(messages[el.originName])?.defaultMessage} chapter ${el.originChapter}`
       });
     });
@@ -113,14 +113,14 @@ export const getTags = (
 
   if (grade) {
     newTags.push({
-      tagType: tagTypes.GRADE,
+      tagType: TAG_TYPES.grade,
       label: `${(messages.grade)?.defaultMessage} ${grade}`
     });
   }
 
   if (strokes) {
     newTags.push({
-      tagType: tagTypes.OTHER,
+      tagType: TAG_TYPES.other,
       label: `${(messages.strokes)?.defaultMessage} ${strokes}`
     });
   }
@@ -131,12 +131,12 @@ export const getTags = (
         const waniKaniLevel = el.replace(WANI_KANI_TEXT, '');
 
         newTags.push({
-          tagType: tagTypes.OTHER,
+          tagType: TAG_TYPES.other,
           label: `${(messages.waniKaniText)?.defaultMessage} ${waniKaniLevel}`
         });
       } else {
         newTags.push({
-          tagType: tagTypes.OTHER,
+          tagType: TAG_TYPES.other,
           label: el
         });
       }

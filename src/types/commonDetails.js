@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 
-import { tagTypes } from '@constants';
+import { TAG_TYPES } from '@constants';
 
 export const tagTypeShape = PropTypes.oneOf([
-  tagTypes.IS_COMMON,
-  tagTypes.IS_VERB,
-  tagTypes.JLPT,
-  tagTypes.JOYO,
-  tagTypes.JINMEIYO,
-  tagTypes.OTHER,
-  tagTypes.GRADE,
-  tagTypes.LEVEL_GROUP,
-  tagTypes.GRAMMAR_ORIGIN,
-  tagTypes.COUNTER
+  TAG_TYPES.isCommon,
+  TAG_TYPES.isVerb,
+  TAG_TYPES.jlpt,
+  TAG_TYPES.joyo,
+  TAG_TYPES.jinmeiyo,
+  TAG_TYPES.other,
+  TAG_TYPES.grade,
+  TAG_TYPES.levelGroup,
+  TAG_TYPES.grammarOrigin,
+  TAG_TYPES.counter
 ]);
 
 export const additionalExplanationShape = PropTypes.arrayOf(PropTypes.string);

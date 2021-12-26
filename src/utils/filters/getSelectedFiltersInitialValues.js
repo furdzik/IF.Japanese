@@ -1,6 +1,6 @@
 const getIdsArray = (IDS, hasToRepeat) => hasToRepeat
-  ? [IDS.KNOWN, IDS.IN_PROGRESS, IDS.NOW_LEARNING, IDS.TO_REPEAT, IDS.NOT_KNOWN]
-  : [IDS.KNOWN, IDS.IN_PROGRESS, IDS.NOW_LEARNING, IDS.NOT_KNOWN];
+  ? [IDS.known, IDS.inProgress, IDS.nowLearning, IDS.toRepeat, IDS.notKnown]
+  : [IDS.known, IDS.inProgress, IDS.nowLearning, IDS.notKnown];
 
 export const getSelectedFiltersInitialValues = (localStorageKey, IDS, hasToRepeat) => !localStorage
   .getItem(localStorageKey)

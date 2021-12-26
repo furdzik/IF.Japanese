@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { sectionTypes } from '@constants';
+import { SECTION_TYPES } from '@constants';
 
 import { breakpointMixin } from '@styles/mixins';
 
@@ -59,16 +59,16 @@ const OtherSection = css`
 const Wrapper = styled.div`
   width: 100%;
 
-  ${(props) => props.type === sectionTypes.PRIMARY && css`
+  ${(props) => props.type === SECTION_TYPES.primary && css`
     ${PrimarySection(props)};
   `};
-  ${(props) => props.type === sectionTypes.SECONDARY && css`
+  ${(props) => props.type === SECTION_TYPES.secondary && css`
     ${SecondarySection(props)};
   `};
-  ${(props) => props.type === sectionTypes.NAME && css`
+  ${(props) => props.type === SECTION_TYPES.name && css`
     ${NameSection(props)};
   `};
-  ${(props) => props.type === sectionTypes.OTHER && css`
+  ${(props) => props.type === SECTION_TYPES.other && css`
     ${OtherSection};
   `};
 `;

@@ -5,7 +5,7 @@ import {
   Routes
 } from 'react-router-dom';
 
-import { menuId, menu } from '@constants';
+import { MENU_ID, MENU } from '@constants';
 
 import Layout from '@components/Layout';
 import PageNotFound from '@components/PageNotFound';
@@ -27,7 +27,7 @@ const RoutesConfig = () => (
       <Route
         path="/"
         element={(
-          <Layout list={menu} menuActive={menuId.vocab}>
+          <Layout list={MENU} menuActive={MENU_ID.vocab}>
             <Vocabulary />
           </Layout>
         )}
@@ -35,7 +35,7 @@ const RoutesConfig = () => (
       <Route
         path="/kanji"
         element={(
-          <Layout list={menu} menuActive={menuId.kanji}>
+          <Layout list={MENU} menuActive={MENU_ID.kanji}>
             <Kanji />
           </Layout>
         )}
@@ -43,7 +43,7 @@ const RoutesConfig = () => (
       <Route
         path="/kanji/:kanji"
         element={(
-          <Layout list={menu} menuActive={menuId.kanji}>
+          <Layout list={MENU} menuActive={MENU_ID.kanji}>
             <KanjiDetails />
           </Layout>
         )}
@@ -51,7 +51,7 @@ const RoutesConfig = () => (
       <Route
         path="/vocab/:vocab"
         element={(
-          <Layout list={menu} menuActive={menuId.vocab}>
+          <Layout list={MENU} menuActive={MENU_ID.vocab}>
             <VocabularyDetails />
           </Layout>
         )}
@@ -59,7 +59,7 @@ const RoutesConfig = () => (
       <Route
         path="/verbs"
         element={(
-          <Layout list={menu} menuActive={menuId.verbs}>
+          <Layout list={MENU} menuActive={MENU_ID.verbs}>
             <Verbs />
           </Layout>
         )}
@@ -67,7 +67,7 @@ const RoutesConfig = () => (
       <Route
         path="/grammar"
         element={(
-          <Layout list={menu} menuActive={menuId.grammar}>
+          <Layout list={MENU} menuActive={MENU_ID.grammar}>
             <Grammar />
           </Layout>
         )}
@@ -75,7 +75,7 @@ const RoutesConfig = () => (
       <Route
         path="/grammar/:grammarId"
         element={(
-          <Layout list={menu} menuActive={menuId.grammar}>
+          <Layout list={MENU} menuActive={MENU_ID.grammar}>
             <GrammarDetails />
           </Layout>
         )}
@@ -83,7 +83,7 @@ const RoutesConfig = () => (
       <Route
         path="/expressions"
         element={(
-          <Layout list={menu} menuActive={menuId.grammar}>
+          <Layout list={MENU} menuActive={MENU_ID.grammar}>
             expressions WIP
           </Layout>
         )}
@@ -91,7 +91,7 @@ const RoutesConfig = () => (
       <Route
         path="/grammar-politeness"
         element={(
-          <Layout list={menu} menuActive={menuId.grammar}>
+          <Layout list={MENU} menuActive={MENU_ID.grammar}>
             grammar-politeness WIP
           </Layout>
         )}
@@ -99,7 +99,7 @@ const RoutesConfig = () => (
       <Route
         path="/others"
         element={(
-          <Layout list={menu} menuActive={menuId.others}>
+          <Layout list={MENU} menuActive={MENU_ID.others}>
             <OthersMainPage />
           </Layout>
         )}
@@ -107,7 +107,7 @@ const RoutesConfig = () => (
       <Route
         path="/kana-game"
         element={(
-          <Layout list={menu} menuActive={menuId.others}>
+          <Layout list={MENU} menuActive={MENU_ID.others}>
             <KanaGame />
           </Layout>
         )}
@@ -115,7 +115,7 @@ const RoutesConfig = () => (
       <Route
         path="/flashcards"
         element={(
-          <Layout list={menu} menuActive={menuId.others}>
+          <Layout list={MENU} menuActive={MENU_ID.others}>
             <Flashcards />
           </Layout>
         )}
@@ -123,7 +123,7 @@ const RoutesConfig = () => (
       <Route
         path="*"
         element={(
-          <Layout list={menu} menuActive={-1}>
+          <Layout list={MENU} menuActive={-1}>
             <PageNotFound />
           </Layout>
         )}

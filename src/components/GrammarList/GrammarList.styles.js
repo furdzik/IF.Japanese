@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 import { Link } from 'react-router-dom';
 
-import { grammarLevels } from '@constants';
+import { GRAMMAR_LEVELS } from '@constants';
 
 const List = styled.ul`
   display: flex;
@@ -51,19 +51,19 @@ const GrammarBox = styled.div`
   text-align: center;
   white-space: nowrap;
 
-  ${(props) => props.level === grammarLevels.LEVEL_5 && css`
+  ${(props) => props.level === GRAMMAR_LEVELS.level5 && css`
     background: ${props.theme.colors.blue};
   `};
-  ${(props) => props.level === grammarLevels.LEVEL_4 && css`
+  ${(props) => props.level === GRAMMAR_LEVELS.level4 && css`
     background: ${props.theme.colors.green};
   `};
-  ${(props) => props.level === grammarLevels.LEVEL_3 && css`
+  ${(props) => props.level === GRAMMAR_LEVELS.level3 && css`
     background: ${props.theme.colors.yellow};
   `};
-  ${(props) => props.level === grammarLevels.LEVEL_2 && css`
+  ${(props) => props.level === GRAMMAR_LEVELS.level2 && css`
     background: ${props.theme.colors.orange};
   `};
-  ${(props) => props.level === grammarLevels.LEVEL_1 && css`
+  ${(props) => props.level === GRAMMAR_LEVELS.level1 && css`
     background: ${props.theme.colors.violet};
   `};
 

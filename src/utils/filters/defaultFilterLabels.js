@@ -6,34 +6,34 @@ export const getFilterLabels = (hasToRepeat = false) => {
 
   const filters = [
     {
-      value: FILTERS_IDS.KNOWN,
+      value: FILTERS_IDS.known,
       label: (defaultMessages.known).defaultMessage,
       helper: (defaultMessages.knownHelper).defaultMessage
     },
     {
-      value: FILTERS_IDS.NOW_LEARNING,
+      value: FILTERS_IDS.nowLearning,
       label: (defaultMessages.nowLearning).defaultMessage,
       helper: (defaultMessages.nowLearningHelper).defaultMessage
     },
     {
-      value: FILTERS_IDS.IN_PROGRESS,
+      value: FILTERS_IDS.inProgress,
       label: (defaultMessages.inProgress).defaultMessage,
       helper: (defaultMessages.inProgressHelper).defaultMessage
     },
     {
-      value: FILTERS_IDS.TO_REPEAT,
+      value: FILTERS_IDS.toRepeat,
       label: (defaultMessages.toRepeat).defaultMessage,
       helper: (defaultMessages.toRepeatHelper).defaultMessage
     },
     {
-      value: FILTERS_IDS.NOT_KNOWN,
+      value: FILTERS_IDS.notKnown,
       label: (defaultMessages.notKnown).defaultMessage,
       helper: (defaultMessages.notKnownHelper).defaultMessage
     }
   ];
 
   filters.forEach((el) => {
-    if ((hasToRepeat) || (el.value !== FILTERS_IDS.TO_REPEAT && !hasToRepeat)) {
+    if ((hasToRepeat) || (el.value !== FILTERS_IDS.toRepeat && !hasToRepeat)) {
       newFilters.push(el);
     }
   });
@@ -43,27 +43,27 @@ export const getFilterLabels = (hasToRepeat = false) => {
 
 export const secondaryFilterLabels = [
   {
-    value: FILTERS_IDS.LEVEL_5,
+    value: FILTERS_IDS.level5,
     label: (defaultMessages.n5).defaultMessage
   },
   {
-    value: FILTERS_IDS.LEVEL_4,
+    value: FILTERS_IDS.level4,
     label: (defaultMessages.n4).defaultMessage
   },
   {
-    value: FILTERS_IDS.LEVEL_3,
+    value: FILTERS_IDS.level3,
     label: (defaultMessages.n3).defaultMessage
   },
   {
-    value: FILTERS_IDS.LEVEL_2,
+    value: FILTERS_IDS.level2,
     label: (defaultMessages.n2).defaultMessage
   },
   {
-    value: FILTERS_IDS.LEVEL_1,
+    value: FILTERS_IDS.level1,
     label: (defaultMessages.n1).defaultMessage
   },
   {
-    value: FILTERS_IDS.OTHER,
+    value: FILTERS_IDS.other,
     label: (defaultMessages.other).defaultMessage
   }
 ];
