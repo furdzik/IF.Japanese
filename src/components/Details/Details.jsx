@@ -8,11 +8,10 @@ import { SECTION_TYPES } from '@constants';
 
 import { japaneseFormShape } from '@types/vocabularyDetails';
 
-import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
-import ErrorMessageBox from '@components/ui/ErrorMessageBox';
-import Tag from '@components/ui/Tag';
-
+import ErrorMessageBox from '@components/ErrorMessageBox';
 import Heading from '@components/Heading';
+import KanjiWithFurigana from '@components/KanjiWithFurigana';
+import Tag from '@components/Tag';
 
 import Section from './Section';
 

@@ -7,15 +7,14 @@ import { filtersLengthShape, selectedFiltersShape } from '@types/filters';
 
 import { getFilterLabels, secondaryFilterLabels } from '@utils/filters';
 
-import Loader from '@components/ui/Loader';
-
 import Filters from '@components/Filters';
 import Legend from '@components/Legend';
-import VocabularyList from '@components/VocabularyList';
+import Loader from '@components/Loader';
 import ProgressBar from '@components/ProgressBar';
+import VocabularyList from '@components/VocabularyList';
 
+import { changeFilters, getVocabulary } from './Vocabulary.reducer';
 import selector from './Vocabulary.selector';
-import { getVocabulary, changeFilters } from './Vocabulary.reducer';
 
 const Vocabulary = (props) => {
   useEffect(() => {

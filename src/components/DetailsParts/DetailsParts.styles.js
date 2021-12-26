@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import Tile from '@components/ui/Tile';
+import Tile from '@components/Tile';
 
 const Wrapper = styled.div`
   display: flex;

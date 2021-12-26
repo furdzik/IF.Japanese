@@ -11,7 +11,7 @@ import {
   getLength,
   lengthInitialState
 } from '@utils/filters';
-import { isCorrectVocabularyMeaning } from '@utils/vocabulary-meaning';
+import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
 
 import { getRandomVocab, getFlashcardData } from './utils';
 import messages from './Flashcards.messages';

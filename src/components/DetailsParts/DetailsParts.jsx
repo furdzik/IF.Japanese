@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Link } from 'react-router-dom';
 
 import { statusShape, tagsShape } from '@types/commonDetails';
 
-import Tag from '@components/ui/Tag';
+import Tag from '@components/Tag';
 
 import {
   Wrapper,
@@ -22,12 +23,11 @@ const DetailsParts = (props) => (
       props.tags ? (
         <SmallTags>
           {
-            props.tags.map((tag, tagIndex) => (
+            props.tags.map((tag) => (
               <Tag
                 small
                 tagType={tag.tagType}
-                // eslint-disable-next-line react/no-array-index-key
-                key={tagIndex}
+                key={uuidv4()}
               >
                 {tag.label}
               </Tag>

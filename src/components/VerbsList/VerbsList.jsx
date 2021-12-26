@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { verbShape } from '@types/verb';
 
@@ -11,9 +12,8 @@ import {
 const VerbsList = (props) => (
   <VerbsWrapper>
     {
-      props.verbs.map((item, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <VerbsListItem key={index} item={item} />
+      props.verbs.map((item) => (
+        <VerbsListItem key={uuidv4()} item={item} />
       ))
     }
   </VerbsWrapper>

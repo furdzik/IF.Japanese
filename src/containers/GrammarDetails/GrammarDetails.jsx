@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 
 import {
   additionalExplanationShape,
+  problemsShape,
   statusShape,
-  tagsShape,
-  problemsShape
+  tagsShape
 } from '@types/commonDetails';
 import {
   examplesShape,
@@ -15,12 +15,11 @@ import {
   similarGrammarDetailsShape
 } from '@types/grammar';
 
-import Loader from '@components/ui/Loader';
-
 import GrammarDetailsComponent from '@components/GrammarDetails';
+import Loader from '@components/Loader';
 
-import selector from './GrammarDetails.selector';
 import { getGrammarDetails } from './GrammarDetails.reducer';
+import selector from './GrammarDetails.selector';
 
 const GrammarDetails = (props) => {
   const params = useParams();

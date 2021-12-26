@@ -5,8 +5,8 @@ import { fetchJisho, fetchKanjiAlternative } from '@api';
 
 import { URL_SEPARATOR } from '@constants';
 
-import { isCorrectVocabularyMeaning } from '@utils/vocabulary-meaning';
-import { getTags, prepareKanjiDetailsData } from '@utils/common-details';
+import { isCorrectVocabularyMeaning } from '@utils/vocabularyMeaning';
+import { getTags, prepareKanjiDetailsData } from '@utils/commonDetails';
 import { getKanji, getFurigana } from '@utils/kanji';
 
 import {

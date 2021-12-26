@@ -2,9 +2,9 @@ import React from 'react';
 
 import { NUMBERS, COUNTERS_GROUPS } from '@constants';
 
-import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
+import countersMessages from '@lang/messages/counters.messages';
 
-import messages from '@lang/defaultMessages/counters.messages';
+import KanjiWithFurigana from '@components/KanjiWithFurigana';
 
 export const getNumberReading = (number, counterGroup, alternative = false) => {
   switch (number) {
@@ -13,7 +13,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         counterGroup === COUNTERS_GROUPS.tsu
         || counterGroup === COUNTERS_GROUPS.nin
       ) {
-        return (messages.oneGroupTsu)?.defaultMessage;
+        return (countersMessages.oneGroupTsu)?.defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.k
         || counterGroup === COUNTERS_GROUPS.h
@@ -22,12 +22,12 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.so
         || counterGroup === COUNTERS_GROUPS.f
       ) {
-        return (messages.oneGroupKHS)?.defaultMessage;
+        return (countersMessages.oneGroupKHS)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.oneGroupNichi)?.defaultMessage;
+        return (countersMessages.oneGroupNichi)?.defaultMessage;
       }
 
-      return (messages.oneGroupDefault)?.defaultMessage;
+      return (countersMessages.oneGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.two: {
@@ -35,92 +35,92 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         counterGroup === COUNTERS_GROUPS.tsu
         || counterGroup === COUNTERS_GROUPS.nin
       ) {
-        return (messages.twoGroupTsu)?.defaultMessage;
+        return (countersMessages.twoGroupTsu)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.twoGroupNichi)?.defaultMessage;
+        return (countersMessages.twoGroupNichi)?.defaultMessage;
       }
 
-      return (messages.twoGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.three: {
       if (counterGroup === COUNTERS_GROUPS.tsu) {
-        return (messages.threeGroupTsu)?.defaultMessage;
+        return (countersMessages.threeGroupTsu)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.threeGroupNichi)?.defaultMessage;
+        return (countersMessages.threeGroupNichi)?.defaultMessage;
       }
 
-      return (messages.threeGroupDefault)?.defaultMessage;
+      return (countersMessages.threeGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.four: {
       if (alternative) {
-        return (messages.fourGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.fourGroupDefaultAlternative)?.defaultMessage;
       }
 
       if (counterGroup === COUNTERS_GROUPS.tsu) {
-        return (messages.fourGroupTsu)?.defaultMessage;
+        return (countersMessages.fourGroupTsu)?.defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.ji
         || counterGroup === COUNTERS_GROUPS.nin
         || counterGroup === COUNTERS_GROUPS.nen
       ) {
-        return (messages.fourGroupJNinNen)?.defaultMessage;
+        return (countersMessages.fourGroupJNinNen)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.gatsu) {
-        return (messages.fourGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.fourGroupDefaultAlternative)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.fourGroupNichi)?.defaultMessage;
+        return (countersMessages.fourGroupNichi)?.defaultMessage;
       }
 
-      return (messages.fourGroupDefault)?.defaultMessage;
+      return (countersMessages.fourGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.five: {
       if (counterGroup === COUNTERS_GROUPS.tsu) {
-        return (messages.fiveGroupTsu)?.defaultMessage;
+        return (countersMessages.fiveGroupTsu)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.fiveGroupNichi)?.defaultMessage;
+        return (countersMessages.fiveGroupNichi)?.defaultMessage;
       }
 
-      return (messages.fiveGroupDefault)?.defaultMessage;
+      return (countersMessages.fiveGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.six: {
       if (counterGroup === COUNTERS_GROUPS.tsu) {
-        return (messages.sixGroupTsu)?.defaultMessage;
+        return (countersMessages.sixGroupTsu)?.defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.k
         || counterGroup === COUNTERS_GROUPS.h
         || counterGroup === COUNTERS_GROUPS.f
       ) {
-        return (messages.sixGroupKH)?.defaultMessage;
+        return (countersMessages.sixGroupKH)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.sixGroupNichi)?.defaultMessage;
+        return (countersMessages.sixGroupNichi)?.defaultMessage;
       }
 
-      return (messages.sixGroupDefault)?.defaultMessage;
+      return (countersMessages.sixGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.seven: {
       if (alternative) {
-        return (messages.sevenGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.sevenGroupDefaultAlternative)?.defaultMessage;
       }
 
       if (
         counterGroup === COUNTERS_GROUPS.ji
         || counterGroup === COUNTERS_GROUPS.gatsu
       ) {
-        return (messages.sevenGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.sevenGroupDefaultAlternative)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.sevenGroupNichi)?.defaultMessage;
+        return (countersMessages.sevenGroupNichi)?.defaultMessage;
       }
 
-      return (messages.sevenGroupDefault)?.defaultMessage;
+      return (countersMessages.sevenGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.eight: {
       if (counterGroup === COUNTERS_GROUPS.tsu) {
-        return (messages.eightGroupTsu)?.defaultMessage;
+        return (countersMessages.eightGroupTsu)?.defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.k
         || counterGroup === COUNTERS_GROUPS.h
@@ -129,36 +129,36 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.so
         || counterGroup === COUNTERS_GROUPS.f
       ) {
-        return (messages.eightGroupKHS)?.defaultMessage;
+        return (countersMessages.eightGroupKHS)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.eightGroupNichi)?.defaultMessage;
+        return (countersMessages.eightGroupNichi)?.defaultMessage;
       }
 
-      return (messages.eightGroupDefault)?.defaultMessage;
+      return (countersMessages.eightGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.nine: {
       if (counterGroup === COUNTERS_GROUPS.tsu) {
-        return (messages.nineGroupTsu)?.defaultMessage;
+        return (countersMessages.nineGroupTsu)?.defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.ji
         || counterGroup === COUNTERS_GROUPS.gatsu
       ) {
-        return (messages.nineGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.nineGroupDefaultAlternative)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.nineGroupNichi)?.defaultMessage;
+        return (countersMessages.nineGroupNichi)?.defaultMessage;
       }
 
-      return (messages.nineGroupDefault)?.defaultMessage;
+      return (countersMessages.nineGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.ten: {
       if (alternative) {
-        return (messages.tenGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.tenGroupDefaultAlternative)?.defaultMessage;
       }
 
       if (counterGroup === COUNTERS_GROUPS.tsu) {
-        return (messages.tenGroupTsu)?.defaultMessage;
+        return (countersMessages.tenGroupTsu)?.defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.k
         || counterGroup === COUNTERS_GROUPS.h
@@ -167,184 +167,184 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         || counterGroup === COUNTERS_GROUPS.so
         || counterGroup === COUNTERS_GROUPS.f
       ) {
-        return (messages.tenGroupKHS)?.defaultMessage;
+        return (countersMessages.tenGroupKHS)?.defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.tenGroupNichi)?.defaultMessage;
+        return (countersMessages.tenGroupNichi)?.defaultMessage;
       }
 
-      return (messages.tenGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.eleven: {
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.oneGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.oneGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twelve: {
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.twoGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.twoGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.thirteen: {
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.threeGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.threeGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.fourteen: {
       if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.tenGroupDefault)?.defaultMessage
-          + (messages.fourGroupNichi)?.defaultMessage;
+        return (countersMessages.tenGroupDefault)?.defaultMessage
+          + (countersMessages.fourGroupNichi)?.defaultMessage;
       }
 
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.fourGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.fourGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.fifteen: {
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.fiveGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.fiveGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.sixteen: {
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.sixGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.sixGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.seventeen: {
       if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.tenGroupDefault)?.defaultMessage
-          + (messages.sevenGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.tenGroupDefault)?.defaultMessage
+          + (countersMessages.sevenGroupDefaultAlternative)?.defaultMessage;
       }
 
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.sevenGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.sevenGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.eighteen: {
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.eightGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.eightGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.nineteen: {
       if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.tenGroupDefault)?.defaultMessage
-          + (messages.nineGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.tenGroupDefault)?.defaultMessage
+          + (countersMessages.nineGroupDefaultAlternative)?.defaultMessage;
       }
 
-      return (messages.tenGroupDefault)?.defaultMessage
-        + (messages.nineGroupDefault)?.defaultMessage;
+      return (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.nineGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twenty: {
       if (counterGroup === COUNTERS_GROUPS.sai) {
         return (
           <KanjiWithFurigana
-            kanji={(messages.twentyGroupSaiKanji)?.defaultMessage.split('')}
-            furigana={(messages.twentyGroupSaiFurigana)?.defaultMessage.split('')}
+            kanji={(countersMessages.twentyGroupSaiKanji)?.defaultMessage.split('')}
+            furigana={(countersMessages.twentyGroupSaiFurigana)?.defaultMessage.split('')}
           />
         );
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.twentyGroupNichi)?.defaultMessage;
+        return (countersMessages.twentyGroupNichi)?.defaultMessage;
       }
 
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentyOne: {
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.oneGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.oneGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentyTwo: {
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.twoGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.twoGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentyThree: {
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.threeGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.threeGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentyFour: {
       if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.twoGroupDefault)?.defaultMessage
-          + (messages.tenGroupDefault)?.defaultMessage
-          + (messages.fourGroupNichi)?.defaultMessage;
+        return (countersMessages.twoGroupDefault)?.defaultMessage
+          + (countersMessages.tenGroupDefault)?.defaultMessage
+          + (countersMessages.fourGroupNichi)?.defaultMessage;
       }
 
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.fourGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.fourGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentyFive: {
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.fiveGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.fiveGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentySix: {
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.sixGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.sixGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentySeven: {
       if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.twoGroupDefault)?.defaultMessage
-          + (messages.tenGroupDefault)?.defaultMessage
-          + (messages.sevenGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.twoGroupDefault)?.defaultMessage
+          + (countersMessages.tenGroupDefault)?.defaultMessage
+          + (countersMessages.sevenGroupDefaultAlternative)?.defaultMessage;
       }
 
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.sevenGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.sevenGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentyEight: {
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.eightGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.eightGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.twentyNine: {
       if (counterGroup === COUNTERS_GROUPS.nichi) {
-        return (messages.twoGroupDefault)?.defaultMessage
-          + (messages.tenGroupDefault)?.defaultMessage
-          + (messages.nineGroupDefaultAlternative)?.defaultMessage;
+        return (countersMessages.twoGroupDefault)?.defaultMessage
+          + (countersMessages.tenGroupDefault)?.defaultMessage
+          + (countersMessages.nineGroupDefaultAlternative)?.defaultMessage;
       }
 
-      return (messages.twoGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.nineGroupDefault)?.defaultMessage;
+      return (countersMessages.twoGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.nineGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.thirty: {
       if (alternative) {
         return (
           <KanjiWithFurigana
-            kanji={(messages.thirtyGroupFunAlternativeKanji)?.defaultMessage.split('')}
-            furigana={(messages.thirtyGroupFunAlternativeFurigana)?.defaultMessage.split('')}
+            kanji={(countersMessages.thirtyGroupFunAlternativeKanji)?.defaultMessage.split('')}
+            furigana={(countersMessages.thirtyGroupFunAlternativeFurigana)?.defaultMessage.split('')}
           />
         );
       }
 
       if (counterGroup === COUNTERS_GROUPS.f) {
-        return (messages.threeGroupDefault)?.defaultMessage
-          + (messages.tenGroupKHS)?.defaultMessage;
+        return (countersMessages.threeGroupDefault)?.defaultMessage
+          + (countersMessages.tenGroupKHS)?.defaultMessage;
       }
-      return (messages.threeGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage;
+      return (countersMessages.threeGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage;
     }
 
     case NUMBERS.thirtyOne: {
-      return (messages.threeGroupDefault)?.defaultMessage
-        + (messages.tenGroupDefault)?.defaultMessage
-        + (messages.oneGroupDefault)?.defaultMessage;
+      return (countersMessages.threeGroupDefault)?.defaultMessage
+        + (countersMessages.tenGroupDefault)?.defaultMessage
+        + (countersMessages.oneGroupDefault)?.defaultMessage;
     }
 
     default:

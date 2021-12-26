@@ -1,6 +1,6 @@
 import { TAG_TYPES } from '@constants';
 
-import messages from '@lang/defaultMessages/details.messages';
+import messages from '@lang/messages/details.messages';
 
 const WANI_KANI_TEXT = 'wanikani';
 const JLPT_TEXT = 'jlpt';

@@ -1,3 +1,3 @@
 export { calculateViewportHeight } from './calculateViewportHeight';
-export { throttledCalculateViewportHeight } from './throttledCalculateViewportHeight';
 export { checkHeaderFooterHeight } from './checkHeaderFooterHeight';
+export { throttledCalculateViewportHeight } from './throttledCalculateViewportHeight';

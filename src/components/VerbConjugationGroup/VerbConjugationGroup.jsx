@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
-import { inflectionTypes } from '@constants';
+import { INFLECTION_TYPES } from '@constants';
 
 import { verbItemShape } from '@types/verb';
 
@@ -23,20 +24,19 @@ const VerbConjugationGroup = (props) => props.verb ? (
     }
     {
       props.grammar
-        .map((item, index) => shouldDisplayShortForm(item, props.verb.verbGroup) ? (
-        // eslint-disable-next-line react/no-array-index-key
-          <Box key={index}>
+        .map((item) => shouldDisplayShortForm(item, props.verb.verbGroup) ? (
+          <Box key={uuidv4()}>
             <VerbConjugationWrapper
               verb={props.verb}
               grammar={item}
-              inflection={inflectionTypes.NORMAL}
+              inflection={INFLECTION_TYPES.normal}
             />
             {
               !props.noNegative ? (
                 <VerbConjugationWrapper
                   verb={props.verb}
                   grammar={item}
-                  inflection={inflectionTypes.NEGATIVE}
+                  inflection={INFLECTION_TYPES.negative}
                 />
               ) : null
             }
@@ -46,12 +46,12 @@ const VerbConjugationGroup = (props) => props.verb ? (
                   <VerbConjugationWrapper
                     verb={props.verb}
                     grammar={item}
-                    inflection={inflectionTypes.PAST}
+                    inflection={INFLECTION_TYPES.past}
                   />
                   <VerbConjugationWrapper
                     verb={props.verb}
                     grammar={item}
-                    inflection={inflectionTypes.PAST_NEGATIVE}
+                    inflection={INFLECTION_TYPES.pastNegative}
                   />
                 </React.Fragment>
               ) : null
@@ -61,15 +61,14 @@ const VerbConjugationGroup = (props) => props.verb ? (
     }
     {
       props.grammar
-        .map((item, index) => props.politeForm && shouldDisplayShortForm(
+        .map((item) => props.politeForm && shouldDisplayShortForm(
           item, props.verb.verbGroup
         ) ? (
-          // eslint-disable-next-line react/no-array-index-key
-          <Box key={index}>
+          <Box key={uuidv4()}>
             <VerbConjugationWrapper
               verb={props.verb}
               grammar={item}
-              inflection={inflectionTypes.NORMAL}
+              inflection={INFLECTION_TYPES.normal}
               politeForm
             />
             {
@@ -77,7 +76,7 @@ const VerbConjugationGroup = (props) => props.verb ? (
                 <VerbConjugationWrapper
                   verb={props.verb}
                   grammar={item}
-                  inflection={inflectionTypes.NEGATIVE}
+                  inflection={INFLECTION_TYPES.negative}
                   politeForm
                 />
               ) : null
@@ -88,13 +87,13 @@ const VerbConjugationGroup = (props) => props.verb ? (
                   <VerbConjugationWrapper
                     verb={props.verb}
                     grammar={item}
-                    inflection={inflectionTypes.PAST}
+                    inflection={INFLECTION_TYPES.past}
                     politeForm
                   />
                   <VerbConjugationWrapper
                     verb={props.verb}
                     grammar={item}
-                    inflection={inflectionTypes.PAST_NEGATIVE}
+                    inflection={INFLECTION_TYPES.pastNegative}
                     politeForm
                   />
                 </React.Fragment>

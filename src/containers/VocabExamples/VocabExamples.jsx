@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 
 import { simpleExamplesShape, vocabExamplesShape } from '@types/vocabExamples';
 
-import Loader from '@components/ui/Loader';
+import Loader from '@components/Loader';
 import VocabExamplesComponent from '@components/VocabExamples';
 
-import selector from './VocabExamples.selector';
 import { getVocabExamples } from './VocabExamples.reducer';
+import selector from './VocabExamples.selector';
 
 const VocabExamples = (props) => {
   useEffect(() => {

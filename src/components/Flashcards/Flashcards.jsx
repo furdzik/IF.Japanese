@@ -6,11 +6,11 @@ import { mdiChevronRight } from '@mdi/js';
 
 import { flashcardShape, additionalInfoShape } from '@types/flashcard';
 
-import defaultMessages from '@lang/defaultMessages/default.messages';
+import defaultMessages from '@lang/messages/default.messages';
 
-import Button from '@components/ui/Button';
-import ErrorMessageBox from '@components/ui/ErrorMessageBox';
-import Switcher from '@components/ui/Switcher';
+import Button from '@components/Button';
+import ErrorMessageBox from '@components/ErrorMessageBox';
+import Switcher from '@components/Switcher';
 
 import {
   Wrapper,

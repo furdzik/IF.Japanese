@@ -7,19 +7,19 @@ import {
 
 import { MENU_ID, MENU } from '@constants';
 
-import Layout from '@components/Layout';
-import PageNotFound from '@components/PageNotFound';
-import OthersMainPage from '@components/OthersMainPage';
 import KanaGame from '@components/KanaGame';
+import Layout from '@components/Layout';
+import OthersMainPage from '@components/OthersMainPage';
+import PageNotFound from '@components/PageNotFound';
 
-import Vocabulary from '@containers/Vocabulary';
-import VocabularyDetails from '@containers/VocabularyDetails';
-import Kanji from '@containers/Kanji';
-import KanjiDetails from '@containers/KanjiDetails';
-import Verbs from '@containers/Verbs';
 import Flashcards from '@containers/Flashcards';
 import Grammar from '@containers/Grammar';
 import GrammarDetails from '@containers/GrammarDetails';
+import Kanji from '@containers/Kanji';
+import KanjiDetails from '@containers/KanjiDetails';
+import Verbs from '@containers/Verbs';
+import Vocabulary from '@containers/Vocabulary';
+import VocabularyDetails from '@containers/VocabularyDetails';
 
 const RoutesConfig = () => (
   <BrowserRouter>

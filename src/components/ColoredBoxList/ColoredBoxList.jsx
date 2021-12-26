@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
-import Tooltip from '@components/ui/Tooltip';
+import Tooltip from '@components/Tooltip';
 
 import {
   BoxList,
@@ -15,10 +16,9 @@ const ColoredBoxList = (props) => (
   <React.Fragment>
     <BoxList>
       {
-        props.list.map((menuItem, index) => (
+        props.list.map((menuItem) => (
           <BoxItem
-            // eslint-disable-next-line react/no-array-index-key
-            key={index}
+            key={uuidv4()}
             data-tip={menuItem.label}
             data-for={COLORED_BOX_TOOLTIP_ID}
           >

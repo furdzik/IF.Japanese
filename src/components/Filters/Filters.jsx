@@ -6,7 +6,7 @@ import { selectedFiltersShape, filterListShape } from '@types/filters';
 import { useBreakpoint } from '@hooks/useBreakpoint';
 import { breakpoints } from '@styles/basic/breakpoints';
 
-import CheckboxList from '@components/ui/CheckboxList';
+import CheckboxList from '@components/CheckboxList';
 
 import {
   Wrapper,

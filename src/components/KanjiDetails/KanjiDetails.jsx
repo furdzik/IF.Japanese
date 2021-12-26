@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
+import { v4 as uuidv4 } from 'uuid';
 
 import {
   additionalExplanationShape,
@@ -12,14 +13,13 @@ import {
 } from '@types/commonDetails';
 import { strokesShape, examplesShape, similarKanjiArrayShape } from '@types/kanjiDetails';
 
-import Tag from '@components/ui/Tag';
-
 import AdditionalExplanationBox from '@components/AdditionalExplanationBox';
 import Details from '@components/Details';
 import DetailsParts from '@components/DetailsParts';
 import ProblemsBox from '@components/ProblemsBox';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
 import SubHeading from '@components/SubHeading';
+import Tag from '@components/Tag';
 
 import VocabExamples from '@containers/VocabExamples';
 
@@ -43,9 +43,8 @@ const KanjiDetails = (props) => {
     const tags = [];
 
     if (props.tags) {
-      props.tags.forEach((el, index) => {
-        // eslint-disable-next-line react/no-array-index-key
-        tags.push(<Tag tagType={el.tagType} key={index}>{el.label}</Tag>);
+      props.tags.forEach((el) => {
+        tags.push(<Tag tagType={el.tagType} key={uuidv4()}>{el.label}</Tag>);
       });
     }
 
@@ -95,10 +94,9 @@ const KanjiDetails = (props) => {
             {intl.formatMessage(messages.similarKanjiHeader)}
           </SubHeading>
           {
-            props.similarKanji.map((kanji, index) => (
+            props.similarKanji.map((kanji) => (
               <DetailsParts
-                // eslint-disable-next-line react/no-array-index-key
-                key={index}
+                key={uuidv4()}
                 tags={kanji.tags}
                 status={kanji.status}
                 link={`/kanji/${kanji.kanji}`}
@@ -136,9 +134,8 @@ const KanjiDetails = (props) => {
                 props.strokes?.graphs ? (
                   <StrokeWrapper>
                     {
-                      props.strokes?.graphs.map((image, index) => (
-                        // eslint-disable-next-line react/no-array-index-key
-                        <StrokeBox key={index}>
+                      props.strokes?.graphs.map((image) => (
+                        <StrokeBox key={uuidv4()}>
                           <StrokeImage src={image} alt="" />
                         </StrokeBox>
                       ))

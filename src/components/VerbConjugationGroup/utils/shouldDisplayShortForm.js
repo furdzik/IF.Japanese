@@ -1,9 +1,9 @@
-import { grammarTypes, verbGroupTypes } from '@constants';
+import { GRAMMAR_TYPES, VERB_GROUP_TYPES } from '@constants';
 
 export const shouldDisplayShortForm = (grammar, verbGroup) => (
-  grammar !== grammarTypes.SHIEKIUKEMI_SHORT_FORM
-  || (verbGroup !== verbGroupTypes.group2
-    && verbGroup !== verbGroupTypes.specialVerb1
-    && verbGroup !== verbGroupTypes.specialVerb2
+  grammar !== GRAMMAR_TYPES.shiekiukemiShortForm
+  || (verbGroup !== VERB_GROUP_TYPES.group2
+    && verbGroup !== VERB_GROUP_TYPES.specialVerb1
+    && verbGroup !== VERB_GROUP_TYPES.specialVerb2
   )
 );

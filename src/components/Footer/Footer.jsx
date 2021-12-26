@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 
-import Container from '@components/ui/Container';
+import Container from '@components/Container';
 
 import {
   FooterWrapper

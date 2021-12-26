@@ -1,2 +1,2 @@
-export { getRandomVocab } from './getRandomVocab';
 export { getFlashcardData } from './getFlashcardData';
+export { getRandomVocab } from './getRandomVocab';

@@ -59,7 +59,7 @@ const Number = styled.span`
   font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
 
   ${(props) => props.specialPronunciation && css`
-    background: #a2dfef;
+    background: ${props.theme.colors.lighterBlue};
   `};
 
   ${(props) => props.specialConjugation && css`
@@ -73,7 +73,7 @@ const Number = styled.span`
       bottom: 0;
       right: 0;
       content: '';
-      border-color: transparent #a2dfef;
+      border-color: transparent ${props.theme.colors.lighterBlue};
       border-style: solid;
       border-width: 3.3rem 4rem 0 0;
     }

@@ -21,14 +21,13 @@ import {
 
 import { getVocabSpecificReading } from '@utils/vocabulary';
 
-import Loader from '@components/ui/Loader';
-
+import Loader from '@components/Loader';
 import VocabularyDetailsComponent from '@components/VocabularyDetails';
 
 import { PROPER_NAME_TYPE, getProperName } from './utils';
 
-import selector from './VocabularyDetails.selector';
 import { getVocabularyDetails } from './VocabularyDetails.reducer';
+import selector from './VocabularyDetails.selector';
 
 const VocabularyDetails = (props) => {
   const params = useParams();

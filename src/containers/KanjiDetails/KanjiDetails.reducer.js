@@ -2,7 +2,7 @@ import kanjiJson from '@data/kanji.json';
 
 import { fetchKanji, fetchKanjiAlternative } from '@api';
 
-import { getTags, prepareKanjiDetailsData } from '@utils/common-details';
+import { getTags, prepareKanjiDetailsData } from '@utils/commonDetails';
 
 import {
   getExamplesWords,

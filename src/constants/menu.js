@@ -1,4 +1,4 @@
-import menuMessages from '@lang/defaultMessages/menu.messages';
+import menuMessages from '@lang/messages/menu.messages';
 
 /* MENU */
 
@@ -46,7 +46,7 @@ export const MENU = [
   }
 ];
 
-export const grammarMenu = [
+export const GRAMMAR_MENU = [
   {
     id: MENU_ID.grammarPoliteness,
     name: (menuMessages.grammarFormsText)?.defaultMessage,

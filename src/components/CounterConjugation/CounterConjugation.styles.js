@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
-// import { css } from '@emotion/react';
 
 const Wrapper = styled.div`
   display: flex;
-`;
-
-const Box = styled.div`
-  //width: 20rem;
 `;
 
 const AlternativeBox = styled.div`
@@ -19,6 +14,5 @@ const AlternativeBox = styled.div`
 
 export {
   Wrapper,
-  Box,
   AlternativeBox
 };

@@ -11,7 +11,7 @@ import { japaneseFormShape, countersGroupShape } from '@types/vocabularyDetails'
 import { getFurigana } from '@utils/counters/getFurigana';
 
 import CounterConjugation from '@components/CounterConjugation';
-import KanjiWithFurigana from '@components/ui/KanjiWithFurigana';
+import KanjiWithFurigana from '@components/KanjiWithFurigana';
 
 import { hasSpecialNumberConjugation } from './utils';
 

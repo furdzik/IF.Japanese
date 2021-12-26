@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
 import { itemShape } from '@types/item';
 
-import Checkbox from '@components/ui/Checkbox';
-import Tooltip from '@components/ui/Tooltip';
+import Checkbox from '@components/Checkbox';
+import Tooltip from '@components/Tooltip';
 
 import {
   CheckboxListWrapper,
@@ -21,7 +22,7 @@ const CheckboxList = (props) => (
     {
       props.items.map((item) => (
         <ListItem
-          key={`${item.name}_${item.label}_${item.value}`}
+          key={uuidv4()}
           data-tip={item.helper}
           data-for={CHECKBOX_TOOLTIP_ID}
         >

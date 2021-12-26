@@ -3,9 +3,9 @@ import { css } from '@emotion/react';
 
 import { breakpointMixin } from '@styles/mixins';
 
-import Button from '@components/ui/Button';
-import Tile from '@components/ui/Tile';
-import SimpleLoader from '@components/ui/SimpleLoader';
+import Button from '@components/Button';
+import SimpleLoader from '@components/SimpleLoader';
+import Tile from '@components/Tile';
 
 const ListWrapper = styled.div`
   position: relative;

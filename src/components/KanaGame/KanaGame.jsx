@@ -5,7 +5,7 @@ import _cloneDeep from 'lodash/cloneDeep';
 
 import { ENTER_CODE, KANA_GAME_INIT, KANA_TYPE } from '@constants';
 
-import CheckboxList from '@components/ui/CheckboxList';
+import CheckboxList from '@components/CheckboxList';
 
 import { getRandomKana, isAnswerCorrect } from './utils';
 
