@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge');
-const { HotModuleReplacementPlugin, EnvironmentPlugin } = require('webpack');
+const { HotModuleReplacementPlugin, EnvironmentPlugin, DefinePlugin } = require('webpack');
+const CopyPlugin = require("copy-webpack-plugin");
 
 const webpackCommon = require('./webpack.common');
 
@@ -16,6 +17,9 @@ const webpackDevelopment = () => ({
     static: './'
   },
   plugins: [
+    new DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    }),
     new EnvironmentPlugin({
       APP_URL: 'http://if.japanese.local:2017'
     }),
