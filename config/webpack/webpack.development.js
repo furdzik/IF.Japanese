@@ -3,6 +3,7 @@ const { HotModuleReplacementPlugin, EnvironmentPlugin, DefinePlugin } = require(
 const CopyPlugin = require("copy-webpack-plugin");
 
 const webpackCommon = require('./webpack.common');
+const dotenv = require('dotenv');
 
 const PORT = '2017';
 
@@ -18,7 +19,7 @@ const webpackDevelopment = () => ({
   },
   plugins: [
     new DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development')
+      'process.env': JSON.stringify(dotenv.config().parsed)
     }),
     new CopyPlugin({
       patterns: [

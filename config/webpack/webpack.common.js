@@ -78,9 +78,6 @@ module.exports = ({ production }) => ({
         removeComments: false,
         removeEmptyAttributes: true
       }
-    }),
-    new DefinePlugin({
-      'process.env': JSON.stringify(dotenv.config().parsed)
     })
   ]
 });
