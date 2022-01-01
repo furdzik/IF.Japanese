@@ -22,7 +22,11 @@ const webpackProduction = () => ({
     }),
     new CopyPlugin({
       patterns: [
-        { from: './public/', to: './' }
+        { from: './public/', to: './' },
+        {
+          from: './config/.htaccess',
+          to: './'
+        }
       ]
     }),
     new WebpackCdnPlugin({
@@ -42,6 +46,4 @@ const webpackProduction = () => ({
   ]
 });
 
-module.exports = (options) => (
-  merge(webpackCommon(options), webpackProduction())
-);
+module.exports = (options) => merge(webpackCommon(options), webpackProduction());
