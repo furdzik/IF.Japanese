@@ -10,7 +10,7 @@ import { IntlProvider } from 'react-intl';
 
 import '@formatjs/intl-relativetimeformat/dist/locale-data/en';
 
-import { jishoApiUrl, kanjiAliveApiKey, production } from '@config/environment';
+import { production } from '@config/environment';
 import { defaultLocale } from '@config/lang';
 
 import theme from '@styles/theme';
@@ -21,6 +21,8 @@ import { english } from '@lang';
 import RoutesConfig from '@routes';
 
 import reducers from '@containers/reducers';
+
+console.log('process', process.env);
 
 const middlewareEnhancer = applyMiddleware(thunk);
 const enhancer = production ? middlewareEnhancer : composeWithDevTools(middlewareEnhancer);
@@ -37,8 +39,6 @@ const App = () => (
         <RoutesConfig />
       </Provider>
     </ThemeProvider>
-    {console.log(jishoApiUrl, production, kanjiAliveApiKey)}
-    {console.log(process.env)}
   </IntlProvider>
 );
 
