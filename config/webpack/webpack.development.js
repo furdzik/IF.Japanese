@@ -20,6 +20,11 @@ const webpackDevelopment = () => ({
     new DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: './public/', to: './' },
+      ]
+    }),
     new EnvironmentPlugin({
       APP_URL: 'http://if.japanese.local:2017'
     }),
@@ -27,4 +32,7 @@ const webpackDevelopment = () => ({
   ]
 });
 
-module.exports = (options) => merge(webpackCommon(options), webpackDevelopment());
+module.exports = (options) => {
+  console.log('webpack merge dev:', options, process.env);
+  return merge(webpackCommon(options), webpackDevelopment());
+};

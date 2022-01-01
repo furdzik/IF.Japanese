@@ -10,7 +10,7 @@ import { IntlProvider } from 'react-intl';
 
 import '@formatjs/intl-relativetimeformat/dist/locale-data/en';
 
-import { production } from '@config/environment';
+import { jishoApiUrl, kanjiAliveApiKey, production } from '@config/environment';
 import { defaultLocale } from '@config/lang';
 
 import theme from '@styles/theme';
@@ -37,6 +37,8 @@ const App = () => (
         <RoutesConfig />
       </Provider>
     </ThemeProvider>
+    {console.log(jishoApiUrl, production, kanjiAliveApiKey)}
+    {console.log(process.env)}
   </IntlProvider>
 );
 

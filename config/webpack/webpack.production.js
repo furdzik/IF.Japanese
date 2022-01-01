@@ -42,4 +42,8 @@ const webpackProduction = () => ({
   ]
 });
 
-module.exports = (options) => merge(webpackCommon(options), webpackProduction());
+
+module.exports = (options) => {
+  console.log('webpack merge prod:', options, process.env);
+  return merge(webpackCommon(options), webpackProduction());
+};

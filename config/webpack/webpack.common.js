@@ -1,7 +1,8 @@
 const { resolve } = require('path');
-const { LoaderOptionsPlugin } = require('webpack');
+const { LoaderOptionsPlugin, DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+
+const dotenv = require('dotenv');
 
 const { version } = require('../../package');
 
@@ -56,7 +57,6 @@ module.exports = ({ production }) => ({
     ]
   },
   plugins: [
-    new Dotenv(),
     new LoaderOptionsPlugin({
       options: {
         handlebarsLoader: {}
@@ -78,6 +78,9 @@ module.exports = ({ production }) => ({
         removeComments: false,
         removeEmptyAttributes: true
       }
+    }),
+    new DefinePlugin({
+      'process.env': JSON.stringify(dotenv.config().parsed)
     })
   ]
 });
