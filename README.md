@@ -1,6 +1,8 @@
 # IF.Japanese
 
 This repository presents frontend application for my **Japanese APP**
+<br /><br />
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e3fc9316-db22-40ce-89ee-cd7cf2caba53/deploy-status)](https://app.netlify.com/sites/if-furdzik-japanese/deploys)
 
 ---
 
