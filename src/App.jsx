@@ -22,7 +22,7 @@ import RoutesConfig from '@routes';
 
 import reducers from '@containers/reducers';
 
-console.log('process.env', process?.env);
+console.log('JISHO_API_URL', JISHO_API_URL);
 
 const middlewareEnhancer = applyMiddleware(thunk);
 const enhancer = production ? middlewareEnhancer : composeWithDevTools(middlewareEnhancer);
