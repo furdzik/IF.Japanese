@@ -161,7 +161,7 @@ If word is not in Jisho API then in `vocabulary-not-in-api.json` add missing dat
 
 ### Running
 
-- Create `.env` files (see **WIKI** for more information)
+- Create `.env` file (see **WIKI** for more information)
 - Use `npm start` for starting dev server.
 
 Browser automatically open `http://if.japanese.local:2017/`.  
