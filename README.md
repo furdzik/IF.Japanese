@@ -1,6 +1,6 @@
 # IF.Japanese
 
-This repository presents frontend application for my **Japanese APP**
+This repository presents frontend application for my **Japanese APP**.
 
 ---
 
