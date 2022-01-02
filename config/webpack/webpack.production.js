@@ -1,10 +1,12 @@
 const { merge } = require('webpack-merge');
 const { join } = require('path');
-const { DefinePlugin } = require('webpack');
 const WebpackCdnPlugin = require('webpack-cdn-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
+const dotenv = require('dotenv');
+
 const webpackCommon = require('./webpack.common');
+
 
 const webpackProduction = () => ({
   entry: 'src/index.jsx',
@@ -17,9 +19,6 @@ const webpackProduction = () => ({
     sourceMapFilename: '[name].[hash].js.map',
   },
   plugins: [
-    new DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
     new CopyPlugin({
       patterns: [
         { from: './public/', to: './' }

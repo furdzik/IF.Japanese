@@ -17,13 +17,14 @@
   "description": "My app for learning japanese",
   "scripts": {
     "start": "npm run lang && npm run dev",
-    "build": "npx webpack --progress --env production",
+    "build": "cross-env NODE_ENV=production npx webpack --progress --env production",
+    "build:prod": "node ./scripts/create-env.js && npm run build",
     "lint": "npm run eslint && npm run stylelint",
     "lang": "extract-messages -l=en -d=en -o src/lang/generated --flat \"src/**/**/**/*.messages.js\"",
     "find-duplicates": "jscpd ./src/",
     "stylelint": "npx stylelint \"**/*.styles.{js,jsx}\"",
     "eslint": "eslint src/ --ext .jsx,.js",
-    "dev": "npx webpack-dev-server --history-api-fallback --open",
+    "dev": "npx webpack-dev-server --history-api-fallback --open --env development",
     "prepare": "husky install"
   },
   "browserslist": {
@@ -56,7 +57,7 @@
     "axios": "0.24.0",
     "caniuse-lite": "1.0.30001292",
     "core-js": "3.19.1",
-    "dotenv-webpack": "7.0.3",
+    "dotenv": "10.0.0",
     "furigana": "0.19.3",
     "lodash": "4.17.21",
     "prop-types": "15.7.2",
