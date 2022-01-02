@@ -93,7 +93,5 @@ module.exports = ({ production }) => {
     ]
   };
 
-  console.log('dotenv common', envVariables);
-
   return config;
 };

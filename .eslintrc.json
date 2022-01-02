@@ -42,6 +42,7 @@
   },
   "globals": {
     "NODE_ENV": "readonly",
+    "APP_URL": "readonly",
     "JISHO_API_URL": "readonly",
     "KANJIALIVE_API_URL": "readonly",
     "KANJIALIVE_API_KEY": "readonly",

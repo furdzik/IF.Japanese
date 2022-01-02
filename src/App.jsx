@@ -22,8 +22,6 @@ import RoutesConfig from '@routes';
 
 import reducers from '@containers/reducers';
 
-console.log('JISHO_API_URL', JISHO_API_URL);
-
 const middlewareEnhancer = applyMiddleware(thunk);
 const enhancer = production ? middlewareEnhancer : composeWithDevTools(middlewareEnhancer);
 const store = createStore(reducers, undefined, enhancer);
