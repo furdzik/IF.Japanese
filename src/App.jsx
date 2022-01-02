@@ -22,7 +22,7 @@ import RoutesConfig from '@routes';
 
 import reducers from '@containers/reducers';
 
-console.log('process', process.env);
+console.log('process.env', process?.env);
 
 const middlewareEnhancer = applyMiddleware(thunk);
 const enhancer = production ? middlewareEnhancer : composeWithDevTools(middlewareEnhancer);

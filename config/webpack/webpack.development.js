@@ -20,17 +20,11 @@ const webpackDevelopment = () => {
       static: './'
     },
     plugins: [
-      new DefinePlugin({
-        'process.env': JSON.stringify(dotenv.config().parsed)
-      }),
       new CopyPlugin({
         patterns: [
           { from: './public/', to: './' },
         ]
       }),
-      // new EnvironmentPlugin({
-      //   APP_URL: 'http://if.japanese.local:2017'
-      // }),
       new HotModuleReplacementPlugin()
     ]
   };

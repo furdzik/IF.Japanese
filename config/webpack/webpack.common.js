@@ -2,6 +2,8 @@ const { resolve } = require('path');
 const { LoaderOptionsPlugin, DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const dotenv = require('dotenv');
+
 const { version } = require('../../package');
 
 module.exports = ({ production }) => ({
@@ -76,6 +78,9 @@ module.exports = ({ production }) => ({
         removeComments: false,
         removeEmptyAttributes: true
       }
-    })
+    }),
+    new DefinePlugin({
+      'process.env': JSON.stringify(dotenv.config().parsed)
+    }),
   ]
 });
