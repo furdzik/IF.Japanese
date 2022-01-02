@@ -59,7 +59,7 @@ export const getTags = (
 
   if (isVerb) {
     newTags.push({
-      tagType: TAG_TYPES.IS_VERB,
+      tagType: TAG_TYPES.isVerb,
       label: (messages.conjugationText)?.defaultMessage
     });
   }
