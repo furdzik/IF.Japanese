@@ -12,7 +12,7 @@ jobs:
         id: netlify
         uses: josephduffy/wait-for-netlify-action@v1
         with:
-          site_name: react-workflow
+          site_name: if-furdzik-japanese
           max_timeout: 60
 
       - name: Audit Preview URL using Lighthouse
