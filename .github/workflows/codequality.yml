@@ -16,5 +16,3 @@ jobs:
         run: npm install
       - name: Run linters
         run: npm run lint
-        with:
-          args: --check .
