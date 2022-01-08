@@ -170,7 +170,7 @@ The app will automatically reload if you change any of the source files.
 ### Deploy to prod
 
 Deploy by **Netlify**.  
-Merge to `master` will automatocly trigger build/deploy.
+Merge to `master` will automatically trigger build/deploy.
 
 Status: 
 
