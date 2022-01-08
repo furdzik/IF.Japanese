@@ -9,8 +9,8 @@ const LayerWrapper = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   z-index: 10000;
   display: flex;
   justify-content: center;
@@ -34,8 +34,8 @@ const LayerWrapper = styled.div`
     position: absolute;
     top: 0;
     right: auto;
-    left: auto;
     bottom: auto;
+    left: auto;
     z-index: 10000;
     display: block;
     justify-content: unset;

@@ -35,6 +35,7 @@ const ProblemsListItem = styled.li`
   display: flex;
 
   &::before {
+    content: '';
     display: inline-block;
     flex-shrink: 0;
     width: 1rem;
@@ -43,7 +44,6 @@ const ProblemsListItem = styled.li`
     margin-right: 1.5rem;
     border-radius: 50%;
     background: ${(props) => props.theme.mainColors.primary};
-    content: '';
   }
 
   & + & {

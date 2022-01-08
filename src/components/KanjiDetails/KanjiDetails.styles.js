@@ -24,9 +24,9 @@ const StrokeBox = styled.div`
   border: 1px solid ${(props) => props.theme.mainColors.secondary};
   &::before,
   &::after {
+    content: '';
     position: absolute;
     z-index: 1;
-    content: '';
   }
   &::before {
     top: 0;
