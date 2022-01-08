@@ -1,8 +1,6 @@
 const { merge } = require('webpack-merge');
-const { HotModuleReplacementPlugin, EnvironmentPlugin, DefinePlugin } = require('webpack');
-const CopyPlugin = require("copy-webpack-plugin");
-
-const dotenv = require('dotenv');
+const { HotModuleReplacementPlugin } = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const webpackCommon = require('./webpack.common');
 

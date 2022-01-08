@@ -44,6 +44,7 @@ const ListItemContent = styled.div`
   width: 100%;
 
   &::before {
+    content: '';
     display: inline-block;
     flex-shrink: 0;
     width: .8rem;
@@ -52,7 +53,6 @@ const ListItemContent = styled.div`
     margin-right: 2rem;
     border-radius: 50%;
     background: ${(props) => props.theme.mainColors.primary};
-    content: '';
   }
 `;
 

@@ -25,6 +25,7 @@ const CheckboxBox = styled.span`
   transition: ${(props) => props.theme.layout.transition};
   cursor: pointer;
   &::after {
+    content: '';
     display: inline-block;
     transform: rotate(-53deg);
     width: .9rem;
@@ -34,7 +35,6 @@ const CheckboxBox = styled.span`
     border-left: .2rem solid;
     color: ${(props) => props.theme.mainColors.primary};
     opacity: 0;
-    content: '';
   }
 
   ${(props) => props.isActive && css`

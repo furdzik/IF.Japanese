@@ -1,12 +1,9 @@
 const { merge } = require('webpack-merge');
 const { join } = require('path');
 const WebpackCdnPlugin = require('webpack-cdn-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
-
-const dotenv = require('dotenv');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const webpackCommon = require('./webpack.common');
-
 
 const webpackProduction = () => ({
   entry: 'src/index.jsx',

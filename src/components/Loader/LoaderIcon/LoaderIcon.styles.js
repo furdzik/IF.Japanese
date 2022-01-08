@@ -19,9 +19,9 @@ const Svg = styled.svg`
 const Circle = styled.circle`
   transform-origin: center;
   animation: dash 1.5s ease-in-out infinite;
+  stroke: ${(props) => props.theme.mainColors.primary};
   stroke-dasharray: 140;
   stroke-dashoffset: 0;
-  stroke: ${(props) => props.theme.mainColors.primary};
 
   @keyframes dash {
     0% {
