@@ -1,6 +1,6 @@
 const { merge } = require('webpack-merge');
 const { HotModuleReplacementPlugin } = require('webpack');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 const webpackCommon = require('./webpack.common');
 

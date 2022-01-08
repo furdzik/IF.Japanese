@@ -29,9 +29,9 @@ module.exports = ({ production }) => {
             loader: 'babel-loader',
             options: {
               plugins: [
-                ["babel-plugin-styled-components", {
-                  "pure": !!production,
-                  "displayName": !production
+                ['babel-plugin-styled-components', {
+                  'pure': !!production,
+                  'displayName': !production
                 }]
               ]
             }
@@ -51,11 +51,11 @@ module.exports = ({ production }) => {
         },
         {
           test: /\.(svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-          use: "file-loader?name=assets/fonts/[name].[ext]"
+          use: 'file-loader?name=assets/fonts/[name].[ext]'
         },
         {
           test: /\.hbs$/,
-          use: "handlebars-loader"
+          use: 'handlebars-loader'
         }
       ]
     },
