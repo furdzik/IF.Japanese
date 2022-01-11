@@ -3,6 +3,6 @@
     "stylelint-processor-styled-components"
   ],
   "extends": [
-    "@furdzik/stylelint"
+    "@furdzik/stylelint-config"
   ]
 }

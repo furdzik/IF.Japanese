@@ -26,7 +26,7 @@ const initialState = {
   loading: false
 };
 
-export default function grammarDetailsReducer (state = initialState, action) {
+export default function grammarDetailsReducer (state = initialState, action = {}) {
   switch (action.type) {
     case actionTypes.GET_GRAMMAR_DETAILS: {
       const grammar = action.payload;

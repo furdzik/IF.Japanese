@@ -25,7 +25,7 @@ const initialState = {
   )
 };
 
-export default function grammarReducer (state = initialState, action) {
+export default function grammarReducer (state = initialState, action = {}) {
   switch (action.type) {
     case actionTypes.GET_GRAMMAR: {
       const grammarList = action.payload;

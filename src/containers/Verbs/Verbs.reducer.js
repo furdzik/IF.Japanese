@@ -23,7 +23,7 @@ const initialState = {
   selectedFilters: getSelectedFiltersInitialValues(LOCAL_STORAGE_KEY_VERBS, FILTERS_IDS)
 };
 
-export default function verbsReducer (state = initialState, action) {
+export default function verbsReducer (state = initialState, action = {}) {
   switch (action.type) {
     case actionTypes.GET_VERBS: {
       const verbsList = action.payload;

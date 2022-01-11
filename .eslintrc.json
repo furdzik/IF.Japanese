@@ -1,8 +1,0 @@
-{
-  "extends": "@furdzik/eslint",
-  "settings": {
-    "import/resolver": {
-      "babel-module": {}
-    }
-  }
-}
