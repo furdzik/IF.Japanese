@@ -18,7 +18,7 @@
   "scripts": {
     "start": "npm run lang && npm run dev",
     "build": "cross-env NODE_ENV=production npx webpack --progress --env production",
-    "build:prod": "node ./scripts/create-env.js && npm run build",
+    "build:prod": "npm preinstall && node ./scripts/create-env.js && npm run build",
     "preinstall": "node ./scripts/netlify-preinstall.js",
     "lint": "npm run eslint && npm run stylelint",
     "lang": "extract-messages -l=en -d=en -o src/lang/generated --flat \"src/**/**/**/*.messages.js\"",
