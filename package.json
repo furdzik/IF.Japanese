@@ -91,7 +91,7 @@
     "@emotion/babel-plugin": "11.7.2",
     "@emotion/babel-preset-css-prop": "11.2.0",
     "@furdzik/commitlint-config": "0.0.3",
-    "@furdzik/eslint-config": "0.0.5",
+    "@furdzik/eslint-config": "0.0.6",
     "@furdzik/stylelint-config": "0.0.3",
     "@storybook/addon-actions": "6.5.0-alpha.15",
     "@storybook/addon-essentials": "6.5.0-alpha.15",

@@ -8,7 +8,7 @@ import { Global, ThemeProvider } from '@emotion/react';
 
 import { IntlProvider } from 'react-intl';
 
-import '@formatjs/intl-relativetimeformat/dist/locale-data/en';
+import '@formatjs/intl-relativetimeformat/locale-data/en';
 
 import { production } from '@config/environment';
 import { defaultLocale } from '@config/lang';
