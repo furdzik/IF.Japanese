@@ -89,7 +89,7 @@
     "@emotion/babel-plugin": "11.3.0",
     "@emotion/babel-preset-css-prop": "11.2.0",
     "@furdzik/commitlint-config": "0.0.3",
-    "@furdzik/eslint-config": "0.0.3",
+    "@furdzik/eslint-config": "0.0.5",
     "@furdzik/stylelint-config": "0.0.3",
     "babel-loader": "8.2.3",
     "babel-plugin-module-resolver": "4.1.0",
