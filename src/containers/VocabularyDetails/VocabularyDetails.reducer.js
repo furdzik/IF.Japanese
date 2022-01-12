@@ -42,7 +42,7 @@ const initialState = {
   loading: true
 };
 
-export default function vocabularyDetailsReducer (state = initialState, action) {
+export default function vocabularyDetailsReducer (state = initialState, action = {}) {
   switch (action.type) {
     case actionTypes.GET_VOCAB_DETAILS: {
       const data = action.payload;

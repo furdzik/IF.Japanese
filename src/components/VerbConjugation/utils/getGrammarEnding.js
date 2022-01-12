@@ -16,19 +16,19 @@ const getJishouFormEnding = (grammar, verbGroup, inflection, isPolite) => {
   }
 
   if (isPolite) {
-    return (messages[`jishouForm_${verbGroup}_polite`])?.defaultMessage;
+    return (messages[`jishouForm_${verbGroup}_polite`]).defaultMessage;
   }
 
   switch (inflection) {
     case INFLECTION_TYPES.negative:
     case INFLECTION_TYPES.pastNegative: {
       return !isPolite
-        ? (messages[`jishouNegativeForm_${verbGroup}`])?.defaultMessage
+        ? (messages[`jishouNegativeForm_${verbGroup}`]).defaultMessage
         : '';
     }
     case INFLECTION_TYPES.past: {
       return !isPolite
-        ? (messages[`jishouPastForm_${verbGroup}`])?.defaultMessage
+        ? (messages[`jishouPastForm_${verbGroup}`]).defaultMessage
         : '';
     }
 
@@ -44,24 +44,24 @@ export const getGrammarEnding = (grammar, verbGroup, inflection, isPolite) => {
     }
 
     case GRAMMAR_TYPES.taiForm: {
-      const end = isPolite ? (messages.desu)?.defaultMessage : '';
+      const end = isPolite ? (messages.desu).defaultMessage : '';
       let pre = '';
       if (!isGroupTwoAndSpecial(verbGroup)) {
-        pre = (messages[`jishouForm_${verbGroup}_polite`])?.defaultMessage;
+        pre = (messages[`jishouForm_${verbGroup}_polite`]).defaultMessage;
       }
 
       switch (inflection) {
         case INFLECTION_TYPES.normal: {
-          return pre + (messages.taiFormEnding)?.defaultMessage + end;
+          return pre + (messages.taiFormEnding).defaultMessage + end;
         }
         case INFLECTION_TYPES.negative: {
-          return pre + (messages.taiNegativeFormEnding)?.defaultMessage + end;
+          return pre + (messages.taiNegativeFormEnding).defaultMessage + end;
         }
         case INFLECTION_TYPES.past: {
-          return pre + (messages.taiPastFormEnding)?.defaultMessage + end;
+          return pre + (messages.taiPastFormEnding).defaultMessage + end;
         }
         case INFLECTION_TYPES.pastNegative: {
-          return pre + (messages.taiNegativePastFormEnding)?.defaultMessage + end;
+          return pre + (messages.taiNegativePastFormEnding).defaultMessage + end;
         }
         default:
           return '';
@@ -82,28 +82,28 @@ export const getGrammarEnding = (grammar, verbGroup, inflection, isPolite) => {
           || verbGroup === VERB_GROUP_TYPES.group1Nu
         )
       ) {
-        ending = (messages.te2FormEnding)?.defaultMessage;
+        ending = (messages.te2FormEnding).defaultMessage;
       } else {
-        ending = (messages.teFormEnding)?.defaultMessage;
+        ending = (messages.teFormEnding).defaultMessage;
       }
 
       if (inflection === INFLECTION_TYPES.normal) {
         inflectionPart = !isGroupTwoAndSpecial(verbGroup)
-          ? (messages[`jishouPastForm_${verbGroup}`])?.defaultMessage
+          ? (messages[`jishouPastForm_${verbGroup}`]).defaultMessage
           : '';
       } else {
         inflectionPart = (
           !isGroupTwoAndSpecial(verbGroup)
-            ? (messages[`jishouNegativeForm_${verbGroup}`])?.defaultMessage
+            ? (messages[`jishouNegativeForm_${verbGroup}`]).defaultMessage
             : ''
-        ) + (messages.teNegativeFormEnding)?.defaultMessage;
+        ) + (messages.teNegativeFormEnding).defaultMessage;
       }
 
       return inflectionPart + ending;
     }
 
     case GRAMMAR_TYPES.ikouForm: {
-      return (messages[`ikouForm_${verbGroup}`])?.defaultMessage + (messages.ikouFormEnding)?.defaultMessage;
+      return (messages[`ikouForm_${verbGroup}`]).defaultMessage + (messages.ikouFormEnding).defaultMessage;
     }
 
     case GRAMMAR_TYPES.meireiForm: {
@@ -111,10 +111,10 @@ export const getGrammarEnding = (grammar, verbGroup, inflection, isPolite) => {
         const end = getBaseEnding(
           grammar, verbGroup, INFLECTION_TYPES.normal, false, true
         );
-        return end + (messages.meireiNegativeForm)?.defaultMessage;
+        return end + (messages.meireiNegativeForm).defaultMessage;
       }
 
-      return (messages[`meireiForm_${verbGroup}`])?.defaultMessage;
+      return (messages[`meireiForm_${verbGroup}`]).defaultMessage;
     }
 
     case GRAMMAR_TYPES.joukenBaForm: {
@@ -122,19 +122,19 @@ export const getGrammarEnding = (grammar, verbGroup, inflection, isPolite) => {
         case INFLECTION_TYPES.negative: {
           return (
             !isGroupTwoAndSpecial(verbGroup)
-              ? (messages[`jishouNegativeForm_${verbGroup}`])?.defaultMessage
+              ? (messages[`jishouNegativeForm_${verbGroup}`]).defaultMessage
               : ''
-          ) + (messages.joukenNegativeFormEnding)?.defaultMessage;
+          ) + (messages.joukenNegativeFormEnding).defaultMessage;
         }
 
         default:
-          return (messages[`joukenForm_${verbGroup}`])?.defaultMessage
-            + (messages.joukenFormEnding)?.defaultMessage;
+          return (messages[`joukenForm_${verbGroup}`]).defaultMessage
+            + (messages.joukenFormEnding).defaultMessage;
       }
     }
 
     case GRAMMAR_TYPES.joukenTaraForm: {
-      const ending = (messages.joukenTaraFormEnding)?.defaultMessage;
+      const ending = (messages.joukenTaraFormEnding).defaultMessage;
 
       let grammarEnding;
       let baseEnding;
@@ -159,6 +159,6 @@ export const getGrammarEnding = (grammar, verbGroup, inflection, isPolite) => {
     }
 
     default:
-      return (messages[`${grammar}_${verbGroup}`])?.defaultMessage;
+      return (messages[`${grammar}_${verbGroup}`]).defaultMessage;
   }
 };

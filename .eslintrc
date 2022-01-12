@@ -1,0 +1,23 @@
+{
+  "parser": "@babel/eslint-parser",
+  "extends": [
+    "@furdzik/eslint-config"
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "globals": {
+    "NODE_ENV": "readonly",
+    "JISHO_API_URL": "readonly",
+    "KANJIALIVE_API_URL": "readonly",
+    "KANJIALIVE_API_KEY": "readonly",
+    "ALTERNATIVE_KANJI_API_URL": "readonly"
+  }
+}

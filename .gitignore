@@ -19,6 +19,7 @@ node_modules/
 .env
 .env.production
 .env.development
+.npmrcagent
 
 # Optional npm cache directory
 .npm
