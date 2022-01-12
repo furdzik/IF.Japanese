@@ -59,7 +59,7 @@ export const getTags = (
 
   if (isVerb) {
     newTags.push({
-      tagType: TAG_TYPES.IS_VERB,
+      tagType: TAG_TYPES.isVerb,
       label: (messages.conjugationText)?.defaultMessage
     });
   }
@@ -98,7 +98,7 @@ export const getTags = (
       tagType: TAG_TYPES.levelGroup,
       label: shortMsg
         ? (messages[`${levelGroup}Level`])?.defaultMessage
-        : (messages.levelGroup)?.defaultMessage + (messages[`${levelGroup}Level`])?.defaultMessage
+        : (messages.levelGroup).defaultMessage + (messages[`${levelGroup}Level`]).defaultMessage
     });
   }
 
@@ -106,7 +106,7 @@ export const getTags = (
     grammarOrigin.forEach((el) => {
       newTags.push({
         tagType: TAG_TYPES.grammarOrigin,
-        label: `${(messages[el.originName])?.defaultMessage} chapter ${el.originChapter}`
+        label: `${(messages[el.originName]).defaultMessage} chapter ${el.originChapter}`
       });
     });
   }

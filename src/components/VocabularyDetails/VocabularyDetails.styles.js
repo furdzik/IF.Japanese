@@ -16,6 +16,7 @@ const TranslationsListItem = styled.li`
   padding-top: 4rem;
   padding-bottom: 4rem;
   &::before {
+    content: '${(props) => props.number}.';
     display: block;
     flex-shrink: 0;
     width: 4rem;
@@ -25,7 +26,6 @@ const TranslationsListItem = styled.li`
     background: ${(props) => props.theme.colors.lightGray};
     line-height: 4rem;
     text-align: center;
-    content: '${(props) => props.number}.';
   }
 
   @media print {

@@ -63,19 +63,15 @@ const VerbsListItem = (props) => {
     <TriggerWrapper isCollaps={collapsed}>
       {
         !collapsed ? (
-          <React.Fragment>
-            <Icon
-              path={mdiChevronDown}
-              size="2.3rem"
-            />
-          </React.Fragment>
+          <Icon
+            path={mdiChevronDown}
+            size="2.3rem"
+          />
         ) : (
-          <React.Fragment>
-            <Icon
-              path={mdiChevronUp}
-              size="2.3rem"
-            />
-          </React.Fragment>
+          <Icon
+            path={mdiChevronUp}
+            size="2.3rem"
+          />
         )
       }
     </TriggerWrapper>

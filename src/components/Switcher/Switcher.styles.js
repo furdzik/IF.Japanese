@@ -10,6 +10,7 @@ const SwitcherWrapper = styled.div`
   transition: ${(props) => props.theme.layout.transition};
   cursor: pointer;
   &::before {
+    content: '';
     position: absolute;
     top: -.3rem;
     left: 0;
@@ -20,7 +21,6 @@ const SwitcherWrapper = styled.div`
     background: ${(props) => props.theme.mainColors.secondary};
     box-shadow: 0 1px 4px 0 rgba(0 0 0 / .2);
     transition: ${(props) => props.theme.layout.transition};
-    content: '';
   }
   ${(props) => props.checked && css`
     background-color: ${props.theme.mainColors.tartary};

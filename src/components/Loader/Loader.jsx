@@ -24,17 +24,11 @@ const Loader = (props) => {
     </LoaderWrapper>
   );
 
-  return (
-    <React.Fragment>
-      {
-        props.center ? (
-          <CenterWrapper>
-            {loader}
-          </CenterWrapper>
-        ) : loader
-      }
-    </React.Fragment>
-  );
+  return props.center ? (
+    <CenterWrapper>
+      {loader}
+    </CenterWrapper>
+  ) : loader;
 };
 
 Loader.propTypes = {

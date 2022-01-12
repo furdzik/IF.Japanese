@@ -18,8 +18,8 @@ const AnchorWrapper = styled.span`
 
   ${(props) => (props.linkType === 'button' || props.linkType === 'buttonLink') && css`
     a {
-      display: block;
       width: 100%;
+      display: block;
       text-align: center;
        &:hover {
         text-decoration: none;

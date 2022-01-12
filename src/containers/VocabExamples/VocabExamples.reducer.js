@@ -18,7 +18,7 @@ const initialState = {
   vocabExamples: []
 };
 
-export default function vocabExamplesReducer (state = initialState, action) {
+export default function vocabExamplesReducer (state = initialState, action = {}) {
   switch (action.type) {
     case actionTypes.GET_VOCAB_EXAMPLES: {
       const { vocabExamples, showLoadMoreButton } = action.payload;
