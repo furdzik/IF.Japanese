@@ -1,6 +1,3 @@
-[[plugins]]
-package = "/.netlify/netlify-plugin-preinstall"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"

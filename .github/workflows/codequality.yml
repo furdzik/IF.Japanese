@@ -14,8 +14,6 @@ jobs:
     name: Run linters
     steps:
       - uses: actions/checkout@v2
-      - name: Pre-install
-        run: npm run preinstall
       - name: Install dependencies
         run: npm install
       - name: Run linters
