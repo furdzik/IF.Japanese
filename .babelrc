@@ -32,7 +32,8 @@
       "removePrefix": "src",
       "filebase": false
     }],
-    "@emotion"
+    "@emotion",
+    "babel-plugin-styled-components"
   ],
   "env": {
     "test": {
