@@ -22,13 +22,10 @@ setIntlConfig({
 });
 
 const withThemeProvider = (Story, context) => (
-  <Provider store={store}>
-    <ThemeProvider theme={theme}>
-      <Story {...context} />
-      {console.log('preview', Story)}
-      <GlobalStyles />
-    </ThemeProvider>
-  </Provider>
+  <ThemeProvider theme={theme}>
+    <GlobalStyles />
+    <Story {...context} />
+  </ThemeProvider>
 );
 
 export const parameters = {
@@ -44,6 +41,7 @@ export const parameters = {
     manual: true
   }
 }
+
 export const decorators = [
   withThemeProvider,
   withIntl
