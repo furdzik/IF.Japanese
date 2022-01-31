@@ -2,18 +2,6 @@
   "name": "if.japanese",
   "version": "0.0.1",
   "private": true,
-  "keywords": [
-    "React",
-    "Babel"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/furdzik/if.japanese.git"
-  },
-  "bugs": {
-    "url": "https://github.com/furdzik/if.japanese/issues"
-  },
-  "homepage": "https://github.com/furdzik/if.japanese#readme",
   "description": "My app for learning japanese",
   "scripts": {
     "start": "npm run lang && npm run dev",
@@ -88,9 +76,9 @@
     "@babel/runtime": "7.16.7",
     "@emotion/babel-plugin": "11.7.2",
     "@emotion/babel-preset-css-prop": "11.2.0",
-    "@furdzik/commitlint-config": "0.0.3",
-    "@furdzik/eslint-config": "0.0.6",
-    "@furdzik/stylelint-config": "0.0.4",
+    "@furdzik/commitlint-config": "0.0.5",
+    "@furdzik/eslint-config": "0.0.9",
+    "@furdzik/stylelint-config": "0.0.5",
     "@storybook/addon-actions": "6.5.0-alpha.22",
     "@storybook/addon-essentials": "6.5.0-alpha.22",
     "@storybook/addon-links": "6.5.0-alpha.22",
