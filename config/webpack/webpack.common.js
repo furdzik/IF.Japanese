@@ -9,7 +9,7 @@ const { version } = require('../../package');
 module.exports = ({ production }) => {
   const envVariables = dotenv.config().parsed;
 
-  const config = {
+  return {
     resolve: {
       extensions: ['.js', '.jsx', '.json'],
       mainFields: ['browser', 'main', 'module'],
@@ -92,6 +92,4 @@ module.exports = ({ production }) => {
       })
     ]
   };
-
-  return config;
 };
