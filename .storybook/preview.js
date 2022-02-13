@@ -30,16 +30,7 @@ const withThemeProvider = (Story, context) => (
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  viewport: {
-    viewports: MINIMAL_VIEWPORTS,
-  },
-  layout: 'fullscreen',
-  a11y: {
-    element: '#root',
-    config: {},
-    options: {},
-    manual: true
-  }
+  layout: 'fullscreen'
 }
 
 export const decorators = [
