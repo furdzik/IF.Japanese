@@ -13,7 +13,7 @@ export const Default = Template.bind({});
 Default.storyName = 'Default';
 Default.args = {
   inProgress: true,
-  known: true,
-  nowLearning: true,
+  known: false,
+  nowLearning: false,
   level: 2
 };
