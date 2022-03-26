@@ -12,7 +12,8 @@
     ["module-resolver", {
       "alias": {
         "@mocks": "./__mocks__",
-        "@root": "./src",
+        "@root": "./",
+        "@src": "./src",
         "@routes": "./src/routes",
         "@api": "./src/api",
         "@assets": "./src/assets",
