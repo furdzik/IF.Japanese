@@ -16,8 +16,8 @@
     "audit": "npm audit"
   },
   "dependencies": {
-    "@emotion/react": "11.7.1",
-    "@emotion/styled": "11.6.0",
+    "@emotion/react": "11.9.0",
+    "@emotion/styled": "11.8.1",
     "@formatjs/intl-pluralrules": "4.3.3",
     "@formatjs/intl-relativetimeformat": "10.0.1",
     "@material-ui/core": "4.12.4",
