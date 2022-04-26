@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
+import { objectShape } from '@types/object';
+
 import Tooltip from '@components/Tooltip';
 
 import {
@@ -32,7 +34,7 @@ const ColoredBoxList = (props) => (
 );
 
 ColoredBoxList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.object).isRequired
+  list: PropTypes.arrayOf(objectShape).isRequired
 };
 
 export default ColoredBoxList;

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { objectShape } from '@types/object';
+
 import Tooltip from '@components/Tooltip';
 
 import {
@@ -35,7 +37,7 @@ const Menu = (props) => (
 
 Menu.propTypes = {
   active: PropTypes.number.isRequired,
-  list: PropTypes.arrayOf(PropTypes.object).isRequired
+  list: PropTypes.arrayOf(objectShape).isRequired
 };
 
 export default Menu;
