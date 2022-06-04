@@ -13,7 +13,8 @@
     "stylelint": "npx stylelint \"**/*.styles.{js,jsx}\"",
     "eslint": "eslint src/ --ext .jsx,.js",
     "outdated": "npm outdated",
-    "audit": "npm audit"
+    "audit": "npm audit",
+    "husky:prepere": "husky install"
   },
   "dependencies": {
     "@emotion/react": "11.9.0",
@@ -68,6 +69,7 @@
     "babel-plugin-module-resolver": "4.1.0",
     "babel-plugin-react-intl-auto": "3.3.0",
     "babel-plugin-require-context-hook": "1.0.0",
+    "commitlint": "17.0.2",
     "conventional-changelog-cli": "2.2.2",
     "conventional-changelog-eslint": "3.0.9",
     "copy-webpack-plugin": "11.0.0",
