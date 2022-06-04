@@ -3,5 +3,6 @@ module.exports = {
   jishoApiUrl: JISHO_API_URL,
   kanjiAliveApiUrl: KANJIALIVE_API_URL,
   kanjiAliveApiKey: KANJIALIVE_API_KEY,
-  alternativeKanjiApiUrl: ALTERNATIVE_KANJI_API_URL
+  alternativeKanjiApiUrl: ALTERNATIVE_KANJI_API_URL,
+  sentryDns: SENTRY_DNS
 };
