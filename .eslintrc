@@ -18,6 +18,7 @@
     "JISHO_API_URL": "readonly",
     "KANJIALIVE_API_URL": "readonly",
     "KANJIALIVE_API_KEY": "readonly",
-    "ALTERNATIVE_KANJI_API_URL": "readonly"
+    "ALTERNATIVE_KANJI_API_URL": "readonly",
+    "SENTRY_DNS": "readonly"
   }
 }
