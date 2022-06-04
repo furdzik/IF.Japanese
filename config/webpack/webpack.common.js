@@ -26,15 +26,7 @@ module.exports = ({ production }) => {
           test: /\.(js|jsx)$/,
           exclude: /node_modules\/(?!react-intl|intl-messageformat|intl-messageformat-parser)/,
           use: {
-            loader: 'babel-loader',
-            options: {
-              plugins: [
-                ['babel-plugin-styled-components', {
-                  'pure': !!production,
-                  'displayName': !production
-                }]
-              ]
-            }
+            loader: 'babel-loader'
           }
         },
         {
