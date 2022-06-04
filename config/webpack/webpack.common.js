@@ -80,7 +80,8 @@ module.exports = ({ production }) => {
         KANJIALIVE_API_KEY: JSON.stringify(envVariables.KANJIALIVE_API_KEY),
         JISHO_API_URL: JSON.stringify(envVariables.JISHO_API_URL),
         KANJIALIVE_API_URL: JSON.stringify(envVariables.KANJIALIVE_API_URL),
-        ALTERNATIVE_KANJI_API_URL: JSON.stringify(envVariables.ALTERNATIVE_KANJI_API_URL)
+        ALTERNATIVE_KANJI_API_URL: JSON.stringify(envVariables.ALTERNATIVE_KANJI_API_URL),
+        SENTRY_DNS: JSON.stringify(envVariables.SENTRY_DNS)
       })
     ]
   };
