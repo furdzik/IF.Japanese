@@ -1,5 +1,5 @@
 const { resolve } = require('path');
-const { LoaderOptionsPlugin, DefinePlugin } = require('webpack');
+const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const dotenv = require('dotenv');
@@ -44,22 +44,13 @@ module.exports = ({ production }) => {
         {
           test: /\.(svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
           use: 'file-loader?name=assets/fonts/[name].[ext]'
-        },
-        {
-          test: /\.hbs$/,
-          use: 'handlebars-loader'
         }
       ]
     },
     plugins: [
-      new LoaderOptionsPlugin({
-        options: {
-          handlebarsLoader: {}
-        }
-      }),
       new HtmlWebpackPlugin({
         title: 'IF.Japanese',
-        template: './src/index.hbs',
+        template: './src/index.ejs',
         favicon: './public/favicon.ico',
         appVersion: `${version}`,
         noscript: 'Proszę włączyć obsługę JavaScript w przeglądarce.',
