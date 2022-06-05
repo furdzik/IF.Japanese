@@ -14,7 +14,7 @@
     "eslint": "eslint src/ --ext .jsx,.js",
     "outdated": "npm outdated",
     "audit": "npm audit",
-    "husky:prepere": "husky install"
+    "husky:prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "11.9.0",
