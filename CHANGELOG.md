@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/furdzik/IF.Japanese/compare/v1.0.1...v1.0.2) (2022-06-05)
+
+
+### Bug Fixes
+
+* **app:** typo ([79217cc](https://github.com/furdzik/IF.Japanese/commit/79217cc5e57bbdce108814852a8571abc00f605d))
+* **app:** Update linters packages ([771b508](https://github.com/furdzik/IF.Japanese/commit/771b5087f92a594157b342f5555f591714e4799e))
+
 ## [1.0.1](https://github.com/furdzik/IF.Japanese/compare/v1.0.0...v1.0.1) (2022-06-05)
 
 
