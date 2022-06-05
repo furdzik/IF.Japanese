@@ -3,6 +3,6 @@
     "stylelint-processor-styled-components"
   ],
   "extends": [
-    "@furdzik/stylelint-config"
+    "stylelint-config-kamisama"
   ]
 }
