@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/furdzik/IF.Japanese/compare/v1.0.0...v1.0.1) (2022-06-05)
+
+
+### Bug Fixes
+
+* **config:** Change config linters packages names ([e0d8685](https://github.com/furdzik/IF.Japanese/commit/e0d8685dd54d0a8c3b55ba9140f595f0f94c9620))
+* **config:** Change names and update commitlint ([6058b5e](https://github.com/furdzik/IF.Japanese/commit/6058b5e2d2108e0ae8b79176209696d5e66cc263))
+
 ## 1.0.0 (2022-06-05)
 
 
