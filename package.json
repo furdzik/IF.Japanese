@@ -82,7 +82,6 @@
     "extract-react-intl-messages": "4.1.1",
     "file-loader": "6.2.0",
     "full-icu": "1.4.0",
-    "handlebars-loader": "1.7.2",
     "html-webpack-plugin": "5.5.0",
     "husky": "8.0.1",
     "jscpd": "3.4.5",
