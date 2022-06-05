@@ -1,7 +1,7 @@
 {
   "parser": "@babel/eslint-parser",
   "extends": [
-    "@furdzik/eslint-config"
+    "eslint-config-kamisama"
   ],
   "settings": {
     "import/resolver": {
