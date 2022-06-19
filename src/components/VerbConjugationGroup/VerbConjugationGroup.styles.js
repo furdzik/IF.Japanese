@@ -10,7 +10,7 @@ const Box = styled.div`
   flex-wrap: wrap;
   padding: .7rem 1rem;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     flex-wrap: nowrap;
   `)};
 `;
@@ -32,7 +32,7 @@ const BoxGroup = styled.div`
     ${Line(props)};
   `};
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     margin-right: 1rem;
   `)};
 `;
@@ -40,7 +40,7 @@ const BoxGroup = styled.div`
 const VerbConjugationWrapper = styled(VerbConjugation)`
   width: 100%;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     width: 25%;
   `)};
 `;

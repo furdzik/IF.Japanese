@@ -28,7 +28,7 @@ const GameField = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   text-align: center;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     max-width: 50rem;
     width: auto;
   `)};

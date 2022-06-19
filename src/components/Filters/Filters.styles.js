@@ -12,7 +12,7 @@ const Wrapper = styled.div`
     justify-content: left;
   }
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     display: flex;
     align-items: center;
   `)};
@@ -26,7 +26,7 @@ const FiltersBox = styled.div`
     margin-top: 1rem;
   }
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     display: flex;
     align-items: center;
     min-height: 6.4rem;
@@ -38,7 +38,7 @@ const FiltersBox = styled.div`
     width: 100%;
     background: none;
 
-    ${breakpointMixin.laptop(css`
+    ${breakpointMixin.smallLaptop(css`
       width: 56%;
       background: ${props.theme.mainColors.secondary};
     `)};
@@ -49,7 +49,7 @@ const FiltersBox = styled.div`
   `};
 
   ${(props) => props.noHeight && css`
-    ${breakpointMixin.laptop(css`
+    ${breakpointMixin.smallLaptop(css`
       min-height: auto;
     `)};
   `};
@@ -68,7 +68,7 @@ const FiltersBox = styled.div`
 const FiltersGroup = styled.div`
   margin-left: auto;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     width: 50%;
   `)};
 `;

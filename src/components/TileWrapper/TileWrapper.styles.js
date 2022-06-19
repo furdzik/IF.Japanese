@@ -12,7 +12,7 @@ const List = styled.div`
   padding: 0;
   list-style: none;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     justify-content: space-between;
     margin-left: -1rem;
     margin-right: -1rem;

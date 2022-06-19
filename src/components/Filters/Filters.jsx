@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { selectedFiltersShape, filterListShape } from '@types/filters';
+import { breakpoints, useBreakpoint } from 'css-in-js-styles-utils';
 
-import { useBreakpoint } from '@hooks/useBreakpoint';
-import { breakpoints } from '@styles/basic/breakpoints';
+import { selectedFiltersShape, filterListShape } from '@types/filters';
 
 import CheckboxList from '@components/CheckboxList';
 
@@ -15,7 +14,7 @@ import {
 } from './Filters.styles.js';
 
 const Filters = (props) => {
-  const isDesktop = useBreakpoint(`(min-width: ${breakpoints.laptop})`);
+  const isMobile = useBreakpoint(breakpoints.smallLaptop);
 
   return (
     <Wrapper>
@@ -25,7 +24,7 @@ const Filters = (props) => {
           onCheckboxClick={props.changeFilters}
           items={props.filterList}
           selected={props.selectedFilters}
-          centered={isDesktop}
+          centered={!isMobile}
         />
       </FiltersBox>
       <FiltersGroup>
@@ -35,7 +34,7 @@ const Filters = (props) => {
             onCheckboxClick={props.changeFilters}
             items={props.secondaryFilterList}
             selected={props.selectedFilters}
-            centered={isDesktop}
+            centered={!isMobile}
           />
         </FiltersBox>
         {
@@ -46,7 +45,7 @@ const Filters = (props) => {
                 onCheckboxClick={props.changeFilters}
                 items={props.additionalFilterList}
                 selected={props.selectedFilters}
-                centered={isDesktop}
+                centered={!isMobile}
               />
             </FiltersBox>
           ) : null

@@ -79,7 +79,7 @@ const TagsWrapper = styled.div`
 const Content = styled.div`
   margin: 0 1.5rem;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     margin-left: 3rem;
     margin-right: 3rem;
   `)};
@@ -88,7 +88,7 @@ const Content = styled.div`
 const SectionsWrapper = styled.div`
   width: 100%;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     display: flex;
     flex-wrap: wrap;
   `)};
@@ -98,13 +98,13 @@ const SectionsWrapper = styled.div`
 const MainSection = styled.div`
   margin-top: 2rem;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     max-width: 53rem;
     margin-top: 0;
   `)};
 
   ${(props) => props.wide && css`
-    ${breakpointMixin.laptop(css`
+    ${breakpointMixin.smallLaptop(css`
       width: 100%;
       max-width: none;
     `)};
@@ -114,7 +114,7 @@ const MainSection = styled.div`
 const NameWrapper = styled.div`
   margin-top: 1rem;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     margin-right: 4rem;
   `)};
 `;
