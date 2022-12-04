@@ -30,7 +30,7 @@
     "axios": "0.27.2",
     "caniuse-lite": "1.0.30001346",
     "core-js": "3.22.8",
-    "css-in-js-styles-utils": "1.4.2",
+    "css-in-js-styles-utils": "1.4.3",
     "furigana": "0.19.3",
     "history": "5.3.0",
     "lodash": "4.17.21",
