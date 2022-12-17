@@ -5391,7 +5391,7 @@
     "vocab": "動作",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -12570,8 +12570,8 @@
   {
     "vocab": "非常",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -20998,7 +20998,7 @@
     "vocab": "非常に",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -23311,8 +23311,8 @@
   {
     "vocab": "缶",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -24906,7 +24906,7 @@
   {
     "vocab": "余裕",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3
@@ -25215,8 +25215,8 @@
   {
     "vocab": "出来事",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -27008,7 +27008,7 @@
     "vocab": "開始",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -27091,6 +27091,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "数量",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "食糧",
@@ -27735,8 +27743,8 @@
   {
     "vocab": "基本",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -36007,8 +36015,8 @@
   {
     "vocab": "終了",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39971,7 +39979,7 @@
     "vocab": "戸棚",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -41930,6 +41938,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 2
+  },
+  {
+    "vocab": "リュック",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "すれ違う",
@@ -50044,6 +50060,14 @@
     },
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "短",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "月",
