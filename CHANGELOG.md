@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.0](https://github.com/furdzik/IF.Japanese/compare/v1.1.0...v1.2.0) (2022-12-28)
+
+
+### Features
+
+* **app:** words ([2e8250d](https://github.com/furdzik/IF.Japanese/commit/2e8250ddc67b62d6bb2039311f90f5442d655586))
+* **app:** words ([77fb0f8](https://github.com/furdzik/IF.Japanese/commit/77fb0f87f1f3e6a5f8fc79b275ce5f07f42ba548))
+* **app:** words ([78c282d](https://github.com/furdzik/IF.Japanese/commit/78c282d010b3245e00ed749ac77b511b098e3249))
+
 ## [1.1.0](https://github.com/furdzik/IF.Japanese/compare/v1.0.2...v1.1.0) (2022-12-09)
 
 
