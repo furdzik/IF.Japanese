@@ -11427,11 +11427,27 @@
   },
   {
     "vocab": "ストーブ",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
+  },
+  {
+    "vocab": "焜炉",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "ガスコンロ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "器械",
@@ -34981,10 +34997,15 @@
   {
     "vocab": "慌てる",
     "known": false,
-    "inProgress": true,
+    "inProgress": false,
     "nowLearning": false,
     "pitch": "",
-    "level": 2
+    "level": 2,
+    "verb": {
+      "main": "慌て",
+      "verbGroup": "2",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "診る",
@@ -45299,6 +45320,19 @@
     "nowLearning": false,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "収まる",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1,
+    "verb": {
+      "main": "収ま",
+      "verbGroup": "ru",
+      "verbType": "intransitive"
+    },
   },
   {
     "vocab": "形",
