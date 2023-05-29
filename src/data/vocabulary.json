@@ -4139,6 +4139,14 @@
     "level": 0
   },
   {
+    "vocab": "ワクチン",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
     "vocab": "声",
     "known": true,
     "inProgress": false,
@@ -6273,7 +6281,7 @@
     "vocab": "季節",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -8277,9 +8285,9 @@
   },
   {
     "vocab": "知り合い",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -11187,8 +11195,8 @@
   {
     "vocab": "遅刻",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -11199,6 +11207,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "同日",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "読者",
@@ -11287,6 +11303,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "限り限り",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "灰皿",
@@ -18645,7 +18669,7 @@
     "vocab": "進む",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4,
     "verb": {
@@ -21443,10 +21467,13 @@
   {
     "vocab": "健康",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "additionalExplanation": [
+      "健康は病気じゃないです。病気じゃないは健康です。"
+    ]
   },
   {
     "vocab": "人間",
@@ -21779,7 +21806,7 @@
     "vocab": "過去",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -22546,6 +22573,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "スムーズ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "建設",
@@ -24151,7 +24186,10 @@
       "main": "出会",
       "verbGroup": "u",
       "verbType": "intransitive"
-    }
+    },
+    "additionalExplanation": [
+      "運命、恋人、親友"
+    ]
   },
   {
     "vocab": "完全",
@@ -26081,6 +26119,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 3
+  },
+  {
+    "vocab": "リハビリ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "解釈",
@@ -37252,8 +37298,8 @@
   {
     "vocab": "感想",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -37661,7 +37707,7 @@
     "vocab": "飾り",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -44897,7 +44943,7 @@
     "vocab": "連休",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -46319,6 +46365,14 @@
     "vocab": "本日",
     "known": false,
     "inProgress": true,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "兄弟子",
+    "known": false,
+    "inProgress": false,
     "nowLearning": false,
     "pitch": "",
     "level": 0
@@ -48424,7 +48478,7 @@
     "vocab": "同志",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -48473,6 +48527,14 @@
     "known": false,
     "inProgress": false,
     "nowLearning": false,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "同士",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -50100,6 +50162,30 @@
     "known": false,
     "inProgress": false,
     "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "人工股関節",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "ヒップ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "義足",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
     "pitch": "",
     "level": 0
   },
