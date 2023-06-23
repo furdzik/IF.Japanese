@@ -16525,9 +16525,9 @@
   },
   {
     "vocab": "習う",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5,
     "verb": {
@@ -32567,8 +32567,8 @@
   {
     "vocab": "体重",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -46765,8 +46765,8 @@
   {
     "vocab": "黴",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -49158,7 +49158,7 @@
     "vocab": "上司",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -49690,7 +49690,7 @@
     "vocab": "部下",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -50201,5 +50201,53 @@
     },
     "pitch": "",
     "level": 5
+  },
+  {
+    "vocab": "見落し",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "二の腕",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "太もも",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "鼾",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "ドライ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "ウェット",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
   }
 ]
