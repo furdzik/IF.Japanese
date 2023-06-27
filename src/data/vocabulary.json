@@ -2587,7 +2587,10 @@
       "main": "動",
       "verbGroup": "ku",
       "verbType": "intransitive"
-    }
+    },
+    "examples": [
+      "体で動きます。"
+    ]
   },
   {
     "vocab": "講演",
@@ -5942,7 +5945,7 @@
     "vocab": "的",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -8495,7 +8498,7 @@
     "vocab": "勝利",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -8607,7 +8610,7 @@
     "vocab": "論文",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -10637,8 +10640,8 @@
   {
     "vocab": "整理",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -14210,7 +14213,7 @@
     "vocab": "研究",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -20703,7 +20706,7 @@
     "vocab": "寝坊",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -21565,8 +21568,8 @@
   {
     "vocab": "我慢",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -22490,7 +22493,7 @@
     "vocab": "改善",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -26301,8 +26304,8 @@
   {
     "vocab": "休憩",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -28949,10 +28952,15 @@
   {
     "vocab": "当たる",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "当た",
+      "verbGroup": "ru",
+      "verbType": "intransitive"
+    }
   },
   {
     "vocab": "会",
@@ -37424,7 +37432,7 @@
     "vocab": "日帰り",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -37481,6 +37489,14 @@
     "known": false,
     "inProgress": false,
     "nowLearning": false,
+    "pitch": "",
+    "level": 2
+  },
+  {
+    "vocab": "筆者",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -39069,7 +39085,7 @@
     "vocab": "意地悪",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -43705,9 +43721,14 @@
     "vocab": "目指す",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 2
+    "level": 2,
+    "verb": {
+      "main": "目指",
+      "verbGroup": "su",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "潰す",
@@ -44621,7 +44642,7 @@
     "vocab": "強制",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -47178,8 +47199,8 @@
   {
     "vocab": "依存症",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -48363,7 +48384,7 @@
     "vocab": "義理",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -50254,5 +50275,61 @@
     "nowLearning": true,
     "pitch": "",
     "level": 0
+  },
+  {
+    "vocab": "食費",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "宝くじ",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "オーナー",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "古着",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "朝寝坊",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
+  },
+  {
+    "vocab": "義母",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "依存",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 1
   }
 ]
