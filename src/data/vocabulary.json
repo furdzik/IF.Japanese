@@ -5437,9 +5437,9 @@
   },
   {
     "vocab": "足す",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4,
     "verb": {
@@ -15314,9 +15314,9 @@
   },
   {
     "vocab": "掛ける",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5,
     "verb": {
@@ -29228,10 +29228,15 @@
   {
     "vocab": "割る",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "verb": {
+      "main": "割",
+      "verbGroup": "ru",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "任せる",
