@@ -10568,8 +10568,8 @@
   {
     "vocab": "永久",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -23848,10 +23848,13 @@
   {
     "vocab": "出席",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "additionalExplanation": [
+      "コンサート、試合、祭り"
+    ]
   },
   {
     "vocab": "間違い",
@@ -26633,9 +26636,17 @@
     "vocab": "外す",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 3
+    "level": 3,
+    "additionalExplanation": [
+      "席を外している。→ 今ちょっといないという意味です。"
+    ],
+    "verb": {
+      "main": "外",
+      "verbGroup": "su",
+      "verbType": "transitive"
+    }
   },
   {
     "vocab": "主義",
@@ -50331,5 +50342,21 @@
     "nowLearning": true,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "脱毛",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "永久脱毛",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
   }
 ]
