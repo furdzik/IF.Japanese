@@ -42,12 +42,12 @@ const CharacterWrapper = styled.div`
     ${props.small && css`
       margin-bottom: 0;
       ${OneCharacter} {
-         width: 2.5rem;
-       }
+        width: 2.5rem;
+      }
     `};
 
-    ${breakpointMixin.phablet(css`
-        font-size: 4rem;
+    ${breakpointMixin.smallTablet(css`
+      font-size: 4rem;
 
       ${props.type === CHARACTER_TYPE.furigana && css`
         font-size: 1.6rem;

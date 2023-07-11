@@ -18,7 +18,7 @@ const ListItem = styled.div`
   background: ${(props) => props.theme.mainCategoriesStyle.notKnown.background};
   font-size: 2rem;
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     margin: 1rem;
     padding-left: ${basePaddingLeftRight};
     padding-right: ${basePaddingLeftRight};
@@ -47,7 +47,7 @@ const ListItem = styled.div`
     padding-right: calc(${baseMobilePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
     padding-bottom: calc(${baseMobilePaddingBottom} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
 
-    ${breakpointMixin.laptop(css`
+    ${breakpointMixin.smallLaptop(css`
       padding-left: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
       padding-right: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
     `)};
@@ -101,7 +101,7 @@ const ListItem = styled.div`
       text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
     }
 
-    ${breakpointMixin.laptop(css`
+    ${breakpointMixin.smallLaptop(css`
       padding-left: 1rem;
       padding-right: 1rem;
     `)};

@@ -57,7 +57,7 @@ const ModalWrapper = styled.div`
     border-radius: ${props.theme.layout.borderRadius};
   `)};
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     min-width: 100rem;
     max-width: 100rem;
   `)};

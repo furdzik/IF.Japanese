@@ -21,7 +21,7 @@ const Item = styled.li`
     margin-top: -.1rem;
   }
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     display: flex;
     flex-wrap: wrap;
   `)};
@@ -43,7 +43,7 @@ const MainBox = styled.div`
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.mainColors.secondary};
 
-  ${(props) => breakpointMixin.laptop(css`
+  ${(props) => breakpointMixin.smallLaptop(css`
     width: 22rem;
     border-right: 1px solid ${props.theme.mainColors.secondary};
     border-bottom: 0;
@@ -67,7 +67,7 @@ const BoxContent = styled.div`
     margin: 1rem 0;
   `};
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     width: calc(100% - 22rem);
   `)};
 `;
@@ -94,7 +94,7 @@ const TriggerWrapper = styled.div`
     top: -1.5rem;
   `};
 
-  ${(props) => breakpointMixin.laptop(css`
+  ${(props) => breakpointMixin.smallLaptop(css`
     top: 2.6rem;
     right: -1.5rem;
 

@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.mainColors.secondary};
 
-  ${breakpointMixin.laptop(css`
+  ${breakpointMixin.smallLaptop(css`
     display: inline-block;
   `)};
 
