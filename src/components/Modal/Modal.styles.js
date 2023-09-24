@@ -7,10 +7,7 @@ const shadowColor = 'rgba(0 0 0 / .1)';
 
 const LayerWrapper = styled.div`
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: 10000;
   display: flex;
   justify-content: center;
@@ -32,10 +29,7 @@ const LayerWrapper = styled.div`
 
   @media print {
     position: absolute;
-    top: 0;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    inset: 0 auto auto;
     z-index: 10000;
     display: block;
     justify-content: unset;
@@ -127,15 +121,15 @@ const ModalContent = styled.div`
     height: calc(var(--vh, 1vh) * 76.6);
   `)};
 
-  @media only screen and (max-height: 50rem) {
+  @media only screen and (height <= 50rem) {
     height: 40vh;
     height: calc(var(--vh, 1vh) * 40);
   }
 
   ${(props) => props.isOnlyMobile && css`
     padding-right: 1.6rem;
-    padding-left: 1.6rem;
     padding-bottom: 0;
+    padding-left: 1.6rem;
   `};
 
   @media print {

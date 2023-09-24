@@ -22,8 +22,8 @@ const Menu = (props) => (
             <LinkStyled
               active={props.active === el.id ? 1 : 0}
               to={`${el.link}`}
-              data-tip={el.label}
-              data-for={MENU_TOOLTIP_ID}
+              data-tooltip-content={el.label}
+              data-tooltip-id={MENU_TOOLTIP_ID}
             >
               {el.name}
             </LinkStyled>

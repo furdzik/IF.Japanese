@@ -26,8 +26,8 @@ const GrammarList = (props) => (
         GRAMMAR_MENU.map((menuItem) => (
           <ListItem
             key={uuidv4()}
-            data-tip={menuItem.label}
-            data-for={GRAMMAR_TOOLTIP_ID}
+            data-tooltip-content={menuItem.label}
+            data-tooltip-id={GRAMMAR_TOOLTIP_ID}
           >
             <LinkStyled to={menuItem.link}>{menuItem.name}</LinkStyled>
           </ListItem>

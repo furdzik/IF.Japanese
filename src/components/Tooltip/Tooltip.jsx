@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  StyledReactTooltip
+  StyledTooltip
 } from './Tooltip.styles.js';
 
 const Tooltip = (props) => (
-  <StyledReactTooltip
+  <StyledTooltip
     effect="solid"
     id={props.id}
     place={props.place}

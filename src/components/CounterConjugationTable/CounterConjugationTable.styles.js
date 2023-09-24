@@ -69,13 +69,13 @@ const Number = styled.span`
   ${(props) => props.specialPronunciation && props.specialConjugation && css`
     background: ${props.theme.mainColors.tartary};
     &::before {
-      position: absolute;
-      bottom: 0;
-      right: 0;
       content: '';
-      border-color: transparent ${props.theme.colors.lighterBlue};
-      border-style: solid;
+      position: absolute;
+      right: 0;
+      bottom: 0;
       border-width: 3.3rem 4rem 0 0;
+      border-style: solid;
+      border-color: transparent ${props.theme.colors.lighterBlue};
     }
   `};
 `;

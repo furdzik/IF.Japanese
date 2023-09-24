@@ -69,13 +69,13 @@ const GrammarBox = styled.div`
 
   ${(props) => (props.known || props.inProgress || props.nowLearning || props.toRepeat) && css`
     &::after {
+      content: '';
       position: absolute;
       top: .5rem;
       left: .5rem;
-      content: '';
-      border: .5px solid ${props.theme.colors.white};
       width: 1.5rem;
       height: 1.5rem;
+      border: .5px solid ${props.theme.colors.white};
       border-radius: 50%;
       ${props.known && css`
         background: ${props.theme.mainCategoriesStyle.known.background};
@@ -93,13 +93,14 @@ const GrammarBox = styled.div`
   `};
   ${(props) => props.level && props.level !== 0 && css`
     &::before {
+      content: '${props.level}';
       position: absolute;
       top: 0;
       right: .3rem;
-      color: inherit;
-      font-family: Arial, Calibri, Helvetica, sans-serif;
+      font-family: 'Arial', 'Calibri', 'Helvetica', sans-serif;
       font-size: 1rem;
-      content: '${props.level}';
+      color: inherit;
+
     }
   `};
 `;

@@ -29,8 +29,8 @@ const GameField = styled.div`
   text-align: center;
 
   ${breakpointMixin.laptop(css`
-    max-width: 50rem;
     width: auto;
+    max-width: 50rem;
   `)};
 `;
 

@@ -39,8 +39,8 @@ const StartGrammar = () => {
             partOfSpeechElements.map((el) => (
               <PartOfSpeechBox
                 key={uuidv4()}
-                data-tip={intl.formatMessage(messages[`${el}Label`])}
-                data-for={START_GRAMMAR_TOOLTIP_ID}
+                data-tooltip-content={intl.formatMessage(messages[`${el}Label`])}
+                data-tooltip-id={START_GRAMMAR_TOOLTIP_ID}
               >
                 {intl.formatMessage(messages[el])}
               </PartOfSpeechBox>
