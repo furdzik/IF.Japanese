@@ -23,8 +23,8 @@ const CheckboxList = (props) => (
       props.items.map((item) => (
         <ListItem
           key={uuidv4()}
-          data-tip={item.helper}
-          data-for={CHECKBOX_TOOLTIP_ID}
+          data-tooltip-content={item.helper}
+          data-tooltip-id={CHECKBOX_TOOLTIP_ID}
         >
           <Checkbox
             name={props.name}

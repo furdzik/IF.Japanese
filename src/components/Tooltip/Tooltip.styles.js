@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
-import ReactTooltip from 'react-tooltip';
+import { Tooltip } from 'react-tooltip';
 
-const StyledReactTooltip = styled(ReactTooltip)`
-  &.__react_component_tooltip { /* to override default styles */
+const StyledTooltip = styled(Tooltip)`
+  &.react-tooltip { /* to override default styles */
     display: flex;
     flex-direction: column;
     background: ${(props) => props.theme.colors.darkGray};
@@ -38,5 +38,5 @@ const StyledReactTooltip = styled(ReactTooltip)`
 `;
 
 export {
-  StyledReactTooltip
+  StyledTooltip
 };

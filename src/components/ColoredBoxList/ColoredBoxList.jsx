@@ -21,8 +21,8 @@ const ColoredBoxList = (props) => (
         props.list.map((menuItem) => (
           <BoxItem
             key={uuidv4()}
-            data-tip={menuItem.label}
-            data-for={COLORED_BOX_TOOLTIP_ID}
+            data-tooltip-content={menuItem.label}
+            data-tooltip-id={COLORED_BOX_TOOLTIP_ID}
           >
             <LinkStyled to={menuItem.link}>{menuItem.name}</LinkStyled>
           </BoxItem>

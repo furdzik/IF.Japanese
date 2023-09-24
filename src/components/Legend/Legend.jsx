@@ -23,42 +23,42 @@ const Legend = (props) => {
     <Wrapper>
       <LegendList>
         <LegendItem
-          data-tip={intl.formatMessage(defaultMessages.knownHelper)}
-          data-for={LEGEND_TOOLTIP_ID}
+          data-tooltip-content={intl.formatMessage(defaultMessages.knownHelper)}
+          data-tooltip-id={LEGEND_TOOLTIP_ID}
         >
           {intl.formatMessage(defaultMessages.known)}: {props.length.known}
         </LegendItem>
         {
           props.hasToRepeat ? (
             <LegendItem
-              data-tip={intl.formatMessage(defaultMessages.toRepeatHelper)}
-              data-for={LEGEND_TOOLTIP_ID}
+              data-tooltip-content={intl.formatMessage(defaultMessages.toRepeatHelper)}
+              data-tooltip-id={LEGEND_TOOLTIP_ID}
             >
               {intl.formatMessage(defaultMessages.toRepeat)}: {props.length.toRepeat}
             </LegendItem>
           ) : null
         }
         <LegendItem
-          data-tip={intl.formatMessage(defaultMessages.nowLearningHelper)}
-          data-for={LEGEND_TOOLTIP_ID}
+          data-tooltip-content={intl.formatMessage(defaultMessages.nowLearningHelper)}
+          data-tooltip-id={LEGEND_TOOLTIP_ID}
         >
           {intl.formatMessage(defaultMessages.nowLearning)}: {props.length.nowLearning}
         </LegendItem>
         <LegendItem
-          data-tip={intl.formatMessage(defaultMessages.inProgressHelper)}
-          data-for={LEGEND_TOOLTIP_ID}
+          data-tooltip-content={intl.formatMessage(defaultMessages.inProgressHelper)}
+          data-tooltip-id={LEGEND_TOOLTIP_ID}
         >
           {intl.formatMessage(defaultMessages.inProgress)}: {props.length.inProgress}
         </LegendItem>
         <LegendItem
-          data-tip={intl.formatMessage(defaultMessages.notKnownHelper)}
-          data-for={LEGEND_TOOLTIP_ID}
+          data-tooltip-content={intl.formatMessage(defaultMessages.notKnownHelper)}
+          data-tooltip-id={LEGEND_TOOLTIP_ID}
         >
           {intl.formatMessage(defaultMessages.notKnown)}: {props.length.notKnown}
         </LegendItem>
         <LegendItem
-          data-tip={intl.formatMessage(defaultMessages.allHelper)}
-          data-for={LEGEND_TOOLTIP_ID}
+          data-tooltip-content={intl.formatMessage(defaultMessages.allHelper)}
+          data-tooltip-id={LEGEND_TOOLTIP_ID}
         >
           <span>{intl.formatMessage(defaultMessages.all)}:&nbsp;</span>
           {props.length.started} / {props.length.all}
