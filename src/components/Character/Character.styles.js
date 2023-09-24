@@ -17,18 +17,18 @@ const CharacterWrapper = styled.div`
   text-align: center;
 
   ${(props) => props.type === CHARACTER_TYPE.furigana && css`
-    font-size: 1.6rem;
     margin-bottom: -.5rem;
+    font-size: 1.6rem;
   `};
 
   ${(props) => props.small && css`
-    font-size: 1.6rem;
     margin-top: -.3rem;
     margin-bottom: -.1rem;
+    font-size: 1.6rem;
 
     ${OneCharacter} {
-      min-width: 1.2rem;
       width: auto;
+      min-width: 1.2rem;
     }
 
     ${props.type === CHARACTER_TYPE.furigana && css`

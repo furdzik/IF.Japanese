@@ -20,8 +20,8 @@ const ListItem = styled.div`
 
   ${breakpointMixin.laptop(css`
     margin: 1rem;
-    padding-left: ${basePaddingLeftRight};
     padding-right: ${basePaddingLeftRight};
+    padding-left: ${basePaddingLeftRight};
   `)};
 
   @media print {
@@ -41,22 +41,21 @@ const ListItem = styled.div`
   }
 
   ${(props) => props.joyo === false && css`
+    padding: calc(${baseMobilePaddingTop} - ${props.theme.mainCategoriesStyle.joyo.borderSize})
+             calc(${baseMobilePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize})
+             calc(${baseMobilePaddingBottom} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
     border: ${props.theme.mainCategoriesStyle.joyo.border};
-    padding-top: calc(${baseMobilePaddingTop} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
-    padding-left: calc(${baseMobilePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
-    padding-right: calc(${baseMobilePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
-    padding-bottom: calc(${baseMobilePaddingBottom} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
 
     ${breakpointMixin.laptop(css`
-      padding-left: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
       padding-right: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
+      padding-left: calc(${basePaddingLeftRight} - ${props.theme.mainCategoriesStyle.joyo.borderSize});
     `)};
   `};
 
   ${(props) => props.known && css`
+    order: 0;
     background: ${props.theme.mainCategoriesStyle.known.background};
     color: ${props.theme.mainCategoriesStyle.known.color};
-    order: 0;
     &::before {
       color: ${props.theme.colors.white};
       text-shadow: ${props.theme.mainCategoriesStyle.known.textShadow};
@@ -68,10 +67,10 @@ const ListItem = styled.div`
   `};
 
   ${(props) => props.toRepeat && css`
+    order: 2;
     background: ${props.theme.mainCategoriesStyle.toRepeat.background};
     color: ${props.theme.mainCategoriesStyle.toRepeat.color};
     text-shadow: ${props.theme.mainCategoriesStyle.toRepeat.textShadow};
-    order: 2;
     &::before {
       color: ${props.theme.colors.white};
       text-shadow: ${props.theme.mainCategoriesStyle.toRepeat.textShadow};
@@ -89,12 +88,12 @@ const ListItem = styled.div`
   `};
 
   ${(props) => props.nowLearning && css`
-    background: ${props.theme.mainCategoriesStyle.nowLearning.background};
-    border: ${props.theme.mainCategoriesStyle.nowLearning.border};
+    order: 1;
     padding: .4rem .8rem .2rem;
+    border: ${props.theme.mainCategoriesStyle.nowLearning.border};
+    background: ${props.theme.mainCategoriesStyle.nowLearning.background};
     color: ${props.theme.mainCategoriesStyle.nowLearning.color};
     text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
-    order: 1;
 
     &::before {
       color: ${props.theme.mainCategoriesStyle.nowLearning.color};
@@ -102,8 +101,8 @@ const ListItem = styled.div`
     }
 
     ${breakpointMixin.laptop(css`
-      padding-left: 1rem;
       padding-right: 1rem;
+      padding-left: 1rem;
     `)};
 
     ${props.joyo === false && css`
@@ -112,10 +111,10 @@ const ListItem = styled.div`
   `};
 
   ${(props) => props.inProgress && css`
+    order: 2;
     background: ${props.theme.mainCategoriesStyle.inProgress.background};
     color: ${props.theme.mainCategoriesStyle.inProgress.color};
     text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
-    order: 2;
     &::before {
       color: ${props.theme.colors.white};
       text-shadow: ${props.theme.mainCategoriesStyle.inProgress.textShadow};
@@ -133,9 +132,9 @@ const ListItem = styled.div`
   `};
 
   ${(props) => ((props.inProgress && props.known) || (props.inProgress && props.toRepeat) || (props.inProgress && props.nowLearning) || (props.known && props.nowLearning)) && css`
+    order: 5 !important;
     background: ${props.theme.colors.black};
     color: ${props.theme.colors.white};
-    order: 5 !important;
     &::before {
       color: ${props.theme.colors.white};
     }
@@ -143,13 +142,13 @@ const ListItem = styled.div`
 
   ${(props) => props.level && props.level !== 0 && css`
     &::before {
+      content: '${props.level}';
       position: absolute;
       top: 0;
       right: .3rem;
-      color: inherit;
-      font-family: Arial, Calibri, Helvetica, sans-serif;
+      font-family: 'Arial', 'Calibri', 'Helvetica', sans-serif;
       font-size: 1rem;
-      content: '${props.level}';
+      color: inherit;
     }
   `};
 

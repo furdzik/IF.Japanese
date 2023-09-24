@@ -38,9 +38,9 @@ const CheckboxBox = styled.span`
   }
 
   ${(props) => props.isActive && css`
-    background-color: ${props.theme.colors.white};
     border-color: ${props.theme.mainColors.primary};
-    &:after {
+    background-color: ${props.theme.colors.white};
+    &::after {
       opacity: 1;
     }
   `};

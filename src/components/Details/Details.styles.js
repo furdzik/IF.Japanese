@@ -80,8 +80,8 @@ const Content = styled.div`
   margin: 0 1.5rem;
 
   ${breakpointMixin.laptop(css`
-    margin-left: 3rem;
     margin-right: 3rem;
+    margin-left: 3rem;
   `)};
 `;
 
