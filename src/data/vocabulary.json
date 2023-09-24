@@ -2754,7 +2754,7 @@
     "vocab": "孤児",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -4257,7 +4257,7 @@
     "vocab": "微妙",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -6566,9 +6566,9 @@
   },
   {
     "vocab": "ボタン",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -42399,7 +42399,7 @@
     "vocab": "アイデア",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 2
   },
@@ -50356,6 +50356,22 @@
     "known": false,
     "inProgress": false,
     "nowLearning": false,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "お仕舞い",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "孤児院",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   }
