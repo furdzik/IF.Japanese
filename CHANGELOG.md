@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/furdzik/IF.Japanese/compare/v1.4.0...v1.5.0) (2023-09-24)
+
+
+### Features
+
+* **app:** add words ([c7953b7](https://github.com/furdzik/IF.Japanese/commit/c7953b7846d79ad217c4358cb57987d08dd2b970))
+
 ## [1.4.0](https://github.com/furdzik/IF.Japanese/compare/v1.3.0...v1.4.0) (2023-06-27)
 
 
