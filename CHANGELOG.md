@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/furdzik/IF.Japanese/compare/v1.6.1...v1.6.2) (2023-09-27)
+
+
+### Bug Fixes
+
+* **app:** change vocab status ([8ad0a78](https://github.com/furdzik/IF.Japanese/commit/8ad0a783b3c4e9a60bd5e789402edc2f43a46e93))
+
 ## [1.6.1](https://github.com/furdzik/IF.Japanese/compare/v1.6.0...v1.6.1) (2023-09-27)
 
 
