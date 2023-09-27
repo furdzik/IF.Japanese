@@ -9174,9 +9174,9 @@
   },
   {
     "vocab": "旅行",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -24393,7 +24393,7 @@
     "vocab": "旅",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
