@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/furdzik/IF.Japanese/compare/v1.6.0...v1.6.1) (2023-09-27)
+
+
+### Bug Fixes
+
+* **app:** change kanji status ([6af2ddc](https://github.com/furdzik/IF.Japanese/commit/6af2ddc0b4d5edca32dd8f7a952549998169f705))
+
 ## [1.6.0](https://github.com/furdzik/IF.Japanese/compare/v1.5.0...v1.6.0) (2023-09-25)
 
 
