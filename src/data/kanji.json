@@ -3890,8 +3890,8 @@
   {
     "kanji": "旅",
     "known": false,
-    "inProgress": true,
-    "nowLearning": false,
+    "inProgress": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 4
