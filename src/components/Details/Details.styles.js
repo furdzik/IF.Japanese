@@ -55,6 +55,12 @@ const WordHeaderSeparator = styled.span`
   display: inline-block;
   margin: 0 2rem;
 `;
+const WordHeaderAdditionalInfo = styled.span`
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: .8;
+`;
 
 const JishoLink = styled.a`
   display: inline-block;
@@ -138,6 +144,7 @@ export {
   DetailsWrapper,
   WordHeader,
   WordHeaderSeparator,
+  WordHeaderAdditionalInfo,
   JishoLink,
   TagsWrapper,
   Content,
