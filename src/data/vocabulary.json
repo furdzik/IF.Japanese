@@ -20,8 +20,8 @@
   },
   {
     "vocab": "立つ",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 5,
@@ -33,8 +33,8 @@
   },
   {
     "vocab": "王",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3
@@ -1759,16 +1759,16 @@
   },
   {
     "vocab": "一億",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0
   },
   {
     "vocab": "易しい",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 5
@@ -12059,8 +12059,8 @@
   },
   {
     "vocab": "旅行者",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0
@@ -18167,8 +18167,8 @@
   },
   {
     "vocab": "旅館",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 4

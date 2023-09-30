@@ -14,7 +14,8 @@ import {
   getAntonyms,
   getOtherForms,
   getKanjiParts,
-  getVocabFromJson
+  getVocabFromJson,
+  checkIfUsuallyIsInKana
 } from './utils';
 
 const actionTypes = {
@@ -25,6 +26,7 @@ const actionTypes = {
 const initialState = {
   japaneseForm: null,
   meaning: '',
+  usuallyInKana: false,
   vocab: null,
   metadata: {},
   status: {},
@@ -55,6 +57,7 @@ export default function vocabularyDetailsReducer (state = initialState, action =
         meaning: data.meaning
           ? data.meaning
           : data.details?.japanese[0]?.reading,
+        usuallyInKana: checkIfUsuallyIsInKana(data.details?.senses),
         metadata: {
           slug: data.details?.slug
         },

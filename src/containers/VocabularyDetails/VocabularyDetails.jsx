@@ -43,6 +43,7 @@ const VocabularyDetails = (props) => {
     <VocabularyDetailsComponent
       name={name}
       meaning={props.meaning}
+      usuallyInKana={props.usuallyInKana}
       metadata={props.metadata}
       status={props.status}
       translations={props.translations}
@@ -68,6 +69,7 @@ VocabularyDetails.propTypes = {
   metadata: metadataShape.isRequired,
   status: statusShape.isRequired,
   translations: translationsShape.isRequired,
+  usuallyInKana: PropTypes.bool.isRequired,
   additionalExplanation: additionalExplanationShape,
   antonyms: PropTypes.arrayOf(PropTypes.string),
   apiError: PropTypes.bool,

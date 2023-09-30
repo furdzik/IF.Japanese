@@ -19,6 +19,7 @@ import {
   DetailsWrapper,
   WordHeader,
   WordHeaderSeparator,
+  WordHeaderAdditionalInfo,
   JishoLink,
   Content,
   SectionsWrapper,
@@ -47,6 +48,13 @@ const Details = (props) => {
               <React.Fragment>
                 <WordHeaderSeparator>/</WordHeaderSeparator>
                 {props.meaning}
+                {
+                  props.usuallyInKana ? (
+                    <WordHeaderAdditionalInfo>
+                      {intl.formatMessage(messages.usuallyInKanaText)}
+                    </WordHeaderAdditionalInfo>
+                  ) : null
+                }
               </React.Fragment>
             ) : null
           }
@@ -166,6 +174,7 @@ Details.propTypes = {
   })),
   tags: PropTypes.arrayOf(PropTypes.node),
   toRepeat: PropTypes.bool,
+  usuallyInKana: PropTypes.bool,
   wide: PropTypes.bool
 };
 
@@ -184,6 +193,7 @@ Details.defaultProps = {
   sections: null,
   tags: null,
   toRepeat: null,
+  usuallyInKana: false,
   wide: false
 };
 

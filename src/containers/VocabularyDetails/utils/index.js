@@ -4,3 +4,4 @@ export { getAntonyms } from './getAntonyms';
 export { getOtherForms } from './getOtherForms';
 export { getKanjiParts } from './getKanjiParts';
 export { getVocabFromJson } from './getVocabFromJson';
+export { checkIfUsuallyIsInKana } from './checkIfUsuallyIsInKana';
