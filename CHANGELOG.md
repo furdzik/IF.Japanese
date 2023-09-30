@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/furdzik/IF.Japanese/compare/v1.6.2...v1.7.0) (2023-09-30)
+
+
+### Features
+
+* **vocab-details:** add usually in kana alone text to word header ([7556e25](https://github.com/furdzik/IF.Japanese/commit/7556e25f7ba2e41ffd87c1ed8c0a0531d5937fe4))
+
 ## [1.6.2](https://github.com/furdzik/IF.Japanese/compare/v1.6.1...v1.6.2) (2023-09-27)
 
 
