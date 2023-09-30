@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { Link } from 'react-router-dom';
 
-import { GRAMMAR_TYPES, TAG_TYPES } from '@constants';
+import { GRAMMAR_TYPES, TAG_TYPES, VERB_TYPE } from '@constants';
 
 import { verbItemShape } from '@types/verb';
 import {
@@ -29,6 +29,7 @@ import AdditionalExplanationBox from '@components/AdditionalExplanationBox';
 import CounterConjugationTable from '@components/CounterConjugationTable';
 import Details from '@components/Details';
 import DetailsParts from '@components/DetailsParts';
+import KanjiWithFurigana from '@components/KanjiWithFurigana';
 import Modal from '@components/Modal';
 import ProblemsBox from '@components/ProblemsBox';
 import ShortKanjiDetailsParts from '@components/ShortKanjiDetailsParts';
@@ -44,6 +45,11 @@ import {
   PartOfSpeechWrapper,
   PartOfSpeechBox,
   AntonymsBox,
+  VerbBox,
+  VerbTypeInfoBox,
+  VerbTypeVerbWrapper,
+  StyledTile,
+  StyledVerbType,
   AntonymsLink,
   ExamplesWrapper,
   OtherFormsWrapper,
@@ -100,18 +106,92 @@ const VocabularyDetails = (props) => {
       jishoLink={`https://jisho.org/word/${props.metadata.slug}`}
       tags={getTags()}
       additionalBox={(
-        props.antonyms.length > 0 ? (
-          <AntonymsBox key={props.antonyms}>
-            {intl.formatMessage(messages.antonymText)}
-            {
-              props.antonyms.map((antonym) => (
-                <AntonymsLink key={antonym} to={`/vocab/${antonym}`}>
-                  {antonym}
-                </AntonymsLink>
-              ))
-            }
-          </AntonymsBox>
-        ) : null
+        <React.Fragment>
+          {
+            props.verb ? (
+              <VerbBox>
+                <SubHeading>
+                  {intl.formatMessage(messages.verbHeader)}
+                </SubHeading>
+                <VerbTypeInfoBox>
+                  <VerbTypeVerbWrapper isTransitive={props.verb.verbType === VERB_TYPE.transitive}>
+                    <StyledTile
+                      level={0}
+                      known={props.status?.known}
+                      nowLearning={props.status?.nowLearning}
+                      inProgress={props.status?.inProgress}
+                      noOrder
+                    >
+                      <KanjiWithFurigana
+                        kanji={props.japaneseForm?.kanji}
+                        furigana={props.japaneseForm?.furigana}
+                      />
+                    </StyledTile>
+                    <StyledVerbType verbType={props.verb?.verbType} />
+                  </VerbTypeVerbWrapper>
+                  {
+                    props.verb.oppositeVerb ? (
+                      <VerbTypeVerbWrapper
+                        isTransitive={props.verb.oppositeVerb.verbType === VERB_TYPE.transitive}
+                      >
+                        <StyledTile
+                          level={0}
+                          known={props.verb.oppositeVerb.status?.known}
+                          nowLearning={props.verb.oppositeVerb.status?.nowLearning}
+                          inProgress={props.verb.oppositeVerb.status?.inProgress}
+                          noOrder
+                        >
+                          <Link
+                            to={
+                              `/vocab/${props.verb.oppositeVerb.opposite}`
+                            }
+                          >
+                            <KanjiWithFurigana
+                              kanji={props.verb.oppositeVerb.japaneseForm?.kanji}
+                              furigana={props.verb.oppositeVerb.japaneseForm?.furigana}
+                            />
+                          </Link>
+                        </StyledTile>
+                        <StyledVerbType verbType={props.verb.oppositeVerb.verbType} />
+                      </VerbTypeVerbWrapper>
+                    ) : null
+                  }
+                </VerbTypeInfoBox>
+              </VerbBox>
+            ) : null
+          }
+          {
+            props.antonyms.length > 0 ? (
+              <AntonymsBox key={props.antonyms}>
+                {intl.formatMessage(messages.antonymText)}
+                {
+                  props.antonyms.map((antonym) => (
+                    <AntonymsLink key={antonym} to={`/vocab/${antonym}`}>
+                      {antonym}
+                    </AntonymsLink>
+                  ))
+                }
+              </AntonymsBox>
+            ) : null
+          }
+          {
+            props.otherForms.length ? (
+              <OtherFormsWrapper>
+                <SubHeading>
+                  {intl.formatMessage(messages.otherFormsHeader)}
+                </SubHeading>
+                {
+                  props.otherForms.map((otherForm, otherFormIndex) => (
+                    <div key={uuidv4()}>
+                      {otherForm.word} 【{otherForm.reading}】
+                      {props.otherForms.length - 1 !== otherFormIndex ? '、' : null}
+                    </div>
+                  ))
+                }
+              </OtherFormsWrapper>
+            ) : null
+          }
+        </React.Fragment>
       )}
       mainSectionHeader={intl.formatMessage(messages.mainHeader)}
       mainSection={(
@@ -171,23 +251,6 @@ const VocabularyDetails = (props) => {
                 </div>
               </TranslationsListItem>
             ))
-          }
-          {
-            props.otherForms.length ? (
-              <OtherFormsWrapper>
-                <SubHeading>
-                  {intl.formatMessage(messages.otherFormsHeader)}
-                </SubHeading>
-                {
-                  props.otherForms.map((otherForm, otherFormIndex) => (
-                    <div key={uuidv4()}>
-                      {otherForm.word} 【{otherForm.reading}】
-                      {props.otherForms.length - 1 !== otherFormIndex ? '、' : null}
-                    </div>
-                  ))
-                }
-              </OtherFormsWrapper>
-            ) : null
           }
         </TranslationsList>
       )}

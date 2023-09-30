@@ -7,7 +7,7 @@ import { mdiChevronDown, mdiChevronUp } from '@mdi/js';
 
 import Collapsible from 'react-collapsible';
 
-import { GRAMMAR_TYPES, VERB_TYPE } from '@constants';
+import { GRAMMAR_TYPES } from '@constants';
 
 import { vocabItemShape } from '@types/vocab';
 
@@ -23,7 +23,7 @@ import {
   BoxContent,
   BoxWrapper,
   TriggerWrapper,
-  VerbType,
+  StyledVerbType,
   ParticleWrapper,
   ParticleList,
   ParticleListItem,
@@ -35,29 +35,6 @@ const VerbsListItem = (props) => {
   const intl = useIntl();
 
   const [collapsed, setCollapse] = useState(false);
-
-  const verbTypeLabel = (type, symbol = false) => {
-    switch (type) {
-      case VERB_TYPE.transitive: {
-        return symbol
-          ? intl.formatMessage(messages.verbTypeTransitive)
-          : intl.formatMessage(messages.verbTypeTransitiveText);
-      }
-      case VERB_TYPE.intransitive: {
-        return symbol
-          ? intl.formatMessage(messages.verbTypeIntransitive)
-          : intl.formatMessage(messages.verbTypeIntransitiveText);
-      }
-      case VERB_TYPE.other: {
-        return symbol
-          ? intl.formatMessage(messages.verbTypeOther)
-          : intl.formatMessage(messages.verbTypeOtherText);
-      }
-
-      default:
-        return null;
-    }
-  };
 
   const renderTrigger = () => (
     <TriggerWrapper isCollaps={collapsed}>
@@ -95,9 +72,7 @@ const VerbsListItem = (props) => {
         >
           <VocabLink to={`/vocab/${props.item.vocab}`}>{props.item.vocab}</VocabLink>
         </TileStyled>
-        <VerbType title={verbTypeLabel(props.item.verb?.verbType)}>
-          {verbTypeLabel(props.item.verb?.verbType, true)}
-        </VerbType>
+        <StyledVerbType verbType={props.item.verb?.verbType} />
         {
           props.item.verb && props.item.verb.particles ? (
             <ParticleWrapper>

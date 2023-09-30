@@ -91,8 +91,8 @@
   },
   {
     "kanji": "学",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -199,8 +199,8 @@
   },
   {
     "kanji": "校",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -298,8 +298,8 @@
   },
   {
     "kanji": "手",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -982,8 +982,8 @@
   },
   {
     "kanji": "魚",
-    "known": true,
-    "inProgress": false,
+    "known": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -1099,18 +1099,18 @@
   },
   {
     "kanji": "午",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
   },
   {
     "kanji": "後",
-    "known": true,
+    "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -4466,7 +4466,7 @@
   {
     "kanji": "結",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -5393,7 +5393,7 @@
   {
     "kanji": "付",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -5564,7 +5564,7 @@
   {
     "kanji": "無",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -6275,7 +6275,7 @@
   {
     "kanji": "構",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -7841,7 +7841,7 @@
   {
     "kanji": "降",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -8714,7 +8714,7 @@
   {
     "kanji": "晩",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -11171,7 +11171,7 @@
   {
     "kanji": "靴",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -21471,6 +21471,15 @@
     "nowLearning": false,
     "joyo": false,
     "jinmeiyo": true,
+    "level": 0
+  },
+  {
+    "kanji": "迚",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "joyo": false,
+    "jinmeiyo": false,
     "level": 0
   }
 ]

@@ -15,7 +15,8 @@ import {
   getOtherForms,
   getKanjiParts,
   getVocabFromJson,
-  checkIfUsuallyIsInKana
+  checkIfUsuallyIsInKana,
+  getOppositeVerb
 } from './utils';
 
 const actionTypes = {
@@ -48,7 +49,6 @@ export default function vocabularyDetailsReducer (state = initialState, action =
   switch (action.type) {
     case actionTypes.GET_VOCAB_DETAILS: {
       const data = action.payload;
-
       const level = data.level ? [data.level.toString()] : null;
 
       return {
@@ -88,7 +88,8 @@ export default function vocabularyDetailsReducer (state = initialState, action =
           isCounter: !!data.counter
         }),
         verb: data.verb ? {
-          ...data.verb
+          ...data.verb,
+          oppositeVerb: getOppositeVerb(data.verb?.opposite, data.oppositeVerb)
         } : null,
         loading: false,
         apiError: !data.details
@@ -123,9 +124,15 @@ const getMeaning = (response, name, url) => (dispatch) => {
   const kanjiParts = getKanjiParts(vocab.vocab);
 
   Promise.all(
-    kanjiParts.map((el) => fetchKanjiAlternative(el))
+    [
+      ...kanjiParts.map((el) => fetchKanjiAlternative(el)),
+      vocab?.verb?.opposite ? fetchJisho(vocab?.verb?.opposite) : null
+    ]
   )
-    .then((kanjiDetails) => {
+    .then((responseDetails) => {
+      const kanjiDetails = [...responseDetails].slice(0, kanjiParts.length);
+      const responseOpposite = responseDetails[responseDetails.length - 1];
+
       const completeKanjiParts = [];
 
       kanjiDetails.forEach((kanjiPart) => {
@@ -143,7 +150,8 @@ const getMeaning = (response, name, url) => (dispatch) => {
         name,
         ...vocab,
         kanjiDetails: completeKanjiParts,
-        details: response
+        details: response,
+        oppositeVerb: responseOpposite?.data?.[0]
       }));
     });
 };

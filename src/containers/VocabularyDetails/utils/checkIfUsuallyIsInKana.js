@@ -10,5 +10,5 @@ export const checkIfUsuallyIsInKana = (senses) => {
   const sum = isInKanaArray.reduce((a, b) => a + b, 0);
   const percent = (sum * 100) / isInKanaArray.length;
 
-  return percent > USUALLY_IN_KANA_PERCENT;
+  return percent >= USUALLY_IN_KANA_PERCENT;
 };

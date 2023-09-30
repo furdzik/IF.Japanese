@@ -34,5 +34,11 @@ export default defineMessages({
   TryN4Short: 'TRY N2',
   TryN3Short: 'TRY N3',
   TryN2Short: 'TRY N4',
-  TryN1Short: 'TRY N5'
+  TryN1Short: 'TRY N5',
+  verbTypeIntransitive: '*',
+  verbTypeTransitive: '°',
+  verbTypeOther: '"',
+  verbTypeIntransitiveText: '自動詞',
+  verbTypeTransitiveText: '他動詞',
+  verbTypeOtherText: '他'
 });

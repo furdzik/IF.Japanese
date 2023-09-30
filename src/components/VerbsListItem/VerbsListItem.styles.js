@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { breakpointMixin } from '@styles/mixins';
 
 import Tile from '@components/Tile';
+import VerbType from '@components/VerbType';
 
 const Item = styled.li`
   border: 1px solid ${(props) => props.theme.mainColors.secondary};
@@ -104,12 +105,8 @@ const TriggerWrapper = styled.div`
   `)};
 `;
 
-const VerbType = styled.span`
-  display: inline-block;
+const StyledVerbType = styled(VerbType)`
   margin-top: 2.5rem;
-  font-size: 3rem;
-  color: ${(props) => props.theme.mainColors.secondary};
-  cursor: default;
 `;
 
 const ParticleWrapper = styled.div`
@@ -147,7 +144,7 @@ export {
   BoxContent,
   BoxWrapper,
   TriggerWrapper,
-  VerbType,
+  StyledVerbType,
   ParticleWrapper,
   ParticleList,
   ParticleListItem,
