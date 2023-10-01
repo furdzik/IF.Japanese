@@ -3,11 +3,11 @@ import vocabJson from '@data/vocabulary.json';
 import { getFurigana, getKanji } from '@utils/kanji';
 
 export const getOppositeVerb = (oppositeVerb, oppositeVerbDetails) => {
-  if (!oppositeVerbDetails) {
+  const data = vocabJson.filter((el) => el.vocab === oppositeVerb)[0];
+
+  if (!oppositeVerbDetails || !data) {
     return null;
   }
-
-  const data = vocabJson.filter((el) => el.vocab === oppositeVerb)[0];
 
   return {
     opposite: oppositeVerb,

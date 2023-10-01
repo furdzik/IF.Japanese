@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { v4 as uuidv4 } from 'uuid';
 
+import { mdiArrowLeftRight } from '@mdi/js';
+
 import { Link } from 'react-router-dom';
 
 import { GRAMMAR_TYPES, TAG_TYPES, VERB_TYPE } from '@constants';
@@ -50,6 +52,7 @@ import {
   VerbTypeVerbWrapper,
   StyledTile,
   StyledVerbType,
+  StyledIcon,
   AntonymsLink,
   ExamplesWrapper,
   OtherFormsWrapper,
@@ -108,7 +111,21 @@ const VocabularyDetails = (props) => {
       additionalBox={(
         <React.Fragment>
           {
-            props.verb ? (
+            props.antonyms.length > 0 ? (
+              <AntonymsBox key={props.antonyms}>
+                {intl.formatMessage(messages.antonymText)}
+                {
+                  props.antonyms.map((antonym) => (
+                    <AntonymsLink key={antonym} to={`/vocab/${antonym}`}>
+                      {antonym}
+                    </AntonymsLink>
+                  ))
+                }
+              </AntonymsBox>
+            ) : null
+          }
+          {
+            props.verb && props.verb?.oppositeVerb ? (
               <VerbBox>
                 <SubHeading>
                   {intl.formatMessage(messages.verbHeader)}
@@ -129,6 +146,7 @@ const VocabularyDetails = (props) => {
                     </StyledTile>
                     <StyledVerbType verbType={props.verb?.verbType} />
                   </VerbTypeVerbWrapper>
+                  <StyledIcon path={mdiArrowLeftRight} size={2} />
                   {
                     props.verb.oppositeVerb ? (
                       <VerbTypeVerbWrapper
@@ -158,20 +176,6 @@ const VocabularyDetails = (props) => {
                   }
                 </VerbTypeInfoBox>
               </VerbBox>
-            ) : null
-          }
-          {
-            props.antonyms.length > 0 ? (
-              <AntonymsBox key={props.antonyms}>
-                {intl.formatMessage(messages.antonymText)}
-                {
-                  props.antonyms.map((antonym) => (
-                    <AntonymsLink key={antonym} to={`/vocab/${antonym}`}>
-                      {antonym}
-                    </AntonymsLink>
-                  ))
-                }
-              </AntonymsBox>
             ) : null
           }
           {

@@ -818,7 +818,8 @@
     "verb": {
       "main": "上が",
       "verbGroup": "ru",
-      "verbType": "intransitive"
+      "verbType": "intransitive",
+      "opposite": "上げる"
     }
   },
   {
@@ -958,10 +959,27 @@
     "nowLearning": false,
     "pitch": "",
     "level": 4,
+    "antonyms": "上げる",
     "verb": {
       "main": "下げ",
       "verbGroup": "2",
-      "verbType": "transitive"
+      "verbType": "transitive",
+      "opposite":  "下がる"
+    }
+  },
+  {
+    "vocab": "下がる",
+    "known": true,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 4,
+    "antonyms": "上がる",
+    "verb": {
+      "main": "下が",
+      "verbGroup": "ru",
+      "verbType": "intransitive",
+      "opposite":  "下げる"
     }
   },
   {
@@ -1247,10 +1265,12 @@
     "nowLearning": false,
     "pitch": "",
     "level": 5,
+    "antonyms": "下げる",
     "verb": {
       "main": "上げ",
       "verbGroup": "2",
-      "verbType": "transitive"
+      "verbType": "transitive",
+      "opposite": "上がる"
     }
   },
   {

@@ -50,7 +50,8 @@ This repository presents frontend application for my **Japanese APP**.
     "verb": {
         "main": "降",
         "verbGroup": "ru",
-        "verbType": "intransitive"
+        "verbType": "intransitive",
+        "opposite": "付く"
     }
 }
 ```
