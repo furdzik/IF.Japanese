@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.0](https://github.com/furdzik/IF.Japanese/compare/v1.7.0...v1.8.0) (2023-10-01)
+
+
+### Features
+
+* **vocab-details:** verbs: add transitive and intransitive pair part 1 ([895963c](https://github.com/furdzik/IF.Japanese/commit/895963c2e2184e3e83c95caa0b76875e9bdf453d))
+* **vocab-details:** verbs: add transitive and intransitive pair part 2 ([8b6898c](https://github.com/furdzik/IF.Japanese/commit/8b6898c0121915b1facb8aa1512498face16292f))
+
 ## [1.7.0](https://github.com/furdzik/IF.Japanese/compare/v1.6.2...v1.7.0) (2023-09-30)
 
 
