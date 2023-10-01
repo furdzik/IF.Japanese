@@ -2,6 +2,11 @@ import styled from '@emotion/styled';
 
 import { Link } from 'react-router-dom';
 
+import Icon from '@mdi/react';
+
+import Tile from '@components/Tile';
+import VerbType from '@components/VerbType';
+
 const ConjugationLink = styled.button`
   color: ${(props) => props.theme.colors.white};
 `;
@@ -65,6 +70,41 @@ const AntonymsBox = styled.div`
   text-align: center;
 `;
 
+const VerbBox = styled.div`
+  margin-top: 2rem;
+`;
+
+const VerbTypeInfoBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2rem;
+`;
+
+const VerbTypeVerbWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  order: ${(props) => props.isTransitive ? '1' : '3'}
+`;
+
+const StyledTile = styled(Tile)`
+  && {
+    flex-shrink: 0;
+    margin: 0;
+  }
+`;
+
+const StyledVerbType = styled(VerbType)`
+  margin: -1rem 1rem 0;
+`;
+
+const StyledIcon = styled(Icon)`
+  order: 2;
+  margin: 0 2.5rem 0 0;
+  color: ${(props) => props.theme.colors.lightGray};
+`;
+
 const AntonymsLink = styled(Link)`
   display: inline-block;
   margin-left: 1rem;
@@ -78,7 +118,8 @@ const ExamplesWrapper = styled.div`
 const OtherFormsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  max-width: 27rem;
+  margin-top: 3rem;
 `;
 
 const ConjugationHeader = styled.span`
@@ -95,6 +136,12 @@ export {
   PartOfSpeechWrapper,
   PartOfSpeechBox,
   AntonymsBox,
+  VerbBox,
+  VerbTypeInfoBox,
+  VerbTypeVerbWrapper,
+  StyledTile,
+  StyledVerbType,
+  StyledIcon,
   AntonymsLink,
   ExamplesWrapper,
   OtherFormsWrapper,

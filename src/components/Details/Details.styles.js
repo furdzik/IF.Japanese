@@ -56,10 +56,13 @@ const WordHeaderSeparator = styled.span`
   margin: 0 2rem;
 `;
 const WordHeaderAdditionalInfo = styled.span`
-  margin-left: 2rem;
   font-size: 1.5rem;
   font-weight: 300;
   opacity: .8;
+
+  ${breakpointMixin.landscapeTablet(css`
+    margin-left: 2rem;
+  `)};
 `;
 
 const JishoLink = styled.a`

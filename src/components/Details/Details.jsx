@@ -48,14 +48,16 @@ const Details = (props) => {
               <React.Fragment>
                 <WordHeaderSeparator>/</WordHeaderSeparator>
                 {props.meaning}
-                {
-                  props.usuallyInKana ? (
-                    <WordHeaderAdditionalInfo>
-                      {intl.formatMessage(messages.usuallyInKanaText)}
-                    </WordHeaderAdditionalInfo>
-                  ) : null
-                }
               </React.Fragment>
+            ) : null
+          }
+        </span>
+        <span>
+          {
+            props.usuallyInKana ? (
+              <WordHeaderAdditionalInfo>
+                {intl.formatMessage(messages.usuallyInKanaText)}
+              </WordHeaderAdditionalInfo>
             ) : null
           }
         </span>

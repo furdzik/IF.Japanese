@@ -5,3 +5,4 @@ export { getOtherForms } from './getOtherForms';
 export { getKanjiParts } from './getKanjiParts';
 export { getVocabFromJson } from './getVocabFromJson';
 export { checkIfUsuallyIsInKana } from './checkIfUsuallyIsInKana';
+export { getOppositeVerb } from './getOppositeVerb';
