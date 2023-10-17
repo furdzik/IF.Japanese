@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/furdzik/IF.Japanese/compare/v1.8.0...v1.9.0) (2023-10-17)
+
+
+### Features
+
+* **vocab:** vocab ([c9bcd7d](https://github.com/furdzik/IF.Japanese/commit/c9bcd7d41bc1258aed41fb797f47b53507757bbf))
+
 ## [1.8.0](https://github.com/furdzik/IF.Japanese/compare/v1.7.0...v1.8.0) (2023-10-01)
 
 
