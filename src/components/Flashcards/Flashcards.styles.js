@@ -7,6 +7,7 @@ import Icon from '@mdi/react';
 import { breakpointMixin } from '@styles/mixins';
 
 import Tile from '@components/Tile';
+import { FLASHCARDS_MODES_TYPES } from '../../constants';
 
 const Wrapper = styled.div`
   text-align: center;
@@ -61,6 +62,15 @@ const VocabStyle = css`
 const VocabWrapper = styled.div`
   ${VocabStyle};
   font-weight: ${(props) => props.theme.typography.fontWeight.semibold};
+
+  ${(props) => props.mode === FLASHCARDS_MODES_TYPES.meaning && css`
+    font-size: 2rem;
+
+    ${breakpointMixin.laptop(css`
+    font-size: 3rem;
+  `)};
+  `};
+
 `;
 
 const TileStyled = styled(Tile)`
@@ -118,6 +128,14 @@ const IconStyled = styled(Icon)`
   fill: ${(props) => props.theme.mainColors.primary};
 `;
 
+const ModesWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+`;
+
 const SwitcherWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -142,6 +160,7 @@ export {
   ButtonsWrapper,
   SeeMoreLink,
   IconStyled,
+  ModesWrapper,
   SwitcherWrapper,
   SwitcherLabel
 };

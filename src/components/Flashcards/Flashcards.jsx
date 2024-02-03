@@ -5,6 +5,7 @@ import { useIntl } from 'react-intl';
 import { mdiChevronRight } from '@mdi/js';
 
 import { flashcardShape, additionalInfoShape } from '@types/flashcard';
+import { FLASHCARDS_MODES_TYPES, FLASHCARDS_MODES, BUTTONS_VARIANTS, FLASH_CARDS_MODE_KEY } from '@constants';
 
 import defaultMessages from '@lang/messages/default.messages';
 
@@ -25,6 +26,7 @@ import {
   ButtonsWrapper,
   SeeMoreLink,
   IconStyled,
+  ModesWrapper,
   SwitcherWrapper,
   SwitcherLabel
 } from './Flashcards.styles.js';
@@ -35,6 +37,9 @@ const Flashcards = (props) => {
 
   const [isVocabCardVisible, setIsVocabCardVisible] = useState(true);
   const [isReadingCardVisible, setIsReadingCardVisible] = useState(false);
+  const [mode, setMode] = useState(
+    JSON.parse(localStorage.getItem(FLASH_CARDS_MODE_KEY)) || FLASHCARDS_MODES_TYPES.reading
+  );
 
   const vocabCardClickHandler = () => {
     setIsVocabCardVisible(!isVocabCardVisible);
@@ -57,6 +62,18 @@ const Flashcards = (props) => {
     props.setReveal(!props.isRevealed);
   };
 
+  const getFrontOfTheCard = () => {
+    switch (mode) {
+      case FLASHCARDS_MODES_TYPES.reading:
+        return props.flashcard?.vocab;
+      case FLASHCARDS_MODES_TYPES.writing:
+        return props.flashcard?.reading;
+      case FLASHCARDS_MODES_TYPES.meaning:
+        return props.flashcard?.meaning;
+      default: props.flashcard?.vocab;
+    }
+  };
+
   return (
     <Wrapper hasApiError={props.apiError}>
       {
@@ -73,6 +90,22 @@ const Flashcards = (props) => {
       {
         !props.error && !props.apiError ? (
           <React.Fragment>
+            <ModesWrapper>
+              {
+                FLASHCARDS_MODES.map((modeElement) => (
+                  <Button
+                    key={modeElement}
+                    variant={modeElement === mode ? BUTTONS_VARIANTS.primary : BUTTONS_VARIANTS.secondary}
+                    onClick={() => {
+                      setMode(modeElement);
+                      localStorage.setItem(FLASH_CARDS_MODE_KEY, JSON.stringify(modeElement));
+                    }}
+                  >
+                    {intl.formatMessage(messages[`${modeElement}ModeLabel`])}
+                  </Button>
+                ))
+              }
+            </ModesWrapper>
             <SwitcherWrapper>
               <SwitcherLabel>{intl.formatMessage(messages.switcherLabel)}</SwitcherLabel>
               <Switcher
@@ -86,7 +119,7 @@ const Flashcards = (props) => {
                   <VocabCard onClick={(event) => vocabCardClickHandler(event)}>
                     {
                       !props.loading ? (
-                        <VocabWrapper>{props.flashcard?.vocab}</VocabWrapper>
+                        <VocabWrapper mode={mode}>{getFrontOfTheCard()}</VocabWrapper>
                       ) : null
                     }
                   </VocabCard>
