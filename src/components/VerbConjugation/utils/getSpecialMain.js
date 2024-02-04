@@ -82,13 +82,20 @@ export const getSpecialMain = (grammar, verbGroup, inflection, politeForm) => {
           return (messages.mainKuru_ki)?.defaultMessage;
         }
 
-        case GRAMMAR_TYPES.meireiForm:
-        case GRAMMAR_TYPES.joukenBaForm: {
+        case GRAMMAR_TYPES.meireiForm: {
           if (inflection === INFLECTION_TYPES.negative) {
             return (messages.mainKuru_ku)?.defaultMessage;
           }
 
           return (messages.mainKuru)?.defaultMessage;
+        }
+
+        case GRAMMAR_TYPES.joukenBaForm: {
+          if (inflection === INFLECTION_TYPES.negative) {
+            return (messages.mainKuru)?.defaultMessage;
+          }
+
+          return (messages.mainKuru_ku)?.defaultMessage;
         }
 
         default:

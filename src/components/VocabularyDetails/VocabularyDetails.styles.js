@@ -41,18 +41,19 @@ const TranslationsListItem = styled.li`
 const AdditionalInfo = styled.div`
   margin-top: 1rem;
   font-size: 1.4rem;
-  color: ${(props) => props.theme.mainColors.secondary};
+  color: #c3c2c2;
 `;
 
 const PartOfSpeechWrapper = styled.div`
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  gap: .5rem;
   min-height: 2.7rem;
   margin-top: -3rem;
 `;
 
 const PartOfSpeechBox = styled.div`
-  display: inline-block;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
   padding: .2rem .5rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.lightGray};
@@ -116,10 +117,7 @@ const ExamplesWrapper = styled.div`
 `;
 
 const OtherFormsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 27rem;
-  margin-top: 3rem;
+  margin: 3rem 0;
 `;
 
 const ConjugationHeader = styled.span`
