@@ -45,14 +45,15 @@ const AdditionalInfo = styled.div`
 `;
 
 const PartOfSpeechWrapper = styled.div`
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  gap: .5rem;
   min-height: 2.7rem;
   margin-top: -3rem;
 `;
 
 const PartOfSpeechBox = styled.div`
-  display: inline-block;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
   padding: .2rem .5rem;
   border-radius: ${(props) => props.theme.layout.borderRadius};
   background: ${(props) => props.theme.colors.lightGray};
