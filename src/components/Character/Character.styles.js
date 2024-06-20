@@ -49,13 +49,17 @@ const CharacterWrapper = styled.div`
     ${breakpointMixin.phablet(css`
         font-size: 4rem;
 
+        ${OneCharacter} {
+          width: 5rem;
+        }
       ${props.type === CHARACTER_TYPE.furigana && css`
         font-size: 1.6rem;
-      `};
 
-       ${OneCharacter} {
-         width: 5rem;
-       }
+        ${OneCharacter} {
+          min-width: 5rem;
+          width: auto;
+        }
+      `};
     `)};
    `};
 `;
