@@ -99,3 +99,22 @@ export const CHARACTER_TYPE = {
   furigana: 'furigana',
   kanji: 'kanji'
 };
+
+export const FLASHCARDS_MODES_TYPES = {
+  reading: 'reading',
+  writing: 'writing',
+  meaning: 'meaning'
+}
+
+export const FLASHCARDS_MODES = [
+  FLASHCARDS_MODES_TYPES.reading,
+  FLASHCARDS_MODES_TYPES.writing,
+  FLASHCARDS_MODES_TYPES.meaning
+];
+
+export const BUTTONS_VARIANTS = {
+  primary: 'primary',
+  secondary: 'secondary'
+}
+
+export const FLASH_CARDS_MODE_KEY = 'flashCardsMode';
