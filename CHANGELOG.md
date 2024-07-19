@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.10.0](https://github.com/furdzik/IF.Japanese/compare/v1.9.0...v1.10.0) (2024-07-19)
+
+
+### Features
+
+* **flashcards:** add modes ([8d88935](https://github.com/furdzik/IF.Japanese/commit/8d88935e6334349d060f79dd145c30f24b9d6d52))
+* **flashcards:** add n1 words wip ([2ac5866](https://github.com/furdzik/IF.Japanese/commit/2ac5866e3c7900c0dc77f9d1714ce1ab876eb420))
+* **flashcards:** add n1 words wip ([e54093c](https://github.com/furdzik/IF.Japanese/commit/e54093c24e0b7d00c4c17bb5c18f7579e44753f7))
+* **flashcards:** some css fixes ([4d089c4](https://github.com/furdzik/IF.Japanese/commit/4d089c4b305fd210851b071488fb7697d05d44f5))
+
 ## [1.9.0](https://github.com/furdzik/IF.Japanese/compare/v1.8.0...v1.9.0) (2023-10-17)
 
 
