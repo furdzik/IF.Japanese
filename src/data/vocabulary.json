@@ -13770,7 +13770,7 @@
     "vocab": "日本語",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
