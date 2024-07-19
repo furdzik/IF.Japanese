@@ -11,7 +11,7 @@
     "vocab": "本",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "counter": {
       "counterGroup": "h"
     },
@@ -884,7 +884,7 @@
     "vocab": "日本",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -54690,6 +54690,14 @@
     "nowLearning": false,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "市町村",
+    "known": false,
+    "inProgress": false,
+    "nowLearning": false,
+    "pitch": "",
+    "level": 0
   },
   {
     "vocab": "趣",
