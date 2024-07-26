@@ -409,7 +409,7 @@
     "meaning": "うえ",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -417,7 +417,7 @@
     "vocab": "人工",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -425,7 +425,7 @@
     "vocab": "九",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -433,7 +433,7 @@
     "vocab": "八",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -441,7 +441,7 @@
     "vocab": "大きい",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -449,7 +449,7 @@
     "vocab": "入る",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5,
     "verb": {
@@ -462,7 +462,7 @@
     "vocab": "三",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -470,7 +470,7 @@
     "vocab": "人口",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -478,7 +478,7 @@
     "vocab": "十",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -486,7 +486,7 @@
     "vocab": "川",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -494,7 +494,7 @@
     "vocab": "二人",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -510,7 +510,7 @@
     "vocab": "七",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -518,7 +518,7 @@
     "vocab": "下さい",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -526,7 +526,7 @@
     "vocab": "二つ",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -534,7 +534,7 @@
     "vocab": "二",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -543,7 +543,7 @@
     "meaning": "した",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -551,7 +551,7 @@
     "vocab": "七つ",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -568,7 +568,7 @@
     "vocab": "三人",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -630,7 +630,7 @@
     "vocab": "入り口",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -638,7 +638,7 @@
     "vocab": "一",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -703,7 +703,7 @@
     "vocab": "三つ",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -711,7 +711,7 @@
     "vocab": "女",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -727,7 +727,7 @@
     "vocab": "一つ",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -743,7 +743,7 @@
     "vocab": "大きさ",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -751,7 +751,7 @@
     "vocab": "大人",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -759,7 +759,7 @@
     "vocab": "九つ",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -780,7 +780,7 @@
     "vocab": "力",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4
   },
@@ -852,7 +852,7 @@
     "vocab": "八つ",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -908,7 +908,7 @@
     "vocab": "山",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -916,7 +916,7 @@
     "vocab": "一人",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -948,7 +948,7 @@
     "vocab": "口",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -956,7 +956,7 @@
     "vocab": "下げる",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 4,
     "antonyms": "上げる",
@@ -986,7 +986,7 @@
     "vocab": "大した",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 3
   },
@@ -1262,7 +1262,7 @@
     "vocab": "上げる",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5,
     "antonyms": "下げる",
@@ -9112,7 +9112,7 @@
   {
     "vocab": "富士山",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 0
@@ -54706,5 +54706,12 @@
     "nowLearning": false,
     "pitch": "",
     "level": 1
+  },
+  {
+    "vocab": "力いっぱい",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 0
   }
 ]

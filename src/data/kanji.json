@@ -3,7 +3,7 @@
     "kanji": "一",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -57,7 +57,7 @@
     "kanji": "下",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -138,7 +138,7 @@
     "kanji": "九",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -192,7 +192,7 @@
     "kanji": "口",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 4
@@ -219,7 +219,7 @@
     "kanji": "三",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -228,7 +228,7 @@
     "kanji": "山",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -282,7 +282,7 @@
     "kanji": "七",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -309,7 +309,7 @@
     "kanji": "十",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -327,7 +327,7 @@
     "kanji": "女",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -345,7 +345,7 @@
     "kanji": "上",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -363,7 +363,7 @@
     "kanji": "人",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -444,7 +444,7 @@
     "kanji": "川",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -489,7 +489,7 @@
     "kanji": "大",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -570,7 +570,7 @@
     "kanji": "二",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -579,7 +579,7 @@
     "kanji": "日",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -588,7 +588,7 @@
     "kanji": "入",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -615,7 +615,7 @@
     "kanji": "八",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 5
@@ -696,7 +696,7 @@
     "kanji": "力",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 4
@@ -1118,7 +1118,7 @@
   {
     "kanji": "語",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -1155,7 +1155,7 @@
     "kanji": "工",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 4
@@ -4691,7 +4691,7 @@
   {
     "kanji": "士",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
@@ -7166,7 +7166,7 @@
   {
     "kanji": "富",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "joyo": true,
     "jinmeiyo": false,
