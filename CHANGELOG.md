@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/furdzik/IF.Japanese/compare/v1.11.0...v1.12.0) (2024-07-19)
+
+
+### Features
+
+* **vocabulary:** changes ([33ecb94](https://github.com/furdzik/IF.Japanese/commit/33ecb948a3e03c212efc87438f1a8a32d12e91e2))
+
 ## [1.11.0](https://github.com/furdzik/IF.Japanese/compare/v1.10.0...v1.11.0) (2024-07-19)
 
 
