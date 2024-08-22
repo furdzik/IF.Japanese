@@ -2118,7 +2118,7 @@
     "kanji": "用",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 4
@@ -2775,7 +2775,7 @@
     "kanji": "事",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "joyo": true,
     "jinmeiyo": false,
     "level": 4

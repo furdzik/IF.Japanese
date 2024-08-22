@@ -3512,7 +3512,10 @@
     "inProgress": false,
     "nowLearning": false,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "additionalExplanation": [
+      "友達、家族、恋人と約束があります。"
+    ]
   },
   {
     "vocab": "皇室",
@@ -8171,9 +8174,12 @@
     "vocab": "用事",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
-    "level": 4
+    "level": 4,
+    "additionalExplanation": [
+    "友たちに会います、仕事をします、病院に行きます、勉強をします"
+  ]
   },
   {
     "vocab": "既に",
