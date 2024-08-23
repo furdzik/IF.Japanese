@@ -560,7 +560,7 @@
     "meaning": "ひと",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 5
   },
@@ -735,7 +735,7 @@
     "vocab": "人々",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 0
   },
@@ -9095,7 +9095,7 @@
     "meaning": "じん",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "pitch": "",
     "level": 1
   },
@@ -24849,7 +24849,7 @@
     "meaning": "にん",
     "known": false,
     "inProgress": false,
-    "nowLearning": false,
+    "nowLearning": true,
     "counter": {
       "counterGroup": "nin"
     },
@@ -54715,6 +54715,13 @@
   },
   {
     "vocab": "力いっぱい",
+    "known": false,
+    "inProgress": true,
+    "pitch": "",
+    "level": 0
+  },
+  {
+    "vocab": "店長",
     "known": false,
     "inProgress": true,
     "pitch": "",
