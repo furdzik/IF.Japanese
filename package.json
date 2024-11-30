@@ -27,7 +27,7 @@
     "@mdi/react": "1.6.0",
     "@sentry/react": "7.70.0",
     "@sentry/tracing": "7.70.0",
-    "axios": "1.6.0",
+    "axios": "1.7.4",
     "caniuse-lite": "1.0.30001538",
     "core-js": "3.32.2",
     "furigana": "0.19.3",
