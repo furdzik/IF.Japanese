@@ -67,8 +67,6 @@ const PartOfSpeechBox = styled.div`
 const AntonymsBox = styled.div`
   margin-top: 1rem;
   font-size: 1.4rem;
-  color: ${(props) => props.theme.mainColors.secondary};
-  text-align: center;
 `;
 
 const VerbBox = styled.div`
@@ -108,8 +106,9 @@ const StyledIcon = styled(Icon)`
 
 const AntonymsLink = styled(Link)`
   display: inline-block;
-  margin-left: 1rem;
   color: ${(props) => props.theme.mainColors.primary};
+  font-weight: bold;
+  font-size: 1.6rem;
 `;
 
 const ExamplesWrapper = styled.div`

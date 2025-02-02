@@ -113,7 +113,9 @@ const VocabularyDetails = (props) => {
           {
             props.antonyms.length > 0 ? (
               <AntonymsBox key={props.antonyms}>
-                {intl.formatMessage(messages.antonymText)}
+                <SubHeading>
+                  {intl.formatMessage(messages.antonymText)}
+                </SubHeading>
                 {
                   props.antonyms.map((antonym) => (
                     <AntonymsLink key={antonym} to={`/vocab/${antonym}`}>

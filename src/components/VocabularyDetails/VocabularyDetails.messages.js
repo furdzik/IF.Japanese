@@ -3,7 +3,7 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   mainHeader: 'Meaning of the word',
   additionalExplanationHeader: 'Additional explanation for this word',
-  antonymText: 'antonyms: ',
+  antonymText: 'Antonyms',
   jishoLinkText: 'Jisho link',
   examplesHeader: 'Examples',
   otherFormsHeader: 'Other forms',

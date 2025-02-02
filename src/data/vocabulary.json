@@ -19021,7 +19021,8 @@
     "verb": {
       "main": "増え",
       "verbGroup": "2",
-      "verbType": "intransitive"
+      "verbType": "intransitive",
+      "opposite": "増やす"
     }
   },
   {
@@ -25813,14 +25814,15 @@
   {
     "vocab": "減る",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3,
     "verb": {
       "main": "減",
       "verbGroup": "ru",
-      "verbType": "intransitive"
+      "verbType": "intransitive",
+      "opposite": "減らす"
     }
   },
   {
@@ -26267,14 +26269,15 @@
   {
     "vocab": "減らす",
     "known": false,
-    "inProgress": false,
+    "inProgress": true,
     "nowLearning": false,
     "pitch": "",
     "level": 3,
     "verb": {
       "main": "減ら",
       "verbGroup": "su",
-      "verbType": "transitive"
+      "verbType": "transitive",
+      "opposite": "減る"
     }
   },
   {
@@ -38739,7 +38742,8 @@
     "verb": {
       "main": "増や",
       "verbGroup": "su",
-      "verbType": "transitive"
+      "verbType": "transitive",
+      "opposite": "増える"
     }
   },
   {
