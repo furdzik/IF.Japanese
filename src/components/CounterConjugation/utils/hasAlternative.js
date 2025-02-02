@@ -18,6 +18,7 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.nichi
         || counterGroup === COUNTERS_GROUPS.nen
         || counterGroup === COUNTERS_GROUPS.f
+        || counterGroup === COUNTERS_GROUPS.t
       );
     }
 
@@ -34,9 +35,10 @@ export const hasAlternative = (number, counterGroup) => {
         || counterGroup === COUNTERS_GROUPS.so
         || counterGroup === COUNTERS_GROUPS.gatsu
         || counterGroup === COUNTERS_GROUPS.nichi
+        || counterGroup === COUNTERS_GROUPS.t
       );
     }
-
+    // add 9 ku
     case NUMBERS.ten:
     case NUMBERS.thirty: {
       return !(

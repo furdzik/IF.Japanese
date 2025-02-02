@@ -16,11 +16,13 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         return (countersMessages.oneGroupTsu).defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.k
+        || counterGroup === COUNTERS_GROUPS.ke
         || counterGroup === COUNTERS_GROUPS.h
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
         || counterGroup === COUNTERS_GROUPS.so
         || counterGroup === COUNTERS_GROUPS.f
+        || counterGroup === COUNTERS_GROUPS.t
       ) {
         return (countersMessages.oneGroupKHS).defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {
@@ -90,6 +92,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         return (countersMessages.sixGroupTsu).defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.k
+        || counterGroup === COUNTERS_GROUPS.ke
         || counterGroup === COUNTERS_GROUPS.h
         || counterGroup === COUNTERS_GROUPS.f
       ) {
@@ -123,6 +126,7 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         return (countersMessages.eightGroupTsu).defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.k
+        || counterGroup === COUNTERS_GROUPS.ke
         || counterGroup === COUNTERS_GROUPS.h
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
@@ -161,11 +165,13 @@ export const getNumberReading = (number, counterGroup, alternative = false) => {
         return (countersMessages.tenGroupTsu).defaultMessage;
       } else if (
         counterGroup === COUNTERS_GROUPS.k
+        || counterGroup === COUNTERS_GROUPS.ke
         || counterGroup === COUNTERS_GROUPS.h
         || counterGroup === COUNTERS_GROUPS.s
         || counterGroup === COUNTERS_GROUPS.sai
         || counterGroup === COUNTERS_GROUPS.so
         || counterGroup === COUNTERS_GROUPS.f
+        || counterGroup === COUNTERS_GROUPS.t
       ) {
         return (countersMessages.tenGroupKHS).defaultMessage;
       } else if (counterGroup === COUNTERS_GROUPS.nichi) {

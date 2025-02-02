@@ -37,5 +37,41 @@
       "jmnedict": false,
       "dbpedia": false
     }
+  },
+  {
+    "vocab": "行目",
+    "meaning": "ぎょうめ",
+    "slug": null,
+    "is_common": true,
+    "tags": [],
+    "jlpt": [],
+    "japanese": [
+      {
+        "word": "行目",
+        "reading": "ぎょうめ"
+      }
+    ],
+    "senses": [
+      {
+        "english_definitions": [
+          "Counter for  lines or verses in a text"
+        ],
+        "parts_of_speech": [
+          "Counter"
+        ],
+        "links": [],
+        "tags": [],
+        "restrictions": [],
+        "see_also": [],
+        "antonyms": [],
+        "source": [],
+        "info": []
+      }
+    ],
+    "attribution": {
+      "jmdict": false,
+      "jmnedict": false,
+      "dbpedia": false
+    }
   }
 ]

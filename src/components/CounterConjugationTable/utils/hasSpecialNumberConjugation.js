@@ -14,6 +14,7 @@ export const hasSpecialNumberConjugation = (counterGroup, number) => (
   || (
     (
       counterGroup === COUNTERS_GROUPS.k
+      || counterGroup === COUNTERS_GROUPS.ke
       || counterGroup === COUNTERS_GROUPS.h
       || counterGroup === COUNTERS_GROUPS.f
     ) && (
@@ -89,6 +90,12 @@ export const hasSpecialNumberConjugation = (counterGroup, number) => (
   || (
     counterGroup === COUNTERS_GROUPS.nen && (
       number === NUMBERS.four
+    )
+  )
+  || (
+    counterGroup === COUNTERS_GROUPS.t && (
+      number === NUMBERS.one
+      || number === NUMBERS.ten
     )
   )
 );
