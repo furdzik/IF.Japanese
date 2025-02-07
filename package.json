@@ -1,6 +1,6 @@
 {
   "name": "if.japanese",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "My app for learning japanese",
   "scripts": {
     "start": "npm run lang && npx webpack-dev-server --history-api-fallback --open --env development",
