@@ -25,7 +25,7 @@
     "@material-ui/lab": "4.0.0-alpha.61",
     "@mdi/js": "6.7.96",
     "@mdi/react": "1.6.0",
-    "axios": "1.7.4",
+    "axios": "1.13.5",
     "caniuse-lite": "1.0.30001538",
     "core-js": "3.32.2",
     "furigana": "0.19.3",
